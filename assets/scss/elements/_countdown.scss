@@ -1,0 +1,85 @@
+$countdown_size:(
+	'large' : 30px 40px,
+	'medium' : 25px 30px,
+	'small' : 10px 20px,
+	'tiny' : 5px 10px
+);
+$countdown_title_size:(
+	'large' : 80px,
+	'medium' : 60px,
+	'small' : 40px,
+	'tiny' : 30px
+);
+.red-countdown{
+
+	.red-countdown-time{
+		@include d-flex();
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	  color: $BodyColor;
+	  @media (max-width: 767px){
+		margin: -15px 0;
+	  }
+
+	}
+	.item{
+	    flex: 0 0 auto;
+	    width: auto;
+	    max-width: 100%;
+	  min-width: 158px;
+        position: relative;
+	  @media (max-width: 767px){
+		margin: 15px 0;
+		min-width: auto;
+		padding: 0 20px;
+	  }
+		@media (max-width: 350px){
+			margin: 15px 0;
+			padding: 0 30px;
+		}
+
+	}
+	.amount{
+	  display: block;
+	  font-family: $ExtraFont;
+	  font-style: normal;
+	  font-weight: 600;
+	  font-size: 48px;
+	  line-height: 71px;
+
+	}
+
+	.title{
+	  font-family: $ExtraFont;
+	  font-style: normal;
+	  font-weight: normal;
+	  font-size: 15px;
+	  line-height: 22px;
+	  text-align: center;
+	  letter-spacing: 1.5px;
+	  text-transform: uppercase;
+	  white-space: nowrap;
+	  display: block;
+	}
+	&.white{
+		.amount,
+		.title{
+			color: $white;
+		}
+	}
+	&.accent{
+		.amount{
+			color: $accent_color;
+		}
+		.title{
+			color: $HeadingColor;
+		}
+	}
+  	&.layout-2{
+	  .red-countdown-time{
+		color: #fff;
+
+	  }
+	}
+}

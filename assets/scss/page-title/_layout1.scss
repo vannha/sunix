@@ -1,0 +1,24 @@
+.red-pagetitle.ptitle-layout-1{
+  padding-top: 262px;
+  padding-bottom: 19px;
+  text-align: center;
+  @media (max-width: 767px) {
+  padding-top: 150px;
+  }
+  .page-title{
+    font-weight: 500;
+    line-height: 60px;
+    text-transform: uppercase;
+    color:#fff;
+    @media (max-width: 767px) {
+     font-size: 25px;
+      line-height: 35px;
+    }
+  }
+  .title-wrap{
+    padding-bottom: 157px;
+    @media (max-width: 767px) {
+      padding-bottom: 57px;
+    }
+  }
+}

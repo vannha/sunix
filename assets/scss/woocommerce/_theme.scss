@@ -1,0 +1,7 @@
+.post-type-archive-product .red-posts{
+	padding: 110px 0;
+	.red-loop-pagination{
+		@include d-flex();
+		justify-content: center;
+	}
+}

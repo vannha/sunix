@@ -1,0 +1,30 @@
+/**
+ * Structure of  button size
+ * 1-name -- 2-padding-y -- 3-padding-x -- 4-font-size -- 5-font-weight -- 6-text-style -- 7-letter-spacing -- 8-border-radius
+*/
+$btn-sizes: (
+	tn 5px 9px 12px 500 unset unset 2px,
+	sm 4.5px 21px 12px 400 unset 0.5px 3px,
+	md 11px 30px 13px 500 uppercase 1.85714px 3px,
+	xmd 7.5px 28px 15px 500 uppercase 0.3px 3px,
+	df 11px 30px 13px 500 uppercase 1.85714px 4px,
+	lg 13px 36px 14px 500 uppercase 2px 4px,
+	xlg 17px 35px 13px 500 uppercase 0.5px 4px,
+);
+@each $size in $btn-sizes {
+  	.red-btn-#{nth($size, 1)} {
+		&.red-btn{
+		  font-size: nth($size, 4);
+		  font-weight: nth($size, 5);
+		  text-transform: nth($size, 6);
+		  letter-spacing: nth($size, 7);
+			padding: nth($size, 2) nth($size, 3);
+		}
+		&.rounded{
+			border-radius: nth($size, 8);
+		}
+    }
+}
+.red-btn-sm.red-btn{
+  line-height: 18px;
+}

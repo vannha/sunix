@@ -1,0 +1,40 @@
+.red-sidebar-area {
+	.widget{
+		margin-bottom: 50px;
+		.red-menu-item,
+		.wc-layered-nav-term,
+		.chosen{
+			a{
+				padding: 0;
+				color: $BodyColor;
+			  	position: relative;
+			  @include transform(translateX(0));
+			  > span{
+				display: inline-block;
+			  }
+				&:hover{
+					color: $primary_color;
+				}
+			}
+			&:hover,
+			&.current-menu-item{
+				a{
+
+				}
+			}
+		}
+		.widgettitle{
+			margin-bottom: 20px;
+		}
+		> ul,
+		.menu,
+		.woocommerce-mini-cart{
+			background: $white;
+		}
+
+		.woocommerce-mini-cart__total{
+			margin-top: 30px;
+		}
+
+	}
+}

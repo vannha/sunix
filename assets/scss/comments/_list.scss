@@ -1,0 +1,128 @@
+.commentlist{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  border-bottom: $cmt_border;
+	@media (min-width: $screen-md-min){
+		.comment-info{
+			max-width: calc( 100% - #{$cmt_avatar_size + $grid-gutter-width});
+		}
+	}
+	.comment-content{
+		> ul,
+		> ol{
+			padding-left: 3px;
+		}
+	}
+	.comment,
+	.pingback,
+	.trackback{
+		border-top: $cmt_border;
+		// Reply Form 
+		.comment-respond{
+			margin: 0 0 30px 0;
+		}
+	}
+	.pingback{
+		.h5{
+			margin-top: 10px;
+		}
+	}
+	.comment-body{
+		padding: 29px 0;
+	}
+	.comment-avatar{
+		margin-bottom: 20px;
+		@media (min-width: $screen-md-min){
+			.author-info{
+				display: none;
+			}
+		}
+		@media (max-width: $screen-md-min){
+			.cmt-avatar{
+				max-width: 50px;
+			}
+		}
+	  .author-info{
+		padding-bottom: 4px;
+		padding-left: 0;
+		.author-name{
+		  font-family: $ExtraFont;
+		  font-style: normal;
+		  font-weight: 600;
+		  font-size: 13px;
+		  line-height: 28px;
+		  letter-spacing: 0.5px;
+		  text-transform: uppercase;
+		  color: $BodyColor;
+		}
+	  }
+
+	}
+	.comment-info {
+		.author-info{
+			padding-bottom: 4px;
+			@media (max-width: 767px){
+				display: none;
+			}
+		  .author-name{
+			font-family: $ExtraFont;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 13px;
+			line-height: 28px;
+			letter-spacing: 0.5px;
+			text-transform: uppercase;
+			color: $BodyColor;
+		  }
+		}
+	}
+	.comment-metadata{
+		font-size: $BodyFontSizeXXS;
+		padding-top: 12px;
+		margin: -10px;
+		@include d-flex();
+	  padding-bottom: 4px;
+		> * {
+			flex: 0 0 auto;
+		    width: auto;
+		    max-width: 100%;
+			padding: 10px;
+		  color: #888;
+		  
+		}
+	  a{
+		color: $BodyColor;
+		margin-left: 9px;
+	  }
+	}
+	.children{
+		padding: 0;
+		list-style: none;
+		.comment{
+			&.depth-1,
+			&.depth-2,
+			&.depth-3{
+				padding-left: 20px;
+				@media (min-width: $screen-lg-min){
+					padding-left: #{$cmt_avatar_size + 30}px;
+				}
+			}
+			&.depth-4{
+				padding-left: 10px;
+				@media (min-width: $screen-lg-min){
+					padding-left: 30px;
+				}
+			}
+			&.depth-5{
+				padding-left: 5px;
+				@media (min-width: $screen-lg-min){
+					padding-left: 30px;
+				}
+			}
+		}
+	}
+}
+.logged-in-as{
+	color:$primary_color;
+}

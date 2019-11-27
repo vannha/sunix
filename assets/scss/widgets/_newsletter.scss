@@ -1,0 +1,48 @@
+/* Newsletter */
+.widget .tnp{
+	position: relative;
+	form{
+		position: relative;
+		&:after,
+		input.tnp-submit{
+			width: 56px;
+			height: 66px;
+			line-height: 56px;
+			text-align: center;
+			color: $accent_color;
+			background-color: transparent;
+			position: absolute;
+			top: 0;
+			right: 0;
+			[dir="rtl"] &{
+				right: auto;
+				left: 0;
+			}
+		}
+		input.tnp-submit{
+			font-size: 0;
+			z-index: 2;
+			padding: 0;
+			min-width: auto;
+			@include opacity(0);
+		}
+		&:after{
+			content: "\f12e";
+			font-family: $FontFlaticon;
+			font-size: 20px;
+			display: block;
+		}
+		input.tnp-email{
+			height: 56px;
+			line-height: 56px;
+			background: $white;
+			color: $MetaColor;
+			padding: 0 56px 0 15px;
+			border: 0;
+			@include box-shadow(0 0 15px rgba(0,0,0,0.1));
+			[dir="rtl"] &{
+				padding: 0 15px 0 56px;
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+.red-btn-wrap{
+	&.list {
+		display: inline-block;
+		margin: 15px 30px 0 0;
+		[dir="rtl"] &{
+			margin-right: 0;
+			margin-left: 30px;
+		}
+	  &:last-child{
+		margin-right: 0;
+	  }
+	}
+ .red-btn-icon {
+	position: relative;
+	top: -1px;
+   padding-left: 2px;
+  }
+}

@@ -1,0 +1,52 @@
+@import 'header_layout1';
+@import 'header_layout2';
+@import 'header_layout3';
+@import 'header_layout4';
+@import 'header_layout5';
+@import 'header_ontop';
+@import 'header_sticky';
+@import 'icons';
+@import 'logo';
+@import 'sidenav';
+
+.red-header{
+	@include transition(all 0.5s);
+  font-family: $ExtraFont;
+  font-weight: 500;
+  .btn-book-table{
+    border: 1px solid #FFFFFF;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 1.85714px;
+    height: 52px;
+    padding: 0px 31px;
+    line-height: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-left: 40px;
+    display: inline-block;
+    @media (max-width: 560px) {
+      display: none;
+    }
+    &:hover{
+      border-color: $primary_color;
+      color: $primary_color;
+    }
+
+}
+.main-header{
+	position: relative;
+}
+  &.header-default{
+    .nav-extra{
+      padding-left: 0px;
+    }
+  }
+}
+.nav-extra{
+ padding-left: 30px;
+  @media(max-width: 991px ) {
+    width: auto;
+  }
+}

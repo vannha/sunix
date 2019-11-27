@@ -1,0 +1,138 @@
+.red-heading-wrap{
+  .red-heading-btn{
+	margin-top: 30px;
+  }
+	&.red-heading-1{
+		text-align: center;
+		.red-heading{
+			font-style: normal;
+			font-weight: 500;
+			font-size: 40px;
+			line-height: 60px;
+			margin: 0;
+			color: #fff;
+			@media (max-width: 1200px) {
+				font-size: 30px;
+				line-height: 50px;
+			}
+			@media (max-width: 767px) {
+				font-size: 25px;
+				line-height: 45px;
+			}
+		}
+		.small-heading{
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 21px;
+			letter-spacing: 0.933333px;
+			text-transform: uppercase;
+			margin: 0;
+			color: #fff;
+		}
+		.desc{
+			margin-top: 30px;
+		}
+		&.text-start{
+			padding: 0;
+		}
+	}
+	&.red-heading-2{
+		.desc{
+			flex: 0 0 100%;
+			width: 100%;
+		}
+		.red-heading{
+			margin: 0;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 36px;
+			text-transform: uppercase;
+			color: $BodyColor;
+		}
+		.small-heading{
+			font-style: normal;
+			font-weight: normal;
+			letter-spacing: 0.933333px;
+			text-transform: uppercase;
+			margin: 0;
+			font-size: 18px;
+			line-height: 21px;
+			color: #777777;
+			font-family: $ExtraFont5;
+		}
+		.heading-top{
+			padding-left: 10px;
+			position: relative;
+			&:before{
+				content: '';
+				width: 3px;
+				height: calc(100% - 15px);
+				background: #111;
+				position: absolute;
+				top: 10px;
+				left: 0;
+			}
+		}
+		.red-heading{
+			margin-bottom: 8px;
+		}
+		.desc{
+			margin-top: 28px;
+		}
+		.red-heading-btn.d-lg-none{
+			padding-top: 23px;
+		}
+	}
+	&.red-heading-3{
+		.red-heading{
+			font-style: normal;
+			font-weight: 500;
+			margin: 0;
+			font-size: 30px;
+			line-height: 44px;
+			color: $accent_color;
+			@media (max-width: 767px) {
+				font-size: 24px;
+				line-height: 38px;
+			}
+		}
+		.small-heading{
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 21px;
+			letter-spacing: 0.933333px;
+			text-transform: uppercase;
+			margin: 0;
+		}
+		.desc{
+			margin-top: 19px;
+		}
+	}
+	&.red-heading-4{
+		text-align: center;
+		.red-heading{
+			font-size: 40px;
+			line-height: 50px;
+			text-transform: none;
+			@media (max-width: 767px) {
+				font-size: 35px;
+				line-height: 45px;
+			}
+		}
+		.small-heading{
+			font-size: 22px;
+			line-height: 23px;
+			color: $primary_color;
+			text-transform: none;
+			margin-bottom: 8px;
+		}
+		.desc{
+			margin-top: 15px;
+		}
+	}
+}
+
+

@@ -1,0 +1,16 @@
+@import 'boxed';
+@import 'bordered';
+@import 'backtotop';
+
+#red-page{
+	min-height: 100vh;
+  position: relative;
+}
+.row-overfolow-initial{
+  overflow: initial !important;
+}
+#html-page-comming-soon{
+  margin-top: 0 !important;
+
+}
+

@@ -1,0 +1,45 @@
+@import 'layout1';
+@import 'menu';
+@import 'social';
+@import 'language';
+
+#red-header-top {
+	color: #777;
+  font-size: 13px;
+  text-transform: uppercase;
+  line-height: 26px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  padding: 16px 0 12px;
+  .contact{
+	list-style: none;
+	margin: 0 -20px 0 -17px;
+	@media(max-width: 991px ) {
+	  display: none;
+	}
+	@media (min-width: 992px) and (max-width:1200px){
+	  margin: 0 -5px;
+	}
+	li{
+	  display: inline-block;
+	  border-right: #D8D8D8 solid 1px;
+	  padding: 0 21px 0 17px;
+	  @media (min-width: 992px) and (max-width:1200px){
+		padding: 0 5px;
+	  }
+	  &:last-child{
+		border-right: none;
+	  }
+	}
+  }
+  .wpb_raw_html{
+	display: inline-block;
+	margin-top: -3px;
+	@media (max-width: 991px){
+	  float: left;
+	  margin-left: -15px;
+
+	}
+  }
+
+}

@@ -1,0 +1,26 @@
+/* Navigation Button */
+#red-header {
+    .btn-nav{
+        text-transform: uppercase;
+        font-family: $ExtraFont;
+        font-size: $lv1_font_size;
+        font-weight: $lv1_font_weight;
+        color: $lv1_color;
+        padding: 1px 8px;
+        &:hover,
+        &.active{
+            background-color: $accent_color;
+            color: $white;
+        }
+    }
+    &.header-ontop{
+        .btn-nav{
+            color: $ontop_regular;
+        }
+    }
+    &.header-sticky{
+        .btn-nav{
+            color: $sticky_regular;
+        }
+    }
+}

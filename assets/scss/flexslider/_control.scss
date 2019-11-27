@@ -1,0 +1,23 @@
+.flex-control-nav{
+	list-style: none;
+	padding: 0;
+	margin: 7px -7.5px 0;
+	justify-content: center;
+	min-width: 100%;
+	@include d-flex();
+	li{
+		flex: 0 0 auto;
+		width: auto;
+		max-width: 100%;
+		padding: 7.5px;
+	}
+	img{
+		cursor: pointer;
+		min-width: 100px;
+		@include transition();
+		&:hover,
+		&.flex-active{
+			@include opacity(1);
+		}
+	}
+}

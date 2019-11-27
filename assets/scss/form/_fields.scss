@@ -1,0 +1,150 @@
+input,
+button,
+textarea,
+select{
+	@include transition();
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+select {
+	-webkit-backface-visibility: hidden;
+	background: $FF_Background;
+	border: $FF_Border;
+	box-sizing: border-box;
+	outline: none;
+	padding: $FF_Spacing;
+	outline-offset: 0;
+	border-radius: $FF_BorderRadius;
+	font-family: $ExtraFont;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 28px;
+	letter-spacing: 1.85714px;
+	text-transform: uppercase;
+	color: $BodyColor;
+	@include placeholder() {
+	  color: $FF_placeholder_color;
+	}
+
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	-webkit-appearance: none;
+
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"]{
+	width: 100%;
+}
+
+input[type="search"] {
+	&::-webkit-search-decoration {
+		display: none;
+	}
+}
+
+select {
+	width: 100%;
+	max-width: 100%;
+}
+
+textarea {
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: 110px;
+	resize: vertical;
+}
+
+
+// Place holder text
+::-webkit-input-placeholder {
+    color: $FF_placeholder_color;
+}
+*:hover::-webkit-input-placeholder,
+*:focus::-webkit-input-placeholder {
+    color: $accent_color;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: $FF_placeholder_color;
+}
+*:hover:-moz-placeholder,
+*:focus:-moz-placeholder{
+    color: $accent_color;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+    color: $FF_placeholder_color;
+}
+*:hover::-moz-placeholder,
+*:focus::-moz-placeholder{
+    color: $accent_color;
+}
+:-ms-input-placeholder {
+    color: $FF_placeholder_color;
+}
+*:hover:-ms-input-placeholder ,
+*:focus:-ms-input-placeholder {
+    color: $accent_color;
+}
+
+// Background Colored Form 
+.red-bg-dark{
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	textarea,
+	select{
+		background: transparent;
+		color: $white;
+	}
+	label{
+		color: $white;
+	}
+}

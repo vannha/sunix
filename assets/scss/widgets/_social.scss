@@ -1,0 +1,12 @@
+/* User social */
+.user-socials{
+	margin: 0 -15px;
+	a{
+		padding: 3px 15px;
+		color: #5d5d5d;
+		font-size: 15px;
+		&:hover{
+			@include alacarte_social_color('color');
+		}
+	}
+}

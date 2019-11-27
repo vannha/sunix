@@ -1,0 +1,148 @@
+/**newsletter*/
+.red-newsletter-1{
+	width: 533px;
+	margin: 0 auto;
+	max-width: 100%;
+	@extend .clearfix;
+	@media (max-width: 600px){
+		width: 100%;
+		text-align: center;
+	}
+	form > *{
+		float: left;
+		@media (max-width: 550px){
+			float: none;
+			display: inline-block;
+		}
+	}
+	.tnp-email{
+		margin-bottom: 20px;
+		width: 370px;
+		max-width: 100%;
+		margin-right: 20px;
+		border: none;
+		font-family: $ExtraFont;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 28px;
+		letter-spacing: 1.85714px;
+		color: $accent_color;
+		text-transform: uppercase;
+		@include placeholder() {
+			color: $accent_color !important;
+		}
+		@media (max-width: 600px){
+			margin-right: 0px;
+		}
+
+	}
+}
+
+// Minimal 
+.minimal{
+	&.red-newsletter-2,
+	&.red-newsletter-3,
+	&.red-newsletter-5,
+	&.red-newsletter-6{
+		.tnp-form{
+			position: relative;
+			&:after{
+				content: "\f30b";
+				font-family: $FontAwesome;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				font-size: 20px;
+				width: 50px;
+				line-height: 50px;
+				text-align: center;
+			}
+			&:hover:after{
+				color: $accent_color;
+			}
+		}
+		.tnp-submit{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			background: transparent;
+			opacity: 0;
+			padding: 0;
+			width: 50px;
+			z-index: 2;
+		}
+		.tnp-email{
+			padding-right: 60px;
+		}
+		[dir="rtl"] & {
+			.tnp-form:after{
+				right: auto;
+				left: 0;
+				content: "\f30a";
+			}
+			.tnp-submit {
+				right: auto;
+				left: 0;
+			}
+			.tnp-email{
+				padding-right: 15px;
+				padding-left: 60px;
+			}
+		}
+	}
+	&.red-newsletter-4{
+		.tnp-form{
+			display: flex;
+			margin: -5px;
+		}
+		input{
+			margin: 5px;
+			&.tnp-email{
+				max-width: 350px;
+			}
+		}
+	}
+	&.red-newsletter-5,
+	&.red-newsletter-6{
+		.tnp-form{
+			&:after{
+				content: "\f1d8";
+				background: $accent_color;
+				color: $white;
+			}
+			&:hover:after{
+				color: $white;
+			}
+		}
+		[dir="rtl"] & {
+			.tnp-form:after{
+				right: auto;
+				left: 0;
+				content: "\f1d8";
+			}
+		}
+	}
+	&.red-newsletter-6{
+		.tnp-email{
+			background: #E8E8E8;
+		}
+	}
+}
+
+.red-newsletter-3{
+	.tnp-email{
+		background: transparent;
+		border-width: 0 0 2px 0;
+		border-color: #656565;
+		padding-left: 0;
+		[dir='rtl'] &{
+			padding-right: 0;
+		}
+	}
+	.tnp-form:after{
+		text-align: end !important;
+	}
+}

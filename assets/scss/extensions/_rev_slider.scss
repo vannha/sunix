@@ -1,0 +1,68 @@
+.persephone.tparrows{
+	border-radius: 50% !important;
+	@include transition();
+	border-width: 2px !important;
+	&:hover{
+		color: #fff !important;
+		border-color: $primary_color !important;
+		&:before{
+			color: #fff !important;
+		}
+	}
+	&:before{
+		line-height: 46px !important;
+	}
+}
+/*overlay*/
+rs-dotted.twoxtwo {
+	background: none !important;
+	background-color: rgba(#000,0.6) !important;
+}
+rs-dotted.twoxtwowhite {
+	background: none !important;
+	background-color: rgba(#000,0.5) !important;
+}
+.hephaistos .tp-bullet:hover, #rev_slider_5_1_wrapper .hephaistos .tp-bullet.selected {
+	width: 19px !important;
+	border-radius: 3.5px !important;
+	&:after{
+		width: 19px !important;
+		border-radius: 3.5px !important;
+		background:$primary_color !important;
+	}
+}
+.hephaistos.tp-bullets{
+	width: auto !important;
+}
+.hephaistos .tp-bullet{
+	background: none !important;
+	display: inline-block;
+	position:relative !important;
+	width: auto !important;
+	height: auto !important;
+	margin: 0 2px;
+	min-width: 7px;
+	min-height: 7px;
+	@include transition();
+	left:0 !important;
+	box-shadow:none !important;
+	&:after{
+		width: 7px;
+		height: 7px;
+		background: inherit;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		content:'';
+		@include transition();
+		background:#bcbcbc !important;
+
+	}
+
+}
+rs-module-wrap{
+	.font-extra2 {
+		font-family: 'futuramedium' !important;
+	}
+}

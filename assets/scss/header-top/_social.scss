@@ -1,0 +1,32 @@
+#red-header-top .red-social{
+  margin: 0 -2.5px;
+  float: right;
+  margin-left: 18px;
+  @media (min-width: 992px) and (max-width:1200px){
+	margin-left: 0px;
+
+  }
+  @media (max-width: 991px) {
+	margin-left: 0px;
+}
+	a{
+	  min-width: 28px;
+	  min-height: 28px;
+	  border: 1px solid #d8d8d8;
+	  line-height: 26px;
+	  text-align: center;
+	  font-size: 12px;
+	  color: inherit;
+	  border-radius: 50%;
+	  display: inline-block;
+	  padding: 0;
+	  height: auto;
+	  margin: 0 2.5px;
+	  &:hover{
+		background-color: $primary_color;
+		border-color: $primary_color;
+		color: #fff;
+	  }
+	  
+	}
+}

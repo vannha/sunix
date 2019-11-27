@@ -1,0 +1,23 @@
+/**
+ * Text Size
+ * 1-Font Size 2-Line Height
+*/
+$text-sizes: (
+	40 1.2,
+	30 1.2,
+	20
+);
+// Text sizes
+@each $breakpoint in map-keys($grid-breakpoints) {
+	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+		@each $size in $text-sizes{
+			.text#{$infix}-#{nth($size, 1)}{
+				font-size: #{nth($size, 1)}px;
+				@if(nth($size, 2) != ''){
+					line-height: nth($size, 2);
+				}
+			}
+		}
+	}
+}

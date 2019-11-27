@@ -1,0 +1,37 @@
+// Default
+$btn-pri-color         : $white;
+$btn-pri-bg-color      : $primary_color;
+$btn-pri-border-color  : $primary_color;
+// Hover
+$btn-pri-color-hover   : $white;
+$btn-pri-bg-color-hover: $accent_color;
+$btn-pri-border-color-hover  : $accent_color;
+.red-btn.primary {
+	&.fill{
+	    color: $btn-pri-color;
+	    background-color: $btn-pri-bg-color;
+	    &:hover{
+	    	background-color: $btn-pri-bg-color-hover;
+	    	color: $btn-pri-color-hover;
+	    }
+	}
+	&.outline{
+		color: $primary_color;
+		border-color: $primary_color;
+		background: transparent;
+		&:hover{
+	    	background-color: $btn-pri-bg-color-hover;
+	    	border-color: $btn-pri-border-color-hover;
+	    	color: $white;
+	    }
+	}
+	&.hover-dir{
+    	&:hover{
+	    	background-color: transparent;
+	    }
+    	&:before{
+        	background-color: $btn-pri-bg-color-hover;
+        }
+    }
+}
+

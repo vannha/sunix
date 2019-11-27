@@ -1,0 +1,43 @@
+.header-layout-3{
+  .header-inner.no-container{
+    @media (min-width: 1366px){
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+    .red-menu > li > a > span:before{
+      display: none;
+    }
+    .red-header-menu > li:hover > a ,
+    .red-header-menu > li.current_page_item > a ,
+    .red-header-menu > li.current-menu-item > a ,
+    .red-header-menu > li.current_page_ancestor > a,
+    .red-header-menu > li.current-menu-ancestor > a {
+      color: $primary_color ;
+    }
+    .nav-extra {
+      padding-left: 27px;
+    }
+    .nav-extra .header-icon{
+      font-size: 14px;
+      padding: 0 8px;
+      min-width: auto;
+    }
+    .btn-book-table{
+      background:$primary_color;
+      padding: 16px 31px;
+      color: #fff;
+      border: none;
+      line-height: 20px;
+      margin-left: -2px;
+      &:hover{
+        background: #fff;
+        color: $accent_color;
+      }
+    }
+    .book-rev{
+      @media (min-width: 1201px) and (max-width:1367px) {
+        display: none;
+      }
+    }
+  }
+}

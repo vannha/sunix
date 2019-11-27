@@ -1,0 +1,167 @@
+/************CLASSIC STYLE****************/
+.wpb-js-composer .vc_tta.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-heading, .wpb-js-composer .vc_tta.vc_tta-style-classic .vc_tta-panel:not(:last-child) .vc_tta-panel-heading {
+	 margin-bottom: 0px !important;
+}
+.wpb-js-composer .vc_tta.vc_tta-style-classic .vc_tta-panel.vc_active+.vc_tta-panel .vc_tta-panel-heading, .wpb-js-composer .vc_tta.vc_tta-style-classic .vc_tta-panel:not(:first-child) .vc_tta-panel-heading {
+	margin-top: 0px !important;
+}
+.wpb-js-composer .vc_tta.vc_tta-style-outline .vc_tta-panel.vc_active .vc_tta-panel-heading, .wpb-js-composer .vc_tta.vc_tta-style-outline .vc_tta-panel:not(:last-child) .vc_tta-panel-heading {
+	margin-bottom: 0px !important;
+}
+.wpb-js-composer .vc_tta.vc_tta-style-outline .vc_tta-panel.vc_active+.vc_tta-panel .vc_tta-panel-heading, .wpb-js-composer .vc_tta.vc_tta-style-outline .vc_tta-panel:not(:first-child) .vc_tta-panel-heading {
+	margin-top: 0px !important;
+}
+.wpb-js-composer .vc_tta.vc_tta-style-outline .vc_tta-panel-body{
+	border-width: 0 !important;
+}
+.wpb-js-composer .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel{
+  margin-bottom: 20px;
+  .vc_tta-panel-heading {
+	border: none;
+	background-color: #F5F5F5 !important;
+	border-radius: 0;
+	@include transition();
+	.vc_tta-panel-title {
+	  font-family: $ExtraFont;
+	  font-style: normal;
+	  font-weight: 500;
+	  font-size: 15px;
+	  line-height: 28px;
+	  letter-spacing: 1.2px;
+	  text-transform: uppercase;
+	  color: $BodyColor;
+	  > a {
+		color: inherit;
+		padding: 16px 20px 16px 50px;
+		transition: none;
+		-webkit-transition: none;
+	  }
+	}
+  }
+  &.vc_active,
+  &:hover{
+	.vc_tta-panel-heading {
+	  background-color: $primary_color !important;
+
+	  .vc_tta-panel-title {
+		color: #fff;
+		> a {
+		  color: inherit;
+
+		}
+		.vc_tta-controls-icon::before{
+		  content: "\f123" !important;
+		}
+	  }
+	}
+  }
+}
+
+.wpb-js-composer .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-body {
+  background: none !important;
+  border: none;
+  padding: 25px 0 11px;
+  font-size: 15px;
+  line-height: 24px;
+  color: $BodyColor;
+}
+.wpb-js-composer .vc_tta .vc_tta-controls-icon {
+  height: 9px !important;
+  width: 9px !important;
+}
+.wpb-js-composer .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel-heading .vc_tta-controls-icon::after,
+.wpb-js-composer .vc_tta-color-grey.vc_tta-style-classic  .vc_tta-panel-heading .vc_tta-controls-icon::before {
+  border-color: $BodyColor !important;
+}
+.wpb-js-composer .vc_tta .vc_tta-controls-icon.vc_tta-controls-icon-plus::before,
+.wpb-js-composer .vc_tta .vc_tta-controls-icon.vc_tta-controls-icon-plus::after {
+  border:none !important;
+  color: inherit;
+  font-family: Flaticon;
+  font-size: 9px;
+  font-style: normal;
+}
+.wpb-js-composer .vc_tta .vc_tta-controls-icon.vc_tta-controls-icon-plus::before{
+  content: "\f122" !important;
+  line-height: 1;
+	top: 0 !important;
+	transform: none !important;
+	left: 6px !important;
+}
+.wpb-js-composer .vc_tta .vc_tta-controls-icon.vc_tta-controls-icon-plus::after {
+  display: none;
+  color: #000;
+ 
+}
+.wpb-js-composer .vc_tta.vc_tta-accordion .vc_tta-controls-icon-position-left .vc_tta-controls-icon {
+  left: 20px !important;
+}
+/***************OUT LINE**************/
+
+.wpb-js-composer .vc_tta-color-grey.vc_tta-style-outline .vc_tta-panel {
+  margin-bottom: 20px;
+  .vc_tta-panel-heading {
+	border: none;
+	border-top: #D8D8D8 solid 1px;
+	border-bottom: #D8D8D8 solid 1px;
+	border-radius: 0;
+	@include transition();
+	.vc_tta-panel-title {
+	  font-family: $ExtraFont;
+	  font-style: normal;
+	  font-weight: 500;
+	  font-size: 15px;
+	  line-height: 28px;
+	  letter-spacing: 1.2px;
+	  text-transform: uppercase;
+	  color: $BodyColor;
+	  > a {
+		color: inherit;
+		padding: 15px 20px 15px 50px;
+		transition: none;
+		-webkit-transition: none;
+	  }
+	}
+  }
+  &.vc_active,
+  &:hover{
+	.vc_tta-panel-heading {
+	  background: none !important;
+	  .vc_tta-panel-title {
+		> a {
+		  color: inherit;
+		}
+		.vc_tta-controls-icon::before{
+		  content: "\f123" !important;
+		}
+	  }
+	}
+  }
+}
+.wpb-js-composer .vc_tta.vc_general .vc_tta-panel.vc_active .vc_tta-panel-body {
+  border: none;
+  padding: 26px 0 9px;
+  font-size: 15px;
+  line-height: 24px;
+  color: $BodyColor;
+}
+
+.wpb-js-composer .vc_tta.vc_general .vc_tta-panel-title>a{
+  font-family: $ExtraFont;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: $BodyColor;
+}
+.wpb-js-composer .vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panel .vc_tta-panel-heading .vc_tta-panel-title > a {
+  padding: 16px 20px 16px 20px;
+}
+.wpb_text_column{
+a{
+	color: inherit;
+	text-decoration: underline;
+}
+}

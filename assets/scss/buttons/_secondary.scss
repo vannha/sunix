@@ -1,0 +1,39 @@
+// Default
+$btn-sec-color         : $white;
+$btn-sec-bg-color      : $secondary_color;
+$btn-sec-border-color  : $secondary_color;
+// Hover
+$btn-sec-color-hover   : $primary_color;
+$btn-sec-bg-color-hover: $accent_color;
+$btn-sec-border-color-hover  : $accent_color;
+.red-btn.secondary {
+	&.fill{
+	    color: $btn-sec-color;
+	    background-color: $btn-sec-bg-color;
+	    border-color: $btn-sec-border-color;
+	    &:hover{
+	    	background-color: $btn-sec-bg-color-hover;
+	    	border-color: $btn-sec-border-color-hover;
+	    	color: $btn-sec-color-hover;
+	    }
+	}
+	&.outline{
+		color: $btn-sec-bg-color;
+		border-color: $btn-sec-border-color;
+		background: transparent;
+		&:hover{
+	    	background-color: $btn-sec-bg-color-hover;
+	    	border-color: $btn-sec-border-color-hover;
+	    	color: $btn-sec-color-hover;
+	    }
+	}
+	&.hover-dir{
+    	&:hover{
+	    	background-color: transparent;
+	    }
+    	&:before{
+        	background-color: $btn-sec-bg-color-hover;
+        }
+    }
+}
+

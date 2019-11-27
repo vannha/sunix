@@ -1,0 +1,127 @@
+/* WP Search */
+.search-form label{
+	display: block;
+}
+
+.search-form,
+.woocommerce-product-search{
+	position: relative;
+	input[name="s"]{
+	  padding-right: 76px;
+	  @media (min-width: 768px) and (max-width:1024px){
+		padding-right: 40px;
+	  }
+		&.dir-left{
+			padding-right: 50px;
+		}
+		&.dir-right{
+			padding-left: 50px;
+		}
+	}
+	input:-webkit-autofill + .search-btn{
+		right: 15px;
+		[dir="rtl"] &{
+			right: auto;
+			left: 15px;
+		}
+	}
+	[type="submit"]{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 76px;
+		text-align: center;
+		border: none;
+		padding: 0;
+		min-width: inherit;
+		background-color: transparent;
+		color: $white;
+		font-size: 0;
+		cursor: pointer;
+		z-index: 1;
+		@media (min-width: 768px) and (max-width:1024px){
+		  width: 45px;
+		}
+		[dir="rtl"] &{
+			right: auto;
+			left: 0;
+		}
+		&:before{
+		  font-family: Flaticon;
+		  font-style: normal;
+			font-size: 21px;
+		  content: "\f112";
+			line-height: 1;
+			@include center-align();
+		  font-weight: 300;
+		  color: #000;
+		}
+		&:hover,
+		&:focus{
+			outline: none;
+			color: $primary_color;
+		  background: none;
+		}
+	}
+}
+/* Search Form In Popup */
+.mfp-content{
+	.red-header-search{
+		max-width: 600px;
+	}
+	.search-form,
+	.woocommerce-product-search{
+		color: $white;
+		font-size: 20px;
+		input{
+			background: transparent;
+			border-color: $white;
+			border-width: 0 0 2px 0;
+			color: #fff;
+
+			&::-webkit-input-placeholder {
+			    color: #fff;
+			}
+
+			&:-moz-placeholder { /* Firefox 18- */
+			    color: #fff;
+			}
+
+			&::-moz-placeholder {  /* Firefox 19+ */
+			    color: #fff;
+			}
+
+			&:-ms-input-placeholder {
+			    color: #fff;
+			}
+		}
+		[type="submit"],
+		&:after {
+			&:hover{
+				color: $accent_color;
+			}
+		}
+	  [type="submit"]{
+		&:before{
+		  color: #fff;
+		}
+	  }
+		@media (min-width: $screen-md-min){
+			input{
+				width: 570px;
+				font-size: 35px;
+				padding-bottom: 17px;
+				height: auto;
+				
+			}
+			[type="submit"],
+			&:after{
+
+				span{
+					font-size: 28px;
+				}
+			}
+		}
+	}
+}

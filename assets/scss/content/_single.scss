@@ -1,0 +1,167 @@
+.single-bordered{
+  .red-content-area,
+  .red-sidebar-area{
+	@media (max-width: 767px){
+	  padding-left: 0;
+	  padding-right: 0;
+	}
+
+  }
+}
+.red-single{
+
+  background: #fff;
+  &.post_format-post-format-quote,
+  &.post_format-post-format-link{
+	margin-top: -4px;
+  }
+  .red-post-header{
+	padding-bottom: 30px;
+	.red-heading{
+	  padding-bottom: 23px;
+	  @media (max-width: 767px) {
+		font-size: 23px;
+		line-height: 34px;
+	  }
+	}
+	.red-before-title{
+	  margin-bottom: 8px;
+	}
+	.red-after-title{
+	  margin-top: -1px;
+	  position: relative;
+	  &:after{
+		position: absolute;
+		content: '';
+		width: 100%;
+		left: 0;
+		top: 13px;
+		height: 1px;
+		background: #D8D8D8;
+	  }
+	}
+	.red-header{
+	  padding-bottom: 20px;
+	}
+  }
+  .red-after-title{
+	span.meta-icon {
+	  font-size: 12px;
+	  color: #888;
+	  margin-left: 2px;
+	  margin-right: -1px;
+	}
+	.icon-like{
+	  padding-right: 4px;
+	}
+	.red-meta{
+	  margin: 0 -10px;
+	  > * {
+		padding: 0 10px;
+		background: #fff;
+		position: relative;
+		z-index: 1;
+		&:last-child{
+		  padding-right: 20px;
+		}
+	  }
+	  a:not(.author-url){
+		color: #999;
+		font-family: $ExtraFont;
+		font-size: 12px;
+		line-height: 18px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: 400;
+		&:hover{
+		  color: $MetaColorHover;
+		}
+	  }
+	  .avatar{
+		margin-right: 10px;
+		[dir="rtl"] & {
+		  margin-right: 0;
+		  margin-left: 10px;
+		}
+	  }
+	}
+  }
+	.red-social {
+		margin: -2.5px;
+		padding-left: 5px;
+		a{
+			margin: 5px 2.5px;
+		}
+	}
+	.red-social.outline a {
+		border: 1px solid #d8d8d8;
+	}
+}
+.red-single-content{
+	p + {
+		h1, h2, h3, h4, h6{
+			padding-top: 8px;
+		}
+	  h5{
+		padding-top: 10px;
+		margin-bottom: 16px;
+	  }
+	}
+	blockquote{
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	ul, ol {
+		+ p{
+			margin-top: 30px;
+		}
+	}
+  h4{
+	color: $BodyColor;
+  }
+}
+.gallery + h5{
+  margin-bottom: 17px;
+}
+.red-tagged-in{
+  font-family: $ExtraFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #888888;
+  padding-right: 20px;
+  a{
+	color: inherit;
+	&:hover{
+	  color: $primary_color;
+	}
+  }
+}
+.red-shares{
+  padding-left: 20px;
+}
+.single-post{
+  @media (min-width: 1300px){
+	.red-content-area.col-lg-8{
+	  flex: 0 0 68.35%;
+	  max-width: 68.35%;
+	  +  .red-sidebar-area{
+		flex: 0 0 31.65%;
+		max-width: 31.65%;
+	  }
+	}
+  }
+  .red-main{
+	padding-bottom: 120px;
+	@media (max-width: 767px) {
+	  padding-top: 70px;
+	  padding-bottom: 70px;
+	}
+  }
+
+
+}

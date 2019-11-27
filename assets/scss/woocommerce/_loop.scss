@@ -1,0 +1,34 @@
+.page-description,
+.term-description{
+	margin-bottom: 40px;
+}
+
+.red-woo-count-order{
+	margin-bottom: 30px;
+	.woocommerce-result-count,
+	.woocommerce-ordering{
+		margin-bottom: 15px;
+		font-family: $ExtraFont;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 11px;
+		line-height: 16px;
+		letter-spacing: 0.916667px;
+		color: #777;
+		text-transform: uppercase;
+	}
+	.woocommerce-ordering{
+		color: $accent_color;
+		select {
+			border: 0;
+			border-bottom: 1px solid $accent_color;
+			border-radius: 0;
+			padding: 0;
+			text-transform: uppercase;
+			&:focus, &:active {
+				outline: 0;
+			}
+		}
+	}
+
+}

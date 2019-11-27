@@ -1,0 +1,17 @@
+/* CMS Instagram */
+.red-instagram{
+	.instagram-item{
+		> a {
+			overflow: hidden;
+		 	display: block;
+			img{
+				width: 100%;
+				@include border-radius(1px);
+				@include transition();
+			}
+		}
+		&:hover img{
+			@include transform(scale(1.1));
+		}
+	}
+}

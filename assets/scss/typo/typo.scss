@@ -1,0 +1,73 @@
+@import 'variations';
+@import 'normalize';
+@import 'copy';
+@import 'badge';
+@import 'list';
+@import 'meta';
+@import 'table';
+@import 'tags';
+@import 'heading';
+@import 'form';
+@import 'classes';
+@import 'text_size';
+
+
+*,
+*:before,
+*:after {
+    outline: none;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    &#html-wrap{
+        @media screen and (max-width: 600px) {
+            margin-top: 0px !important;
+        }
+    }
+
+}
+
+body{
+    position: relative;
+    color           : $BodyColor;
+    font-family     : $BodyFont;
+    font-size       : $BodyFontSize;
+    line-height     : $BodyLineHeight;
+    background-color: $BodyBG;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    word-break: break-word;
+    @include font-smoothing();
+    &:after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+
+
+}
+html{
+    body.admin-bar{
+        @media(max-width: 600px ) {
+            //top: -46px !important;
+            padding-top:46px !important;
+        }
+    }
+}
+::-moz-selection {
+    background-color: $accent_color;
+    color: $white;
+}
+
+::selection {
+    background-color: $accent_color;
+    color: $white;
+}

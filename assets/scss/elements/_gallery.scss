@@ -1,0 +1,236 @@
+.red-gallery-images{
+	margin-bottom: 0px;//fix buf layout masonry
+  &.red-gallery{
+	  &.layout-1{
+
+		  .red-masonry-item{
+			  padding: 15px;
+			  &:nth-child(8n + 5){
+				  @media (min-width: 768px) {
+					  flex: 0 0 50%;
+					  max-width: 50%;
+					  .gallery-item{
+						  height: 570px;
+						  @media (min-width: 768px) and (max-width: 991px){
+							  height: 330px;
+						  }
+					  }
+				  }
+			  } &:nth-child(8n + 10){
+					@media (min-width: 768px) {
+						flex: 0 0 50%;
+						max-width: 50%;
+					}
+
+				}
+		  }
+	  }
+	  .red-masonry-item {
+		  padding: 15px;
+	  }
+	  .gallery-item {
+		position: relative;
+		padding: 0;
+		width: 100%;
+		height: 270px;
+		background-size: cover;
+		background-position: center;
+		@include transition();
+		@media (min-width: 768px) and (max-width: 991px){
+		  height: 150px;
+		}
+		@media (min-width: 768px) {
+		  &:hover{
+			&:after{
+			  @include transform(scale(1));
+			}
+			.light-box{
+			  opacity: 1;
+			}
+		  }
+		}
+
+		&:after{
+		  width: 100%;
+		  height: 100%;
+		  background: rgba(17, 17, 0, 0.7);
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  @include transform(scale(0));
+		  @include transition();
+		  content: '';
+		}
+		.light-box{
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  @include transform(translate(-50%,-50%));
+		  width: 50px;
+		  height: 50px;
+		  z-index: 2;
+		  opacity: 0;
+		  @media (max-width: 767px) {
+			display: none;
+		  }
+		  &:before{
+			font-family: Flaticon;
+			font-style: normal;
+			content: "\f122";
+			font-size: 30px;
+			color: $primary_color;
+			line-height: 50px;
+		  }
+		}
+	  }
+	  &.layout-2{
+		   .gallery-item{
+			   @media (min-width: 992px) and (max-width: 1199px){
+				   height: 210px;
+			   }
+		   }
+	  }
+	  &.layout-3{
+		   .gallery-item {
+			   height: 370px;
+			   @media (min-width: 768px) and (max-width: 991px){
+				   height: 210px;
+			   }
+			  @media (max-width: 767px) {
+			   height: 290px;
+		   }
+		   }
+	   }
+	  &.layout-4{
+		   .gallery-item {
+			   height: 570px;
+			   @media (max-width: 767px) {
+				   height: 290px;
+			   }
+			   @media (min-width: 768px) and (max-width: 991px){
+				   height: 330px;
+			   }
+		   }
+	  }
+	  &.layout-5{
+		  @media (min-width: 768px) and (max-width: 991px){
+			  > .row{
+				  margin: 0 -5px;
+				  .red-masonry-item {
+					  padding: 5px;
+				  }
+			  }
+		  }
+
+		  .col-item1,
+		  .col-item-3{
+			  flex: 0 0 23.28%;
+			  max-width: 23.28%;
+			  @media (max-width: 767px) {
+				  flex: 0 0 100%;
+				  max-width: 100%;
+			  }
+			  .gallery-item{
+				  height: 750px;
+				  @media (min-width: 768px) and (max-width: 991px){
+					  height: 410px;
+				  }
+			  }
+		  }
+		  .col-item-2{
+			  flex: 0 0 53.44%;
+			  max-width: 53.44%;
+			  @media (max-width: 767px) {
+				  flex: 0 0 100%;
+				  max-width: 100%;
+			  }
+			 .item-2 .gallery-item,
+			 .item-3 .gallery-item,
+			 .item-4 .gallery-item{
+				  height: 360px;
+
+			  }
+			  .item-2 .gallery-item{
+				  @media (min-width: 768px) and (max-width: 991px){
+					  height: 250px;
+				  }
+			  }
+			  .item-3 .gallery-item,
+			  .item-4 .gallery-item{
+				  @media (min-width: 768px) and (max-width: 991px){
+					  height: 150px;
+				  }
+			  }
+			  .item-3{
+				  .red-masonry-item{
+					  padding-right: 0;
+				  }
+			  }
+			  .item-4 {
+				  .red-masonry-item{
+					  padding-left: 0;
+				  }
+			  }
+		  }
+		   .gallery-item {
+			   height: 360px;
+			   @media (max-width: 767px) {
+				   height: 300px;
+			   }
+			   @media (min-width: 768px) and (max-width: 991px){
+				   height: 200px;
+			   }
+		   }
+	  }
+	  &.layout-6{
+		  .item-1,
+		  .item-5,
+		  .item-2,
+		  .item-3,
+		  .item-4{
+			  .red-masonry-item{
+				  padding: 15px 0;
+				  @media (max-width: 767px) {
+					  padding-top: 0px;
+				  }
+				  .gallery-item{
+					  @media (max-width: 767px) {
+						  height: 300px;
+					  }
+				  }
+
+			  }
+		  }
+
+		  .item-1,
+		  .item-5{
+			  .gallery-item{
+				 height: 570px;
+				  @media (min-width: 768px) and (max-width: 991px){
+					  height: 350px;
+				  }
+			  }
+		  }
+		  .item-2,
+		  .item-3,
+		  .item-4{
+			  .gallery-item{
+				 height: 270px;
+				  @media (min-width: 768px) and (max-width: 991px){
+					  height: 150px;
+				  }
+			  }
+		  }
+	  }
+	}
+
+}
+.mfp-zoom-out-cur{
+  @media (max-width: 1500px){
+	.slideInRight {
+	  -webkit-animation-name: none;
+	  animation-name: none;
+	}
+  }
+
+}

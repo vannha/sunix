@@ -1,0 +1,17 @@
+.header-ontop{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	@media (max-width: 1200px) {
+		margin-top: 0 !important;
+	}
+
+}
+.red-header-top{
+  + .header-ontop{
+	top: 60px;
+
+  }
+}

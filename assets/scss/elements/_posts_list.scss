@@ -1,0 +1,203 @@
+.red-posts-list{
+  &.layout-2{
+    .red-list{
+      border-bottom: #D8D8D8 solid 1px;
+      padding: 5px 0;
+      margin: 0;
+      &:first-child{
+        border-top: #D8D8D8 solid 1px;
+      }
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+      > *{
+        float: left;
+        @media (max-width: 767px) {
+          float: none;
+          display: inline-block;
+        }
+      }
+      .red-post-header {
+        padding-bottom: 0;
+        padding-left: 30px;
+        padding-top: 15px;
+        @media (max-width: 767px) {
+          padding-left: 0px;
+          padding-top: 0px;
+          width: 100%;
+        }
+        .red-heading {
+          @media (max-width: 767px) {
+            font-size: 17px;
+            line-height: 28px;
+          }
+          a:hover{
+            color: $primary_color;
+          }
+
+        }
+      }
+      .red-btn{
+        float: right;
+        margin-top: 8px;
+        padding: 8.5px 29px;
+        @media (max-width: 767px) {
+          float: none;
+          margin-top: 17px;
+          margin-bottom: 20px;
+        }
+      }
+      .event-date{
+        border-right: #D8D8D8 solid  1px;
+        padding-right: 29px;
+       padding-bottom: 3px;
+        padding-top: 1px;
+        @media (max-width: 767px) {
+         border-right: none;
+          padding-right: 0;
+        }
+        > div{
+          float: left;
+        }
+        .day{
+          font-size: 40px;
+          line-height: 59px;
+        }
+        .date-right{
+          font-size: 14px;
+          line-height: 16px;
+          color: $primary_color;
+          margin-top: 16px;
+          margin-left: 12px;
+
+          > span{
+            width: 100%;display: block;
+          }
+        }
+      }
+    }
+
+  }
+  &.layout-3{
+    .red-list{
+      border-bottom: #D8D8D8 solid 1px;
+      padding: 5px 0;
+      margin: 0;
+      &:first-child{
+        border-top: #D8D8D8 solid 1px;
+      }
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+      > *{
+        float: left;
+        @media (max-width: 767px) {
+          float: none;
+          display: inline-block;
+        }
+      }
+      .red-post-header {
+        padding-bottom: 0;
+        padding-left: 30px;
+        padding-top: 18px;
+        @media (max-width: 767px) {
+          padding-left: 0px;
+          padding-top: 0px;
+          width: 100%;
+        }
+        .red-heading {
+          font-family: $ExtraFont3;
+          font-size: 24px;
+          line-height: 28px;
+          text-transform: uppercase;
+          font-weight: normal;
+          @media (max-width: 767px) {
+            font-size: 17px;
+            line-height: 28px;
+          }
+          @media (min-width: 768px) and (max-width: 991px){
+            font-size: 20px;
+            line-height: 24px;
+          }
+          a:hover{
+            color: $primary_color;
+          }
+
+        }
+      }
+      .red-btn{
+        float: right;
+        margin-top: 8px;
+        padding: 8.5px 29px;
+        @media (max-width: 767px) {
+          float: none;
+          margin-top: 17px;
+          margin-bottom: 20px;
+        }
+      }
+      .event-date{
+        border-right: #D8D8D8 solid  1px;
+        padding-right: 29px;
+        padding-bottom: 3px;
+        @media (max-width: 767px) {
+         border-right: none;
+          padding-right: 0;
+        }
+        > div{
+          float: left;
+        }
+        .day{
+          font-family: $ExtraFont3;
+          font-size: 40px;
+          line-height: 47px;
+          margin-top: 9px;
+          margin-bottom: 4px;
+        }
+        .date-right{
+          font-size: 14px;
+          line-height: 16px;
+          color: $primary_color;
+          margin-top: 18px;
+          margin-left: 12px;
+          font-family: $ExtraFont3;
+          > span{
+            width: 100%;display: block;
+          }
+        }
+      }
+    }
+
+  }
+}
+#form-app-popup{
+
+  .fs-wrapper {
+    background: #fff;
+    padding: 50px 100px;
+    @media (max-width: 767px) {
+      padding: 50px 10px;
+      form{
+        max-height: 300px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+      }
+
+    }
+    @media (min-width: 768px) and (max-width: 1200px){
+      form{
+        max-height: 500px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+}
+
+}
+form .ui-field-text {
+margin-bottom: 35px;
+}
+form .ui-field-submit {
+margin-top: 0;
+}
+
+}
+}

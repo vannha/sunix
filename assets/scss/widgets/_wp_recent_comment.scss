@@ -1,0 +1,12 @@
+/* Recent Comments */
+.widget_recent_comments{
+	li{
+		display: block;
+		&:after{
+			display: none;
+		}
+	}
+	.recentcomments a{
+		display: inline-block;
+	}
+}

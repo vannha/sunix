@@ -1,0 +1,87 @@
+$wc-badge: 35px;
+.wc-badges{
+	margin: -5px;
+	@include d-flex();
+	.wc-badge{
+		margin: 5px;
+	}
+}
+.wc-badge{
+	height: $wc-badge;
+	min-width: $wc-badge;
+	display: inline-block;
+	line-height: $wc-badge;
+	text-align: center;
+	white-space: nowrap;
+	font-size: 14px;
+	text-transform: lowercase;
+	letter-spacing: 0.5px;
+	color: $white;
+	background: $primary_color;
+	@include border-radius(50%);
+	&.sale{
+		background: $accent_color;
+	}
+	&.hot{
+		background: #F0524B;
+	}
+	&.new{
+		background: #F5A623;
+	}
+}
+// CORNER RIBBONS
+.red-corner-ribbon{
+  width: 80px;
+  background: $accent_color;
+  position: absolute;
+  top: 12px;
+  left: -18px;
+  text-align: center;
+  line-height: 20px;
+  color: $white;
+  z-index: 10;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+/* Custom styles */
+.red-corner-ribbon.sticky{
+  position: fixed;
+}
+
+.red-corner-ribbon.shadow{
+  box-shadow: 0 0 3px rgba(0,0,0,.3);
+}
+
+/* Different positions */
+.red-corner-ribbon.top-left{
+  top: 12px;
+  left: -18px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.red-corner-ribbon.top-right{
+  top: 12px;
+  right: -18px;
+  left: auto;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.red-corner-ribbon.bottom-left{
+  top: auto;
+  bottom: 12px;
+  left: -18px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.red-corner-ribbon.bottom-right{
+  top: auto;
+  right: -18px;
+  bottom: 12px;
+  left: auto;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}

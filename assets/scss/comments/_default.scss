@@ -1,0 +1,39 @@
+.commentlist-wrap{
+	margin-top: 73px;
+}
+.comments-title,
+.woocommerce-Reviews-title{
+	padding: 0;
+	margin: 0 0 28px;
+  color: $BodyColor;
+}
+
+.discussion-meta-info{
+	margin: 0;
+}
+/* Comment Button */
+.comment-links{
+	padding-top: 24px;
+}
+
+.no-comments{
+	margin-top: $grid-gutter-width;
+}
+#cancel-comment-reply-link,
+.no-comments{
+	color: $invalid_color;
+}
+/* Loading */
+.commentlist{
+	position: relative;
+	@include transition();
+}
+
+
+.red-comment-loadmore,
+.comment-navigation{
+	margin-top: 50px;
+}
+.comment-notes .required{
+  border: none !important;
+}

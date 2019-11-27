@@ -1,0 +1,18 @@
+.btn-alt-white{
+  border: 1px solid #FFFFFF;
+  padding: 15px 31px;
+  font-family: $ExtraFont;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 1.85714px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  display: inline-block;
+  &:hover{
+    border-color: $primary_color;
+    color: $primary_color;
+  }
+}

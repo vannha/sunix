@@ -1,0 +1,9 @@
+.vc_chart.wpb_content_element .vc_chart-legend {
+	list-style: none;
+	li:before{
+		display: none!important;
+	}
+	span{
+		@include border-radius(50%);
+	}
+}

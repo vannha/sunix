@@ -1,0 +1,28 @@
+.btn-white{
+	background-color: $white;
+	color: $accent_color;
+	&:hover,
+	&:active,
+	&:focus{
+		background-color: $primary_color;
+		color: $white;
+	}
+  &.outline{
+	color: $white;
+	border-color: $white;
+	background: transparent;
+	&:hover{
+	  background-color: $primary_color;
+	  border-color: $primary_color;
+	  color: #fff;
+	}
+  }
+  &.hover-dir{
+	&:hover{
+	  background-color: transparent;
+	}
+	&:before{
+	  background-color: $btn-acc-bg-color-hover;
+	}
+  }
+}

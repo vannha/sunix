@@ -1,0 +1,721 @@
+.red-form{
+	&.style2,
+	&.style4{
+		input[type="text"],
+		input[type="email"],
+		input[type="url"],
+		input[type="password"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="number"],
+		input[type="range"],
+		input[type="date"],
+		input[type="month"],
+		input[type="week"],
+		input[type="time"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="color"],
+		textarea,
+		select{
+			border-width: 0 0 2px 0;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	&.style3{
+		input[type="text"],
+		input[type="email"],
+		input[type="url"],
+		input[type="password"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="number"],
+		input[type="range"],
+		input[type="date"],
+		input[type="month"],
+		input[type="week"],
+		input[type="time"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="color"],
+		textarea,
+		select{
+			background: #F3F3F3;
+			border-color: #F3F3F3;
+			&:hover{
+				background: $white;
+				border-color: $accent_color;
+			}
+		}
+		.red-heading{
+			display: block;
+			padding-bottom: 7px;
+		}
+		.wpcf7-form-control-wrap{
+			margin-bottom: 27px;
+		}
+		.wpcf7-form-control.wpcf7-submit{
+			margin-top: 3px;
+		}
+	}
+	&.style4{
+		input[type="text"],
+		input[type="email"],
+		input[type="url"],
+		input[type="password"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="number"],
+		input[type="range"],
+		input[type="date"],
+		input[type="month"],
+		input[type="week"],
+		input[type="time"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="color"],
+		textarea,
+		select{
+			background: transparent;
+			border-color: #656565;
+		}
+	}
+	+ .form-instruction {
+		padding-top: 18px;
+	}
+}
+.red-book-now{
+ width: 970px;
+  max-width: 90%;
+  background: #fff;
+  padding: 92px 100px 100px ;
+@media (max-width: 991px) {
+  padding: 52px 30px 60px ;
+}
+.loading-group{
+@media (max-width: 991px) {
+ display:none !important;
+}
+}
+}
+#red-header-book-now{
+  .fs-wrapper form .center.title.ui-field-title {
+	margin-bottom: 10px;
+  }
+  .fs-wrapper form .ui-field-text {
+	margin-bottom: 35px;
+  }
+  .fs-wrapper form .textarea {
+	margin-bottom: 0px;
+  }
+  .fs-wrapper form .ui-field-submit {
+	margin-top: -18px;
+  }
+  @media (min-width: 560px) and (max-width: 991px) {
+	> div{
+		max-height: 500px;
+		overflow-y:scroll;
+	}
+  }
+}
+.fs-wrapper{
+	display: flex;
+	.success-wrapper{
+		margin: 0 auto;
+		text-align: center;
+		.ui-field-text{
+			font-weight: 500;
+			font-size: 30px;
+			line-height: 30px;
+			padding: 30px 0;
+			filter: none;
+			color: $accent_color;
+		}
+		.btn{
+			display: inline-block;
+		}
+	}
+}
+.fs-wrapper form{
+  float: left;
+  width: 100%;
+  .center.title.ui-field-title {
+	display: block;
+	font-size: 40px;
+	line-height: 60px;
+	color: $BodyColor;
+	margin-top: 0;
+	margin-bottom: 29px;
+	@media (max-width: 767px) {
+	  font-size: 25px;
+	  line-height: 40px;
+	}
+  }
+  .ui-field-text{
+	color: #111;
+	filter: none;
+	max-width: 800px;
+	margin: 0 auto;
+	margin-bottom: 65px;
+  }
+  .textarea{
+	margin-bottom: -12px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="range"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="color"],
+  textarea,
+  select{
+	border-width: 1.5px;
+	margin-bottom: 30px;
+	font-family: $ExtraFont;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 28px;
+	  padding: 10.5px 25px;
+	letter-spacing: 1.85714px;
+	color: $BodyColor;
+	text-transform: uppercase;
+	width: 100%;
+	position: relative;
+	background: transparent;
+	z-index: 2;
+	@include placeholder() {
+	  font-family: $ExtraFont;
+	  font-style: normal;
+	  font-weight: 600;
+	  font-size: 13px;
+	  line-height: 28px;
+	  letter-spacing: 1.85714px;
+	  color: $BodyColor;
+	  text-transform: uppercase;
+
+
+	}
+
+  }
+  textarea{
+	height: 121px;
+	margin-bottom: 28px;
+  }
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+  }
+
+input[type=number] {
+	-moz-appearance:textfield;
+}
+  input[type="submit"]{
+	border:none;
+	padding: 12px 31px;
+  }
+  div.hour,
+  div.date,
+  div.number{
+	position: relative;
+	&:before{
+	  font-family: Flaticon;
+	  color: #010002;
+	  font-size: 18px;
+	  right: 30px;
+	  cursor: pointer;
+		top: 3px;
+	}
+  }
+  div.number:before {
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 46px;
+	display: block;
+	margin: 0 !important;
+	position: absolute;
+	right: 28px;
+	top: 3px;
+	z-index: 2;
+	content: "\f13f";
+  }
+  div.date:before {
+	content: "\f100";
+  }
+  div.hour:before {
+	content: "\f10b";
+  }
+  .ui-field-submit{
+	text-align: center;
+	margin-top: -35px;
+  }
+
+}
+.ui-datepicker{
+  background: #fff;
+  -webkit-box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1), -3px 0 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1), -3px 0 5px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1), -3px 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow:3px 0 5px rgba(0, 0, 0, 0.1), -3px 0 5px rgba(0, 0, 0, 0.1);
+  display:none;
+  z-index: 999999 !important;
+  width: 340px;
+  max-width: 100%;
+  padding-bottom: 10px;
+  @media (max-width: 350px){
+			 width: 292px;
+		}
+  table{
+	border-bottom: none;
+	width: 100%;
+  }
+  table td, table th {
+	padding: 5px;
+	border: none;
+	word-break: break-all;
+  }
+  thead{
+	span{
+	  text-align: center;
+	  width: 100%;
+	  display: block;
+	  line-height: 50px;
+	}
+
+
+  }
+  tbody{
+	> tr:first-child{
+	  > td{
+
+	  }
+	}
+  }
+  td{
+	text-align: center;
+	padding: 1px 3.5px;
+	border: none;
+	a{
+	  color: #666;
+	  &.ui-state-active,
+	  &:hover{
+		color: #fff;
+		background: $primary_color;
+	  }
+	}
+	&.ui-datepicker-today{
+	  a{
+		  color: $primary_color !important;
+		  background: none !important;
+	  }
+	}
+  }
+}
+.ui-datepicker-header{
+  float: left;
+  width:100%;
+  height: 52px;
+  background: $primary_color;
+  .ui-datepicker-prev{
+	left: 0;
+	padding:0;
+  }
+  .ui-datepicker-next{
+	right: 0;
+	padding:0;
+  }
+  .ui-datepicker-prev{
+	float: left;
+	text-align: right;
+  }
+  .ui-corner-all{
+	font-size: 0;
+	width: 30px;
+	position: absolute;
+	top: 0;
+	&:after{
+	  content: "\f054";
+	  display: inline-block;
+	  font-family: "Font Awesome 5 Pro";
+	  font-weight: 400;
+	  font-size: 20px;
+	  line-height: 52px;
+	  text-rendering: auto;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	  color:#fff;
+
+	}
+	&.ui-datepicker-prev:after{
+	  content: "\f053";
+	}
+  }
+  .ui-datepicker-title{
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-weight: 600;
+	line-height: 52px;
+	font-size: 20px;
+	font-family: $ExtraFont;
+	text-transform: uppercase;
+	color: #fff;
+
+  }
+}
+a.ui-state-active{
+  color: $primary_color;
+}
+.fs-notice-wrapper{
+  margin-top: 30px;
+  color: red !important;
+}
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  display: none;
+  max-width: 276px;
+  padding: 1px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  white-space: normal;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  line-break: auto;
+}
+.clockpicker-popover {
+  z-index: 999999;
+}
+.clockpicker-align-left.popover>.arrow {
+  left: 25px;
+}
+.popover.bottom>.arrow {
+  top: -11px;
+  left: 50%;
+  margin-left: -11px;
+  border-top-width: 0;
+  border-bottom-color: #999;
+  border-bottom-color: rgba(0,0,0,.25);
+}
+.popover>.arrow {
+  border-width: 11px;
+}
+.popover>.arrow, .popover>.arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.popover.bottom>.arrow:after {
+  top: 1px;
+  margin-left: -10px;
+  content: " ";
+  border-top-width: 0;
+  border-bottom-color: #fff;
+}
+.popover>.arrow:after {
+  content: "";
+  border-width: 10px;
+}
+.popover>.arrow, .popover>.arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.reservation-style2{
+  .fs-wrapper form .center.title.ui-field-title{
+	display: none;
+  }
+  .fs-wrapper form .ui-field-text{
+	display: none;
+  }
+  .fs-wrapper form .ui-field-submit {
+	text-align: center;
+	margin-top: 15px;
+  }
+}
+.reservation-style3 {
+  .fs-wrapper form .center.title.ui-field-title{
+	display: none;
+  }
+  .fs-wrapper form .ui-field-text{
+	display: none;
+  }
+	 .fs-wrapper form{
+		 input[type="text"],
+		 input[type="email"],
+		 input[type="url"],
+		 input[type="password"],
+		 input[type="search"],
+		 input[type="tel"],
+		 input[type="number"],
+		 input[type="range"],
+		 input[type="date"],
+		 input[type="month"],
+		 input[type="week"],
+		 input[type="time"],
+		 input[type="datetime"],
+		 input[type="datetime-local"],
+		 input[type="color"],
+		 textarea, select {
+			 padding: 10.5px 30px;
+			 margin-bottom: 20px;
+			 @media (min-width:768px) and (max-width: 991px){
+				 padding: 10.5px 10px;
+			 }
+		 }
+	 }
+	 .fs-wrapper form div.number:before,
+	 .fs-wrapper form div.hour:before,
+	 .fs-wrapper form div.date:before{
+		 @media (min-width:768px) and (max-width: 991px){
+			 right: 10px;
+		 }
+	 }
+  .fs-wrapper form .ui-field-submit {
+	text-align: center;
+	margin-top: 15px;
+  }
+ .fs-wrapper form textarea {
+	 height: 105px;
+	 margin-bottom: 16px;
+ }
+	 .fs-wrapper form input[type="submit"] {
+		 width: 100%;
+	 }
+}
+.reservation-style4 {
+	.fs-wrapper form .center.title.ui-field-title{
+		display: none;
+	}
+	.fs-wrapper form .ui-field-text{
+		display: none;
+	}
+	.fs-wrapper form{
+		input[type="text"],
+		input[type="email"],
+		input[type="url"],
+		input[type="password"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="number"],
+		input[type="range"],
+		input[type="date"],
+		input[type="month"],
+		input[type="week"],
+		input[type="time"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="color"],
+		textarea, select {
+			padding: 10.5px 30px;
+			margin-bottom: 20px;
+			@media (min-width:768px) and (max-width: 991px){
+				padding: 10.5px 10px;
+			}
+		}
+	}
+	.fs-wrapper form div.number:before,
+	.fs-wrapper form div.hour:before,
+	.fs-wrapper form div.date:before{
+		@media (min-width:768px) and (max-width: 991px){
+			right: 10px;
+		}
+	}
+	.fs-wrapper form .ui-field-submit {
+		text-align: center;
+		margin-top: 15px;
+	}
+	.fs-wrapper form textarea {
+		height: 105px;
+		margin-bottom: 16px;
+	}
+	.fs-wrapper form input[type="submit"] {
+		width: 100%;
+	}
+}
+/*contact form 7**/
+.contact-style1{
+  form{
+	.wpcf7-form-control-wrap {
+	  margin-bottom: 30px;
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	textarea, select {
+	  border: 1.5px solid $BodyColor;
+	  padding: 10.5px 30px;
+	  font-family: $ExtraFont;
+	  font-style: normal;
+	  font-weight: 600;
+	  font-size: 13px;
+	  line-height: 28px;
+	  letter-spacing: 1.85714px;
+	  text-transform: uppercase;
+	  color: $BodyColor;
+
+	  @include placeholder() {
+		font-family: $ExtraFont;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 13px;
+		line-height: 28px;
+		letter-spacing: 1.85714px;
+		color: $BodyColor;
+		text-transform: uppercase;
+
+
+	  }
+	}
+	textarea {
+	  height: 121px;
+	}
+	.wpcf7-form-control.wpcf7-submit {
+	  margin-top: 0;
+	}
+  }
+}
+.contact-style2{
+  form{
+	.wpcf7-form-control-wrap {
+	  margin-bottom: 25px;
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	textarea, select {
+	  color: $BodyColor;
+		padding: 11px 25px;
+		@media (min-width:992px) and (max-width: 1024px){
+			padding: 11px 10px;
+		}
+	  &:hover{
+		@include placeholder() {
+		  color: $BodyColor;
+		}
+	  }
+
+	}
+	textarea {
+	  height: 99px;
+	}
+	.wpcf7-form-control.wpcf7-submit {
+	  margin-top: 5px;
+	  width: 100%;
+	}
+  }
+	.p-notice{
+		font-size: 13px;
+		line-height: 24px;
+		margin-top: 10px;
+	}
+}
+.contact-style3{
+  form{
+	.wpcf7-form-control-wrap {
+	  margin-bottom: 25px;
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	textarea, select {
+	  color: $BodyColor;
+		padding: 11px 25px;
+	  &:hover{
+		@include placeholder() {
+		  color: $BodyColor;
+		}
+	  }
+
+	}
+	textarea {
+	  height: 99px;
+	}
+	.wpcf7-form-control.wpcf7-submit {
+	  margin-top: 5px;
+	  width: 100%;
+	}
+  }
+	.p-notice{
+		font-size: 13px;
+		line-height: 24px;
+		margin-top: 10px;
+	}
+}

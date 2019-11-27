@@ -1,0 +1,230 @@
+// Padding
+$vc_section_padding: (
+	0: 0,
+	'' : 110px 0,
+	'1' : 110px 0 75px,
+	'2' : 15px 0,
+	'3' : 30px 0,
+	'4' : 40px 0,
+	'5' : 50px 0,
+	'6' : 60px 0,
+	'7' : 0 0 110px,
+	'8' : 0 0 75px,
+	'9' : 0 0 50px,
+	'10' : 110px 0 20px,
+	'11' : 0 0 30px,
+	'12' : 110px 0 57px,
+	'13' : 0 0 60px,
+);
+@each $padding, $padding-value in $vc_section_padding{
+	.red-sec-padding#{$padding}{
+		padding: $padding-value;
+	}
+}
+// Background image position
+$vc_background_img_pos: (
+	'tl' : top left right,
+	'tc' : top center center,
+	'tr' : top right left,
+	'cl' : center left right,
+	'cc' : center center center,
+	'cr' : center right left,
+	'bl' : bottom left right,
+	'bc' : bottom center center,
+	'br' : bottom right left
+);
+@each $name, $value in $vc_background_img_pos{
+	body .red-bg-img-#{$name}{
+		background-position: nth($value,1) nth($value,2) !important;
+		background-size: unset;
+    	background-attachment: unset;
+    	background-repeat: no-repeat;
+    	[dir="rtl"] &{
+			background-position: nth($value,1) nth($value,3) !important;
+    	}
+	}
+}
+// Background Text position
+$vc_background_text_pos: (
+	'tl' : top 0 left 0,
+	'tc' : top 0 left 50%,
+	'tr' : top 0 right 0,
+	'cl' : top 50% left 0,
+	'cc' : top 50% left 50%,
+	'cr' : top 50% right 0,
+	'bl' : bottom 0 left 0,
+	'bc' : bottom 0 left 50%,
+	'br' : bottom 0 right 0
+);
+[class*="red-bg-font-"]{
+	position: absolute;
+}
+@each $name, $value in $vc_background_text_pos{
+	body .red-bg-font-#{$name}{
+		#{nth($value,1)} : #{nth($value,2)};
+		#{nth($value,3)} : #{nth($value,4)};
+		@include transform( translateX(#{nth($value,4)*-1}) translateY(#{nth($value,2)*-1}) );
+		&[direction="up"],
+		&[direction="down"]{
+			top: 0;
+			bottom: 0;
+		}
+	}
+}
+// background color 
+$vc_background: (
+	'accent' 		: $accent_color,
+	'accent2' 		: #FF9827,
+	'darken-accent' : darken($accent_color,5%),
+	'primary' 		: $primary_color,
+	'secondary' 	: $secondary_color,
+	'dark' 		    : #000000,
+	'medium-dark'   : #1F1F1F,
+	'light-dark'    : #303030,
+	'light' 	    : #f5f5f5,
+	'medium-light'  : #f1f1f1,
+	'dark-blue'     : #182333,
+	'white' 		: #FFFFFF
+);
+@each $background, $background-color in $vc_background{
+	.red-bg-#{$background}{
+		background-color: $background-color;
+		// Coloumn
+		&.vc_column_container {
+			//background-color: transparent;
+			> .vc_column-inner{
+				//background-color: $background-color;
+			}
+		}
+	}
+}
+// Divider 
+$row_divider_color:(
+	'light'     	: #f1f1f1,
+	'dark'      	: #303030,
+	'medium-dark' 	: #4A4A4A,
+	'light-dark'	: rgba(#444444, 0.3),
+);
+[class*="divider-"]{
+	border: 0 solid $MainBorderColor;
+	&.divider-top{
+		border-top-width: 1px;
+	}
+	&.divider-bottom{
+		border-bottom-width: 1px;
+	}
+	&.solid {
+		border-style: solid;
+	}
+	&.dashed{
+		border-style: dashed;
+	}
+	@each $name, $color in $row_divider_color{
+		&.#{$name}{
+			border-color: $color;
+		}
+	}
+}
+.row-overlay{
+  @include overlay-pos();
+}
+// Parallax
+.parallax-overlay{
+	@include overlay-pos();
+}
+.vc_parallax > .parallax-overlay{
+	position: absolute !important;
+}
+.vc_parallax .vc_parallax-inner{
+	background-position: center !important;
+}
+// Ontop
+.ontop{
+	z-index: 1;
+}
+// overflow 
+.no-overflow-hidden{
+	overflow: visible!important;
+}
+
+// Content Element 
+body .wpb_content_element{
+	margin-bottom: 0;
+}
+
+.vc_custom_heading{
+	margin-top: 0;
+}
+
+.vc_video-bg.vc_hidden-xs{
+	display: block !important;
+}
+.open-hours-wrap{
+	list-style: none;
+	background: #F5F5F5;
+	border-radius: 5px;
+	padding: 60px 50px;
+	width: 100%;
+	@media (max-width: 1200px){
+		padding: 60px 20px;
+	}
+	li{
+		line-height: 39px;
+		position: relative;
+		font-family: $ExtraFont;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 15px;
+		letter-spacing: 0.3px;
+		text-transform: uppercase;
+		color: $accent_color;
+		overflow: hidden;
+		padding: 0 !important;
+		display: flex;
+		span.time{
+			float: right;
+			padding-left: 5px;
+		}
+		span{
+			position: relative;
+			z-index: 2;
+			&:first-child{
+				padding-right: 5px;
+			}
+		}
+		.day{
+			position: relative;
+			overflow: hidden;
+			flex: 1 1 auto;
+			margin: 0;
+			padding-right: 10px;
+			-webkit-box-flex: 1;
+			-moz-box-flex: 1;
+			-webkit-flex: 1 1 auto;
+			-ms-flex: 1 1 auto;
+			&:after{
+				position: absolute;
+				bottom: 13px;
+				width: 10000px;
+				content: "";
+				height: 1px;
+				background: #c8c8c8;
+			}
+		}
+
+	}
+}
+.contact-wrap{
+	list-style: none;
+	li{
+		position: relative;
+		padding: 0 0 15px 30px !important;
+		i{
+			font-size: 16px;
+			position: absolute;
+			top: 0;
+			left: 0;
+
+		}
+	}
+}

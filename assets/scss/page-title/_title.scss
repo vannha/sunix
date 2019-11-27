@@ -1,0 +1,15 @@
+.page-title,
+.page-desc{
+    color: inherit;
+    + .breadcrumb{
+    	padding-top: 20px;
+    }
+}
+.page-title{
+	@media (min-width: $screen-xl-min){
+		font-size: 40px;
+	}
+}
+.page-desc{
+	padding-top: 26px;
+}

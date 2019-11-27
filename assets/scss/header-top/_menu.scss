@@ -1,0 +1,19 @@
+#red-header-top {
+	.menu{
+		@include d-flex-auto;
+		margin-left: $grid-gutter-width / -3;
+		margin-right: $grid-gutter-width / -3;
+		li{
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		&.add-divider{
+			li{
+				border-right: 1px solid #e4e4e4;
+				&:last-child{
+					border-right: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,250 @@
+.red-posts .red-team.red-grid {
+  margin-top: -15px;
+}
+.red-team-layout-1{
+  text-align: center;
+	&.owl-carousel .owl-stage-outer {
+		overflow: hidden;
+	}
+	.team-item .inner-box{
+		background: transparent;
+	}
+  .wrap-team-social{
+	display: inline-block;
+  }
+  .team-item .inner-box{
+	background: $white;
+	position: relative;
+  }
+  .team-info{
+	padding-top: 25px;
+  }
+  .team-position,
+  .team-desc{
+	margin-top: 10px;
+  }
+  .team-position{
+	font-size: 18px;
+	line-height: 21px;
+	text-align: center;
+	color: #777777;
+
+  }
+  .team-social{
+	  margin: 0 -4px;
+	margin-top:17px;
+	  a{
+		  margin: 5px 4px;
+	  }
+  }
+  .team-name{
+	font-size: 24px;
+	line-height: 36px;
+	font-weight: 500;
+	color: $BodyColor;
+  }
+}
+.red-team-layout-2{
+	&.owl-carousel .owl-stage-outer{
+		overflow: hidden;
+	}
+	.hoverdir-wrap{
+	  @include d-flex();
+		@media (min-width:768px) and (max-width: 991px) {
+			align-items: center;
+		}
+	  .team-images{
+		  flex: 0 0 514px;
+		  max-width: 514px;
+		  @media (max-width: 767px) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		  }
+		  @media (min-width:768px) and (max-width: 991px) {
+			flex: 0 0 40%;
+			max-width: 40%;
+		  }
+		  @media (min-width:992px) and (max-width: 1200px) {
+			flex: 0 0 50%;
+			max-width: 50%;
+			  margin-top: 18px;
+		  }
+	  }
+	  .team-info{
+		flex: 0 0 calc(100% - 514px);
+		max-width: calc(100% - 514px);
+		text-align: left;
+		padding-left: 60px;
+		padding-top: 29px;
+		@media (max-width: 767px) {
+		  flex: 0 0 100%;
+		  max-width: 100%;
+		  padding-left: 15px;
+		  padding-right: 15px;
+		}
+	  @media (min-width:768px) and (max-width: 991px) {
+		  flex: 0 0 60%;
+		  max-width: 60%;
+		  padding-left: 30px;
+		  padding-top: 0;
+	  }
+		  @media (min-width:992px) and (max-width: 1200px) {
+			  flex: 0 0 50%;
+			  max-width: 50%;
+			  padding-top: 0;
+		  }
+		.team-name{
+		  font-family: $ExtraFont;
+		  font-style: normal;
+		  font-weight: 500;
+		  font-size: 24px;
+		  line-height: 36px;
+		  text-transform: uppercase;
+		  color: $BodyColor;
+		  margin-bottom: 8px;
+		}
+		.team-position{
+		  font-size: 18px;
+		  line-height: 21px;
+		  color: #777777;
+		  font-family: $ExtraFont5;
+		}
+		.team-info-top{
+		  padding-left: 10px;
+		  position: relative;
+		  &:before{
+			content: '';
+			width: 3px;
+			height: calc(100% - 15px);
+			background: #111;
+			position: absolute;
+			top: 10px;
+			left: 0;
+		  }
+		}
+		.team-desc{
+		  margin-top: 28px;
+		}
+		.team-social{
+		  margin-top: 25px;
+			margin: 25px -4px -5px;
+			a{
+				margin: 5px 4px;
+			}
+		}
+		.team-link-button{
+		  margin-top: 50px;
+			@media (min-width:768px) and (max-width: 991px) {
+				margin-top: 35px;
+			}
+		}
+	  }
+
+	}
+}
+
+.red-team-layout-3{
+	.inner-box{
+		padding-bottom: 118px;
+	}
+	.team-info{
+		background: $white;
+		padding-bottom: 13px;
+		overflow: hidden;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		max-height: 118px;
+	}
+	.team-desc,
+	.team-social{
+		padding-top: 26px;
+	}
+	.team-item:hover {
+		.team-info{
+			//top: auto;
+			max-height: 100%;
+		}
+	}
+}
+.red-team-layout-4{
+	.team-images{
+		padding-bottom: 72px;
+	}
+	.team-info{
+		padding-top: 20px;
+		background: $white;
+		padding-bottom: 13px;
+		overflow: hidden;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		max-height: 72px;
+	}
+	.team-header{
+		border-left: 3px solid $accent_color;
+		padding-left: 20px;
+		[dir="rtl"] &{
+			padding-left: 0;
+			padding-right: 20px;
+		}
+	}
+	.team-position{
+		padding-top: 5px;
+	}
+	.team-desc,
+	.team-social{
+		padding-top: 26px;
+	}
+	.team-item:hover {
+		.team-info{
+			//top: auto;
+			max-height: 100%;
+		}
+	}
+}
+
+.red-team-layout-5{
+	.team-item.red-grid-item{
+		padding-bottom: 50px;
+		padding-top: 50px;
+		&:after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 15px;
+			right: 15px;
+			border-bottom: $MainBorder;
+		}
+		&:last-child{
+			padding-bottom: 0;
+			&:after{
+				display: none;
+			}
+		}
+	}
+	.team-info{
+		@media (min-width: 480px){
+			padding-top: 0;
+		}
+	}
+	.team-header{
+		border-left: 5px solid $accent_color;
+		padding-left: 10px;
+		margin-bottom: 15px;
+		[dir="rtl"] &{
+			border-left: 0;
+			border-right: 5px solid $accent_color;
+			padding-left: 0;
+			padding-right: 10px;
+		}
+		.team-position{
+			padding-top: 2px;
+		}
+	}
+	.team-social{
+		padding-top: 20px;
+	}
+}

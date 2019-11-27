@@ -1,0 +1,25 @@
+.single-ef5_portfolio{
+	.pf-heading{
+		border-bottom: 1px solid #E8E8E8;
+		padding-bottom: 23px;
+		margin-bottom: 20px;
+	}
+	.pf-share-nav{
+		margin-bottom: 35px;
+	}
+	.red-blogs .container{
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.pf-navigation{
+		color: $MetaColor;
+		margin-left: -5px;
+		margin-right: -5px;
+		a{
+			color: $MetaColor;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+}

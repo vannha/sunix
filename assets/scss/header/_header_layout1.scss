@@ -1,0 +1,18 @@
+.header-layout-1{
+	.header-inner.no-container{
+		@media (min-width: 1366px){
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+	}
+	.nav-extra .red-qc{
+		@media (min-width: $screen-xl-min){
+			padding-right: 75px;
+			padding-left: 120px;
+			[dir="rtl"] &{
+				padding-right: 120px;
+				padding-left: 75px;
+			}
+		}
+	}
+}

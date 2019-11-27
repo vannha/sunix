@@ -1,0 +1,15 @@
+.red-media-gallery-slider-wrap{
+	.red-owl-dots{
+		margin: 15px -15px 0;
+		.owl-dot{
+			padding: 15px;
+			background: transparent;
+			max-width: 20%;
+			@include opacity(0.5);
+			&:hover,
+			&.active{
+				@include opacity(1);
+			}
+		}
+	}
+}

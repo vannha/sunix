@@ -1,0 +1,28 @@
+// Text Color
+@each $name, $color in $red-colors{
+	.text-#{$name},
+	.#{$name}-color{
+		color: $color;
+	}
+	.text-hover-#{$name}:hover{
+		color: $color;
+	}
+}
+// Background color
+@each $name, $color in $red-colors{
+	.bg-#{$name}{
+		background: $color;
+	}
+	.bg-hover-#{$name}:hover{
+		background: $color;
+	}
+}
+// Border color
+@each $name, $color in $red-colors{
+	.border-#{$name}{
+		border-color: $color;
+	}
+	.border-hover-#{$name}:hover{
+		border-color: $color;
+	}
+}

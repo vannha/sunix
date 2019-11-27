@@ -1,0 +1,38 @@
+$separator_ltr: '\f105';
+$separator_rtl: '\f104';
+.breadcrumb{
+	font-weight:normal;
+	color: inherit;
+  text-align: center;
+  font-family: $ExtraFont2;
+  font-size: 15px;
+  line-height: 24px;
+	background: none;
+	padding: 0;
+	margin: 0;
+
+	.separator{
+		padding: 0 10px;
+		&:empty{
+			font-family: $FontAwesome5;
+			font-size: 10px;
+		  font-weight: 300;
+			@include transform(translateY(4px));
+			&:before{
+				content: $separator_ltr;
+				[dir='rtl'] &{
+					content: $separator_rtl;
+				}
+			}
+		}
+	}
+  .item.title{
+	color: $primary_color;
+  }
+}
+
+.red-breadcrumb{
+	@media (max-width: $screen-md-max){
+		padding-top: 20px;
+	}
+}

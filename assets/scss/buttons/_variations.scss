@@ -1,0 +1,57 @@
+// Default 
+$btn-inner-space   : 13.5px 27.47px;
+$btn-font-size     : $BodyFontSizeS;
+$btn-font-style    : inherit;
+$btn-font-weight   : 700;
+$btn-text-style    : uppercase;
+$btn-letter-spacing: 0.5px;
+$btn-color         : $accent_color;
+$btn-color-hover   : $primary_color;
+$btn-bg-color      : $primary_color;
+$btn-bg-color-hover: $accent_color;
+
+// Button Default 
+$btn-border   : 1px solid transparent;
+
+
+// Button Color 
+$btn-colors: (
+	'cyan'       : #01bf9d,
+	'cyan-dark'  : #01a185,
+	'green'      : #1fcf6d,
+	'green-dark' : #1aaf5d,
+	'blue'       : #4ea6e6,
+	'blue-dark'  : #217fbc,
+	'violet'     : #9c56b9,
+	'violet-dark': #8f3fb0,
+	'cello'      : #334960,
+	'cello-dark' : #2d3e52,
+	'yellow'     : #f3c500,
+	'yellow-dark': #c09c00,
+	'orange'     : orange,
+	'orange-dark': #cc8400,
+	'red'        : #ea4b35,
+	'red-dark'   : #c43926,
+	'grey'       : #e8ebec,
+	'grey-dark'  : #bec3c7
+);
+// Button Color 
+$btn-rounded: (
+	'': 5px,
+	'1': 1px,
+	'2': 2px,
+	'3': 3px,
+	'4': 4px,
+	'5': 5px,
+	'6': 6px,
+	'7': 7px,
+	'8': 8px,
+	'9': 9px,
+	'10': 10px,
+	'20': 20px,
+	'30': 30px,
+	'40': 40px,
+	'50': 50px,
+	'60': 60px,
+	'70': 70px
+);

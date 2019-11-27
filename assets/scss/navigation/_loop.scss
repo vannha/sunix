@@ -1,0 +1,91 @@
+.nav-links{
+  text-align: center;
+	.page-numbers{
+	  display: inline-block;
+		color: $page-link-color;
+		@include transition();
+		font-family: $ExtraFont;
+		font-weight:400;
+		font-size: 14px;
+		line-height: 21px;
+	  position: relative;
+	  padding: 0 1px 1px;
+	  margin: 0 12px;
+
+		&:hover,
+		&.current{
+			color: $page-link-color-hover;
+		  &:after{
+			@include transform(scale(1));
+		  }
+		}
+	  	&:after{
+		  content: '';
+		  width: 100%;
+		  height: 1px;
+		  background: $page-link-color-hover;
+		  position: absolute;
+		  bottom:0;
+		  left: 0;
+		  @include transform(scale(0));
+		  @include transition();
+		}
+		&.next,
+		&.prev{
+		  text-transform: uppercase;
+		  margin: 0 ;
+		  span{
+			color: inherit;
+		  }
+		}
+	  &.next{
+		float: right;
+	  }
+	  &.prev{
+		float: left;
+	  }
+
+	}
+
+
+}
+.red-loop-pagination{
+	margin-top: 71px;
+	&:empty{
+		display: none;
+	}
+	// Colors 
+	@each $name, $color in $red-colors{
+		&.df-#{$name} .nav-links .page-numbers{
+			color: $white;
+			border-color: $color;
+			background: $color;
+		}
+		&.hv-#{$name} .nav-links .page-numbers{
+			//border-color: #727272;
+			&:hover,
+			&.current{
+				border-color: $color;
+				background: $color;
+			}
+		}
+	}
+	// Shape 
+	&.rounded{
+		.nav-links .page-numbers{
+			margin: 2.5px;
+			@include border-radius(5px);
+		}
+	}
+	&.circle{
+		.nav-links .page-numbers{
+			margin: 2.5px;
+			@include border-radius(50%);
+		}
+	}
+
+}
+.red-loop + .red-loop-pagination{
+	margin-top: $box-margin;
+	text-align: center;
+}

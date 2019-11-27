@@ -1,0 +1,63 @@
+.flex-direction-nav{
+	list-style: none;
+	padding: 0;
+	a{
+		z-index: 1;
+		position: absolute;
+		top: 50%;
+		@include transform(translateY(-50%));
+		font-family: "Font Awesome 5 Pro";
+		font-weight: 400;
+		width: 30px;
+		height: 30px;
+		display: block;
+		@include border-radius(50%);
+		line-height: 30px;
+		font-size: 13px;
+		text-align: center;
+		background: $primary_color;
+		color: #fff;
+		@include transition();
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-style: normal;
+		font-variant: normal;
+		text-rendering: auto;
+		&.flex-next{
+			right: 15px;
+		}
+		&.flex-prev{
+			left: 15px;
+		}
+		&.flex-disabled{
+			display: none;
+		}
+		&:hover{
+			background: $accent_color;
+			color: #fff;
+		}
+
+		@media (min-width: $screen-lg-min){
+			visibility: hidden;
+			@include opacity(0);
+		}
+	}
+	.flex-disabled{
+		visibility: hidden;
+		z-index: -1;
+		@include opacity(0);
+	}
+	.flex-prev-icon:before{
+		content: "\f053";
+	}
+	.flex-next-icon:before{
+		content: "\f054";
+	}
+}
+.wc-gallery-sync:hover,
+.woocommerce-product-gallery:hover {
+	.flex-direction-nav a{
+		visibility: visible;
+		@include opacity(1);
+	}
+}

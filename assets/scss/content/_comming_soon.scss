@@ -1,0 +1,47 @@
+#page-comming-soon{
+	background-image: url(../images/comming-soon.jpg) ;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	.header-ontop{
+		padding-top: 10px;
+	}
+	.header-inner{
+		max-width: 100%;
+		padding: 0 100px;
+		@media (max-width: 767px){
+			padding: 0 15px;
+		}
+		.nav-extra{
+			> *:not(.btn-nav-mobile-wrap){
+				display: none !important;
+			}
+		}
+		.red-menu > li:last-child > a > span {
+			padding-right: 0;
+		}
+		.red-menu > li:last-child > a > span:after{
+			display: none;
+		}
+	}
+	.red-main {
+		padding-top: 302px;
+		padding-bottom: 178px;
+      position: relative;
+      z-index: 1;
+		@media (min-width:768px) and (max-width: 1200px){
+			padding-top: 230px;
+		}
+		@media (max-width: 767px){
+			padding-top: 107px;
+			padding-bottom: 57px;
+		}
+		.vc_custom_heading{
+			@media (max-width: 767px){
+				font-size: 40px !important;
+				line-height: 70px !important;
+			}
+		}
+	}
+
+}

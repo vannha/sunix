@@ -1,0 +1,45 @@
+.header-layout-2{
+	.header-inner.no-container{
+		@media (min-width: 1366px){
+			padding-left: 80px;
+			padding-right: 80px;
+		}
+	}
+	.red-menu > li:last-child > a > span {
+		padding-right: 0px;
+	}
+	.red-menu > li:last-child {
+		padding-right: 19.5px;
+	}
+	.nav-extra {
+		padding-left: 0px;
+	}
+	.red-header-menu{
+		@media (min-width: 1200px){
+			display: block;
+			text-align: center;
+		}
+		> li{
+			@media (min-width: 1200px){
+				display: inline-block;
+			}
+			&:last-child > a > span:after{
+				display: none;
+			}
+			li{
+				text-align: left;
+			}
+
+		}
+	}
+	.nav-extra .red-qc{
+		@media (min-width: $screen-xl-min){
+			padding-right: 75px;
+			padding-left: 120px;
+			[dir="rtl"] &{
+				padding-right: 120px;
+				padding-left: 75px;
+			}
+		}
+	}
+}

@@ -1,0 +1,85 @@
+.red-meta{
+	margin: 0 -5px;
+	> * {
+		padding: 0 5px;
+	}
+	a{
+		color: $MetaColor;
+	  font-family: $ExtraFont2;
+	  font-size: 15px;
+	  line-height: 18px;
+		&:hover{
+			color: $MetaColorHover;
+		}
+	}
+	.avatar{
+		margin-right: 10px;
+		[dir="rtl"] & {
+			margin-right: 0;
+			margin-left: 10px;
+		}
+	}
+}
+article.post-grid-item{
+  .red-after-title{
+	.red-meta{
+	  margin: 0 -5px;
+	  text-align: center;
+	  display: block !important;
+	  > * {
+		padding: 0 5px;
+		position: relative;
+		z-index: 1;
+		display: inline-block;
+	  }
+	  a{
+		font-family: $ExtraFont2;
+		font-size: 15px;
+		line-height: 18px;
+		color: #777777;
+		&:hover{
+		  color: $MetaColorHover;
+		}
+	  }
+	  .avatar{
+		margin-right: 10px;
+		[dir="rtl"] & {
+		  margin-right: 0;
+		  margin-left: 10px;
+		}
+	  }
+	}
+  }
+
+}
+
+.red-box-meta {
+	margin: -5px;
+	//@include d-flex();
+	a{
+		font-size: $BodyFontSizeXXS;
+		font-weight: 500;
+		border: $MainBorder;
+		margin: 5px;
+		padding: 4px 10px;
+		flex: 0 0 auto;
+	    width: auto;
+	    max-width: 100%;
+		&:hover{
+			background: $accent_color;
+			border-color: $accent_color;
+			color: $link_color;
+		}
+	}
+}
+.red-box-meta2{
+	a{
+		background: $accent_color;
+		color: $white;
+		border-color: $accent_color;
+		&:hover{
+			background: $white;
+			color: $primary_color;
+		}
+	}
+}

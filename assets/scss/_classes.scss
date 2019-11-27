@@ -1,0 +1,248 @@
+.red-loading{
+	cursor: wait;
+	position: relative;
+	&:before{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		content: '';
+		display: block;
+		background: rgba($accent_color, 0.7);
+	}
+	&:after{
+		z-index: 2;
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		content: "\f110";
+		font-family: $FontAwesome;
+		font-size: 50px;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		margin: -25px 0 0 -25px;
+		color: $white;
+		@include animation('spin 1s infinite linear')
+	}
+}
+.empty-none:empty{
+	display: none;
+}
+.transition,
+a{
+    @include transition();
+}
+
+.meta-color{
+	color: $MetaColor;
+	a{
+		color: inherit;
+		&:hover{
+			color: $link_color_hover;
+		}
+	}
+}
+
+// Rotate
+$rotate: (
+	'45',
+	'90',
+	'180',
+	'270',
+	'360'
+);
+@each $deg in $rotate{
+	.rotateX-#{$deg}{
+		@include transform(rotateX(#{$deg}deg));
+	}
+	.rotateY-#{$deg}{
+		@include transform(rotateY(#{$deg}deg));
+	}
+
+	.icon-rotateX-#{$deg}:before{
+		display: inline-block;
+		@include transform(rotateX(#{$deg}deg));
+	}
+	.icon-rotateY-#{$deg}:before{
+		display: inline-block;
+		@include transform(rotateY(#{$deg}deg));
+	}
+}
+
+// Grid wrap
+.red-grid-wrap{
+	overflow: hidden;
+}
+// Box Style 
+.red-box{
+	background: $white;
+	padding: 20px;
+}
+// Box Shadow
+.red-box-shadow{
+	@include box-shadow($BoxShadow);
+}
+.red-box-shadow-2{
+	@include box-shadow($BoxShadow2);
+}
+.red-box-shadow-3{
+	@include box-shadow($BoxShadow3);
+}
+.red-box-shadow-4{
+	@include box-shadow($BoxShadow4);
+}
+.red-box-shadow-5{
+	@include box-shadow($BoxShadow5);
+	&:hover{
+		@include box-shadow($BoxShadowHover5);
+	}
+}
+.red-box-shadow-6{
+	@include box-shadow($BoxShadow6);
+}
+.red-box-shadow-7{
+	@include box-shadow($BoxShadow7);
+}
+.red-box-shadow-10{
+	@include box-shadow($BoxShadow10);
+}
+.red-box-shadow-11{
+	@include box-shadow($BoxShadow11);
+}
+.red-box-shadow,
+.red-box-shadow-2{
+	&:hover{
+		@include transform(translateY(-10px));
+	}
+}
+.red-box-shadow,
+.red-box-shadow-2,
+.red-shadow-hover{
+	&:hover{
+		@include box-shadow($BoxShadowHover);
+	}
+}
+.shadow-hover:hover .red-shadow-hover{
+	@include box-shadow($BoxShadowHover);
+}
+// Line Corner 
+.red-line-corner{
+	position: absolute;
+	width: 32.4325%;
+	height: 32.4325%;
+	max-width: 120px;
+	max-height: 120px;
+	border-style: solid;
+	border-color: $accent_color;
+	&.tl{
+		top: 0;
+		left: 0;
+		border-width: 10px 0 0 10px;
+	}
+	&.tr{
+		top: 0;
+		right: 0;
+		border-width: 10px 10px 0 0;
+	}
+	&.br{
+		right: 0;
+		bottom: 0;
+		border-width: 0 10px 10px 0;
+	}
+	&.bl{
+		left: 0;
+		bottom: 0;
+		border-width: 0 0 10px 10px;
+	}
+}
+
+@media (min-width: $screen-lg-min ){
+	.red-line-corner-wrap{
+		.red-line-corner{
+			width: 0;
+			height: 0;
+			border-color: transparent;
+		}
+		&:hover .red-line-corner{
+			width: 32.4325%;
+			height: 32.4325%;
+			border-color: $accent_color;
+		}
+	}
+}
+// Positioned
+.center-align{
+	@include center-align();
+}
+
+// Margin
+$red-margin:(
+	'0' : 0,
+	'1' : 10px,
+	'2' : 20px,
+	'3' : 30px,
+	'4' : 40px,
+	'5' : 50px,
+	'6' : 60px,
+	'7' : 70px,
+	'8' : 80px,
+	'9' : 90px,
+	'10' : 100px,
+);
+@each $name, $margin in $red-margin{
+	.margin-#{$name}{
+		margin: $margin !important;
+	}
+}
+// Padding
+$red-padding:(
+	'0' : 0,
+	'1' : 10px,
+	'2' : 20px,
+	'3' : 30px,
+	'4' : 40px,
+	'5' : 50px,
+	'6' : 60px,
+	'7' : 70px,
+	'8' : 80px,
+	'9' : 90px,
+	'10' : 100px,
+);
+@each $name, $padding in $red-padding{
+	.padding-#{$name}{
+		padding: $padding !important;
+	}
+}
+
+// Animation 
+$red-anims: (
+	'swing' : 'swing',
+	'bounce' : 'bounce',
+	'bounceIn' : 'bounceIn',
+	'bounceInLeft' : 'bounceInLeft',
+	'bounceInRight' : 'bounceInRight',
+	'bounceInUp' : 'bounceInUp',
+	'bounceInDown' : 'bounceInDown',
+);
+@each $name, $anim in $red-anims{
+	.red-anim-#{$name}{
+		@include animation($anim 2s linear infinite);
+	}
+}
+
+// Underline text 
+$red-underline-colors: (
+	'default' : #DBDBDB,
+	'primary' : $primary_color,
+	'accent' : $accent_color,
+	'secondary' : $secondary_color,
+);
+@each $name, $color in $red-underline-colors{
+	.underline-#{$name}{
+		border-bottom: 1px solid $color;
+	}
+}

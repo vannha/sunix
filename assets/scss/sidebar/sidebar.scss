@@ -1,0 +1,97 @@
+$sidebar_bg : #fff;
+#red-sidebar-area{
+	@media (max-width: 767px){
+		margin-top: $grid-gutter-width * 2;
+	}
+	.sidebar-inner{
+		position: relative;
+		z-index: 1;
+		@media (min-width: $screen-lg-min){
+			padding-left: 5px;
+
+		}
+	}
+	&.red-blogs{
+		position: relative;
+		background: $sidebar_bg;
+		@media (min-width: $screen-lg-min){
+
+		}
+	}
+}
+@media (min-width: $screen-lg-min){
+	.red-content-area[class*="col-lg"] .red-blogs{
+		padding-right: $grid-gutter-width /2;
+		[dir="rtl"] &{
+			padding-left: $grid-gutter-width /2;
+		}
+	}
+
+	.red-content-area.order-lg-1[class*="col-lg"] .red-blogs{
+		padding-right: 0;
+		padding-left: $grid-gutter-width /2;
+		[dir="rtl"] &{
+			padding-left: 0;
+			padding-right: $grid-gutter-width /2;
+		}
+	}
+}
+.new-dishes{
+  position: relative;
+  min-height: 379px;
+  background-size: cover;
+  @media (min-width: 768px) and (max-width:1024px){
+	min-height: 280px;
+  }
+  &:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.55);
+  }
+  .new-dishes-inner{
+	position: absolute;
+	width: 100%;
+	padding: 0 15px;
+	bottom: 70px;
+	left: 0;
+	z-index: 2;
+	text-align: center;
+	h2{
+	  color: #fff;
+		letter-spacing: 2.1px;
+	}
+	.btn-alt-white{
+	  margin-top: 5px;
+		padding: 11px 30px;
+	}
+  }
+}
+
+// Sidebar on Left
+.red-content-area.order-lg-1 + #red-sidebar-area.red-blogs{
+	@media (min-width: $screen-lg-min){
+		&:before{
+			left: auto;
+			right: 15px;
+			[dir="rtl"] &{
+				right: auto;
+				left: 15px;
+			}
+		}
+	}
+	.sidebar-inner{
+	  @media (min-width: $screen-lg-min){
+		padding-left: 0px;
+		padding-right: 5px;
+
+	  }
+	}
+}
+
+@import 'widgets';
+@import 'portfolio';
+

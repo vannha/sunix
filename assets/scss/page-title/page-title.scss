@@ -1,0 +1,37 @@
+@import 'parallax';
+@import 'layout1';
+@import 'title';
+@import 'breadcrumb';
+.red-pagetitle{
+	position: relative;
+	overflow: hidden;
+	background-color: $PageTitleBG;
+	background-image: url('../images/page-title/bg-pagetitle.jpg');
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 104px 0;
+	color: $white;
+	a{
+		color: inherit;
+		&:hover{
+			color: $primary_color;
+		}
+	}
+}
+.red-pagetitle-inner{
+	position: relative;
+	z-index: 1;
+}
+.no-image{
+	.red-pagetitle{
+		background-image: none;
+		color: $accent_color;
+	}
+	.red-pagetitle.ptitle-layout-1 {
+		padding-top: 170px;
+	}
+	.red-pagetitle .parallax img {
+   opacity: 0; 
+}
+}

@@ -1,0 +1,146 @@
+$toggle_size: 30px;
+$toggle_inner_size: 10px;
+$toggle_thin: 2px;
+$toggle_currentColor: $accent_color;
+$toggle_currentColorHover: $accent_color;
+
+$direction: (
+	top,
+	right,
+	bottom,
+	left
+);
+
+/* Toggle Variations  */
+@mixin d-toggle(){
+    display: flex;
+    flex-wrap: wrap;
+    > span{
+    	flex: 0 0 auto;
+    	max-width: 100%;
+    }
+    > .sub-menu,
+    > .children,
+    > .ef5-dropdown{
+        flex : 0 0 100%;
+        width: 100%;
+    }
+}
+
+@mixin red-chevron(
+	$parent_selector: '.red-chevron-wrap',
+	$selector       : '.red-chevron',
+	$selector_inner : '.red-chevron-inner',
+	$direction      : 'bottom',
+	$thin           : $toggle_thin, 
+	$size           : $toggle_size, 
+	$inner_size     : $toggle_inner_size, 
+	$color          : $toggle_currentColor, 
+	$color_hover    : $toggle_currentColorHover
+){
+	#{$parent_selector}{
+		cursor: pointer;
+		position: relative;
+	}
+	#{$selector}{
+		height: $size;
+		width: $size;
+		display: inline-block;
+		#{$selector_inner}{
+			border-style: solid;
+			border-color: $color;
+			height: $inner_size;
+			width: $inner_size;
+			display: block;
+		
+			@if top == $direction {
+				border-width: $thin $thin 0 0;
+				@include transform(rotate(-45deg));
+			}
+			@if right == $direction {
+				border-width: 0 $thin $thin 0;
+				@include transform(rotate(-45deg) translate($inner_size/3, $inner_size));
+			}
+			@if bottom == $direction {
+				border-width: 0 0 $thin $thin;
+				@include transform(rotate(-45deg));
+			}
+			@if left == $direction {
+				border-width: 0 $thin $thin 0;
+				@include transform(rotate(-225deg));
+			}
+		}
+	}
+}
+@mixin alacarte_toggle_plus(
+		$parent_selector: '.has-toggle', 
+		$selector       : '.red-toggle',
+		$selector_inner : '.red-toggle-inner',
+		$inner_position : 'right', 
+		$thin           : $toggle_thin, 
+		$size           : $toggle_size, 
+		$inner_size     : $toggle_inner_size,
+		$color          : $toggle_currentColor, 
+		$color_hover    : $toggle_currentColorHover
+	){
+	#{$parent_selector}{
+		@include d-toggle();
+	}
+	#{$selector}{
+		cursor: pointer;
+		position: relative;
+		width: $size;
+		//height: $size;
+		z-index: 1;
+		#{$selector_inner}{
+			height: $inner_size;
+			width: $inner_size;
+			display: block;
+			position: absolute;
+			top: 50%;
+		    right: 0;
+			@include transform(translate(0%, -50%));
+			@media (min-width: 1200px){
+				opacity: 0;
+			}
+			&:before,
+			&:after{
+				content: '';
+				display: block;
+				background: $color;
+				position: absolute;
+			}
+			&:before{
+				height: $thin;
+				left: 0;
+				right: 0;
+				top: #{$inner_size/2 - $thin/2};
+			}
+			&:after{
+				width: $thin;
+				top: 0;
+				bottom: 0;
+				left: #{$inner_size/2 - $thin/2};
+			}
+			&.active:after{
+				@include opacity(0);
+			}
+		}
+		#{$parent_selector}:hover &{
+			#{$selector_inner}{
+				border-color: $color_hover;
+			}
+		}
+	}
+}
+@include alacarte_toggle_plus();
+
+@media (max-width: $screen-lg-max){
+	@include alacarte_toggle_plus(
+		'.red-menu .menu-item-has-children',
+		'.red-menu-toggle',
+		'.red-menu-toggle-inner',
+		'right', 
+		1px
+	);
+}

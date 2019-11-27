@@ -1,0 +1,38 @@
+.woocommerce-product-gallery__image--placeholder{
+	text-align: center;
+}
+.woocommerce-product-gallery{
+	> * {
+		&.red-after-wc-gallery{
+			order: 1000;
+		}
+	}
+	.woocommerce-product-gallery__wrapper{
+		margin: 0;
+	}
+	.woocommerce-product-gallery__image {
+		text-align: center;
+		> a{
+			display: block;
+			> img{
+				width: 100%;
+			}
+		}
+	}
+	// Default layout
+	//&.red-simple{
+		.flex-control-nav{
+			li{
+				flex: 0 0 33.3333%;
+			}
+			img{
+				min-width: unset;
+				width: 100%;
+			}
+		}
+	//}
+}
+.wc-gallery-sync{
+	margin-top: 15px;
+
+}

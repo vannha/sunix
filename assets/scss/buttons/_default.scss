@@ -1,0 +1,57 @@
+form .button,
+form button,
+form [type="button"],
+form [type="reset"],
+form [type="submit"],
+.red-btn{
+	display: inline-block;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 1;
+    border: $btn-border;
+}
+.red-btn-wrap [class*="underline-"]{
+    padding-bottom: 5px;
+}
+.red-btn-link{
+    font-family: $ExtraFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: $BodyColor;
+    text-transform: uppercase;
+    position: relative;
+    border-color: $BodyColor;
+    cursor: pointer;
+    &.primary-color{
+        border-color: $primary_color;
+    }
+    > span{
+        border-bottom: $BodyColor solid 1px;
+        border-color: inherit;
+    }
+    &.btn-white-color{
+        border-color: $white;
+        color: $white;
+    }
+    &:hover{
+       color: $primary_color !important;
+        span{
+            border-color:$primary_color !important;
+        }
+    }
+
+}
+.red-btn.custom:hover{
+    background: $primary_color !important;
+    color: #fff !important;
+}

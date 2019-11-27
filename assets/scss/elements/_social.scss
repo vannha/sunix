@@ -1,0 +1,197 @@
+$social-size:(
+	'20' 	: 20px,
+	'28' 	: 28px,
+	'30' 	: 30px,
+	'35' 	: 35px,
+	'38' 	: 38px,
+	'40'    : 40px,
+	'60'	: 60px,
+	'80' 	: 80px,
+);
+$social-font-size:(
+	'20' 	: 12px,
+	'28' 	: 12px,
+	'30' 	: 12px,
+	'35' 	: 13px,
+	'38' 	: 13px,
+	'40'    : 16px,
+	'60'	: 20px,
+	'80' 	: 30px
+);
+$social-shape:(
+	'square' : 0,
+	'rounded': 5px,
+	'circle' : 50%
+);
+
+.red-social{
+	margin: -5px;
+	@include d-flex();
+	&.text-left{
+		margin: 0;
+
+		a{
+			margin: 0;
+			margin-right: 24px;
+			max-width: initial !important;
+			min-width: 0px !important;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+	&:empty{
+		display: none;
+	}
+	a{
+		margin: 5px;
+		padding: 0;
+		text-align: center;
+		flex: 0 0 auto;
+		color: $BodyColor;
+	  display: inline-block;
+		&:hover{
+			color: $accent_color;
+		}
+	}
+	// Alignment
+	&.text-left{
+		justify-content: flex-start;
+	}
+	&.text-center{
+		justify-content: center;
+	}
+	&.text-right{
+		justify-content: flex-end;
+	}
+	// Size 
+	&.size-{
+		@each $name, $size in $social-size {
+			&#{$name} a{
+				min-width: $size;
+				max-width: $size;
+				height: $size;
+				line-height: $size;
+			}
+		}
+		@each $name, $size in $social-font-size {
+			&#{$name} a{
+				font-size: $size;
+			}
+		}
+	}
+	// Fill Mode
+	&.fill{
+		a{
+			background: $accent_color;
+			color: $primary_color;
+			&:hover{
+				background: $primary_color;
+				color: $accent_color;
+			}
+		}
+		// Color 
+		@each $name, $color in $red-colors{
+			&.#{$name} a{
+				background: $color;
+			}
+		}
+	}
+	&.outline{
+		a{
+			background: $white;
+			color: #777;
+			border:$MainBorder;
+		}
+		// Color 
+		@each $name, $color in $red-colors{
+			&.#{$name} a{
+				background: $white;
+				color: $color;
+				@include box-outline(1px, $color);
+			}
+		}
+	}
+	// Shape Mode
+	&.shape-{
+		@each $name, $shape,$size in $social-shape{
+			&#{$name} a{
+				@include border-radius($shape);
+			  border: 1px solid #777;
+				&:hover{
+					border-color: $primary_color;
+					background: $primary_color;
+					color: #fff;
+				}
+			}
+		}
+	}
+	// Text White
+	&.text-white{
+		> a{
+			color: $white;
+			&:hover{
+				color: $accent_color;
+			}
+		}
+	}
+	// Colored 
+	&.colored {
+		@each $name, $color in $social-colors{
+			a[href*='#{$name}']{
+				color: $color;
+			}
+		}
+		// Fill
+		&.fill{
+			@each $name, $color in $social-colors{
+				a[href*='#{$name}']{
+					color: $white;
+					background: $color;
+					&:hover{
+						background: darken($color, 20%);
+					}
+				}
+			}
+		}
+		&.outline{
+			@each $name, $color in $social-colors{
+				a[href*='#{$name}']{
+					color: $color;
+					background: $white;
+					@include box-outline(1px, $color);
+					&:hover{
+						color: $white;
+						background: $color;
+					}
+				}
+			}
+		}
+	}
+	// Colored on Hover 
+	&.colored-hover{
+		@each $name, $color in $social-colors{
+			a[href*='#{$name}']:hover{
+				color: $color;
+			}
+		}
+		// Fill
+		&.fill{
+			@each $name, $color in $social-colors{
+				a[href*='#{$name}']:hover{
+					color: $white;
+					background: $color;
+				}
+			}
+		}
+		
+		@each $name, $color in $social-colors{
+			a[href*='#{$name}']:hover,
+			a[data-network='#{$name}']:hover{
+				color: $white;
+				background: $color;
+				border-color: $color;
+			}
+		}
+	}
+}

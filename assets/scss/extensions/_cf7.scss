@@ -1,0 +1,37 @@
+.wpcf7-form-control-wrap{
+	display: block;
+	margin-bottom: $grid-gutter-width / 2;
+}
+.wpcf7-form-control.wpcf7-submit{
+	margin-top: $grid-gutter-width / 2;
+}
+.wpcf7-form .ajax-loader:not(.is-active){
+	display: none;
+}
+
+$wpcf7_btn_icon :(
+	'1' : '\f1d8',
+	'2' : '\f1d8',
+	'3' : '\f1d8',
+	'4' : '\f1d8',
+	'5' : '\f1d8',
+);
+$wpcf7_icon_font: $FontAwesome5;
+$wpcf7_icon_size: $BodyFontSize;
+
+.wpcf7-submit span[class*='icon']{
+	padding-right: 5px;
+	[dir="rtl"] &{
+		padding-right: 0;
+		padding-left: 5px;
+	}
+	&:before{
+		font-family: $wpcf7_icon_font;
+		font-size: $wpcf7_icon_size;
+	}
+}
+@each $icon, $icon-value in $wpcf7_btn_icon{
+	.wpcf7-submit .icon#{$icon}:before{
+		content: $icon-value;
+	}
+}

@@ -1,0 +1,129 @@
+.red-menu,
+.ef5-submenu{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+// Main Navigation
+//--------------------------------------------------
+.red-menu{
+    > li{
+        overflow: hidden;
+        &:not(.megamenu){
+            position: relative;
+        }
+        > a{
+            padding: $list_inner_space;
+            position: relative;
+            @include d-flex();
+            align-items: center;
+
+            > span{
+                flex: 0 0 auto;
+                width: auto;
+                max-width: 100%;
+                line-height: 26px;
+                position: relative;
+                z-index: 2;
+                &.menu-desc{
+                    flex: 0 0 100%;
+                    width: 100%;
+                }
+                &:before{
+                    content: '';
+                    width: 26px;
+                    height: 26px;
+                    background: $primary_color;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 1px;
+                    left: -12px;
+                    z-index: -1;
+                    @include transition();
+                    @include transform(scale(0))
+                }
+            }
+        }
+        &:hover{
+            overflow: visible;
+        }
+        &:last-child{
+            position: relative;
+            padding-right: 0;
+          > a > span{
+              padding-right: 37px;
+              position: relative;
+              &:after{
+                  content: '';
+                  width: 1px;
+                  height: 26px;
+                  background: #fff;
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  @media (max-width: 1200px) {
+                      display: none;
+                  }
+              }
+          }
+            
+        }
+    }
+    .menu-icon{
+        &.left-icon{
+            padding-right: 10px;
+            [dir="rtl"] &{
+                padding-right: 0;
+                padding-left: 10px;
+            }
+        }
+        &.right-icon{
+            padding-left: 10px;
+            [dir="rtl"] &{
+                padding-left: 0;
+                padding-right: 10px;
+            }
+        }
+    }
+}
+.ef5-submenu{
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+}
+.red-toggle-menu{
+    display: none;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.menu-desc{
+    font-size: 80%;
+    text-transform: none;
+}
+.menu-badge{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 80%;
+    text-transform: none;
+    background: $accent_color;
+    color: $white;
+    font-weight: 400;
+    padding: 0 5px;
+    [dir="rtl"] &{
+        left: 0;
+        right: auto;
+    }
+}
+/* Header extra */
+.nav-extra{
+    .nav-link{
+        text-transform: uppercase;
+        font-family: $ExtraFont;
+        font-size: $lv1_font_size;
+        font-weight: $lv1_font_weight;
+        color: $lv1_color;
+    }
+}

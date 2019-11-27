@@ -1,0 +1,29 @@
+.red-fancy-image{
+	.content{
+		padding: 60px;
+		@media (max-width: $screen-md-min){
+			padding: 30px 15px;
+		}
+	}
+	.red-heading{
+		font-size: 40px;
+		line-height: 1.175;
+	}
+	.desc{
+		margin-top: 30px;
+	}
+	.red-fancy-image-footer{
+		margin-top: 60px;
+	}
+}
+.red-fancy-image-2{
+	background: #E6E6E6;
+	> div{
+		background: inherit;
+	}
+	@media (min-width: $screen-md-min){
+		.image{
+			order: 2;
+		}
+	}
+}

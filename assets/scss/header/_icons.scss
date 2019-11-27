@@ -1,0 +1,206 @@
+.header-icon{
+    position: relative;
+    @media (max-width: 480px) {
+        display: none;
+    }
+    .header-count{
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        min-width: 16px;
+        height: 16px;
+        line-height: 16px;
+        font-size: 10px;
+        text-align: center;
+        padding: 0 5px;
+        font-weight: 400;
+        color: $white;
+        background: $primary_color;
+        @include border-radius(50%);
+        [dir="rtl"] &{
+            right: auto;
+            left: -10px;
+        }
+    }
+    // Woo Smart Compare Count
+    .wooscp-menu-item &{
+        .wooscp-menu-item-inner{
+            position: absolute;
+            &:after{
+                background-color: transparent;
+                color: inherit;
+                font-size: inherit;
+                font-weight: inherit;
+                width: inherit;
+                height: inherit;
+                line-height: inherit;
+                text-align: inherit;
+                border-radius: inherit;
+                position: static;
+                top: auto;
+                right: auto;
+            }
+        }
+    }
+}
+.red-cart-toggle{
+    .red-cartform{
+        background: #fff;
+        width: 260px;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        right: 0;
+        top: 50px;
+        [dir="rtl"] &{
+        	right: auto;
+        	left: 0;
+        }
+    }
+    .widget_shopping_cart{
+        margin: 0;
+        padding: 15px;
+        p{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.nav-extra{
+	.header-icon{
+		margin: $grid-gutter-width / 6;
+        min-width: 31px;
+		text-align: center;
+        font-size: 21px;
+		@include border-radius(50%);
+		&:hover{
+			color: $primary_color;
+		}
+        &.has-badge{
+            margin-right: 20px;
+            [dir="rtl"] &{
+                margin-right: $grid-gutter-width / 6;
+                margin-left: 20px;
+            }
+        }
+	}
+    &.circle {
+        .header-icon{
+            @include border-radius(50%);
+            font-size: 13px;
+            line-height: 30px;
+            .icon{
+                font-weight: 500;
+            }
+            .header-count{
+                top: -7px;
+                right: -7px;
+                [dir='rtl'] &{
+                    right: auto;
+                    left: -7px;
+                }
+            }
+        }
+        &.accent {
+            .header-icon{
+                color: $white;
+                background: $accent_color;
+            }
+        }
+        &.primary {
+            .header-icon{
+                color: $white;
+                background: $primary_color;
+            }
+        }
+        &.grey {
+            .header-icon{
+                color: #182333;
+                background: #F1F1F1;
+            }
+        }
+    }
+}
+.header-social,
+.book-rev{
+    @media (max-width: 1200px){
+        display: none;
+    }
+}
+.header-extra-icon{
+    margin: $grid-gutter-width / 6;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+}
+.header-translate .switcher.notranslate{
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 28px;
+    width: auto;
+    position: relative;
+    padding: 0 15px 0 35px;
+    overflow: visible;
+    border-left: #D8D8D8 solid 1px;
+    margin-left: 10px;
+    @media (max-width: 321px) {
+        margin-left: -15px;
+    }
+    > div.selected {
+        background: none;
+        position: relative;
+        padding-right: 12px;
+        &:after{
+            content: "\f107";
+            position: absolute;
+            top: 8px;
+            right: -5px;
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 900;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+        }
+    }
+    .option {
+        border:none;
+        background: none;
+        width: auto;
+        position: absolute;
+        left: 0;
+        padding: 5px 0 0 35px;
+    }
+    a {
+        border: none;
+        background: none !important;
+        padding: 0;
+        width: auto;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        text-transform: uppercase;
+        color: inherit;
+
+        img {
+            opacity: 1;
+            height: 38px;
+            width: 28px;
+            margin-right: 3px;
+            margin-top: -3px;
+            display: none;
+        }
+    }
+}
+.header-ontop{
+    .header-translate .switcher.notranslate a{
+        color: #fff;
+        &:hover{
+            color: $primary_color;
+        }
+    }
+}

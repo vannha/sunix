@@ -1,0 +1,214 @@
+.vc_row {
+
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: 100%;
+	&.vc_row-default-display-flex{
+		@media (min-width: 768px) and (max-width: 991px) {
+			display: flex !important;
+		}
+	}
+
+	.vc_row{
+			display: flex;
+		}
+	&.vc_row-padding-225{
+		@media (min-width: 1600px) {
+			padding: 0 210px !important;
+		}
+	}
+	&.vc_row-default-padding{
+		@media (max-width: 1200px) {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+			@media (min-width: 1200px) and (max-width: 1500px) {
+				.vc_column_container>.vc_column-inner {
+					margin-left: 0px !important;
+					margin-top: 0px !important;
+					padding-left: 15px !important;
+					padding-right: 15px !important;
+					padding-bottom: 0px !important;
+				}
+				.offset-xl-4.col-xl-10{
+					max-width: 100%;
+					margin-left: 0px !important;
+					flex: 0 0 auto;
+				}
+			}
+	}
+
+}
+.site-bordered {
+	.red-page:not(.red-page-overlay-initial) {
+		.vc_row{
+			&.row-full-bg {
+				@media (max-width: 767px) {
+					padding-left: 15px !important;
+					padding-right: 15px !important;
+				}
+
+			}
+		}
+	}
+	.red-page.red-page-overlay-initial{
+		.vc_row{
+			&.row-bg-color {
+				.parallax-overlay{
+					max-width: calc(100% - 96px);
+					left: 48px;
+					@media (max-width: 1200px){
+						left: 15px !important;
+						max-width: calc(100% - 30px) !important;
+					}
+				}
+
+			}
+		}
+	}
+}
+.rtl .vc_row{
+	direction: rtl;
+}
+.add-col-divider{
+	> .wpb_column {
+		> .vc_column-inner{
+			&:after{
+				content: '';
+				display: block;
+				width: 1px;
+				height: 31.65%;
+				background: #E8E8E8;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				@include transform(translateY(-50%));
+			}
+		}
+		&:last-child{
+			> .vc_column-inner:after{
+				display: none;
+			}
+		}
+	}
+}
+// Gutters 
+$customs_gutters: (
+	0 : 0,
+	10 : 10px,
+	15 : 15px,
+	20 : 20px,
+	25 : 25px,
+	30 : 30px,
+	35 : 35px,
+	40 : 40px,
+	50 : 50px,
+	60 : 60px,
+	70 : 70px,
+	80 : 80px,
+	90 : 90px,
+	100 : 100px
+);
+@each $gutters , $gutters-value in $customs_gutters{
+	.gutter-#{$gutters}{
+		margin-left: ($gutters-value / -2);
+		margin-right: ($gutters-value / -2);
+		> [class*='col'],
+		> *{
+			padding-left: ($gutters-value / 2);
+			padding-right: ($gutters-value / 2);
+		}
+	}
+}
+// Gap 
+$vc_col_gap : (
+	'0' : 0,
+	'1' : 1px,
+	'2' : 2px,
+	'3' : 3px,
+	'4' : 4px,
+	'5' : 5px,
+	'10' : 10px,
+	'15' : 15px,
+	'20' : 20px,
+	'25' : 25px,
+	'30' : 30px,
+	'35' : 35px,
+	'40' : 40px,
+	'50' : 50px,
+	'60' : 60px,
+	'70' : 70px,
+	'80' : 80px,
+	'90' : 90px,
+	'100' : 100px
+);
+@each $gap , $gap-value in $vc_col_gap{
+	// Default Row
+	.vc_column-gap-#{$gap} > .container > .row {
+		margin-left: ($gap-value / -2);
+		margin-right: ($gap-value / -2);
+		> .vc_column_container{
+			padding: ($gap-value / 2);
+		}
+	}
+	// Stretch Row
+	.vc_column-gap-#{$gap}{
+		margin-left: ($gap-value + $grid-gutter-width) / -2;
+		margin-right: ($gap-value + $grid-gutter-width) / -2;
+		> .vc_column_container{
+			padding: ($gap-value / 2);
+		}
+	}
+}
+
+.red-row-bg-text{
+	font-size: 200px;
+	line-height: 1.1;
+	margin-top: -20px;
+	color: rgba(#eee, .03);
+}
+.row-half-bg{
+	position: relative;
+	padding-top: 0;
+	background-position: -10000px -10000px !important;
+	&:before {
+		position: absolute;
+		background-image: inherit;
+		background-position: center !important;
+		height: 100%;
+		width: 50%;
+		display: block !important;
+		left: 0;
+		top: 0;
+		background-size: cover;
+	}
+}
+@supports (-webkit-marquee-repetition:infinite) and (object-fit:fill) {
+	@media (min-width: 768px){
+		.vc_row  {
+			display: -webkit-box;
+			.vc_row:before,
+			.vc_row:after {display: none !important;}
+		}
+		.red-restaurant-carousel-layout3 .menu-title {
+			height: 100%;
+			min-height: 308px;
+		}
+		#red-header-top .red-social {
+			margin-right: 0;
+		}
+		.mfp-with-zoom.mfp-ready .mfp-container .mfp-content {
+			overflow: hidden;
+		}
+	}
+	@media (min-width: 992px) and (max-width: 1200px) {
+		#red-header-top .red-social {
+			margin-right: 0;
+		}
+		table.woocommerce-cart-form__contents thead th{
+			text-align: left !important;
+		}
+	}
+
+}

@@ -1,0 +1,12 @@
+.red-portfolio-gallery-slider-wrap{
+	.red-owl-dots{
+		margin-top: 20px;
+		&.thumbnail{
+			margin: 7.5px -7.5px;
+			.owl-dot{
+				padding: 7.5px;
+				max-width: 20%;
+			}
+		}
+	}
+}

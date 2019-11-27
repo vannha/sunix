@@ -1,0 +1,57 @@
+#red-header-top .switcher.notranslate{
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 28px;
+    width: auto;
+    position: relative;
+    padding: 0 15px;
+    overflow: visible;
+    > div.selected {
+        background: none;
+        position: relative;
+        padding-right: 12px;
+        &:after{
+            content: "\f107";
+            position: absolute;
+            top: 10px;
+            right: 0;
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 900;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+        }
+    }
+    .option {
+        border:none;
+        background: none;
+        width: auto;
+        position: absolute;
+        background: #fff;
+        left: 0;
+        padding: 5px 15px;
+    }
+    a {
+        border: none;
+        background: none;
+        color: inherit;
+        padding: 0;
+        width: auto;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+
+        img {
+            opacity: 1;
+            height: 38px;
+            width: 28px;
+            margin-right: 3px;
+            margin-top: -3px;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+// Menu Desktop
+
+@media( min-width: $screen-xl-min ) {
+    .red-header-menu > .menu-item-has-children > .red-toggle{
+        display: none; // remove menu expander for level 1
+    }
+    // Primary menu
+    .red-menu{
+        > li {
+            > a{
+                text-transform: uppercase;
+                font-family: $ExtraFont;
+                font-size: $lv1_font_size;
+                font-weight: $lv1_font_weight;
+
+            }
+        }
+        /* Has helper Menu */
+        &.has-helper-menu{
+            > li > a{
+                //line-height: #{ $lv1_lineheight - 17px};
+            }
+        }
+    }
+    .red-header-menu {
+        margin-left: ($lv1_space / -2);
+        margin-right: ($lv1_space / -2);
+        @include d-flex-auto();
+        &.primary-menu-not-set {
+            margin-right: -45px;
+        }
+        /* Level 1 */
+        > li {
+            vertical-align: middle;
+            padding: 0;
+            padding: 0 #{$lv1_space / 2};
+            > a{
+                height: $lv1_lineheight;
+                &:after{
+                    content: '';
+                    display: none;
+                    height: 2px;
+                    width: 0;
+                    position: absolute;
+                    left: 50%;
+                    top: calc(50% + 8px );
+                    background-color: transparent;
+                    @include transition();
+                }
+            }
+            > .red-menu-toggle{
+                display: none;
+            }
+            &:hover,
+            &.current_page_item,
+            &.current-menu-item,
+            &.current_page_ancestor,
+            &.current-menu-ancestor{
+               > a {
+                    &:after{
+                        left: 0;
+                        width: 100%;
+                    }
+                   > span:before{
+                       @include transform(scale(1))
+                   }
+                }
+            }
+            // Has children
+            &.menu-item-has-children > a > .menu-title{
+                &:before,
+                &:after{
+                    font-family: $FontAwesome;
+                    font-weight: 400;
+                }
+                &:after{
+
+                }
+                [dir="rtl"] &{
+                    &:after{
+                        content: '';
+                        display: none;
+                    }
+                    &:before{
+                        content: "\f107\00a0\00a0";
+                    }
+                }
+            }
+        }
+    }
+}

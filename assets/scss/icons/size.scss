@@ -1,0 +1,26 @@
+/*
+ * Icon Size
+ * Structure 1.size 2.font-size
+*/
+$red-icon-sizes :(
+	20 10px,
+	30 12px,
+	36 12px,
+	40 13px,
+	50 15px,
+	60 16px,
+	70 18px,
+	80 20px,
+	90 25px,
+	100 30px
+);
+
+@each $size in $red-icon-sizes{
+	.red-icon.size-#{nth($size,1)},
+	.red-icons.size-#{nth($size,1)} .red-icon {
+		width: #{nth($size,1)}px;
+		height: #{nth($size,1)}px;
+		line-height: #{nth($size,1)}px;
+		font-size: nth($size, 2);
+	}
+}

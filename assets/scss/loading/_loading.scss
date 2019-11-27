@@ -1,0 +1,30 @@
+#red-loading{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  z-index: 9999999;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  @include transition();
+}
+.spinner {
+  width: 70px;
+  height: 70px;
+  position: relative;
+}
+
+@import 'mixins';
+@import 'rotate-plane';
+@import 'double-bounce';
+@import 'wave';
+@import 'double-cube';
+@import 'scale-out';
+@import 'double-dots';
+@import 'three-circle-bounce';
+@import 'circle-loading';
+@import 'cube-grid';
+@import 'fading-circle';
+@import 'folding-cube';
