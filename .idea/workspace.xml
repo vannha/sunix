@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="" />
+    <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="280" column="7" selection-start-line="280" selection-start-column="7" selection-end-line="280" selection-end-column="7" />
+            <state relative-caret-position="261">
+              <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -56,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../alacarte/assets/css/theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="790">
-              <caret line="22929" selection-start-line="22929" selection-end-line="22929" />
+            <state relative-caret-position="413">
+              <caret line="22880" column="27" lean-forward="true" selection-start-line="22880" selection-start-column="27" selection-end-line="22880" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -156,11 +159,11 @@
         <option value="$PROJECT_DIR$/inc/functions/page-title.php" />
         <option value="$PROJECT_DIR$/assets/scss/menus/_toggle.scss" />
         <option value="$PROJECT_DIR$/inc/functions/theme.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/assets/scss/typo/typo.scss" />
         <option value="$PROJECT_DIR$/assets/scss/page-title/page-title.scss" />
         <option value="$PROJECT_DIR$/../alacarte/assets/scss/page-title/page-title.scss" />
         <option value="$PROJECT_DIR$/../alacarte/assets/css/theme.css" />
+        <option value="$PROJECT_DIR$/functions.php" />
       </list>
     </option>
   </component>
@@ -246,12 +249,12 @@
       <workItem from="1574131883753" duration="23076000" />
       <workItem from="1574301506619" duration="7340000" />
       <workItem from="1574736733602" duration="5256000" />
-      <workItem from="1574911927616" duration="2197000" />
+      <workItem from="1574911927616" duration="3152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37869000" />
+    <option name="totallyTimeSpent" value="38824000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -543,13 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="280" column="7" selection-start-line="280" selection-start-column="7" selection-end-line="280" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/page-title/_layout1.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -583,8 +579,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../alacarte/assets/css/theme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="22929" selection-start-line="22929" selection-end-line="22929" />
+        <state relative-caret-position="413">
+          <caret line="22880" column="27" lean-forward="true" selection-start-line="22880" selection-start-column="27" selection-end-line="22880" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
         </state>
       </provider>
     </entry>

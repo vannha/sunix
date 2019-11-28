@@ -54,8 +54,8 @@ if(!function_exists('alacarte_configs')){
             'post_thumbnail_size_h' => 679,
             // Header 
             'header_height'       => '132px',
-            'logo_width'       => '150',
-            'logo_height'      => '36',
+            'logo_width'       => '149',
+            'logo_height'      => '55',
             'logo_units'       => 'px',
             'header_sidewidth' => '320px',
             'dropdown_bg'      => 'rgba(#fff, 1)',
