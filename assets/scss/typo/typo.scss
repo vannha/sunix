@@ -40,7 +40,6 @@ body{
     padding: 0;
     margin: 0;
     word-break: break-word;
-    display: none;
     @include font-smoothing();
     &:after{
         content: '';
