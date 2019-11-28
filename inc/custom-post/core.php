@@ -13,8 +13,8 @@ function sunix_cpts_header_top($post_types)
     if($header_top) {
         $post_types['ef5_header_top'] = array(
             'status'        => true,
-            'name'          => esc_html__('sunix Header Top', 'sunix'),
-            'singular_name' => esc_html__('sunix Headers Top', 'sunix'),
+            'name'          => esc_html__('Sunix Header Top', 'sunix'),
+            'singular_name' => esc_html__('Sunix Headers Top', 'sunix'),
             'args'          => array(
                 'description'         => 'Add custom Header Top Layout ',
                 'public'              => true,
@@ -54,8 +54,8 @@ function sunix_cpts_footer($post_types) {
     if($enable_footer) {
         $post_types['ef5_footer'] = array(
             'status'        => true,
-            'name'          => esc_html__('sunix Footer', 'sunix'),
-            'singular_name' => esc_html__('sunix Footers', 'sunix'),
+            'name'          => esc_html__('Sunix Footer', 'sunix'),
+            'singular_name' => esc_html__('Sunix Footers', 'sunix'),
             'args'          => array(
                 'description'         => 'Add custom Footer Layout ',
                 'public'              => true,
