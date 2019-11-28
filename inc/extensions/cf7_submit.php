@@ -5,13 +5,13 @@
 
 remove_action( 'wpcf7_init', 'wpcf7_add_form_tag_submit', 10, 0 ); 
 
-add_action( 'wpcf7_init', 'alacarte_wpcf7_add_form_tag_submit', 10, 0 );
+add_action( 'wpcf7_init', 'sunix_wpcf7_add_form_tag_submit', 10, 0 );
 
-function alacarte_wpcf7_add_form_tag_submit() {
-	wpcf7_add_form_tag( 'submit', 'alacarte_wpcf7_submit_form_tag_handler' );
+function sunix_wpcf7_add_form_tag_submit() {
+	wpcf7_add_form_tag( 'submit', 'sunix_wpcf7_submit_form_tag_handler' );
 }
 
-function alacarte_wpcf7_submit_form_tag_handler( $tag ) {
+function sunix_wpcf7_submit_form_tag_handler( $tag ) {
 	$class = wpcf7_form_controls_class( $tag->type );
 
 	$atts = array();
@@ -24,7 +24,7 @@ function alacarte_wpcf7_submit_form_tag_handler( $tag ) {
 	//$icon = isset( $tag->values[0] ) ? $tag->values[0] : '';
 
 	if ( empty( $value ) ) {
-		$value = __( 'Send', 'alacarte' );
+		$value = __( 'Send', 'sunix' );
 	}
 
 	$atts['type'] = 'submit';
@@ -42,20 +42,20 @@ function alacarte_wpcf7_submit_form_tag_handler( $tag ) {
 
 /* Tag generator */
 
-add_action( 'wpcf7_admin_init', 'alacarte_wpcf7_add_tag_generator_submit', 55, 0 );
+add_action( 'wpcf7_admin_init', 'sunix_wpcf7_add_tag_generator_submit', 55, 0 );
 
-function alacarte_wpcf7_add_tag_generator_submit() {
+function sunix_wpcf7_add_tag_generator_submit() {
 	$tag_generator = WPCF7_TagGenerator::get_instance();
-	$tag_generator->add( 'submit', __( 'submit', 'alacarte' ),
-		'alacarte_wpcf7_tag_generator_submit', array( 'nameless' => 1 ) );
+	$tag_generator->add( 'submit', __( 'submit', 'sunix' ),
+		'sunix_wpcf7_tag_generator_submit', array( 'nameless' => 1 ) );
 }
 
-function alacarte_wpcf7_tag_generator_submit( $contact_form, $args = '' ) {
+function sunix_wpcf7_tag_generator_submit( $contact_form, $args = '' ) {
 	$args = wp_parse_args( $args, array() );
 
-	$description = __( "Generate a form-tag for a submit button. For more details, see %s.", 'alacarte' );
+	$description = __( "Generate a form-tag for a submit button. For more details, see %s.", 'sunix' );
 
-	$desc_link = wpcf7_link( __( 'https://contactform7.com/submit-button/', 'alacarte' ), __( 'Submit Button', 'alacarte' ) );
+	$desc_link = wpcf7_link( __( 'https://contactform7.com/submit-button/', 'sunix' ), __( 'Submit Button', 'sunix' ) );
 
 ?>
 <div class="control-box">
@@ -65,22 +65,22 @@ function alacarte_wpcf7_tag_generator_submit( $contact_form, $args = '' ) {
 <table class="form-table">
 <tbody>
 	<tr>
-		<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-values' ); ?>"><?php echo esc_html( __( 'Label', 'alacarte' ) ); ?></label></th>
+		<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-values' ); ?>"><?php echo esc_html( __( 'Label', 'sunix' ) ); ?></label></th>
 		<td><input type="text" name="values" class="oneline" id="<?php echo esc_attr( $args['content'] . '-values' ); ?>" /></td>
 	</tr>
 
 	<tr>
-		<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-id' ); ?>"><?php echo esc_html( __( 'Id attribute', 'alacarte' ) ); ?></label></th>
+		<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-id' ); ?>"><?php echo esc_html( __( 'Id attribute', 'sunix' ) ); ?></label></th>
 		<td><input type="text" name="id" class="idvalue oneline option" id="<?php echo esc_attr( $args['content'] . '-id' ); ?>" /></td>
 	</tr>
 
 	<tr>
-		<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-class' ); ?>"><?php echo esc_html( __( 'Class attribute', 'alacarte' ) ); ?></label></th>
+		<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-class' ); ?>"><?php echo esc_html( __( 'Class attribute', 'sunix' ) ); ?></label></th>
 		<td><input type="text" name="class" class="classvalue oneline option" id="<?php echo esc_attr( $args['content'] . '-class' ); ?>" /></td>
 	</tr>
 
 	<tr>
-		<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-icon' ); ?>"><?php echo esc_html( __( 'Icon Class', 'alacarte' ) ); ?></label><br /><i><?php esc_html_e('Availabe icon class: icon1, icon2, icon3, icon4, icon5','alacarte') ?></i></th>
+		<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-icon' ); ?>"><?php echo esc_html( __( 'Icon Class', 'sunix' ) ); ?></label><br /><i><?php esc_html_e('Availabe icon class: icon1, icon2, icon3, icon4, icon5','sunix') ?></i></th>
 		<td><input type="text" name="icon" class="classvalue oneline option" id="<?php echo esc_attr( $args['content'] . '-icon' ); ?>" /></td>
 	</tr>
 
@@ -93,7 +93,7 @@ function alacarte_wpcf7_tag_generator_submit( $contact_form, $args = '' ) {
 	<input type="text" name="submit" class="tag code" readonly="readonly" onfocus="this.select()" />
 
 	<div class="submitbox">
-	<input type="button" class="button button-primary insert-tag" value="<?php echo esc_attr( __( 'Insert Tag', 'alacarte' ) ); ?>" />
+	<input type="button" class="button button-primary insert-tag" value="<?php echo esc_attr( __( 'Insert Tag', 'sunix' ) ); ?>" />
 	</div>
 </div>
 <?php

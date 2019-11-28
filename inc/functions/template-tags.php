@@ -1,24 +1,24 @@
 <?php
 /**
- * @package AlaCarte
- * @subpackage AlaCarte
+ * @package sunix
+ * @subpackage sunix
  * @since 1.0.0
  * @author EF5 Team
 */
 
-if ( ! function_exists( 'alacarte_posted_by' ) ) :
+if ( ! function_exists( 'sunix_posted_by' ) ) :
     /**
      * Prints HTML with meta information for the current post author.
      */
-    function alacarte_posted_by($args=[]){
+    function sunix_posted_by($args=[]){
         global $post;
         $author_id   = $post->post_author;
         $args = wp_parse_args($args, [
             'class'              => '',
-            'hint'               => esc_html__( 'Posted by', 'alacarte' ),
+            'hint'               => esc_html__( 'Posted by', 'sunix' ),
             'icon'               => '',
             'author_avatar'      => true,
-            'before_author_name' => esc_html__( 'By', 'alacarte' ).' ',
+            'before_author_name' => esc_html__( 'By', 'sunix' ).' ',
             'after_author_name'  => '',
             'show_author'        => '1',
             'echo'               => true   
@@ -63,16 +63,16 @@ if ( ! function_exists( 'alacarte_posted_by' ) ) :
     }
 endif;
 
-if ( ! function_exists( 'alacarte_posted_on' ) ) :
+if ( ! function_exists( 'sunix_posted_on' ) ) :
     /**
      * Prints HTML with meta information for the current post-date/time.
      */
-    function alacarte_posted_on($args=[])
+    function sunix_posted_on($args=[])
     {
         $args = wp_parse_args($args,[
             'class'       => '',
-            'hint'        => esc_html__( 'Published on', 'alacarte' ),
-            'hint_update' => esc_html__( 'Updated on', 'alacarte' ),
+            'hint'        => esc_html__( 'Published on', 'sunix' ),
+            'hint_update' => esc_html__( 'Updated on', 'sunix' ),
             'icon'        => '',
             'icon_update' => '',
             'before_date' => '',
@@ -132,14 +132,14 @@ if ( ! function_exists( 'alacarte_posted_on' ) ) :
 endif;
 
 
-if ( ! function_exists( 'alacarte_posted_in' ) ) :
+if ( ! function_exists( 'sunix_posted_in' ) ) :
     /**
      * Prints HTML with meta information for the current post-date/time.
      */
-    function alacarte_posted_in($args = []){
+    function sunix_posted_in($args = []){
         $args = wp_parse_args($args, [
             'class'           => '',
-            'hint'            => esc_html__( 'Posted in', 'alacarte' ),
+            'hint'            => esc_html__( 'Posted in', 'sunix' ),
             'icon'            => '',
             'before'          => '',
             'after'           => '',
@@ -153,7 +153,7 @@ if ( ! function_exists( 'alacarte_posted_in' ) ) :
         if($args['show_cat'] !== '1') return;
 
         $classes = ['red-posted-in', $args['class']];
-        $taxo = alacarte_get_post_taxonomies();
+        $taxo = sunix_get_post_taxonomies();
         $terms = get_the_term_list( get_the_ID(), $taxo, '', $args['sep'], '' );
         ob_start();
             if ( !empty($terms))
@@ -181,11 +181,11 @@ if ( ! function_exists( 'alacarte_posted_in' ) ) :
 endif;
 
 
-if ( ! function_exists( 'alacarte_tagged_in' ) ) :
+if ( ! function_exists( 'sunix_tagged_in' ) ) :
     /**
      * Prints HTML with meta information for the current post-date/time.
      */
-    function alacarte_tagged_in($args = []){
+    function sunix_tagged_in($args = []){
         $args = wp_parse_args($args, [
             'class'      => '',
             'hint'       => '',
@@ -195,12 +195,12 @@ if ( ! function_exists( 'alacarte_tagged_in' ) ) :
             'before_tag' => '',
             'after_tag'  => '',
             'sep'        => ', ',
-            'show_tag'   => is_single() ? alacarte_get_theme_opt( 'post_tags_on', '1' ) : alacarte_get_theme_opt( 'archive_tags_on', '1' ),
+            'show_tag'   => is_single() ? sunix_get_theme_opt( 'post_tags_on', '1' ) : sunix_get_theme_opt( 'archive_tags_on', '1' ),
             'echo'       => true
         ]);
         if('1' !== $args['show_tag']) return;
         $classes = ['red-tagged-in hint--top', $args['class']];
-        $tags_list = get_the_term_list( get_the_ID(), alacarte_get_post_taxonomies('tag'), '', $args['sep'], '' );
+        $tags_list = get_the_term_list( get_the_ID(), sunix_get_post_taxonomies('tag'), '', $args['sep'], '' );
         ob_start();
             if ( $tags_list)
             {
@@ -229,8 +229,8 @@ endif;
 /**
  * Prints comments count with link to single post comment form.
  */
-if ( ! function_exists( 'alacarte_comments_popup_link' ) ) {
-    function alacarte_comments_popup_link($args = [])
+if ( ! function_exists( 'sunix_comments_popup_link' ) ) {
+    function sunix_comments_popup_link($args = [])
     {
         $args = wp_parse_args($args, [
             'class'     => '',
@@ -253,15 +253,15 @@ if ( ! function_exists( 'alacarte_comments_popup_link' ) ) {
             printf ('%s' , $args['before']);
             if(!$args['show_text']){
                 comments_popup_link(
-                    sprintf('<span data-hint="%s">%s %s</span>',esc_html__('Be the first to comment','alacarte'), $args['icon'], $number),
-                    sprintf('<span data-hint="%s">%s %s</span>',esc_html__('Post a comment','alacarte'), $args['icon'], $number),
-                    sprintf('<span data-hint="%s">%s %s</span>',esc_html__('Post a comment','alacarte'), $args['icon'], $number)
+                    sprintf('<span data-hint="%s">%s %s</span>',esc_html__('Be the first to comment','sunix'), $args['icon'], $number),
+                    sprintf('<span data-hint="%s">%s %s</span>',esc_html__('Post a comment','sunix'), $args['icon'], $number),
+                    sprintf('<span data-hint="%s">%s %s</span>',esc_html__('Post a comment','sunix'), $args['icon'], $number)
                 );
             } else {
                 comments_popup_link(
-                    sprintf('<span data-hint="%s">%s %s %s</span>',esc_html__('Be the first to comment','alacarte'), $args['icon'], $number, esc_html__('Comments','alacarte')),
-                    sprintf('<span data-hint="%s">%s %s %s</span>',esc_html__('Post a comment','alacarte'), $args['icon'], $number, esc_html__('Comment','alacarte')),
-                    sprintf('<span data-hint="%s">%s %s %s</span>',esc_html__('Post a comment','alacarte'), $args['icon'], $number, esc_html__('Comments','alacarte'))
+                    sprintf('<span data-hint="%s">%s %s %s</span>',esc_html__('Be the first to comment','sunix'), $args['icon'], $number, esc_html__('Comments','sunix')),
+                    sprintf('<span data-hint="%s">%s %s %s</span>',esc_html__('Post a comment','sunix'), $args['icon'], $number, esc_html__('Comment','sunix')),
+                    sprintf('<span data-hint="%s">%s %s %s</span>',esc_html__('Post a comment','sunix'), $args['icon'], $number, esc_html__('Comments','sunix'))
                 );
             }
             printf ('%s' , $args['after']);
@@ -278,7 +278,7 @@ if ( ! function_exists( 'alacarte_comments_popup_link' ) ) {
  * Count views
  * Show count of viewed 
 */
-function alacarte_post_count_view($args=[]){
+function sunix_post_count_view($args=[]){
     $args = wp_parse_args($args, [
         'show_view' => '1',
         'class'     => '',
@@ -303,11 +303,11 @@ function alacarte_post_count_view($args=[]){
                         '%1$s %3$s',
                         $view_number,
                         'view title',
-                        'alacarte'
+                        'sunix'
                     ),
                     number_format_i18n( $view_number ),
-                    $args['show_text'] ? esc_html__(' View','alacarte') : '',
-                    $args['show_text'] ? esc_html__(' Views','alacarte') : ''
+                    $args['show_text'] ? esc_html__(' View','sunix') : '',
+                    $args['show_text'] ? esc_html__(' Views','sunix') : ''
                 );
             printf ('%s' , $args['after']);
         echo '</div>';
@@ -318,7 +318,7 @@ function alacarte_post_count_view($args=[]){
         return ob_get_clean();
 }
 
-class Alacarte_Like_Post {
+class sunix_Like_Post {
     function __construct()   {
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
         add_action('wp_ajax_like-post', array($this, 'ajax'));
@@ -326,14 +326,14 @@ class Alacarte_Like_Post {
     }
 
     function enqueue_scripts() {
-        wp_register_script( 'alacarte-likepost', get_template_directory_uri() . '/vc_extends/like-posts.js', 'jquery', '1.0', TRUE );
+        wp_register_script( 'sunix-likepost', get_template_directory_uri() . '/vc_extends/like-posts.js', 'jquery', '1.0', TRUE );
         global $post;
-        wp_localize_script('alacarte-likepost', 'Alacarte_Like_Post', array(
+        wp_localize_script('sunix-likepost', 'sunix_Like_Post', array(
             'ajaxurl' => admin_url('admin-ajax.php'),
             'postID' => $post ? $post->ID : 0,
             'rooturl' => home_url('/')
         ));
-        wp_enqueue_script('alacarte-likepost');
+        wp_enqueue_script('sunix-likepost');
     }
 
     function ajax($post_id) {
@@ -380,13 +380,13 @@ class Alacarte_Like_Post {
     function add_love($args = []) {
 
         $args = wp_parse_args($args, [
-            'title'       => esc_html__('Like this?', 'alacarte'),
-            'title_liked' => esc_html__('You already liked this!', 'alacarte'),
+            'title'       => esc_html__('Like this?', 'sunix'),
+            'title_liked' => esc_html__('You already liked this!', 'sunix'),
             'show_text'   => true,
             'show_icon'   => true,
-            'text'        => esc_html__('Like','alacarte'),
-            'texts'       => esc_html__('Likes','alacarte'),
-            'text_liked'  => esc_html__('Liked!','alacarte'),
+            'text'        => esc_html__('Like','sunix'),
+            'texts'       => esc_html__('Likes','sunix'),
+            'text_liked'  => esc_html__('Liked!','sunix'),
             'icon'        => 'flaticon-heart',
             'icon_liked'  => 'flaticon-heart'
         ]);
@@ -418,30 +418,30 @@ class Alacarte_Like_Post {
     }
 
 }
-global $alacarte_like_post;
-$alacarte_like_post = new alacarte_Like_Post();
+global $sunix_like_post;
+$sunix_like_post = new sunix_Like_Post();
 
-function alacarte_like_post($args = [],$return = false) {
+function sunix_like_post($args = [],$return = false) {
     $args = wp_parse_args($args, [
         'before'      => '<div class="red-like">',
         'after'       => '</div>',
-        'title'       => esc_html__('Like this?', 'alacarte'),
-        'title_liked' => esc_html__('You already liked this!', 'alacarte'),
+        'title'       => esc_html__('Like this?', 'sunix'),
+        'title_liked' => esc_html__('You already liked this!', 'sunix'),
         'show_text'   => true,
         'show_icon'   => true,
-        'text'        => esc_html__('Like','alacarte'),
-        'texts'       => esc_html__('Likes','alacarte'),
-        'text_liked'  => esc_html__('Liked!','alacarte'),
+        'text'        => esc_html__('Like','sunix'),
+        'texts'       => esc_html__('Likes','sunix'),
+        'text_liked'  => esc_html__('Liked!','sunix'),
         'icon'        => 'meta-icon  flaticon-heart',
         'icon_liked'  => 'meta-icon  flaticon-heart',
         'echo'      => true
     ]);
-    global $alacarte_like_post;
+    global $sunix_like_post;
     ob_start();
     if($return) {
-        return $args['before'].$alacarte_like_post->add_love(['icon'=>$args['icon']]).$args['after'];
+        return $args['before'].$sunix_like_post->add_love(['icon'=>$args['icon']]).$args['after'];
     } else {
-        echo '' . $args['before'] . $alacarte_like_post->add_love(['icon'=>$args['icon']]).$args['after'];
+        echo '' . $args['before'] . $sunix_like_post->add_love(['icon'=>$args['icon']]).$args['after'];
     }
     if($args['echo']){
         echo ob_get_clean();
@@ -453,13 +453,13 @@ function alacarte_like_post($args = [],$return = false) {
 /**
  * Prints post edit link when applicable
  */
-function alacarte_edit_link($args = [])
+function sunix_edit_link($args = [])
 {
     $args = wp_parse_args($args, [
         'class'     => '',
         'icon'      => 'meta-icon far fa-edit',
-        'title'     => esc_html('Edit', 'alacarte'),
-        'hint'      => esc_html('Edit', 'alacarte'),
+        'title'     => esc_html('Edit', 'sunix'),
+        'hint'      => esc_html('Edit', 'sunix'),
         'before'    => '',
         'after'     => '',
         'show_edit' => false,
@@ -480,10 +480,10 @@ function alacarte_edit_link($args = [])
     }
 }
 
-function alacarte_link_pages()
+function sunix_link_pages()
 {
     wp_link_pages( array(
-        'before'      => sprintf( '<div class="page-links"><span class="red-heading">%s</span>', esc_html__( 'Pages:', 'alacarte' ) ),
+        'before'      => sprintf( '<div class="page-links"><span class="red-heading">%s</span>', esc_html__( 'Pages:', 'sunix' ) ),
         'after'       => '</div>',
         'link_before' => '<span class="page-link-number">', 
         'link_after'  => '</span>'
@@ -493,17 +493,17 @@ function alacarte_link_pages()
 /**
  * Post Share
 */
-if(!function_exists('alacarte_post_share')){
-    function alacarte_post_share($args = array()){
+if(!function_exists('sunix_post_share')){
+    function sunix_post_share($args = array()){
         if(!class_exists('EF5Systems')) return;
         wp_enqueue_script('sharethis');
         global $post;
         $defaults = array(
-            'show_share'  => is_single() ? alacarte_get_theme_opt( 'post_share_on', '0' ) : alacarte_get_theme_opt( 'archive_share_on', '0' ),
+            'show_share'  => is_single() ? sunix_get_theme_opt( 'post_share_on', '0' ) : sunix_get_theme_opt( 'archive_share_on', '0' ),
             'class'       => '',
             'show_title'  => true,
             'show_tooltip'  => true,
-            'title'       => esc_html__('Share this article','alacarte'),
+            'title'       => esc_html__('Share this article','sunix'),
             'social_args' => [],
             'echo'        => true
         );
@@ -516,24 +516,24 @@ if(!function_exists('alacarte_post_share')){
 
         $classes   = array('red-shares');
         $classes[] = $class;
-        $classes[] = alacarte_is_loop() ? 'loop': 'single';
+        $classes[] = sunix_is_loop() ? 'loop': 'single';
         
         $url   = get_the_permalink();
         $image = get_the_post_thumbnail_url($post->ID);
         $title = get_the_title();
 
         if(is_singular()){
-            $show_fb    = alacarte_get_theme_opt( 'post_share_fb', '1' );
-            $show_tw    = alacarte_get_theme_opt( 'post_share_tw', '1' );
-            $show_gplus = alacarte_get_theme_opt( 'post_share_gplus', '1' );
-            $show_pin   = alacarte_get_theme_opt( 'post_share_pin', '1' );
-            $show_all   = alacarte_get_theme_opt( 'post_share_all', '1' );
+            $show_fb    = sunix_get_theme_opt( 'post_share_fb', '1' );
+            $show_tw    = sunix_get_theme_opt( 'post_share_tw', '1' );
+            $show_gplus = sunix_get_theme_opt( 'post_share_gplus', '1' );
+            $show_pin   = sunix_get_theme_opt( 'post_share_pin', '1' );
+            $show_all   = sunix_get_theme_opt( 'post_share_all', '1' );
         } else {
-            $show_fb    = alacarte_get_theme_opt( 'archive_share_fb', '1' );
-            $show_tw    = alacarte_get_theme_opt( 'archive_share_tw', '1' );
-            $show_gplus = alacarte_get_theme_opt( 'archive_share_gplus', '1' );
-            $show_pin   = alacarte_get_theme_opt( 'archive_share_pin', '1' );
-            $show_all   = alacarte_get_theme_opt( 'archive_share_all', '1' );
+            $show_fb    = sunix_get_theme_opt( 'archive_share_fb', '1' );
+            $show_tw    = sunix_get_theme_opt( 'archive_share_tw', '1' );
+            $show_gplus = sunix_get_theme_opt( 'archive_share_gplus', '1' );
+            $show_pin   = sunix_get_theme_opt( 'archive_share_pin', '1' );
+            $show_all   = sunix_get_theme_opt( 'archive_share_all', '1' );
         }
         ob_start();
         if($show_fb == '1' || $show_tw == '1' || $show_gplus == '1' || $show_pin == '1' || $show_all == '1') {
@@ -548,19 +548,19 @@ if(!function_exists('alacarte_post_share')){
             <?php endif; ?>
                     <div class="<?php echo esc_attr($social_classes);?>">
                         <?php if($show_fb == '1'): ?>
-                        <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Facebook','alacarte'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="facebook" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> facebook st-custom-button"><span class="fab fa-facebook-f"></span></a>
+                        <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Facebook','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="facebook" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> facebook st-custom-button"><span class="fab fa-facebook-f"></span></a>
                         <?php endif;
                         if($show_tw == '1'): ?>
-                        <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Twitter','alacarte'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="twitter" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> twitter st-custom-button"><span class="fab fa-twitter"></span></a>
+                        <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Twitter','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="twitter" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> twitter st-custom-button"><span class="fab fa-twitter"></span></a>
                         <?php endif;
                         if($show_gplus == '1'): ?>
-                        <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Google Plus','alacarte'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="googleplus" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> googleplus st-custom-button"><span class="fab fa-google-plus"></span></a>
+                        <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Google Plus','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="googleplus" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> googleplus st-custom-button"><span class="fab fa-google-plus"></span></a>
                         <?php endif;
                         if($show_pin == '1'): ?>
-                        <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Pinterest','alacarte'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="pinterest" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> pinterest st-custom-button"><span class="fab fa-pinterest"></span></a>
+                        <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Pinterest','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="pinterest" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> pinterest st-custom-button"><span class="fab fa-pinterest"></span></a>
                         <?php endif;
                         if($show_all == '1'): ?>
-                        <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to','alacarte'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="sharethis" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> sharethis st-custom-button"><span class="fa fa-share-alt"></span></a>
+                        <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="sharethis" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> sharethis st-custom-button"><span class="fa fa-share-alt"></span></a>
                         <?php endif; ?>
                     </div>
             <?php if($show_title): ?>
@@ -580,18 +580,18 @@ if(!function_exists('alacarte_post_share')){
 /**
  * Post Read more Button 
 */
-if ( ! function_exists( 'alacarte_post_read_more' ) ) {
+if ( ! function_exists( 'sunix_post_read_more' ) ) {
     /**
      * Prints post read more link
      */
-    function alacarte_post_read_more($args = [])
+    function sunix_post_read_more($args = [])
     {
         $args = wp_parse_args($args,[
             'class'          => '',
             'icon_left'      => '',
-            'title'          => esc_html__('Read More','alacarte'),
+            'title'          => esc_html__('Read More','sunix'),
             'readmore_class' => 'red-btn ',
-            'show_readmore'  => alacarte_get_theme_opt( 'archive_readmore', '1' ),
+            'show_readmore'  => sunix_get_theme_opt( 'archive_readmore', '1' ),
             'before'         => '',
             'after'          => '',
             'echo'           => true
@@ -604,7 +604,7 @@ if ( ! function_exists( 'alacarte_post_read_more' ) ) {
                 $args['before'],
                 esc_url( get_the_permalink() ),
                 esc_attr( get_the_title() ),
-                alacarte_optimize_css_class(implode(' ', $classes)),
+                sunix_optimize_css_class(implode(' ', $classes)),
                 !empty($args['icon_left']) ? '<span class="'.esc_attr($args['icon_left']).'"></span>&nbsp;&nbsp;' : '',
                 '<span>'.$args['title'].'</span>',
                 !empty($args['icon_right']) ? '&nbsp;&nbsp;<span class="'.esc_attr($args['icon_right']).'"></span>' : '',
@@ -620,8 +620,8 @@ if ( ! function_exists( 'alacarte_post_read_more' ) ) {
  * Post Read more Circle 
  * Prints post read more link
 */
-if ( ! function_exists( 'alacarte_post_read_more_circle' ) ) {
-    function alacarte_post_read_more_circle($args = [])
+if ( ! function_exists( 'sunix_post_read_more_circle' ) ) {
+    function sunix_post_read_more_circle($args = [])
     {
         $args = wp_parse_args($args,[
             'class'          => '',
@@ -629,7 +629,7 @@ if ( ! function_exists( 'alacarte_post_read_more_circle' ) ) {
             'size'           => '60',
             'shape'          => 'circle',
             'icon'           => 'flaticon-add',
-            'title'          => esc_html__('Read More','alacarte'),
+            'title'          => esc_html__('Read More','sunix'),
             'readmore_class' => '',
             'show_readmore'  => '1',
             'before'         => '',
@@ -644,7 +644,7 @@ if ( ! function_exists( 'alacarte_post_read_more_circle' ) ) {
                 $args['before'],
                 esc_url( get_the_permalink() ),
                 esc_attr( get_the_title() ),
-                alacarte_optimize_css_class(implode(' ', $classes)),
+                sunix_optimize_css_class(implode(' ', $classes)),
                 esc_attr($args['title']),
                 !empty($args['icon']) ? '<span class="'.esc_attr($args['icon']).'"></span>' : '<span class="red-i-plus center-align transition"></span>',
                 '',

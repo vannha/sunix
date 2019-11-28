@@ -11,7 +11,7 @@ if ($bg_video_src_ogg)  $bg_video_args['ogg'] = $bg_video_src_ogg;
 if ($bg_video_src_ogv)  $bg_video_args['ogv'] = $bg_video_src_ogv;
 if ($bg_video_src_webm) $bg_video_args['webm'] = $bg_video_src_webm;
 if($video_source == '3' && empty($bg_video_args)){
-    esc_html_e('No video found!','alacarte');
+    esc_html_e('No video found!','sunix');
     return;
 }
 /* parse button link */
@@ -22,7 +22,7 @@ if(!empty($btn_link)){
     if ( strlen( $button_link['url'] ) > 0 ) {
         $use_link = true; 
         $a_href = $button_link['url'];
-        $a_title = strlen($button_link['title']) > 0 ? $button_link['title'] : esc_html__('Read more','alacarte') ;
+        $a_title = strlen($button_link['title']) > 0 ? $button_link['title'] : esc_html__('Read more','sunix') ;
         $a_target = strlen( $button_link['target'] ) > 0 ? $button_link['target'] : '_self';
     }
 }
@@ -42,7 +42,7 @@ if(!empty($content_color)) {
 }
 
 $play_btn_url = get_template_directory_uri().'/assets/images/play-btn-'.$play_btn.'.png';
-if($play_btn === 'custom') $play_btn_url = alacarte_get_image_url_by_size([
+if($play_btn === 'custom') $play_btn_url = sunix_get_image_url_by_size([
     'id'            => $play_btn_custom,
     'size'          => '80',
     'default_thumb' => true,
@@ -64,14 +64,14 @@ switch ($layout_template) {
 }
 
 ?>
-<div id="red-video-<?php echo esc_attr($el_id);?>" class="<?php echo alacarte_optimize_css_class(implode(' ', $wrap_css_class));?>">
+<div id="red-video-<?php echo esc_attr($el_id);?>" class="<?php echo sunix_optimize_css_class(implode(' ', $wrap_css_class));?>">
     <?php if( $title || $content ) : ?>
     <div class="red-video-info col-lg-5 <?php echo esc_attr($video_info_class);?>">
         <?php if($small_heading){ ?>
             <div class="red-heading small-heading text-14"><?php echo esc_html($small_heading);?></div>
         <?php }
         if($title){ ?>
-            <div class="red-heading large-heading text-40" <?php echo alacarte_optimize_css_class(implode(' ', $title_attrs));?>><?php echo alacarte_html($title);?></div>
+            <div class="red-heading large-heading text-40" <?php echo sunix_optimize_css_class(implode(' ', $title_attrs));?>><?php echo sunix_html($title);?></div>
         <?php }
         if($content){ ?>
             <div <?php echo trim(implode(' ', $desc_attrs));?>>
@@ -79,9 +79,9 @@ switch ($layout_template) {
             </div>
         <?php } ?>
         <div class="red-button-wrapper d-flex align-items-center">
-            <?php if($layout_template === '2') echo ''.$this->alacarte_video_play_button($atts,['anim' => $play_btn_effect]); ?>
+            <?php if($layout_template === '2') echo ''.$this->sunix_video_play_button($atts,['anim' => $play_btn_effect]); ?>
             <?php if($use_link) { ?>
-                <a class="red-btn red-btn-lg accent fill" alacarte"<?php echo esc_url( $a_href ); ?>" title="<?php echo esc_attr( $a_title ); ?>" target="<?php echo trim( esc_attr( $a_target ) ); ?>"><span><?php echo esc_attr( $a_title ); ?></span></a>
+                <a class="red-btn red-btn-lg accent fill" sunix"<?php echo esc_url( $a_href ); ?>" title="<?php echo esc_attr( $a_title ); ?>" target="<?php echo trim( esc_attr( $a_target ) ); ?>"><span><?php echo esc_attr( $a_title ); ?></span></a>
             <?php } ?>
         </div>
     </div>
@@ -93,11 +93,11 @@ switch ($layout_template) {
                 echo '<div class="red-video-popup-wrap text-center overlay-wrap">';
                 echo '<img src="'.wp_get_attachment_url($poster).'" alt="'.esc_attr($title).'" class="video-poster '.esc_attr($poster_style).'" />';
             }
-                echo ''.$this->alacarte_video_popup($atts,['anim' => $play_btn_effect]);
+                echo ''.$this->sunix_video_popup($atts,['anim' => $play_btn_effect]);
             if(!empty($poster)) echo '</div>';
             break;
         default:
-            echo ''.$this->alacarte_video_plain($atts);
+            echo ''.$this->sunix_video_plain($atts);
             break;
     } ?>
     </div>

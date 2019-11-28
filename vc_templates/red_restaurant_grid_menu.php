@@ -32,16 +32,16 @@ $masonry_opts = array(
 
 );
 $data = fr_get_posts_by_tax($cat_slug,array(),$limit = $number_menu,'seperate','date','DESC');
-$posts = alacarte_get_post_from_query_seperate_data($data);
-$posts_in_all_filter_view = alacarte_cms_menu_get_posts_in_all_cat_filter_view($number_menu,$data);
+$posts = sunix_get_post_from_query_seperate_data($data);
+$posts_in_all_filter_view = sunix_cms_menu_get_posts_in_all_cat_filter_view($number_menu,$data);
 $terms = $data['infor']['terms'];
 ?>
 <div class="red-posts red-restaurant-grid-menu" id="<?php echo esc_attr($el_id);?>">
     <?php if($show_filter === '1'): ?>
         <div class="filter-wrap">
-            <div class="<?php echo alacarte_optimize_css_class(implode(' ', $filters_class));?>">
+            <div class="<?php echo sunix_optimize_css_class(implode(' ', $filters_class));?>">
                 <div class="filter-item active" data-filter="*">
-                    <span><?php esc_html_e('All','alacarte'); ?></span>
+                    <span><?php esc_html_e('All','sunix'); ?></span>
                 </div>
                 <?php
                 foreach ($terms as $term) {
@@ -77,8 +77,8 @@ $terms = $data['infor']['terms'];
             }
             ;
             ?>
-            <div class="<?php echo alacarte_optimize_css_class(implode(' ',$grid_item_css_class).' '.$filter_class); ?> col-md-12 col-lg-6">
-                <div class="menu-post <?php echo alacarte_optimize_css_class(implode(' ', $item_css_class)); ?> ">
+            <div class="<?php echo sunix_optimize_css_class(implode(' ',$grid_item_css_class).' '.$filter_class); ?> col-md-12 col-lg-6">
+                <div class="menu-post <?php echo sunix_optimize_css_class(implode(' ', $item_css_class)); ?> ">
                     <?php
                     $post_meta = fr_get_post_meta($post->ID);
                     $term = wp_get_post_terms($post->ID, $cat_slug);
@@ -89,7 +89,7 @@ $terms = $data['infor']['terms'];
                             <div class="img-thumb">
                                 <?php  //$thumbnail = wp_get_attachment_image($post_meta['_thumbnail_id'][0],$img_size);
                                 // echo wp_kses_post($thumbnail);
-                                alacarte_image_by_size([
+                                sunix_image_by_size([
                                     'id'      => $post_meta['_thumbnail_id'][0],
                                     'size'    => $img_size,
                                     'class'   => '',
@@ -111,7 +111,7 @@ $terms = $data['infor']['terms'];
                                         <div class="block-icon">
                                             <i class="flaticon-ribbon"></i>
                                         </div>
-                                        <div class="content-desc" ><?php echo alacarte_get_limit_str($post->post_content, 0, 90); ?> </div>
+                                        <div class="content-desc" ><?php echo sunix_get_limit_str($post->post_content, 0, 90); ?> </div>
                                         <div class="price"> <?php if(function_exists('fr_the_price'))fr_the_price($post->ID,false,'sale-regular') ?> </div>
                                     </div>
                                 </div>

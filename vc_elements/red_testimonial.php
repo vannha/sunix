@@ -1,15 +1,15 @@
 <?php
 vc_map(array(
-    'name' => 'AlaCarte Testimonial',
+    'name' => 'sunix Testimonial',
     'base' => 'red_testimonial',
     'icon'  => 'red-icon-quote',
-    'category' => esc_html__('RedExp', 'alacarte'),
-    'description' => esc_html__('Add clients testimonial', 'alacarte'),
+    'category' => esc_html__('RedExp', 'sunix'),
+    'description' => esc_html__('Add clients testimonial', 'sunix'),
     'params' => array_merge(
         array(
             array(
                 'type'          => 'dropdown',
-                'heading'       => esc_html__('Content Align','alacarte'),
+                'heading'       => esc_html__('Content Align','sunix'),
                 'param_name'    => 'content_align',
                 'value'         => array(
                     'Default'       => '',
@@ -21,7 +21,7 @@ vc_map(array(
             ),
             array(
                 'type'       => 'img',
-                'heading'    => esc_html__('Layout Template','alacarte'),
+                'heading'    => esc_html__('Layout Template','sunix'),
                 'param_name' => 'layout_template',
                 'value'      =>  array(
                     '1'       => get_template_directory_uri().'/vc_extends/layouts/testimonial/testimonial-1.jpg',
@@ -38,21 +38,21 @@ vc_map(array(
                 'settings' => array(
                     'auto_generate' => true,
                 ),
-                'heading'     => esc_html__( 'Element ID', 'alacarte' ),
+                'heading'     => esc_html__( 'Element ID', 'sunix' ),
                 'param_name'  => 'el_id',
-                'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'alacarte' ), 'http://www.w3schools.com/tags/att_global_id.asp' ),
+                'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'sunix' ), 'http://www.w3schools.com/tags/att_global_id.asp' ),
             ),
             array(
                 'type'       => 'textfield',
-                'heading'    => esc_html__('Element Class','alacarte'),
+                'heading'    => esc_html__('Element Class','sunix'),
                 'param_name' => 'el_class',
                 'value'      => '',
-                'description' => esc_html__('Style particular content element differently - add a class name and refer to it in custom CSS.', 'alacarte'),
+                'description' => esc_html__('Style particular content element differently - add a class name and refer to it in custom CSS.', 'sunix'),
             ),
             /* Testimonial Settings */
             array(
                 'type'          => 'param_group',
-                'heading'       => esc_html__( 'Add your testimonial', 'alacarte' ),
+                'heading'       => esc_html__( 'Add your testimonial', 'sunix' ),
                 'param_name'    => 'testimonials',
                 'value'         => urlencode( json_encode( array(
                     array(
@@ -91,78 +91,78 @@ vc_map(array(
                 'params' => array(
                     array(
                         'type'          => 'textfield',
-                        'heading'       => esc_html__( 'Author name', 'alacarte' ),
+                        'heading'       => esc_html__( 'Author name', 'sunix' ),
                         'param_name'    => 'author_name',
                         'std'			=> 'John Smith',
                         'admin_label'   => true,
                     ),
                     array(
                         'type'          => 'textfield',
-                        'heading'       => esc_html__( 'Author Position', 'alacarte' ),
+                        'heading'       => esc_html__( 'Author Position', 'sunix' ),
                         'param_name'    => 'author_position',
                         'std'			=> 'Project Manager',
                     ),
                     array(
                         'type'          => 'textfield',
-                        'heading'       => esc_html__( 'Author URL', 'alacarte' ),
+                        'heading'       => esc_html__( 'Author URL', 'sunix' ),
                         'param_name'    => 'author_url',
                         'std'			=> '#',
                     ),
                     array(
                         'type'          => 'attach_image',
-                        'heading'       => esc_html__( 'Author Image', 'alacarte' ),
+                        'heading'       => esc_html__( 'Author Image', 'sunix' ),
                         'param_name'    => 'author_avatar',
                         'value'         => '',
                         'edit_field_class' => 'vc_col-sm-6'
                     ),
                     array(
                         'type'          => 'attach_image',
-                        'heading'       => esc_html__( 'Author signature image', 'alacarte' ),
+                        'heading'       => esc_html__( 'Author signature image', 'sunix' ),
                         'param_name'    => 'author_signature_img',
                         'value'         => '',
                         'edit_field_class' => 'vc_col-sm-6'
                     ),
                     array(
 		                'type'          => 'dropdown',
-		                'heading'       => esc_html__( 'Star Rate', 'alacarte' ),
+		                'heading'       => esc_html__( 'Star Rate', 'sunix' ),
 		                'param_name'    => 'author_rate',
 		                'value'         => array('','1','2','3','4','5'),
 		                'std'           => ''
 		            ),
                     array(
                         'type'          => 'textarea',
-                        'heading'       => esc_html__( 'Testimonial text', 'alacarte' ),
-                        'description'   => esc_html__('Press double ENTER to get line-break','alacarte'),
+                        'heading'       => esc_html__( 'Testimonial text', 'sunix' ),
+                        'description'   => esc_html__('Press double ENTER to get line-break','sunix'),
                         'param_name'    => 'text',
                         'std'           => 'Donec euismod sem ac urna finibus, sit amet efficitur erat tem pus. Ut dapibus dictum turpis, vel faucibus erat posuere vitae icitur erat tem puna'
                     ),
                 ),
-                'group' => esc_html__('Testimonial Item','alacarte')
+                'group' => esc_html__('Testimonial Item','sunix')
             ),
             array(
                 'type'       => 'dropdown',
-                'heading'    => esc_html__('Layout Style','alacarte'),
+                'heading'    => esc_html__('Layout Style','sunix'),
                 'param_name' => 'layout_style',
                 'value'      =>  array(
-                    esc_html__('Grid','alacarte')     => 'grid',
-                    esc_html__('Carousel','alacarte') => 'carousel'
+                    esc_html__('Grid','sunix')     => 'grid',
+                    esc_html__('Carousel','sunix') => 'carousel'
                 ),
                 'std'        => 'grid',
-                'group'      => esc_html__('Layout Settings','alacarte'),
+                'group'      => esc_html__('Layout Settings','sunix'),
                 'admin_label'=> true
             ),
 
         ),
         /* Grid settings */
-        alacarte_grid_settings(array(
-            'group'      => esc_html__('Layout Settings','alacarte'),
+        sunix_grid_settings(array(
+            'group'      => esc_html__('Layout Settings','sunix'),
             'param_name' => 'layout_style', 
             'value'      => 'grid'
             )
         ),
         /* Carousel Settings */
-        alacarte_owl_settings(array(
-            'group'      => esc_html__('Layout Settings','alacarte'),
+        sunix_owl_settings(array(
+            'group'      => esc_html__('Layout Settings','sunix'),
             'param_name' => 'layout_style', 
             'value'      => 'carousel'
             )
@@ -174,7 +174,7 @@ class WPBakeryShortCode_red_testimonial extends WPBakeryShortCode
 {
     protected function content($atts, $content = null){
         $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
-        alacarte_owl_call_settings($atts);
+        sunix_owl_call_settings($atts);
         return parent::content($atts, $content);
     }
 }

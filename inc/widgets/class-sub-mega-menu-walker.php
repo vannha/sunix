@@ -1,9 +1,9 @@
 <?php
 /**
- * alacarte_SubMenu_MegaMenu_Walker
+ * sunix_SubMenu_MegaMenu_Walker
  *
  * @version 1.0
- * @package AlaCarte
+ * @package sunix
  * @since   1.0.0
  *
  */
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) )
     die();
 }
 
-class alacarte_SubMenu_MegaMenu_Walker extends Walker_Nav_Menu {
+class sunix_SubMenu_MegaMenu_Walker extends Walker_Nav_Menu {
 	public function start_lvl( &$output, $depth = 0, $args = array() ) {
 		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
 			$t = '';
@@ -66,11 +66,11 @@ class alacarte_SubMenu_MegaMenu_Walker extends Walker_Nav_Menu {
 		}
 
 		$title = $item->title;
-		if(empty($title)) $title = sprintf( __( '#%d (no title)', 'alacarte' ), $item->ID );
+		if(empty($title)) $title = sprintf( __( '#%d (no title)', 'sunix' ), $item->ID );
 		/* add expander */
 		$item_expander = '';
 		$is_parent = in_array('menu-item-has-children', $classes);
-		if($is_parent === true) $item_expander = alacarte_widget_expander();
+		if($is_parent === true) $item_expander = sunix_widget_expander();
 
 		$item_output = $args->before;
 		$item_output .= '<a'. $attributes .'>';

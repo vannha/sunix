@@ -17,7 +17,7 @@ $css_class_attr[] = 'red-testimonial red-testimonial-layout-'.$layout_template;
 $item_class[] = 'testimonial-item';
 
 if($layout_style === 'carousel'){
-    $wrap_css_class[] = alacarte_owl_css_class($atts);
+    $wrap_css_class[] = sunix_owl_css_class($atts);
     $css_class_attr[] = 'red-owl testimonial-carousel owl-carousel';
     $item_class[] = 'red-carousel-item';
 } else {
@@ -65,7 +65,7 @@ if($layout_template === '3') $inner_css_classes[] = 'red-box-shadow-testimonial'
                 		$author_link_close = '</a>';
                 	}
                 	// dot image
-                	$dot_image = alacarte_image_by_size([
+                	$dot_image = sunix_image_by_size([
 						'id'    => $testimonial['author_avatar'],
 						'size'  => $dot_thumbnail_size, 
 						'class' => 'dot-thumb circle', 
@@ -74,7 +74,7 @@ if($layout_template === '3') $inner_css_classes[] = 'red-box-shadow-testimonial'
                     // star rating
                     $testimonial['author_rate'] = isset($testimonial['author_rate']) ? $testimonial['author_rate'] : '';
                     if($i==1) : ?>
-                        <div class="<?php echo join(' ',$item_class);?>" data-dot='<?php echo alacarte_html($dot_image); ?>'>
+                        <div class="<?php echo join(' ',$item_class);?>" data-dot='<?php echo sunix_html($dot_image); ?>'>
                     <?php  
                         endif;
                         echo '<div class="'.trim(implode(' ', $inner_css_classes)).'" '.$owl_item_space.'>';
@@ -94,7 +94,7 @@ if($layout_template === '3') $inner_css_classes[] = 'red-box-shadow-testimonial'
                                     </div>
                         			<?php echo '<div class="row">';
                             			//avatar
-                            			alacarte_image_by_size([
+                            			sunix_image_by_size([
     										'id'      => $testimonial['author_avatar'],
     										'size'    => $avatar_size,
     										'class'   => 'avatar circle',
@@ -129,9 +129,9 @@ if($layout_template === '3') $inner_css_classes[] = 'red-box-shadow-testimonial'
         ?>
     </div>
     <?php if($layout_style === 'carousel'):
-        alacarte_loading_animation();
-        alacarte_owl_dots_container($atts);
-        alacarte_owl_nav_container($atts);
-        alacarte_owl_dots_in_nav_container($atts);
+        sunix_loading_animation();
+        sunix_owl_dots_container($atts);
+        sunix_owl_nav_container($atts);
+        sunix_owl_dots_in_nav_container($atts);
     endif; ?>
 </div>

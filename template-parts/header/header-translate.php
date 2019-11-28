@@ -1,8 +1,8 @@
 <?php
 /**
- * AlaCarte
+ * sunix
  */
-$header_translate = alacarte_get_opts( 'header_translate', '0' );
+$header_translate = sunix_get_opts( 'header_translate', '0' );
 
 if($header_translate === '0') return;
 ?>

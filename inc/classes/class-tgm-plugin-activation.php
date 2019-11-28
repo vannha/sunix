@@ -331,77 +331,77 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 			// Load class strings.
 			$this->strings = array(
-				'page_title'                      => esc_attr__( 'Install Required Plugins', 'alacarte' ),
-				'menu_title'                      => esc_attr__( 'Install Plugins', 'alacarte' ),
+				'page_title'                      => esc_attr__( 'Install Required Plugins', 'sunix' ),
+				'menu_title'                      => esc_attr__( 'Install Plugins', 'sunix' ),
 				/* translators: %s: plugin name. */
-				'installing'                      => esc_attr__( 'Installing Plugin: %s', 'alacarte' ),
+				'installing'                      => esc_attr__( 'Installing Plugin: %s', 'sunix' ),
 				/* translators: %s: plugin name. */
-				'updating'                        => esc_attr__( 'Updating Plugin: %s', 'alacarte' ),
-				'oops'                            => esc_attr__( 'Something went wrong with the plugin API.', 'alacarte' ),
+				'updating'                        => esc_attr__( 'Updating Plugin: %s', 'sunix' ),
+				'oops'                            => esc_attr__( 'Something went wrong with the plugin API.', 'sunix' ),
 				'notice_can_install_required'     => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'This theme requires the following plugin: %1$s.',
 					'This theme requires the following plugins: %1$s.',
-					'alacarte'
+					'sunix'
 				),
 				'notice_can_install_recommended'  => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'This theme recommends the following plugin: %1$s.',
 					'This theme recommends the following plugins: %1$s.',
-					'alacarte'
+					'sunix'
 				),
 				'notice_ask_to_update'            => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
 					'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
-					'alacarte'
+					'sunix'
 				),
 				'notice_ask_to_update_maybe'      => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'There is an update available for: %1$s.',
 					'There are updates available for the following plugins: %1$s.',
-					'alacarte'
+					'sunix'
 				),
 				'notice_can_activate_required'    => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'The following required plugin is currently inactive: %1$s.',
 					'The following required plugins are currently inactive: %1$s.',
-					'alacarte'
+					'sunix'
 				),
 				'notice_can_activate_recommended' => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'The following recommended plugin is currently inactive: %1$s.',
 					'The following recommended plugins are currently inactive: %1$s.',
-					'alacarte'
+					'sunix'
 				),
 				'install_link'                    => _n_noop(
 					'Begin installing plugin',
 					'Begin installing plugins',
-					'alacarte'
+					'sunix'
 				),
 				'update_link'                     => _n_noop(
 					'Begin updating plugin',
 					'Begin updating plugins',
-					'alacarte'
+					'sunix'
 				),
 				'activate_link'                   => _n_noop(
 					'Begin activating plugin',
 					'Begin activating plugins',
-					'alacarte'
+					'sunix'
 				),
-				'return'                          => esc_attr__( 'Return to Required Plugins Installer', 'alacarte' ),
-				'dashboard'                       => esc_attr__( 'Return to the Dashboard', 'alacarte' ),
-				'plugin_activated'                => esc_attr__( 'Plugin activated successfully.', 'alacarte' ),
-				'activated_successfully'          => esc_attr__( 'The following plugin was activated successfully:', 'alacarte' ),
+				'return'                          => esc_attr__( 'Return to Required Plugins Installer', 'sunix' ),
+				'dashboard'                       => esc_attr__( 'Return to the Dashboard', 'sunix' ),
+				'plugin_activated'                => esc_attr__( 'Plugin activated successfully.', 'sunix' ),
+				'activated_successfully'          => esc_attr__( 'The following plugin was activated successfully:', 'sunix' ),
 				/* translators: 1: plugin name. */
-				'plugin_already_active'           => esc_attr__( 'No action taken. Plugin %1$s was already active.', 'alacarte' ),
+				'plugin_already_active'           => esc_attr__( 'No action taken. Plugin %1$s was already active.', 'sunix' ),
 				/* translators: 1: plugin name. */
-				'plugin_needs_higher_version'     => esc_attr__( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'alacarte' ),
+				'plugin_needs_higher_version'     => esc_attr__( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'sunix' ),
 				/* translators: 1: dashboard link. */
-				'complete'                        => esc_attr__( 'All plugins installed and activated successfully. %1$s', 'alacarte' ),
-				'dismiss'                         => esc_attr__( 'Dismiss this notice', 'alacarte' ),
-				'notice_cannot_install_activate'  => esc_attr__( 'There are one or more required or recommended plugins to install, update or activate.', 'alacarte' ),
-				'contact_admin'                   => esc_attr__( 'Please contact the administrator of this site for help.', 'alacarte' ),
+				'complete'                        => esc_attr__( 'All plugins installed and activated successfully. %1$s', 'sunix' ),
+				'dismiss'                         => esc_attr__( 'Dismiss this notice', 'sunix' ),
+				'notice_cannot_install_activate'  => esc_attr__( 'There are one or more required or recommended plugins to install, update or activate.', 'sunix' ),
+				'contact_admin'                   => esc_attr__( 'Please contact the administrator of this site for help.', 'sunix' ),
 			);
 
 			do_action( 'tgmpa_register' );
@@ -604,8 +604,8 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			$actions['update'] = sprintf(
 				'<a href="%1$s" title="%2$s" class="edit">%3$s</a>',
 				esc_url( $this->get_tgmpa_status_url( 'update' ) ),
-				esc_attr__( 'This plugin needs to be updated to be compatible with your theme.', 'alacarte' ),
-				esc_html__( 'Update Required', 'alacarte' )
+				esc_attr__( 'This plugin needs to be updated to be compatible with your theme.', 'sunix' ),
+				esc_html__( 'Update Required', 'sunix' )
 			);
 
 			return $actions;
@@ -722,7 +722,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 */
 		protected function add_admin_menu( array $args ) {
 			if ( has_filter( 'tgmpa_admin_menu_use_add_theme_page' ) ) {
-				_deprecated_function( 'The "tgmpa_admin_menu_use_add_theme_page" filter', '2.5.0', esc_html__( 'Set the parent_slug config variable instead.', 'alacarte' ) );
+				_deprecated_function( 'The "tgmpa_admin_menu_use_add_theme_page" filter', '2.5.0', esc_html__( 'Set the parent_slug config variable instead.', 'sunix' ) );
 			}
 
 			if ( 'themes.php' === $this->parent_slug ) {
@@ -917,7 +917,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 				// Display message based on if all plugins are now active or not.
 				if ( $this->is_tgmpa_complete() ) {
-					echo '<p>', sprintf( esc_html( $this->strings['complete'] ), '<a href="' . esc_url( self_admin_url() ) . '">' . esc_html__( 'Return to the Dashboard', 'alacarte' ) . '</a>' ), '</p>';
+					echo '<p>', sprintf( esc_html( $this->strings['complete'] ), '<a href="' . esc_url( self_admin_url() ) . '">' . esc_html__( 'Return to the Dashboard', 'sunix' ) . '</a>' ), '</p>';
 				} else {
 					echo '<p><a href="', esc_url( $this->get_tgmpa_url() ), '" target="_parent">', esc_html( $this->strings['return'] ), '</a></p>';
 				}
@@ -1023,10 +1023,10 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 					if ( true === $GLOBALS['wp_filesystem']->move( $from_path, $to_path ) ) {
 						return trailingslashit( $to_path );
 					} else {
-						return new WP_Error( 'rename_failed', esc_html__( 'The remote plugin package does not contain a folder with the desired slug and renaming did not work.', 'alacarte' ) . ' ' . esc_html__( 'Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines.', 'alacarte' ), array( 'found' => $subdir_name, 'expected' => $desired_slug ) );
+						return new WP_Error( 'rename_failed', esc_html__( 'The remote plugin package does not contain a folder with the desired slug and renaming did not work.', 'sunix' ) . ' ' . esc_html__( 'Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines.', 'sunix' ), array( 'found' => $subdir_name, 'expected' => $desired_slug ) );
 					}
 				} elseif ( empty( $subdir_name ) ) {
-					return new WP_Error( 'packaged_wrong', esc_html__( 'The remote plugin package consists of more than one file, but the files are not packaged in a folder.', 'alacarte' ) . ' ' . esc_html__( 'Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines.', 'alacarte' ), array( 'found' => $subdir_name, 'expected' => $desired_slug ) );
+					return new WP_Error( 'packaged_wrong', esc_html__( 'The remote plugin package consists of more than one file, but the files are not packaged in a folder.', 'sunix' ) . ' ' . esc_html__( 'Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines.', 'sunix' ), array( 'found' => $subdir_name, 'expected' => $desired_slug ) );
 				}
 			}
 
@@ -1210,12 +1210,12 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 						$count          = count( $plugin_group );
 						$linked_plugins = array_map( array( 'TGMPA_Utils', 'wrap_in_em' ), $linked_plugins );
 						$last_plugin    = array_pop( $linked_plugins ); // Pop off last name to prep for readability.
-						$imploded       = empty( $linked_plugins ) ? $last_plugin : ( implode( ', ', $linked_plugins ) . ' ' . esc_html_x( 'and', 'plugin A *and* plugin B', 'alacarte' ) . ' ' . $last_plugin );
+						$imploded       = empty( $linked_plugins ) ? $last_plugin : ( implode( ', ', $linked_plugins ) . ' ' . esc_html_x( 'and', 'plugin A *and* plugin B', 'sunix' ) . ' ' . $last_plugin );
 
 						$rendered .= sprintf(
 							$line_template,
 							sprintf(
-								translate_nooped_plural( $this->strings[ $type ], $count, 'alacarte' ),
+								translate_nooped_plural( $this->strings[ $type ], $count, 'sunix' ),
 								$imploded,
 								$count
 							)
@@ -1228,7 +1228,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				}
 
 				// Register the nag messages and prepare them to be processed.
-				add_settings_error( 'tgmpa', 'alacarte', $rendered, $this->get_admin_notice_class() );
+				add_settings_error( 'tgmpa', 'sunix', $rendered, $this->get_admin_notice_class() );
 			}
 
 			// Admin options pages already output settings_errors, so this is to avoid duplication.
@@ -1263,14 +1263,14 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				if ( $install_count > 0 ) {
 					$action_links['install'] = sprintf(
 						$link_template,
-						translate_nooped_plural( $this->strings['install_link'], $install_count, 'alacarte' ),
+						translate_nooped_plural( $this->strings['install_link'], $install_count, 'sunix' ),
 						esc_url( $this->get_tgmpa_status_url( 'install' ) )
 					);
 				}
 				if ( $update_count > 0 ) {
 					$action_links['update'] = sprintf(
 						$link_template,
-						translate_nooped_plural( $this->strings['update_link'], $update_count, 'alacarte' ),
+						translate_nooped_plural( $this->strings['update_link'], $update_count, 'sunix' ),
 						esc_url( $this->get_tgmpa_status_url( 'update' ) )
 					);
 				}
@@ -1279,7 +1279,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			if ( current_user_can( 'activate_plugins' ) && $activate_count > 0 ) {
 				$action_links['activate'] = sprintf(
 					$link_template,
-					translate_nooped_plural( $this->strings['activate_link'], $activate_count, 'alacarte' ),
+					translate_nooped_plural( $this->strings['activate_link'], $activate_count, 'sunix' ),
 					esc_url( $this->get_tgmpa_status_url( 'activate' ) )
 				);
 			}
@@ -2071,7 +2071,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				esc_html(
 					sprintf(
 						/* translators: %s: version number */
-						esc_attr__( 'TGMPA v%s', 'alacarte' ),
+						esc_attr__( 'TGMPA v%s', 'sunix' ),
 						self::TGMPA_VERSION
 					)
 				),
@@ -2362,10 +2362,10 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 */
 		protected function get_plugin_advise_type_text( $required ) {
 			if ( true === $required ) {
-				return esc_attr__( 'Required', 'alacarte' );
+				return esc_attr__( 'Required', 'sunix' );
 			}
 
-			return esc_attr__( 'Recommended', 'alacarte' );
+			return esc_attr__( 'Recommended', 'sunix' );
 		}
 
 		/**
@@ -2381,13 +2381,13 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 			switch ( $type ) {
 				case 'repo':
-					$string = esc_attr__( 'WordPress Repository', 'alacarte' );
+					$string = esc_attr__( 'WordPress Repository', 'sunix' );
 					break;
 				case 'external':
-					$string = esc_attr__( 'External Source', 'alacarte' );
+					$string = esc_attr__( 'External Source', 'sunix' );
 					break;
 				case 'bundled':
-					$string = esc_attr__( 'Pre-Packaged', 'alacarte' );
+					$string = esc_attr__( 'Pre-Packaged', 'sunix' );
 					break;
 			}
 
@@ -2404,25 +2404,25 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 */
 		protected function get_plugin_status_text( $slug ) {
 			if ( ! $this->tgmpa->is_plugin_installed( $slug ) ) {
-				return esc_attr__( 'Not Installed', 'alacarte' );
+				return esc_attr__( 'Not Installed', 'sunix' );
 			}
 
 			if ( ! $this->tgmpa->is_plugin_active( $slug ) ) {
-				$install_status = esc_attr__( 'Installed But Not Activated', 'alacarte' );
+				$install_status = esc_attr__( 'Installed But Not Activated', 'sunix' );
 			} else {
-				$install_status = esc_attr__( 'Active', 'alacarte' );
+				$install_status = esc_attr__( 'Active', 'sunix' );
 			}
 
 			$update_status = '';
 
 			if ( $this->tgmpa->does_plugin_require_update( $slug ) && false === $this->tgmpa->does_plugin_have_update( $slug ) ) {
-				$update_status = esc_attr__( 'Required Update not Available', 'alacarte' );
+				$update_status = esc_attr__( 'Required Update not Available', 'sunix' );
 
 			} elseif ( $this->tgmpa->does_plugin_require_update( $slug ) ) {
-				$update_status = esc_attr__( 'Requires Update', 'alacarte' );
+				$update_status = esc_attr__( 'Requires Update', 'sunix' );
 
 			} elseif ( false !== $this->tgmpa->does_plugin_have_update( $slug ) ) {
-				$update_status = esc_attr__( 'Update recommended', 'alacarte' );
+				$update_status = esc_attr__( 'Update recommended', 'sunix' );
 			}
 
 			if ( '' === $update_status ) {
@@ -2431,7 +2431,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 			return sprintf(
 				/* translators: 1: install status, 2: update status */
-				_x( '%1$s, %2$s', 'Install/Update Status', 'alacarte' ),
+				_x( '%1$s, %2$s', 'Install/Update Status', 'sunix' ),
 				$install_status,
 				$update_status
 			);
@@ -2477,19 +2477,19 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				switch ( $type ) {
 					case 'all':
 						/* translators: 1: number of plugins. */
-						$text = _nx( 'All <span class="count">(%s)</span>', 'All <span class="count">(%s)</span>', $count, 'plugins', 'alacarte' );
+						$text = _nx( 'All <span class="count">(%s)</span>', 'All <span class="count">(%s)</span>', $count, 'plugins', 'sunix' );
 						break;
 					case 'install':
 						/* translators: 1: number of plugins. */
-						$text = _n( 'To Install <span class="count">(%s)</span>', 'To Install <span class="count">(%s)</span>', $count, 'alacarte' );
+						$text = _n( 'To Install <span class="count">(%s)</span>', 'To Install <span class="count">(%s)</span>', $count, 'sunix' );
 						break;
 					case 'update':
 						/* translators: 1: number of plugins. */
-						$text = _n( 'Update Available <span class="count">(%s)</span>', 'Update Available <span class="count">(%s)</span>', $count, 'alacarte' );
+						$text = _n( 'Update Available <span class="count">(%s)</span>', 'Update Available <span class="count">(%s)</span>', $count, 'sunix' );
 						break;
 					case 'activate':
 						/* translators: 1: number of plugins. */
-						$text = _n( 'To Activate <span class="count">(%s)</span>', 'To Activate <span class="count">(%s)</span>', $count, 'alacarte' );
+						$text = _n( 'To Activate <span class="count">(%s)</span>', 'To Activate <span class="count">(%s)</span>', $count, 'sunix' );
 						break;
 					default:
 						$text = '';
@@ -2571,7 +2571,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			$output = array();
 
 			if ( $this->tgmpa->is_plugin_installed( $item['slug'] ) ) {
-				$installed = ! empty( $item['installed_version'] ) ? $item['installed_version'] : _x( 'unknown', 'as in: "version nr unknown"', 'alacarte' );
+				$installed = ! empty( $item['installed_version'] ) ? $item['installed_version'] : _x( 'unknown', 'as in: "version nr unknown"', 'sunix' );
 
 				$color = '';
 				if ( ! empty( $item['minimum_version'] ) && $this->tgmpa->does_plugin_require_update( $item['slug'] ) ) {
@@ -2579,7 +2579,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				}
 
 				$output[] = sprintf(
-					'<p><span style="min-width: 32px; text-align: right; float: right;%1$s">%2$s</span>' . esc_attr__( 'Installed version:', 'alacarte' ) . '</p>',
+					'<p><span style="min-width: 32px; text-align: right; float: right;%1$s">%2$s</span>' . esc_attr__( 'Installed version:', 'sunix' ) . '</p>',
 					$color,
 					$installed
 				);
@@ -2587,7 +2587,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 			if ( ! empty( $item['minimum_version'] ) ) {
 				$output[] = sprintf(
-					'<p><span style="min-width: 32px; text-align: right; float: right;">%1$s</span>' . esc_attr__( 'Minimum required version:', 'alacarte' ) . '</p>',
+					'<p><span style="min-width: 32px; text-align: right; float: right;">%1$s</span>' . esc_attr__( 'Minimum required version:', 'sunix' ) . '</p>',
 					$item['minimum_version']
 				);
 			}
@@ -2599,7 +2599,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				}
 
 				$output[] = sprintf(
-					'<p><span style="min-width: 32px; text-align: right; float: right;%1$s">%2$s</span>' . esc_attr__( 'Available version:', 'alacarte' ) . '</p>',
+					'<p><span style="min-width: 32px; text-align: right; float: right;%1$s">%2$s</span>' . esc_attr__( 'Available version:', 'sunix' ) . '</p>',
 					$color,
 					$item['available_version']
 				);
@@ -2622,7 +2622,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 * @since 2.2.0
 		 */
 		public function no_items() {
-			echo esc_html__( 'No plugins to install, update or activate.', 'alacarte' ) . ' <a href="' . esc_url( self_admin_url() ) . '"> ' . esc_html__( 'Return to the Dashboard', 'alacarte' ) . '</a>';
+			echo esc_html__( 'No plugins to install, update or activate.', 'sunix' ) . ' <a href="' . esc_url( self_admin_url() ) . '"> ' . esc_html__( 'Return to the Dashboard', 'sunix' ) . '</a>';
 		}
 
 		/**
@@ -2635,14 +2635,14 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		public function get_columns() {
 			$columns = array(
 				'cb'     => '<input type="checkbox" />',
-				'plugin' => esc_attr__( 'Plugin', 'alacarte' ),
-				'source' => esc_attr__( 'Source', 'alacarte' ),
-				'type'   => esc_attr__( 'Type', 'alacarte' ),
+				'plugin' => esc_attr__( 'Plugin', 'sunix' ),
+				'source' => esc_attr__( 'Source', 'sunix' ),
+				'type'   => esc_attr__( 'Type', 'sunix' ),
 			);
 
 			if ( 'all' === $this->view_context || 'update' === $this->view_context ) {
-				$columns['version'] = esc_attr__( 'Version', 'alacarte' );
-				$columns['status']  = esc_attr__( 'Status', 'alacarte' );
+				$columns['version'] = esc_attr__( 'Version', 'sunix' );
+				$columns['status']  = esc_attr__( 'Status', 'sunix' );
 			}
 
 			return apply_filters( 'tgmpa_table_columns', $columns );
@@ -2691,18 +2691,18 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			// Display the 'Install' action link if the plugin is not yet available.
 			if ( ! $this->tgmpa->is_plugin_installed( $item['slug'] ) ) {
 				/* translators: %2$s: plugin name in screen reader markup */
-				$actions['install'] = esc_attr__( 'Install %2$s', 'alacarte' );
+				$actions['install'] = esc_attr__( 'Install %2$s', 'sunix' );
 			} else {
 				// Display the 'Update' action link if an update is available and WP complies with plugin minimum.
 				if ( false !== $this->tgmpa->does_plugin_have_update( $item['slug'] ) && $this->tgmpa->can_plugin_update( $item['slug'] ) ) {
 					/* translators: %2$s: plugin name in screen reader markup */
-					$actions['update'] = esc_attr__( 'Update %2$s', 'alacarte' );
+					$actions['update'] = esc_attr__( 'Update %2$s', 'sunix' );
 				}
 
 				// Display the 'Activate' action link, but only if the plugin meets the minimum version.
 				if ( $this->tgmpa->can_plugin_activate( $item['slug'] ) ) {
 					/* translators: %2$s: plugin name in screen reader markup */
-					$actions['activate'] = esc_attr__( 'Activate %2$s', 'alacarte' );
+					$actions['activate'] = esc_attr__( 'Activate %2$s', 'sunix' );
 				}
 			}
 
@@ -2772,7 +2772,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				<tr class="plugin-update-tr">
 					<td colspan="', absint( $this->get_column_count() ), '" class="plugin-update colspanchange">
 						<div class="update-message">',
-							esc_html__( 'Upgrade message from the plugin author:', 'alacarte' ),
+							esc_html__( 'Upgrade message from the plugin author:', 'sunix' ),
 							' <strong>', wp_kses_data( $item['upgrade_notice'] ), '</strong>
 						</div>
 					</td>
@@ -2805,16 +2805,16 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 			if ( 'update' !== $this->view_context && 'activate' !== $this->view_context ) {
 				if ( current_user_can( 'install_plugins' ) ) {
-					$actions['tgmpa-bulk-install'] = esc_attr__( 'Install', 'alacarte' );
+					$actions['tgmpa-bulk-install'] = esc_attr__( 'Install', 'sunix' );
 				}
 			}
 
 			if ( 'install' !== $this->view_context ) {
 				if ( current_user_can( 'update_plugins' ) ) {
-					$actions['tgmpa-bulk-update'] = esc_attr__( 'Update', 'alacarte' );
+					$actions['tgmpa-bulk-update'] = esc_attr__( 'Update', 'sunix' );
 				}
 				if ( current_user_can( 'activate_plugins' ) ) {
-					$actions['tgmpa-bulk-activate'] = esc_attr__( 'Activate', 'alacarte' );
+					$actions['tgmpa-bulk-activate'] = esc_attr__( 'Activate', 'sunix' );
 				}
 			}
 
@@ -2845,9 +2845,9 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				// Did user actually select any plugins to install/update ?
 				if ( empty( $_POST['plugin'] ) ) {
 					if ( 'install' === $install_type ) {
-						$message = esc_attr__( 'No plugins were selected to be installed. No action taken.', 'alacarte' );
+						$message = esc_attr__( 'No plugins were selected to be installed. No action taken.', 'sunix' );
 					} else {
-						$message = esc_attr__( 'No plugins were selected to be updated. No action taken.', 'alacarte' );
+						$message = esc_attr__( 'No plugins were selected to be updated. No action taken.', 'sunix' );
 					}
 
 					echo '<div id="message" class="error"><p>', esc_html( $message ), '</p></div>';
@@ -2888,9 +2888,9 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				// No need to proceed further if we have no plugins to handle.
 				if ( empty( $plugins_to_install ) ) {
 					if ( 'install' === $install_type ) {
-						$message = esc_attr__( 'No plugins are available to be installed at this time.', 'alacarte' );
+						$message = esc_attr__( 'No plugins are available to be installed at this time.', 'sunix' );
 					} else {
-						$message = esc_attr__( 'No plugins are available to be updated at this time.', 'alacarte' );
+						$message = esc_attr__( 'No plugins are available to be updated at this time.', 'sunix' );
 					}
 
 					echo '<div id="message" class="error"><p>', esc_html( $message ), '</p></div>';
@@ -2996,7 +2996,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 				// Did user actually select any plugins to activate ?
 				if ( empty( $_POST['plugin'] ) ) {
-					echo '<div id="message" class="error"><p>', esc_html__( 'No plugins were selected to be activated. No action taken.', 'alacarte' ), '</p></div>';
+					echo '<div id="message" class="error"><p>', esc_html__( 'No plugins were selected to be activated. No action taken.', 'sunix' ), '</p></div>';
 
 					return false;
 				}
@@ -3022,7 +3022,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 				// Return early if there are no plugins to activate.
 				if ( empty( $plugins_to_activate ) ) {
-					echo '<div id="message" class="error"><p>', esc_html__( 'No plugins are available to be activated at this time.', 'alacarte' ), '</p></div>';
+					echo '<div id="message" class="error"><p>', esc_html__( 'No plugins are available to be activated at this time.', 'sunix' ), '</p></div>';
 
 					return false;
 				}
@@ -3036,11 +3036,11 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 					$count        = count( $plugin_names ); // Count so we can use _n function.
 					$plugin_names = array_map( array( 'TGMPA_Utils', 'wrap_in_strong' ), $plugin_names );
 					$last_plugin  = array_pop( $plugin_names ); // Pop off last name to prep for readability.
-					$imploded     = empty( $plugin_names ) ? $last_plugin : ( implode( ', ', $plugin_names ) . ' ' . esc_html_x( 'and', 'plugin A *and* plugin B', 'alacarte' ) . ' ' . $last_plugin );
+					$imploded     = empty( $plugin_names ) ? $last_plugin : ( implode( ', ', $plugin_names ) . ' ' . esc_html_x( 'and', 'plugin A *and* plugin B', 'sunix' ) . ' ' . $last_plugin );
 
 					printf( // WPCS: xss ok.
 						'<div id="message" class="updated"><p>%1$s %2$s.</p></div>',
-						esc_html( _n( 'The following plugin was activated successfully:', 'The following plugins were activated successfully:', $count, 'alacarte' ) ),
+						esc_html( _n( 'The following plugin was activated successfully:', 'The following plugins were activated successfully:', $count, 'sunix' ) ),
 						$imploded
 					);
 
@@ -3246,8 +3246,8 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 					 * @since 2.2.0
 					 */
 					public function activate_strings() {
-						$this->strings['activation_failed']  = esc_attr__( 'Plugin activation failed.', 'alacarte' );
-						$this->strings['activation_success'] = esc_attr__( 'Plugin activated successfully.', 'alacarte' );
+						$this->strings['activation_failed']  = esc_attr__( 'Plugin activation failed.', 'sunix' );
+						$this->strings['activation_success'] = esc_attr__( 'Plugin activated successfully.', 'sunix' );
 					}
 
 					/**
@@ -3586,29 +3586,29 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 						if ( 'update' === $this->options['install_type'] ) {
 							parent::add_strings();
 							/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-							$this->upgrader->strings['skin_before_update_header'] = esc_html__( 'Updating Plugin %1$s (%2$d/%3$d)', 'alacarte' );
+							$this->upgrader->strings['skin_before_update_header'] = esc_html__( 'Updating Plugin %1$s (%2$d/%3$d)', 'sunix' );
 						} else {
 							/* translators: 1: plugin name, 2: error message. */
-							$this->upgrader->strings['skin_update_failed_error'] = esc_html__( 'An error occurred while installing %1$s: <strong>%2$s</strong>.', 'alacarte' );
+							$this->upgrader->strings['skin_update_failed_error'] = esc_html__( 'An error occurred while installing %1$s: <strong>%2$s</strong>.', 'sunix' );
 							/* translators: 1: plugin name. */
-							$this->upgrader->strings['skin_update_failed'] = esc_html__( 'The installation of %1$s failed.', 'alacarte' );
+							$this->upgrader->strings['skin_update_failed'] = esc_html__( 'The installation of %1$s failed.', 'sunix' );
 
 							if ( $this->tgmpa->is_automatic ) {
 								// Automatic activation strings.
-								$this->upgrader->strings['skin_upgrade_start'] = esc_html__( 'The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', 'alacarte' );
+								$this->upgrader->strings['skin_upgrade_start'] = esc_html__( 'The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', 'sunix' );
 								/* translators: 1: plugin name. */
 								$this->upgrader->strings['skin_update_successful'] = '%1$s done.';
-								$this->upgrader->strings['skin_upgrade_end']       = esc_html__( 'All installations and activations have been completed.', 'alacarte' );
+								$this->upgrader->strings['skin_upgrade_end']       = esc_html__( 'All installations and activations have been completed.', 'sunix' );
 								/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-								$this->upgrader->strings['skin_before_update_header'] = esc_html__( 'Installing and Activating Plugin %1$s (%2$d/%3$d)', 'alacarte' );
+								$this->upgrader->strings['skin_before_update_header'] = esc_html__( 'Installing and Activating Plugin %1$s (%2$d/%3$d)', 'sunix' );
 							} else {
 								// Default installation strings.
-								$this->upgrader->strings['skin_upgrade_start'] = esc_html__( 'The installation process is starting. This process may take a while on some hosts, so please be patient.', 'alacarte' );
+								$this->upgrader->strings['skin_upgrade_start'] = esc_html__( 'The installation process is starting. This process may take a while on some hosts, so please be patient.', 'sunix' );
 								/* translators: 1: plugin name. */
 								$this->upgrader->strings['skin_update_successful'] = '%1$s done.';
-								$this->upgrader->strings['skin_upgrade_end']       = esc_html__( 'All installations have been completed.', 'alacarte' );
+								$this->upgrader->strings['skin_upgrade_end']       = esc_html__( 'All installations have been completed.', 'sunix' );
 								/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-								$this->upgrader->strings['skin_before_update_header'] = esc_html__( 'Installing Plugin %1$s (%2$d/%3$d)', 'alacarte' );
+								$this->upgrader->strings['skin_before_update_header'] = esc_html__( 'Installing Plugin %1$s (%2$d/%3$d)', 'sunix' );
 							}
 						}
 					}
@@ -3667,7 +3667,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 							// All plugins are active, so we display the complete string and hide the menu to protect users.
 							$update_actions['dashboard'] = sprintf(
 								esc_html( $this->tgmpa->strings['complete'] ),
-								'<a href="' . esc_url( self_admin_url() ) . '">' . esc_html__( 'Return to the Dashboard', 'alacarte' ) . '</a>'
+								'<a href="' . esc_url( self_admin_url() ) . '">' . esc_html__( 'Return to the Dashboard', 'sunix' ) . '</a>'
 							);
 						} else {
 							$update_actions['tgmpa_page'] = '<a href="' . esc_url( $this->tgmpa->get_tgmpa_url() ) . '" target="_parent">' . esc_html( $this->tgmpa->strings['return'] ) . '</a>';

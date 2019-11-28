@@ -2,8 +2,8 @@
 /**
  * The template for displaying no content found
  * 
- * @package AlaCarte
- * @subpackage AlaCarte
+ * @package sunix
+ * @subpackage sunix
  * @since 1.0.0
  * @author EF5 Team
  *
@@ -13,7 +13,7 @@ get_header();
 	<div class="container">
 		<div class="no-content not-found">
 			<header class="page-header">
-				<h1><?php esc_html_e( 'Nothing Found', 'alacarte' ); ?></h1>
+				<h1><?php esc_html_e( 'Nothing Found', 'sunix' ); ?></h1>
 			</header>
 
 			<div class="page-content">
@@ -23,7 +23,7 @@ get_header();
 					printf(
 						'<p>' . wp_kses(
 							/* translators: 1: link to WP admin new post page. */
-							__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'alacarte' ),
+							__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'sunix' ),
 							array(
 								'a' => array(
 									'href' => array(),
@@ -36,7 +36,7 @@ get_header();
 				else :
 					?>
 
-					<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'alacarte' ); ?></p>
+					<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'sunix' ); ?></p>
 					<?php
 					get_search_form();
 

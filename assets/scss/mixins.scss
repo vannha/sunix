@@ -404,7 +404,7 @@ $social-colors: (
 );
 
 // loop, to style social media links
-@mixin alacarte_social_color($tag : color, $priority : ''){
+@mixin sunix_social_color($tag : color, $priority : ''){
     @each $name, $color in $social {
         &[class*='#{$name}']{
             @if $priority != '' {

@@ -3,26 +3,26 @@ vc_map(array(
     'name'        => 'Red Socials',
     'base'        => 'red_socials',
     'icon'         => 'red_el_icon',
-    'category'      => esc_html__('RedExp', 'alacarte'),
-    'description' => esc_html__('Add text with icon', 'alacarte'),
+    'category'      => esc_html__('RedExp', 'sunix'),
+    'description' => esc_html__('Add text with icon', 'sunix'),
     'params'      => array(
         array(
             'type'       => 'dropdown',
             'param_name' => 'source',
-            'heading'    => esc_html__( 'Source', 'alacarte' ),
+            'heading'    => esc_html__( 'Source', 'sunix' ),
             'value'      => array(
-                esc_html__( 'Custom', 'alacarte' ) => 'custom',
+                esc_html__( 'Custom', 'sunix' ) => 'custom',
             ),
             'std' => 'custom',
-            'description' => esc_html__( 'Choose what social source display.', 'alacarte' ),
+            'description' => esc_html__( 'Choose what social source display.', 'sunix' ),
             'admin_label' => true,
         ),
         array(
             'type'       => 'dropdown',
             'param_name' => 'el_mode',
-            'heading'    => esc_html__( 'Layout Mode', 'alacarte' ),
+            'heading'    => esc_html__( 'Layout Mode', 'sunix' ),
             'value'      => array(
-                esc_html__( 'Default', 'alacarte' ) => '',
+                esc_html__( 'Default', 'sunix' ) => '',
             ),
             'std' => '',
             'admin_label' => true,
@@ -30,16 +30,16 @@ vc_map(array(
         array(
             'type'       => 'dropdown',
             'param_name' => 'color_mode',
-            'heading'    => esc_html__( 'Color Mode', 'alacarte' ),
+            'heading'    => esc_html__( 'Color Mode', 'sunix' ),
             'value'      => array_merge(
                 array(
-                    esc_html__( 'Default', 'alacarte' ) => ''
+                    esc_html__( 'Default', 'sunix' ) => ''
                 ),
-                alacarte_theme_colors(),
+                sunix_theme_colors(),
                 array(
-                    esc_html__( 'Colored', 'alacarte' ) => 'colored',
-                    esc_html__( 'Colored on Hover', 'alacarte' ) => 'colored-hover',
-                    esc_html__( 'Custom', 'alacarte' )  => 'custom'
+                    esc_html__( 'Colored', 'sunix' ) => 'colored',
+                    esc_html__( 'Colored on Hover', 'sunix' ) => 'colored-hover',
+                    esc_html__( 'Custom', 'sunix' )  => 'custom'
                 )
             ),
             'std' => '',
@@ -48,7 +48,7 @@ vc_map(array(
         array(
             'type'       => 'colorpicker',
             'param_name' => 'custom_color',
-            'heading'    => esc_html__( 'Custom Color', 'alacarte' ),
+            'heading'    => esc_html__( 'Custom Color', 'sunix' ),
             'value'      => '',
             'dependency'    => array(
                 'element'   => 'color_mode',
@@ -58,35 +58,35 @@ vc_map(array(
         array(
             'type'       => 'dropdown',
             'param_name' => 'fill_mode',
-            'heading'    => esc_html__( 'Fill Mode', 'alacarte' ),
+            'heading'    => esc_html__( 'Fill Mode', 'sunix' ),
             'value'      => array(
-                esc_html__( 'Default', 'alacarte' ) => '',
-                esc_html__( 'Fill', 'alacarte' )    => 'fill',
-                esc_html__( 'Outline', 'alacarte' ) => 'outline',
+                esc_html__( 'Default', 'sunix' ) => '',
+                esc_html__( 'Fill', 'sunix' )    => 'fill',
+                esc_html__( 'Outline', 'sunix' ) => 'outline',
             ),
             'std' => '',
         ),
         array(
             'type'       => 'dropdown',
             'param_name' => 'shape_mode',
-            'heading'    => esc_html__( 'Shape', 'alacarte' ),
+            'heading'    => esc_html__( 'Shape', 'sunix' ),
             'value'      => array(
-                esc_html__( 'Default', 'alacarte' )         => '',
-                esc_html__( 'Square', 'alacarte' )          => 'square',
-                esc_html__( 'Rounded', 'alacarte' )         => 'rounded',
-                esc_html__( 'Circle', 'alacarte' )          => 'circle',
+                esc_html__( 'Default', 'sunix' )         => '',
+                esc_html__( 'Square', 'sunix' )          => 'square',
+                esc_html__( 'Rounded', 'sunix' )         => 'rounded',
+                esc_html__( 'Circle', 'sunix' )          => 'circle',
             ),
             'std' => '',
         ),
         array(
             'type'       => 'dropdown',
             'param_name' => 'el_icon_size',
-            'heading'    => esc_html__( 'Icon Size', 'alacarte' ),
+            'heading'    => esc_html__( 'Icon Size', 'sunix' ),
             'value'      => array(
-                esc_html__( 'Default', 'alacarte' ) => '',
-                esc_html__( 'Small', 'alacarte' )   => '20',
-                esc_html__( 'Medium', 'alacarte' )  => '28',
-                esc_html__( 'Large', 'alacarte' )   => '40',
+                esc_html__( 'Default', 'sunix' ) => '',
+                esc_html__( 'Small', 'sunix' )   => '20',
+                esc_html__( 'Medium', 'sunix' )  => '28',
+                esc_html__( 'Large', 'sunix' )   => '40',
             ),
             'std' => '30',
             'admin_label' => true,
@@ -94,20 +94,20 @@ vc_map(array(
         array(
             'type'       => 'dropdown',
             'param_name' => 'el_content_align',
-            'heading'    => esc_html__( 'Content Align', 'alacarte' ),
+            'heading'    => esc_html__( 'Content Align', 'sunix' ),
             'value'      => array(
-                esc_html__( 'Default', 'alacarte' ) => '',
-                esc_html__( 'Left', 'alacarte' )    => 'text-left',
-                esc_html__( 'Right', 'alacarte' )   => 'text-right',
-                esc_html__( 'Center', 'alacarte' )  => 'text-center',
+                esc_html__( 'Default', 'sunix' ) => '',
+                esc_html__( 'Left', 'sunix' )    => 'text-left',
+                esc_html__( 'Right', 'sunix' )   => 'text-right',
+                esc_html__( 'Center', 'sunix' )  => 'text-center',
             ),
             'std' => '',
         ),
         array(
             'type'       => 'param_group',
-            'heading'    => esc_html__( 'Add your icons', 'alacarte' ),
+            'heading'    => esc_html__( 'Add your icons', 'sunix' ),
             'param_name' => 'values',
-            'group'      => esc_html__('Items','alacarte'),
+            'group'      => esc_html__('Items','sunix'),
             'dependency' => array(
                 'element' => 'source',
                 'value'   => 'custom',
@@ -135,12 +135,12 @@ vc_map(array(
                 ),
             ) ) ),
             'params'     => array_merge(
-                alacarte_icon_libs(),
-                alacarte_icon_libs_icon(),
+                sunix_icon_libs(),
+                sunix_icon_libs_icon(),
                 array(
                     array(
                         'type'       => 'vc_link',
-                        'heading'    => esc_html__( 'Icon Link', 'alacarte' ),
+                        'heading'    => esc_html__( 'Icon Link', 'sunix' ),
                         'param_name' => 'icon_link',
                         'admin_label'=> true,
                     ),

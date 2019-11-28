@@ -1,64 +1,64 @@
 <?php
 /**
  * OWL Nav & Dots 
- * Nav Position alacarte_carousel_nav_pos(),
- * Nav Style alacarte_carousel_nav_style(),
- * Dot style alacarte_carousel_dots_style()
+ * Nav Position sunix_carousel_nav_pos(),
+ * Nav Style sunix_carousel_nav_style(),
+ * Dot style sunix_carousel_dots_style()
 */
-function alacarte_carousel_nav_pos(){
-    $alacarte_carousel_nav_pos = array(
-        esc_html__('Default','alacarte')          => 'default',
-        esc_html__('Top Start','alacarte')        => 'top start',
-        esc_html__('Top Center','alacarte')       => 'top center',
-        esc_html__('Top End','alacarte')          => 'top end',
-        esc_html__('Vertical Inside','alacarte')  => 'vertical inside',
-        esc_html__('Vertical Outside','alacarte') => 'vertical outside',
+function sunix_carousel_nav_pos(){
+    $sunix_carousel_nav_pos = array(
+        esc_html__('Default','sunix')          => 'default',
+        esc_html__('Top Start','sunix')        => 'top start',
+        esc_html__('Top Center','sunix')       => 'top center',
+        esc_html__('Top End','sunix')          => 'top end',
+        esc_html__('Vertical Inside','sunix')  => 'vertical inside',
+        esc_html__('Vertical Outside','sunix') => 'vertical outside',
     );
-    return $alacarte_carousel_nav_pos;
+    return $sunix_carousel_nav_pos;
 }
-function alacarte_carousel_nav_style(){
-    $alacarte_carousel_nav_style = array(
-        esc_html__('Default','alacarte')           => 'default',
-        esc_html__('Only Arrow','alacarte')        => 'style-2',
-        esc_html__('Circle Arrow (35)','alacarte') => 'circle arrow size-35',
-        esc_html__('Dots In Nav','alacarte')       => 'dot-in-nav',
-        esc_html__('Nav Text Prev/Next','alacarte')       => 'nav-text-show',
-        esc_html__('Dots Beside Nav','alacarte')   => 'dot-beside-nav',
-        esc_html__('Dots Beside Nav Circle Arrow (35)','alacarte')   => 'dot-beside-nav circle arrow size-35',
+function sunix_carousel_nav_style(){
+    $sunix_carousel_nav_style = array(
+        esc_html__('Default','sunix')           => 'default',
+        esc_html__('Only Arrow','sunix')        => 'style-2',
+        esc_html__('Circle Arrow (35)','sunix') => 'circle arrow size-35',
+        esc_html__('Dots In Nav','sunix')       => 'dot-in-nav',
+        esc_html__('Nav Text Prev/Next','sunix')       => 'nav-text-show',
+        esc_html__('Dots Beside Nav','sunix')   => 'dot-beside-nav',
+        esc_html__('Dots Beside Nav Circle Arrow (35)','sunix')   => 'dot-beside-nav circle arrow size-35',
     );
-    return $alacarte_carousel_nav_style;
-}
-
-function alacarte_carousel_dots_style(){
-    $alacarte_carousel_dots_style = array(
-        esc_html__('Default','alacarte')     => 'default',
-        esc_html__('Line (25x4)','alacarte') => 'line-254',
-        esc_html__('Thumbnail','alacarte')   => 'thumbnail',
-        esc_html__('Progress','alacarte')    => 'progress',
-    );
-    return $alacarte_carousel_dots_style;
-}
-function alacarte_carousel_dot_pos(){
-    return array(
-        esc_html__('Default','alacarte')       => 'default',
-        esc_html__('Top','alacarte')           => 'top',
-        esc_html__('Bottom Inside','alacarte') => 'bottom-inside',
-    );
+    return $sunix_carousel_nav_style;
 }
 
-function alacarte_carousel_color(){
+function sunix_carousel_dots_style(){
+    $sunix_carousel_dots_style = array(
+        esc_html__('Default','sunix')     => 'default',
+        esc_html__('Line (25x4)','sunix') => 'line-254',
+        esc_html__('Thumbnail','sunix')   => 'thumbnail',
+        esc_html__('Progress','sunix')    => 'progress',
+    );
+    return $sunix_carousel_dots_style;
+}
+function sunix_carousel_dot_pos(){
     return array(
-        esc_html__('Default','alacarte')             => 'default',
-        esc_html__('White','alacarte')               => 'white',
-        esc_html__('Grey','alacarte')                => 'grey',
-        esc_html__('Gray(#DBDBDB)','alacarte')       => 'gray',
-        esc_html__('Dark - Accent','alacarte')       => 'dark-accent',
-        esc_html__('Light Dark - Accent','alacarte') => 'light-dark-accent',
+        esc_html__('Default','sunix')       => 'default',
+        esc_html__('Top','sunix')           => 'top',
+        esc_html__('Bottom Inside','sunix') => 'bottom-inside',
+    );
+}
+
+function sunix_carousel_color(){
+    return array(
+        esc_html__('Default','sunix')             => 'default',
+        esc_html__('White','sunix')               => 'white',
+        esc_html__('Grey','sunix')                => 'grey',
+        esc_html__('Gray(#DBDBDB)','sunix')       => 'gray',
+        esc_html__('Dark - Accent','sunix')       => 'dark-accent',
+        esc_html__('Light Dark - Accent','sunix') => 'light-dark-accent',
     );
 }
 
 /* OWL Wrap css class */
-function alacarte_owl_css_class($atts){
+function sunix_owl_css_class($atts){
     extract($atts);
     $css_class_attr = ['red-owl-wrap'];
     if($nav) { 
@@ -75,7 +75,7 @@ function alacarte_owl_css_class($atts){
     return trim(implode(' ', $css_class_attr));
 }
 
-function alacarte_owl_dots_container($atts){
+function sunix_owl_dots_container($atts){
     extract($atts);
     if($nav_style === 'dot-in-nav') return;
     $css_class = ['red-owl-dots', $dot_style, $dot_pos, $dot_color];
@@ -86,7 +86,7 @@ function alacarte_owl_dots_container($atts){
     if($dot_style === 'progress') echo '</div>';
 }
 
-function alacarte_owl_nav_container($atts){
+function sunix_owl_nav_container($atts){
     extract($atts);
     if($nav_style === 'dot-in-nav') return;
     $css_class = ['red-owl-nav', $nav_style, $nav_pos, $nav_color];
@@ -95,7 +95,7 @@ function alacarte_owl_nav_container($atts){
     <?php
 }
 
-function alacarte_owl_dots_in_nav_container($atts){
+function sunix_owl_dots_in_nav_container($atts){
     extract($atts);
     if($nav_style !== 'dot-in-nav') return;
     $nav_css_class = ['red-owl-nav', $nav_style, $nav_color];
@@ -108,7 +108,7 @@ function alacarte_owl_dots_in_nav_container($atts){
 }
 
 /* Call OWL Settings */
-function alacarte_owl_call_settings($atts)
+function sunix_owl_call_settings($atts)
 {
     extract($atts);
     if ($layout_style !== 'carousel') return;
@@ -116,7 +116,7 @@ function alacarte_owl_call_settings($atts)
     wp_enqueue_script('owl-carousel-theme');
     wp_enqueue_style( 'owl-carousel');
     /* Carousel Setting */
-    $nav_icon = array('<span class="owl-nav-icon prev hint--top" data-hint="'.esc_attr__('Prev','alacarte').'"></span>','<span class="owl-nav-icon next hint--top" data-hint="'.esc_attr__('Next','alacarte').'"></span>');
+    $nav_icon = array('<span class="owl-nav-icon prev hint--top" data-hint="'.esc_attr__('Prev','sunix').'"></span>','<span class="owl-nav-icon next hint--top" data-hint="'.esc_attr__('Next','sunix').'"></span>');
     $rtl = is_rtl() ? true : false;
     $nav_small = $nav_large = $dot_small = $dot_large = $dotsData = '';
 
@@ -128,14 +128,14 @@ function alacarte_owl_call_settings($atts)
         $dotsData = true;
     }
     if($nav_style == 'nav-text-show'){
-        $nav_text_show =  ['<i class="fal fa-chevron-left"></i><span class="text">'.esc_html__('Prev','alacarte').'</span>','<span class="text">'.esc_html__('Next','alacarte').'</span><i class="fal fa-chevron-right"></i>'];
+        $nav_text_show =  ['<i class="fal fa-chevron-left"></i><span class="text">'.esc_html__('Prev','sunix').'</span>','<span class="text">'.esc_html__('Next','sunix').'</span><i class="fal fa-chevron-right"></i>'];
        }
     else{
-        $nav_text_show = ['<span class="red-owl-nav-icon prev" data-title="'.esc_attr__('Previous','alacarte').'"></span>', '<span class="red-owl-nav-icon next" data-title="'.esc_attr__('Next','alacarte').'"></span>'];
+        $nav_text_show = ['<span class="red-owl-nav-icon prev" data-title="'.esc_attr__('Previous','sunix').'"></span>', '<span class="red-owl-nav-icon next" data-title="'.esc_attr__('Next','sunix').'"></span>'];
 
     }
-    global $alacarte_owl; /* need it for multiple carousel in one page */
-    $alacarte_owl[$el_id] = array(
+    global $sunix_owl; /* need it for multiple carousel in one page */
+    $sunix_owl[$el_id] = array(
         'rtl'                => $rtl,
         'margin'             => (int)$margin,
         'loop'               => (bool)$loop,
@@ -192,5 +192,5 @@ function alacarte_owl_call_settings($atts)
             )
         )
     );
-    wp_localize_script('owl-carousel', 'alacarte_owl', $alacarte_owl);
+    wp_localize_script('owl-carousel', 'sunix_owl', $sunix_owl);
 }

@@ -4,55 +4,55 @@
  * Site Boxed
  * Add option repeated Boxed theme/ meta option
 */
-if(!function_exists('alacarte_general_opts')){
-    function alacarte_general_opts($args = []){
+if(!function_exists('sunix_general_opts')){
+    function sunix_general_opts($args = []){
         $args = wp_parse_args($args, [
             'default'   => false
         ]);
         $default_value              = $args['default'] ? '-1' : '0';
         $force_output               = $args['default'] ? true : false;
-        $default_dropdown_opts      = $args['default'] ? array('-1' => esc_html__('Default','alacarte')) : array();
+        $default_dropdown_opts      = $args['default'] ? array('-1' => esc_html__('Default','sunix')) : array();
         $default_page_loading_value = $args['default'] ? '-1' : 'fading-circle';
 
         if($args['default'] === true){
             $options_layout = array(
-                '-1'       => esc_html__('Default','alacarte'),
-                'boxed'    => esc_html__('Boxed','alacarte'),
-                'bordered' => esc_html__('Bordered','alacarte'),
+                '-1'       => esc_html__('Default','sunix'),
+                'boxed'    => esc_html__('Boxed','sunix'),
+                'bordered' => esc_html__('Bordered','sunix'),
             );
             $default_layout = '-1';
 
             $options_boxed = array(
-                '-1' => esc_html__('Default','alacarte'),
-                '1'  => esc_html__('Yes','alacarte'),
-                '0'  => esc_html__('No','alacarte'),
+                '-1' => esc_html__('Default','sunix'),
+                '1'  => esc_html__('Yes','sunix'),
+                '0'  => esc_html__('No','sunix'),
             );
         } else {
             $options_layout = array(
-                '-1'       => esc_html__('Default','alacarte'),
-                'boxed'    => esc_html__('Boxed','alacarte'),
-                'bordered' => esc_html__('Bordered','alacarte'),
+                '-1'       => esc_html__('Default','sunix'),
+                'boxed'    => esc_html__('Boxed','sunix'),
+                'bordered' => esc_html__('Bordered','sunix'),
             );
             $default_layout = '-1';
             
             $options_boxed = array(
-                '1'  => esc_html__('Yes','alacarte'),
-                '0'  => esc_html__('No','alacarte'),
+                '1'  => esc_html__('Yes','sunix'),
+                '0'  => esc_html__('No','sunix'),
             );
         }
         return array(
             array(
                 'id'       => 'body_bg',
                 'type'     => 'background',
-                'title'    => esc_html__('Body Background', 'alacarte'),
-                'subtitle' => esc_html__('Choose background style for body', 'alacarte'),
+                'title'    => esc_html__('Body Background', 'sunix'),
+                'subtitle' => esc_html__('Choose background style for body', 'sunix'),
                 'output'   => array('body')
             ),
             array(
                 'id'       => 'body_bg_overlay',
                 'type'     => 'color_rgba',
-                'title'    => esc_html__('Body Overlay Color', 'alacarte'),
-                'subtitle' => esc_html__('Add overlay color for body', 'alacarte'),
+                'title'    => esc_html__('Body Overlay Color', 'sunix'),
+                'subtitle' => esc_html__('Add overlay color for body', 'sunix'),
                 'output'   => array(
                     'background-color' => 'body:after'
                 ),
@@ -62,16 +62,16 @@ if(!function_exists('alacarte_general_opts')){
             array(
                 'id'       => 'site_layout',
                 'type'     => 'button_set',
-                'title'    => esc_html__('Layout', 'alacarte'),
-                'subtitle' => esc_html__('Choose site layout', 'alacarte'),
+                'title'    => esc_html__('Layout', 'sunix'),
+                'subtitle' => esc_html__('Choose site layout', 'sunix'),
                 'options'  => $options_layout,
                 'default'  => $default_layout,
             ),
             array(
                 'id'       => 'boxed_content_bg',
                 'type'     => 'background',
-                'title'    => esc_html__('Boxed Content Background', 'alacarte'),
-                'subtitle' => esc_html__('Choose background style for boxed content', 'alacarte'),
+                'title'    => esc_html__('Boxed Content Background', 'sunix'),
+                'subtitle' => esc_html__('Choose background style for boxed content', 'sunix'),
                 'required' => array(
                     array('site_layout', '=', 'boxed')
                 ),
@@ -83,8 +83,8 @@ if(!function_exists('alacarte_general_opts')){
                 'type'     => 'spacing',
                 'mode'     => 'padding',
                 'all'      => false,
-                'title'    => esc_html__('Bordered Width', 'alacarte'),
-                'subtitle' => esc_html__('Enter bordered with.', 'alacarte'),
+                'title'    => esc_html__('Bordered Width', 'sunix'),
+                'subtitle' => esc_html__('Enter bordered with.', 'sunix'),
                 'units'    => array('px'),
                 'default'  => array(
                     'padding-top'    => '0px',
@@ -102,8 +102,8 @@ if(!function_exists('alacarte_general_opts')){
             array(
                 'id'       => 'bordered_content_bg',
                 'type'     => 'background',
-                'title'    => esc_html__('Bordered Content Background', 'alacarte'),
-                'subtitle' => esc_html__('Choose background style for bordered content', 'alacarte'),
+                'title'    => esc_html__('Bordered Content Background', 'sunix'),
+                'subtitle' => esc_html__('Choose background style for bordered content', 'sunix'),
                 'required' => array(
                     array('site_layout', '=', 'bordered')
                 ),
@@ -113,25 +113,25 @@ if(!function_exists('alacarte_general_opts')){
             array(
                 'id'       => 'show_page_loading',
                 'type'     => 'button_set',
-                'title'    => esc_html__('Enable Page Loading', 'alacarte'),
-                'subtitle' => esc_html__('Enable Page Loading Effect When You Load Site', 'alacarte'),
+                'title'    => esc_html__('Enable Page Loading', 'sunix'),
+                'subtitle' => esc_html__('Enable Page Loading Effect When You Load Site', 'sunix'),
                 'options'  => $options_boxed,
                 'default'  => $default_value,
             ),
             array(
-                'title'     => esc_html__('Page Loadding Style','alacarte'),
-                'subtitle'  => esc_html__('Select Style Page Loadding.','alacarte'),
+                'title'     => esc_html__('Page Loadding Style','sunix'),
+                'subtitle'  => esc_html__('Select Style Page Loadding.','sunix'),
                 'id'        => 'page_loading_style',
                 'type'      => 'select',
-                'options'   => alacarte_page_loading_styles($args['default']),
+                'options'   => sunix_page_loading_styles($args['default']),
                 'default'   => $default_page_loading_value,
                 'required'  => array('show_page_loading', '=', '1' )
             ),
             array(
                 'id'       => 'back_totop_on',
                 'type'     => 'button_set',
-                'title'    => esc_html__('Back to Top Button', 'alacarte'),
-                'subtitle' => esc_html__('Show back to top button when scrolled down.', 'alacarte'),
+                'title'    => esc_html__('Back to Top Button', 'sunix'),
+                'subtitle' => esc_html__('Show back to top button when scrolled down.', 'sunix'),
                 'options'  => $options_boxed,
                 'default'  => $default_value,
             )
@@ -144,20 +144,20 @@ if(!function_exists('alacarte_general_opts')){
  * Header Top Area 
  * Add option repeated for theme/ meta option
 */
-if(!function_exists('alacarte_header_top_opts')){
-    function alacarte_header_top_opts($default = false){
+if(!function_exists('sunix_header_top_opts')){
+    function sunix_header_top_opts($default = false){
         $default_value   = '0';
-        $title = esc_html__('Enable', 'alacarte');
-        $subtitle = esc_html__('Show or hide header top', 'alacarte');
+        $title = esc_html__('Enable', 'sunix');
+        $subtitle = esc_html__('Show or hide header top', 'sunix');
         if($default){
-            $enable_opts['-1'] = esc_html__('Default','alacarte');
+            $enable_opts['-1'] = esc_html__('Default','sunix');
             $default_value   = '-1';
-            $title = esc_html__('Custom', 'alacarte');
-            $subtitle = esc_html__('Custom or hide or set default as theme option', 'alacarte');
+            $title = esc_html__('Custom', 'sunix');
+            $subtitle = esc_html__('Custom or hide or set default as theme option', 'sunix');
         }
 
-        $enable_opts['1'] = esc_html__('Yes','alacarte');
-        $enable_opts['0'] = esc_html__('No','alacarte');
+        $enable_opts['1'] = esc_html__('Yes','sunix');
+        $enable_opts['0'] = esc_html__('No','sunix');
         return array(
             array(
                 'title'     => $title,
@@ -170,17 +170,17 @@ if(!function_exists('alacarte_header_top_opts')){
                 array(
                     'id'          => 'header_top',
                     'type'        => 'image_select',
-                    'title'       => esc_html__('Layout', 'alacarte'),
-                    'subtitle'    => esc_html__('Select a layout for upper header top area.', 'alacarte'),
-                    'desc'        => sprintf(esc_html__('To use this Option please %sClick Here%s to add your custom header layout first.','alacarte'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=alacarte_header_top' ) ) . '">','</a>'),
-                    'options'     => alacarte_list_post_thumbnail('ef5_header_top', $default),
+                    'title'       => esc_html__('Layout', 'sunix'),
+                    'subtitle'    => esc_html__('Select a layout for upper header top area.', 'sunix'),
+                    'desc'        => sprintf(esc_html__('To use this Option please %sClick Here%s to add your custom header layout first.','sunix'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=sunix_header_top' ) ) . '">','</a>'),
+                    'options'     => sunix_list_post_thumbnail('ef5_header_top', $default),
                     'default'     => $default_value,
                     'required'  => array('header_top_enable', '=', '1')
                 ),
             array(
                 'id'        => 'header_top_background',
-                'title'     => esc_html__('Background', 'alacarte'),
-                'subtitle'  => esc_html__('Choose background style', 'alacarte'),
+                'title'     => esc_html__('Background', 'sunix'),
+                'subtitle'  => esc_html__('Choose background style', 'sunix'),
                 'type'      => 'background',
                 'preview'   => false,
                 'default'  => array(
@@ -191,8 +191,8 @@ if(!function_exists('alacarte_header_top_opts')){
             ),
             array(
                 'id'        => 'header_top_background_overlay',
-                'title'     => esc_html__('Overlay Background', 'alacarte'),
-                'subtitle'  => esc_html__('Choose overlay background color', 'alacarte'),
+                'title'     => esc_html__('Overlay Background', 'sunix'),
+                'subtitle'  => esc_html__('Choose overlay background color', 'sunix'),
                 'type'      => 'color_rgba',
                 'output'    => array(
                     'background-color' => '.red-header-top:before',
@@ -200,8 +200,8 @@ if(!function_exists('alacarte_header_top_opts')){
                 'required'  => array('header_top_enable', '=', '1')
             ),
             array(
-                'title'     => esc_html__('Header Top Padding', 'alacarte'),
-                'subtitle'  => esc_html__('Choose padding for header top', 'alacarte'),
+                'title'     => esc_html__('Header Top Padding', 'sunix'),
+                'subtitle'  => esc_html__('Choose padding for header top', 'sunix'),
                 'id'        => 'header_top_padding',
                 'type'      => 'spacing',
                 'mode'      => 'padding',
@@ -212,8 +212,8 @@ if(!function_exists('alacarte_header_top_opts')){
                 'required'  => array('header_top_enable', '=', '1')
             ),
             array(
-                'title'    => esc_html__('Link Color', 'alacarte'),
-                'subtitle' => esc_html__('Choose color for link tag', 'alacarte'),
+                'title'    => esc_html__('Link Color', 'sunix'),
+                'subtitle' => esc_html__('Choose color for link tag', 'sunix'),
                 'id'       => 'header_top_link',
                 'type'     => 'link_color',
                 'active'   => false,
@@ -222,8 +222,8 @@ if(!function_exists('alacarte_header_top_opts')){
             ),
 
             array(
-                'title'          => esc_html__('Typography', 'alacarte'),
-                'subtitle'       => esc_html__('Choose typography style', 'alacarte'),
+                'title'          => esc_html__('Typography', 'sunix'),
+                'subtitle'       => esc_html__('Choose typography style', 'sunix'),
                 'id'             => 'header_top_typo',
                 'type'           => 'typography',
                 'text-transform' =>  true,
@@ -238,8 +238,8 @@ if(!function_exists('alacarte_header_top_opts')){
                 'required'  => array('header_top_enable', '=', '1')
             ),
             array(
-                'title'          => esc_html__('Icon Style', 'alacarte'),
-                'subtitle'       => esc_html__('Choose typography style for icon', 'alacarte'),
+                'title'          => esc_html__('Icon Style', 'sunix'),
+                'subtitle'       => esc_html__('Choose typography style for icon', 'sunix'),
                 'id'             => 'header_top_icon_typo',
                 'type'           => 'typography',
                 'text-transform' =>  false,
@@ -256,8 +256,8 @@ if(!function_exists('alacarte_header_top_opts')){
         );
     }
 }
-if(!function_exists('alacarte_single_header_top_opts')){
-    function alacarte_single_header_top_opts($default = false){
+if(!function_exists('sunix_single_header_top_opts')){
+    function sunix_single_header_top_opts($default = false){
         $default_value   = '0';
         if($default){
             $default_value   = '-1';
@@ -266,10 +266,10 @@ if(!function_exists('alacarte_single_header_top_opts')){
             array(
                 'id'          => 'single_header_top',
                 'type'        => 'image_select',
-                'title'       => esc_html__('Header Top Layout', 'alacarte'),
-                'subtitle'    => esc_html__('Select a layout for upper header top area.', 'alacarte'),
-                'desc'        => sprintf(esc_html__('To use this Option please %sClick Here%s to add your custom header layout first.','alacarte'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=alacarte_header_top' ) ) . '">','</a>'),
-                'options'     => alacarte_list_post_thumbnail('ef5_header_top', $default),
+                'title'       => esc_html__('Header Top Layout', 'sunix'),
+                'subtitle'    => esc_html__('Select a layout for upper header top area.', 'sunix'),
+                'desc'        => sprintf(esc_html__('To use this Option please %sClick Here%s to add your custom header layout first.','sunix'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=sunix_header_top' ) ) . '">','</a>'),
+                'options'     => sunix_list_post_thumbnail('ef5_header_top', $default),
                 'default'     => $default_value,
                 'required'  => array('header_top_enable', '=', '1')
             ),
@@ -280,8 +280,8 @@ if(!function_exists('alacarte_single_header_top_opts')){
  * Theme Options 
  * Add option repeated for theme/ meta option
 */
-if(!function_exists('alacarte_header_layout')){
-    function alacarte_header_layout($default = false){
+if(!function_exists('sunix_header_layout')){
+    function sunix_header_layout($default = false){
         $layouts = [];
         if($default){
             $layouts['-1'] = get_template_directory_uri() . '/assets/images/default.png';
@@ -297,8 +297,8 @@ if(!function_exists('alacarte_header_layout')){
     }
 }
 
-if(!function_exists('alacarte_header_opts')){
-    function alacarte_header_opts($args = []){
+if(!function_exists('sunix_header_opts')){
+    function sunix_header_opts($args = []){
         $args = wp_parse_args($args, [
             'default' => false
         ]);
@@ -306,16 +306,16 @@ if(!function_exists('alacarte_header_opts')){
         $default_menu = '0';
         if($args['default'] === true){
             $options_width = array(
-                '-1' => esc_html__('Default','alacarte'),
-                '1'  => esc_html__('Yes','alacarte'),
-                '0'  => esc_html__('No','alacarte'),
+                '-1' => esc_html__('Default','sunix'),
+                '1'  => esc_html__('Yes','sunix'),
+                '0'  => esc_html__('No','sunix'),
             );
             
             $default_value = $default_menu = $default_width_value = '-1';
         } else {
             $options_width = array(
-                '1'  => esc_html__('Yes','alacarte'),
-                '0'  => esc_html__('No','alacarte'),
+                '1'  => esc_html__('Yes','sunix'),
+                '0'  => esc_html__('No','sunix'),
             );
             $default_width_value = '0';
         }
@@ -323,29 +323,29 @@ if(!function_exists('alacarte_header_opts')){
             array(
                 'id'       => 'header_layout',
                 'type'     => 'image_select',
-                'title'    => esc_html__('Layout', 'alacarte'),
-                'subtitle' => esc_html__('Select a layout for header.', 'alacarte'),
-                'options'  => alacarte_header_layout($args['default']),
+                'title'    => esc_html__('Layout', 'sunix'),
+                'subtitle' => esc_html__('Select a layout for header.', 'sunix'),
+                'options'  => sunix_header_layout($args['default']),
                 'default'  => $default_value
             ),
             array(
                 'id'       => 'header_menu',
                 'type'     => 'select',
-                'options'  => alacarte_get_nav_menu(['default' => $args['default'],'none' => true]),
+                'options'  => sunix_get_nav_menu(['default' => $args['default'],'none' => true]),
                 'default'  => $default_menu,
-                'title'    => esc_html__('Header Menu', 'alacarte'),
-                'subtitle' => esc_html__('Choose a menu to show', 'alacarte'),
+                'title'    => esc_html__('Header Menu', 'sunix'),
+                'subtitle' => esc_html__('Choose a menu to show', 'sunix'),
             ),
             array(
                 'id'       => 'header_design',
                 'type'     => 'info',
                 'style'    => 'success',
-                'title'    => esc_html__('Header Design', 'alacarte'),
-                'subtitle' => esc_html__('Custom header style like: background, text color, link color, border style, ...', 'alacarte'),
+                'title'    => esc_html__('Header Design', 'sunix'),
+                'subtitle' => esc_html__('Custom header style like: background, text color, link color, border style, ...', 'sunix'),
             ),
             array(
-                'title'    => esc_html__('Header Width', 'alacarte'),
-                'subtitle' => esc_html__('Make header content full width or not', 'alacarte'),
+                'title'    => esc_html__('Header Width', 'sunix'),
+                'subtitle' => esc_html__('Make header content full width or not', 'sunix'),
                 'id'       => 'header_fullwidth',
                 'type'     => 'button_set',
                 'options'  => $options_width,
@@ -355,16 +355,16 @@ if(!function_exists('alacarte_header_opts')){
                 )
             ),
             array(
-                'title'    => esc_html__('Header Height', 'alacarte'),
-                'subtitle' => esc_html__('Add height for header.', 'alacarte'),
+                'title'    => esc_html__('Header Height', 'sunix'),
+                'subtitle' => esc_html__('Add height for header.', 'sunix'),
                 'id'       => 'header_height',
                 'type'     => 'dimensions',
                 'units'    => array('px'),
                 'width'    => false,
             ),
             array(
-                'title'    => esc_html__('Header Width', 'alacarte'),
-                'subtitle' => esc_html__('Enter the width for side navigation header', 'alacarte'),
+                'title'    => esc_html__('Header Width', 'sunix'),
+                'subtitle' => esc_html__('Enter the width for side navigation header', 'sunix'),
                 'id'       => 'header_sidewidth',
                 'type'     => 'dimensions',
                 'height'   => false,
@@ -380,35 +380,35 @@ if(!function_exists('alacarte_header_opts')){
             array(
                 'id'     => 'header_bg',
                 'type'   => 'background',
-                'title'  => esc_html__('Background', 'alacarte'),
+                'title'  => esc_html__('Background', 'sunix'),
                 'output' => array('.header-default')
             ),
             array(
                 'id'          => 'header_text_color',
                 'type'        => 'color_rgba',
-                'title'       => esc_html__('Text Color', 'alacarte'),
+                'title'       => esc_html__('Text Color', 'sunix'),
                 'default'     => '',
                 'output'      => array('.header-default')
             ),
             array(
                 'id'    => 'header_link_colors',
                 'type'  => 'link_color',
-                'title' => esc_html__('Link colors', 'alacarte'),
+                'title' => esc_html__('Link colors', 'sunix'),
             ),
             array(
                 'id'       => 'header_border',
                 'type'     => 'border',
                 'all'      => false,
                 'color'    => false,
-                'title'    => esc_html__('Border Style', 'alacarte'),
-                'subtitle' => esc_html__('Add your custom border design', 'alacarte'),
+                'title'    => esc_html__('Border Style', 'sunix'),
+                'subtitle' => esc_html__('Add your custom border design', 'sunix'),
                 'output'   => array('.header-default')
             ),
             array(
                 'id'       => 'header_border_color',
                 'type'     => 'color_rgba',
-                'title'    => esc_html__('Border Color', 'alacarte'),
-                'subtitle' => esc_html__('Add your custom border color', 'alacarte'),
+                'title'    => esc_html__('Border Color', 'sunix'),
+                'subtitle' => esc_html__('Add your custom border color', 'sunix'),
                 'output'   => array(
                     'border-color' => '.header-default'
                 )
@@ -422,48 +422,48 @@ if(!function_exists('alacarte_header_opts')){
  * Header Attributes 
  *
 */
-if(!function_exists('alacarte_header_atts')){
-    function alacarte_header_atts($default = false){
+if(!function_exists('sunix_header_atts')){
+    function sunix_header_atts($default = false){
         $header_side_nav_icon_type = array(
-            'icon'            => esc_html__('Icon Only','alacarte'),
-            'separator-left'  => esc_html__('Icon with separator left','alacarte'),
-            'separator-right' => esc_html__('Icon with separator right','alacarte'),
+            'icon'            => esc_html__('Icon Only','sunix'),
+            'separator-left'  => esc_html__('Icon with separator left','sunix'),
+            'separator-right' => esc_html__('Icon with separator right','sunix'),
         );
         $header_popup_nav_icon_type = array(
-            'text'            => esc_html__('Text','alacarte'),
-            'icon'            => esc_html__('Icon Only','alacarte'),
-            'separator-left'  => esc_html__('Icon with separator left','alacarte'),
-            'separator-right' => esc_html__('Icon with separator right','alacarte'),
+            'text'            => esc_html__('Text','sunix'),
+            'icon'            => esc_html__('Icon Only','sunix'),
+            'separator-left'  => esc_html__('Icon with separator left','sunix'),
+            'separator-right' => esc_html__('Icon with separator right','sunix'),
         );
         $header_mobile_nav_icon_type = array(
-            'icon' => esc_html__('Icon','alacarte'),
-            'text' => esc_html__('Text','alacarte'),
+            'icon' => esc_html__('Icon','sunix'),
+            'text' => esc_html__('Text','sunix'),
         );
         $header_atts_icon_style = array(
-            'icon'           => esc_html__('Icon','alacarte'),
-            'circle accent'  => esc_html__('Circle Icon - Accent Color','alacarte'),
-            'circle primary' => esc_html__('Circle Icon - Primary Color','alacarte'),
-            'circle grey'    => esc_html__('Circle Icon - Grey Color','alacarte'),
+            'icon'           => esc_html__('Icon','sunix'),
+            'circle accent'  => esc_html__('Circle Icon - Accent Color','sunix'),
+            'circle primary' => esc_html__('Circle Icon - Primary Color','sunix'),
+            'circle grey'    => esc_html__('Circle Icon - Grey Color','sunix'),
         );
         if($default){
             $options = array(
-                '-1' => esc_html__('Default','alacarte'),
-                '1'  => esc_html__('Yes','alacarte'),
-                '0'  => esc_html__('No','alacarte'),
+                '-1' => esc_html__('Default','sunix'),
+                '1'  => esc_html__('Yes','sunix'),
+                '0'  => esc_html__('No','sunix'),
             );
             $default_value = $default_helper_menu_value = $default_popup_menu = $header_mobile_nav_icon_type_value = $header_side_nav_icon_type_value = $header_popup_nav_icon_type_value = $header_atts_icon_style_value = '-1';
             $default_helper_menu = [
                 'default' => true,
                 'none'    => true
             ];
-            $header_mobile_nav_icon_type['-1'] = esc_html__('Default','alacarte');
-            $header_side_nav_icon_type['-1']   = esc_html__('Default','alacarte');
-            $header_popup_nav_icon_type['-1']  = esc_html__('Default','alacarte');
-            $header_atts_icon_style['-1']      = esc_html__('Default','alacarte');
+            $header_mobile_nav_icon_type['-1'] = esc_html__('Default','sunix');
+            $header_side_nav_icon_type['-1']   = esc_html__('Default','sunix');
+            $header_popup_nav_icon_type['-1']  = esc_html__('Default','sunix');
+            $header_atts_icon_style['-1']      = esc_html__('Default','sunix');
         } else {
             $options = array(
-                '1'  => esc_html__('Yes','alacarte'),
-                '0'  => esc_html__('No','alacarte'),
+                '1'  => esc_html__('Yes','sunix'),
+                '0'  => esc_html__('No','sunix'),
             );
             $default_value = '0';
             
@@ -481,36 +481,36 @@ if(!function_exists('alacarte_header_atts')){
                     'id'       => 'header_attr',
                     'type'     => 'info',
                     'style'    => 'success',
-                    'title'    => esc_html__('Header Attributes', 'alacarte'),
-                    'subtitle' => esc_html__('Choose header attributes to show', 'alacarte'),
+                    'title'    => esc_html__('Header Attributes', 'sunix'),
+                    'subtitle' => esc_html__('Choose header attributes to show', 'sunix'),
                 ),
                 array(
-                    'title'    => esc_html__('Mobile Menu Icon Style', 'alacarte'),
-                    'subtitle' => esc_html__('Choose style of mobile menu icon', 'alacarte'),
+                    'title'    => esc_html__('Mobile Menu Icon Style', 'sunix'),
+                    'subtitle' => esc_html__('Choose style of mobile menu icon', 'sunix'),
                     'id'       => 'header_mobile_nav_icon_type',
                     'type'     => 'select',
                     'options'  => $header_mobile_nav_icon_type,
                     'default'  => $header_mobile_nav_icon_type_value,
                 ),
                 array(
-                    'title'    => esc_html__('Helper Menu', 'alacarte'),
-                    'subtitle' => esc_html__('Show/Hide helper menu', 'alacarte'),
+                    'title'    => esc_html__('Helper Menu', 'sunix'),
+                    'subtitle' => esc_html__('Show/Hide helper menu', 'sunix'),
                     'id'       => 'header_helper_menu',
                     'type'     => 'select',
-                    'options'  => alacarte_get_nav_menu($default_helper_menu),
+                    'options'  => sunix_get_nav_menu($default_helper_menu),
                     'default'  => $default_helper_menu_value
                 ),
                 array(
-                    'title'    => esc_html__('Icon Style', 'alacarte'),
-                    'subtitle' => esc_html__('Choose style attributes icon', 'alacarte'),
+                    'title'    => esc_html__('Icon Style', 'sunix'),
+                    'subtitle' => esc_html__('Choose style attributes icon', 'sunix'),
                     'id'       => 'header_atts_icon_style',
                     'type'     => 'select',
                     'options'  => $header_atts_icon_style,
                     'default'  => $header_atts_icon_style_value,
                 ),
                 array(
-                    'title'    => esc_html__('Show Social', 'alacarte'),
-                    'subtitle' => esc_html__('Show/Hide social icon', 'alacarte'),
+                    'title'    => esc_html__('Show Social', 'sunix'),
+                    'subtitle' => esc_html__('Show/Hide social icon', 'sunix'),
                     'id'       => 'header_social',
                     'type'     => 'button_set',
                     'options'  => $options,
@@ -518,46 +518,46 @@ if(!function_exists('alacarte_header_atts')){
                 ),
 
                 array(
-                    'title'    => esc_html__('Show Search', 'alacarte'),
-                    'subtitle' => esc_html__('Show/Hide search icon', 'alacarte'),
+                    'title'    => esc_html__('Show Search', 'sunix'),
+                    'subtitle' => esc_html__('Show/Hide search icon', 'sunix'),
                     'id'       => 'header_search',
                     'type'     => 'button_set',
                     'options'  => $options,
                     'default'  => $default_value,
                 ),
                 array(
-                    'title'    => esc_html__('Show Translate', 'alacarte'),
-                    'subtitle' => esc_html__('Show/Hide translate', 'alacarte'),
+                    'title'    => esc_html__('Show Translate', 'sunix'),
+                    'subtitle' => esc_html__('Show/Hide translate', 'sunix'),
                     'id'       => 'header_translate',
                     'type'     => 'button_set',
                     'options'  => $options,
                     'default'  => $default_value,
                 ) ,
                 array(
-                    'title'    => esc_html__('Show Book Now', 'alacarte'),
-                    'subtitle' => esc_html__('Show/Hide book now button', 'alacarte'),
+                    'title'    => esc_html__('Show Book Now', 'sunix'),
+                    'subtitle' => esc_html__('Show/Hide book now button', 'sunix'),
                     'id'       => 'header_book_now',
                     'type'     => 'button_set',
                     'options'  => $options,
                     'default'  => $default_value,
                 )
             ),
-            alacarte_header_wc_attrs($options, $default_value),
-            alacarte_header_contact_attrs($options, $default, $default_value),
-            alacarte_header_contact_plain_text_attrs($options, $default_value),
+            sunix_header_wc_attrs($options, $default_value),
+            sunix_header_contact_attrs($options, $default, $default_value),
+            sunix_header_contact_plain_text_attrs($options, $default_value),
             array(
                 array(
-                    'title'    => esc_html__('Show Nav Sidebar', 'alacarte'),
-                    'subtitle' => esc_html__('Show/Hide side menu', 'alacarte'),
-                    'desc'     => sprintf(esc_html__('When this option is YES, you need add widget to %sNav Sidebar%s area','alacarte'),'<a href="' . esc_url( admin_url( 'widgets.php#sidebar-nav' ) ) . '" target="_blank">','</a>'),
+                    'title'    => esc_html__('Show Nav Sidebar', 'sunix'),
+                    'subtitle' => esc_html__('Show/Hide side menu', 'sunix'),
+                    'desc'     => sprintf(esc_html__('When this option is YES, you need add widget to %sNav Sidebar%s area','sunix'),'<a href="' . esc_url( admin_url( 'widgets.php#sidebar-nav' ) ) . '" target="_blank">','</a>'),
                     'id'       => 'header_side_nav',
                     'type'     => 'button_set',
                     'options'  => $options,
                     'default'  => $default_value,
                 ),
                 array(
-                    'title'    => esc_html__('Nav Sidebar Icon Style', 'alacarte'),
-                    'subtitle' => esc_html__('Choose style of side menu icon', 'alacarte'),
+                    'title'    => esc_html__('Nav Sidebar Icon Style', 'sunix'),
+                    'subtitle' => esc_html__('Choose style of side menu icon', 'sunix'),
                     'id'       => 'header_side_nav_icon_type',
                     'type'     => 'select',
                     'options'  => $header_side_nav_icon_type,
@@ -565,16 +565,16 @@ if(!function_exists('alacarte_header_atts')){
                     'required' => array('header_side_nav', '=', '1'),
                 ),
                 array(
-                    'title'    => esc_html__('Show Popup Menu', 'alacarte'),
-                    'subtitle' => esc_html__('Show/Hide poup menu', 'alacarte'),
+                    'title'    => esc_html__('Show Popup Menu', 'sunix'),
+                    'subtitle' => esc_html__('Show/Hide poup menu', 'sunix'),
                     'id'       => 'header_popup_nav',
                     'type'     => 'button_set',
                     'options'  => $options,
                     'default'  => $default_value,
                 ),
                 array(
-                    'title'    => esc_html__('Popup Menu Icon Style', 'alacarte'),
-                    'subtitle' => esc_html__('Choose style of icon: Text or Icon', 'alacarte'),
+                    'title'    => esc_html__('Popup Menu Icon Style', 'sunix'),
+                    'subtitle' => esc_html__('Choose style of icon: Text or Icon', 'sunix'),
                     'id'       => 'header_popup_nav_icon_type',
                     'type'     => 'select',
                     'options'  => $header_popup_nav_icon_type,
@@ -584,22 +584,22 @@ if(!function_exists('alacarte_header_atts')){
                 array(
                     'id'       => 'header_popup_menu',
                     'type'     => 'select',
-                    'options'  => alacarte_get_nav_menu(['default' => $default, 'none' => true]),
+                    'options'  => sunix_get_nav_menu(['default' => $default, 'none' => true]),
                     'default'  => $default_popup_menu,
                     'required' => array('header_popup_nav', '=', '1'),
-                    'title'    => esc_html__('Popup Menu', 'alacarte'),
-                    'subtitle' => esc_html__('Choose a menu to show', 'alacarte'),
+                    'title'    => esc_html__('Popup Menu', 'sunix'),
+                    'subtitle' => esc_html__('Choose a menu to show', 'sunix'),
                 )
             ),
-            alacarte_header_signin_signup_opts(['default' => $default]),
+            sunix_header_signin_signup_opts(['default' => $default]),
             array(
                 array(
                     'id'       => 'header_side_copyright',
                     'type'     => 'textarea',
                     'default'  => sprintf('&copy; Biger. by <a href="%s">CMSSuperheroes</a>', esc_url('http://www.cmssuperheroes.com/')),
                     'required' => array('header_layout', '=', '3'),
-                    'title'    => esc_html__('Copyright Text', 'alacarte'),
-                    'subtitle' => esc_html__('Enter your copyright text', 'alacarte'),
+                    'title'    => esc_html__('Copyright Text', 'sunix'),
+                    'subtitle' => esc_html__('Enter your copyright text', 'sunix'),
                 )
             )
 
@@ -612,12 +612,12 @@ if(!function_exists('alacarte_header_atts')){
  * Require WooCommerce, WooCommerce Smash Wishlist, and more to work
  *
 */
-function alacarte_header_wc_attrs($options, $default_value){
+function sunix_header_wc_attrs($options, $default_value){
     if(!class_exists('WooCommerce')) return array();
     $opts = [
         array(
-            'title'    => esc_html__('Show Cart', 'alacarte'),
-            'subtitle' => esc_html__('Show/Hide cart icon', 'alacarte'),
+            'title'    => esc_html__('Show Cart', 'sunix'),
+            'subtitle' => esc_html__('Show/Hide cart icon', 'sunix'),
             'id'       => 'header_cart',
             'type'     => 'button_set',
             'options'  => $options,
@@ -626,8 +626,8 @@ function alacarte_header_wc_attrs($options, $default_value){
     ];
     if(class_exists('WPcleverWoosw')){
         $opts[] = array(
-            'title'    => esc_html__('Show Wishlist', 'alacarte'),
-            'subtitle' => esc_html__('Show/Hide Wishlist icon', 'alacarte'),
+            'title'    => esc_html__('Show Wishlist', 'sunix'),
+            'subtitle' => esc_html__('Show/Hide Wishlist icon', 'sunix'),
             'id'       => 'header_wishlist',
             'type'     => 'button_set',
             'options'  => $options,
@@ -636,8 +636,8 @@ function alacarte_header_wc_attrs($options, $default_value){
     }
     if(class_exists('WPcleverWooscp')){
         $opts[] = array(
-            'title'    => esc_html__('Show Compare', 'alacarte'),
-            'subtitle' => esc_html__('Show/Hide Compare icon', 'alacarte'),
+            'title'    => esc_html__('Show Compare', 'sunix'),
+            'subtitle' => esc_html__('Show/Hide Compare icon', 'sunix'),
             'id'       => 'header_compare',
             'type'     => 'button_set',
             'options'  => $options,
@@ -652,23 +652,23 @@ function alacarte_header_wc_attrs($options, $default_value){
  * Require Contact form 7 to work
  *
 */
-function alacarte_header_contact_attrs($options, $default, $default_value){
+function sunix_header_contact_attrs($options, $default, $default_value){
     if(!class_exists('WPCF7')) return array();
     $opts = [
          array(
-            'title'    => esc_html__('Show Contact', 'alacarte'),
-            'subtitle' => esc_html__('Show/Hide contact button', 'alacarte'),
+            'title'    => esc_html__('Show Contact', 'sunix'),
+            'subtitle' => esc_html__('Show/Hide contact button', 'sunix'),
             'id'       => 'header_contact',
             'type'     => 'button_set',
             'options'  => $options,
             'default'  => $default_value,
         ),
         array(
-            'title'    => esc_html__('Contact Form', 'alacarte'),
-            'subtitle' => esc_html__('Choose an contact form', 'alacarte'),
+            'title'    => esc_html__('Contact Form', 'sunix'),
+            'subtitle' => esc_html__('Choose an contact form', 'sunix'),
             'id'       => 'header_contact_form',
             'type'     => 'select',
-            'options'  => alacarte_get_list_cf7($default),
+            'options'  => sunix_get_list_cf7($default),
             'default'  => $default_value,
             'required' => array(
                 array('header_contact', '!=', '-1'),
@@ -686,11 +686,11 @@ function alacarte_header_contact_attrs($options, $default, $default_value){
  * hot line, working hour, address, email,
  *
 */
-function alacarte_header_contact_plain_text_attrs($options, $default_value){
+function sunix_header_contact_plain_text_attrs($options, $default_value){
     $opts = [
          array(
-            'title'    => esc_html__('Show Plain Contact Info', 'alacarte'),
-            'subtitle' => esc_html__('Show/Hide contact plain text info', 'alacarte'),
+            'title'    => esc_html__('Show Plain Contact Info', 'sunix'),
+            'subtitle' => esc_html__('Show/Hide contact plain text info', 'sunix'),
             'id'       => 'header_contact_plain',
             'type'     => 'button_set',
             'options'  => $options,
@@ -700,7 +700,7 @@ function alacarte_header_contact_plain_text_attrs($options, $default_value){
             )
         ),
         array(
-            'title'    => esc_html__('Icon 1', 'alacarte'),
+            'title'    => esc_html__('Icon 1', 'sunix'),
             'id'       => 'header_contact_plain_icon1',
             'type'     => 'text',
             'default'  => 'lnr lnr-phone-handset',
@@ -709,7 +709,7 @@ function alacarte_header_contact_plain_text_attrs($options, $default_value){
             )
         ),
         array(
-            'title'    => esc_html__('Title 1', 'alacarte'),
+            'title'    => esc_html__('Title 1', 'sunix'),
             'id'       => 'header_contact_plain_text1',
             'type'     => 'text',
             'default'  => '(+88)222.888.66',
@@ -718,7 +718,7 @@ function alacarte_header_contact_plain_text_attrs($options, $default_value){
             )
         ),
         array(
-            'title'    => esc_html__('Description 1', 'alacarte'),
+            'title'    => esc_html__('Description 1', 'sunix'),
             'id'       => 'header_contact_plain_subtext1',
             'type'     => 'text',
             'default'  => 'Free call',
@@ -727,7 +727,7 @@ function alacarte_header_contact_plain_text_attrs($options, $default_value){
             )
         ),
         array(
-            'title'    => esc_html__('Icon 2', 'alacarte'),
+            'title'    => esc_html__('Icon 2', 'sunix'),
             'id'       => 'header_contact_plain_icon2',
             'type'     => 'text',
             'default'  => 'lnr lnr-clock',
@@ -736,7 +736,7 @@ function alacarte_header_contact_plain_text_attrs($options, $default_value){
             )
         ),
         array(
-            'title'    => esc_html__('Title 2', 'alacarte'),
+            'title'    => esc_html__('Title 2', 'sunix'),
             'id'       => 'header_contact_plain_text2',
             'type'     => 'text',
             'default'  => '8:00 AM - 6:00 PM',
@@ -745,7 +745,7 @@ function alacarte_header_contact_plain_text_attrs($options, $default_value){
             )
         ),
         array(
-            'title'    => esc_html__('Description 2', 'alacarte'),
+            'title'    => esc_html__('Description 2', 'sunix'),
             'id'       => 'header_contact_plain_subtext2',
             'type'     => 'text',
             'default'  => 'Monday - Friday',
@@ -754,7 +754,7 @@ function alacarte_header_contact_plain_text_attrs($options, $default_value){
             )
         ),
         array(
-            'title'    => esc_html__('Icon 3', 'alacarte'),
+            'title'    => esc_html__('Icon 3', 'sunix'),
             'id'       => 'header_contact_plain_icon3',
             'type'     => 'text',
             'default'  => 'lnr lnr-map-marker',
@@ -763,7 +763,7 @@ function alacarte_header_contact_plain_text_attrs($options, $default_value){
             )
         ),
         array(
-            'title'    => esc_html__('Title 3', 'alacarte'),
+            'title'    => esc_html__('Title 3', 'sunix'),
             'id'       => 'header_contact_plain_text3',
             'type'     => 'text',
             'default'  => '99 Kellen Motorway',
@@ -772,7 +772,7 @@ function alacarte_header_contact_plain_text_attrs($options, $default_value){
             )
         ),
         array(
-            'title'    => esc_html__('Description 3', 'alacarte'),
+            'title'    => esc_html__('Description 3', 'sunix'),
             'id'       => 'header_contact_plain_subtext3',
             'type'     => 'text',
             'default'  => 'Wallis and Futuna',
@@ -791,55 +791,55 @@ function alacarte_header_contact_plain_text_attrs($options, $default_value){
  * Require CSH Login Plugin
  *
 */
-if(!function_exists('alacarte_header_signin_signup_opts')){
-    function alacarte_header_signin_signup_opts($args = []){
+if(!function_exists('sunix_header_signin_signup_opts')){
+    function sunix_header_signin_signup_opts($args = []){
         if(!function_exists('cshlg_add_login_form')) return array();
         $args = wp_parse_args($args,[
             'default' => false
         ]);
         if($args['default']){
             $options = array(
-                '-1' => esc_html__('Default','alacarte'),
-                '1'  => esc_html__('Yes','alacarte'),
-                '0'  => esc_html__('No','alacarte'),
+                '-1' => esc_html__('Default','sunix'),
+                '1'  => esc_html__('Yes','sunix'),
+                '0'  => esc_html__('No','sunix'),
             );
             $default_value = '-1';
         } else {
             $options = array(
-                '1'  => esc_html__('Yes','alacarte'),
-                '0'  => esc_html__('No','alacarte'),
+                '1'  => esc_html__('Yes','sunix'),
+                '0'  => esc_html__('No','sunix'),
             );
             $default_value = '0';
         }
         return array (
             array(
-                'title'    => esc_html__('Show SignIn', 'alacarte'),
-                'subtitle' => esc_html__('Show/Hide SignIn Button', 'alacarte'),
+                'title'    => esc_html__('Show SignIn', 'sunix'),
+                'subtitle' => esc_html__('Show/Hide SignIn Button', 'sunix'),
                 'id'       => 'header_signin',
                 'type'     => 'button_set',
                 'options'  => $options,
                 'default'  => $default_value,
             ),
             array(
-                'title'    => esc_html__('SignIn Label', 'alacarte'),
+                'title'    => esc_html__('SignIn Label', 'sunix'),
                 'id'       => 'header_signin_label',
                 'type'     => 'text',
-                'default'  => esc_html__('Sign In','alacarte'),
+                'default'  => esc_html__('Sign In','sunix'),
                 'required' => array('header_signin', '!=', '0')
             ),
             array(
-                'title'    => esc_html__('Show SignUp', 'alacarte'),
-                'subtitle' => esc_html__('Show/Hide SignUp Button', 'alacarte'),
+                'title'    => esc_html__('Show SignUp', 'sunix'),
+                'subtitle' => esc_html__('Show/Hide SignUp Button', 'sunix'),
                 'id'       => 'header_signup',
                 'type'     => 'button_set',
                 'options'  => $options,
                 'default'  => $default_value,
             ),
             array(
-                'title'    => esc_html__('SignUp Label', 'alacarte'),
+                'title'    => esc_html__('SignUp Label', 'sunix'),
                 'id'       => 'header_signup_label',
                 'type'     => 'text',
-                'default'  => esc_html__('Sign Up','alacarte'),
+                'default'  => esc_html__('Sign Up','sunix'),
                 'required' => array('header_signup', '!=', '0')
             )
         );
@@ -849,13 +849,13 @@ if(!function_exists('alacarte_header_signin_signup_opts')){
 /**
  * Main Logo
 */
-if(!function_exists('alacarte_header_main_logo')){
-    function alacarte_header_main_logo($args = []){
+if(!function_exists('sunix_header_main_logo')){
+    function sunix_header_main_logo($args = []){
         $args = wp_parse_args($args, [
             'subsection' => true
         ]);
         return array(
-            'title'      => esc_html__('Logo', 'alacarte'),
+            'title'      => esc_html__('Logo', 'sunix'),
             'icon'       => 'el-icon-picture',
             'subsection' => $args['subsection'],
             'fields'     => array(
@@ -863,14 +863,14 @@ if(!function_exists('alacarte_header_main_logo')){
                     'id'             => 'logo',
                     'type'           => 'media',
                     'library_filter' => array('gif','jpg','jpeg','png','svg'),
-                    'title'          => esc_html__('Logo', 'alacarte'),
-                    'subtitle'       => esc_html__('Choose your logo. If not set, default Logo will be used', 'alacarte')
+                    'title'          => esc_html__('Logo', 'sunix'),
+                    'subtitle'       => esc_html__('Choose your logo. If not set, default Logo will be used', 'sunix')
                 ),
                 array(
                     'id'       => 'logo_size',
                     'type'     => 'dimensions',
-                    'title'    => esc_html__('Logo Size', 'alacarte'),
-                    'subtitle' => esc_html__('Enter size (width x height) for your logo, just in case the logo is too large. If not set, default size will be used', 'alacarte'),
+                    'title'    => esc_html__('Logo Size', 'sunix'),
+                    'subtitle' => esc_html__('Enter size (width x height) for your logo, just in case the logo is too large. If not set, default size will be used', 'sunix'),
                     'units'     => array('px'),
                     'default'   => array(),
                 ),
@@ -882,8 +882,8 @@ if(!function_exists('alacarte_header_main_logo')){
 /**
  * Ontop Header 
 */
-if(!function_exists('alacarte_ontop_header_opts')){
-    function alacarte_ontop_header_opts($args = []){
+if(!function_exists('sunix_ontop_header_opts')){
+    function sunix_ontop_header_opts($args = []){
         $args = wp_parse_args($args, [
             'default'    => false,
             'subsection' => true
@@ -891,28 +891,28 @@ if(!function_exists('alacarte_ontop_header_opts')){
         $force_output = $args['default'] ? true : false;
         if($args['default']){
             $options = array(
-                '-1' => esc_html__('Default','alacarte'),
-                '1'  => esc_html__('Yes','alacarte'),
-                '0'  => esc_html__('No','alacarte'),
+                '-1' => esc_html__('Default','sunix'),
+                '1'  => esc_html__('Yes','sunix'),
+                '0'  => esc_html__('No','sunix'),
             );
             $default_value = '-1';
         } else {
             $options = array(
-                '1'  => esc_html__('Yes','alacarte'),
-                '0'  => esc_html__('No','alacarte'),
+                '1'  => esc_html__('Yes','sunix'),
+                '0'  => esc_html__('No','sunix'),
             );
             $default_value = '0';
         }
         return array(
-            'title'      => esc_html__('On Top Header', 'alacarte'),
+            'title'      => esc_html__('On Top Header', 'sunix'),
             'icon'       => 'el-icon-credit-card ',
             'subsection' => $args['subsection'],
             'fields'     => array(
                 array(
                     'id'       => 'header_ontop',
                     'type'     => 'button_set',
-                    'title'    => esc_html__('Header On top', 'alacarte'),
-                    'subtitle' => esc_html__('Header will be on top when applicable.', 'alacarte'),
+                    'title'    => esc_html__('Header On top', 'sunix'),
+                    'subtitle' => esc_html__('Header will be on top when applicable.', 'sunix'),
                     'options'  => $options,
                     'default'  => $default_value
                 ),
@@ -920,22 +920,22 @@ if(!function_exists('alacarte_ontop_header_opts')){
                     'id'       => 'ontop_logo_design',
                     'type'     => 'info',
                     'style'    => 'success',
-                    'title'    => esc_html__('On top Logo', 'alacarte'),
-                    'subtitle' => esc_html__('Custon Logo', 'alacarte'),
+                    'title'    => esc_html__('On top Logo', 'sunix'),
+                    'subtitle' => esc_html__('Custon Logo', 'sunix'),
                     'required' => array('header_ontop', '=', '1')
                 ),
                 array(
                     'id'       => 'ontop_logo',
                     'type'     => 'media',
-                    'title'    => esc_html__('On top Logo', 'alacarte'),
-                    'subtitle' => esc_html__('If not set, default logo will be used.', 'alacarte'),
+                    'title'    => esc_html__('On top Logo', 'sunix'),
+                    'subtitle' => esc_html__('If not set, default logo will be used.', 'sunix'),
                     'required' => array('header_ontop', '=', '1')
                 ),
                 array(
                     'id'       => 'ontop_logo_maxh',
                     'type'     => 'dimensions',
-                    'title'    => esc_html__('Logo Size', 'alacarte'),
-                    'subtitle' => esc_html__('Enter size for your logo in on top header, just in case the logo is too large. If not set, default size will be used', 'alacarte'),
+                    'title'    => esc_html__('Logo Size', 'sunix'),
+                    'subtitle' => esc_html__('Enter size for your logo in on top header, just in case the logo is too large. If not set, default size will be used', 'sunix'),
                     'units'     => array('px'),
                     'default'  => array(),
                     'required' => array('header_ontop', '=', '1')
@@ -944,14 +944,14 @@ if(!function_exists('alacarte_ontop_header_opts')){
                     'id'       => 'ontop_header_design',
                     'type'     => 'info',
                     'style'    => 'success',
-                    'title'    => esc_html__('Header Design', 'alacarte'),
-                    'subtitle' => esc_html__('Custom on top header style like: background, color, space, ...', 'alacarte'),
+                    'title'    => esc_html__('Header Design', 'sunix'),
+                    'subtitle' => esc_html__('Custom on top header style like: background, color, space, ...', 'sunix'),
                     'required' => array('header_ontop', '=', '1')
                 ),
                 array(
                     'id'     => 'ontop_header_bg',
                     'type'   => 'color_rgba',
-                    'title'  => esc_html__('Background', 'alacarte'),
+                    'title'  => esc_html__('Background', 'sunix'),
                     'output' => array(
                         'background-color' => '.header-ontop'),
                     'force_output' => $force_output,
@@ -960,7 +960,7 @@ if(!function_exists('alacarte_ontop_header_opts')){
                 array(
                     'id'          => 'ontop_header_text_color',
                     'type'        => 'color_rgba',
-                    'title'       => esc_html__('Text Color', 'alacarte'),
+                    'title'       => esc_html__('Text Color', 'sunix'),
                     'default'     => '',
                     'output'      => array(
                         'color' => '.header-ontop'
@@ -971,7 +971,7 @@ if(!function_exists('alacarte_ontop_header_opts')){
                 array(
                     'id'    => 'ontop_link_colors',
                     'type'  => 'link_color',
-                    'title' => esc_html__('Link colors', 'alacarte'),
+                    'title' => esc_html__('Link colors', 'sunix'),
                     'output' => array(
                         'color' => '.header-ontop a'
                     ),
@@ -983,7 +983,7 @@ if(!function_exists('alacarte_ontop_header_opts')){
                     'type'     => 'spacing',
                     'mode'     => 'margin',
                     'units'          => array('px'),
-                    'title'    => esc_html__('Margin Top', 'alacarte'),
+                    'title'    => esc_html__('Margin Top', 'sunix'),
                     'right'   => false,
                     'bottom'  => false,
                     'left'    => false,
@@ -999,36 +999,36 @@ if(!function_exists('alacarte_ontop_header_opts')){
 /**
  * Header Sticky Options
 */
-if(!function_exists('alacarte_sticky_header_opts')){
-    function alacarte_sticky_header_opts($args=[]){
+if(!function_exists('sunix_sticky_header_opts')){
+    function sunix_sticky_header_opts($args=[]){
         $args = wp_parse_args($args, [
             'default'    => false,
             'subsection' => true
         ]);
         if($args['default']){
             $options = array(
-                '-1' => esc_html__('Default','alacarte'),
-                '1'  => esc_html__('Yes','alacarte'),
-                '0'  => esc_html__('No','alacarte'),
+                '-1' => esc_html__('Default','sunix'),
+                '1'  => esc_html__('Yes','sunix'),
+                '0'  => esc_html__('No','sunix'),
             );
             $default_value = '-1';
         } else {
             $options = array(
-                '1'  => esc_html__('Yes','alacarte'),
-                '0'  => esc_html__('No','alacarte'),
+                '1'  => esc_html__('Yes','sunix'),
+                '0'  => esc_html__('No','sunix'),
             );
             $default_value = '0';
         }
         return array(
-            'title'      => esc_html__('Sticky Header', 'alacarte'),
+            'title'      => esc_html__('Sticky Header', 'sunix'),
             'icon'       => 'el-icon-credit-card ',
             'subsection' => $args['subsection'],
             'fields'     => array(
                 array(
                     'id'       => 'header_sticky',
                     'type'     => 'button_set',
-                    'title'    => esc_html__('Sticky Header', 'alacarte'),
-                    'subtitle' => esc_html__('Header will be sticked when applicable.', 'alacarte'),
+                    'title'    => esc_html__('Sticky Header', 'sunix'),
+                    'subtitle' => esc_html__('Header will be sticked when applicable.', 'sunix'),
                     'options'  => $options,
                     'default'  => $default_value
                 ),
@@ -1036,22 +1036,22 @@ if(!function_exists('alacarte_sticky_header_opts')){
                     'id'       => 'sticky_logo_design',
                     'type'     => 'info',
                     'style'    => 'success',
-                    'title'    => esc_html__('Sticky Logo', 'alacarte'),
-                    'subtitle' => esc_html__('Custon Logo', 'alacarte'),
+                    'title'    => esc_html__('Sticky Logo', 'sunix'),
+                    'subtitle' => esc_html__('Custon Logo', 'sunix'),
                     'required' => array('header_sticky', '=', '1')
                 ),
                 array(
                     'id'       => 'sticky_logo',
                     'type'     => 'media',
-                    'title'    => esc_html__('Sticky Header Logo', 'alacarte'),
-                    'subtitle' => esc_html__('If not set, default logo will be used.', 'alacarte'),
+                    'title'    => esc_html__('Sticky Header Logo', 'sunix'),
+                    'subtitle' => esc_html__('If not set, default logo will be used.', 'sunix'),
                     'required' => array('header_sticky', '=', '1')
                 ),
                 array(
                     'id'       => 'sticky_logo_maxh',
                     'type'     => 'dimensions',
-                    'title'    => esc_html__('Logo Size', 'alacarte'),
-                    'subtitle' => esc_html__('Enter size for your logo on sticky header, just in case the logo is too large.', 'alacarte'),
+                    'title'    => esc_html__('Logo Size', 'sunix'),
+                    'subtitle' => esc_html__('Enter size for your logo on sticky header, just in case the logo is too large.', 'sunix'),
                     'units'     => array('px'),
                     'default'  => array(
                         'width'   => '', 
@@ -1064,14 +1064,14 @@ if(!function_exists('alacarte_sticky_header_opts')){
                     'id'       => 'sticky_header_design',
                     'type'     => 'info',
                     'style'    => 'success',
-                    'title'    => esc_html__('Sticky Header Design', 'alacarte'),
-                    'subtitle' => esc_html__('Custom sticky header style like: background, color, space, ...', 'alacarte'),
+                    'title'    => esc_html__('Sticky Header Design', 'sunix'),
+                    'subtitle' => esc_html__('Custom sticky header style like: background, color, space, ...', 'sunix'),
                     'required' => array('header_sticky', '=', '1')
                 ),
                 array(
                     'id'     => 'sticky_header_bg',
                     'type'   => 'color_rgba',
-                    'title'  => esc_html__('Background', 'alacarte'),
+                    'title'  => esc_html__('Background', 'sunix'),
                     'output' => array(
                         'background-color' => '.header-sticky'
                     ),
@@ -1080,7 +1080,7 @@ if(!function_exists('alacarte_sticky_header_opts')){
                 array(
                     'id'          => 'sticky_header_text_color',
                     'type'        => 'color_rgba',
-                    'title'       => esc_html__('Text Color', 'alacarte'),
+                    'title'       => esc_html__('Text Color', 'sunix'),
                     'default'     => '',
                     'output'      => array('.header-sticky'),
                     'required' => array('header_sticky','=', '1')
@@ -1088,7 +1088,7 @@ if(!function_exists('alacarte_sticky_header_opts')){
                 array(
                     'id'    => 'sticky_link_colors',
                     'type'  => 'link_color',
-                    'title' => esc_html__('Link colors', 'alacarte'),
+                    'title' => esc_html__('Link colors', 'sunix'),
                     'output' => array(
                         'color' => '.header-sticky a'
                     ),
@@ -1099,16 +1099,16 @@ if(!function_exists('alacarte_sticky_header_opts')){
                     'type'     => 'border',
                     'all'      => false,
                     'color'    => false,
-                    'title'    => esc_html__('Border Style', 'alacarte'),
-                    'subtitle' => esc_html__('Add your custom border design', 'alacarte'),
+                    'title'    => esc_html__('Border Style', 'sunix'),
+                    'subtitle' => esc_html__('Add your custom border design', 'sunix'),
                     'output'   => array('.header-sticky'),
                     'required' => array('header_sticky', '=', '1')
                 ),
                 array(
                     'id'       => 'header_sticky_border_color',
                     'type'     => 'color_rgba',
-                    'title'    => esc_html__('Border Color', 'alacarte'),
-                    'subtitle' => esc_html__('Add your custom border color', 'alacarte'),
+                    'title'    => esc_html__('Border Color', 'sunix'),
+                    'subtitle' => esc_html__('Add your custom border color', 'sunix'),
                     'output'   => array(
                         'border-color' => '.header-sticky'
                     ),
@@ -1122,8 +1122,8 @@ if(!function_exists('alacarte_sticky_header_opts')){
  * Theme Options
  *
 */
-if(!function_exists('alacarte_page_title_opts')){
-    function alacarte_page_title_opts($args=[]){
+if(!function_exists('sunix_page_title_opts')){
+    function sunix_page_title_opts($args=[]){
         $args = wp_parse_args($args,[
             'default' => false
         ]);
@@ -1136,8 +1136,8 @@ if(!function_exists('alacarte_page_title_opts')){
             '1' => get_template_directory_uri() . '/assets/images/page-title/01.jpg',
         ];
         $breadcrumb_on_opts = array(
-            '1'  => esc_html__('Show','alacarte'),
-            '0'  => esc_html__('Hide','alacarte'),
+            '1'  => esc_html__('Show','sunix'),
+            '0'  => esc_html__('Hide','sunix'),
          );
         if($args['default']){
             $default_value = '-1';
@@ -1149,27 +1149,27 @@ if(!function_exists('alacarte_page_title_opts')){
             $custom_title = array(
                 'id'       => 'custom_title',
                 'type'     => 'text',
-                'title'    => esc_html__('Custom Title', 'alacarte'),
-                'subtitle' => esc_html__('Use custom title for this page. The default title will be used on document title.', 'alacarte')
+                'title'    => esc_html__('Custom Title', 'sunix'),
+                'subtitle' => esc_html__('Use custom title for this page. The default title will be used on document title.', 'sunix')
             );
 
             $custom_desc = array(
                 'id'       => 'custom_desc',
                 'type'     => 'textarea',
-                'title'    => esc_html__('Custom description', 'alacarte'),
-                'subtitle' => esc_html__('Show custom page description under page title', 'alacarte')
+                'title'    => esc_html__('Custom description', 'sunix'),
+                'subtitle' => esc_html__('Show custom page description under page title', 'sunix')
             );
 
             $breadcrumb_on_opts = [
-                '-1'  => esc_html__('Default','alacarte')
+                '-1'  => esc_html__('Default','sunix')
             ] + $breadcrumb_on_opts;
         }
         return array(
             array(
                 'id'       => 'ptitle_layout',
                 'type'     => 'image_select',
-                'title'    => esc_html__('Layout', 'alacarte'),
-                'subtitle' => esc_html__('Select a layout for page title.', 'alacarte'),
+                'title'    => esc_html__('Layout', 'sunix'),
+                'subtitle' => esc_html__('Select a layout for page title.', 'sunix'),
                 'options'  => $ptitle_layout,
                 'default'  => $default_value
             ),
@@ -1177,8 +1177,8 @@ if(!function_exists('alacarte_page_title_opts')){
             $custom_desc,
            
              array(
-                'title'          => esc_html__('Typography Title', 'alacarte'),
-                'subtitle'       => esc_html__('Page title typography style', 'alacarte'),
+                'title'          => esc_html__('Typography Title', 'sunix'),
+                'subtitle'       => esc_html__('Page title typography style', 'sunix'),
                 'id'             => 'page_title_typo',
                 'type'           => 'typography',
                 'text-transform' =>  true,
@@ -1194,8 +1194,8 @@ if(!function_exists('alacarte_page_title_opts')){
             array(
                 'id'       => 'pagetitle_image_bg',
                 'type'     => 'button_set',
-                'title'    => __('Background Image ', 'alacarte'),
-                'subtitle' => __('Background Image for Page Title', 'alacarte'),
+                'title'    => __('Background Image ', 'sunix'),
+                'subtitle' => __('Background Image for Page Title', 'sunix'),
                 'options' => array(
                     '1' => 'Yes',
                     '0' => 'No',
@@ -1207,15 +1207,15 @@ if(!function_exists('alacarte_page_title_opts')){
             array(
                 'id'       => 'ptitle_parallax',
                 'type'     => 'media',
-                'title'    => esc_html__('Parallax Image', 'alacarte'),
-                'subtitle' => esc_html__('Choose your image', 'alacarte'),
+                'title'    => esc_html__('Parallax Image', 'sunix'),
+                'subtitle' => esc_html__('Choose your image', 'sunix'),
                 'required'    => array('pagetitle_image_bg', '=', '1')
             ),
             array(
                 'id'       => 'ptitle_parallax_overlay',
                 'type'     => 'color_rgba',
-                'title'    => esc_html__('Parallax Overlay Color', 'alacarte'),
-                'subtitle' => esc_html__('Add parallax overlay color.', 'alacarte'),
+                'title'    => esc_html__('Parallax Overlay Color', 'sunix'),
+                'subtitle' => esc_html__('Add parallax overlay color.', 'sunix'),
                 'output'   => array(
                     'background-color' => '.red-pagetitle .parallax:before'
                 ),
@@ -1226,8 +1226,8 @@ if(!function_exists('alacarte_page_title_opts')){
             array(
                 'id'           => 'ptitle_paddings',
                 'type'         => 'spacing',
-                'title'        => esc_html__('Paddings', 'alacarte'),
-                'subtitle'     => esc_html__('Enter inner space.', 'alacarte'),
+                'title'        => esc_html__('Paddings', 'sunix'),
+                'subtitle'     => esc_html__('Enter inner space.', 'sunix'),
                 'mode'         => 'padding',
                 'units'        => array('px'),
                 'output'       => array('#red-page .red-pagetitle'),
@@ -1237,8 +1237,8 @@ if(!function_exists('alacarte_page_title_opts')){
             array(
                 'id'           => 'ptitle_margins',
                 'type'         => 'spacing',
-                'title'        => esc_html__('Margin', 'alacarte'),
-                'subtitle'     => esc_html__('Enter outer space.', 'alacarte'),
+                'title'        => esc_html__('Margin', 'sunix'),
+                'subtitle'     => esc_html__('Enter outer space.', 'sunix'),
                 'mode'         => 'margin',
                 'units'        => array('px'),
                 'force_output' => $force_output,
@@ -1249,14 +1249,14 @@ if(!function_exists('alacarte_page_title_opts')){
                 'id'      => 'breadcrumb_on',
                 'type'    => 'button_set',
                 'options' => $breadcrumb_on_opts,
-                'title'   => esc_html__('Breadcrumb', 'alacarte'),
+                'title'   => esc_html__('Breadcrumb', 'sunix'),
                 'default' => $default_value
             ),
             array(
                 'id'          => 'breadcrumb_color',
                 'type'        => 'color',
-                'title'       => esc_html__('Breadcrumb Text Color', 'alacarte'),
-                'subtitle'    => esc_html__('Select text color for breadcrumb', 'alacarte'),
+                'title'       => esc_html__('Breadcrumb Text Color', 'sunix'),
+                'subtitle'    => esc_html__('Select text color for breadcrumb', 'sunix'),
                 'transparent' => false,
                 'output'      => array('.red-pagetitle-wrap .breadcrumb'),
                 'force_output'=> $force_output,
@@ -1265,8 +1265,8 @@ if(!function_exists('alacarte_page_title_opts')){
             array(
                 'id'           => 'breadcrumb_link_colors',
                 'type'         => 'link_color',
-                'title'        => esc_html__('Breadcrumb Link Colors', 'alacarte'),
-                'subtitle'     => esc_html__('Select link colors for breadcrumb', 'alacarte'),
+                'title'        => esc_html__('Breadcrumb Link Colors', 'sunix'),
+                'subtitle'     => esc_html__('Select link colors for breadcrumb', 'sunix'),
                 'output'       => array('.red-pagetitle-wrap .breadcrumb a'),
                 'force_output' => $force_output,
                 'default'      => array(),
@@ -1277,23 +1277,23 @@ if(!function_exists('alacarte_page_title_opts')){
 }
 
 /* Page Options */
-if(!function_exists('alacarte_page_opts')){
-    function alacarte_page_opts($default = false){
+if(!function_exists('sunix_page_opts')){
+    function sunix_page_opts($default = false){
         $options = array();
         $default_value = 'none';
         if($default){
-            $options['-1'] = esc_html__('Default','alacarte');
+            $options['-1'] = esc_html__('Default','sunix');
             $default_value = '-1';
         }
-        $options['left']  = esc_html__('Left Sidebar', 'alacarte');
-        $options['none']  = esc_html__('No Sidebar', 'alacarte');
-        $options['right'] = esc_html__('Right Sidebar', 'alacarte');
+        $options['left']  = esc_html__('Left Sidebar', 'sunix');
+        $options['none']  = esc_html__('No Sidebar', 'sunix');
+        $options['right'] = esc_html__('Right Sidebar', 'sunix');
         return array(
             array(
                 'id'       => 'page_sidebar_pos',
                 'type'     => 'button_set',
-                'title'    => esc_html__('Layouts', 'alacarte'),
-                'subtitle' => esc_html__('select a layout for single...', 'alacarte'),
+                'title'    => esc_html__('Layouts', 'sunix'),
+                'subtitle' => esc_html__('select a layout for single...', 'sunix'),
                 'options'  => $options,
                 'default'  => $default_value
             )
@@ -1304,28 +1304,28 @@ if(!function_exists('alacarte_page_opts')){
 /**
  * WooCommerce Options
 */
-if(!function_exists('alacarte_woocommerce_theme_opts')){
-    function alacarte_woocommerce_theme_opts($default = false){
+if(!function_exists('sunix_woocommerce_theme_opts')){
+    function sunix_woocommerce_theme_opts($default = false){
         $gallery_layout = $gallery_thumb_position        = array();
         $default_value          = 'none';
         $default_gallery_layout = 'thumbnail_h';
         $default_gallery_thumb_position = 'thumb-right';
         if($default){
-            $gallery_layout['-1']         = esc_html__('Default','alacarte');
-            $gallery_thumb_position['-1'] = esc_html__('Default','alacarte');
+            $gallery_layout['-1']         = esc_html__('Default','sunix');
+            $gallery_thumb_position['-1'] = esc_html__('Default','sunix');
             $default_value                = '-1';
             $default_gallery_layout       = '-1';
             $default_gallery_thumb_position       = '-1';
         }
-        $gallery_layout['simple']     = esc_html__('Simple', 'alacarte');
-        $gallery_layout['thumbnail_v'] = esc_html__('Thumbnail Vertical', 'alacarte');
-        $gallery_layout['thumbnail_h'] = esc_html__('Thumbnail Horizontal', 'alacarte');
+        $gallery_layout['simple']     = esc_html__('Simple', 'sunix');
+        $gallery_layout['thumbnail_v'] = esc_html__('Thumbnail Vertical', 'sunix');
+        $gallery_layout['thumbnail_h'] = esc_html__('Thumbnail Horizontal', 'sunix');
 
-        $gallery_thumb_position['thumb-left'] = esc_html__('Left','alacarte');
-        $gallery_thumb_position['thumb-right'] = esc_html__('Right','alacarte');
+        $gallery_thumb_position['thumb-left'] = esc_html__('Left','sunix');
+        $gallery_thumb_position['thumb-right'] = esc_html__('Right','sunix');
 
         return array(
-            'title'      => esc_html__('WooCommerce', 'alacarte'),
+            'title'      => esc_html__('WooCommerce', 'sunix'),
             'icon'       => 'el el-shopping-cart',
             'subsection' => false,
             'fields'     => array(
@@ -1333,14 +1333,14 @@ if(!function_exists('alacarte_woocommerce_theme_opts')){
                     'id'       => 'loop_product_design',
                     'type'     => 'info',
                     'style'    => 'success',
-                    'title'    => esc_html__('Loop Products Design', 'alacarte'),
-                    'subtitle' => esc_html__('Custom products design, ...', 'alacarte'),
+                    'title'    => esc_html__('Loop Products Design', 'sunix'),
+                    'subtitle' => esc_html__('Custom products design, ...', 'sunix'),
                 ),
                 array(
                     'id'       => 'products_per_page',
                     'type'     => 'slider',
-                    'title'    => esc_html__('Number Products', 'alacarte'),
-                    'subtitle' => esc_html__('Choose number products to show on archive page, ...', 'alacarte'),
+                    'title'    => esc_html__('Number Products', 'sunix'),
+                    'subtitle' => esc_html__('Choose number products to show on archive page, ...', 'sunix'),
                     'default'   => 9,
                     'min'       => 1,
                     'step'      => 1,
@@ -1350,8 +1350,8 @@ if(!function_exists('alacarte_woocommerce_theme_opts')){
                 array(
                     'id'       => 'products_columns',
                     'type'     => 'slider',
-                    'title'    => esc_html__('Products Columns', 'alacarte'),
-                    'subtitle' => esc_html__('Choose products columns show on archive page, ...', 'alacarte'),
+                    'title'    => esc_html__('Products Columns', 'sunix'),
+                    'subtitle' => esc_html__('Choose products columns show on archive page, ...', 'sunix'),
                     'default'   => 4,
                     'min'       => 1,
                     'step'      => 1,
@@ -1362,13 +1362,13 @@ if(!function_exists('alacarte_woocommerce_theme_opts')){
                     'id'       => 'single_product_design',
                     'type'     => 'info',
                     'style'    => 'success',
-                    'title'    => esc_html__('Single Product Design', 'alacarte'),
-                    'subtitle' => esc_html__('Custom single product design, ...', 'alacarte'),
+                    'title'    => esc_html__('Single Product Design', 'sunix'),
+                    'subtitle' => esc_html__('Custom single product design, ...', 'sunix'),
                 ),
                 array(
                     'id'        => 'shop_page_title_bg',
-                    'title'     => esc_html__('Background Page Title', 'alacarte'),
-                    'subtitle'  => esc_html__('Choose background style', 'alacarte'),
+                    'title'     => esc_html__('Background Page Title', 'sunix'),
+                    'subtitle'  => esc_html__('Choose background style', 'sunix'),
                     'default'   => array(),
                     'type'      => 'background',
                     'output'    => array('.woocommerce .red-pagetitle'),
@@ -1376,16 +1376,16 @@ if(!function_exists('alacarte_woocommerce_theme_opts')){
                 array(
                     'id'       => 'product_gallery_layout',
                     'type'     => 'button_set',
-                    'title'    => esc_html__('Layouts product gallery', 'alacarte'),
-                    'subtitle' => esc_html__('select a layout for single...', 'alacarte'),
+                    'title'    => esc_html__('Layouts product gallery', 'sunix'),
+                    'subtitle' => esc_html__('select a layout for single...', 'sunix'),
                     'options'  => $gallery_layout,
                     'default'  => $default_gallery_layout
                 ),
                 array(
                     'id'       => 'product_gallery_thumb_position',
                     'type'     => 'button_set',
-                    'title'    => esc_html__('Thumbnail Position', 'alacarte'),
-                    'subtitle' => esc_html__('select a position for gallery thumbnail', 'alacarte'),
+                    'title'    => esc_html__('Thumbnail Position', 'sunix'),
+                    'subtitle' => esc_html__('select a position for gallery thumbnail', 'sunix'),
                     'options'  => $gallery_thumb_position,
                     'default'  => $default_gallery_thumb_position,
                     'required' => array(
@@ -1394,8 +1394,8 @@ if(!function_exists('alacarte_woocommerce_theme_opts')){
                 ),
                 array(
                     'id'       => 'product_share_on',
-                    'title'    => esc_html__('Share', 'alacarte'),
-                    'subtitle' => esc_html__('Show share product to some socials network on each post.', 'alacarte'),
+                    'title'    => esc_html__('Share', 'sunix'),
+                    'subtitle' => esc_html__('Show share product to some socials network on each post.', 'sunix'),
                     'type'     => 'switch',
                     'default'  => '0',
                 ),
@@ -1409,24 +1409,24 @@ if(!function_exists('alacarte_woocommerce_theme_opts')){
  * Footer Area 
  * Add option repeated for theme/ meta option
 */
-if(!function_exists('alacarte_footer_opts')){
-    function alacarte_footer_opts($args = []){
+if(!function_exists('sunix_footer_opts')){
+    function sunix_footer_opts($args = []){
         $args = wp_parse_args($args, [
             'default' => false
         ]);
         $default_value = $args['default'] ? '-1' : '';
         $force_output  = $args['default'] ? true : false;
-        $title = esc_html__('Enable', 'alacarte');
-        $subtitle = esc_html__('Show or hide footer', 'alacarte');
+        $title = esc_html__('Enable', 'sunix');
+        $subtitle = esc_html__('Show or hide footer', 'sunix');
         if($args['default']){
-            $enable_opts['-1'] = esc_html__('Default','alacarte');
-            $title = esc_html__('Custom', 'alacarte');
-            $subtitle = esc_html__('Custom or hide or set default as theme option', 'alacarte');
+            $enable_opts['-1'] = esc_html__('Default','sunix');
+            $title = esc_html__('Custom', 'sunix');
+            $subtitle = esc_html__('Custom or hide or set default as theme option', 'sunix');
         }
-        $enable_opts['1'] = esc_html__('Yes','alacarte');
-        $enable_opts['0'] = esc_html__('No','alacarte');
+        $enable_opts['1'] = esc_html__('Yes','sunix');
+        $enable_opts['0'] = esc_html__('No','sunix');
         return array(
-            'title'  => esc_html__('Footer', 'alacarte'),
+            'title'  => esc_html__('Footer', 'sunix'),
             'icon'   => 'el el-website',
             'fields' => array(
                 array(
@@ -1440,17 +1440,17 @@ if(!function_exists('alacarte_footer_opts')){
                 array(
                     'id'          => 'footer_layout',
                     'type'        => 'image_select',
-                    'title'       => esc_html__('Layout', 'alacarte'),
-                    'subtitle'    => esc_html__('Select a layout for upper footer area.', 'alacarte'),
-                    'desc'        => sprintf(esc_html__('To use this Option please %sClick Here%s to add your custom footer layout first.','alacarte'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=alacarte_footer' ) ) . '">','</a>'),
-                    'placeholder' => esc_html__('Default','alacarte'),
-                    'options'     => alacarte_list_post_thumbnail('ef5_footer', $args['default']),
+                    'title'       => esc_html__('Layout', 'sunix'),
+                    'subtitle'    => esc_html__('Select a layout for upper footer area.', 'sunix'),
+                    'desc'        => sprintf(esc_html__('To use this Option please %sClick Here%s to add your custom footer layout first.','sunix'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=sunix_footer' ) ) . '">','</a>'),
+                    'placeholder' => esc_html__('Default','sunix'),
+                    'options'     => sunix_list_post_thumbnail('ef5_footer', $args['default']),
                     'default'     => $default_value,
                     'required'  => array('footer_enable', '=', '1')
                 ),
                 array(
-                    'title'    => esc_html__('Add custom logo on footer for this page', 'alacarte'),
-                    'subtitle' => esc_html__('Select an image file for your logo on footer.', 'alacarte'),
+                    'title'    => esc_html__('Add custom logo on footer for this page', 'sunix'),
+                    'subtitle' => esc_html__('Select an image file for your logo on footer.', 'sunix'),
                     'id'       => 'page_footer_logo',
                     'type'     => 'media',
                     'required'  => array('footer_enable', '=', '1')
@@ -1458,8 +1458,8 @@ if(!function_exists('alacarte_footer_opts')){
                 array(
                     'id'       => 'page_logo_size',
                     'type'     => 'dimensions',
-                    'title'    => esc_html__('Logo Size', 'alacarte'),
-                    'subtitle' => esc_html__('Enter size (width x height) for your logo, just in case the logo is too large. If not set, default size will be used', 'alacarte'),
+                    'title'    => esc_html__('Logo Size', 'sunix'),
+                    'subtitle' => esc_html__('Enter size (width x height) for your logo, just in case the logo is too large. If not set, default size will be used', 'sunix'),
                     'units'     => array('px'),
                     'default'   => array(),
                     'output'         => array(
@@ -1468,7 +1468,7 @@ if(!function_exists('alacarte_footer_opts')){
                     'required'  => array('footer_enable', '=', '1')
                 ),
                 array(
-                    'title'     => esc_html__('Background Color', 'alacarte'),
+                    'title'     => esc_html__('Background Color', 'sunix'),
                     'id'        => 'footer_bg_color',
                     'type'      => 'color_rgba',
                     'default'   => array(),
@@ -1480,8 +1480,8 @@ if(!function_exists('alacarte_footer_opts')){
                     'required'  => array('footer_enable', '=', '1')
                 ),
                 array(
-                    'title'          => esc_html__('Columns Title', 'alacarte'),
-                    'subtitle'       => esc_html__('Choose typography style for columns title', 'alacarte'),
+                    'title'          => esc_html__('Columns Title', 'sunix'),
+                    'subtitle'       => esc_html__('Choose typography style for columns title', 'sunix'),
                     'id'             => 'footer_typo_title',
                     'type'           => 'typography',
                     'text-transform' =>  true,
@@ -1493,8 +1493,8 @@ if(!function_exists('alacarte_footer_opts')){
                     'required'  => array('footer_enable', '=', '1')
                 ),
                 array(
-                    'title'    => esc_html__('Link Color', 'alacarte'),
-                    'subtitle' => esc_html__('Choose color for link tag', 'alacarte'),
+                    'title'    => esc_html__('Link Color', 'sunix'),
+                    'subtitle' => esc_html__('Choose color for link tag', 'sunix'),
                     'id'       => 'footer_link_color',
                     'type'     => 'link_color',
                     'active'   => false,
@@ -1503,8 +1503,8 @@ if(!function_exists('alacarte_footer_opts')){
                     'required'  => array('footer_enable', '=', '1')
                 ),
                 array(
-                    'title' => esc_html__('Icon color', 'alacarte'),
-                    'subtitle' => esc_html__('Set color for icon', 'alacarte'),
+                    'title' => esc_html__('Icon color', 'sunix'),
+                    'subtitle' => esc_html__('Set color for icon', 'sunix'),
                     'id' => 'footer_icon_color',
                     'type' => 'link_color',
                     'active'   => false,
@@ -1514,8 +1514,8 @@ if(!function_exists('alacarte_footer_opts')){
                     'required'  => array('footer_enable', '=', '1')
                 ),
                 array(
-                    'title'          => esc_html__('Typography', 'alacarte'),
-                    'subtitle'       => esc_html__('Choose typography style', 'alacarte'),
+                    'title'          => esc_html__('Typography', 'sunix'),
+                    'subtitle'       => esc_html__('Choose typography style', 'sunix'),
                     'id'             => 'footer_typo',
                     'type'           => 'typography',
                     'text-transform' =>  true,
@@ -1532,8 +1532,8 @@ if(!function_exists('alacarte_footer_opts')){
                     'mode'           => 'margin',
                     'units'          => array('px'),
                     'units_extended' => 'false',
-                    'title'          => esc_html__('Footer margin', 'alacarte'),
-                    'subtitle'       => esc_html__('Enter outer space', 'alacarte'),
+                    'title'          => esc_html__('Footer margin', 'sunix'),
+                    'subtitle'       => esc_html__('Enter outer space', 'sunix'),
                     'force_output'   => $force_output,
                     'output'         => array(
                         '#red-footer'
@@ -1546,8 +1546,8 @@ if(!function_exists('alacarte_footer_opts')){
                     'mode'           => 'padding',
                     'units'          => array('px'),
                     'units_extended' => 'false',
-                    'title'          => esc_html__('Footer padding', 'alacarte'),
-                    'subtitle'       => esc_html__('Enter outer space', 'alacarte'),
+                    'title'          => esc_html__('Footer padding', 'sunix'),
+                    'subtitle'       => esc_html__('Enter outer space', 'sunix'),
                     'force_output'   => $force_output,
                     'output'         => array(
                         'footer#red-footer.red-footer-area'

@@ -1,31 +1,31 @@
 <?php
 if(!class_exists('Newsletter')) return;
 vc_map(array(
-	'name'        => 'AlaCarte Newsletter',
+	'name'        => 'sunix Newsletter',
 	'base'        => 'red_newsletter',
 	'icon'        => 'red-icon-newsletter',
-	'category'    => esc_html__('RedExp', 'alacarte'),
-	'description' => esc_html__('Add Newsletter Form.', 'alacarte'),
+	'category'    => esc_html__('RedExp', 'sunix'),
+	'description' => esc_html__('Add Newsletter Form.', 'sunix'),
 	'params'      => array(
 		array(
 			'type'        => 'dropdown',
-			'heading'     => esc_html__( 'Layout Mode', 'alacarte' ),
-			'description' => esc_html__( 'Choose Layout mode you want to show', 'alacarte' ),
+			'heading'     => esc_html__( 'Layout Mode', 'sunix' ),
+			'description' => esc_html__( 'Choose Layout mode you want to show', 'sunix' ),
 			'param_name'  => 'layout_mode',
 			'value'       => array(
-				esc_html__('Newsletter','alacarte')      	=> 'default',
-				esc_html__('Newsletter Minimal','alacarte') 	=> 'minimal',
+				esc_html__('Newsletter','sunix')      	=> 'default',
+				esc_html__('Newsletter Minimal','sunix') 	=> 'minimal',
 			),
 			'std'		  => 'minimal',
 			'admin_label' => true,
     	),
     	array(
 			'type'        => 'dropdown',
-			'heading'     => esc_html__( 'Show lists as', 'alacarte' ),
+			'heading'     => esc_html__( 'Show lists as', 'sunix' ),
 			'param_name'  => 'lists_layout',
 			'value'       => array(
-				esc_html__('Checkbox','alacarte') => '',
-				esc_html__('Dropdown','alacarte') => 'dropdown'
+				esc_html__('Checkbox','sunix') => '',
+				esc_html__('Dropdown','sunix') => 'dropdown'
 			),
 			'std'		  	=> '',
 			'dependency'    => array(
@@ -35,7 +35,7 @@ vc_map(array(
     	),
     	array(
 			'type'        => 'textfield',
-			'heading'     => esc_html__( 'First dropdown entry label', 'alacarte' ),
+			'heading'     => esc_html__( 'First dropdown entry label', 'sunix' ),
 			'param_name'  => 'lists_empty_label',
 			'value'		  => '',
 			'dependency'    => array(
@@ -45,8 +45,8 @@ vc_map(array(
     	),
     	array(
 			'type'        => 'textfield',
-			'heading'     => esc_html__( 'Lists field label', 'alacarte' ),
-			'description' => esc_html__( 'Seperate by comma (,)', 'alacarte' ),
+			'heading'     => esc_html__( 'Lists field label', 'sunix' ),
+			'description' => esc_html__( 'Seperate by comma (,)', 'sunix' ),
 			'value'		  => '',		
 			'param_name'  => 'lists_field_label',
 			'dependency'    => array(
@@ -56,7 +56,7 @@ vc_map(array(
     	),
     	array(
             'type'       => 'img',
-            'heading'    => esc_html__('Layout Template','alacarte'),
+            'heading'    => esc_html__('Layout Template','sunix'),
             'param_name' => 'layout_template',
             'value'      =>  array(
                 '1' => get_template_directory_uri().'/vc_extends/layouts/newsletter/layout-1.jpg',
@@ -71,8 +71,8 @@ vc_map(array(
         ),
     	array(
 			'type'        => 'textfield',
-			'heading'     => esc_html__( 'Button Text', 'alacarte' ),
-			'description' => esc_html__( 'Enter button text', 'alacarte' ),
+			'heading'     => esc_html__( 'Button Text', 'sunix' ),
+			'description' => esc_html__( 'Enter button text', 'sunix' ),
 			'param_name'  => 'btn_text',
 			'value'       => '',
 			'std'		  => 'Subscribe',
@@ -83,8 +83,8 @@ vc_map(array(
     	),
     	array(
 			'type'        => 'textfield',
-			'heading'     => esc_html__( 'Extra Class', 'alacarte' ),
-			'description' => esc_html__( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'alacarte' ),
+			'heading'     => esc_html__( 'Extra Class', 'sunix' ),
+			'description' => esc_html__( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'sunix' ),
 			'param_name'  => 'el_class',
 			'value'       => '',
 			'std'		  => '',

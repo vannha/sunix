@@ -27,21 +27,21 @@ if ( ! defined( 'ABSPATH' ) ) {
     if(!empty($custom_color) && $color_mode === 'custom')
         $styles = 'style="color:'.esc_attr($custom_color).';"';
 ?>
-<div class="<?php echo alacarte_optimize_css_class(implode(' ', $wrap_css_classes)); ?>">
+<div class="<?php echo sunix_optimize_css_class(implode(' ', $wrap_css_classes)); ?>">
     <?php
         switch ($source) {
             case 'custom':
                 foreach($values as $value){
                     vc_icon_element_fonts_enqueue( $value['i_type'] );  /* Call icon font libs */
                     $iconClass = isset($value['i_icon_'. $value['i_type']]) ? $value['i_icon_'. $value['i_type']] : ''; /* get icon class */
-                    $link_open = '<a href="javascript:void(0)" data-hint="'.esc_html__('Follow Us','alacarte').'" '.$styles.'>';
+                    $link_open = '<a href="javascript:void(0)" data-hint="'.esc_html__('Follow Us','sunix').'" '.$styles.'>';
                     $link_close = '</a>';           
                     if (isset($value['icon_link'])){  
                         $link = vc_build_link($value['icon_link']);
                         $link = ( $link == '||' ) ? '' : $link;
                         if ( strlen( $link['url'] ) > 0 ) {
                             $a_href    = $link['url'];
-                            $a_title   = isset($link['title']) && !empty($link['title']) ? $link['title'] : esc_html__('Follow Us','alacarte');
+                            $a_title   = isset($link['title']) && !empty($link['title']) ? $link['title'] : esc_html__('Follow Us','sunix');
                             $a_target  = strlen( $link['target'] ) > 0 ? str_replace(' ', '', $link['target']) : '_blank';
                             $link_open = '<a href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'" '.$styles.'>';
                             $link_close = '</a>';

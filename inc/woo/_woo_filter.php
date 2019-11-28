@@ -2,8 +2,8 @@
 /**
  * add filter bar
 */
-//add_action('alacarte_woocommerce_before_shop_loop','alacarte_woocommerce_filter_bar');
-function alacarte_woocommerce_filter_bar(){
+//add_action('sunix_woocommerce_before_shop_loop','sunix_woocommerce_filter_bar');
+function sunix_woocommerce_filter_bar(){
     $attribute_array = [];
     $attribute_taxonomies = wc_get_attribute_taxonomies();
     if (!empty($attribute_taxonomies)) {
@@ -17,12 +17,12 @@ function alacarte_woocommerce_filter_bar(){
 	<div class="red-woo-filters row">
 		<?php 
 			$filtered_args = [
-                'title' => '<h3 class="red-heading widgettitle">'.esc_html__('Active Filters','alacarte').'</h3>',
+                'title' => '<h3 class="red-heading widgettitle">'.esc_html__('Active Filters','sunix').'</h3>',
                 'class' => 'widget widget_layered_nav_filters col-12',
             ];
-            alacarte_woo_filtered_list($filtered_args);
+            sunix_woo_filtered_list($filtered_args);
 
-		    //do_action('alacarte_woocommerce_filter_orderby');
+		    //do_action('sunix_woocommerce_filter_orderby');
             
             // Filter by Attribute
             foreach ($attribute_array as $key => $value) {
@@ -45,7 +45,7 @@ function alacarte_woocommerce_filter_bar(){
             }
             // Rating Filter
             $filter_rating_args = [
-                'title'           => esc_html__('Average Rating','alacarte'),
+                'title'           => esc_html__('Average Rating','sunix'),
             ];
             the_widget(
                 'WC_Widget_Rating_Filter',
@@ -58,7 +58,7 @@ function alacarte_woocommerce_filter_bar(){
                 ) 
             );
             $filter_by_price_args = [
-                'title'           => esc_html__('Filter by Price','alacarte'),
+                'title'           => esc_html__('Filter by Price','sunix'),
             ];
             the_widget(
                 'WC_Widget_Price_Filter',

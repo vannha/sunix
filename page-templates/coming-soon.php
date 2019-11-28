@@ -16,12 +16,12 @@
     <?php wp_head(); ?>
 </head>
 <body id="page-comming-soon" <?php body_class(); ?>>
-<?php alacarte_page_loading(); ?>
-<div id="red-page" class="<?php alacarte_page_css_class();?>">
+<?php sunix_page_loading(); ?>
+<div id="red-page" class="<?php sunix_page_css_class();?>">
     <?php
-    alacarte_header_top();
-    alacarte_header_main();
-    alacarte_page_title();
+    sunix_header_top();
+    sunix_header_main();
+    sunix_page_title();
     ?>
     <main id="red-main" class="red-main">
         <div class="row">

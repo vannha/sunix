@@ -2,28 +2,28 @@
 /**
  * Add new option avatar to admin
 */
-//add_action('switch_theme', 'alacarte_update_avatar');
-function alacarte_update_avatar(){
+//add_action('switch_theme', 'sunix_update_avatar');
+function sunix_update_avatar(){
 	$ef5_avatar = get_template_directory_uri() . '/assets/images/avatar.png';
 	if (get_option($ef5_avatar, '') != $ef5_avatar)
 		update_option( 'avatar_default' , $ef5_avatar );
 }
  
 // add a new default avatar to the list in WordPress admin
-function alacarte_default_avatar( $avatar_defaults ) {
+function sunix_default_avatar( $avatar_defaults ) {
 	$ef5_avatar = get_template_directory_uri() . '/assets/images/avatar.png';
-	$avatar_defaults[$ef5_avatar] = esc_html__('AlaCarte Avatar','alacarte');
+	$avatar_defaults[$ef5_avatar] = esc_html__('sunix Avatar','sunix');
 	return $avatar_defaults;
 }
-//add_filter( 'avatar_defaults', 'alacarte_default_avatar' );
+//add_filter( 'avatar_defaults', 'sunix_default_avatar' );
 
 /**
  * Returns the size for avatars used in the theme.
  */
-if(!function_exists('alacarte_get_avatar_size')){
-	//add_filter('woocommerce_review_gravatar_size', 'alacarte_get_avatar_size');
-	function alacarte_get_avatar_size() {
-		return alacarte_configs('cmt_avatar_size');
+if(!function_exists('sunix_get_avatar_size')){
+	//add_filter('woocommerce_review_gravatar_size', 'sunix_get_avatar_size');
+	function sunix_get_avatar_size() {
+		return sunix_configs('cmt_avatar_size');
 	}
 }
 
@@ -32,9 +32,9 @@ if(!function_exists('alacarte_get_avatar_size')){
  * https://codex.wordpress.org/Plugin_API/Filter_Reference/get_avatar
  *
 */
-if(!function_exists('alacarte_custom_avatar')){
-	//add_filter( 'get_avatar' , 'alacarte_custom_avatar' , 1 , 6 );
-	function alacarte_custom_avatar($avatar, $id_or_email, $size, $default, $alt, $args) {
+if(!function_exists('sunix_custom_avatar')){
+	//add_filter( 'get_avatar' , 'sunix_custom_avatar' , 1 , 6 );
+	function sunix_custom_avatar($avatar, $id_or_email, $size, $default, $alt, $args) {
 	    if ( is_object( $id_or_email )) {
 			$alt = $id_or_email->comment_author;
 		} elseif ( is_numeric( $id_or_email ) ) {

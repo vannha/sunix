@@ -28,7 +28,7 @@ if(!empty($atts['button_link'])){
     if ( strlen( $button_link['url'] ) > 0 ) {
         $use_link = true; 
         $a_href = $button_link['url'];
-        $a_title = strlen($button_link['title']) > 0 ? $button_link['title'] : esc_html__('Read more','alacarte') ;
+        $a_title = strlen($button_link['title']) > 0 ? $button_link['title'] : esc_html__('Read more','sunix') ;
         $a_target = strlen( $button_link['target'] ) > 0 ? $button_link['target'] : '_self';
     }
 }
@@ -46,10 +46,10 @@ $iconStyle = !empty($i_custom_color) ? 'style="color:'.$i_custom_color.'"' : '';
 // icon output
 $fancybox_icon = ob_start();
 ?>
-<div class="<?php echo trim(implode(' ', $icon_css_class));?>" <?php echo alacarte_html($iconStyle);?>>
+<div class="<?php echo trim(implode(' ', $icon_css_class));?>" <?php echo sunix_html($iconStyle);?>>
 	<?php switch ($add_icon) {
 		case 'upload':
-			alacarte_image_by_size([
+			sunix_image_by_size([
 				'id'    => $icon_upload,
 				'size'  => $icon_size,
 				'class' => 'red-pricing-img'
@@ -77,9 +77,9 @@ $fancybox_icon = ob_start();
         <?php endif; ?>
             <div class="fancy-right">
                 <?php if(!empty($heading)): ?>
-                    <div class="red-fancybox-heading red-heading" <?php echo alacarte_html($heading_styles);?>><?php echo alacarte_html($heading); ?></div>
+                    <div class="red-fancybox-heading red-heading" <?php echo sunix_html($heading_styles);?>><?php echo sunix_html($heading); ?></div>
                 <?php endif; ?>
-                <?php if(!empty($desc)): ?><div class="desc" <?php echo alacarte_html($desc_styles);?>><?php echo alacarte_html($desc); ?></div><?php endif; ?>
+                <?php if(!empty($desc)): ?><div class="desc" <?php echo sunix_html($desc_styles);?>><?php echo sunix_html($desc); ?></div><?php endif; ?>
                 <?php if($use_link) { ?>
                     <footer class="red-fancy-footer">
                         <a href="<?php echo esc_url( $a_href ); ?>" title="<?php echo esc_attr( $a_title ); ?>" target="<?php echo trim( esc_attr( $a_target ) ); ?>" class="<?php echo esc_attr($btn_type); ?>">
@@ -101,8 +101,8 @@ $fancybox_icon = ob_start();
 		        </div>
 	        <?php } ?>
 			<div class="">
-				<?php if(!empty($heading)): ?><div class="red-fancybox-heading red-heading" <?php echo alacarte_html($heading_styles);?>><?php echo alacarte_html($heading); ?></div><?php endif; ?>
-				<?php if(!empty($desc)): ?><div class="desc" <?php echo alacarte_html($desc_styles);?>><?php echo alacarte_html($desc); ?> <i class="far fa-long-arrow-right"></i></div><?php endif; ?>
+				<?php if(!empty($heading)): ?><div class="red-fancybox-heading red-heading" <?php echo sunix_html($heading_styles);?>><?php echo sunix_html($heading); ?></div><?php endif; ?>
+				<?php if(!empty($desc)): ?><div class="desc" <?php echo sunix_html($desc_styles);?>><?php echo sunix_html($desc); ?> <i class="far fa-long-arrow-right"></i></div><?php endif; ?>
 				<?php if($use_link) { ?>
 	            <footer class="red-fancy-footer">
 	                <a href="<?php echo esc_url( $a_href ); ?>" title="<?php echo esc_attr( $a_title ); ?>" target="<?php echo trim( esc_attr( $a_target ) ); ?>" class="<?php echo esc_attr($btn_type); ?>">
@@ -120,8 +120,8 @@ $fancybox_icon = ob_start();
 	            <?php printf('%s', $fancybox_icon); ?>
 	        </div>
         <?php } ?>
-		<?php if(!empty($heading)): ?><div class="red-fancybox-heading red-heading" <?php echo alacarte_html($heading_styles);?>><?php echo alacarte_html($heading); ?></div><?php endif; ?>
-		<?php if(!empty($desc)): ?><div class="desc" <?php echo alacarte_html($desc_styles);?>><?php echo alacarte_html($desc); ?></div><?php endif; ?>
+		<?php if(!empty($heading)): ?><div class="red-fancybox-heading red-heading" <?php echo sunix_html($heading_styles);?>><?php echo sunix_html($heading); ?></div><?php endif; ?>
+		<?php if(!empty($desc)): ?><div class="desc" <?php echo sunix_html($desc_styles);?>><?php echo sunix_html($desc); ?></div><?php endif; ?>
 		<?php if($use_link) { ?>
         <footer class="red-fancy-footer">
             <a href="<?php echo esc_url( $a_href ); ?>" title="<?php echo esc_attr( $a_title ); ?>" target="<?php echo trim( esc_attr( $a_target ) ); ?>" class="<?php echo esc_attr($btn_type); ?>">
@@ -141,8 +141,8 @@ $fancybox_icon = ob_start();
 			        </div>
 		        <?php } ?>
 				<div class="col-12">
-					<?php if(!empty($heading)): ?><div class="red-fancybox-heading red-heading transition" <?php echo alacarte_html($heading_styles);?>><?php echo alacarte_html($heading); ?></div><?php endif; ?>
-					<?php if(!empty($desc)): ?><div class="desc" <?php echo alacarte_html($desc_styles);?>><?php echo alacarte_html($desc); ?></div><?php endif; ?>
+					<?php if(!empty($heading)): ?><div class="red-fancybox-heading red-heading transition" <?php echo sunix_html($heading_styles);?>><?php echo sunix_html($heading); ?></div><?php endif; ?>
+					<?php if(!empty($desc)): ?><div class="desc" <?php echo sunix_html($desc_styles);?>><?php echo sunix_html($desc); ?></div><?php endif; ?>
 					<?php if($use_link) { ?>
 		            <footer class="red-fancy-footer">
 		                <a href="<?php echo esc_url( $a_href ); ?>" title="<?php echo esc_attr( $a_title ); ?>" target="<?php echo trim( esc_attr( $a_target ) ); ?>" class="<?php echo esc_attr($btn_type); ?>">
@@ -166,9 +166,9 @@ $fancybox_icon = ob_start();
 		<?php endif; ?>
         <div class="fancy-right">
             <?php if(!empty($heading)): ?>
-                <div class="red-fancybox-heading red-heading" <?php echo alacarte_html($heading_styles);?>><?php echo alacarte_html($heading); ?></div>
+                <div class="red-fancybox-heading red-heading" <?php echo sunix_html($heading_styles);?>><?php echo sunix_html($heading); ?></div>
             <?php endif; ?>
-            <?php if(!empty($desc)): ?><div class="desc" <?php echo alacarte_html($desc_styles);?>><?php echo alacarte_html($desc); ?></div><?php endif; ?>
+            <?php if(!empty($desc)): ?><div class="desc" <?php echo sunix_html($desc_styles);?>><?php echo sunix_html($desc); ?></div><?php endif; ?>
             <?php if($use_link) { ?>
                 <footer class="red-fancy-footer">
                     <a href="<?php echo esc_url( $a_href ); ?>" title="<?php echo esc_attr( $a_title ); ?>" target="<?php echo trim( esc_attr( $a_target ) ); ?>" class="<?php echo esc_attr($btn_type); ?>">
@@ -190,8 +190,8 @@ $fancybox_icon = ob_start();
             </div>
         <?php } ?>
         <div class="">
-            <?php if(!empty($heading)): ?><div class="red-fancybox-heading red-heading" <?php echo alacarte_html($heading_styles);?>><?php echo alacarte_html($heading); ?></div><?php endif; ?>
-            <?php if(!empty($desc)): ?><div class="desc" <?php echo alacarte_html($desc_styles);?>><?php echo alacarte_html($desc); ?></div><?php endif; ?>
+            <?php if(!empty($heading)): ?><div class="red-fancybox-heading red-heading" <?php echo sunix_html($heading_styles);?>><?php echo sunix_html($heading); ?></div><?php endif; ?>
+            <?php if(!empty($desc)): ?><div class="desc" <?php echo sunix_html($desc_styles);?>><?php echo sunix_html($desc); ?></div><?php endif; ?>
             <?php if($use_link) { ?>
             <footer class="red-fancy-footer">
                 <a href="<?php echo esc_url( $a_href ); ?>" title="<?php echo esc_attr( $a_title ); ?>" target="<?php echo trim( esc_attr( $a_target ) ); ?>" class="<?php echo esc_attr($btn_type); ?>">

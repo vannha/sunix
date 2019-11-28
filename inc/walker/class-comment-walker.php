@@ -2,8 +2,8 @@
 /**
  * Custom comment walker for this theme
  *
- * @package AlaCarte
- * @subpackage AlaCarte
+ * @package sunix
+ * @subpackage sunix
  * @since 1.0.0
  * @author EF5 Team
  *
@@ -14,7 +14,7 @@
  *
  * @since 1.0.0
  */
-class alacarte_Walker_Comment extends Walker_Comment {
+class sunix_Walker_Comment extends Walker_Comment {
 
 	/**
 	 * Outputs a comment in the HTML5 format.
@@ -47,14 +47,14 @@ class alacarte_Walker_Comment extends Walker_Comment {
 								} 
 							?>
 						</div>
-						<?php $this->alacarte_comment_author_info(['class' => 'col'], $comment , $comment_author ); ?>
+						<?php $this->sunix_comment_author_info(['class' => 'col'], $comment , $comment_author ); ?>
 					</div>
 				</div>
 				<?php } ?>
 				<div class="comment-info col">
-					<?php $this->alacarte_comment_author_info([], $comment , $comment_author ); ?>
+					<?php $this->sunix_comment_author_info([], $comment , $comment_author ); ?>
 					<?php if ( '0' == $comment->comment_approved ) : ?>
-						<div class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'alacarte' ); ?></div>
+						<div class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'sunix' ); ?></div>
 					<?php endif; ?>
 					<div class="comment-content">
 						<?php comment_text(); ?>
@@ -62,8 +62,8 @@ class alacarte_Walker_Comment extends Walker_Comment {
 					<div class="comment-metadata">
 						<span class="comment-time meta-color"><?php
 								/* translators: 1: comment date, 2: comment time */
-								$comment_timestamp = sprintf( __( '%1$s at %2$s', 'alacarte' ), get_comment_date( '', $comment ), get_comment_time() );
-							echo alacarte_html($comment_timestamp);
+								$comment_timestamp = sprintf( __( '%1$s at %2$s', 'sunix' ), get_comment_date( '', $comment ), get_comment_time() );
+							echo sunix_html($comment_timestamp);
 						?></span>
 						<?php
 							comment_reply_link(
@@ -78,7 +78,7 @@ class alacarte_Walker_Comment extends Walker_Comment {
 									)
 								)
 							);
-							edit_comment_link(esc_html__('Edit','alacarte'));
+							edit_comment_link(esc_html__('Edit','sunix'));
 						?>
 					</div>
 				</div>
@@ -90,18 +90,18 @@ class alacarte_Walker_Comment extends Walker_Comment {
 	?>
 		<<?php echo esc_html($tag); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( '', $comment ); ?>>
 			<div class="comment-body">
-				<?php _e( 'Pingback:', 'alacarte' ); ?>
+				<?php _e( 'Pingback:', 'sunix' ); ?>
 				<div class="h5"><?php comment_author_link( $comment ); ?></div>
 				<?php if(current_user_can( 'edit_comment', $comment->comment_ID )){ ?>
 				<div class="comment-links"><?php 
-					echo '<span class="edit-edit"><a href="'.esc_url(get_edit_comment_link()).'" class="edit-link"><span class="edit-icon fa fa-edit"></span>&nbsp;&nbsp;'.esc_html__('Edit','alacarte').'</a></span>';
+					echo '<span class="edit-edit"><a href="'.esc_url(get_edit_comment_link()).'" class="edit-link"><span class="edit-icon fa fa-edit"></span>&nbsp;&nbsp;'.esc_html__('Edit','sunix').'</a></span>';
 				?></div>
 				<?php } ?>
 			</div>
 	<?php
 		}
 
-	public function alacarte_comment_author_info($args = '', $comment , $comment_author ){
+	public function sunix_comment_author_info($args = '', $comment , $comment_author ){
 		$args = wp_parse_args($args, [
 			'class' => ''
 		]);
@@ -114,14 +114,14 @@ class alacarte_Walker_Comment extends Walker_Comment {
 				 * fill color to the inner check shape when in circle form.
 				*/
 				$author_badge = '';
-				if ( alacarte_is_comment_by_post_author( $comment ) ) {
+				if ( sunix_is_comment_by_post_author( $comment ) ) {
 					/* translators: %s: SVG Icon */
 					$author_badge = sprintf( '<span class="post-author-badge">%s</span>', '' );
 				}
 
 				printf(
 					/* translators: %s: comment author link */
-					__( '%s', 'alacarte' ),
+					__( '%s', 'sunix' ),
 					sprintf( '<div class="author-name">%1$s %2$s</div>',$author_badge, $comment_author )
 				);
 			?>

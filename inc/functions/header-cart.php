@@ -3,15 +3,15 @@
  * Header WC Cart 
  * @since 1.0.0
 */
-if(!function_exists('alacarte_header_cart')){
-	function alacarte_header_cart($args = []){
+if(!function_exists('sunix_header_cart')){
+	function sunix_header_cart($args = []){
 		$args = wp_parse_args($args, [
 			'before' => '',
 			'after'  => '', 
 			'icon'	 => 'flaticon-shopping-cart'
 		]);
 		if(!class_exists( 'WooCommerce' )) return;
-		$show_cart = alacarte_get_opts('header_cart', '0');
+		$show_cart = sunix_get_opts('header_cart', '0');
 		if('0' === $show_cart) return;
 		echo wp_kses_post($args['before']);
 	?>
@@ -24,11 +24,11 @@ if(!function_exists('alacarte_header_cart')){
  * Add Header WooCommerce Cart 
  * @since 1.0.0
  */
-if(!function_exists('alacarte_header_wc_cart')){
-	add_filter('woocommerce_add_to_cart_fragments', 'alacarte_woocommerce_add_to_cart_fragments', 10, 1 );
-	function alacarte_header_wc_cart() {
+if(!function_exists('sunix_header_wc_cart')){
+	add_filter('woocommerce_add_to_cart_fragments', 'sunix_woocommerce_add_to_cart_fragments', 10, 1 );
+	function sunix_header_wc_cart() {
 	    if(!class_exists('WooCommerce')) return;
-	    $show_cart = alacarte_get_opts('header_cart', '0');
+	    $show_cart = sunix_get_opts('header_cart', '0');
 	    if('0' === $show_cart) return;
 	    ?>
 	    <div id="red-cart-popup" class="cartform mfp-hide container">
@@ -44,10 +44,10 @@ if(!function_exists('alacarte_header_wc_cart')){
 	    </div>
 	    <?php
 	}
-	add_action('wp_footer', 'alacarte_header_wc_cart');
+	add_action('wp_footer', 'sunix_header_wc_cart');
 }
-if(!function_exists('alacarte_woocommerce_add_to_cart_fragments')){
-    function alacarte_woocommerce_add_to_cart_fragments( $fragments ) {
+if(!function_exists('sunix_woocommerce_add_to_cart_fragments')){
+    function sunix_woocommerce_add_to_cart_fragments( $fragments ) {
     	if(!class_exists('WooCommerce')) return;
         ob_start();
         ?>

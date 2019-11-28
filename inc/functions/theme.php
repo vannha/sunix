@@ -2,32 +2,32 @@
 /**
  * Language direction 
 */
-function alacarte_direction($return = true){
-    $alacarte_direction = is_rtl() ? 'dir-right' : 'dir-left';
+function sunix_direction($return = true){
+    $sunix_direction = is_rtl() ? 'dir-right' : 'dir-left';
     if($return)
-        return $alacarte_direction;
+        return $sunix_direction;
     else 
-        echo esc_attr($alacarte_direction);
+        echo esc_attr($sunix_direction);
 }
 /**
  * get text-align left / right for RTL language 
 */
-function alacarte_align($return = true){
-    $alacarte_align = is_rtl() ? 'right' : 'left';
+function sunix_align($return = true){
+    $sunix_align = is_rtl() ? 'right' : 'left';
     if($return)
-        return $alacarte_align;
+        return $sunix_align;
     else 
-        echo esc_attr($alacarte_align);
+        echo esc_attr($sunix_align);
 }
-function alacarte_align2($return = true){
-    $alacarte_align = is_rtl() ? 'left' : 'right';
+function sunix_align2($return = true){
+    $sunix_align = is_rtl() ? 'left' : 'right';
     if($return)
-        return $alacarte_align;
+        return $sunix_align;
     else 
-        echo esc_attr($alacarte_align);
+        echo esc_attr($sunix_align);
 }
 
-function alacarte_optimize_css_class($string){
+function sunix_optimize_css_class($string){
     //$string = str_replace('  ', ' ', $string);
     $string = preg_replace('!\s+!', ' ', $string);
     return $string;
@@ -35,20 +35,20 @@ function alacarte_optimize_css_class($string){
 /**
  * Page CSS Class
 */
-function alacarte_page_css_class($class = ''){
-    $cls = apply_filters('alacarte_page_css_class',[]);
+function sunix_page_css_class($class = ''){
+    $cls = apply_filters('sunix_page_css_class',[]);
     $classes = array_merge(
         [
             'red-page',
-            'page-header-'.alacarte_get_opts('header_layout', '1'),
+            'page-header-'.sunix_get_opts('header_layout', '1'),
             $class
         ], 
         $cls
     );
-    if(alacarte_get_opts('header_ontop', '0') === '1' || alacarte_get_opts('header_sticky', '0') === '1'){
+    if(sunix_get_opts('header_ontop', '0') === '1' || sunix_get_opts('header_sticky', '0') === '1'){
        $classes[] = 'page-header-ontop';
     }
-    if(alacarte_get_opts('page_overlay_hidden', '1') === '0'){
+    if(sunix_get_opts('page_overlay_hidden', '1') === '0'){
        $classes[] = 'red-page-overlay-initial';
     }
     echo trim(implode(' ', $classes));
@@ -57,31 +57,31 @@ function alacarte_page_css_class($class = ''){
 /*
  * Archive sidebar position 
 */
-function alacarte_archive_sidebar_position(){
-    return apply_filters('alacarte_archive_sidebar_position','right');
+function sunix_archive_sidebar_position(){
+    return apply_filters('sunix_archive_sidebar_position','right');
 }
 /*
  * Archive content  grid column
 */
-function alacarte_archive_grid_col(){
-    return apply_filters('alacarte_archive_grid_col','8');
+function sunix_archive_grid_col(){
+    return apply_filters('sunix_archive_grid_col','8');
 }
 /*
  * Single Post sidebar position 
 */
-function alacarte_post_sidebar_position(){
-    return apply_filters('alacarte_post_sidebar_position','right');
+function sunix_post_sidebar_position(){
+    return apply_filters('sunix_post_sidebar_position','right');
 }
 /*
  * Single Portfolio sidebar position 
 */
-function alacarte_portfolio_sidebar_position(){
-    return apply_filters('alacarte_portfolio_sidebar_position','left');
+function sunix_portfolio_sidebar_position(){
+    return apply_filters('sunix_portfolio_sidebar_position','left');
 }
 /*
  * Content area css class
 */
-function alacarte_get_sidebar($check = true){
+function sunix_get_sidebar($check = true){
     $sidebar = 'none';
     if(is_post_type_archive('post') || is_singular('post') || is_home()){
         $sidebar = 'sidebar-main';
@@ -98,39 +98,39 @@ function alacarte_get_sidebar($check = true){
         return $sidebar;
 
 }
-function alacarte_sidebar_position(){
+function sunix_sidebar_position(){
     if(is_archive() || is_post_type_archive('post') || is_home() || is_search()){
 
        if (class_exists('WooCommerce') && (is_post_type_archive('product')) ) {
-            $sidebar_position = alacarte_get_opts('woo_shop_sidebar_pos', 'none');
+            $sidebar_position = sunix_get_opts('woo_shop_sidebar_pos', 'none');
            if(isset($_GET['layout']) && !empty($_GET['layout']))
                $sidebar_position = $_GET['layout'];
 
         }
        else{
-           $sidebar_position = alacarte_get_opts('archive_sidebar_pos', alacarte_archive_sidebar_position());
+           $sidebar_position = sunix_get_opts('archive_sidebar_pos', sunix_archive_sidebar_position());
        }
     } elseif(is_post_type_archive('portfolio')){
-        $sidebar_position = alacarte_get_opts('portfolio_archive_sidebar_pos', alacarte_archive_sidebar_position());
+        $sidebar_position = sunix_get_opts('portfolio_archive_sidebar_pos', sunix_archive_sidebar_position());
     } elseif(is_page()){
-        $sidebar_position = alacarte_get_opts('page_sidebar_pos','none');
+        $sidebar_position = sunix_get_opts('page_sidebar_pos','none');
     } elseif (is_singular('post')) {
-        $sidebar_position = alacarte_get_opts('post_sidebar_pos',alacarte_post_sidebar_position());
+        $sidebar_position = sunix_get_opts('post_sidebar_pos',sunix_post_sidebar_position());
     } elseif (class_exists('WooCommerce') && (is_singular('product')) ) {
-        $sidebar_position = alacarte_get_opts('woo_single_sidebar_pos', 'none');
+        $sidebar_position = sunix_get_opts('woo_single_sidebar_pos', 'none');
     }else {
         $sidebar_position = 'none';
     }
     return $sidebar_position;
 }
-function alacarte_content_css_class($class=''){
+function sunix_content_css_class($class=''){
     $classes = [
         'red-content-area',
         $class
     ];
-    $sidebar            = alacarte_get_sidebar();
-    $sidebar_position   = alacarte_sidebar_position();
-    $content_grid_class = alacarte_get_opts('archive_grid_col', alacarte_archive_grid_col());
+    $sidebar            = sunix_get_sidebar();
+    $sidebar_position   = sunix_sidebar_position();
+    $content_grid_class = sunix_get_opts('archive_grid_col', sunix_archive_grid_col());
     if($sidebar && ('none' !== $sidebar_position)){
         if (class_exists('WooCommerce') && (is_woocommerce() ) ) {
             $classes[] = 'col-lg-9 col-md-8';
@@ -156,19 +156,19 @@ function alacarte_content_css_class($class=''){
     else {
         $classes[] = 'col-12';
     }
-    echo alacarte_optimize_css_class(implode(' ', $classes));
+    echo sunix_optimize_css_class(implode(' ', $classes));
 }
 /**
  * Show Sidebar 
 */
 
-function alacarte_sidebar(){
-    $sidebar            = alacarte_get_sidebar(false);
-    $sidebar_position   = alacarte_sidebar_position();
+function sunix_sidebar(){
+    $sidebar            = sunix_get_sidebar(false);
+    $sidebar_position   = sunix_sidebar_position();
     if($sidebar_position === 'none' || $sidebar_position === 'center') return;
     if( is_active_sidebar( $sidebar ) ) {
     ?>
-        <div id="red-sidebar-area" class="<?php alacarte_sidebar_css_class(); ?>">
+        <div id="red-sidebar-area" class="<?php sunix_sidebar_css_class(); ?>">
             <div class="sidebar-inner">
                 <?php get_sidebar(); ?>
             </div>
@@ -178,14 +178,14 @@ function alacarte_sidebar(){
 /*
  * Sidebar area css class
 */
-function alacarte_sidebar_css_class($class=''){
+function sunix_sidebar_css_class($class=''){
     $classes = [
         'red-sidebar-area',
         $class
     ];
 
     if(!is_singular() || is_single() || !is_page_template()) $classes[] = 'red-blogs';
-    $content_grid_class = (int) alacarte_get_opts('archive_grid_col', alacarte_archive_grid_col());
+    $content_grid_class = (int) sunix_get_opts('archive_grid_col', sunix_archive_grid_col());
     $sidebar_grid_class = 12 - $content_grid_class;
 
     if (class_exists('WooCommerce') && (is_woocommerce() ) ) {
@@ -196,9 +196,9 @@ function alacarte_sidebar_css_class($class=''){
         $classes[] = 'col-md-'.$sidebar_grid_class;
     }
 
-    echo alacarte_optimize_css_class(implode(' ', $classes));
+    echo sunix_optimize_css_class(implode(' ', $classes));
 }
-function alacarte_get_post_from_query_seperate_data($data)
+function sunix_get_post_from_query_seperate_data($data)
 {
     $posts = array();
     if(is_array($data) && !empty($data['body'])  && is_array($data['body']))
@@ -221,9 +221,9 @@ function alacarte_get_post_from_query_seperate_data($data)
     }
     return $posts;
 }
-function alacarte_cms_menu_get_posts_in_all_cat_filter_view($menu_limit,$data)
+function sunix_cms_menu_get_posts_in_all_cat_filter_view($menu_limit,$data)
 {
-    $posts =  alacarte_get_post_from_query_seperate_data($data);
+    $posts =  sunix_get_post_from_query_seperate_data($data);
     if(count($posts) <= $menu_limit)
     {
         $posts_in_all_filter_view = array(

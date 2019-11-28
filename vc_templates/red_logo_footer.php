@@ -10,10 +10,10 @@
 <div id="<?php echo esc_attr($html_id);?>" class="red-logo-element clearfix">
     <?php
     $default_logo = get_template_directory_uri() . '/assets/images/logo.png';
-    $logo         = alacarte_get_opts( 'logo', array( 'url' => '', 'id' => '' ) );
+    $logo         = sunix_get_opts( 'logo', array( 'url' => '', 'id' => '' ) );
 
     $main_logo = !empty($logo['url']) ? $logo['url'] : $default_logo;
-    $page_logo = alacarte_get_opts('page_footer_logo',array( 'url' => '', 'id' => ''));
+    $page_logo = sunix_get_opts('page_footer_logo',array( 'url' => '', 'id' => ''));
     if(!empty($page_logo['url'])) {
         $main_logo = $page_logo['url'];
     }

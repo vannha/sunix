@@ -2,22 +2,22 @@
 /**
  * Filtered list
 */
-function alacarte_woo_filtered_list($args = []){
+function sunix_woo_filtered_list($args = []){
 	if ( ! is_shop() && ! is_product_taxonomy() ) {
 		return;
 	}
 	$args = wp_parse_args($args, [
-		'title' => '<h3 class="red-heading widgettitle">'.esc_html__('Active Filters','alacarte').'</h3>'
+		'title' => '<h3 class="red-heading widgettitle">'.esc_html__('Active Filters','sunix').'</h3>'
 	]);
 	$_chosen_attributes = WC_Query::get_layered_nav_chosen_attributes();
 	$min_price          = isset( $_GET['min_price'] ) ? wc_clean( wp_unslash( $_GET['min_price'] ) ) : 0; // WPCS: input var ok, CSRF ok.
 	$max_price          = isset( $_GET['max_price'] ) ? wc_clean( wp_unslash( $_GET['max_price'] ) ) : 0; // WPCS: input var ok, CSRF ok.
 	$rating_filter      = isset( $_GET['rating_filter'] ) ? array_filter( array_map( 'absint', explode( ',', wp_unslash( $_GET['rating_filter'] ) ) ) ) : array(); // WPCS: sanitization ok, input var ok, CSRF ok.
-	$base_link          = alacarte_get_current_page_url();
+	$base_link          = sunix_get_current_page_url();
 
 	if ( 0 < count( $_chosen_attributes ) || 0 < $min_price || 0 < $max_price || ! empty( $rating_filter ) ) {
 		echo '<div class="'.esc_attr($args['class']).'">';
-		if(!empty($args['title'])) echo alacarte_html($args['title']);
+		if(!empty($args['title'])) echo sunix_html($args['title']);
 		echo '<ul>';
 
 		// Attributes.
@@ -40,7 +40,7 @@ function alacarte_woo_filtered_list($args = []){
 						$link = add_query_arg( $filter_name, implode( ',', $new_filter ), $link );
 					}
 
-					echo '<li class="chosen"><a class="hint--top" rel="nofollow" aria-label="' . esc_attr__( 'Remove filter', 'alacarte' ) . '" href="' . esc_url( $link ) . '">' . esc_html( $term->name ) . '</a></li>';
+					echo '<li class="chosen"><a class="hint--top" rel="nofollow" aria-label="' . esc_attr__( 'Remove filter', 'sunix' ) . '" href="' . esc_url( $link ) . '">' . esc_html( $term->name ) . '</a></li>';
 				}
 			}
 		}
@@ -48,13 +48,13 @@ function alacarte_woo_filtered_list($args = []){
 		if ( $min_price ) {
 			$link = remove_query_arg( 'min_price', $base_link );
 			/* translators: %s: minimum price */
-			echo '<li class="chosen"><a class="hint--top" rel="nofollow" aria-label="' . esc_attr__( 'Remove filter', 'alacarte' ) . '" href="' . esc_url( $link ) . '">' . sprintf( __( 'Min %s', 'alacarte' ), wc_price( $min_price ) ) . '</a></li>'; // WPCS: XSS ok.
+			echo '<li class="chosen"><a class="hint--top" rel="nofollow" aria-label="' . esc_attr__( 'Remove filter', 'sunix' ) . '" href="' . esc_url( $link ) . '">' . sprintf( __( 'Min %s', 'sunix' ), wc_price( $min_price ) ) . '</a></li>'; // WPCS: XSS ok.
 		}
 
 		if ( $max_price ) {
 			$link = remove_query_arg( 'max_price', $base_link );
 			/* translators: %s: maximum price */
-			echo '<li class="chosen"><a class="hint--top" rel="nofollow" aria-label="' . esc_attr__( 'Remove filter', 'alacarte' ) . '" href="' . esc_url( $link ) . '">' . sprintf( __( 'Max %s', 'alacarte' ), wc_price( $max_price ) ) . '</a></li>'; // WPCS: XSS ok.
+			echo '<li class="chosen"><a class="hint--top" rel="nofollow" aria-label="' . esc_attr__( 'Remove filter', 'sunix' ) . '" href="' . esc_url( $link ) . '">' . sprintf( __( 'Max %s', 'sunix' ), wc_price( $max_price ) ) . '</a></li>'; // WPCS: XSS ok.
 		}
 
 		if ( ! empty( $rating_filter ) ) {
@@ -63,11 +63,11 @@ function alacarte_woo_filtered_list($args = []){
 				$link         = $link_ratings ? add_query_arg( 'rating_filter', $link_ratings ) : remove_query_arg( 'rating_filter', $base_link );
 
 				/* translators: %s: rating */
-				echo '<li class="chosen"><a class="hint--top" rel="nofollow" aria-label="' . esc_attr__( 'Remove filter', 'alacarte' ) . '" href="' . esc_url( $link ) . '">' . sprintf( esc_html__( 'Rated %s out of 5', 'alacarte' ), esc_html( $rating ) ) . '</a></li>';
+				echo '<li class="chosen"><a class="hint--top" rel="nofollow" aria-label="' . esc_attr__( 'Remove filter', 'sunix' ) . '" href="' . esc_url( $link ) . '">' . sprintf( esc_html__( 'Rated %s out of 5', 'sunix' ), esc_html( $rating ) ) . '</a></li>';
 			}
 		}
 
-		echo '<li class="chosen remove-all"><a href="'.esc_url(get_permalink( wc_get_page_id( 'shop' ))).'">'.esc_attr__('Clear All','alacarte').'</a></li>';
+		echo '<li class="chosen remove-all"><a href="'.esc_url(get_permalink( wc_get_page_id( 'shop' ))).'">'.esc_attr__('Clear All','sunix').'</a></li>';
 
 		echo '</ul>';
 		echo '</div>';

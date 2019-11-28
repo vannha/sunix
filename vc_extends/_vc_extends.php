@@ -2,31 +2,31 @@
 /**
  * Register icons for Visual Composer
  */
-function alacarte_vc_icon_fonts_register()
+function sunix_vc_icon_fonts_register()
 {
     wp_register_style('font-linear', get_template_directory_uri() . '/assets/fonts/linear/font-linear.css', array(), wp_get_theme()->get('Version'));
     wp_register_style('font-elegant', get_template_directory_uri() . '/assets/fonts/elegant/font-elegant.css', array(), wp_get_theme()->get('Version'));
     wp_register_style('font-etline', get_template_directory_uri() . '/assets/fonts/et-line-font/et-line-font.css', array(), wp_get_theme()->get('Version'));
     wp_register_style('font-flaticon', get_template_directory_uri() . '/assets/fonts/flaticon/flaticon.css', array(), wp_get_theme()->get('Version'));
 }
-add_action( 'wp_enqueue_scripts', 'alacarte_vc_icon_fonts_register' );
-add_action( 'admin_enqueue_scripts', 'alacarte_vc_icon_fonts_register' );
+add_action( 'wp_enqueue_scripts', 'sunix_vc_icon_fonts_register' );
+add_action( 'admin_enqueue_scripts', 'sunix_vc_icon_fonts_register' );
 
 /**
  * Enqueues icons for Visual Composer
  */
-function alacarte_vc_icon_fonts_enqueue()
+function sunix_vc_icon_fonts_enqueue()
 {
     wp_enqueue_style( 'font-linear' );
     wp_enqueue_style( 'font-elegant' );
     wp_enqueue_style( 'font-etline' );
     wp_enqueue_style( 'font-flaticon' );
 }
-add_action( 'vc_backend_editor_enqueue_js_css', 'alacarte_vc_icon_fonts_enqueue' );
-add_action( 'vc_frontend_editor_enqueue_js_css', 'alacarte_vc_icon_fonts_enqueue' );
+add_action( 'vc_backend_editor_enqueue_js_css', 'sunix_vc_icon_fonts_enqueue' );
+add_action( 'vc_frontend_editor_enqueue_js_css', 'sunix_vc_icon_fonts_enqueue' );
 
-add_action('vc_enqueue_font_icon_element', 'alacarte_vc_icon_font');
-function alacarte_vc_icon_font($font)
+add_action('vc_enqueue_font_icon_element', 'sunix_vc_icon_font');
+function sunix_vc_icon_font($font)
 {
     switch ($font) {
         case 'linear':
@@ -40,9 +40,9 @@ function alacarte_vc_icon_font($font)
     }
 }
 
-function alacarte_icon_libs($args = array()){
+function sunix_icon_libs($args = array()){
     $args = wp_parse_args($args, array(
-        'group'            => esc_html__('Icon','alacarte'),
+        'group'            => esc_html__('Icon','sunix'),
         'field_prefix'     => 'i_', 
         'dependency'       => 'add_icon',
         'dependency_value' => 'true'
@@ -69,12 +69,12 @@ function alacarte_icon_libs($args = array()){
                 if ( $field_prefix.'type' === $param['param_name'] ) {
                     /* append biger icon to dropdown 
                      * use: 
-                     * $icons_params[ $key ]['value'][ esc_html__( 'Linear Icon', 'alacarte' ) ] = 'linear';
+                     * $icons_params[ $key ]['value'][ esc_html__( 'Linear Icon', 'sunix' ) ] = 'linear';
                     */
-                    $icons_params[ $key ]['value'][ esc_html__( 'Linear Icon', 'alacarte' ) ]  = 'linear';
-                    $icons_params[ $key ]['value'][ esc_html__( 'Elegant Icon', 'alacarte' ) ] = 'elegant';
-                    $icons_params[ $key ]['value'][ esc_html__( 'ET Line Icon', 'alacarte' ) ] = 'etline';
-                    $icons_params[ $key ]['value'][ esc_html__( 'Flat Icon', 'alacarte' ) ] = 'flaticon';
+                    $icons_params[ $key ]['value'][ esc_html__( 'Linear Icon', 'sunix' ) ]  = 'linear';
+                    $icons_params[ $key ]['value'][ esc_html__( 'Elegant Icon', 'sunix' ) ] = 'elegant';
+                    $icons_params[ $key ]['value'][ esc_html__( 'ET Line Icon', 'sunix' ) ] = 'etline';
+                    $icons_params[ $key ]['value'][ esc_html__( 'Flat Icon', 'sunix' ) ] = 'flaticon';
                     /* Change default font icon
                      * $icons_params[ $key ]['std'] = 'fontawesome';
                     */
@@ -89,9 +89,9 @@ function alacarte_icon_libs($args = array()){
     }
     return $icons_params;
 }
-function alacarte_icon_libs_icon($args = array()){
+function sunix_icon_libs_icon($args = array()){
     $args = wp_parse_args($args, array(
-        'group'        => esc_html__('Icon','alacarte'),
+        'group'        => esc_html__('Icon','sunix'),
         'field_prefix' => 'i_', 
         'return'       => true
     ));
@@ -101,7 +101,7 @@ function alacarte_icon_libs_icon($args = array()){
         /* Theme Icons */
         array(
             'type'       => 'iconpicker',
-            'heading'    => esc_html__( 'Icon', 'alacarte' ),
+            'heading'    => esc_html__( 'Icon', 'sunix' ),
             'param_name' => $field_prefix.'icon_linear',
             'value'      => 'lnr lnr-home',
             'settings'   => array(
@@ -113,13 +113,13 @@ function alacarte_icon_libs_icon($args = array()){
               'element' => $field_prefix.'type',
               'value'   => 'linear',
             ),
-            'description' => esc_html__( 'Select icon from library.', 'alacarte' ),
+            'description' => esc_html__( 'Select icon from library.', 'sunix' ),
             'group'       => $group
         ),
         /* Elegant */
         array(
             'type'       => 'iconpicker',
-            'heading'    => esc_html__( 'Icon', 'alacarte' ),
+            'heading'    => esc_html__( 'Icon', 'sunix' ),
             'param_name' => $field_prefix.'icon_elegant',
             'value'      => 'arrow_up',
             'settings'   => array(
@@ -131,13 +131,13 @@ function alacarte_icon_libs_icon($args = array()){
               'element' => $field_prefix.'type',
               'value'   => 'elegant',
             ),
-            'description' => esc_html__( 'Select icon from library.', 'alacarte' ),
+            'description' => esc_html__( 'Select icon from library.', 'sunix' ),
             'group'       => $group
         ),
         // ET Line
         array(
             'type'       => 'iconpicker',
-            'heading'    => esc_html__( 'Icon', 'alacarte' ),
+            'heading'    => esc_html__( 'Icon', 'sunix' ),
             'param_name' => $field_prefix.'icon_etline',
             'value'      => 'icon-mobile',
             'settings'   => array(
@@ -149,13 +149,13 @@ function alacarte_icon_libs_icon($args = array()){
               'element' => $field_prefix.'type',
               'value'   => 'etline',
             ),
-            'description' => esc_html__( 'Select icon from library.', 'alacarte' ),
+            'description' => esc_html__( 'Select icon from library.', 'sunix' ),
             'group'       => $group
         ),
         // Flaticon
         array(
             'type'       => 'iconpicker',
-            'heading'    => esc_html__( 'Icon', 'alacarte' ),
+            'heading'    => esc_html__( 'Icon', 'sunix' ),
             'param_name' => $field_prefix.'icon_flaticon',
             'value'      => 'flaticon-medal',
             'settings'   => array(
@@ -167,7 +167,7 @@ function alacarte_icon_libs_icon($args = array()){
               'element' => $field_prefix.'type',
               'value'   => 'flaticon',
             ),
-            'description' => esc_html__( 'Select icon from library.', 'alacarte' ),
+            'description' => esc_html__( 'Select icon from library.', 'sunix' ),
             'group'       => $group
         )
     );
@@ -177,8 +177,8 @@ function alacarte_icon_libs_icon($args = array()){
  * VC Post type list
  * Get post type for vc element 
 */
-if (!function_exists('alacarte_vc_post_type_list')) {
-    function alacarte_vc_post_type_list()
+if (!function_exists('sunix_vc_post_type_list')) {
+    function sunix_vc_post_type_list()
     {
         $post_types = get_post_types(array('public' => true), 'object');
         $DefaultExcludedPostTypes = array(
@@ -194,7 +194,7 @@ if (!function_exists('alacarte_vc_post_type_list')) {
             'ef5_header_top',
             'ef5_footer'
         );
-        $ExtraExcludedPostTypes = apply_filters('alacarte_vc_post_type_list', array());
+        $ExtraExcludedPostTypes = apply_filters('sunix_vc_post_type_list', array());
         
         $excludedPostTypes = array_merge($DefaultExcludedPostTypes, $ExtraExcludedPostTypes );
 
@@ -229,7 +229,7 @@ if (function_exists('cptui_create_custom_post_types')) {
 /**
  * Auto Show  taxonomies
 */
-function alacarte_taxonomies_for_autocomplete(){
+function sunix_taxonomies_for_autocomplete(){
     $taxonomies_types = get_taxonomies( array( 'public' => true ), 'objects' );
     $result = array();
     if ( is_array( $taxonomies_types ) && ! empty( $taxonomies_types ) ) {
@@ -256,14 +256,14 @@ function alacarte_taxonomies_for_autocomplete(){
 /**
  * Button Colors
 */
-if(!function_exists('alacarte_button_colors')){
-    function alacarte_button_colors(){
+if(!function_exists('sunix_button_colors')){
+    function sunix_button_colors(){
         $button_colors = array(
-            esc_html__('Primary', 'alacarte')   => 'primary',
-            esc_html__('Accent', 'alacarte')    => 'accent',
-            esc_html__('White', 'alacarte')    => 'btn-white',
-            esc_html__('Secondary', 'alacarte') => 'secondary',
-            esc_html__('Custom', 'alacarte')    => 'custom',
+            esc_html__('Primary', 'sunix')   => 'primary',
+            esc_html__('Accent', 'sunix')    => 'accent',
+            esc_html__('White', 'sunix')    => 'btn-white',
+            esc_html__('Secondary', 'sunix') => 'secondary',
+            esc_html__('Custom', 'sunix')    => 'custom',
         );
         return $button_colors;
     }
@@ -272,12 +272,12 @@ if(!function_exists('alacarte_button_colors')){
 /**
  * Button Style
 */
-if(!function_exists('alacarte_button_style')){
-    function alacarte_button_style(){
+if(!function_exists('sunix_button_style')){
+    function sunix_button_style(){
         $button_type = array(
-            esc_html__('Fill', 'alacarte')        => 'fill',
-            esc_html__('Outline', 'alacarte')     => 'outline',
-            esc_html__('Simple Link', 'alacarte') => 'simple',
+            esc_html__('Fill', 'sunix')        => 'fill',
+            esc_html__('Outline', 'sunix')     => 'outline',
+            esc_html__('Simple Link', 'sunix') => 'simple',
         );
         return $button_type;
     }
@@ -285,12 +285,12 @@ if(!function_exists('alacarte_button_style')){
 /**
  * Button Shape
 */
-if(!function_exists('alacarte_button_shapes')){
-    function alacarte_button_shapes(){
+if(!function_exists('sunix_button_shapes')){
+    function sunix_button_shapes(){
         $button_type = array(
-            esc_html__('Default', 'alacarte')        => '',
-            esc_html__('Square', 'alacarte')         => 'square',
-            esc_html__('Rounded Corner', 'alacarte') => 'rounded',
+            esc_html__('Default', 'sunix')        => '',
+            esc_html__('Square', 'sunix')         => 'square',
+            esc_html__('Rounded Corner', 'sunix') => 'rounded',
         );
         return $button_type;
     }
@@ -299,16 +299,16 @@ if(!function_exists('alacarte_button_shapes')){
 /**
  * Button Size
 */
-if(!function_exists('alacarte_button_size')){
-    function alacarte_button_size(){
+if(!function_exists('sunix_button_size')){
+    function sunix_button_size(){
         $button_size = array(
-            esc_html__('Tiny', 'alacarte')        => 'tn',
-            esc_html__('Small', 'alacarte')       => 'sm',
-            esc_html__('Medium', 'alacarte')      => 'md',
-            esc_html__('Extra Medium', 'alacarte')=> 'xmd',
-            esc_html__('Default', 'alacarte')     => 'df',
-            esc_html__('Large', 'alacarte')       => 'lg',
-            esc_html__('Extra Large', 'alacarte') => 'xlg',
+            esc_html__('Tiny', 'sunix')        => 'tn',
+            esc_html__('Small', 'sunix')       => 'sm',
+            esc_html__('Medium', 'sunix')      => 'md',
+            esc_html__('Extra Medium', 'sunix')=> 'xmd',
+            esc_html__('Default', 'sunix')     => 'df',
+            esc_html__('Large', 'sunix')       => 'lg',
+            esc_html__('Extra Large', 'sunix') => 'xlg',
         );
         return $button_size;
     }
@@ -319,23 +319,23 @@ if(!function_exists('alacarte_button_size')){
  * @since 1.0.0
  * @author CMSSuperHeroes
  */
-if(!function_exists('alacarte_thumbnail_sizes')){
-    function alacarte_thumbnail_sizes() {
-        $alacarte_thumbnail_sizes = $alacarte_default_thumbnail_sizes = $alacarte_custom_thumbnail_sizes = array();
-        $alacarte_default_thumbnail_sizes = array(
-            esc_html__( 'Post Thumbnail', 'alacarte' )             => 'post-thumbnail',
-            esc_html__( 'Medium', 'alacarte' )                     => 'medium',
-            esc_html__( 'Large', 'alacarte' )                      => 'large',
-            esc_html__( 'Full', 'alacarte' )                       => 'full',
-            esc_html__( 'Thumbnail', 'alacarte' )                  => 'thumbnail',
+if(!function_exists('sunix_thumbnail_sizes')){
+    function sunix_thumbnail_sizes() {
+        $sunix_thumbnail_sizes = $sunix_default_thumbnail_sizes = $sunix_custom_thumbnail_sizes = array();
+        $sunix_default_thumbnail_sizes = array(
+            esc_html__( 'Post Thumbnail', 'sunix' )             => 'post-thumbnail',
+            esc_html__( 'Medium', 'sunix' )                     => 'medium',
+            esc_html__( 'Large', 'sunix' )                      => 'large',
+            esc_html__( 'Full', 'sunix' )                       => 'full',
+            esc_html__( 'Thumbnail', 'sunix' )                  => 'thumbnail',
         );
-        $alacarte_custom_thumbnail_sizes = array(
-            esc_html__( 'Custom', 'alacarte' )                 => 'custom',
+        $sunix_custom_thumbnail_sizes = array(
+            esc_html__( 'Custom', 'sunix' )                 => 'custom',
         );
 
-        $alacarte_thumbnail_sizes = array_merge($alacarte_default_thumbnail_sizes, $alacarte_custom_thumbnail_sizes);
+        $sunix_thumbnail_sizes = array_merge($sunix_default_thumbnail_sizes, $sunix_custom_thumbnail_sizes);
 
-        return $alacarte_thumbnail_sizes;
+        return $sunix_thumbnail_sizes;
     }
 }
 
@@ -346,19 +346,19 @@ if(!function_exists('alacarte_thumbnail_sizes')){
  * @author CMSSuperHeroes
  * @since 1.0.0
 */
-add_filter('vc_font_container_output_data','alacarte_vc_font_container_render_filter',11,4);
-function alacarte_vc_font_container_render_filter($data, $fields, $values, $settings){
+add_filter('vc_font_container_output_data','sunix_vc_font_container_render_filter',11,4);
+function sunix_vc_font_container_render_filter($data, $fields, $values, $settings){
     if ( isset( $fields['text_align'] ) ) {
         $data['text_align'] = '
         <div class="vc_row-fluid vc_column">
-            <div class="wpb_element_label">' . esc_html__( 'Text align', 'alacarte' ) . '</div>
+            <div class="wpb_element_label">' . esc_html__( 'Text align', 'sunix' ) . '</div>
             <div class="vc_font_container_form_field-text_align-container">
                 <select class="vc_font_container_form_field-text_align-select">
-                    <option value="inherit" class="inherit" ' . ( 'inherit' === $values['text_align'] ? 'selected="selected"' : '' ) . '>' . esc_html__( 'Default', 'alacarte' ) . '</option>
-                    <option value="left" class="left" ' . ( 'left' === $values['text_align'] ? 'selected="selected"' : '' ) . '>' . esc_html__( 'left', 'alacarte' ) . '</option>
-                    <option value="right" class="right" ' . ( 'right' === $values['text_align'] ? 'selected="selected"' : '' ) . '>' . esc_html__( 'right', 'alacarte' ) . '</option>
-                    <option value="center" class="center" ' . ( 'center' === $values['text_align'] ? 'selected="selected"' : '' ) . '>' . esc_html__( 'center', 'alacarte' ) . '</option>
-                    <option value="justify" class="justify" ' . ( 'justify' === $values['text_align'] ? 'selected="selected"' : '' ) . '>' . esc_html__( 'justify', 'alacarte' ) . '</option>
+                    <option value="inherit" class="inherit" ' . ( 'inherit' === $values['text_align'] ? 'selected="selected"' : '' ) . '>' . esc_html__( 'Default', 'sunix' ) . '</option>
+                    <option value="left" class="left" ' . ( 'left' === $values['text_align'] ? 'selected="selected"' : '' ) . '>' . esc_html__( 'left', 'sunix' ) . '</option>
+                    <option value="right" class="right" ' . ( 'right' === $values['text_align'] ? 'selected="selected"' : '' ) . '>' . esc_html__( 'right', 'sunix' ) . '</option>
+                    <option value="center" class="center" ' . ( 'center' === $values['text_align'] ? 'selected="selected"' : '' ) . '>' . esc_html__( 'center', 'sunix' ) . '</option>
+                    <option value="justify" class="justify" ' . ( 'justify' === $values['text_align'] ? 'selected="selected"' : '' ) . '>' . esc_html__( 'justify', 'sunix' ) . '</option>
                 </select>
             </div>';
         if ( isset( $fields['text_align_description'] ) && strlen( $fields['text_align_description'] ) > 0 ) {
@@ -374,24 +374,24 @@ function alacarte_vc_font_container_render_filter($data, $fields, $values, $sett
 /*
  * Grid Settings 
 */
-function alacarte_grid_columns(){
+function sunix_grid_columns(){
     return array(
-        esc_html__('1 Column','alacarte')   => '12',
-        esc_html__('2 Columns','alacarte')  => '6',
-        esc_html__('3 Columns','alacarte')  => '4',
-        esc_html__('4 Columns','alacarte')  => '3',
-        esc_html__('5 Columns','alacarte')  => '1/5',
-        esc_html__('6 Columns','alacarte')  => '2',
-        esc_html__('7 Columns','alacarte')  => '1/7',
-        esc_html__('8 Columns','alacarte')  => '1/8',
-        esc_html__('9 Columns','alacarte')  => '1/9',
-        esc_html__('10 Columns','alacarte') => '1/10',
-        esc_html__('11 Columns','alacarte') => '1/11',
-        esc_html__('12 Columns','alacarte') => '1',
-        esc_html__('Auto','alacarte')       => 'auto',
+        esc_html__('1 Column','sunix')   => '12',
+        esc_html__('2 Columns','sunix')  => '6',
+        esc_html__('3 Columns','sunix')  => '4',
+        esc_html__('4 Columns','sunix')  => '3',
+        esc_html__('5 Columns','sunix')  => '1/5',
+        esc_html__('6 Columns','sunix')  => '2',
+        esc_html__('7 Columns','sunix')  => '1/7',
+        esc_html__('8 Columns','sunix')  => '1/8',
+        esc_html__('9 Columns','sunix')  => '1/9',
+        esc_html__('10 Columns','sunix') => '1/10',
+        esc_html__('11 Columns','sunix') => '1/11',
+        esc_html__('12 Columns','sunix') => '1',
+        esc_html__('Auto','sunix')       => 'auto',
     );
 }
-function alacarte_grid_settings($args = array()){
+function sunix_grid_settings($args = array()){
     $args = wp_parse_args($args, array(
         'group'      => '',
         'param_name' => '',
@@ -402,10 +402,10 @@ function alacarte_grid_settings($args = array()){
     return array(
         array(
             'type'             => 'dropdown',
-            'description'      => esc_html__('Small Devices','alacarte'),
+            'description'      => esc_html__('Small Devices','sunix'),
             'param_name'       => 'col_sm',
             'edit_field_class' => 'vc_col-sm-3',
-            'value'            => alacarte_grid_columns(),
+            'value'            => sunix_grid_columns(),
             'std'              => '12',
             'dependency' => array(
                 'element'=> $param_name,
@@ -415,10 +415,10 @@ function alacarte_grid_settings($args = array()){
         ),
         array(
             'type'             => 'dropdown',
-            'description'      => esc_html__('Medium Devices','alacarte'),
+            'description'      => esc_html__('Medium Devices','sunix'),
             'param_name'       => 'col_md',
             'edit_field_class' => 'vc_col-sm-3',
-            'value'            => alacarte_grid_columns(),
+            'value'            => sunix_grid_columns(),
             'std'              => '6',
             'dependency' => array(
                 'element'=> $param_name,
@@ -428,10 +428,10 @@ function alacarte_grid_settings($args = array()){
         ),
         array(
             'type'             => 'dropdown',
-            'description'      => esc_html__('Large Devices','alacarte'),
+            'description'      => esc_html__('Large Devices','sunix'),
             'param_name'       => 'col_lg',
             'edit_field_class' => 'vc_col-sm-3',
-            'value'            => alacarte_grid_columns(),
+            'value'            => sunix_grid_columns(),
             'std'              => '4',
             'dependency' => array(
                 'element'=> $param_name,
@@ -441,10 +441,10 @@ function alacarte_grid_settings($args = array()){
         ),
         array(
             'type'             => 'dropdown',
-            'description'      => esc_html__('Extra Large Devices','alacarte'),
+            'description'      => esc_html__('Extra Large Devices','sunix'),
             'param_name'       => 'col_xl',
             'edit_field_class' => 'vc_col-sm-3',
-            'value'            => alacarte_grid_columns(),
+            'value'            => sunix_grid_columns(),
             'std'              => '3',
             'dependency' => array(
                 'element'=> $param_name,
@@ -457,7 +457,7 @@ function alacarte_grid_settings($args = array()){
 /* OWL Carousel Setting 
  * All option will use in element use OWL Carousel Libs
 */
-function alacarte_owl_settings( $args = array()){
+function sunix_owl_settings( $args = array()){
     $args = wp_parse_args($args, array(
         'group'      => '',
         'param_name' => '',
@@ -468,7 +468,7 @@ function alacarte_owl_settings( $args = array()){
     return array(
         array(
             'type'             => 'dropdown',
-            'heading'          => esc_html__('XSmall Devices','alacarte'),
+            'heading'          => esc_html__('XSmall Devices','sunix'),
             'param_name'       => 'owl_sm_items',
             'edit_field_class' => 'vc_col-sm-3',
             'value'            => array(1,2,3,4,5,6,7,8,9,10,11,12),
@@ -481,7 +481,7 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'             => 'dropdown',
-            'heading'          => esc_html__('Small Devices','alacarte'),
+            'heading'          => esc_html__('Small Devices','sunix'),
             'param_name'       => 'owl_md_items',
             'edit_field_class' => 'vc_col-sm-3',
             'value'            => array(1,2,3,4,5,6,7,8,9,10,11,12),
@@ -494,7 +494,7 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'             => 'dropdown',
-            'heading'          => esc_html__('Medium Devices','alacarte'),
+            'heading'          => esc_html__('Medium Devices','sunix'),
             'param_name'       => 'owl_lg_items',
             'edit_field_class' => 'vc_col-sm-3',
             'value'            => array(1,2,3,4,5,6,7,8,9,10,11,12),
@@ -507,7 +507,7 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'             => 'dropdown',
-            'heading'          => esc_html__('Large Devices','alacarte'),
+            'heading'          => esc_html__('Large Devices','sunix'),
             'param_name'       => 'owl_xl_items',
             'edit_field_class' => 'vc_col-sm-3',
             'value'            => array(1,2,3,4,5,6,7,8,9,10,11,12),
@@ -520,8 +520,8 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'        => 'dropdown',
-            'heading'     => esc_html__('Number Row','alacarte'),
-            'description' => esc_html__( 'Choose number of row you want to show.', 'alacarte' ),
+            'heading'     => esc_html__('Number Row','sunix'),
+            'description' => esc_html__( 'Choose number of row you want to show.', 'sunix' ),
             'param_name'  => 'number_row',
             'value'       => array(1,2,3,4,5,6,7,8,9,10),
             'std'         => 1,
@@ -534,8 +534,8 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'        => 'textfield',
-            'heading'     => esc_html__('Slide By','alacarte'),
-            'description' => esc_html__( 'Number/String. Navigation slide by X. "page" string can be set to slide by page.', 'alacarte' ),
+            'heading'     => esc_html__('Slide By','sunix'),
+            'description' => esc_html__( 'Number/String. Navigation slide by X. "page" string can be set to slide by page.', 'sunix' ),
             'param_name'  => 'slideby',
             'value'       => 'page',
             'std'         => 'page',
@@ -548,8 +548,8 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'        => 'textfield',
-            'heading'     => esc_html__('Slide Transition','alacarte'),
-            'description' => esc_html__( 'You can define the transition for the stage you want to use eg. linear.', 'alacarte' ),
+            'heading'     => esc_html__('Slide Transition','sunix'),
+            'description' => esc_html__( 'You can define the transition for the stage you want to use eg. linear.', 'sunix' ),
             'param_name'  => 'slidetransition',
             'value'       => 'ease',
             'std'         => 'ease',
@@ -562,7 +562,7 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'       => 'checkbox',
-            'heading'    => esc_html__('Loop Items','alacarte'),
+            'heading'    => esc_html__('Loop Items','sunix'),
             'param_name' => 'loop',
             'std'        => 'false',
             'edit_field_class' => 'vc_col-sm-3',
@@ -574,7 +574,7 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'       => 'checkbox',
-            'heading'    => esc_html__('Center','alacarte'),
+            'heading'    => esc_html__('Center','sunix'),
             'param_name' => 'center',
             'std'        => 'false',
             'edit_field_class' => 'vc_col-sm-3',
@@ -586,7 +586,7 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'       => 'checkbox',
-            'heading'    => esc_html__('Auto Width','alacarte'),
+            'heading'    => esc_html__('Auto Width','sunix'),
             'param_name' => 'autowidth',
             'std'        => 'false',
             'edit_field_class' => 'vc_col-sm-3',
@@ -598,7 +598,7 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'       => 'checkbox',
-            'heading'    => esc_html__('Auto Height','alacarte'),
+            'heading'    => esc_html__('Auto Height','sunix'),
             'param_name' => 'autoheight',
             'std'        => 'true',
             'edit_field_class' => 'vc_col-sm-3',
@@ -611,7 +611,7 @@ function alacarte_owl_settings( $args = array()){
         
         array(
             'type'       => 'textfield',
-            'heading'    => esc_html__('Items Space','alacarte'),
+            'heading'    => esc_html__('Items Space','sunix'),
             'param_name' => 'margin',
             'value'      => 30,
             'edit_field_class' => 'vc_col-sm-4',
@@ -623,7 +623,7 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'       => 'textfield',
-            'heading'    => esc_html__('Stage Padding','alacarte'),
+            'heading'    => esc_html__('Stage Padding','sunix'),
             'param_name' => 'stagepadding',
             'value'      => '0',
             'edit_field_class' => 'vc_col-sm-4',
@@ -636,7 +636,7 @@ function alacarte_owl_settings( $args = array()){
         
         array(
             'type'       => 'textfield',
-            'heading'    => esc_html__('Start Position','alacarte'),
+            'heading'    => esc_html__('Start Position','sunix'),
             'param_name' => 'startposition',
             'value'      => '0',
             'edit_field_class' => 'vc_col-sm-4',
@@ -651,7 +651,7 @@ function alacarte_owl_settings( $args = array()){
             'type'        => 'checkbox',
             'param_name'  => 'nav',
             'value'       => array(
-                esc_html__('Show Next/Preview button','alacarte') => 'true'
+                esc_html__('Show Next/Preview button','sunix') => 'true'
             ),
             'std'         => 'false',
             'dependency' => array(
@@ -662,9 +662,9 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'       => 'dropdown',
-            'heading'    => esc_html__('Nav Style','alacarte'),
+            'heading'    => esc_html__('Nav Style','sunix'),
             'param_name' => 'nav_style',
-            'value'      => alacarte_carousel_nav_style(),
+            'value'      => sunix_carousel_nav_style(),
             'std'        => 'default',
             'dependency' => array(
                 'element'=>'nav',
@@ -675,9 +675,9 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'       => 'dropdown',
-            'heading'    => esc_html__('Nav Position','alacarte'),
+            'heading'    => esc_html__('Nav Position','sunix'),
             'param_name' => 'nav_pos',
-            'value'      => alacarte_carousel_nav_pos(),
+            'value'      => sunix_carousel_nav_pos(),
             'std'        => 'default',
             'dependency' => array(
                 'element'            => 'nav_style',
@@ -688,9 +688,9 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'       => 'dropdown',
-            'heading'    => esc_html__('Nav Color','alacarte'),
+            'heading'    => esc_html__('Nav Color','sunix'),
             'param_name' => 'nav_color',
-            'value'      => alacarte_carousel_color(),
+            'value'      => sunix_carousel_color(),
             'std'        => 'default',
             'dependency' => array(
                 'element'=> 'nav',
@@ -703,7 +703,7 @@ function alacarte_owl_settings( $args = array()){
             'type'       => 'checkbox',
             'param_name' => 'dots',
             'value'      => array(
-                esc_html__('Show Dots','alacarte') => 'true'
+                esc_html__('Show Dots','sunix') => 'true'
             ),
             'std'        => 'true',
             'dependency' => array(
@@ -714,9 +714,9 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'       => 'dropdown',
-            'heading'    => esc_html__('Dots Style','alacarte'),
+            'heading'    => esc_html__('Dots Style','sunix'),
             'param_name' => 'dot_style',
-            'value'      => alacarte_carousel_dots_style(),
+            'value'      => sunix_carousel_dots_style(),
             'std'        => 'default',
             'dependency' => array(
                 'element'=>'dots',
@@ -727,9 +727,9 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'       => 'dropdown',
-            'heading'    => esc_html__('Dots Position','alacarte'),
+            'heading'    => esc_html__('Dots Position','sunix'),
             'param_name' => 'dot_pos',
-            'value'      => alacarte_carousel_dot_pos(),
+            'value'      => sunix_carousel_dot_pos(),
             'std'        => 'default',
             'dependency' => array(
                 'element'=>'dots',
@@ -740,9 +740,9 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'       => 'dropdown',
-            'heading'    => esc_html__('Dots Color','alacarte'),
+            'heading'    => esc_html__('Dots Color','sunix'),
             'param_name' => 'dot_color',
-            'value'      => alacarte_carousel_color(),
+            'value'      => sunix_carousel_color(),
             'std'        => 'default',
             'dependency' => array(
                 'element'=>'dot_style',
@@ -753,8 +753,8 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'       => 'textfield',
-            'heading'    => esc_html__('Dots Thumbnail Size','alacarte'),
-            'description'    => esc_html__('Enter size: widthxheight','alacarte'),
+            'heading'    => esc_html__('Dots Thumbnail Size','sunix'),
+            'description'    => esc_html__('Enter size: widthxheight','sunix'),
             'param_name' => 'dot_thumbnail_size',
             'value'      => '100',
             'dependency' => array(
@@ -767,7 +767,7 @@ function alacarte_owl_settings( $args = array()){
         array(
             'type'       => 'checkbox',
             'value'      => array(
-                esc_html__('Auto Play','alacarte') => 'true',
+                esc_html__('Auto Play','sunix') => 'true',
             ),
             'param_name' => 'autoplay',
             'std'        => 'true',
@@ -779,10 +779,10 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'        => 'textfield',
-            'heading'     => esc_html__('Smart Speed','alacarte'),
+            'heading'     => esc_html__('Smart Speed','sunix'),
             'param_name'  => 'smartspeed',
             'value'       => '250',
-            'description' => esc_html__('Speed scroll of each item','alacarte'),
+            'description' => esc_html__('Speed scroll of each item','sunix'),
             'edit_field_class' => 'vc_col-sm-4',
             'dependency' => array(
                 'element' =>'autoplay',
@@ -792,7 +792,7 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'       => 'textfield',
-            'heading'    => esc_html__('Auto Play TimeOut','alacarte'),
+            'heading'    => esc_html__('Auto Play TimeOut','sunix'),
             'param_name' => 'autoplaytimeout',
             'value'      => '5000',
             'dependency' => array(
@@ -804,7 +804,7 @@ function alacarte_owl_settings( $args = array()){
         ),
         array(
             'type'       => 'checkbox',
-            'heading'    => esc_html__('Pause on mouse hover','alacarte'),
+            'heading'    => esc_html__('Pause on mouse hover','sunix'),
             'param_name' => 'autoplayhoverpause',
             'std'        => 'true',
             'dependency' => array(
@@ -818,7 +818,7 @@ function alacarte_owl_settings( $args = array()){
         array(
             'type'          => 'animation_style',
             'class'         => '',
-            'heading'       => esc_html__('Animation In','alacarte'),
+            'heading'       => esc_html__('Animation In','sunix'),
             'param_name'    => 'owlanimation_in',
             'std'           => '',
             'settings'      => array(
@@ -836,7 +836,7 @@ function alacarte_owl_settings( $args = array()){
         array(
             'type'          => 'animation_style',
             'class'         => '',
-            'heading'       => esc_html__('Animation Out','alacarte'),
+            'heading'       => esc_html__('Animation Out','sunix'),
             'param_name'    => 'owlanimation_out',
             'std'           => '',
             'settings'      => array(
@@ -854,7 +854,7 @@ function alacarte_owl_settings( $args = array()){
     );
 }
 /* Call Masonry Settings */
-function alacarte_masonry_call_settings($atts)
+function sunix_masonry_call_settings($atts)
 {
     extract($atts);
     wp_enqueue_script('vc_masonry');
@@ -862,19 +862,19 @@ function alacarte_masonry_call_settings($atts)
 /**
  * VC Element Hover Effect
 */
-function alacarte_hover_effect(){
+function sunix_hover_effect(){
     return array(
-        esc_html__('None','alacarte')                           => 'none',
-        esc_html__('Push','alacarte')                           => 'push',
-        esc_html__('Slide','alacarte')                          => 'slide',
-        esc_html__('Slide Bottom to Top','alacarte')            => 'slide-top',
-        esc_html__('Slide Bottom to Top with Title','alacarte') => 'slide-top2',
-        esc_html__('FadeIn','alacarte')                         => 'fade-in',
-        esc_html__('FadeIn With with Delay','alacarte')         => 'fade-in delay1',
+        esc_html__('None','sunix')                           => 'none',
+        esc_html__('Push','sunix')                           => 'push',
+        esc_html__('Slide','sunix')                          => 'slide',
+        esc_html__('Slide Bottom to Top','sunix')            => 'slide-top',
+        esc_html__('Slide Bottom to Top with Title','sunix') => 'slide-top2',
+        esc_html__('FadeIn','sunix')                         => 'fade-in',
+        esc_html__('FadeIn With with Delay','sunix')         => 'fade-in delay1',
     );
 }
 
-function alacarte_hover_content($args=[]){
+function sunix_hover_content($args=[]){
     $args = wp_parse_args($args, [
         'dependency' => '',
         'group' => ''
@@ -882,12 +882,12 @@ function alacarte_hover_content($args=[]){
     return array(
         array(
             'type'       => 'dropdown',
-            'heading'    => esc_html__('Overlay Background','alacarte'),
+            'heading'    => esc_html__('Overlay Background','sunix'),
             'param_name' => 'hover_bg',
             'value'      =>  array(
-               esc_html__('Accent Color','alacarte')  => 'accent-bg',
-               esc_html__('Primary Color','alacarte') => 'primary-bg',
-               esc_html__('Custom Color','alacarte')  => 'custom-bg',
+               esc_html__('Accent Color','sunix')  => 'accent-bg',
+               esc_html__('Primary Color','sunix') => 'primary-bg',
+               esc_html__('Custom Color','sunix')  => 'custom-bg',
             ),
             'dependency' => $args['dependency'],
             'std'        => 'accent-bg',
@@ -895,7 +895,7 @@ function alacarte_hover_content($args=[]){
         ),
         array(
             'type'       => 'colorpicker',
-            'heading'    => esc_html__('Custom Overlay Background','alacarte'),
+            'heading'    => esc_html__('Custom Overlay Background','sunix'),
             'param_name' => 'custom_hover_bg',
             'dependency' => array(
                 'element' => 'hover_bg',
@@ -906,7 +906,7 @@ function alacarte_hover_content($args=[]){
         ),
         array(
             'type'       => 'colorpicker',
-            'heading'    => esc_html__('Custom Text Color','alacarte'),
+            'heading'    => esc_html__('Custom Text Color','sunix'),
             'param_name' => 'custom_text_color',
             'dependency' => array(
                 'element' => 'hover_bg',
@@ -920,9 +920,9 @@ function alacarte_hover_content($args=[]){
 /**
  * Content Alignment
 */
-function alacarte_vc_content_align_opts($args = []){
+function sunix_vc_content_align_opts($args = []){
     $args = wp_parse_args($args, [
-        'heading'    => esc_html__('Content Alignment', 'alacarte'),
+        'heading'    => esc_html__('Content Alignment', 'sunix'),
         'param_name' => 'content_align', 
         'args'       => [], 
         'dependency' => [],
@@ -930,10 +930,10 @@ function alacarte_vc_content_align_opts($args = []){
     ]);
     $_args = array_merge(
         array(
-            esc_html__('Default', 'alacarte') => '',
-            esc_html__('Start', 'alacarte')   => 'text-start',
-            esc_html__('End', 'alacarte')     => 'text-end',
-            esc_html__('Center', 'alacarte')  => 'text-center',
+            esc_html__('Default', 'sunix') => '',
+            esc_html__('Start', 'sunix')   => 'text-start',
+            esc_html__('End', 'sunix')     => 'text-end',
+            esc_html__('Center', 'sunix')  => 'text-center',
         ),
         $args['args']
     );
@@ -951,120 +951,120 @@ function alacarte_vc_content_align_opts($args = []){
 /**
  * Heading Tags
 */
-function alacarte_heading_tag($args=[]){
+function sunix_heading_tag($args=[]){
     $args = array_merge(
         array(
-            esc_html__('Default', 'alacarte')            => '',
-            esc_html__('Heading 2', 'alacarte')          => 'h2',
-            esc_html__('Heading 3', 'alacarte')          => 'h3',
-            esc_html__('Heading 4', 'alacarte')          => 'h4',
-            esc_html__('Heading 5', 'alacarte')          => 'h5',
-            esc_html__('Heading 6', 'alacarte')          => 'h6',
-            esc_html__('Div', 'alacarte')                => 'div',
-            esc_html__('Custom Size (20px)', 'alacarte') => 'h4-1',
+            esc_html__('Default', 'sunix')            => '',
+            esc_html__('Heading 2', 'sunix')          => 'h2',
+            esc_html__('Heading 3', 'sunix')          => 'h3',
+            esc_html__('Heading 4', 'sunix')          => 'h4',
+            esc_html__('Heading 5', 'sunix')          => 'h5',
+            esc_html__('Heading 6', 'sunix')          => 'h6',
+            esc_html__('Div', 'sunix')                => 'div',
+            esc_html__('Custom Size (20px)', 'sunix') => 'h4-1',
         ),
         $args
     );
     return $args;
 }
-function alacarte_heading_font_weight(){
+function sunix_heading_font_weight(){
     return array(
-        esc_html__('Default','alacarte')            => '',
-        esc_html__('Thin','alacarte')               => '100',
-        esc_html__('Thin Italic','alacarte')        => '100i',
-        esc_html__('Extra-Light','alacarte')        => '200',
-        esc_html__('Extra-Light Italic','alacarte') => '200i',
-        esc_html__('Light','alacarte')              => '300',
-        esc_html__('Light Italic','alacarte')       => '300i',
-        esc_html__('Regular','alacarte')            => '400',
-        esc_html__('Regular Italic','alacarte')     => '400i',
-        esc_html__('Medium','alacarte')             => '500',
-        esc_html__('Medium Italic','alacarte')      => '500i',
-        esc_html__('Semi-Bold','alacarte')          => '600',
-        esc_html__('Semi-Bold Italic','alacarte')   => '600i',
-        esc_html__('Bold','alacarte')               => '700',
-        esc_html__('Bold Italic','alacarte')        => '700i',
-        esc_html__('Extra-Bold','alacarte')         => '800',
-        esc_html__('Extra-Bold Italic','alacarte')  => '800i',
-        esc_html__('Black','alacarte')              => '900',
-        esc_html__('Black Italic','alacarte')       => '900i',
+        esc_html__('Default','sunix')            => '',
+        esc_html__('Thin','sunix')               => '100',
+        esc_html__('Thin Italic','sunix')        => '100i',
+        esc_html__('Extra-Light','sunix')        => '200',
+        esc_html__('Extra-Light Italic','sunix') => '200i',
+        esc_html__('Light','sunix')              => '300',
+        esc_html__('Light Italic','sunix')       => '300i',
+        esc_html__('Regular','sunix')            => '400',
+        esc_html__('Regular Italic','sunix')     => '400i',
+        esc_html__('Medium','sunix')             => '500',
+        esc_html__('Medium Italic','sunix')      => '500i',
+        esc_html__('Semi-Bold','sunix')          => '600',
+        esc_html__('Semi-Bold Italic','sunix')   => '600i',
+        esc_html__('Bold','sunix')               => '700',
+        esc_html__('Bold Italic','sunix')        => '700i',
+        esc_html__('Extra-Bold','sunix')         => '800',
+        esc_html__('Extra-Bold Italic','sunix')  => '800i',
+        esc_html__('Black','sunix')              => '900',
+        esc_html__('Black Italic','sunix')       => '900i',
     );
 }
-function alacarte_heading_font_style(){
+function sunix_heading_font_style(){
     return array(
-        esc_html__('Default','alacarte') => '',
-        esc_html__('Normal','alacarte')  => 'normal',
-        esc_html__('Italic','alacarte')  => 'italic'
+        esc_html__('Default','sunix') => '',
+        esc_html__('Normal','sunix')  => 'normal',
+        esc_html__('Italic','sunix')  => 'italic'
     );
 }
-function alacarte_heading_text_transform(){
+function sunix_heading_text_transform(){
     return array(
-        esc_html__('Default','alacarte')    => '',
-        esc_html__('Uppercase','alacarte')  => 'uppercase',
-        esc_html__('Capitalize','alacarte') => 'capitalize',
-        esc_html__('Lowercase','alacarte')  => 'lowercase',
-        esc_html__('Unset','alacarte')      => 'unset'
-    );
-}
-
-function alacarte_bg_color(){
-    return array(
-        esc_html__('Default','alacarte')                => 'red-bg',
-        esc_html__('Accent Color','alacarte')           => 'red-bg-accent',
-        esc_html__('Darken Accent Color','alacarte')    => 'red-bg-darken-accent',
-        esc_html__('Primary Color','alacarte')          => 'red-bg-primary',
-        esc_html__('Secondary Color','alacarte')        => 'red-bg-secondary',
-        esc_html__('Medium Dark (#1F1F1F)','alacarte')  => 'red-bg-medium-dark',
-        esc_html__('Light Dark (#303030)','alacarte')   => 'red-bg-light-dark',
-        esc_html__('Dark (#000)','alacarte')            => 'red-bg-dark',
-        esc_html__('Medium Light (#f1f1f1)','alacarte') => 'red-bg-medium-light',
-        esc_html__('Light (#f5f5f5)','alacarte')        => 'red-bg-light',
-        esc_html__('Dark Blue (#182333)','alacarte')    => 'red-bg-dark-blue',
-        esc_html__('White (#ffffff)','alacarte')        => 'red-bg-white',
+        esc_html__('Default','sunix')    => '',
+        esc_html__('Uppercase','sunix')  => 'uppercase',
+        esc_html__('Capitalize','sunix') => 'capitalize',
+        esc_html__('Lowercase','sunix')  => 'lowercase',
+        esc_html__('Unset','sunix')      => 'unset'
     );
 }
 
-function alacarte_bg_style(){
+function sunix_bg_color(){
     return array(
-        esc_html__('Default','alacarte')     => '',
-        esc_html__('Space Left','alacarte')  => 'red-bg-space-left',
-        esc_html__('Space Right','alacarte') => 'red-bg-space-right',
+        esc_html__('Default','sunix')                => 'red-bg',
+        esc_html__('Accent Color','sunix')           => 'red-bg-accent',
+        esc_html__('Darken Accent Color','sunix')    => 'red-bg-darken-accent',
+        esc_html__('Primary Color','sunix')          => 'red-bg-primary',
+        esc_html__('Secondary Color','sunix')        => 'red-bg-secondary',
+        esc_html__('Medium Dark (#1F1F1F)','sunix')  => 'red-bg-medium-dark',
+        esc_html__('Light Dark (#303030)','sunix')   => 'red-bg-light-dark',
+        esc_html__('Dark (#000)','sunix')            => 'red-bg-dark',
+        esc_html__('Medium Light (#f1f1f1)','sunix') => 'red-bg-medium-light',
+        esc_html__('Light (#f5f5f5)','sunix')        => 'red-bg-light',
+        esc_html__('Dark Blue (#182333)','sunix')    => 'red-bg-dark-blue',
+        esc_html__('White (#ffffff)','sunix')        => 'red-bg-white',
     );
 }
 
-if(!function_exists('alacarte_theme_colors')){
-    function alacarte_theme_colors($default = false, $custom = false){
+function sunix_bg_style(){
+    return array(
+        esc_html__('Default','sunix')     => '',
+        esc_html__('Space Left','sunix')  => 'red-bg-space-left',
+        esc_html__('Space Right','sunix') => 'red-bg-space-right',
+    );
+}
+
+if(!function_exists('sunix_theme_colors')){
+    function sunix_theme_colors($default = false, $custom = false){
         $_default = $_custom = [];
-        if($default) $_default[esc_html__('Default','alacarte')] =  '';
-        if($custom) $_custom[esc_html__('Custom Color','alacarte')] =  'custom';
+        if($default) $_default[esc_html__('Default','sunix')] =  '';
+        if($custom) $_custom[esc_html__('Custom Color','sunix')] =  'custom';
 
         $theme_color =  array(
-            esc_html__('Accent','alacarte')        => 'accent',
-            esc_html__('Accent 2','alacarte')      => 'accent2',
-            esc_html__('Accent Dark','alacarte')   => 'darken-accent',
-            esc_html__('Primary','alacarte')       => 'primary',
-            esc_html__('Dark','alacarte')          => 'dark',
-            esc_html__('Cyan','alacarte')          => 'cyan',
-            esc_html__('Cyan Dark','alacarte')     => 'cyan-dark',
-            esc_html__('Green','alacarte')         => 'green',
-            esc_html__('Green Dark','alacarte')    => 'green-dark',
-            esc_html__('Blue','alacarte')          => 'blue',
-            esc_html__('Blue Dark','alacarte')     => 'blue-dark',
-            esc_html__('Violet','alacarte')        => 'violet',
-            esc_html__('Violet Dark','alacarte')   => 'violet-dark',
-            esc_html__('Cello','alacarte')         => 'cello',
-            esc_html__('Cello Dark','alacarte')    => 'cello-dark',
-            esc_html__('Yellow','alacarte')        => 'yellow',
-            esc_html__('Yellow Dark','alacarte')   => 'yellow-dark',
-            esc_html__('Orange','alacarte')        => 'orange',
-            esc_html__('Orange Dark','alacarte')   => 'orange-dark',
-            esc_html__('Red','alacarte')           => 'red',
-            esc_html__('Red Dark','alacarte')      => 'red-dark',
-            esc_html__('Grey','alacarte')          => 'grey',
-            esc_html__('Grey Dark','alacarte')     => 'grey-dark',
-            esc_html__('Gray','alacarte')          => 'gray',
-            esc_html__('Gray Dark','alacarte')     => 'gray-dark',
-            esc_html__('White','alacarte')         => 'white'
+            esc_html__('Accent','sunix')        => 'accent',
+            esc_html__('Accent 2','sunix')      => 'accent2',
+            esc_html__('Accent Dark','sunix')   => 'darken-accent',
+            esc_html__('Primary','sunix')       => 'primary',
+            esc_html__('Dark','sunix')          => 'dark',
+            esc_html__('Cyan','sunix')          => 'cyan',
+            esc_html__('Cyan Dark','sunix')     => 'cyan-dark',
+            esc_html__('Green','sunix')         => 'green',
+            esc_html__('Green Dark','sunix')    => 'green-dark',
+            esc_html__('Blue','sunix')          => 'blue',
+            esc_html__('Blue Dark','sunix')     => 'blue-dark',
+            esc_html__('Violet','sunix')        => 'violet',
+            esc_html__('Violet Dark','sunix')   => 'violet-dark',
+            esc_html__('Cello','sunix')         => 'cello',
+            esc_html__('Cello Dark','sunix')    => 'cello-dark',
+            esc_html__('Yellow','sunix')        => 'yellow',
+            esc_html__('Yellow Dark','sunix')   => 'yellow-dark',
+            esc_html__('Orange','sunix')        => 'orange',
+            esc_html__('Orange Dark','sunix')   => 'orange-dark',
+            esc_html__('Red','sunix')           => 'red',
+            esc_html__('Red Dark','sunix')      => 'red-dark',
+            esc_html__('Grey','sunix')          => 'grey',
+            esc_html__('Grey Dark','sunix')     => 'grey-dark',
+            esc_html__('Gray','sunix')          => 'gray',
+            esc_html__('Gray Dark','sunix')     => 'gray-dark',
+            esc_html__('White','sunix')         => 'white'
         );
 
         return array_merge($_default, $theme_color, $_custom);
@@ -1075,13 +1075,13 @@ if(!function_exists('alacarte_theme_colors')){
  * Get Page List 
  * @return array
 */
-if(!function_exists('alacarte_vc_list_page')){
-    function alacarte_vc_list_page($args = []){
+if(!function_exists('sunix_vc_list_page')){
+    function sunix_vc_list_page($args = []){
         $args = wp_parse_args($args, [
             'default' => true
         ]);
         $page_list = array();
-        if($args['default'] === true )$page_list[esc_html__('Default','alacarte')] = '';
+        if($args['default'] === true )$page_list[esc_html__('Default','sunix')] = '';
         $pages = get_pages(array('hierarchical' => 0, 'posts_per_page' => '-1'));
         foreach($pages as $page){
             $page_list[$page->post_title] = $page->ID;
@@ -1091,7 +1091,7 @@ if(!function_exists('alacarte_vc_list_page')){
 }
 
 
-class alacarte_VcSharedLibrary extends VcSharedLibrary{
+class sunix_VcSharedLibrary extends VcSharedLibrary{
     /**
      * Round box styles
      *
@@ -1107,15 +1107,15 @@ class alacarte_VcSharedLibrary extends VcSharedLibrary{
         );
     }
 }
-new alacarte_VcSharedLibrary();
+new sunix_VcSharedLibrary();
 
 
 /**
  * Get Contact Form 7 List
  * @return array
 */
-if(!function_exists('alacarte_vc_get_list_cf7')){
-    function alacarte_vc_get_list_cf7() {
+if(!function_exists('sunix_vc_get_list_cf7')){
+    function sunix_vc_get_list_cf7() {
         if(!class_exists('WPCF7')) return;
         $cf7 = get_posts( 'post_type="wpcf7_contact_form"&numberposts=-1' );
         $contact_forms = [];
@@ -1132,6 +1132,6 @@ if(!function_exists('alacarte_vc_get_list_cf7')){
  * @param $default
  * @return 
 */
-function alacarte_default_value($param, $default){
+function sunix_default_value($param, $default){
     return !empty($param) ? $param : $default;
 }

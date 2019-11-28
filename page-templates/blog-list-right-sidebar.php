@@ -2,8 +2,8 @@
 /**
  * Template Name: Blog List Right Sidebar
  *
- * @package AlaCarte
- * @subpackage AlaCarte
+ * @package sunix
+ * @subpackage sunix
  * @since 1.0.0
  * @author EF5 Team
  */
@@ -30,7 +30,7 @@ get_header();
                             the_post();
                             get_template_part( 'template-parts/loop/content', get_post_format() );
                         }
-                        alacarte_loop_pagination();
+                        sunix_loop_pagination();
                     }
                     else
                     {

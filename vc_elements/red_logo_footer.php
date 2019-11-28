@@ -3,11 +3,11 @@ vc_map(array(
     'name' => 'Red Logo Footer',
     'base' => 'red_logo_footer',
     'icon' => 'red_el_icon',
-    'category'      => esc_html__('RedExp', 'alacarte'),
+    'category'      => esc_html__('RedExp', 'sunix'),
     'params' => array(
         array(
             "type" => "attach_image",
-            "heading" => esc_html__("Add Logo",'alacarte'),
+            "heading" => esc_html__("Add Logo",'sunix'),
             "param_name" => "logo_footer",
         ),
     )

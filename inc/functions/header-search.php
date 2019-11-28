@@ -3,15 +3,15 @@
  * Header Search Icon
  * @since 1.0.0 
 */
-if(!function_exists('alacarte_header_search')){
-	function alacarte_header_search($args = []){
+if(!function_exists('sunix_header_search')){
+	function sunix_header_search($args = []){
 		$args = wp_parse_args($args, [
 			'before' => '',
 			'after'  => '',
 			'icon'	 => 'flaticon-magnifying-glass',
 			'type'	 => ''
 		]);
-		$show_search = alacarte_get_opts('header_search', '0');
+		$show_search = sunix_get_opts('header_search', '0');
 		if('0' === $show_search) return;
 
 		$link_classes = ['header-icon'];
@@ -30,9 +30,9 @@ if(!function_exists('alacarte_header_search')){
 	}
 }
 
-if(!function_exists('alacarte_header_search_popup_html')){
-	function alacarte_header_search_popup_html($args = []){
-		$show_search = alacarte_get_opts('header_search', '0');
+if(!function_exists('sunix_header_search_popup_html')){
+	function sunix_header_search_popup_html($args = []){
+		$show_search = sunix_get_opts('header_search', '0');
 		if('0' === $show_search) return;
 		$form_classes = ['red-searchform'];
 		$args = wp_parse_args($args, [
@@ -54,4 +54,4 @@ if(!function_exists('alacarte_header_search_popup_html')){
 	<?php
 	}
 }
-add_action('wp_footer','alacarte_header_search_popup_html');
+add_action('wp_footer','sunix_header_search_popup_html');

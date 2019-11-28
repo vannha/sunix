@@ -3,8 +3,8 @@
  * Get Page List 
  * @return array
 */
-if(!function_exists('alacarte_list_page')){
-    function alacarte_list_page($default = []){
+if(!function_exists('sunix_list_page')){
+    function sunix_list_page($default = []){
         $page_list = array();
         if(!empty($default))
             $page_list[$default['value']] = $default['label'];
@@ -20,12 +20,12 @@ if(!function_exists('alacarte_list_page')){
  * Get Post List
  * @return array
 */
-if(!function_exists('alacarte_list_post')){
-    function alacarte_list_post($post_type = 'post', $default = false){
+if(!function_exists('sunix_list_post')){
+    function sunix_list_post($post_type = 'post', $default = false){
         $post_list = array();
         if($default){
-            $post_list['none'] = esc_html__('None','alacarte');
-            $post_list['-1']   = esc_html__('Default','alacarte');
+            $post_list['none'] = esc_html__('None','sunix');
+            $post_list['-1']   = esc_html__('Default','sunix');
         }
         $posts = get_posts(array('post_type' => $post_type,'posts_per_page' => '-1'));
         foreach($posts as $post){
@@ -40,7 +40,7 @@ if(!function_exists('alacarte_list_post')){
  * @return array
  *
 */
-function alacarte_list_post_thumbnail($post_type = 'post', $default = false){
+function sunix_list_post_thumbnail($post_type = 'post', $default = false){
     $layouts = [];
     $posts = get_posts(array('post_type' => $post_type,'posts_per_page' => '-1'));
     foreach($posts as $post){
@@ -53,18 +53,18 @@ function alacarte_list_post_thumbnail($post_type = 'post', $default = false){
  * get list menu.
  * @return array
  */
-if(!function_exists('alacarte_get_nav_menu')){
-    function alacarte_get_nav_menu($args = []){
+if(!function_exists('sunix_get_nav_menu')){
+    function sunix_get_nav_menu($args = []){
         $args = wp_parse_args($args, [
             'default' => false, 
             'none'    => false
         ]);
         $menus = array(
-            '0' => esc_html__('Primary Menu','alacarte')
+            '0' => esc_html__('Primary Menu','sunix')
         );
         $obj_menus = wp_get_nav_menus();
-        if($args['default']) $menus['-1'] = esc_html__('Default','alacarte');
-        if($args['none']) $menus['none'] = esc_html__('None','alacarte');
+        if($args['default']) $menus['-1'] = esc_html__('Default','sunix');
+        if($args['none']) $menus['none'] = esc_html__('None','sunix');
 
         foreach ($obj_menus as $obj_menu){
             $menus[$obj_menu->slug] = $obj_menu->name;
@@ -77,7 +77,7 @@ if(!function_exists('alacarte_get_nav_menu')){
  * 
  * @param $user_role
 */
-function alacarte_list_user_by_role_for_opts($args = []){
+function sunix_list_user_by_role_for_opts($args = []){
     $args = wp_parse_args($args, [
         'role'    => 'subcrible',
         'orderby' => 'user_nicename',
@@ -94,8 +94,8 @@ function alacarte_list_user_by_role_for_opts($args = []){
  * Get RevSlider List 
  * @return array
 */
-if(!function_exists('alacarte_get_list_rev_slider')){
-    function alacarte_get_list_rev_slider() {
+if(!function_exists('sunix_get_list_rev_slider')){
+    function sunix_get_list_rev_slider() {
         if (class_exists('RevSlider')) {
             $slider = new RevSlider();
             $arrSliders = $slider->getArrSliders();
@@ -115,13 +115,13 @@ if(!function_exists('alacarte_get_list_rev_slider')){
  * Get Contact Form 7 List
  * @return array
 */
-if(!function_exists('alacarte_get_list_cf7')){
-    function alacarte_get_list_cf7($defaule = false) {
+if(!function_exists('sunix_get_list_cf7')){
+    function sunix_get_list_cf7($defaule = false) {
         if(!class_exists('WPCF7')) return;
         $cf7 = get_posts( 'post_type="wpcf7_contact_form"&numberposts=-1' );
         $contact_forms = array();
         if($defaule){
-            $contact_forms['-1'] = esc_html__('Default From Theme Option','alacarte');
+            $contact_forms['-1'] = esc_html__('Default From Theme Option','sunix');
         }
 
         foreach ( $cf7 as $cform ) {
@@ -131,20 +131,20 @@ if(!function_exists('alacarte_get_list_cf7')){
         return $contact_forms;
     }
 }
-function alacarte_get_limit_str($str,$start,$limit,$add_tag = '')
+function sunix_get_limit_str($str,$start,$limit,$add_tag = '')
 {
     $str = trim($str);
     if(strlen($str) <= $limit)
         return $str;
     return substr(wp_strip_all_tags($str),$start,$limit).$add_tag;
 }
-function alacarte_single_events_gallery(){
-    $event_gallery = alacarte_get_post_format_value('event-gallery-images','');
+function sunix_single_events_gallery(){
+    $event_gallery = sunix_get_post_format_value('event-gallery-images','');
     if(!empty($event_gallery)):
         $images_arr = explode( ',', $event_gallery );
         ?>
         <div class="single-event-gallery red-gal-image">
-            <h2><?php echo esc_html__('Event Gallery','alacarte');?></h2>
+            <h2><?php echo esc_html__('Event Gallery','sunix');?></h2>
             <div class="row red-gallery">
                 <?php
                 foreach ( $images_arr as $i => $image ) {
@@ -179,12 +179,12 @@ function alacarte_single_events_gallery(){
 }
 
 
-function alacarte_single_events_footer(){
+function sunix_single_events_footer(){
     ?>
     <div class="single-event-footer ">
         <?php
             echo '<div class="red-social circle bt-colored">';
-        alacarte_post_share(array('show_title' => false,'show_tooltip'  =>false, 'social_args' => ['class' => 'size-28 shape-circle outline colored-hover']));
+        sunix_post_share(array('show_title' => false,'show_tooltip'  =>false, 'social_args' => ['class' => 'size-28 shape-circle outline colored-hover']));
             echo '</div>';
         ?>
     </div>

@@ -3,12 +3,12 @@ vc_map(array(
     'name'        => 'RedExp Video',
     'base'        => 'red_video',
     'icon'        => 'icon-wpb-film-youtube',
-    'category'    => esc_html__('RedExp','alacarte'),
-    'description' => esc_html__('Add a HTML5 Videos', 'alacarte'),
+    'category'    => esc_html__('RedExp','sunix'),
+    'description' => esc_html__('Add a HTML5 Videos', 'sunix'),
     'params'      => array(
         array(
             'type'       => 'img',
-            'heading'    => esc_html__('Layout Template','alacarte'),
+            'heading'    => esc_html__('Layout Template','sunix'),
             'param_name' => 'layout_template',
             'value'      =>  array(
                 '1' => get_template_directory_uri().'/vc_extends/layouts/video_popup/layout-1.jpg',
@@ -20,13 +20,13 @@ vc_map(array(
         ),
         array(
             'type'       => 'textfield',
-            'heading'    => esc_html__('Small Heading','alacarte'),
+            'heading'    => esc_html__('Small Heading','sunix'),
             'param_name' => 'small_heading',
             'admin_label' => true,
         ),
         array(
             'type'       => 'colorpicker',
-            'heading'    => esc_html__('Small Header Color','alacarte'),
+            'heading'    => esc_html__('Small Header Color','sunix'),
             'param_name' => 'small_heading_color',
             'dependency' => array(
                 'element'   => 'small_heading',
@@ -35,13 +35,13 @@ vc_map(array(
         ),
         array(
             'type'       => 'textarea',
-            'heading'    => esc_html__('Heading','alacarte'),
+            'heading'    => esc_html__('Heading','sunix'),
             'param_name' => 'title',
             'holder'     => 'h3',
         ),
         array(
             'type'       => 'colorpicker',
-            'heading'    => esc_html__('Heading Color','alacarte'),
+            'heading'    => esc_html__('Heading Color','sunix'),
             'param_name' => 'title_color',
             'dependency' => array(
                 'element'   => 'title',
@@ -50,12 +50,12 @@ vc_map(array(
         ),
         array(
             'type'       => 'textarea',
-            'heading'    => esc_html__('Content','alacarte'),
+            'heading'    => esc_html__('Content','sunix'),
             'param_name' => 'content',
         ),
         array(
             'type'       => 'colorpicker',
-            'heading'    => esc_html__('Content Color','alacarte'),
+            'heading'    => esc_html__('Content Color','sunix'),
             'param_name' => 'content_color',
             'dependency' => array(
                 'element'   => 'content',
@@ -64,29 +64,29 @@ vc_map(array(
         ),
         array(
             'type'       => 'vc_link',
-            'heading'    => esc_html__('Link','alacarte'),
-            'description'=> esc_html__('Add a link to another page!','alacarte'),
+            'heading'    => esc_html__('Link','sunix'),
+            'description'=> esc_html__('Add a link to another page!','sunix'),
             'param_name' => 'btn_link',
         ),
-        alacarte_vc_content_align_opts(),
+        sunix_vc_content_align_opts(),
         array(
             'type'        => 'textfield',
-            'heading'     => esc_html__( 'Extra class name', 'alacarte' ),
+            'heading'     => esc_html__( 'Extra class name', 'sunix' ),
             'param_name'  => 'el_class',
-            'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'alacarte' ),
+            'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'sunix' ),
         ),
         array(
             'type'       => 'el_id',
-            'heading'    => esc_html__('Element ID','alacarte'),
+            'heading'    => esc_html__('Element ID','sunix'),
             'param_name' => 'el_id',
             'settings'   => array(
                 'auto_generate' => true,
             ),
-            'description'   => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'alacarte' ), 'http://www.w3schools.com/tags/att_global_id.asp' ),
+            'description'   => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'sunix' ), 'http://www.w3schools.com/tags/att_global_id.asp' ),
         ),
         array(
             'type'       => 'img',
-            'heading'    => esc_html__('Play Button','alacarte'),
+            'heading'    => esc_html__('Play Button','sunix'),
             'param_name' => 'play_btn',
             'value'      =>  array(
                 '1'      => get_template_directory_uri().'/assets/images/play-btn-1.png',
@@ -97,12 +97,12 @@ vc_map(array(
                 'custom' => get_template_directory_uri().'/vc_extends/layouts/play-btn-custom.png',
             ),
             'std'              => '1',
-            'group'            => esc_html__( 'Video','alacarte'),
+            'group'            => esc_html__( 'Video','sunix'),
             'edit_field_class' => 'red-vc-list-icon'
         ),
         array(
             'type'       => 'dropdown',
-            'heading'    => esc_html__('Play Effect','alacarte'),
+            'heading'    => esc_html__('Play Effect','sunix'),
             'param_name' => 'play_btn_effect',
             'value'      =>  array(
                 'wave1',
@@ -111,63 +111,63 @@ vc_map(array(
                 'wave4',
             ),
             'std'              => 'wave1',
-            'group'            => esc_html__( 'Video','alacarte'),
+            'group'            => esc_html__( 'Video','sunix'),
         ),
         array(
             'type'       => 'textfield',
-            'heading'    => esc_html__('Play Button Text','alacarte'),
+            'heading'    => esc_html__('Play Button Text','sunix'),
             'param_name' => 'play_btn_text',
             'value'      => 'Watch Video',
             'dependency' => array(
                 'element' => 'layout_template',
                 'value'   => array('2'),
             ),
-            'group'      => esc_html__( 'Video','alacarte'),
+            'group'      => esc_html__( 'Video','sunix'),
         ),
         array(
             'type'       => 'attach_image',
             'class'      => '',
             'param_name' => 'play_btn_custom',
-            'heading'    => esc_html__('Custom Play Button','alacarte'),
+            'heading'    => esc_html__('Custom Play Button','sunix'),
             'value'      => '',
-            'description'      =>esc_html__( 'Upload your play button','alacarte'),
+            'description'      =>esc_html__( 'Upload your play button','sunix'),
             'dependency' => array(
                 'element' => 'play_btn',
                 'value'   => array('custom'),
             ),
-            'group'       =>esc_html__( 'Video','alacarte'),
+            'group'       =>esc_html__( 'Video','sunix'),
         ),
         array(
             'type'       => 'dropdown',
-            'heading'    => esc_html__('Video Type','alacarte'),
+            'heading'    => esc_html__('Video Type','sunix'),
             'param_name' => 'video_type',
             'value'      => array(
-                esc_html__('Default','alacarte')   => '1',
-                esc_html__('Popup','alacarte')     => '2',
+                esc_html__('Default','sunix')   => '1',
+                esc_html__('Popup','sunix')     => '2',
             ),
             'std'         => '2',
-            'group'       =>esc_html__( 'Video','alacarte'),
+            'group'       =>esc_html__( 'Video','sunix'),
             'admin_label' => true,
         ),
         array(
             'type'       => 'dropdown',
-            'heading'    => esc_html__('Video Source','alacarte'),
+            'heading'    => esc_html__('Video Source','sunix'),
             'param_name' => 'video_source',
             'value'      =>   array(
-                esc_html__('Online Video','alacarte')   => '1',
-                esc_html__('Uploaded Video','alacarte') => '2',
-                esc_html__('Hosted Video','alacarte')   => '3',
-                esc_html__('Embed code','alacarte')     => '4',
+                esc_html__('Online Video','sunix')   => '1',
+                esc_html__('Uploaded Video','sunix') => '2',
+                esc_html__('Hosted Video','sunix')   => '3',
+                esc_html__('Embed code','sunix')     => '4',
             ),
             'std'         => '1',
-            'group'       =>esc_html__( 'Video','alacarte'),
+            'group'       =>esc_html__( 'Video','sunix'),
             'admin_label' => true,
         ),
         
         array(
             'type'        => 'textfield',
-            'heading'     => esc_html__('Online Video','alacarte'),
-            'description' => sprintf( __( 'Enter link to video, EX: https://www.youtube.com/watch?v=vI9AxTCSrOU (Note: read more about available formats at WordPress <a href="%s" target="_blank">codex page</a>).', 'alacarte' ), 'http://codex.wordpress.org/Embeds#Okay.2C_So_What_Sites_Can_I_Embed_From.3F' ),
+            'heading'     => esc_html__('Online Video','sunix'),
+            'description' => sprintf( __( 'Enter link to video, EX: https://www.youtube.com/watch?v=vI9AxTCSrOU (Note: read more about available formats at WordPress <a href="%s" target="_blank">codex page</a>).', 'sunix' ), 'http://codex.wordpress.org/Embeds#Okay.2C_So_What_Sites_Can_I_Embed_From.3F' ),
             'param_name'  => 'online_video',
             'value'       => 'https://www.youtube.com/watch?v=vI9AxTCSrOU',
             'std'         => 'https://www.youtube.com/watch?v=vI9AxTCSrOU',
@@ -176,12 +176,12 @@ vc_map(array(
                 'value'       => '1',
             ),
             'holder'      => 'div',
-            'group'       => esc_html__( 'Video','alacarte'),
+            'group'       => esc_html__( 'Video','sunix'),
         ),
         array(
             'type'        => 'video',
-            'heading'     => esc_html__('Uploaded Video','alacarte'),
-            'description' => esc_html__('choose your uploaded video','alacarte' ),
+            'heading'     => esc_html__('Uploaded Video','sunix'),
+            'description' => esc_html__('choose your uploaded video','sunix' ),
             'param_name'  => 'uploaded_video',
             'settings'    => array('single'=>true),
             'dependency'  => array(
@@ -189,13 +189,13 @@ vc_map(array(
                 'value'   => '2',
             ),
             'holder' => 'div',
-            'group'  => esc_html__( 'Video','alacarte'),
+            'group'  => esc_html__( 'Video','sunix'),
             
         ),
         array(
             'type'        => 'textfield',
-            'heading'     => esc_html__('MP4','alacarte'),
-            'description' => esc_html__('Enter your MP4 video file url, ex: http://dev.joomexp.com/libs/videos/video-01.mp4','alacarte'),
+            'heading'     => esc_html__('MP4','sunix'),
+            'description' => esc_html__('Enter your MP4 video file url, ex: http://dev.joomexp.com/libs/videos/video-01.mp4','sunix'),
             'param_name'  => 'bg_video_src_mp4',
             'value'       => '',
             'dependency'  => array(
@@ -203,73 +203,73 @@ vc_map(array(
                 'value'       => '3',
             ),
             'holder'      => 'div',
-            'group'       =>esc_html__( 'Video','alacarte'),
+            'group'       =>esc_html__( 'Video','sunix'),
             
         ),
         
         array(
             'type'        => 'textfield',
             'class'       => '',
-            'heading'     => esc_html__('OGV','alacarte'),
-            'description' => esc_html__('Enter your OGV video file url, ex: http://dev.joomexp.com/libs/videos/video-03.ogv','alacarte'),
+            'heading'     => esc_html__('OGV','sunix'),
+            'description' => esc_html__('Enter your OGV video file url, ex: http://dev.joomexp.com/libs/videos/video-03.ogv','sunix'),
             'param_name'  => 'bg_video_src_ogv',
             'value'       => '',
             'dependency'  => array(
                 'element'     => 'video_source',
                 'value'       => '3',
             ),
-            'group'       =>esc_html__( 'Video','alacarte'),
+            'group'       =>esc_html__( 'Video','sunix'),
             'holder'      => 'div',
         ),
         array(
             'type'        => 'textfield',
             'class'       => '',
-            'heading'     => esc_html__('OGG','alacarte'),
-            'description' => esc_html__('Enter your OGV video file url, ex: https://dev.joomexp.com/libs/videos/video-03.ogg','alacarte'),
+            'heading'     => esc_html__('OGG','sunix'),
+            'description' => esc_html__('Enter your OGV video file url, ex: https://dev.joomexp.com/libs/videos/video-03.ogg','sunix'),
             'param_name'  => 'bg_video_src_ogg',
             'value'       => '',
             'dependency'  => array(
                 'element'     => 'video_source',
                 'value'       => '3',
             ),
-            'group'       =>esc_html__( 'Video','alacarte'),
+            'group'       =>esc_html__( 'Video','sunix'),
             'holder'      => 'div',
         ),
         array(
             'type'        => 'textfield',
             'class'       => '',
-            'heading'     => esc_html__('WEBM','alacarte'),
-            'description' => esc_html__('Enter your WEBM video file url, ex: http://dev.joomexp.com/libs/videos/video-03.webm','alacarte'),
+            'heading'     => esc_html__('WEBM','sunix'),
+            'description' => esc_html__('Enter your WEBM video file url, ex: http://dev.joomexp.com/libs/videos/video-03.webm','sunix'),
             'param_name'  => 'bg_video_src_webm',
             'value'       => '',
             'dependency' => array(
                 'element' => 'video_source',
                 'value'   => '3',
             ),
-            'group'  => esc_html__( 'Video','alacarte'),
+            'group'  => esc_html__( 'Video','sunix'),
             'holder' => 'div',
         ),
         array(
             'type'        => 'textarea_raw_html',
             'class'       => '',
-            'heading'     => esc_html__('Embed video','alacarte'),
-            'description' => esc_html__('Enter your embed code.','alacarte'),
+            'heading'     => esc_html__('Embed video','sunix'),
+            'description' => esc_html__('Enter your embed code.','sunix'),
             'param_name'  => 'embed_video',
             'value'       => '',
             'dependency' => array(
                 'element' => 'video_source',
                 'value'   => '4',
             ),
-            'group'  => esc_html__( 'Video','alacarte'),
+            'group'  => esc_html__( 'Video','sunix'),
             'holder' => 'div',
         ),
         array(
             'type'       => 'checkbox',
             'class'      => '',
-            'heading'    => esc_html__( 'Loop','alacarte'),
+            'heading'    => esc_html__( 'Loop','sunix'),
             'param_name' => 'loop',
             'std'        => 'false',
-            'group'      => esc_html__( 'Video','alacarte'),
+            'group'      => esc_html__( 'Video','sunix'),
             'dependency' => array(
                 'element' => 'video_source',
                 'value'   => '3',
@@ -278,10 +278,10 @@ vc_map(array(
         array(
             'type'       => 'checkbox',
             'class'      => '',
-            'heading'    => esc_html__( 'Autoplay','alacarte'),
+            'heading'    => esc_html__( 'Autoplay','sunix'),
             'param_name' => 'autoplay',
             'std'        => 'false',
-            'group'      => esc_html__( 'Video','alacarte'),
+            'group'      => esc_html__( 'Video','sunix'),
             'dependency' => array(
                 'element' => 'video_source',
                 'value'   => '3',
@@ -290,10 +290,10 @@ vc_map(array(
         array(
             'type'       => 'checkbox',
             'class'      => '',
-            'heading'    => esc_html__( 'Muted','alacarte'),
+            'heading'    => esc_html__( 'Muted','sunix'),
             'param_name' => 'muted',
             'std'        => 'false',
-            'group'      => esc_html__( 'Video','alacarte'),
+            'group'      => esc_html__( 'Video','sunix'),
             'dependency' => array(
                 'element' => 'video_source',
                 'value'   => '3',
@@ -302,10 +302,10 @@ vc_map(array(
         array(
             'type'       => 'checkbox',
             'class'      => '',
-            'heading'    => esc_html__( 'Controls','alacarte'),
+            'heading'    => esc_html__( 'Controls','sunix'),
             'param_name' => 'controls',
             'std'        => 'false',
-            'group'      =>esc_html__( 'Video','alacarte'),
+            'group'      =>esc_html__( 'Video','sunix'),
             'dependency' => array(
                 'element' => 'video_source',
                 'value'   => '3',
@@ -313,24 +313,24 @@ vc_map(array(
         ),
         array(
             'type'       => 'checkbox',
-            'heading'    => esc_html__( 'Show Button Play','alacarte'),
+            'heading'    => esc_html__( 'Show Button Play','sunix'),
             'param_name' => 'show_btn',
             'std'        => 'true',
             'dependency' => array(
                 'element'            => 'autoplay',
                 'value_not_equal_to' => 'true',
             ),
-            'group'      => esc_html__( 'Video','alacarte')
+            'group'      => esc_html__( 'Video','sunix')
         ),
         array(
             'type'       => 'colorpicker',
-            'heading'    => esc_html__( 'Overlay Background color on the video','alacarte'),
+            'heading'    => esc_html__( 'Overlay Background color on the video','sunix'),
             'param_name' => 'bg_video_color',
             'dependency' => array(
                 'element'    => 'video_source',
                 'value'      => '3',
             ),
-            'group'      => esc_html__( 'Video','alacarte'),
+            'group'      => esc_html__( 'Video','sunix'),
             'std'        => ''
         ),
         array(
@@ -338,17 +338,17 @@ vc_map(array(
             'class'      => '',
             'param_name' => 'poster',
             'value'      => '',
-            'group'      =>esc_html__( 'Poster','alacarte'),
+            'group'      =>esc_html__( 'Poster','sunix'),
         ),
         array(
             'type'       => 'dropdown',
-            'heading'    => esc_html__('Poster Style','alacarte'),
+            'heading'    => esc_html__('Poster Style','sunix'),
             'param_name' => 'poster_style',
             'value'      =>   array(
-                esc_html__('Default','alacarte')   => '',
+                esc_html__('Default','sunix')   => '',
             ),
             'std'         => '',
-            'group'       => esc_html__( 'Poster','alacarte'),
+            'group'       => esc_html__( 'Poster','sunix'),
             'dependency'  => array(
                 'element'   => 'poster',
                 'not_empty' => true,
@@ -363,7 +363,7 @@ class WPBakeryShortCode_red_video extends WPBakeryShortCode
     {
         return parent::content($atts, $content);
     }
-    protected function alacarte_video_play_button($atts, $args=[])
+    protected function sunix_video_play_button($atts, $args=[])
     {
         global $wp_embed;
         extract($atts);
@@ -374,7 +374,7 @@ class WPBakeryShortCode_red_video extends WPBakeryShortCode
         ]);
         
         $play_btn_url = get_template_directory_uri().'/assets/images/play-btn-'.$play_btn.'.png';
-        if($play_btn === 'custom') $play_btn_url = alacarte_get_image_url_by_size([
+        if($play_btn === 'custom') $play_btn_url = sunix_get_image_url_by_size([
             'id'            => $play_btn_custom,
             'size'          => '80',
             'default_thumb' => true,
@@ -383,9 +383,9 @@ class WPBakeryShortCode_red_video extends WPBakeryShortCode
 
         $play_css_class = [$args['class'], 'd-flex align-items-center'];
         if(!empty($poster)) $play_css_class[] = 'has-poster';
-        $play_css_class = alacarte_optimize_css_class(implode(' ', $play_css_class));
+        $play_css_class = sunix_optimize_css_class(implode(' ', $play_css_class));
 
-        $ef5_waves = alacarte_html_animation(['anim' => $args['anim']]);
+        $ef5_waves = sunix_html_animation(['anim' => $args['anim']]);
         $play_btn_text = '<span class="play-btn-text">'.$play_btn_text.'</span>';
         switch ($video_source) {
             case '1':
@@ -406,7 +406,7 @@ class WPBakeryShortCode_red_video extends WPBakeryShortCode
                 break;  
         }
     }
-    protected function alacarte_video_popup($atts, $args=[]){
+    protected function sunix_video_popup($atts, $args=[]){
         global $wp_embed;
         extract($atts);
         if($video_type !== '2') return;
@@ -418,7 +418,7 @@ class WPBakeryShortCode_red_video extends WPBakeryShortCode
         $play_btn_url = get_template_directory_uri().'/assets/images/play-btn-'.$play_btn.'.png';
 
 
-        if($play_btn === 'custom') $play_btn_url = alacarte_get_image_url_by_size([
+        if($play_btn === 'custom') $play_btn_url = sunix_get_image_url_by_size([
             'id'            => $play_btn_custom,
             'size'          => '80',
             'default_thumb' => true,
@@ -432,7 +432,7 @@ class WPBakeryShortCode_red_video extends WPBakeryShortCode
 
         if(!empty($poster)) $play_css_class[] = 'has-poster';
 
-        $ef5_waves = alacarte_html_animation(['anim' => $args['anim']]);
+        $ef5_waves = sunix_html_animation(['anim' => $args['anim']]);
 
         switch ($video_source) {
             case '1':
@@ -527,7 +527,7 @@ class WPBakeryShortCode_red_video extends WPBakeryShortCode
         }    
     }
 
-    protected function alacarte_video_plain($atts, $args = []){
+    protected function sunix_video_plain($atts, $args = []){
         global $wp_embed;
         extract($atts);
         if($video_type !== '1') return;
@@ -541,7 +541,7 @@ class WPBakeryShortCode_red_video extends WPBakeryShortCode
                 $video_w = 500;
                 $video_h = $video_w / 1.61; //1.61 golden ratio
                 if ( is_object( $wp_embed ) ) {
-                    echo alacarte_html( $wp_embed->run_shortcode( '[embed width="'.$video_w.'" height="'.$video_h.'"]' . $online_video . '[/embed]' ) );
+                    echo sunix_html( $wp_embed->run_shortcode( '[embed width="'.$video_w.'" height="'.$video_h.'"]' . $online_video . '[/embed]' ) );
                 }
                 break;
 

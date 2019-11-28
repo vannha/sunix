@@ -3,9 +3,9 @@
  * Widget Layered Nav
  * Change count output
 */
-if(!function_exists('alacarte_wc_attr_count_span')){
-	add_filter('woocommerce_layered_nav_term_html', 'alacarte_woocommerce_layered_nav_term_html');
-    function alacarte_woocommerce_layered_nav_term_html($term_html) {
+if(!function_exists('sunix_wc_attr_count_span')){
+	add_filter('woocommerce_layered_nav_term_html', 'sunix_woocommerce_layered_nav_term_html');
+    function sunix_woocommerce_layered_nav_term_html($term_html) {
         //$term_html = str_replace('"> <span class="count">(', ' <span class="count">', $term_html);
         $term_html = str_replace('</a> <span class="count">(', ' <span class="count">', $term_html);
         $term_html = str_replace(')</span>', '</span></a>', $term_html);
@@ -19,15 +19,15 @@ if(!function_exists('alacarte_wc_attr_count_span')){
 */
 if(class_exists('WC_Widget_Product_Categories')){
 	include_once WC()->plugin_path() . '/includes/walkers/class-wc-product-cat-list-walker.php';
-	if(!function_exists('alacarte_woocommerce_product_categories_widget_args')){
-		add_filter('woocommerce_product_categories_widget_args', 'alacarte_woocommerce_product_categories_widget_args', 10, 1);
-		function alacarte_woocommerce_product_categories_widget_args($list_args){
-			$list_args['walker'] = new alacarte_WC_Product_Cat_List_Walker();
+	if(!function_exists('sunix_woocommerce_product_categories_widget_args')){
+		add_filter('woocommerce_product_categories_widget_args', 'sunix_woocommerce_product_categories_widget_args', 10, 1);
+		function sunix_woocommerce_product_categories_widget_args($list_args){
+			$list_args['walker'] = new sunix_WC_Product_Cat_List_Walker();
 			return $list_args;
 		}
 	}
 
-	class alacarte_WC_Product_Cat_List_Walker extends WC_Product_Cat_List_Walker{
+	class sunix_WC_Product_Cat_List_Walker extends WC_Product_Cat_List_Walker{
 		public function start_el( &$output, $cat, $depth = 0, $args = array(), $current_object_id = 0 ) {
 			$cat_id = intval( $cat->term_id );
 
@@ -52,7 +52,7 @@ if(class_exists('WC_Widget_Product_Categories')){
 			}
 
 			if ( $args['has_children'] && $args['hierarchical'] && ( empty( $args['max_depth'] ) || $args['max_depth'] > $depth + 1 ) ) {
-				$output .= alacarte_widget_expander();
+				$output .= sunix_widget_expander();
 			}
 
 			$output .= '</a>';

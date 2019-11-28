@@ -6,15 +6,15 @@
  * This custom post used for build Header Top section
  *
 */
-add_filter('ef5_extra_post_types', 'alacarte_cpts_header_top', 10 , 1);
-function alacarte_cpts_header_top($post_types)
+add_filter('ef5_extra_post_types', 'sunix_cpts_header_top', 10 , 1);
+function sunix_cpts_header_top($post_types)
 {
-    $header_top = apply_filters('alacarte_cpts_header_top', false);
+    $header_top = apply_filters('sunix_cpts_header_top', false);
     if($header_top) {
         $post_types['ef5_header_top'] = array(
             'status'        => true,
-            'name'          => esc_html__('AlaCarte Header Top', 'alacarte'),
-            'singular_name' => esc_html__('AlaCarte Headers Top', 'alacarte'),
+            'name'          => esc_html__('sunix Header Top', 'sunix'),
+            'singular_name' => esc_html__('sunix Headers Top', 'sunix'),
             'args'          => array(
                 'description'         => 'Add custom Header Top Layout ',
                 'public'              => true,
@@ -48,14 +48,14 @@ function alacarte_cpts_header_top($post_types)
  * This custom post used for build Footer Top section
  *
  */
-add_filter('ef5_extra_post_types', 'alacarte_cpts_footer', 10 , 1);
-function alacarte_cpts_footer($post_types) {
-    $enable_footer = apply_filters('alacarte_cpts_footer', false);
+add_filter('ef5_extra_post_types', 'sunix_cpts_footer', 10 , 1);
+function sunix_cpts_footer($post_types) {
+    $enable_footer = apply_filters('sunix_cpts_footer', false);
     if($enable_footer) {
         $post_types['ef5_footer'] = array(
             'status'        => true,
-            'name'          => esc_html__('AlaCarte Footer', 'alacarte'),
-            'singular_name' => esc_html__('AlaCarte Footers', 'alacarte'),
+            'name'          => esc_html__('sunix Footer', 'sunix'),
+            'singular_name' => esc_html__('sunix Footers', 'sunix'),
             'args'          => array(
                 'description'         => 'Add custom Footer Layout ',
                 'public'              => true,

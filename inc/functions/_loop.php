@@ -2,7 +2,7 @@
 /**
  * Loop Page 
 */
-function alacarte_is_loop(){
+function sunix_is_loop(){
     if(is_home() || is_archive() || is_author() || is_category() || is_post_type_archive() || is_tag() || is_tax() || is_search())
         return true;
     else 
@@ -14,8 +14,8 @@ function alacarte_is_loop(){
  *
  * @since 1.0.0
 */
-if(!function_exists('alacarte_get_post_taxonomies')){
-    function alacarte_get_post_taxonomies($taxo = 'cat') {
+if(!function_exists('sunix_get_post_taxonomies')){
+    function sunix_get_post_taxonomies($taxo = 'cat') {
 		$post      = get_post();
 		$tax_names = get_object_taxonomies($post);
 		$result    = false;

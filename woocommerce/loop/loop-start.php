@@ -17,5 +17,5 @@
  */
 
 ?>
-<div class="alacarte_loop_content">
-<ul class="products columns-<?php echo alacarte_loop_columns();?>">
+<div class="sunix_loop_content">
+<ul class="products columns-<?php echo sunix_loop_columns();?>">

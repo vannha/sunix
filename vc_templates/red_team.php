@@ -17,7 +17,7 @@ $css_class_attr[] = 'red-team red-team-layout-'.$layout_template;
 $item_class[] = 'team-item';
 
 if($layout_style === 'carousel'){
-	$wrap_css_class[] = alacarte_owl_css_class($atts);
+	$wrap_css_class[] = sunix_owl_css_class($atts);
 	$css_class_attr[] = 'red-owl team-carousel owl-carousel';
 	$item_class[]     = 'red-carousel-item';
 } else {
@@ -128,9 +128,9 @@ $team_link_open = $team_link_close = $socials = '';
 					}
                 	// dot image
                 	if(!empty($team['image']))
-                    	$dot_image = alacarte_image_by_size(['id'=>$team['image'], 'size'=>$dot_thumbnail_size, 'class'=>'dot-thumb circle', 'echo' => false]);
+                    	$dot_image = sunix_image_by_size(['id'=>$team['image'], 'size'=>$dot_thumbnail_size, 'class'=>'dot-thumb circle', 'echo' => false]);
                     else 
-                    	$dot_image = alacarte_default_image_thumbnail(['size' => $dot_thumbnail_size, 'class' => 'dot-thumb circle']);
+                    	$dot_image = sunix_default_image_thumbnail(['size' => $dot_thumbnail_size, 'class' => 'dot-thumb circle']);
                     if($i==1) : ?>
                         <div class="<?php echo join(' ',$item_class);?>" data-dot='<?php echo wp_kses_post($dot_image); ?>'>
                     <?php  
@@ -143,7 +143,7 @@ $team_link_open = $team_link_close = $socials = '';
                                     <div class="col-auto team-images">
                                         <?php
                                             // image            
-                                            alacarte_image_by_size([
+                                            sunix_image_by_size([
                                                 'id'      => $team['image'],
                                                 'size'    => $thumbnail_size,
                                                 'class'   => 'team-img transition',
@@ -163,7 +163,7 @@ $team_link_open = $team_link_close = $socials = '';
                                         <?php // desc 
                                             if(!empty($team['desc'])) echo '<div class="team-desc">'.$team['desc'].'</div>';
                                         ?>
-                                        <div class="team-social red-social size-30"><?php echo alacarte_html($socials_list);?></div>
+                                        <div class="team-social red-social size-30"><?php echo sunix_html($socials_list);?></div>
                                     </div>
                                 </div>
                                 <?php
@@ -173,7 +173,7 @@ $team_link_open = $team_link_close = $socials = '';
                                 <div class="team-images">
                                     <?php
                                         // image            
-                                        alacarte_image_by_size([
+                                        sunix_image_by_size([
                                             'id'      => $team['image'],
                                             'size'    => $thumbnail_size,
                                             'class'   => 'team-img transition',
@@ -192,7 +192,7 @@ $team_link_open = $team_link_close = $socials = '';
                                         // desc 
                                         if(!empty($team['desc'])) echo '<div class="team-desc">'.$team['desc'].'</div>';
                                     ?>
-                                    <div class="team-social red-social size-30"><?php echo alacarte_html($socials_list);?></div>
+                                    <div class="team-social red-social size-30"><?php echo sunix_html($socials_list);?></div>
                                 </div>
                                 <?php
                                 break;
@@ -201,7 +201,7 @@ $team_link_open = $team_link_close = $socials = '';
                                 <div class="team-images transition">
                                     <?php
                                         // image            
-                                        alacarte_image_by_size([
+                                        sunix_image_by_size([
                                             'id'      => $team['image'],
                                             'size'    => $thumbnail_size,
                                             'class'   => 'team-img transition',
@@ -211,12 +211,12 @@ $team_link_open = $team_link_close = $socials = '';
                                 </div>
                                 <div class="team-info transition red-box-shadow-3">
                                     <div class="team-name h3 text-truncate">
-                                        <?php echo alacarte_html($team_link_open.$team['name'].$team_link_close);?>
+                                        <?php echo sunix_html($team_link_open.$team['name'].$team_link_close);?>
                                     </div>
-                                    <div class="team-position text-truncate"><?php echo alacarte_html($team['position']);?></div>
-                                    <?php if(!empty($team['desc'])) : ?><div class="team-desc"><?php echo alacarte_html($team['desc']);?></div><?php endif; ?>
+                                    <div class="team-position text-truncate"><?php echo sunix_html($team['position']);?></div>
+                                    <?php if(!empty($team['desc'])) : ?><div class="team-desc"><?php echo sunix_html($team['desc']);?></div><?php endif; ?>
                                     <div class="team-social red-social size-30 <?php echo esc_attr($text_align);?>">
-                                        <?php echo alacarte_html($socials_list);?>
+                                        <?php echo sunix_html($socials_list);?>
                                     </div>
                                 </div>
                                 <?php
@@ -227,7 +227,7 @@ $team_link_open = $team_link_close = $socials = '';
                                     <div class="hover-inner team-images">
                                         <?php
                                             // image            
-                                            alacarte_image_by_size([
+                                            sunix_image_by_size([
                                                 'id'      => $team['image'],
                                                 'size'    => $thumbnail_size,
                                                 'class'   => 'team-img transition',
@@ -248,7 +248,7 @@ $team_link_open = $team_link_close = $socials = '';
                                             if(!empty($team['desc'])) echo '<div class="team-desc">'.$team['desc'].'</div>';
 
                                         ?>
-                                        <div class="team-social red-social shape-circle size-28 "><?php echo alacarte_html($socials_list);?></div>
+                                        <div class="team-social red-social shape-circle size-28 "><?php echo sunix_html($socials_list);?></div>
                                         <div class="team-link-button">
                                             <?php
                                             if(!empty($team['link'])){
@@ -269,7 +269,7 @@ $team_link_open = $team_link_close = $socials = '';
                                     <div class="hover-inner team-images">
                                         <?php
                                             // image            
-                                            alacarte_image_by_size([
+                                            sunix_image_by_size([
                                                 'id'      => $team['image'],
                                                 'size'    => $thumbnail_size,
                                                 'class'   => 'team-img transition',
@@ -287,7 +287,7 @@ $team_link_open = $team_link_close = $socials = '';
     			                        	
     			                        ?>
                                         <div class="wrap-team-social">
-                                            <div class="team-social red-social shape-circle size-28 "><?php echo alacarte_html($socials_list);?></div>
+                                            <div class="team-social red-social shape-circle size-28 "><?php echo sunix_html($socials_list);?></div>
                                         </div>
     			                    </div>
                                 </div>
@@ -302,9 +302,9 @@ $team_link_open = $team_link_close = $socials = '';
         ?>
     </div>
     <?php if($layout_style === 'carousel'):
-        alacarte_loading_animation();
-        alacarte_owl_dots_container($atts);
-        alacarte_owl_nav_container($atts);
-        alacarte_owl_dots_in_nav_container($atts);
+        sunix_loading_animation();
+        sunix_owl_dots_container($atts);
+        sunix_owl_nav_container($atts);
+        sunix_owl_dots_in_nav_container($atts);
     endif; ?>
 </div>

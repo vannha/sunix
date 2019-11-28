@@ -6,7 +6,7 @@ if (class_exists('ReduxFrameworkPlugin')) {
     //remove_ef5_filter('plugin_row_meta', array(ReduxFrameworkPlugin::instance(), 'plugin_metalinks'), null, 2);
     remove_action('admin_notices', array(ReduxFrameworkPlugin::instance(), 'admin_notices'));
 }
-$opt_name = alacarte_get_theme_opt_name();
+$opt_name = sunix_get_theme_opt_name();
 $theme = wp_get_theme();
 $args = array(
     // TYPICAL -> Change these values as you need/desire
@@ -20,8 +20,8 @@ $args = array(
     //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
     'allow_sub_menu'       => true,
     // Show the sections below the admin menu item or not
-    'menu_title'           => esc_html__('Theme Options', 'alacarte'),
-    'page_title'           => esc_html__('Theme Options', 'alacarte'),
+    'menu_title'           => esc_html__('Theme Options', 'sunix'),
+    'page_title'           => esc_html__('Theme Options', 'sunix'),
     // You will need to generate a Google API key to use this feature.
     // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
     'google_api_key'       => '',
@@ -124,10 +124,10 @@ Redux::SetArgs($opt_name, $args);
 --------------------------------------------------------------*/
 
 Redux::setSection($opt_name, array(
-    'title'  => esc_html__('General', 'alacarte'),
+    'title'  => esc_html__('General', 'sunix'),
     'icon'   => 'el-icon-home',
     'fields' => array_merge(
-        alacarte_general_opts()
+        sunix_general_opts()
     )
 ));
 
@@ -135,10 +135,10 @@ Redux::setSection($opt_name, array(
 # Header Top
 --------------------------------------------------------------*/
 Redux::setSection($opt_name, array(
-    'title'         => esc_html__('Header Top', 'alacarte'),
+    'title'         => esc_html__('Header Top', 'sunix'),
     'heading'       => '',
     'icon'          => 'el-icon-credit-card',
-    'fields'        => alacarte_header_top_opts()
+    'fields'        => sunix_header_top_opts()
     )
 );
 /*--------------------------------------------------------------
@@ -146,30 +146,30 @@ Redux::setSection($opt_name, array(
 --------------------------------------------------------------*/
 
 Redux::setSection($opt_name, array(
-    'title'  => esc_html__('Header', 'alacarte'),
+    'title'  => esc_html__('Header', 'sunix'),
     'icon'   => 'el-icon-website',
     'fields' => array_merge(
-        alacarte_header_opts(),
-        alacarte_header_atts()
+        sunix_header_opts(),
+        sunix_header_atts()
     )
 ));
 
-Redux::setSection($opt_name, alacarte_header_main_logo());
+Redux::setSection($opt_name, sunix_header_main_logo());
 /* Ontop Header */
-Redux::setSection($opt_name, alacarte_ontop_header_opts());
+Redux::setSection($opt_name, sunix_ontop_header_opts());
 /* Sticky Header */
-Redux::setSection($opt_name, alacarte_sticky_header_opts());
+Redux::setSection($opt_name, sunix_sticky_header_opts());
 
 Redux::setSection($opt_name, array(
-    'title'      => esc_html__('Dropdown & Mobile Menu', 'alacarte'),
+    'title'      => esc_html__('Dropdown & Mobile Menu', 'sunix'),
     'icon'       => 'el-icon-lines',
     'subsection' => true,
     'fields'     => array(
         array(
             'id'       => 'dropdown_bg',
             'type'     => 'color_rgba',
-            'title'    => esc_html__('Dropdown Background', 'alacarte'),
-            'subtitle' => esc_html__('Choose dropdown background color', 'alacarte'),
+            'title'    => esc_html__('Dropdown Background', 'sunix'),
+            'subtitle' => esc_html__('Choose dropdown background color', 'sunix'),
             'output'   => array(
                 'background-color' => '.oc-header-menu .sub-menu',
             )
@@ -177,14 +177,14 @@ Redux::setSection($opt_name, array(
         array(
             'id'          => 'dropdown_text_color',
             'type'        => 'color_rgba',
-            'title'       => esc_html__('Text Color', 'alacarte'),
+            'title'       => esc_html__('Text Color', 'sunix'),
             'default'     => '',
             'output'      => array('.oc-header-menu ul'),
         ),
         array(
             'id'    => 'dropdown_link_colors',
             'type'  => 'link_color',
-            'title' => esc_html__('Link colors', 'alacarte'),
+            'title' => esc_html__('Link colors', 'sunix'),
             'output' => array(
                 'color' => '.oc-header-menu ul a'
             ),
@@ -196,9 +196,9 @@ Redux::setSection($opt_name, array(
 --------------------------------------------------------------*/
 
 Redux::setSection($opt_name, array(
-    'title'  => esc_html__('Page Title', 'alacarte'),
+    'title'  => esc_html__('Page Title', 'sunix'),
     'icon'   => 'el-icon-map-marker',
-    'fields' => alacarte_page_title_opts()
+    'fields' => sunix_page_title_opts()
 ));
 
 /*--------------------------------------------------------------
@@ -206,12 +206,12 @@ Redux::setSection($opt_name, array(
 --------------------------------------------------------------*/
 
 Redux::setSection($opt_name, array(
-    'title' => esc_html__('Content', 'alacarte'),
+    'title' => esc_html__('Content', 'sunix'),
     'icon'  => 'el-icon-pencil',
     'fields'  => array(
         array(
-            'title'     => esc_html__('Padding', 'alacarte'),
-            'subtitle'  => esc_html__('Choose space for: Top, Right, Bottom, Left', 'alacarte'),
+            'title'     => esc_html__('Padding', 'sunix'),
+            'subtitle'  => esc_html__('Choose space for: Top, Right, Bottom, Left', 'sunix'),
             'id'        => 'main_padding',
             'type'      => 'spacing',
             'mode'      => 'padding',
@@ -223,102 +223,102 @@ Redux::setSection($opt_name, array(
 ));
 
 Redux::setSection($opt_name, array(
-    'title'      => esc_html__('Archive', 'alacarte'),
+    'title'      => esc_html__('Archive', 'sunix'),
     'icon'       => 'el-icon-list',
     'subsection' => true,
     'fields'     => array(
         array(
             'id'       => 'archive_sidebar_pos',
             'type'     => 'button_set',
-            'title'    => esc_html__('Sidebar Position', 'alacarte'),
-            'subtitle' => esc_html__('Select a sidebar position for blog home, archive, search...', 'alacarte'),
+            'title'    => esc_html__('Sidebar Position', 'sunix'),
+            'subtitle' => esc_html__('Select a sidebar position for blog home, archive, search...', 'sunix'),
             'options'  => array(
-                'left'  => esc_html__('Left', 'alacarte'),
-                'right' => esc_html__('Right', 'alacarte'),
-                'none'  => esc_html__('Disabled', 'alacarte')
+                'left'  => esc_html__('Left', 'sunix'),
+                'right' => esc_html__('Right', 'sunix'),
+                'none'  => esc_html__('Disabled', 'sunix')
             ),
-            'default'  => alacarte_archive_sidebar_position()
+            'default'  => sunix_archive_sidebar_position()
         ),
         array(
             'id'       => 'archive_author_on',
-            'title'    => esc_html__('Author', 'alacarte'),
-            'subtitle' => esc_html__('Show author name on each post.', 'alacarte'),
+            'title'    => esc_html__('Author', 'sunix'),
+            'subtitle' => esc_html__('Show author name on each post.', 'sunix'),
             'type'     => 'switch',
             'default'  => '1',
         ),
         array(
             'id'       => 'archive_date_on',
-            'title'    => esc_html__('Date', 'alacarte'),
-            'subtitle' => esc_html__('Show date posted on each post.', 'alacarte'),
+            'title'    => esc_html__('Date', 'sunix'),
+            'subtitle' => esc_html__('Show date posted on each post.', 'sunix'),
             'type'     => 'switch',
             'default'  => '1',
         ),
         array(
             'id'       => 'archive_categories_on',
-            'title'    => esc_html__('Categories', 'alacarte'),
-            'subtitle' => esc_html__('Show category names on each post.', 'alacarte'),
+            'title'    => esc_html__('Categories', 'sunix'),
+            'subtitle' => esc_html__('Show category names on each post.', 'sunix'),
             'type'     => 'switch',
             'default'  => '1',
         ),
         array(
             'id'       => 'archive_tags_on',
-            'title'    => esc_html__('Tags', 'alacarte'),
-            'subtitle' => esc_html__('Show tag names on each post.', 'alacarte'),
+            'title'    => esc_html__('Tags', 'sunix'),
+            'subtitle' => esc_html__('Show tag names on each post.', 'sunix'),
             'type'     => 'switch',
             'default'  => '1',
         ),
         array(
             'id'       => 'archive_comments_on',
-            'title'    => esc_html__('Comments', 'alacarte'),
-            'subtitle' => esc_html__('Show comments count on each post.', 'alacarte'),
+            'title'    => esc_html__('Comments', 'sunix'),
+            'subtitle' => esc_html__('Show comments count on each post.', 'sunix'),
             'type'     => 'switch',
             'default'  => '1',
         ),
         array(
             'id'       => 'archive_like_on',
-            'title'    => esc_html__('Like', 'alacarte'),
-            'subtitle' => esc_html__('Show Like count on each post.', 'alacarte'),
+            'title'    => esc_html__('Like', 'sunix'),
+            'subtitle' => esc_html__('Show Like count on each post.', 'sunix'),
             'type'     => 'switch',
             'default'  => '1',
         ),
         array(
             'id'       => 'archive_view_on',
-            'title'    => esc_html__('View', 'alacarte'),
-            'subtitle' => esc_html__('Show view count on each post.', 'alacarte'),
+            'title'    => esc_html__('View', 'sunix'),
+            'subtitle' => esc_html__('Show view count on each post.', 'sunix'),
             'type'     => 'switch',
             'default'  => '1',
         ),
         array(
             'id'       => 'archive_readmore',
-            'title'    => esc_html__('Read more', 'alacarte'),
-            'subtitle' => esc_html__('Show readmore button on archive page.', 'alacarte'),
+            'title'    => esc_html__('Read more', 'sunix'),
+            'subtitle' => esc_html__('Show readmore button on archive page.', 'sunix'),
             'type'     => 'switch',
             'default'  => '1',
         )
     )
 ));
 Redux::setSection($opt_name, array(
-    'title'      => esc_html__('Single Page', 'alacarte'),
+    'title'      => esc_html__('Single Page', 'sunix'),
     'icon'       => 'el-icon-file-edit',
     'subsection' => true,
     'fields'     => array_merge(
-        alacarte_page_opts()
+        sunix_page_opts()
     )
 ));
 Redux::setSection($opt_name, array(
-    'title'      => esc_html__('Single Post', 'alacarte'),
+    'title'      => esc_html__('Single Post', 'sunix'),
     'icon'       => 'el-icon-file-edit',
     'subsection' => true,
     'fields'     => array_merge(
-        alacarte_single_header_top_opts(),
+        sunix_single_header_top_opts(),
         array(
             array(
                 'id'       => 'body_single_boxed',
                 'type'     => 'button_set',
-                'title'    => esc_html__('Body Boxed', 'alacarte'),
+                'title'    => esc_html__('Body Boxed', 'sunix'),
                 'options'  => array(
-                    '-1'       => esc_html__('Default','alacarte'),
-                    'bordered' => esc_html__('Bordered','alacarte'),
+                    '-1'       => esc_html__('Default','sunix'),
+                    'bordered' => esc_html__('Bordered','sunix'),
                 ),
                 'default'  => '-1'
             ),
@@ -327,8 +327,8 @@ Redux::setSection($opt_name, array(
                 'type'     => 'spacing',
                 'mode'     => 'padding',
                 'all'      => false,
-                'title'    => esc_html__('Bordered Width', 'alacarte'),
-                'subtitle' => esc_html__('Enter bordered with.', 'alacarte'),
+                'title'    => esc_html__('Bordered Width', 'sunix'),
+                'subtitle' => esc_html__('Enter bordered with.', 'sunix'),
                 'units'    => array('px'),
                 'default'  => array(
                     'padding-top'    => '0px',
@@ -345,61 +345,61 @@ Redux::setSection($opt_name, array(
             array(
                 'id'       => 'post_sidebar_pos',
                 'type'     => 'button_set',
-                'title'    => esc_html__('Layouts', 'alacarte'),
-                'subtitle' => esc_html__('select a layout for single...', 'alacarte'),
+                'title'    => esc_html__('Layouts', 'sunix'),
+                'subtitle' => esc_html__('select a layout for single...', 'sunix'),
                 'options'  => array(
-                    'left'   => esc_html__('Left Sidebar', 'alacarte'),
-                    'right'  => esc_html__('Right Sidebar', 'alacarte'),
-                    'none' => esc_html__('No sidebar (Center)', 'alacarte')
+                    'left'   => esc_html__('Left Sidebar', 'sunix'),
+                    'right'  => esc_html__('Right Sidebar', 'sunix'),
+                    'none' => esc_html__('No sidebar (Center)', 'sunix')
                 ),
                 'default'  => 'right'
             ),
             array(
                 'id'       => 'post_date_on',
-                'title'    => esc_html__('Date', 'alacarte'),
-                'subtitle' => esc_html__('Show date posted.', 'alacarte'),
+                'title'    => esc_html__('Date', 'sunix'),
+                'subtitle' => esc_html__('Show date posted.', 'sunix'),
                 'type'     => 'switch',
                 'default'  => '1'
             ),
             array(
                 'id'       => 'post_author_on',
-                'title'    => esc_html__('Author', 'alacarte'),
-                'subtitle' => esc_html__('Show author name.', 'alacarte'),
+                'title'    => esc_html__('Author', 'sunix'),
+                'subtitle' => esc_html__('Show author name.', 'sunix'),
                 'type'     => 'switch',
                 'default'  => '0'
             ),
             array(
                 'id'       => 'post_categories_on',
-                'title'    => esc_html__('Categories', 'alacarte'),
-                'subtitle' => esc_html__('Show category names.', 'alacarte'),
+                'title'    => esc_html__('Categories', 'sunix'),
+                'subtitle' => esc_html__('Show category names.', 'sunix'),
                 'type'     => 'switch',
                 'default'  => '1'
             ),
             array(
                 'id'       => 'post_tags_on',
-                'title'    => esc_html__('Tags', 'alacarte'),
-                'subtitle' => esc_html__('Show tag names.', 'alacarte'),
+                'title'    => esc_html__('Tags', 'sunix'),
+                'subtitle' => esc_html__('Show tag names.', 'sunix'),
                 'type'     => 'switch',
                 'default'  => '0'
             ),
             array(
                 'id'       => 'post_comments_on',
-                'title'    => esc_html__('Comments Count', 'alacarte'),
-                'subtitle' => esc_html__('Show comments count.', 'alacarte'),
+                'title'    => esc_html__('Comments Count', 'sunix'),
+                'subtitle' => esc_html__('Show comments count.', 'sunix'),
                 'type'     => 'switch',
                 'default'  => '1'
             ),
             array(
                 'id'       => 'post_like_on',
-                'title'    => esc_html__('Like', 'alacarte'),
-                'subtitle' => esc_html__('Show Likes Count.', 'alacarte'),
+                'title'    => esc_html__('Like', 'sunix'),
+                'subtitle' => esc_html__('Show Likes Count.', 'sunix'),
                 'type'     => 'switch',
                 'default'  => '1'
             ),
             array(
                 'id'       => 'post_share_on',
-                'title'    => esc_html__('Share', 'alacarte'),
-                'subtitle' => esc_html__('Show share post to some socials network on each post.', 'alacarte'),
+                'title'    => esc_html__('Share', 'sunix'),
+                'subtitle' => esc_html__('Show share post to some socials network on each post.', 'sunix'),
                 'type'     => 'switch',
                 'default'  => '0',
             ),
@@ -410,12 +410,12 @@ Redux::setSection($opt_name, array(
 ));
 
 Redux::setSection($opt_name, array(
-    'title' => esc_html__('Page 404', 'alacarte'),
+    'title' => esc_html__('Page 404', 'sunix'),
     'icon'  => 'el-icon-pencil',
     'fields'  => array(
         array(
-            'title'     => esc_html__('Background Image', 'alacarte'),
-            'subtitle'  => esc_html__('choose Background for page 404', 'alacarte'),
+            'title'     => esc_html__('Background Image', 'sunix'),
+            'subtitle'  => esc_html__('choose Background for page 404', 'sunix'),
             'id'        => 'background_404',
             'type'      => 'background',
             'default'   => array(),
@@ -428,22 +428,22 @@ Redux::setSection($opt_name, array(
 --------------------------------------------------------------*/
 
 Redux::setSection($opt_name, array(
-    'title'  => esc_html__('Portfolio', 'alacarte'),
+    'title'  => esc_html__('Portfolio', 'sunix'),
     'icon'   => 'el el-th',
     'subsection' => true,
     'fields' => array(
         array(
             'id'      => 'portfolio_slug',
             'type'    => 'text',
-            'title'   => esc_html__('Portfolio slug rewrite', 'alacarte'),
-            'default' => esc_html__('portfolio', 'alacarte')
+            'title'   => esc_html__('Portfolio slug rewrite', 'sunix'),
+            'default' => esc_html__('portfolio', 'sunix')
         ),
         array(
             'id'      => 'portfolio_page',
             'type'    => 'select',
-            'title'   => esc_html__('Portfolio Page', 'alacarte'),
-            'options' => alacarte_list_page(['value' => '-1', 'label' => esc_html__('Archive page','alacarte')]),
-            'default' => esc_html__('-1', 'alacarte')
+            'title'   => esc_html__('Portfolio Page', 'sunix'),
+            'options' => sunix_list_page(['value' => '-1', 'label' => esc_html__('Archive page','sunix')]),
+            'default' => esc_html__('-1', 'sunix')
         ),
     )
 ));
@@ -454,20 +454,20 @@ Redux::setSection($opt_name, array(
 --------------------------------------------------------------*/
 
 Redux::setSection($opt_name, array(
-    'title'  => esc_html__('Colors', 'alacarte'),
+    'title'  => esc_html__('Colors', 'sunix'),
     'icon'   => 'el-icon-file-edit',
     'fields' => array(
         array(
             'id'          => 'primary_color',
             'type'        => 'color',
-            'title'       => esc_html__('Primary Color', 'alacarte'),
+            'title'       => esc_html__('Primary Color', 'sunix'),
             'transparent' => false,
             'default'     => ''
         ),
         array(
             'id'          => 'accent_color',
             'type'        => 'color',
-            'title'       => esc_html__('Accent Color', 'alacarte'),
+            'title'       => esc_html__('Accent Color', 'sunix'),
             'transparent' => false,
             'default'     => ''
         ),
@@ -479,14 +479,14 @@ Redux::setSection($opt_name, array(
 --------------------------------------------------------------*/
 
 Redux::setSection($opt_name, array(
-    'title'  => esc_html__('Typography', 'alacarte'),
+    'title'  => esc_html__('Typography', 'sunix'),
     'icon'   => 'el-icon-text-width',
     'fields' => array(
         array(
             'id'          => 'font_main',
             'type'        => 'typography',
-            'title'       => esc_html__('Main Font', 'alacarte'),
-            'subtitle'    => esc_html__('Typography option with each property can be called individually.', 'alacarte'),
+            'title'       => esc_html__('Main Font', 'sunix'),
+            'subtitle'    => esc_html__('Typography option with each property can be called individually.', 'sunix'),
             'google'      => true,
             'font-backup' => true,
             'all_styles'  => true,
@@ -496,7 +496,7 @@ Redux::setSection($opt_name, array(
         array(
             'id'          => 'font_heading',
             'type'        => 'typography',
-            'title'       => esc_html__('Heading Font', 'alacarte'),
+            'title'       => esc_html__('Heading Font', 'sunix'),
             'google'      => true,
             'font-backup' => true,
             'text-transform' => true,
@@ -507,8 +507,8 @@ Redux::setSection($opt_name, array(
         array(
             'id'          => 'font_h1',
             'type'        => 'typography',
-            'title'       => esc_html__('H1', 'alacarte'),
-            'subtitle'    => esc_html__('Heading 1 typography.', 'alacarte'),
+            'title'       => esc_html__('H1', 'sunix'),
+            'subtitle'    => esc_html__('Heading 1 typography.', 'sunix'),
             'google'      => true,
             'font-backup' => true,
             'text-transform' => true,
@@ -519,8 +519,8 @@ Redux::setSection($opt_name, array(
         array(
             'id'          => 'font_h2',
             'type'        => 'typography',
-            'title'       => esc_html__('H2', 'alacarte'),
-            'subtitle'    => esc_html__('Heading 2 typography.', 'alacarte'),
+            'title'       => esc_html__('H2', 'sunix'),
+            'subtitle'    => esc_html__('Heading 2 typography.', 'sunix'),
             'google'      => true,
             'font-backup' => true,
             'text-transform' => true,
@@ -531,8 +531,8 @@ Redux::setSection($opt_name, array(
         array(
             'id'          => 'font_h3',
             'type'        => 'typography',
-            'title'       => esc_html__('H3', 'alacarte'),
-            'subtitle'    => esc_html__('Heading 3 typography.', 'alacarte'),
+            'title'       => esc_html__('H3', 'sunix'),
+            'subtitle'    => esc_html__('Heading 3 typography.', 'sunix'),
             'google'      => true,
             'font-backup' => true,
             'all_styles'  => true,
@@ -543,8 +543,8 @@ Redux::setSection($opt_name, array(
         array(
             'id'          => 'font_h4',
             'type'        => 'typography',
-            'title'       => esc_html__('H4', 'alacarte'),
-            'subtitle'    => esc_html__('Heading 4 typography.', 'alacarte'),
+            'title'       => esc_html__('H4', 'sunix'),
+            'subtitle'    => esc_html__('Heading 4 typography.', 'sunix'),
             'google'      => true,
             'font-backup' => true,
             'text-transform' => true,
@@ -555,8 +555,8 @@ Redux::setSection($opt_name, array(
         array(
             'id'          => 'font_h5',
             'type'        => 'typography',
-            'title'       => esc_html__('H5', 'alacarte'),
-            'subtitle'    => esc_html__('Heading 5 typography.', 'alacarte'),
+            'title'       => esc_html__('H5', 'sunix'),
+            'subtitle'    => esc_html__('Heading 5 typography.', 'sunix'),
             'google'      => true,
             'font-backup' => true,
             'text-transform' => true,
@@ -567,8 +567,8 @@ Redux::setSection($opt_name, array(
         array(
             'id'          => 'font_h6',
             'type'        => 'typography',
-            'title'       => esc_html__('H6', 'alacarte'),
-            'subtitle'    => esc_html__('Heading 6 typography.', 'alacarte'),
+            'title'       => esc_html__('H6', 'sunix'),
+            'subtitle'    => esc_html__('Heading 6 typography.', 'sunix'),
             'google'      => true,
             'font-backup' => true,
             'text-transform' => true,
@@ -586,15 +586,15 @@ $custom_font_selectors_2 = Redux::getOption($opt_name, 'custom_font_selectors_2'
 $custom_font_selectors_2 = !empty($custom_font_selectors_2) ? explode(',', $custom_font_selectors_2) : array();
 
 Redux::setSection($opt_name, array(
-    'title'      => esc_html__('Extra Fonts', 'alacarte'),
+    'title'      => esc_html__('Extra Fonts', 'sunix'),
     'icon'       => 'el el-fontsize',
     'subsection' => true,
     'fields'     => array(
         array(
             'id'          => 'custom_font_1',
             'type'        => 'typography',
-            'title'       => esc_html__('Custom Font', 'alacarte'),
-            'subtitle'    => esc_html__('Typography option with each property can be called individually.', 'alacarte'),
+            'title'       => esc_html__('Custom Font', 'sunix'),
+            'subtitle'    => esc_html__('Typography option with each property can be called individually.', 'sunix'),
             'google'      => true,
             'font-backup' => true,
             'all_styles'  => true,
@@ -605,22 +605,22 @@ Redux::setSection($opt_name, array(
         array(
             'id'       => 'custom_font_selectors_1',
             'type'     => 'textarea',
-            'title'    => esc_html__('CSS Selectors', 'alacarte'),
-            'subtitle' => esc_html__('Add css selectors to apply above font.', 'alacarte'),
+            'title'    => esc_html__('CSS Selectors', 'sunix'),
+            'subtitle' => esc_html__('Add css selectors to apply above font.', 'sunix'),
             'validate' => 'no_html'
         )
     )
 ));
 Redux::setSection($opt_name, array(
-    'title'      => esc_html__('Extra Fonts 2', 'alacarte'),
+    'title'      => esc_html__('Extra Fonts 2', 'sunix'),
     'icon'       => 'el el-fontsize',
     'subsection' => true,
     'fields'     => array(
         array(
             'id'          => 'custom_font_2',
             'type'        => 'typography',
-            'title'       => esc_html__('Custom Font', 'alacarte'),
-            'subtitle'    => esc_html__('Typography option with each property can be called individually.', 'alacarte'),
+            'title'       => esc_html__('Custom Font', 'sunix'),
+            'subtitle'    => esc_html__('Typography option with each property can be called individually.', 'sunix'),
             'google'      => true,
             'font-backup' => true,
             'all_styles'  => true,
@@ -632,22 +632,22 @@ Redux::setSection($opt_name, array(
         array(
             'id'       => 'custom_font_selectors_2',
             'type'     => 'textarea',
-            'title'    => esc_html__('CSS Selectors', 'alacarte'),
-            'subtitle' => esc_html__('Add css selectors to apply above font.', 'alacarte'),
+            'title'    => esc_html__('CSS Selectors', 'sunix'),
+            'subtitle' => esc_html__('Add css selectors to apply above font.', 'sunix'),
             'validate' => 'no_html',
 
         )
     )
 ));
 Redux::setSection($opt_name, array(
-    'title'  => esc_html__('Button', 'alacarte'),
+    'title'  => esc_html__('Button', 'sunix'),
     'icon'   => 'el-icon-text-width',
     'fields' => array(
         array(
             'id'          => 'font_button',
             'type'        => 'typography',
-            'title'       => esc_html__('Button Font', 'alacarte'),
-            'subtitle'    => esc_html__('Apply fot all button', 'alacarte'),
+            'title'       => esc_html__('Button Font', 'sunix'),
+            'subtitle'    => esc_html__('Apply fot all button', 'sunix'),
             'google'      => true,
             'font-backup' => false,
             'color' => false,
@@ -659,87 +659,87 @@ Redux::setSection($opt_name, array(
 ));
 /* Social Media */
 Redux::setSection($opt_name, array(
-    'title'      => esc_html__('Social Media', 'alacarte'),
-    'desc'       => esc_html__('Add your socials network', 'alacarte'),
+    'title'      => esc_html__('Social Media', 'sunix'),
+    'desc'       => esc_html__('Add your socials network', 'sunix'),
     'icon'       => 'el el-twitter',
     'subsection' => false,
     'fields'     => array(
         array(
             'id'      => 'social_facebook_url',
             'type'    => 'text',
-            'title'   => esc_html__('Facebook URL', 'alacarte'),
+            'title'   => esc_html__('Facebook URL', 'sunix'),
             'default' => '',
         ),
         array(
             'id'      => 'social_twitter_url',
             'type'    => 'text',
-            'title'   => esc_html__('Twitter URL', 'alacarte'),
+            'title'   => esc_html__('Twitter URL', 'sunix'),
             'default' => '',
         ),
         array(
             'id'      => 'social_inkedin_url',
             'type'    => 'text',
-            'title'   => esc_html__('Inkedin URL', 'alacarte'),
+            'title'   => esc_html__('Inkedin URL', 'sunix'),
             'default' => '',
         ),
         array(
             'id'      => 'social_rss_url',
             'type'    => 'text',
-            'title'   => esc_html__('Rss URL', 'alacarte'),
+            'title'   => esc_html__('Rss URL', 'sunix'),
             'default' => '',
         ),
         array(
             'id'      => 'social_instagram_url',
             'type'    => 'text',
-            'title'   => esc_html__('Instagram URL', 'alacarte'),
+            'title'   => esc_html__('Instagram URL', 'sunix'),
             'default' => '',
         ),
         array(
             'id'      => 'social_google_url',
             'type'    => 'text',
-            'title'   => esc_html__('Google URL', 'alacarte'),
+            'title'   => esc_html__('Google URL', 'sunix'),
             'default' => '',
         ),
         array(
             'id'      => 'social_skype_url',
             'type'    => 'text',
-            'title'   => esc_html__('Skype URL', 'alacarte'),
+            'title'   => esc_html__('Skype URL', 'sunix'),
             'default' => '',
         ),
         array(
             'id'      => 'social_pinterest_url',
             'type'    => 'text',
-            'title'   => esc_html__('Pinterest URL', 'alacarte'),
+            'title'   => esc_html__('Pinterest URL', 'sunix'),
             'default' => '',
         ),
         array(
             'id'      => 'social_vimeo_url',
             'type'    => 'text',
-            'title'   => esc_html__('Vimeo URL', 'alacarte'),
+            'title'   => esc_html__('Vimeo URL', 'sunix'),
             'default' => '',
         ),
         array(
             'id'      => 'social_youtube_url',
             'type'    => 'text',
-            'title'   => esc_html__('Youtube URL', 'alacarte'),
+            'title'   => esc_html__('Youtube URL', 'sunix'),
             'default' => '',
         ),
         array(
             'id'      => 'social_yelp_url',
             'type'    => 'text',
-            'title'   => esc_html__('Yelp URL', 'alacarte'),
+            'title'   => esc_html__('Yelp URL', 'sunix'),
             'default' => '',
         ),
         array(
             'id'      => 'social_tumblr_url',
             'type'    => 'text',
-            'title'   => esc_html__('Tumblr URL', 'alacarte'),
+            'title'   => esc_html__('Tumblr URL', 'sunix'),
             'default' => '',
         ),
         array(
             'id'      => 'social_tripadvisor_url',
             'type'    => 'text',
-            'title'   => esc_html__('Tripadvisor URL', 'alacarte'),
+            'title'   => esc_html__('Tripadvisor URL', 'sunix'),
             'default' => '',
         ),
     )
@@ -752,18 +752,18 @@ Redux::setSection($opt_name, array(
  * @since 1.0.0
  */
 Redux::setSection($opt_name, array(
-    'title'  => esc_html__('API', 'alacarte'),
+    'title'  => esc_html__('API', 'sunix'),
     'icon'   => 'dashicons dashicons-share',
     'fields' => array()
 ));
 Redux::setSection($opt_name, array(
-    'title'      => esc_html__('Google Maps', 'alacarte'),
+    'title'      => esc_html__('Google Maps', 'sunix'),
     'icon'       => 'dashicons dashicons-googleplus',
-    'desc'      => sprintf(__('Click here to <a href="%s" target="_blank">Get your google API key</a>','alacarte'), 'https://developers.google.com/maps/documentation/javascript/get-api-key'),
+    'desc'      => sprintf(__('Click here to <a href="%s" target="_blank">Get your google API key</a>','sunix'), 'https://developers.google.com/maps/documentation/javascript/get-api-key'),
     'subsection' => true,
     'fields'     => array(
         array(
-            'title'     => esc_html__('API Key', 'alacarte'),
+            'title'     => esc_html__('API Key', 'sunix'),
             'id'        => 'google_api_key',
             'type'      => 'text',
             'default'   => '',
@@ -771,31 +771,31 @@ Redux::setSection($opt_name, array(
     )
 ));
 Redux::setSection($opt_name, array(
-    'title'      => esc_html__('Twitter', 'alacarte'),
+    'title'      => esc_html__('Twitter', 'sunix'),
     'icon'       => 'dashicons dashicons-twitter',
     'subsection' => true,
     'fields'     => array(
         
         array(
-            'title'     => esc_html__('Consumer Key (API Key)', 'alacarte'),
+            'title'     => esc_html__('Consumer Key (API Key)', 'sunix'),
             'id'        => 'twitter_api_consumer_key',
             'type'      => 'text',
             'default'   => 'i90SevLFwZDscXPo3Wj89Y4eO',
         ),
         array(
-            'title'     => esc_html__('Consumer Secret (API Secret)', 'alacarte'),
+            'title'     => esc_html__('Consumer Secret (API Secret)', 'sunix'),
             'id'        => 'twitter_api_consumer_secret',
             'type'      => 'text',
             'default'   => '61AmOoAxacZeQneXjCOzKZGRwXwcRFgMsIhhYnQ5JTAOvMdlmL',
         ),
         array(
-            'title'     => esc_html__('Access Token', 'alacarte'),
+            'title'     => esc_html__('Access Token', 'sunix'),
             'id'        => 'twitter_api_access_key',
             'type'      => 'text',
             'default'   => '107960275-v9RLlUdpW7xW0wbh0Xtg8X2mVFbaCDtFNAs8vwAc',
         ),
         array(
-            'title'     => esc_html__('Access Token Secret', 'alacarte'),
+            'title'     => esc_html__('Access Token Secret', 'sunix'),
             'id'        => 'twitter_api_access_secret',
             'type'      => 'text',
             'default'   => 'VewAXAcJEyDpqlrDfDO40HbRq6rzkYPEHgXz3WNhxAbSv',
@@ -804,18 +804,18 @@ Redux::setSection($opt_name, array(
             'id'        => 'twitter_api_dasboard',
             'type'      => 'info',
             'style'     => 'warning',
-            'desc'      => sprintf(__('These details are available in <a href="%s" target="_blank">Your Twitter dashboard</a>','alacarte'), 'https://dev.twitter.com/apps')
+            'desc'      => sprintf(__('These details are available in <a href="%s" target="_blank">Your Twitter dashboard</a>','sunix'), 'https://dev.twitter.com/apps')
         ),
     )
 ));
 Redux::setSection($opt_name, array(
-    'title'      => esc_html__('Instagram', 'alacarte'),
+    'title'      => esc_html__('Instagram', 'sunix'),
     'icon'       => 'el el-instagram',
     'subsection' => true,
     'fields'     => array(
         array(
-            'title'     => esc_html__('User ID', 'alacarte'),
-            'desc'      => esc_html__('Ex: https://www.instagram.com/zooka.studio/. Get zooka.studio','alacarte'),
+            'title'     => esc_html__('User ID', 'sunix'),
+            'desc'      => esc_html__('Ex: https://www.instagram.com/zooka.studio/. Get zooka.studio','sunix'),
             'id'        => 'instagram_api_username',
             'type'      => 'text',
             'default'   => 'thuylinh3112507'
@@ -827,66 +827,66 @@ Redux::setSection($opt_name, array(
 # Footer
 --------------------------------------------------------------*/
 
-Redux::setSection($opt_name, alacarte_footer_opts());
+Redux::setSection($opt_name, sunix_footer_opts());
 
 /**
  # WooCommerce
 */
-Redux::setSection($opt_name, alacarte_woocommerce_theme_opts());
+Redux::setSection($opt_name, sunix_woocommerce_theme_opts());
 Redux::setSection($opt_name, array(
-    'title' => esc_html__('Shop Product page', 'alacarte'),
+    'title' => esc_html__('Shop Product page', 'sunix'),
     'icon' => 'el el-shopping-cart',
     'subsection'    => true,
     'fields' => array(
         array(
             'id'       => 'woo_shop_sidebar_pos',
             'type'     => 'button_set',
-            'title'    => esc_html__('Sidebar Position', 'alacarte'),
-            'subtitle' => esc_html__('Select a sidebar position for single product', 'alacarte'),
+            'title'    => esc_html__('Sidebar Position', 'sunix'),
+            'subtitle' => esc_html__('Select a sidebar position for single product', 'sunix'),
             'options'  => array(
-                'left'  => esc_html__('Left', 'alacarte'),
-                'right' => esc_html__('Right', 'alacarte'),
-                'none'  => esc_html__('Disabled', 'alacarte')
+                'left'  => esc_html__('Left', 'sunix'),
+                'right' => esc_html__('Right', 'sunix'),
+                'none'  => esc_html__('Disabled', 'sunix')
             ),
             'default'  => 'right'
         ),
         array(
             'id'          => 'woo_archive_footer_layout',
             'type'        => 'image_select',
-            'title'       => esc_html__('Layout Footer', 'alacarte'),
-            'subtitle'    => esc_html__('Select a layout footer for archive product page.', 'alacarte'),
-            'desc'        => sprintf(esc_html__('To use this Option please %sClick Here%s to add your custom footer layout first.','alacarte'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=alacarte_footer' ) ) . '">','</a>'),
-            'placeholder' => esc_html__('Default','alacarte'),
-            'options'     => alacarte_list_post_thumbnail('ef5_footer', ''),
+            'title'       => esc_html__('Layout Footer', 'sunix'),
+            'subtitle'    => esc_html__('Select a layout footer for archive product page.', 'sunix'),
+            'desc'        => sprintf(esc_html__('To use this Option please %sClick Here%s to add your custom footer layout first.','sunix'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=sunix_footer' ) ) . '">','</a>'),
+            'placeholder' => esc_html__('Default','sunix'),
+            'options'     => sunix_list_post_thumbnail('ef5_footer', ''),
             'default'     => '1',
         ),
     )
 ));
 Redux::setSection($opt_name, array(
-    'title' => esc_html__('Single Product page', 'alacarte'),
+    'title' => esc_html__('Single Product page', 'sunix'),
     'icon' => 'el el-shopping-cart',
     'subsection'    => true,
     'fields' => array(
         array(
             'id'       => 'woo_single_sidebar_pos',
             'type'     => 'button_set',
-            'title'    => esc_html__('Sidebar Position', 'alacarte'),
-            'subtitle' => esc_html__('Select a sidebar position for single product', 'alacarte'),
+            'title'    => esc_html__('Sidebar Position', 'sunix'),
+            'subtitle' => esc_html__('Select a sidebar position for single product', 'sunix'),
             'options'  => array(
-                'left'  => esc_html__('Left', 'alacarte'),
-                'right' => esc_html__('Right', 'alacarte'),
-                'none'  => esc_html__('Disabled', 'alacarte')
+                'left'  => esc_html__('Left', 'sunix'),
+                'right' => esc_html__('Right', 'sunix'),
+                'none'  => esc_html__('Disabled', 'sunix')
             ),
             'default'  => 'none'
         ),
         array(
             'id'          => 'woo_single_footer_layout',
             'type'        => 'image_select',
-            'title'       => esc_html__('Layout Footer', 'alacarte'),
-            'subtitle'    => esc_html__('Select a layout footer for Single Product Page.', 'alacarte'),
-            'desc'        => sprintf(esc_html__('To use this Option please %sClick Here%s to add your custom footer layout first.','alacarte'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=alacarte_footer' ) ) . '">','</a>'),
-            'placeholder' => esc_html__('Default','alacarte'),
-            'options'     => alacarte_list_post_thumbnail('ef5_footer', ''),
+            'title'       => esc_html__('Layout Footer', 'sunix'),
+            'subtitle'    => esc_html__('Select a layout footer for Single Product Page.', 'sunix'),
+            'desc'        => sprintf(esc_html__('To use this Option please %sClick Here%s to add your custom footer layout first.','sunix'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=sunix_footer' ) ) . '">','</a>'),
+            'placeholder' => esc_html__('Default','sunix'),
+            'options'     => sunix_list_post_thumbnail('ef5_footer', ''),
             'default'     => '2',
         ),
     )
@@ -895,26 +895,26 @@ Redux::setSection($opt_name, array(
 # Development
 --------------------------------------------------------------*/
 Redux::setSection($opt_name, array(
-    'title'  => esc_html__('Development Tools', 'alacarte'),
+    'title'  => esc_html__('Development Tools', 'sunix'),
     'icon'   => 'el-icon-edit',
     'fields' => array(
         array(
             'id'       => 'gutenberg',
             'type'     => 'switch',
-            'title'    => esc_html__('Gutenberg Editor', 'alacarte'),
-            'subtitle' => esc_html__('Choose Default to use default Editor from WordPress or other plugin like Visual Composer, WPBakery Page Builder, Classic Editor,...', 'alacarte'),
-            'description' => esc_html__('Disable option will remove Gutenberg Editor', 'alacarte'),
-            'on'       => esc_html__('Default', 'alacarte'),
-            'off'      => esc_html__('Disable', 'alacarte'),
+            'title'    => esc_html__('Gutenberg Editor', 'sunix'),
+            'subtitle' => esc_html__('Choose Default to use default Editor from WordPress or other plugin like Visual Composer, WPBakery Page Builder, Classic Editor,...', 'sunix'),
+            'description' => esc_html__('Disable option will remove Gutenberg Editor', 'sunix'),
+            'on'       => esc_html__('Default', 'sunix'),
+            'off'      => esc_html__('Disable', 'sunix'),
             'default'  => true
         ),
         array(
             'id'          => 'dev_mode',
             'type'        => 'switch',
             'default'     => true,
-            'title'       => esc_html__('Development Mode', 'alacarte'),
-            'subtitle'    => esc_html__('Not Recommended', 'alacarte'),
-            'description' => esc_html__('When it is ON, the css will be passed from sccc in all time.', 'alacarte'),
+            'title'       => esc_html__('Development Mode', 'sunix'),
+            'subtitle'    => esc_html__('Not Recommended', 'sunix'),
+            'description' => esc_html__('When it is ON, the css will be passed from sccc in all time.', 'sunix'),
         )
     ),
 ));

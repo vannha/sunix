@@ -3,7 +3,7 @@
 		"name"            => 'Red Reservation ',
 		"base"            => "reservation",
 		'icon'         => 'red_el_icon',
-		"category"        => esc_html__( 'RedExp', 'alacarte' ),
+		"category"        => esc_html__( 'RedExp', 'sunix' ),
 		"params" => array(
 		),
 	) );

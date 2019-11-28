@@ -38,13 +38,13 @@
     }
 
     if ($id != '') {
-        $media_array = $this->alacarte_el_instagram($id, $api, $limit);
+        $media_array = $this->sunix_el_instagram($id, $api, $limit);
         if ( is_wp_error($media_array) ) {
            echo esc_html($media_array->get_error_message());
         } else {
             // filter for images only?
-            if ( $images_only = apply_filters( 'alacarte_instagram_images_only', FALSE ) )
-                $media_array = array_filter( $media_array, array( $this, 'alacarte_instsgram_images_only' ) );
+            if ( $images_only = apply_filters( 'sunix_instagram_images_only', FALSE ) )
+                $media_array = array_filter( $media_array, array( $this, 'sunix_instsgram_images_only' ) );
 
             ?>
             <div class="<?php echo trim(implode(' ', array('red-instagram', $layout, $el_class))); ?>">
@@ -72,7 +72,7 @@
                 </div>
                 <?php  if ($el_show_author) {
                     ?><div class="user">
-                    <a href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr( $target ); ?>"> <?php if($show_text_follow) echo esc_html__('Follow us ','alacarte');?> <?php if(!empty($el_author_text)) echo '<span class="author-text">'.esc_html($el_author_text).'</span>'; ?> </span></a></div><?php
+                    <a href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr( $target ); ?>"> <?php if($show_text_follow) echo esc_html__('Follow us ','sunix');?> <?php if(!empty($el_author_text)) echo '<span class="author-text">'.esc_html($el_author_text).'</span>'; ?> </span></a></div><?php
                 } ?>
             </div>
             <?php

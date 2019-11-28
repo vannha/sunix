@@ -11,26 +11,26 @@ if ( 'vc_edit_form' === vc_post_param( 'action' ) && vc_verify_admin_nonce() ) {
     }
 }
 vc_map(array(
-    'name'        => 'AlaCarte Custom Menu',
+    'name'        => 'sunix Custom Menu',
     'base'        => 'red_wp_menu',
-    'category'    => esc_html__('RedExp', 'alacarte'),
-    'description' => esc_html__('Use this element to add one of your custom menus', 'alacarte'),
+    'category'    => esc_html__('RedExp', 'sunix'),
+    'description' => esc_html__('Use this element to add one of your custom menus', 'sunix'),
     'icon'        => 'icon-wpb-wp',
     'params'      => array_merge(
     	array(
 	        array(
 			    'type'        => 'dropdown',
-			    'heading'     => esc_html__( 'Menu', 'alacarte' ),
+			    'heading'     => esc_html__( 'Menu', 'sunix' ),
 			    'param_name'  => 'nav_menu',
 			    'value'       => $custom_menus,
-			    'description' => empty( $custom_menus ) ? esc_html__( 'Custom menus not found. Please visit <b>Appearance > Menus</b> page to create new menu.', 'alacarte' ) : esc_html__( 'Select menu to display.', 'alacarte' ),
+			    'description' => empty( $custom_menus ) ? esc_html__( 'Custom menus not found. Please visit <b>Appearance > Menus</b> page to create new menu.', 'sunix' ) : esc_html__( 'Select menu to display.', 'sunix' ),
 			    'admin_label' => true,
 			    'save_always' => true,
 			),
             array(
                 'type'          => 'textfield',
-                'heading'       => esc_html__('Title','alacarte'),
-                'description'   => esc_html__('What text use as a title. Leave blank to use menu title created in Menu Manager','alacarte'),
+                'heading'       => esc_html__('Title','sunix'),
+                'description'   => esc_html__('What text use as a title. Leave blank to use menu title created in Menu Manager','sunix'),
                 'param_name'    => 'title',
                 'value'         => '',
                 'std'           => '',
@@ -39,45 +39,45 @@ vc_map(array(
                 'type'       => 'checkbox',
                 'param_name' => 'show_title_on_desktop',
                 'value'      => array(
-                    esc_html__('Show Title On Large Screen?','alacarte') => '1'
+                    esc_html__('Show Title On Large Screen?','sunix') => '1'
                 ),
                 'std'        => '1',
-                'description'=> esc_html__('The title will always show on small srceen! This option to make sure you want to show title on large screen or not?','alacarte'),
+                'description'=> esc_html__('The title will always show on small srceen! This option to make sure you want to show title on large screen or not?','sunix'),
             ),
 			array(
 				'type'        => 'el_id',
-				'heading'     => esc_html__( 'Element ID', 'alacarte' ),
+				'heading'     => esc_html__( 'Element ID', 'sunix' ),
 				'param_name'  => 'el_id',
-				'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'alacarte' ), 'http://www.w3schools.com/tags/att_global_id.asp' ),
+				'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'sunix' ), 'http://www.w3schools.com/tags/att_global_id.asp' ),
 			),
 			array(
 				'type'        => 'textfield',
-				'heading'     => esc_html__( 'Extra class name', 'alacarte' ),
+				'heading'     => esc_html__( 'Extra class name', 'sunix' ),
 				'param_name'  => 'el_class',
-				'description' => __( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'alacarte' ),
+				'description' => __( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'sunix' ),
 			),
             array(
                 'type'       => 'dropdown',
-                'heading'    => esc_html__('Layout Mode','alacarte'),
+                'heading'    => esc_html__('Layout Mode','sunix'),
                 'param_name' => 'layout_mode',
                 'value'      =>  array(
-                    esc_html__('Vertical','alacarte')   => 'vertical',
-                    esc_html__('Vertical (2 Columns)','alacarte')   => 'vertical two-col',
-                    esc_html__('Horizontal','alacarte') => 'horizontal',
-                    esc_html__('Horizontal and Center','alacarte') => 'horizontal justify-content-center',
+                    esc_html__('Vertical','sunix')   => 'vertical',
+                    esc_html__('Vertical (2 Columns)','sunix')   => 'vertical two-col',
+                    esc_html__('Horizontal','sunix') => 'horizontal',
+                    esc_html__('Horizontal and Center','sunix') => 'horizontal justify-content-center',
                 ),
                 'std'        => 'vertical',
                 'admin_label' => true,
-                'group' => esc_html__('Layout','alacarte')
+                'group' => esc_html__('Layout','sunix')
             ),
             array(
                 'type'       => 'checkbox',
                 'param_name' => 'add_divider',
                 'value'      => array(
-                    esc_html__('Add Divider','alacarte') => 'add-divider'
+                    esc_html__('Add Divider','sunix') => 'add-divider'
                 ),
                 'std'        => '',
-                'group' => esc_html__('Layout','alacarte')
+                'group' => esc_html__('Layout','sunix')
             ),
     	)
     )

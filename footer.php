@@ -3,15 +3,15 @@
  * The template for displaying the footer.
  * Contains the closing of the #content div and all content after.
  *
- * @package AlaCarte
- * @subpackage AlaCarte
+ * @package sunix
+ * @subpackage sunix
  * @since 1.0.0
  * @author EF5 Team
  *
  */
 ?>
     </main>
-    <?php alacarte_footer(); ?>
+    <?php sunix_footer(); ?>
 </div>
 <?php wp_footer(); ?>
 </body>

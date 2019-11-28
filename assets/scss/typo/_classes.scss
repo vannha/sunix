@@ -74,7 +74,7 @@ $font-styles: (
 
 @each $name , $style in $font-styles {
     .font-style-#{$name}{
-        font-weight: alacarte_string_to_number($name);
+        font-weight: sunix_string_to_number($name);
         @if $style != '' {
             font-style: $style;
         }

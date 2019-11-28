@@ -18,16 +18,16 @@ remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add
 /**
  * rewrite html  output
 */
-if(!function_exists('alacarte_woocommerce_shop_loop_products')){
-	add_action('woocommerce_before_shop_loop_item','alacarte_woocommerce_shop_loop_products', 0);
-	function alacarte_woocommerce_shop_loop_products(){
+if(!function_exists('sunix_woocommerce_shop_loop_products')){
+	add_action('woocommerce_before_shop_loop_item','sunix_woocommerce_shop_loop_products', 0);
+	function sunix_woocommerce_shop_loop_products(){
 	?>
 		<div class="red-loop-products transition hoverdir-wrap push text-center">
-			<?php do_action('alacarte_woocommerce_before_shop_loop_products_inner') ?>
+			<?php do_action('sunix_woocommerce_before_shop_loop_products_inner') ?>
 			<div class="red-loop-products-inner">
-				<?php do_action('alacarte_woocommerce_shop_loop_products'); ?>
+				<?php do_action('sunix_woocommerce_shop_loop_products'); ?>
 			</div>
-			<?php do_action('alacarte_woocommerce_after_shop_loop_products_inner') ?>
+			<?php do_action('sunix_woocommerce_after_shop_loop_products_inner') ?>
 		</div>
 	<?php
 	}
@@ -39,9 +39,9 @@ if(!function_exists('alacarte_woocommerce_shop_loop_products')){
  * animate style: push, slide,slide-top, fade-in
  *
 */
-if(!function_exists('alacarte_woocommerce_loop_product_thumbnail')){
-	add_action('alacarte_woocommerce_shop_loop_products','alacarte_woocommerce_loop_product_thumbnail',1);
-	function alacarte_woocommerce_loop_product_thumbnail(){
+if(!function_exists('sunix_woocommerce_loop_product_thumbnail')){
+	add_action('sunix_woocommerce_shop_loop_products','sunix_woocommerce_loop_product_thumbnail',1);
+	function sunix_woocommerce_loop_product_thumbnail(){
 		global $product;
 		$image_size = apply_filters( 'single_product_archive_thumbnail_size', 'woocommerce_thumbnail' );
         $gallery   = get_post_meta( $product->get_id(), '_product_image_gallery', true );
@@ -56,14 +56,14 @@ if(!function_exists('alacarte_woocommerce_loop_product_thumbnail')){
         }
 	?>
 		<div class="red-wc-loop-images">
-			<div class="red-wc-loop-before-img"><?php do_action('alacarte_before_woocommerce_loop_product_thumbnail'); ?></div>
+			<div class="red-wc-loop-before-img"><?php do_action('sunix_before_woocommerce_loop_product_thumbnail'); ?></div>
 			<div class="red-wc-loop-img">
 				<?php 
 					echo '<div class="static-content">'.woocommerce_get_product_thumbnail().'</div>';
-					echo '<div class="hover-content no-padding">'.alacarte_html($hover_img).'</div>';
+					echo '<div class="hover-content no-padding">'.sunix_html($hover_img).'</div>';
 				?>
 			</div>
-			<div class="red-wc-loop-after-img"><?php do_action('alacarte_after_woocommerce_loop_product_thumbnail'); ?></div>
+			<div class="red-wc-loop-after-img"><?php do_action('sunix_after_woocommerce_loop_product_thumbnail'); ?></div>
 		</div>
 	<?php
 	}
@@ -71,13 +71,13 @@ if(!function_exists('alacarte_woocommerce_loop_product_thumbnail')){
 /**
  * Loop Product Rating
 */
-add_action('alacarte_woocommerce_shop_loop_products','woocommerce_template_loop_rating',3);
+add_action('sunix_woocommerce_shop_loop_products','woocommerce_template_loop_rating',3);
 
 /**
  * Change loop Product title
 */
 if ( ! function_exists( 'woocommerce_template_loop_product_title' ) ) {
-	add_action('alacarte_woocommerce_shop_loop_products', 'woocommerce_template_loop_product_title', 2);
+	add_action('sunix_woocommerce_shop_loop_products', 'woocommerce_template_loop_product_title', 2);
 	/**
 	 * Show the product title in the product loop. By default this is an H2.
 	 */
@@ -89,9 +89,9 @@ if ( ! function_exists( 'woocommerce_template_loop_product_title' ) ) {
 /**
  * Loop Product Price
 */
-if(!function_exists('alacarte_woocommerce_template_loop_price')){
-	add_action('alacarte_woocommerce_shop_loop_products','alacarte_woocommerce_template_loop_price',4);
-	function alacarte_woocommerce_template_loop_price(){
+if(!function_exists('sunix_woocommerce_template_loop_price')){
+	add_action('sunix_woocommerce_shop_loop_products','sunix_woocommerce_template_loop_price',4);
+	function sunix_woocommerce_template_loop_price(){
 	?>
 		<div class="red-loop-products-price red-heading font-style-700 text-accent"><?php
 			global $product;
@@ -105,13 +105,13 @@ if(!function_exists('alacarte_woocommerce_template_loop_price')){
 /**
  * Loop Product Add to cart
 */
-if(!function_exists('alacarte_woocommerce_loop_product_add_to_cart')){
-	add_action('alacarte_woocommerce_shop_loop_products','alacarte_woocommerce_loop_product_add_to_cart',1);
-	add_action('alacarte_woocommerce_loop_product_add_to_cart', 'woocommerce_template_loop_add_to_cart');
-	function alacarte_woocommerce_loop_product_add_to_cart(){
+if(!function_exists('sunix_woocommerce_loop_product_add_to_cart')){
+	add_action('sunix_woocommerce_shop_loop_products','sunix_woocommerce_loop_product_add_to_cart',1);
+	add_action('sunix_woocommerce_loop_product_add_to_cart', 'woocommerce_template_loop_add_to_cart');
+	function sunix_woocommerce_loop_product_add_to_cart(){
 		?>
 		<div class="red-loop-product-add-to-cart">
-			<?php do_action('alacarte_woocommerce_loop_product_add_to_cart'); ?>
+			<?php do_action('sunix_woocommerce_loop_product_add_to_cart'); ?>
 		</div>
 		<?php
 	}
@@ -133,9 +133,9 @@ function filter_woocommerce_loop_add_to_cart_args( $args, $product ) {
 /**
  * Filter change html output structure
  * Just add span tag
- * @example add_filter('woocommerce_loop_add_to_cart_link', 'alacarte_woocommerce_loop_add_to_cart_link', 10, 3);
+ * @example add_filter('woocommerce_loop_add_to_cart_link', 'sunix_woocommerce_loop_add_to_cart_link', 10, 3);
 */
-function alacarte_woocommerce_loop_add_to_cart_link( $html, $product, $args=[]){
+function sunix_woocommerce_loop_add_to_cart_link( $html, $product, $args=[]){
 	$args = wp_parse_args($args, [
         'attributes'=>[]
     ]);
@@ -152,8 +152,8 @@ function alacarte_woocommerce_loop_add_to_cart_link( $html, $product, $args=[]){
 /**
  * Override loop template and show quantities next to add to cart buttons
  */
-//add_filter( 'woocommerce_loop_add_to_cart_link', 'alacarte_quantity_inputs_for_woocommerce_loop_add_to_cart_link', 10, 2 );
-function alacarte_quantity_inputs_for_woocommerce_loop_add_to_cart_link( $html, $product ) {
+//add_filter( 'woocommerce_loop_add_to_cart_link', 'sunix_quantity_inputs_for_woocommerce_loop_add_to_cart_link', 10, 2 );
+function sunix_quantity_inputs_for_woocommerce_loop_add_to_cart_link( $html, $product ) {
 	if ( $product && $product->is_type( 'simple' ) && $product->is_purchasable() && $product->is_in_stock() && ! $product->is_sold_individually() ) {
 		$html = '<form action="' . esc_url( $product->add_to_cart_url() ) . '" class="cart" method="post" enctype="multipart/form-data">';
 		$html .= woocommerce_quantity_input( array(), $product, false );

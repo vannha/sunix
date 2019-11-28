@@ -15,7 +15,7 @@ $css_class_attr[] = 'red-menu-simple';
 $item_class[] = 'menu-item';
 
 if($layout_style === 'carousel'){
-    $wrap_css_class[] = alacarte_owl_css_class($atts);
+    $wrap_css_class[] = sunix_owl_css_class($atts);
     $css_class_attr[] = 'red-owl team-carousel owl-carousel';
     $item_class[]     = 'red-carousel-item';
 } else {
@@ -67,7 +67,7 @@ $number_row= (!empty($number_row) && is_numeric($number_row) && $number_row> 0) 
                                                 </span>
                                             </div>
 
-                                            <div class="content-desc"><?php   echo alacarte_get_limit_str($post->post_content, 0,200); ?> </div>
+                                            <div class="content-desc"><?php   echo sunix_get_limit_str($post->post_content, 0,200); ?> </div>
                                         </div>
                                     </div>
                                 </div>
@@ -85,10 +85,10 @@ $number_row= (!empty($number_row) && is_numeric($number_row) && $number_row> 0) 
                          <?php } ?>
                     </div>
                     <?php if($layout_style === 'carousel') {
-                        alacarte_loading_animation();
-                        alacarte_owl_dots_container($atts);
-                        alacarte_owl_nav_container($atts);
-                        alacarte_owl_dots_in_nav_container($atts);
+                        sunix_loading_animation();
+                        sunix_owl_dots_container($atts);
+                        sunix_owl_nav_container($atts);
+                        sunix_owl_dots_in_nav_container($atts);
                     } ?>
                 </div>
 

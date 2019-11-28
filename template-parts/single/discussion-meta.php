@@ -4,14 +4,14 @@
  */
 
 /* Get data from current discussion on post. */
-$discussion    = alacarte_get_discussion_data();
+$discussion    = sunix_get_discussion_data();
 $has_responses = $discussion->responses > 0;
 
 if ( $has_responses ) {
 	/* translators: %1(X comments)$s */
-	$meta_label = sprintf( _n( '%d Comment', '%d Comments', $discussion->responses, 'alacarte' ), $discussion->responses );
+	$meta_label = sprintf( _n( '%d Comment', '%d Comments', $discussion->responses, 'sunix' ), $discussion->responses );
 } else {
-	$meta_label = __( 'No comments', 'alacarte' );
+	$meta_label = __( 'No comments', 'sunix' );
 }
 
 ?>
@@ -19,7 +19,7 @@ if ( $has_responses ) {
 <div class="discussion-meta">
 	<?php
 	if ( $has_responses ) {
-		//alacarte_discussion_avatars_list( $discussion->authors );
+		//sunix_discussion_avatars_list( $discussion->authors );
 	}
 	?>
 	<h4 class="discussion-meta-info">

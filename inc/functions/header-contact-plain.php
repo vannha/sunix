@@ -3,8 +3,8 @@
  * Header Contact Button
  * @since 1.0.0 
 */
-if(!function_exists('alacarte_header_contact_plain_text')){
-	function alacarte_header_contact_plain_text($args = []){
+if(!function_exists('sunix_header_contact_plain_text')){
+	function sunix_header_contact_plain_text($args = []){
 		$args = wp_parse_args($args, [
 			'before'      => '',
 			'after'       => '',
@@ -14,22 +14,22 @@ if(!function_exists('alacarte_header_contact_plain_text')){
 			'inner_class' => 'row gutters-20 align-items-center',
 			'page_only'	  => false
 		]);
-		$header_contact_plain = alacarte_get_opts('header_contact_plain', '0');
+		$header_contact_plain = sunix_get_opts('header_contact_plain', '0');
 		if($header_contact_plain !== '1') return;
 
 		wp_enqueue_style( 'font-linear' );
 
-		$header_contact_plain_icon1 = alacarte_get_opts('header_contact_plain_icon1', '',$args['page_only']);
-		$header_contact_plain_icon2 = alacarte_get_opts('header_contact_plain_icon2', '',$args['page_only']);
-		$header_contact_plain_icon3 = alacarte_get_opts('header_contact_plain_icon3', '',$args['page_only']);
+		$header_contact_plain_icon1 = sunix_get_opts('header_contact_plain_icon1', '',$args['page_only']);
+		$header_contact_plain_icon2 = sunix_get_opts('header_contact_plain_icon2', '',$args['page_only']);
+		$header_contact_plain_icon3 = sunix_get_opts('header_contact_plain_icon3', '',$args['page_only']);
 
-		$header_contact_plain_text1 = alacarte_get_opts('header_contact_plain_text1', '',$args['page_only']);
-		$header_contact_plain_text2 = alacarte_get_opts('header_contact_plain_text2', '',$args['page_only']);
-		$header_contact_plain_text3 = alacarte_get_opts('header_contact_plain_text3', '',$args['page_only']);
+		$header_contact_plain_text1 = sunix_get_opts('header_contact_plain_text1', '',$args['page_only']);
+		$header_contact_plain_text2 = sunix_get_opts('header_contact_plain_text2', '',$args['page_only']);
+		$header_contact_plain_text3 = sunix_get_opts('header_contact_plain_text3', '',$args['page_only']);
 
-		$header_contact_plain_subtext1 = alacarte_get_opts('header_contact_plain_subtext1', '',$args['page_only']);
-		$header_contact_plain_subtext2 = alacarte_get_opts('header_contact_plain_subtext2', '',$args['page_only']);
-		$header_contact_plain_subtext3 = alacarte_get_opts('header_contact_plain_subtext3', '',$args['page_only']);
+		$header_contact_plain_subtext1 = sunix_get_opts('header_contact_plain_subtext1', '',$args['page_only']);
+		$header_contact_plain_subtext2 = sunix_get_opts('header_contact_plain_subtext2', '',$args['page_only']);
+		$header_contact_plain_subtext3 = sunix_get_opts('header_contact_plain_subtext3', '',$args['page_only']);
 
 		printf('%1$s<div class="red-qc red-qc-%2$s row %3$s">', $args['before'], $args['layout'], $args['class']);
 		for ($i=1; $i < 4 ; $i++) {
@@ -76,13 +76,13 @@ if(!function_exists('alacarte_header_contact_plain_text')){
 	}
 }
 
-function alacarte_header_contact_plain_icon($args = []){
+function sunix_header_contact_plain_icon($args = []){
 	$args = wp_parse_args($args, [
 		'before' => '',
 		'after'  => '',
 		'icon'	 => 'fal fa-phone fa-rotate-90'
 	]);
-	$show_contact = alacarte_get_opts('header_contact_plain', '0');
+	$show_contact = sunix_get_opts('header_contact_plain', '0');
 	if($show_contact !== '1') return;
 
 	printf('%s', $args['before']);
@@ -92,12 +92,12 @@ function alacarte_header_contact_plain_icon($args = []){
 	printf('%s', $args['after']);
 }
 
-function alacarte_header_contact_plain_popup_html(){
-	$show_contact = alacarte_get_opts('header_contact_plain', '0');
+function sunix_header_contact_plain_popup_html(){
+	$show_contact = sunix_get_opts('header_contact_plain', '0');
 	if($show_contact !== '1') return;
 ?>
 	<div id="red-header-contact-plain" class="mfp-hide container"><div class="row justify-content-center"><div class="col-auto">
-		<?php alacarte_header_contact_plain_text([
+		<?php sunix_header_contact_plain_text([
 			'layout'      => '1', 
 			'class'       => 'gutters-80', 
 			'inner_class' => 'row gutters-20 align-items-center',
@@ -106,4 +106,4 @@ function alacarte_header_contact_plain_popup_html(){
 	</div></div></div>
 <?php
 }
-add_action('wp_footer','alacarte_header_contact_plain_popup_html');
+add_action('wp_footer','sunix_header_contact_plain_popup_html');

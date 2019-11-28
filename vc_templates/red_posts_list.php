@@ -13,7 +13,7 @@
     $css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $css_classes ) ), $this->settings['base'], $atts ) );
 
     /* Post query */
-    $tax_query = alacarte_tax_query($post_type, $taxonomies, $taxonomies_exclude);
+    $tax_query = sunix_tax_query($post_type, $taxonomies, $taxonomies_exclude);
     if ( get_query_var('paged') ) {
         $paged = get_query_var('paged');
     } elseif ( get_query_var('page') ) { 
@@ -46,7 +46,7 @@
         <?php
             switch ($layout_template) {
                 case '3': ?>
-                    <article class="<?php echo alacarte_optimize_css_class(implode(' ', $item_css_class)); ?> clearfix">
+                    <article class="<?php echo sunix_optimize_css_class(implode(' ', $item_css_class)); ?> clearfix">
                         <div class="event-date">
                             <div class="day h2"> <?php echo get_the_modified_date('d');?> </div>
                             <div class="date-right">
@@ -56,7 +56,7 @@
 
                         </div>
                         <?php
-                        alacarte_post_header([
+                        sunix_post_header([
                             'heading_tag' => 'h3',
                             'before_args' => ['show_cat'=> '0','show_date'=> '0'],
                             'after_args'  => ['show_cat' => '0','show_author' => '0', 'show_date'=> '0', 'show_cmt' => '0', 'show_view' => '0', 'show_like' => '0', 'sep' => '/' ]]);
@@ -64,12 +64,12 @@
                         ?>
 
                         <a href="#form-app-popup" class="mfp-inline red-btn primary fill">
-                            <?php echo esc_html('Book a Table','alacarte'); ?>
+                            <?php echo esc_html('Book a Table','sunix'); ?>
                         </a>
                     </article>
                     <?php  break;
                 case '2': ?>
-                    <article class="<?php echo alacarte_optimize_css_class(implode(' ', $item_css_class)); ?> clearfix">
+                    <article class="<?php echo sunix_optimize_css_class(implode(' ', $item_css_class)); ?> clearfix">
                         <div class="event-date">
                             <div class="day h2"> <?php echo get_the_modified_date('d');?> </div>
                             <div class="date-right">
@@ -79,7 +79,7 @@
 
                         </div>
                         <?php
-                        alacarte_post_header([
+                        sunix_post_header([
                             'heading_tag' => 'h3',
                             'before_args' => ['show_cat'=> '0','show_date'=> '0'],
                             'after_args'  => ['show_cat' => '0','show_author' => '0', 'show_date'=> '0', 'show_cmt' => '0', 'show_view' => '0', 'show_like' => '0', 'sep' => '/' ]]);
@@ -87,25 +87,25 @@
                         ?>
 
                         <a href="#form-app-popup" class="mfp-inline red-btn accent outline">
-                            <?php echo esc_html('Book a Table','alacarte'); ?>
+                            <?php echo esc_html('Book a Table','sunix'); ?>
                         </a>
                     </article>
                   <?php  break;
                 default:
         ?>
             <article <?php post_class(trim(implode(' ', $item_css_class))); ?>>
-                <?php alacarte_post_media(['thumbnail_size' => 'large', 'default_thumb' => false]); ?>
+                <?php sunix_post_media(['thumbnail_size' => 'large', 'default_thumb' => false]); ?>
                 <?php
 
-                alacarte_post_header([
+                sunix_post_header([
                     'class' => 'loop',
                     'before_args' => [],
                     'after_args'  => ['show_cat' => '0','show_author' => '0', 'show_date'=> '0', 'show_cmt' => '0', 'show_view' => '0', 'show_like' => '0','show_tag' => '0', 'sep' => '' ]]);
 
-                alacarte_post_excerpt();
-                alacarte_post_meta();
+                sunix_post_excerpt();
+                sunix_post_meta();
                 ?>
-                <?php alacarte_post_read_more(['show_readmore' => $show_readmore, 'readmore_style' => '']); ?>
+                <?php sunix_post_read_more(['show_readmore' => $show_readmore, 'readmore_style' => '']); ?>
             </article>
         <?php
                 break;
@@ -120,5 +120,5 @@
             </div>
         </div>
     <?php  }?>
-    <?php alacarte_loop_pagination(['show_pagination' => $show_pagination, 'style' => '']); ?>
+    <?php sunix_loop_pagination(['show_pagination' => $show_pagination, 'style' => '']); ?>
 </div>

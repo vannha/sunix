@@ -2,8 +2,8 @@
 /**
  * Breadcrumb class for the theme.
  * 
- * @package AlaCarte
- * @subpackage AlaCarte
+ * @package sunix
+ * @subpackage sunix
  * @since 1.0.0
  * @author EF5 Team
  */
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) )
     die();
 }
 
-class alacarte_Breadcrumb
+class sunix_Breadcrumb
 {
     /**
      * Array of breadcrumb entries. Each one contains title, url, text
@@ -49,9 +49,9 @@ class alacarte_Breadcrumb
     function __construct( $args = array() )
     {
         $args = wp_parse_args( $args, array(
-            'home_label'            => esc_html__( 'Home', 'alacarte' ),
-            '404_label'             => esc_html__( '404', 'alacarte' ),
-            'search_results_label'  => esc_html__( 'Search Results', 'alacarte' ),
+            'home_label'            => esc_html__( 'Home', 'sunix' ),
+            '404_label'             => esc_html__( '404', 'sunix' ),
+            'search_results_label'  => esc_html__( 'Search Results', 'sunix' ),
             'entry_max_length'      => 50,
             'entry_max_length_type' => 'words',
             'more_indicator'        => '&hellip;'
@@ -322,7 +322,7 @@ class alacarte_Breadcrumb
     {
         $queried_object = $GLOBALS['wp_query']->get_queried_object();
         $this->add_entry(
-            esc_html__( 'Tag:', 'alacarte' ).' '.single_tag_title( '', false ) ).' '.get_tag_link( $queried_object->term_id
+            esc_html__( 'Tag:', 'sunix' ).' '.single_tag_title( '', false ) ).' '.get_tag_link( $queried_object->term_id
         );
     }
 
@@ -338,7 +338,7 @@ class alacarte_Breadcrumb
         global $author;
         $userdata = get_userdata( $author );
         $this->add_entry(
-            esc_html__( 'Author:', 'alacarte' ).' '.$userdata->display_name
+            esc_html__( 'Author:', 'sunix' ).' '.$userdata->display_name
         );
     }
 
@@ -416,7 +416,7 @@ class alacarte_Breadcrumb
          * @var array  $entries   Each entry needs to be an array with 'label' and 'url' keys.
          * @var object $this_term Current taxonomy term object
          */
-        $entries = apply_filters( 'alacarte_breadcrumb_taxonomy', $entries, $this_term );
+        $entries = apply_filters( 'sunix_breadcrumb_taxonomy', $entries, $this_term );
 
         foreach ( $entries as $entry )
         {
@@ -453,7 +453,7 @@ class alacarte_Breadcrumb
         if ( $page > 1 )
         {
             $this->add_entry(
-                apply_filters( 'alacarte_breadcrumb_paged', sprintf( 'Page %s', $page ) ),
+                apply_filters( 'sunix_breadcrumb_paged', sprintf( 'Page %s', $page ) ),
                 ''
             );
         }
@@ -554,7 +554,7 @@ class alacarte_Breadcrumb
          * @var array  $entries Each entry needs to be an array with 'label' and 'url' keys.
          * @var object $post    Current post object
          */
-        $entries = apply_filters( 'alacarte_breadcrumb_single', $entries, $post );
+        $entries = apply_filters( 'sunix_breadcrumb_single', $entries, $post );
 
         foreach ( $entries as $entry )
         {

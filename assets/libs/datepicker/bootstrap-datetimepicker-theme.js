@@ -7,7 +7,7 @@
         $(".red-datepicker").each(function () {
             var $this = $(this),
                 datepicker_id = $this.attr('id'),
-                datepicker_settings = alacarte_datetimepicker[datepicker_id];
+                datepicker_settings = sunix_datetimepicker[datepicker_id];
                 datepicker_settings['icons'] = {
                     time    : "fa fa-clock-o",
                     date    : "fa fa-calendar",

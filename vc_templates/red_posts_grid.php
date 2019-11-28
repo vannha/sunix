@@ -16,7 +16,7 @@
     $css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $css_classes ) ), $this->settings['base'], $atts ) );
 
     /* Post query */
-    $tax_query = alacarte_tax_query($post_type, $taxonomies, $taxonomies_exclude);
+    $tax_query = sunix_tax_query($post_type, $taxonomies, $taxonomies_exclude);
     if ( get_query_var('paged') ) {
         $paged = get_query_var('paged');
     } elseif ( get_query_var('page') ) {
@@ -56,55 +56,55 @@
         $posts->the_post();
         // Post Metas
         $post_metas   = [];
-        $post_metas[] = alacarte_posted_on(['show_date'=>'1','echo' => false]);
-        $post_metas[] = alacarte_posted_by(['show_author'=>'1','author_avatar' => false, 'echo' => false]);
-        //$post_metas[] = alacarte_comments_popup_link(['show_cmt'=>'1','echo' => false]);
-        //$post_metas[] = alacarte_post_count_view(['show_view'=>'1','echo' => false]);
-        //$post_metas[] = alacarte_post_count_like(['show_like'=>'1','echo' => false]);
+        $post_metas[] = sunix_posted_on(['show_date'=>'1','echo' => false]);
+        $post_metas[] = sunix_posted_by(['show_author'=>'1','author_avatar' => false, 'echo' => false]);
+        //$post_metas[] = sunix_comments_popup_link(['show_cmt'=>'1','echo' => false]);
+        //$post_metas[] = sunix_post_count_view(['show_view'=>'1','echo' => false]);
+        //$post_metas[] = sunix_post_count_like(['show_like'=>'1','echo' => false]);
         /**
          * Layout 5 Post Metas 
         */
         $post_metas_5   = [];
-        $post_metas_5[] = alacarte_posted_by(['show_author'=>'1','author_avatar' => false, 'echo' => false]);
-        $post_metas_5[] = alacarte_comments_popup_link(['show_cmt'=>'1','echo' => false]);
+        $post_metas_5[] = sunix_posted_by(['show_author'=>'1','author_avatar' => false, 'echo' => false]);
+        $post_metas_5[] = sunix_comments_popup_link(['show_cmt'=>'1','echo' => false]);
 
         // Readmore button 
-        $alacarte_post_media_readmore = alacarte_post_read_more(['echo' => false, 'show_readmore' => '1', 'readmore_class' => ' center-align']);
-        $alacarte_post_media_readmore2 = alacarte_post_read_more_circle(['echo' => false, 'show_readmore' => '1', 'readmore_class' => 'center-align']);
-        $alacarte_post_media_readmore3 = alacarte_post_read_more_circle([
+        $sunix_post_media_readmore = sunix_post_read_more(['echo' => false, 'show_readmore' => '1', 'readmore_class' => ' center-align']);
+        $sunix_post_media_readmore2 = sunix_post_read_more_circle(['echo' => false, 'show_readmore' => '1', 'readmore_class' => 'center-align']);
+        $sunix_post_media_readmore3 = sunix_post_read_more_circle([
             'echo'    => false,
             'class'   => 'sonarWarning',
             'size'    => '50',
             'bgcolor' => 'bg-accent',
             'icon'    => 'flaticon-right-arrow-1 text-white',
         ]);
-        $alacarte_post_media_cat   = alacarte_posted_in(['echo' => false, 'show_cat' => '1','class' => 'red-box-meta red-box-meta2', 'sep' => '']);
-        $alacarte_post_media_share = alacarte_post_share(['echo' => false, 'class' => 'col-auto', 'show_share' => '0', 'show_title' => false, 'social_args' => ['class' => 'shape-circle colored-hover outline justify-content-center', 'size' => '30']]);
-        $alacarte_post_media_date  = alacarte_posted_on(['echo' => false, 'show_date' => '1','class' => 'red-box-meta red-box-meta2 text-uppercase', 'sep' => '']);
+        $sunix_post_media_cat   = sunix_posted_in(['echo' => false, 'show_cat' => '1','class' => 'red-box-meta red-box-meta2', 'sep' => '']);
+        $sunix_post_media_share = sunix_post_share(['echo' => false, 'class' => 'col-auto', 'show_share' => '0', 'show_title' => false, 'social_args' => ['class' => 'shape-circle colored-hover outline justify-content-center', 'size' => '30']]);
+        $sunix_post_media_date  = sunix_posted_on(['echo' => false, 'show_date' => '1','class' => 'red-box-meta red-box-meta2 text-uppercase', 'sep' => '']);
     ?>
-    <div class="<?php echo alacarte_optimize_css_class(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d)*100;?>ms">
+    <div class="<?php echo sunix_optimize_css_class(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d)*100;?>ms">
     <?php
         switch ($layout_template) {
             case '4':
     ?>
-            <article class="<?php echo alacarte_optimize_css_class(implode(' ', $item_css_class)); ?>">
+            <article class="<?php echo sunix_optimize_css_class(implode(' ', $item_css_class)); ?>">
                 <div class="event-thumb">
                     <div class="event-type">
-                        <?php $event_type = alacarte_get_post_format_value('event_type',''); ?>
-                        <?php if ($event_type==1){ echo esc_html('TICKET AVAILABLE','alacarte');}else{ echo esc_html('SOLD OUT','alacarte');}?>
+                        <?php $event_type = sunix_get_post_format_value('event_type',''); ?>
+                        <?php if ($event_type==1){ echo esc_html('TICKET AVAILABLE','sunix');}else{ echo esc_html('SOLD OUT','sunix');}?>
 
                     </div>
                      <?php
-                        alacarte_post_media([
-                            'thumbnail_size' => alacarte_default_value($thumbnail_size,'370x260'),
+                        sunix_post_media([
+                            'thumbnail_size' => sunix_default_value($thumbnail_size,'370x260'),
                             'default_thumb'  => true,
                             'after'          => ''
                         ]);
                      ?>
                 </div>
                 <?php
-                    alacarte_post_header([
-                        'heading_tag' => alacarte_default_value($heading_tag,'h4'),
+                    sunix_post_header([
+                        'heading_tag' => sunix_default_value($heading_tag,'h4'),
                         'before_args' => ['show_cat'=> '0','show_date'=> '1'],
                         'after_args'  => ['show_cat' => '0','show_author' => '0', 'show_date'=> '0', 'show_cmt' => '0', 'show_view' => '0', 'show_like' => '0', 'sep' => '/' ]]);
                     ?>
@@ -114,16 +114,16 @@
                 break;
             case '3':
     ?>
-                <article class="<?php echo alacarte_optimize_css_class(implode(' ', $item_css_class)); ?>">
+                <article class="<?php echo sunix_optimize_css_class(implode(' ', $item_css_class)); ?>">
                     <?php
-                    alacarte_post_media([
-                        'thumbnail_size' => alacarte_default_value($thumbnail_size,'740x690'),
+                    sunix_post_media([
+                        'thumbnail_size' => sunix_default_value($thumbnail_size,'740x690'),
                         'default_thumb'  => true
                     ]);
                     ?>
                     <?php
-                    alacarte_post_header([
-                        'heading_tag' => alacarte_default_value($heading_tag,'h2'),
+                    sunix_post_header([
+                        'heading_tag' => sunix_default_value($heading_tag,'h2'),
                         'before_args' => ['show_cat'=> '0','show_date'=> '0'],
                         'after_args'  => ['show_cat' => '0','show_author' => '0', 'show_date'=> '0', 'show_cmt' => '0', 'show_view' => '0', 'show_like' => '0', 'sep' => '/' ]]);
                     ?>
@@ -132,16 +132,16 @@
                 break;
             case '2':
     ?>
-                <article class="<?php echo alacarte_optimize_css_class(implode(' ', $item_css_class)); ?>">
+                <article class="<?php echo sunix_optimize_css_class(implode(' ', $item_css_class)); ?>">
                     <?php
-                    alacarte_post_media([
-                        'thumbnail_size' => alacarte_default_value($thumbnail_size,'740x490'),
+                    sunix_post_media([
+                        'thumbnail_size' => sunix_default_value($thumbnail_size,'740x490'),
                         'default_thumb'  => true
                     ]);
                     ?>
                     <?php
-                    alacarte_post_header([
-                        'heading_tag' => alacarte_default_value($heading_tag,'h2'),
+                    sunix_post_header([
+                        'heading_tag' => sunix_default_value($heading_tag,'h2'),
                         'before_args' => ['show_cat'=> '1','show_date'=> '1'],
                         'after_args'  => ['show_cat' => '0','show_author' => '0', 'show_date'=> '0', 'show_cmt' => '0', 'show_view' => '0', 'show_like' => '0', 'sep' => '/' ]]);
                     ?>
@@ -150,16 +150,16 @@
                 break;
             default:
     ?>	
-    	<article class="<?php echo alacarte_optimize_css_class(implode(' ', $item_css_class)); ?>">
+    	<article class="<?php echo sunix_optimize_css_class(implode(' ', $item_css_class)); ?>">
             <?php 
-                alacarte_post_media([
-                    'thumbnail_size' => alacarte_default_value($thumbnail_size,'740x490'),
+                sunix_post_media([
+                    'thumbnail_size' => sunix_default_value($thumbnail_size,'740x490'),
                     'default_thumb'  => true
                 ]);
             ?>
             <?php
-                alacarte_post_header([
-                    'heading_tag' => alacarte_default_value($heading_tag,'h2'),
+                sunix_post_header([
+                    'heading_tag' => sunix_default_value($heading_tag,'h2'),
                     'before_args' => ['show_cat'=> '0','show_date'=> '0'],
                     'after_args'  => ['show_cat' => '1','show_author' => '0', 'show_date'=> '1', 'show_cmt' => '0', 'show_view' => '0', 'show_like' => '0', 'sep' => '/' ]]);
             ?>
@@ -173,5 +173,5 @@
     } // end while
 ?>
 </div>
-<?php alacarte_loop_pagination(['show_pagination' => $show_pagination, 'style' => '']); ?>
+<?php sunix_loop_pagination(['show_pagination' => $show_pagination, 'style' => '']); ?>
 </div>

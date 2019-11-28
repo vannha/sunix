@@ -22,31 +22,31 @@ add_filter('woocommerce_show_page_title', function(){ return false;});
 */
 remove_action('woocommerce_before_shop_loop','woocommerce_result_count',20);
 remove_action('woocommerce_before_shop_loop','woocommerce_catalog_ordering',30);
-add_action('woocommerce_before_shop_loop','alacarte_woocommerce_count_ordering', 11);
-add_action('alacarte_woocommerce_count_ordering','woocommerce_result_count',20);
-add_action('alacarte_woocommerce_count_ordering','woocommerce_catalog_ordering',30);
-function alacarte_woocommerce_count_ordering(){
+add_action('woocommerce_before_shop_loop','sunix_woocommerce_count_ordering', 11);
+add_action('sunix_woocommerce_count_ordering','woocommerce_result_count',20);
+add_action('sunix_woocommerce_count_ordering','woocommerce_catalog_ordering',30);
+function sunix_woocommerce_count_ordering(){
 ?>
 	<div class="red-woo-count-order d-flex justify-content-between align-items-center">
-		<?php do_action('alacarte_woocommerce_count_ordering'); ?>
+		<?php do_action('sunix_woocommerce_count_ordering'); ?>
 	</div>
 <?php
 }
 
 
 /**
- * Add an action to call all AlaCarte function
+ * Add an action to call all sunix function
  * before shop loop
  *
 */
-if(!function_exists('alacarte_woocommerce_before_shop_loop')){
-	add_action('woocommerce_before_shop_loop', 'alacarte_woocommerce_before_shop_loop', 12);
-	function alacarte_woocommerce_before_shop_loop(){
-		do_action('alacarte_woocommerce_before_shop_loop');
+if(!function_exists('sunix_woocommerce_before_shop_loop')){
+	add_action('woocommerce_before_shop_loop', 'sunix_woocommerce_before_shop_loop', 12);
+	function sunix_woocommerce_before_shop_loop(){
+		do_action('sunix_woocommerce_before_shop_loop');
 	}
 }
-function alacarte_loop_columns(){
-    $col_number = alacarte_get_opts('products_columns','3');
+function sunix_loop_columns(){
+    $col_number = sunix_get_opts('products_columns','3');
     if(isset($_GET['col_number']) && !empty($_GET['col_number']))
         $col_number = $_GET['col_number'];
     return $col_number;
@@ -58,21 +58,21 @@ function alacarte_loop_columns(){
  * Return the number of products you wanna show per page.
  * 
  */
-add_filter( 'loop_shop_per_page', 'alacarte_loop_shop_per_page', 20 );
-function alacarte_loop_shop_per_page( $limit ) {
-  $limit = alacarte_get_opts('products_per_page', 9);
+add_filter( 'loop_shop_per_page', 'sunix_loop_shop_per_page', 20 );
+function sunix_loop_shop_per_page( $limit ) {
+  $limit = sunix_get_opts('products_per_page', 9);
   return $limit;
 }
 
 /**
  * Paginate
 */
-add_filter('woocommerce_pagination_args','alacarte_woocommerce_pagination_args');
-function alacarte_woocommerce_pagination_args($args){
+add_filter('woocommerce_pagination_args','sunix_woocommerce_pagination_args');
+function sunix_woocommerce_pagination_args($args){
 	$custom = [
 		'type'      => 'plain',
-        'prev_text' => '<span class="prev">'.esc_html__('Previous', 'alacarte').'</span>',
-        'next_text' => '<span class="next">'.esc_html__('Next', 'alacarte').'</span>'
+        'prev_text' => '<span class="prev">'.esc_html__('Previous', 'sunix').'</span>',
+        'next_text' => '<span class="next">'.esc_html__('Next', 'sunix').'</span>'
     ];
 	$args = array_merge($args, $custom);
 	return $args;

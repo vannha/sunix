@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: AlaCarte\n"
+"Project-Id-Version: sunix\n"
 "POT-Creation-Date: 2019-10-15 10:01+0700\n"
 "PO-Revision-Date: 2019-10-15 09:49+0700\n"
 "Last-Translator: \n"
@@ -601,19 +601,19 @@ msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
 #: inc/custom-post/core.php:16
-msgid "AlaCarte Header Top"
+msgid "sunix Header Top"
 msgstr ""
 
 #: inc/custom-post/core.php:17
-msgid "AlaCarte Headers Top"
+msgid "sunix Headers Top"
 msgstr ""
 
 #: inc/custom-post/core.php:57
-msgid "AlaCarte Footer"
+msgid "sunix Footer"
 msgstr ""
 
 #: inc/custom-post/core.php:58
-msgid "AlaCarte Footers"
+msgid "sunix Footers"
 msgstr ""
 
 #: inc/extends/loading.php:7
@@ -911,11 +911,11 @@ msgid "Flex Restaurant"
 msgstr ""
 
 #: inc/functions/_user_role.php:10
-msgid "AlaCarte Support Manager"
+msgid "sunix Support Manager"
 msgstr ""
 
 #: inc/functions/avatar.php:15
-msgid "AlaCarte Avatar"
+msgid "sunix Avatar"
 msgstr ""
 
 #: inc/functions/comments.php:188
@@ -2954,7 +2954,7 @@ msgid "Feed for all posts filed under %s"
 msgstr ""
 
 #: inc/widgets/widget-featured-post.php:22
-msgid "[AlaCarte] Featured Posts"
+msgid "[sunix] Featured Posts"
 msgstr ""
 
 #: inc/widgets/widget-featured-post.php:24
@@ -2997,7 +2997,7 @@ msgid "Layout 3"
 msgstr ""
 
 #: inc/widgets/widget-recent-post.php:22
-msgid "[AlaCarte] Recent Posts"
+msgid "[sunix] Recent Posts"
 msgstr ""
 
 #: inc/widgets/widget-recent-post.php:24
@@ -5426,7 +5426,7 @@ msgstr ""
 #: vc_extends/_vc_output.php:484 vc_extends/_vc_output.php:497
 #: vc_extends/_vc_output.php:512 vc_extends/_vc_output.php:525
 #: vc_extends/_vc_output.php:538
-msgid "Alacarte Custom"
+msgid "sunix Custom"
 msgstr ""
 
 #: vc_extends/_vc_output.php:409
@@ -5914,11 +5914,11 @@ msgid "Update totals"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "AlaCarte"
+msgid "sunix"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://dev.joomexp.com/wordpress/alacarte"
+msgid "https://dev.joomexp.com/wordpress/sunix"
 msgstr ""
 
 #. Description of the plugin/theme

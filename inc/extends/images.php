@@ -6,7 +6,7 @@
  * @uses   get_intermediate_image_sizes()
  * @return array $sizes Data for all currently-registered image sizes.
  */
-function alacarte_get_image_sizes() {
+function sunix_get_image_sizes() {
     global $_wp_additional_image_sizes;
     $sizes = array();
     foreach ( get_intermediate_image_sizes() as $_size ) {
@@ -28,12 +28,12 @@ function alacarte_get_image_sizes() {
 /**
  * Get size information for a specific image size.
  *
- * @uses   alacarte_get_image_sizes()
+ * @uses   sunix_get_image_sizes()
  * @param  string $size The image size for which to retrieve data.
  * @return bool|array $size Size data about an image size or false if the size doesn't exist.
  */
-function alacarte_get_image_size( $size ) {
-    $sizes = alacarte_get_image_sizes();
+function sunix_get_image_size( $size ) {
+    $sizes = sunix_get_image_sizes();
 
     if ( isset( $sizes[ $size ] ) ) {
         return $sizes[ $size ];
@@ -44,12 +44,12 @@ function alacarte_get_image_size( $size ) {
 /**
  * Get the width of a specific image size.
  *
- * @uses   alacarte_get_image_size()
+ * @uses   sunix_get_image_size()
  * @param  string $size The image size for which to retrieve data.
  * @return bool|string $size Width of an image size or false if the size doesn't exist.
  */
-function alacarte_get_image_width( $size ) {
-    if ( ! $size = alacarte_get_image_size( $size ) ) {
+function sunix_get_image_width( $size ) {
+    if ( ! $size = sunix_get_image_size( $size ) ) {
         return false;
     }
     if ( isset( $size['width'] ) ) {
@@ -61,12 +61,12 @@ function alacarte_get_image_width( $size ) {
 /**
  * Get the height of a specific image size.
  *
- * @uses   alacarte_get_image_size()
+ * @uses   sunix_get_image_size()
  * @param  string $size The image size for which to retrieve data.
  * @return bool|string $size Height of an image size or false if the size doesn't exist.
  */
-function alacarte_get_image_height( $size ) {
-    if ( ! $size = alacarte_get_image_size( $size ) ) {
+function sunix_get_image_height( $size ) {
+    if ( ! $size = sunix_get_image_size( $size ) ) {
         return false;
     }
     if ( isset( $size['height'] ) ) {
@@ -78,8 +78,8 @@ function alacarte_get_image_height( $size ) {
 /**
  * Default thumbnail url
 */
-if (!function_exists('alacarte_default_image_thumbnail_url')) {
-    function alacarte_default_image_thumbnail_url($args = array())
+if (!function_exists('sunix_default_image_thumbnail_url')) {
+    function sunix_default_image_thumbnail_url($args = array())
     {
         $args = wp_parse_args($args, array(
             'size'        => 'large',
@@ -88,7 +88,7 @@ if (!function_exists('alacarte_default_image_thumbnail_url')) {
         ));
         extract($args);
         global $_wp_additional_image_sizes;
-        $image_sizes = alacarte_get_image_sizes();
+        $image_sizes = sunix_get_image_sizes();
         $size = explode('x', $size);
         $size_use = $size[0];
         if (!is_numeric($size_use)) {
@@ -105,7 +105,7 @@ if (!function_exists('alacarte_default_image_thumbnail_url')) {
             $height = isset($size[1]) ? $size[1] : $size[0];
         }
 
-        $default_img = alacarte_resize_thumbnail('', $default_img, $width, $height, true);
+        $default_img = sunix_resize_thumbnail('', $default_img, $width, $height, true);
 
         return site_url() . $default_img['url'];
     }
@@ -113,8 +113,8 @@ if (!function_exists('alacarte_default_image_thumbnail_url')) {
 /**
  * Default Image thumbnail 
 */
-if (!function_exists('alacarte_default_image_thumbnail')) {
-    function alacarte_default_image_thumbnail($args = array())
+if (!function_exists('sunix_default_image_thumbnail')) {
+    function sunix_default_image_thumbnail($args = array())
     {
         $args = wp_parse_args($args, array(
             'size'        => 'large',
@@ -123,9 +123,9 @@ if (!function_exists('alacarte_default_image_thumbnail')) {
             'echo'        => false  
         ));
         extract($args);
-        /* use alacarte_resize_thumbnail( $attach_id = null, $img_url = null, $width, $height, $crop = false ) */
+        /* use sunix_resize_thumbnail( $attach_id = null, $img_url = null, $width, $height, $crop = false ) */
         global $_wp_additional_image_sizes;
-        $image_sizes = alacarte_get_image_sizes();
+        $image_sizes = sunix_get_image_sizes();
         $size = explode('x', $size);
         $size_use = $size[0];
         if (!is_numeric($size_use)) {
@@ -142,10 +142,10 @@ if (!function_exists('alacarte_default_image_thumbnail')) {
             $height = isset($size[1]) ? $size[1] : $size[0];
         }
 
-        $default_img = alacarte_resize_thumbnail('', $default_img, $width, $height, true);
+        $default_img = sunix_resize_thumbnail('', $default_img, $width, $height, true);
         $thumbnail = '<img class="' . trim(implode(' ', array('default-thumb', $class))) . '" src="' . site_url() . $default_img['url'] . '" width="' . $default_img['width'] . '" height="' . $default_img['height'] . '" alt="' . esc_attr(get_option('blogname')) . '" />';
         if($echo)
-            echo alacarte_html($thumbnail);
+            echo sunix_html($thumbnail);
         else 
             return $thumbnail;
     }
@@ -161,7 +161,7 @@ if (!function_exists('alacarte_default_image_thumbnail')) {
 *
 * 
 */
-if ( ! function_exists( 'alacarte_resize_thumbnail' ) ) {
+if ( ! function_exists( 'sunix_resize_thumbnail' ) ) {
     /**
      * @param int $attach_id
      * @param string $img_url
@@ -172,7 +172,7 @@ if ( ! function_exists( 'alacarte_resize_thumbnail' ) ) {
      * @since 1.0
      * @return array
      */
-    function alacarte_resize_thumbnail( $attach_id = null, $img_url = null, $width, $height, $crop = false ) {
+    function sunix_resize_thumbnail( $attach_id = null, $img_url = null, $width, $height, $crop = false ) {
         // this is an attachment, so we have the ID
         if($attach_id === null) $attach_id = get_post_thumbnail_id(get_the_ID());
         $image_src = array();
@@ -314,8 +314,8 @@ if ( ! function_exists( 'alacarte_resize_thumbnail' ) ) {
     }
 }
 
-if(!function_exists('alacarte_image_by_size')){
-    function alacarte_image_by_size( $args = []) {
+if(!function_exists('sunix_image_by_size')){
+    function sunix_image_by_size( $args = []) {
         $default = [
             'id'      => null , 
             'size'    => 'medium', 
@@ -336,7 +336,7 @@ if(!function_exists('alacarte_image_by_size')){
         if($mime_type === 'image/svg+xml') $class .= ' svg';
 
         if(empty($id) ){
-            $alacarte_image_by_size = alacarte_default_image_thumbnail(['size' => $size, 'class' => $class]);
+            $sunix_image_by_size = sunix_default_image_thumbnail(['size' => $size, 'class' => $class]);
         } elseif ( is_string( $size ) && ( ( ! empty( $_wp_additional_image_sizes[ $size ] ) && is_array( $_wp_additional_image_sizes[ $size ] ) ) || in_array( $size, array(
                     'thumbnail',
                     'thumb',
@@ -348,7 +348,7 @@ if(!function_exists('alacarte_image_by_size')){
                     'full',
                 ) ) )
         ) {
-            $alacarte_image_by_size =  wp_get_attachment_image( $id, $size, '', array('class' => $class) );
+            $sunix_image_by_size =  wp_get_attachment_image( $id, $size, '', array('class' => $class) );
         } else {
             if ( is_string( $size ) ) {
                 preg_match_all( '/\d+/', $size, $thumb_matches );
@@ -368,7 +368,7 @@ if(!function_exists('alacarte_image_by_size')){
             }
             if ( is_array( $size ) ) {
                 // Resize image to custom size
-                $p_img = alacarte_resize_thumbnail( $id, null, $size[0], $size[1], true );
+                $p_img = sunix_resize_thumbnail( $id, null, $size[0], $size[1], true );
                 $alt = trim( strip_tags( get_post_meta( $id, '_wp_attachment_image_alt', true ) ) );
                 $attachment = get_post( $id );
                 if ( ! empty( $attachment ) ) {
@@ -384,7 +384,7 @@ if(!function_exists('alacarte_image_by_size')){
                     $title = $alt = get_bloginfo('name');
                 }
 
-                $attributes = alacarte_stringify_attributes( array(
+                $attributes = sunix_stringify_attributes( array(
                     'class'  => $class,
                     'src'    => $p_img['url'],
                     'width'  => $p_img['width'],
@@ -394,19 +394,19 @@ if(!function_exists('alacarte_image_by_size')){
                     'srcset' => !empty($p_img['srcset']) ? $p_img['srcset'] : '',
                     'sizes'  => !empty($p_img['sizes']) ? $p_img['sizes'] : ''
                 ) );
-                $alacarte_image_by_size = '<img ' . $attributes . ' />';
+                $sunix_image_by_size = '<img ' . $attributes . ' />';
             }
         }
 
         if($echo)
-            echo alacarte_html($args['before'].$alacarte_image_by_size.$args['after']);
+            echo sunix_html($args['before'].$sunix_image_by_size.$args['after']);
         else 
-            return $args['before'].$alacarte_image_by_size.$args['after'];
+            return $args['before'].$sunix_image_by_size.$args['after'];
     }
 }
 
-if(!function_exists('alacarte_get_image_url_by_size')){
-    function alacarte_get_image_url_by_size($args = []) {
+if(!function_exists('sunix_get_image_url_by_size')){
+    function sunix_get_image_url_by_size($args = []) {
         $args = wp_parse_args($args,[
             'id'            => null, 
             'size'          => 'thumbnail', 
@@ -417,7 +417,7 @@ if(!function_exists('alacarte_get_image_url_by_size')){
         global $_wp_additional_image_sizes;
         if($id === null) $id = get_post_thumbnail_id();
         if(empty($id) && $default_thumb){
-            $img_url = alacarte_default_image_thumbnail_url(['size' => $size, 'class' => $args['class']]);
+            $img_url = sunix_default_image_thumbnail_url(['size' => $size, 'class' => $args['class']]);
         } elseif ( is_string( $size ) && ( ( ! empty( $_wp_additional_image_sizes[ $size ] ) && is_array( $_wp_additional_image_sizes[ $size ] ) ) || in_array( $size, array(
                     'thumbnail',
                     'thumb',
@@ -450,7 +450,7 @@ if(!function_exists('alacarte_get_image_url_by_size')){
             }
             if ( is_array( $size ) ) {
                 // Resize image to custom size
-                $p_img = alacarte_resize_thumbnail( $id, null, $size[0], $size[1], true );
+                $p_img = sunix_resize_thumbnail( $id, null, $size[0], $size[1], true );
 
                 $img_url = $p_img['url'];
             }
@@ -469,7 +469,7 @@ if(!function_exists('alacarte_get_image_url_by_size')){
  *
  * @return string
  */
-function alacarte_stringify_attributes( $attributes ) {
+function sunix_stringify_attributes( $attributes ) {
     $atts = array();
     foreach ( $attributes as $name => $value ) {
         $atts[] = $name . '="' . esc_attr( $value ) . '"';
@@ -483,8 +483,8 @@ function alacarte_stringify_attributes( $attributes ) {
  * return image dimensions width or height
  *
 */
-if(!function_exists('alacarte_image_dimensions')){
-    function alacarte_image_dimensions( $id = null , $size = 'medium', $dimensions = 'height', $echo = false ) {
+if(!function_exists('sunix_image_dimensions')){
+    function sunix_image_dimensions( $id = null , $size = 'medium', $dimensions = 'height', $echo = false ) {
         global $_wp_additional_image_sizes;
         if(empty($dimensions)) $dimensions = 'height';
         $unit = 'px';

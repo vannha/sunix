@@ -1,5 +1,5 @@
 <?php
-function alacarte_html_animation($args = []){
+function sunix_html_animation($args = []){
 	$args = wp_parse_args($args, [
 		'anim'     => 'wave1',
 		'echo'     => false,
@@ -47,7 +47,7 @@ function alacarte_html_animation($args = []){
 			break;
 	}
 	if($args['echo'])
-		echo alacarte_html($html);
+		echo sunix_html($html);
 	else 
 		return $html;
 }

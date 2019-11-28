@@ -1,10 +1,10 @@
 <?php
 /**
- * alacarte_Main_Menu_Walker
- * alacarte_Side_Main_Menu_Walker
- * alacarte_Mega_Menu_Walker
+ * sunix_Main_Menu_Walker
+ * sunix_Side_Main_Menu_Walker
+ * sunix_Mega_Menu_Walker
  *
- * @package AlaCarte
+ * @package sunix
  *
  */
 
@@ -13,10 +13,10 @@ if ( ! defined( 'ABSPATH' ) )
     die();
 }
 
-class alacarte_Main_Menu_Walker extends Walker_Nav_Menu{
+class sunix_Main_Menu_Walker extends Walker_Nav_Menu{
     public function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat("\t", $depth);
-        $header_layout = alacarte_get_opts('header_layout');
+        $header_layout = sunix_get_opts('header_layout');
         switch ($header_layout) {
             case '3':
                 $output .= "\n$indent<ul class=\"ef5-submenu ef5-toggle-menu ef5-side-submenu ef5-side-submenu-base\">\n";
@@ -83,7 +83,7 @@ class alacarte_Main_Menu_Walker extends Walker_Nav_Menu{
         $title = apply_filters( 'the_title', $item->title, $item->ID );
 
         $title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
-        if(empty($title)) $title = sprintf( __( '#%d (no title)', 'alacarte' ), $item->ID );
+        if(empty($title)) $title = sprintf( __( '#%d (no title)', 'sunix' ), $item->ID );
         /* add expander */
         $item_expander = '';
         $is_parent = in_array('menu-item-has-children', $classes);
@@ -100,7 +100,7 @@ class alacarte_Main_Menu_Walker extends Walker_Nav_Menu{
     }
 } 
 
-class alacarte_Side_Main_Menu_Walker extends Walker_Nav_Menu{
+class sunix_Side_Main_Menu_Walker extends Walker_Nav_Menu{
     public function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat("\t", $depth);
         $output .= "\n$indent<ul class=\"ef5-submenu ef5-toggle-menu ef5-side-submenu ef5-side-submenu-base\">\n";
@@ -111,26 +111,26 @@ class alacarte_Side_Main_Menu_Walker extends Walker_Nav_Menu{
  * Add support Mega Menu
  * @return boolean
 */
-if(!function_exists('alacarte_enable_megamenu')){
-	add_filter('ef5_enable_megamenu', 'alacarte_enable_megamenu');
-	function alacarte_enable_megamenu(){
+if(!function_exists('sunix_enable_megamenu')){
+	add_filter('ef5_enable_megamenu', 'sunix_enable_megamenu');
+	function sunix_enable_megamenu(){
 	    return true;
 	}
 }
-if(!function_exists('alacarte_megamenu_locations')){
-    add_filter('ef5_locations','alacarte_megamenu_locations');
-    function alacarte_megamenu_locations(){
+if(!function_exists('sunix_megamenu_locations')){
+    add_filter('ef5_locations','sunix_megamenu_locations');
+    function sunix_megamenu_locations(){
         return array('red-primary');
     }
 }
 
 if(class_exists('EF5Systems_MegaMenu_Walker')){
     // Dropdown menu
-    class alacarte_MegaMenu_Walker extends EF5Systems_MegaMenu_Walker{
+    class sunix_MegaMenu_Walker extends EF5Systems_MegaMenu_Walker{
 
     }
     // Side Menu
-    class alacarte_Side_MegaMenu_Walker extends EF5Systems_MegaMenu_Walker{
+    class sunix_Side_MegaMenu_Walker extends EF5Systems_MegaMenu_Walker{
 
     }
 }

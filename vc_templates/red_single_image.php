@@ -48,13 +48,13 @@ $img_css_class = ['red-img', $img_style];
 if(in_array($img_style, $outline)) $img_css_class[] = 'outline-'.$img_outline_w;
 
 if(empty($img_id)){
-	$img_src = alacarte_default_image_thumbnail_url(['size' => $img_size]);
+	$img_src = sunix_default_image_thumbnail_url(['size' => $img_size]);
 } else {
-	$img_src = alacarte_get_image_url_by_size(['id'=>$img_id, 'size'=>$img_size]);
+	$img_src = sunix_get_image_url_by_size(['id'=>$img_id, 'size'=>$img_size]);
 }
 $img_attrs = [];
 if($img_hover_action === 'zoom')
-	$img_attrs[] =  'data-zoom="'.alacarte_get_image_url_by_size(['id'=>$img_id, 'size'=>'full']).'"';
+	$img_attrs[] =  'data-zoom="'.sunix_get_image_url_by_size(['id'=>$img_id, 'size'=>'full']).'"';
 
 $image = '<img '.implode(' ', $img_attrs).' src="'.esc_url($img_src).'" alt="'.esc_attr($img_alt).'" />';
 
@@ -66,7 +66,7 @@ if(!empty($img_link)){
     $img_link = ( $img_link == '||' ) ? '' : $img_link;  
     if ( strlen( $img_link['url'] ) > 0 ) {
         $a_href = $img_link['url'];
-        $a_title = !empty($img_link['title']) ? $img_link['title'] : esc_html__('View Detail','alacarte');
+        $a_title = !empty($img_link['title']) ? $img_link['title'] : esc_html__('View Detail','sunix');
         $a_target = strlen( $img_link['target'] ) > 0 ? $img_link['target'] : '_self';
         if($img_hover_action === 'custom_link'){
 	        $link_open = '<a class="hint--top" href="'.esc_url( $a_href ).'" data-hint="'. esc_attr( $a_title ).'" target="'.trim( esc_attr( $a_target ) ).'">';
@@ -80,6 +80,6 @@ if(!empty($img_link)){
 		<div class="<?php echo trim(implode(' ', $img_css_class));?>">
 			<?php echo ''.$link_open.$image.$link_close; ?>
 		</div>
-		<?php if('1' === $img_show_caption && !empty($img_caption)) echo alacarte_html('<div class="red-img-caption">'.$img_caption.'</div>'); ?>
+		<?php if('1' === $img_show_caption && !empty($img_caption)) echo sunix_html('<div class="red-img-caption">'.$img_caption.'</div>'); ?>
 	</div>
 </div>

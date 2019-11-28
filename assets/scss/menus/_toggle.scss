@@ -72,7 +72,7 @@ $direction: (
 		}
 	}
 }
-@mixin alacarte_toggle_plus(
+@mixin sunix_toggle_plus(
 		$parent_selector: '.has-toggle', 
 		$selector       : '.red-toggle',
 		$selector_inner : '.red-toggle-inner',
@@ -133,10 +133,10 @@ $direction: (
 		}
 	}
 }
-@include alacarte_toggle_plus();
+@include sunix_toggle_plus();
 
 @media (max-width: $screen-lg-max){
-	@include alacarte_toggle_plus(
+	@include sunix_toggle_plus(
 		'.red-menu .menu-item-has-children',
 		'.red-menu-toggle',
 		'.red-menu-toggle-inner',

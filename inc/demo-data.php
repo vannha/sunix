@@ -2,9 +2,9 @@
 /**
  * Enable Export Sample Data 
 */
-if(!function_exists('alacarte_enable_export_mode')){
-	add_filter('swa_ie_export_mode', 'alacarte_enable_export_mode');
-	function alacarte_enable_export_mode() {
+if(!function_exists('sunix_enable_export_mode')){
+	add_filter('swa_ie_export_mode', 'sunix_enable_export_mode');
+	function sunix_enable_export_mode() {
 	    return true;
 	}
 }
@@ -12,20 +12,20 @@ if(!function_exists('alacarte_enable_export_mode')){
  * Remove default post / page / extra page from required plugin
  * like :  Hello Word, Sample Page, Privacy Policy, Newsletter, Wishlist, ...
 */
-add_action('swa-ie-import-start', 'alacarte_move_trash', 1);
-if(!function_exists('alacarte_move_trash')){
-    function alacarte_move_trash(){
+add_action('swa-ie-import-start', 'sunix_move_trash', 1);
+if(!function_exists('sunix_move_trash')){
+    function sunix_move_trash(){
         wp_trash_post(1);
         wp_trash_post(2);
         wp_trash_post(3);
-        wp_trash_post(alacarte_get_id_by_title('Privacy Policy'));
-        wp_trash_post(alacarte_get_id_by_title('Shop'));
-        wp_trash_post(alacarte_get_id_by_title('Cart'));
-        wp_trash_post(alacarte_get_id_by_title('Checkout'));
-        wp_trash_post(alacarte_get_id_by_title('My account'));
-        wp_trash_post(alacarte_get_id_by_title('Terms and Conditions'));
-        wp_trash_post(alacarte_get_id_by_title('Wishlist'));
-        wp_trash_post(alacarte_get_id_by_title('Newsletter'));
+        wp_trash_post(sunix_get_id_by_title('Privacy Policy'));
+        wp_trash_post(sunix_get_id_by_title('Shop'));
+        wp_trash_post(sunix_get_id_by_title('Cart'));
+        wp_trash_post(sunix_get_id_by_title('Checkout'));
+        wp_trash_post(sunix_get_id_by_title('My account'));
+        wp_trash_post(sunix_get_id_by_title('Terms and Conditions'));
+        wp_trash_post(sunix_get_id_by_title('Wishlist'));
+        wp_trash_post(sunix_get_id_by_title('Newsletter'));
     }
 }
 /**
@@ -34,7 +34,7 @@ if(!function_exists('alacarte_move_trash')){
  * get array page title and update options.
  *
  */
-function alacarte_set_default_page(){
+function sunix_set_default_page(){
     $pages = array(
         'page_on_front'                 => 'Home',
         'page_for_posts'                => 'Blog',
@@ -53,15 +53,15 @@ function alacarte_set_default_page(){
         update_option($key, $page->ID);
     }
 }
-add_action('swa-ie-import-finish', 'alacarte_set_default_page');
+add_action('swa-ie-import-finish', 'sunix_set_default_page');
 
 /**
  * Extra option 
  * Update option for Extensions option like: WooCommerce, Newsletter, ...
  *
 */
-add_filter('swa_ie_extra_options', 'alacarte_extra_options_name');
-function alacarte_extra_options_name($extra_options)
+add_filter('swa_ie_extra_options', 'sunix_extra_options_name');
+function sunix_extra_options_name($extra_options)
 {
     $theme_extra_options = [
         'blogname',

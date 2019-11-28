@@ -3,22 +3,22 @@
  * Theme Option support Gutenberg
  * @since 1.0
 */
-function alacarte_gtb(){
-	$gutenberg = alacarte_get_theme_opt('gutenberg', true);
+function sunix_gtb(){
+	$gutenberg = sunix_get_theme_opt('gutenberg', true);
 	if(!$gutenberg){
 		add_filter('use_block_editor_for_post', function(){ return false;});
 		add_filter('ef5_support_gtb', function(){ return false;});
 	}
 	return $gutenberg;
 }
-add_action('after_setup_theme','alacarte_gtb');
+add_action('after_setup_theme','sunix_gtb');
 
 /**
  * Remove Gutenberg Editor button of VC when Classic Editor actived
  * or theme option is Disable
 */
 add_action('admin_head',function(){
-	if(class_exists('Classic_Editor') || class_exists('QTX_Translator') || !alacarte_gtb() ) :
+	if(class_exists('Classic_Editor') || class_exists('QTX_Translator') || !sunix_gtb() ) :
     ?>
     <style>.wpb_switch-to-gutenberg{ display: none !important;}</style>
     <?php
@@ -33,10 +33,10 @@ if(class_exists('QTX_Translator')){
 	add_filter('use_block_editor_for_post', function(){ return false; });
 }
 
-add_filter('render_block', 'alacarte_guten_render_block', 10, 2);
-function alacarte_guten_render_block( $block_content,  $block){
+add_filter('render_block', 'sunix_guten_render_block', 10, 2);
+function sunix_guten_render_block( $block_content,  $block){
     $wpb_js_gutenberg_disable = get_option( 'wpb_js_gutenberg_disable', '0' );
-    if(!alacarte_gtb() || class_exists('Classic_Editor') || $wpb_js_gutenberg_disable == '1' )
+    if(!sunix_gtb() || class_exists('Classic_Editor') || $wpb_js_gutenberg_disable == '1' )
         return $block_content;
     $extra_css_class = ['red-gtb-block'];
     $change_class = [
@@ -69,18 +69,18 @@ function alacarte_guten_render_block( $block_content,  $block){
         $block_content = '<div class="'.trim(implode(' ', $extra_css_class)).'">'.$block_content.'</div>';
     return $block_content;
 }
-add_action('after_setup_theme', 'alacarte_theme_suport_gtb_styles');
+add_action('after_setup_theme', 'sunix_theme_suport_gtb_styles');
 
-function alacarte_remove_gtb_script()
+function sunix_remove_gtb_script()
 {
     return array('wp-block-library');
 }
-function alacarte_theme_suport_gtb_styles(){
-    if(!alacarte_gtb()) {
+function sunix_theme_suport_gtb_styles(){
+    if(!sunix_gtb()) {
         add_filter('ef5_remove_scripts', function($scripts){ $scripts[] = 'wp-block-library'; return $scripts; });
         return;
     }
     add_theme_support( 'wp-block-styles' );
     add_theme_support( 'align-wide' );
 }
-add_action( 'after_setup_theme', 'alacarte_theme_suport_gtb_styles' );
+add_action( 'after_setup_theme', 'sunix_theme_suport_gtb_styles' );

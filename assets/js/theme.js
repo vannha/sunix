@@ -11,38 +11,38 @@
     header_top_height = header_top.length   > 0 ?  header_top.outerHeight() : 0;
     // Fire on document ready.
     $( document ).ready( function() {
-        alacarte_StickyHeader();
-        alacarte_toggle_menu();
-        alacarte_touched_side();
-        alacarte_open_mobile_menu();
-        alacarte_popup();
-        alacarte_toggle();
-        alacarte_side_nav();
-        alacarte_video_size();
-        alacarte_vcRow();
-        alacarte_inlineCss();
-        alacarte_ajax_pagination();
-        alacarte_woo_filters();
-        alacarte_wc_single_product_gallery();
-        alacarte_wooscp_change_text();
-        alacarte_header_ontop();
-        alacarte_header_ontop_next();
+        sunix_StickyHeader();
+        sunix_toggle_menu();
+        sunix_touched_side();
+        sunix_open_mobile_menu();
+        sunix_popup();
+        sunix_toggle();
+        sunix_side_nav();
+        sunix_video_size();
+        sunix_vcRow();
+        sunix_inlineCss();
+        sunix_ajax_pagination();
+        sunix_woo_filters();
+        sunix_wc_single_product_gallery();
+        sunix_wooscp_change_text();
+        sunix_header_ontop();
+        sunix_header_ontop_next();
         // WooCommerce
-        alacarte_quantity_plus_minus();
-        alacarte_quantity_plus_minus_action();
-        alacarte_remove_cart_actions();
+        sunix_quantity_plus_minus();
+        sunix_quantity_plus_minus_action();
+        sunix_remove_cart_actions();
 
-        alacarte_svg_color();
+        sunix_svg_color();
     });
 	// On Load 
 	$(window).load(function() {
-		alacarte_page_loading();
-        alacarte_vcRow();
-        alacarte_woo_price_filter_add_data_title();
-        alacarte_wooscp_change_text();
-        alacarte_masonry_filter();
-        alacarte_vc_animation_callback();
-        alacarte_popup();
+		sunix_page_loading();
+        sunix_vcRow();
+        sunix_woo_price_filter_add_data_title();
+        sunix_wooscp_change_text();
+        sunix_masonry_filter();
+        sunix_vc_animation_callback();
+        sunix_popup();
         //header2_width();
 	});
 	// On scroll
@@ -51,11 +51,11 @@
 	// On Resize
 	$( window ).resize( function() {
 		clearTimeout( resizeTimer );
-		alacarte_touched_side();
-        alacarte_vcRow();
-        alacarte_header_ontop();
-        alacarte_header_ontop_next();
-        alacarte_popup();
+		sunix_touched_side();
+        sunix_vcRow();
+        sunix_header_ontop();
+        sunix_header_ontop_next();
+        sunix_popup();
        // header2_width();
 	});
 
@@ -65,39 +65,39 @@
         $( '.woocommerce-ordering' ).on( 'change', 'select.orderby', function() {
             $( this ).closest( 'form' ).submit();
         });
-        alacarte_video_size();
-        alacarte_popup();
-        alacarte_init_price_filter();
+        sunix_video_size();
+        sunix_popup();
+        sunix_init_price_filter();
 
         $('.hoverdir-wrap').EF5HoverDir();
         $('.red-btn-slide').EF5HoverDir();
 
-        alacarte_masonry_filter();
-        alacarte_vc_animation_callback();
+        sunix_masonry_filter();
+        sunix_vc_animation_callback();
 
-        //alacarte_ajax_quantity_plus_minus();
-        alacarte_remove_cart_actions();
-        //alacarte_table_move_column('.woocommerce-cart-form__contents','.cart_item, thead tr',0,5, 'thead tr .product-thumbnail','thead tr .product-name', 2);
+        //sunix_ajax_quantity_plus_minus();
+        sunix_remove_cart_actions();
+        //sunix_table_move_column('.woocommerce-cart-form__contents','.cart_item, thead tr',0,5, 'thead tr .product-thumbnail','thead tr .product-name', 2);
     });
     jQuery( document ).on( 'updated_wc_div', function() {
-        alacarte_quantity_plus_minus();
-        alacarte_remove_cart_actions();
-        //alacarte_table_move_column('.woocommerce-cart-form__contents','.cart_item, thead tr',0,5, 'thead tr .product-thumbnail','thead tr .product-name', 2);
+        sunix_quantity_plus_minus();
+        sunix_remove_cart_actions();
+        //sunix_table_move_column('.woocommerce-cart-form__contents','.cart_item, thead tr',0,5, 'thead tr .product-thumbnail','thead tr .product-name', 2);
     } );
 
 	/**
 	 * Add page loading
 	*/
-	function alacarte_page_loading(){
+	function sunix_page_loading(){
 		'use strict';
 		$("#red-loading").fadeOut("slow");
 	}
-    function alacarte_header_ontop(){
+    function sunix_header_ontop(){
         var header_ontop = $('.header-ontop'),
             header_ontop_next = $('#red-page-title-wrapper');
         header_ontop.css('top', adminbar_height + header_top_height);
     }
-    function alacarte_header_ontop_next(){
+    function sunix_header_ontop_next(){
         var header_ontop = $('.header-ontop'),
             header_ontop_next = header_ontop.next('#red-pagetitle-wrapper'),
             header_ontop_next_padding_top = parseInt(header_ontop_next.css('padding-top'));
@@ -114,7 +114,7 @@
     /**
      * Sticky Header 
     */
-    function alacarte_StickyHeader(){
+    function sunix_StickyHeader(){
         'use strict';
         var c, currentScrollTop = 0,
            navbar = $('.sticky-on'),
@@ -160,7 +160,7 @@
 	/**
 	 * Toggle Menu 
 	*/
-	function alacarte_toggle_menu(){ 
+	function sunix_toggle_menu(){ 
 		'use strict';
 		$('.red-toggle').on('click', function(e){
             e.preventDefault();
@@ -172,7 +172,7 @@
 	 * Menu Back
 	 * Sub menu touched on side left/right
 	*/
-	function alacarte_touched_side(){
+	function sunix_touched_side(){
         'use strict';
         var $menu = $('.red-header-menu');
         if($(window).width() > 1200 ){
@@ -195,7 +195,7 @@
     /**
 	 * Open Mobile Menu 
     */
-    function alacarte_open_mobile_menu(){
+    function sunix_open_mobile_menu(){
     	'use strict';
         $("#red-main-menu-mobile").on('click',function(){
             $(this).toggleClass('opened').find('.btn-nav-mobile').toggleClass('opened');
@@ -205,7 +205,7 @@
     /**
 	 * Popup
     */
-    function alacarte_popup(){
+    function sunix_popup(){
         'use strict';
     	if(typeof $.magnificPopup != 'undefined'){
             /* ===================
@@ -299,7 +299,7 @@
     /**
 	 * Toggle
     */
-    function alacarte_toggle(){
+    function sunix_toggle(){
     	/* ===================
          Search Toggle
          ===================== */
@@ -327,7 +327,7 @@
     /**
 	 * Side Nav
     */
-    function alacarte_side_nav(){
+    function sunix_side_nav(){
     	/* Sidebar Nav */
         $("#red-main-sidenav .open-menu").on('click',function(){
             $(this).toggleClass('opened');
@@ -346,7 +346,7 @@
      * Youtube, Vimeo, Iframe, Video, Audio.
      * @author Chinh Duong Manh
      */
-    function alacarte_video_size() {
+    function sunix_video_size() {
         'use strict';
         setTimeout(function(){
 	        $('.red-featured iframe , .red-featured  video, .red-featured .wp-video-shortcode').each(function(){
@@ -363,7 +363,7 @@
         $(this).addClass("active");
     });
     // VC Row 
-    function alacarte_vcRow() {
+    function sunix_vcRow() {
         'use strict';
         var $site_boxed      = $('.site-boxed [data-vc-full-width="true"]'),
             $site_bordered   = $('.body-bordered [data-vc-full-width="true"]'),
@@ -456,7 +456,7 @@
         }, 0 );
     }
     // Inline CSS to head
-    function alacarte_inlineCss(){
+    function sunix_inlineCss(){
         'use strict';
         var _inline_css = '<style class="red-inline-css">';
         $(document).find('div.red-inline-css').each(function () {
@@ -468,7 +468,7 @@
         $('head').append(_inline_css);
     }
     // Fake Ajax Pagination
-    function alacarte_ajax_pagination(){
+    function sunix_ajax_pagination(){
         'use strict';
         $('.red-posts').each(function(){
             "use strict";
@@ -491,7 +491,7 @@
         });
     }
     // WooCommerce Filters 
-    function alacarte_woo_filters(){
+    function sunix_woo_filters(){
         "use strict";
         $('.red-main').each(function(){
             var $this = $(this),
@@ -516,7 +516,7 @@
     };
     
     // Re-Run filer by Price
-    function alacarte_init_price_filter() {
+    function sunix_init_price_filter() {
         $( 'input#min_price, input#max_price' ).hide();
         $( '.price_slider, .price_label' ).show();
 
@@ -556,7 +556,7 @@
      * Woocomere filter modify
      * Add data title
     */
-    function alacarte_woo_price_filter_add_data_title(){
+    function sunix_woo_price_filter_add_data_title(){
         $('.price_slider_wrapper ').each(function () {
             var _this = $(this);
             if(_this.find('.ui-slider-handle').length < 2)
@@ -589,12 +589,12 @@
     */
 
     //quantity number field custom
-    function alacarte_quantity_plus_minus(){
+    function sunix_quantity_plus_minus(){
         $( ".quantity input" ).wrap( "<div class='red-quantity'></div>" );
         $('<span class="quantity-button quantity-down"></span>').insertBefore('.quantity input');
         $('<span class="quantity-button quantity-up"></span>').insertAfter('.quantity input');
     }
-    function alacarte_quantity_plus_minus_action(){
+    function sunix_quantity_plus_minus_action(){
         $(document).on('click','.quantity .quantity-button',function () {
             var $this = $(this),
                 spinner = $this.closest('.quantity'),
@@ -625,7 +625,7 @@
         });
     }
     // WooCommerce Single Product Gallery 
-    function alacarte_wc_single_product_gallery(){
+    function sunix_wc_single_product_gallery(){
         'use strict';
         if(typeof $.flexslider != 'undefined'){
 
@@ -685,7 +685,7 @@
     /**
      * Cart Page
     */
-    function alacarte_table_move_column(table, selected ,from, to, remove, colspan, colspan_value) {
+    function sunix_table_move_column(table, selected ,from, to, remove, colspan, colspan_value) {
         var rows = jQuery(selected, table);
         var cols;
         rows.each(function() {
@@ -701,13 +701,13 @@
             jQuery(this).attr('colspan',colspan_value);
         });
     }
-    function alacarte_remove_cart_actions(){
+    function sunix_remove_cart_actions(){
         //jQuery('.actions > .coupon').remove();
         //jQuery('.actions > [name="update_cart"]').remove();
     }
 
     // Woo Smart Compare 
-    function alacarte_wooscp_change_text(){
+    function sunix_wooscp_change_text(){
         'use strict';
         $('.wooscp-btn , .woosw-btn').each(function(){
             "use strict";
@@ -734,7 +734,7 @@
         } );
     }
     /* Masonry */
-    function alacarte_masonry_filter(){
+    function sunix_masonry_filter(){
         if(typeof $.fn.masonry != 'undefined'){
             if (jQuery(".red-posts-masonry").length) {
                 var blog_dom = jQuery(".red-posts-masonry").get(0);
@@ -786,7 +786,7 @@
 
 
     /* VC Animation */
-    function alacarte_vc_animation_callback(){
+    function sunix_vc_animation_callback(){
         if(typeof $.fn.waypoint != 'undefined'){
             jQuery(".wpb_animate_when_almost_visible:not(.wpb_start_animation)").waypoint(function() {
                 jQuery(this).addClass("wpb_start_animation animated")
@@ -796,7 +796,7 @@
         }
     }
 
-    function alacarte_svg_color(){
+    function sunix_svg_color(){
         jQuery('img.red-svg').each(function(){
             var $img = jQuery(this);
             var imgID = $img.attr('id');
@@ -878,9 +878,9 @@
 
 
 jQuery(document).ready(function() {
-    alacarte_btt_start();
+    sunix_btt_start();
     jQuery(window).scroll(function(e) {
-        alacarte_btt_start();
+        sunix_btt_start();
     });
     jQuery('#red-btt-circle').click(function() {
         jQuery('html, body').animate({
@@ -889,7 +889,7 @@ jQuery(document).ready(function() {
     });
 });
 
-function alacarte_btt_start() {
+function sunix_btt_start() {
     var scrollTop = jQuery(window).scrollTop();
     var docHeight = jQuery(document).height();
     var winHeight = jQuery(window).height();
@@ -903,14 +903,14 @@ function alacarte_btt_start() {
     } else {
         jQuery('#red-btt-btn').removeClass('show');
     }
-    alacarte_btt_btn(scrollPercentRounded);
+    sunix_btt_btn(scrollPercentRounded);
 };
 
-function alacarte_btt_btn(i) {
+function sunix_btt_btn(i) {
     prec = i * 3.6;
     jQuery('#red-btt-prec').html(i + '%');
-    var borderColor = alacarte_ajax_opts.primary_color;
-        borderActiveColor = alacarte_ajax_opts.accent_color;
+    var borderColor = sunix_ajax_opts.primary_color;
+        borderActiveColor = sunix_ajax_opts.accent_color;
     if (prec <= 180) {
         jQuery('#red-btt-border').css('background-image', 'linear-gradient(' + (prec + 90) + 'deg, transparent 50%, ' + borderColor + ' 50%),linear-gradient(90deg, ' + borderColor + ' 50%, transparent 50%)');
     } else {

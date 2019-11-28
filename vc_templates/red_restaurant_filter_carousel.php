@@ -18,14 +18,14 @@ else{
 }
 $cat_slug = (!empty($choose_menu)) ? $choose_menu : '';
 $current_tax = fr_get_tax_by($cat_slug);
-if(empty($current_tax['terms'])) { esc_html__('Please choose a category menu!','alacarte');return;}
+if(empty($current_tax['terms'])) { esc_html__('Please choose a category menu!','sunix');return;}
 $terms = $current_tax['terms'];
 wp_enqueue_script('red-menu-filter-carousel', get_template_directory_uri() . '/assets/js/red-menu-filter-carousel.js',  array('jquery'), 1.0, true);
 wp_enqueue_script('owl-carousel');
 wp_enqueue_script('owl-carousel-theme');
 wp_enqueue_style( 'owl-carousel');
 wp_enqueue_script('red-menu-carousel', get_template_directory_uri() . '/assets/js/red-menu-carousel.js',  array('jquery'), 1.0, true);
-wp_localize_script('red-menu-carousel', 'NavOptions', ['nav_text' => ['<i class="fal fa-chevron-left"></i><span class="text">'.esc_html__('Prev Menu','alacarte').'</span>','<span class="text">'.esc_html__('Next Menu','alacarte').'</span><i class="fal fa-chevron-right"></i>'],'small_item'=> 1,'large_item'=>$large_item,'nav_large_item'=>true,'data_nav'=>$show_nav,'data_dot'=>$show_dot,'data_loop'=>$show_loop]);
+wp_localize_script('red-menu-carousel', 'NavOptions', ['nav_text' => ['<i class="fal fa-chevron-left"></i><span class="text">'.esc_html__('Prev Menu','sunix').'</span>','<span class="text">'.esc_html__('Next Menu','sunix').'</span><i class="fal fa-chevron-right"></i>'],'small_item'=> 1,'large_item'=>$large_item,'nav_large_item'=>true,'data_nav'=>$show_nav,'data_dot'=>$show_dot,'data_loop'=>$show_loop]);
 wp_enqueue_script('red-menu-carousel');
 $number_row= (!empty($number_row) && is_numeric($number_row) && $number_row> 0)  ? $number_row : 6;
 ?>
@@ -96,7 +96,7 @@ $number_row= (!empty($number_row) && is_numeric($number_row) && $number_row> 0) 
                                                             </span>
                                                         </div>
 
-                                                        <div class="content-desc"><?php   echo alacarte_get_limit_str($menu_item->post_content, 0,200); ?> </div>
+                                                        <div class="content-desc"><?php   echo sunix_get_limit_str($menu_item->post_content, 0,200); ?> </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -165,7 +165,7 @@ $number_row= (!empty($number_row) && is_numeric($number_row) && $number_row> 0) 
                                                             </span>
                                                         </div>
 
-                                                        <div class="content-desc"><?php   echo alacarte_get_limit_str($menu_item->post_content, 0,200); ?> </div>
+                                                        <div class="content-desc"><?php   echo sunix_get_limit_str($menu_item->post_content, 0,200); ?> </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -239,7 +239,7 @@ $number_row= (!empty($number_row) && is_numeric($number_row) && $number_row> 0) 
                                                             </span>
                                                         </div>
 
-                                                        <div class="content-desc"><?php echo alacarte_get_limit_str($menu_item->post_content, 0, 200); ?> </div>
+                                                        <div class="content-desc"><?php echo sunix_get_limit_str($menu_item->post_content, 0, 200); ?> </div>
                                                     </div>
                                                 </div>
                                             </div>

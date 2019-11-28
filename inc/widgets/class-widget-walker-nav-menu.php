@@ -1,9 +1,9 @@
 <?php
 /**
- * alacarte_Categories_Walker
+ * sunix_Categories_Walker
  *
  * @version 1.0
- * @package AlaCarte
+ * @package sunix
  * @since   1.0.2
  *
  */
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) )
     die();
 }
 
-class alacarte_Menu_Walker extends Walker_Nav_Menu {
+class sunix_Menu_Walker extends Walker_Nav_Menu {
 	/**
 	 * Starts the element output.
 	 *
@@ -170,12 +170,12 @@ class alacarte_Menu_Walker extends Walker_Nav_Menu {
 		 * @param int      $depth Depth of menu item. Used for padding.
 		 */
 		$title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
-		if(empty($title)) $title = sprintf( esc_html__( '#%d (no title)', 'alacarte' ), $item->ID );
+		if(empty($title)) $title = sprintf( esc_html__( '#%d (no title)', 'sunix' ), $item->ID );
 		$title = '<span class="title">'.$title.'</span>';
 		/* add expander */
 		$item_expander = '';
 		$is_parent = in_array('menu-item-has-children', $classes);
-		if($is_parent === true) $item_expander = alacarte_widget_expander();
+		if($is_parent === true) $item_expander = sunix_widget_expander();
 
 		$item_output = $args->before;
 		$item_output .= '<a'. $attributes .'>';

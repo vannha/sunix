@@ -4,13 +4,13 @@
  * Like: Hot, New, Sale, ...
  * Use: Product Attributes
 */
-if(!function_exists('alacarte_woocommerce_loop_attributes')){
-	add_action('alacarte_woocommerce_before_shop_loop_products_inner', 'alacarte_woocommerce_loop_attributes', 0);
-	function alacarte_woocommerce_loop_attributes(){
+if(!function_exists('sunix_woocommerce_loop_attributes')){
+	add_action('sunix_woocommerce_before_shop_loop_products_inner', 'sunix_woocommerce_loop_attributes', 0);
+	function sunix_woocommerce_loop_attributes(){
 		?>
 		<div class="red-loop-atts row justify-content-between">
-			<div class="red-loop-badge col-auto"><?php do_action('alacarte_woocommerce_loop_attributes_left'); ?></div>
-			<div class="col-auto"><?php do_action('alacarte_woocommerce_loop_attributes_right'); ?></div>
+			<div class="red-loop-badge col-auto"><?php do_action('sunix_woocommerce_loop_attributes_left'); ?></div>
+			<div class="col-auto"><?php do_action('sunix_woocommerce_loop_attributes_right'); ?></div>
 		</div>
 		<?php
 	}
@@ -18,9 +18,9 @@ if(!function_exists('alacarte_woocommerce_loop_attributes')){
 /**
  * Loop Loop product sale
 */
-if(!function_exists('alacarte_woocommerce_sale')){
-    add_action('alacarte_woocommerce_before_shop_loop_products_inner','alacarte_woocommerce_sale',0);
-    function alacarte_woocommerce_sale(){
+if(!function_exists('sunix_woocommerce_sale')){
+    add_action('sunix_woocommerce_before_shop_loop_products_inner','sunix_woocommerce_sale',0);
+    function sunix_woocommerce_sale(){
         global $product;
         if(!$product->is_on_sale()) return;
         if($product->get_type() == 'variable'){
@@ -34,16 +34,16 @@ if(!function_exists('alacarte_woocommerce_sale')){
             $percentage = round( ( ( $regular_price - $sales_price ) / $regular_price ) * 100 );
         ?>
         <span class="red-badge ">
-            <?php echo esc_html__('Sale','alacarte');?>
+            <?php echo esc_html__('Sale','sunix');?>
         </span>
     <?php 
         }
     }
 }
 /* Loop Product Badge Attributes */ 
-if(!function_exists('alacarte_woocommerce_show_product_loop_badges')){
-	add_action('alacarte_woocommerce_before_shop_loop_products_inner', 'alacarte_woocommerce_show_product_loop_badges', 1);
-    function alacarte_woocommerce_show_product_loop_badges(){
+if(!function_exists('sunix_woocommerce_show_product_loop_badges')){
+	add_action('sunix_woocommerce_before_shop_loop_products_inner', 'sunix_woocommerce_show_product_loop_badges', 1);
+    function sunix_woocommerce_show_product_loop_badges(){
         global $post, $product;
         $terms = get_the_terms($product->get_id(), 'pa_badge');
 

@@ -6,8 +6,8 @@
  * https://kb.wpbakery.com/docs/filters/
  *
 */
-add_filter('vc_shortcode_output', 'alacarte_vc_shortcode_output', 10, 3);
-function alacarte_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
+add_filter('vc_shortcode_output', 'sunix_vc_shortcode_output', 10, 3);
+function sunix_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
 {
     extract($atts);
     //modify shortcode use div as container
@@ -50,7 +50,7 @@ function alacarte_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
                     !empty($vc_row_background_text_style) ? 'font-style-'.$vc_row_background_text_style : '',
                     !empty($vc_row_background_text_transform) ? 'text-'.$vc_row_background_text_transform : '',
                 ];
-                $vc_row_background_text_attrs[] = 'class="'.alacarte_optimize_css_class(implode(' ', $vc_row_background_text_css_class)).'"';
+                $vc_row_background_text_attrs[] = 'class="'.sunix_optimize_css_class(implode(' ', $vc_row_background_text_css_class)).'"';
                 if(!empty($vc_row_background_text_size)) $vc_row_background_text_css[]           = 'font-size:'.(int)$vc_row_background_text_size.'px';
                 if(!empty($vc_row_background_text_color)) $vc_row_background_text_css[]          = 'color:'.$vc_row_background_text_color;
                 if(!empty($vc_row_background_text_letter_spacing)) $vc_row_background_text_css[] = 'letter-spacing:'.(int)$vc_row_background_text_letter_spacing.'px';
@@ -71,7 +71,7 @@ function alacarte_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
                     }
                 }
 
-                $modify['first-child'] .= '<'.$vc_row_background_text_tag.' '.implode(' ', $vc_row_background_text_attrs).'>'.alacarte_html($vc_row_background_text).'</'.$vc_row_background_text_tag.'>';
+                $modify['first-child'] .= '<'.$vc_row_background_text_tag.' '.implode(' ', $vc_row_background_text_attrs).'>'.sunix_html($vc_row_background_text).'</'.$vc_row_background_text_tag.'>';
             }
             /* parallax overlay color */
             if(isset($parallax_overlay) && !empty($parallax_overlay)){
@@ -214,8 +214,8 @@ function alacarte_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
  * Filter to replace default css class names for vc_row shortcode and vc_column
  * https://kb.wpbakery.com/docs/filters/vc_shortcodes_css_class/
 */
-add_filter( 'vc_shortcodes_css_class', 'alacarte_css_classes_for_vc_row_and_vc_column', 10, 2 );
-function alacarte_css_classes_for_vc_row_and_vc_column( $class_string, $tag ) {
+add_filter( 'vc_shortcodes_css_class', 'sunix_css_classes_for_vc_row_and_vc_column', 10, 2 );
+function sunix_css_classes_for_vc_row_and_vc_column( $class_string, $tag ) {
     if ( $tag == 'vc_section' ) {
         //$class_string = str_replace( 'vc_section-has-fill', 'vc-section-has-fill vc-has-fill', $class_string );
         //$class_string = str_replace( 'vc_column-gap-', 'vc-column-gap-', $class_string );
@@ -255,8 +255,8 @@ function alacarte_css_classes_for_vc_row_and_vc_column( $class_string, $tag ) {
  * https://kb.wpbakery.com/docs/filters/vc_shortcodes_css_class/
  *
  */
-add_filter('vc_shortcodes_css_class', 'alacarte_vc_shortcodes_css_class', 10, 3);
-function alacarte_vc_shortcodes_css_class($class_string, $tag, $atts = '')
+add_filter('vc_shortcodes_css_class', 'sunix_vc_shortcodes_css_class', 10, 3);
+function sunix_vc_shortcodes_css_class($class_string, $tag, $atts = '')
 {
     $custom_class = array();
     extract($atts);
@@ -398,77 +398,77 @@ function alacarte_vc_shortcodes_css_class($class_string, $tag, $atts = '')
 vc_add_params('vc_row', array(
     array(
         'type'        => 'dropdown',
-        'heading'     => esc_html__('Overfolow', 'alacarte'),
+        'heading'     => esc_html__('Overfolow', 'sunix'),
         'param_name'  => 'row_overfolow',
         'value'       => array(
-            esc_html__('Default', 'alacarte')      => '',
-            esc_html__('Initial', 'alacarte')       => 'row-overfolow-initial',
+            esc_html__('Default', 'sunix')      => '',
+            esc_html__('Initial', 'sunix')       => 'row-overfolow-initial',
         ),
         'edit_field_class' => 'vc_col-sm-6',
-        'group'       => esc_html__('Alacarte Custom', 'alacarte')
+        'group'       => esc_html__('sunix Custom', 'sunix')
     ),
   array(
         'type'             => 'colorpicker',
-        'heading'          => esc_html__('Background Overlay Color', 'alacarte'),
+        'heading'          => esc_html__('Background Overlay Color', 'sunix'),
         'param_name'       => 'parallax_overlay',
         'value'            => '',
-        'description'      => esc_html__('Choose overlay color.', 'alacarte'),
+        'description'      => esc_html__('Choose overlay color.', 'sunix'),
         'edit_field_class' => 'vc_col-sm-6',
-        'group'            => esc_html__('Alacarte Custom', 'alacarte')
+        'group'            => esc_html__('sunix Custom', 'sunix')
     ),
     array(
         'type'        => 'dropdown',
-        'heading'     => esc_html__('Row Footer Bottom', 'alacarte'),
+        'heading'     => esc_html__('Row Footer Bottom', 'sunix'),
         'param_name'  => 'row_footer_bottom',
         'value'       => array(
-            esc_html__('Default', 'alacarte')      => '',
-            esc_html__('Row Footer Bottom', 'alacarte')       => 'row-footer-bottom',
+            esc_html__('Default', 'sunix')      => '',
+            esc_html__('Row Footer Bottom', 'sunix')       => 'row-footer-bottom',
         ),
         'edit_field_class' => 'vc_col-sm-6',
-        'group'       => esc_html__('Alacarte Custom', 'alacarte')
+        'group'       => esc_html__('sunix Custom', 'sunix')
     ),
     array(
         'type'        => 'dropdown',
-        'heading'     => esc_html__('Background Row and content Left', 'alacarte'),
+        'heading'     => esc_html__('Background Row and content Left', 'sunix'),
         'param_name'  => 'row_bg_left_content',
         'value'       => array(
-            esc_html__('Default', 'alacarte')      => '',
-            esc_html__('Row Content Left', 'alacarte')       => 'row_bg_left_content',
+            esc_html__('Default', 'sunix')      => '',
+            esc_html__('Row Content Left', 'sunix')       => 'row_bg_left_content',
         ),
         'edit_field_class' => 'vc_col-sm-6',
-        'group'       => esc_html__('Alacarte Custom', 'alacarte')
+        'group'       => esc_html__('sunix Custom', 'sunix')
     ),
     array(
         'type'        => 'dropdown',
-        'heading'     => esc_html__('Row Style', 'alacarte'),
+        'heading'     => esc_html__('Row Style', 'sunix'),
         'param_name'  => 'row_half_background',
         'value'       => array(
-            esc_html__('None', 'alacarte')      => '',
-            esc_html__('Half Row Background', 'alacarte')       => 'row-half-bg',
-            esc_html__('Row Border', 'alacarte')       => 'row-border-bg',
-            esc_html__('Row Full Background', 'alacarte')       => 'row-full-bg',
-            esc_html__('Row Background Color', 'alacarte')       => 'row-bg-color',
-            esc_html__('Row Background Image and overlay color', 'alacarte')       => 'vc_row-bg-image-overlay-color',
-            esc_html__('Row No Padding', 'alacarte')       => 'vc_row-no-padding',
-            esc_html__('Row Padding 225px', 'alacarte')       => 'vc_row-padding-225',
-            esc_html__('Row Default Display Flex', 'alacarte')       => 'vc_row-default-display-flex',
-            esc_html__('Row Default Padding', 'alacarte')       => 'vc_row-default-padding',
+            esc_html__('None', 'sunix')      => '',
+            esc_html__('Half Row Background', 'sunix')       => 'row-half-bg',
+            esc_html__('Row Border', 'sunix')       => 'row-border-bg',
+            esc_html__('Row Full Background', 'sunix')       => 'row-full-bg',
+            esc_html__('Row Background Color', 'sunix')       => 'row-bg-color',
+            esc_html__('Row Background Image and overlay color', 'sunix')       => 'vc_row-bg-image-overlay-color',
+            esc_html__('Row No Padding', 'sunix')       => 'vc_row-no-padding',
+            esc_html__('Row Padding 225px', 'sunix')       => 'vc_row-padding-225',
+            esc_html__('Row Default Display Flex', 'sunix')       => 'vc_row-default-display-flex',
+            esc_html__('Row Default Padding', 'sunix')       => 'vc_row-default-padding',
 
         ),
         'edit_field_class' => 'vc_col-sm-6',
-        'group'       => esc_html__('Alacarte Custom', 'alacarte')
+        'group'       => esc_html__('sunix Custom', 'sunix')
     ),
     array(
         'type'        => 'dropdown',
-        'heading'     => esc_html__('Row Display', 'alacarte'),
+        'heading'     => esc_html__('Row Display', 'sunix'),
         'param_name'  => 'row_display_default',
         'value'       => array(
-            esc_html__('None', 'alacarte')      => '',
-            esc_html__('Row Default Display Flex', 'alacarte')       => 'vc_row-default-display-flex'
+            esc_html__('None', 'sunix')      => '',
+            esc_html__('Row Default Display Flex', 'sunix')       => 'vc_row-default-display-flex'
 
         ),
         'edit_field_class' => 'vc_col-sm-6',
-        'group'       => esc_html__('Alacarte Custom', 'alacarte')
+        'group'       => esc_html__('sunix Custom', 'sunix')
     ),
 ));
 /**
@@ -479,21 +479,21 @@ vc_add_params('vc_row', array(
 vc_add_params('vc_column', array(
     array(
         'type'        => 'dropdown',
-        'heading'     => esc_html__('Text Align', 'alacarte'),
+        'heading'     => esc_html__('Text Align', 'sunix'),
         'param_name'  => 'vc_col_content_align',
         'value'       => array(
-            esc_html__('Default', 'alacarte') => '',
-            esc_html__('Center', 'alacarte')  => 'text-center',
-            esc_html__('Left', 'alacarte')  => 'text-left',
-            esc_html__('Right', 'alacarte')  => 'text-right',
+            esc_html__('Default', 'sunix') => '',
+            esc_html__('Center', 'sunix')  => 'text-center',
+            esc_html__('Left', 'sunix')  => 'text-left',
+            esc_html__('Right', 'sunix')  => 'text-right',
         ),
         'edit_field_class' => 'vc_col-sm-6',
-        'group'       => esc_html__('Alacarte Custom', 'alacarte')
+        'group'       => esc_html__('sunix Custom', 'sunix')
     ),
     array(
         "type" => "dropdown",
         "class" => "",
-        "heading" => esc_html__("Reservation Style", 'alacarte'),
+        "heading" => esc_html__("Reservation Style", 'sunix'),
         "admin_label" => true,
         "param_name" => "reservation_style",
         "value" => array(
@@ -503,11 +503,11 @@ vc_add_params('vc_column', array(
             "Style 4" => "reservation-style4"
         ),
         'edit_field_class' => 'vc_col-sm-6',
-        'group'       => esc_html__('Alacarte Custom', 'alacarte')
+        'group'       => esc_html__('sunix Custom', 'sunix')
     ), array(
         "type" => "dropdown",
         "class" => "",
-        "heading" => esc_html__("Order Column", 'alacarte'),
+        "heading" => esc_html__("Order Column", 'sunix'),
         "admin_label" => true,
         "param_name" => "order_style",
         "value" => array(
@@ -516,48 +516,48 @@ vc_add_params('vc_column', array(
             "Last" => "order-md-last",
         ),
         'edit_field_class' => 'vc_col-sm-6',
-        'group'       => esc_html__('Alacarte Custom', 'alacarte')
+        'group'       => esc_html__('sunix Custom', 'sunix')
     ),
     array(
         "type" => "dropdown",
-        "heading" => esc_html__("Contact Form 7 Style",'alacarte'),
+        "heading" => esc_html__("Contact Form 7 Style",'sunix'),
         "admin_label" => true,
         "param_name" => "contact_style",
         "value" => array(
-            esc_html__('None','alacarte') => '',
-            esc_html__('Style 1','alacarte') => 'contact-style1',
-            esc_html__('Style 2','alacarte') => 'contact-style2',
-            esc_html__('Style 3','alacarte') => 'contact-style3',
+            esc_html__('None','sunix') => '',
+            esc_html__('Style 1','sunix') => 'contact-style1',
+            esc_html__('Style 2','sunix') => 'contact-style2',
+            esc_html__('Style 3','sunix') => 'contact-style3',
         ),
         "std" => '',
         'edit_field_class' => 'vc_col-sm-6',
-        'group'       => esc_html__('Alacarte Custom', 'alacarte')
+        'group'       => esc_html__('sunix Custom', 'sunix')
     ),
     array(
         "type" => "dropdown",
-        "heading" => esc_html__("Priority",'alacarte'),
+        "heading" => esc_html__("Priority",'sunix'),
         "admin_label" => true,
         "param_name" => "priority_style",
         "value" => array(
-            esc_html__('None','alacarte') => '',
-            esc_html__('Priority 1','alacarte') => 'priority-style1',
+            esc_html__('None','sunix') => '',
+            esc_html__('Priority 1','sunix') => 'priority-style1',
         ),
         "std" => '',
         'edit_field_class' => 'vc_col-sm-6',
-        'group'       => esc_html__('Alacarte Custom', 'alacarte')
+        'group'       => esc_html__('sunix Custom', 'sunix')
     ),
     array(
         "type" => "dropdown",
-        "heading" => esc_html__("Box Shadow",'alacarte'),
+        "heading" => esc_html__("Box Shadow",'sunix'),
         "admin_label" => true,
         "param_name" => "col_box_shadow",
         "value" => array(
-            esc_html__('None','alacarte') => '',
-            esc_html__('Box Shadow','alacarte') => 'col-box-shadow',
+            esc_html__('None','sunix') => '',
+            esc_html__('Box Shadow','sunix') => 'col-box-shadow',
         ),
         "std" => '',
         'edit_field_class' => 'vc_col-sm-6',
-        'group'       => esc_html__('Alacarte Custom', 'alacarte')
+        'group'       => esc_html__('sunix Custom', 'sunix')
     ),
 
 ));
@@ -570,12 +570,12 @@ vc_add_params('vc_column', array(
 vc_add_params('vc_custom_heading', array(
     array(
         "type" => "dropdown",
-        "heading" => esc_html__("Heading on Footer",'alacarte'),
+        "heading" => esc_html__("Heading on Footer",'sunix'),
         "admin_label" => true,
         "param_name" => "el_class",
         "value" => array(
-            esc_html__('None','alacarte') => '',
-            esc_html__('Heading Title','alacarte') => 'widget-title',
+            esc_html__('None','sunix') => '',
+            esc_html__('Heading Title','sunix') => 'widget-title',
         ),
         "std" => '',
     ),
@@ -588,46 +588,46 @@ vc_add_params('vc_custom_heading', array(
 vc_add_params('vc_column_text', array(
     array(
         "type" => "dropdown",
-        "heading" => esc_html__("List Style",'alacarte'),
+        "heading" => esc_html__("List Style",'sunix'),
         "admin_label" => true,
         "param_name" => "list_style",
         "value" => array(
-            esc_html__('None','alacarte') => '',
-            esc_html__('Primary list','alacarte') => 'primary-list',
-            esc_html__('Checked list','alacarte') => 'checked-list',
-            esc_html__('Arrow list','alacarte') => 'arrow-list',
+            esc_html__('None','sunix') => '',
+            esc_html__('Primary list','sunix') => 'primary-list',
+            esc_html__('Checked list','sunix') => 'checked-list',
+            esc_html__('Arrow list','sunix') => 'arrow-list',
         ),
         "std" => '',
-        'group'       => esc_html__('Syring Custom', 'alacarte')
+        'group'       => esc_html__('Syring Custom', 'sunix')
     ),
     array(
         "type" => "textfield",
-        "heading" => esc_html__("Font size",'alacarte'),
+        "heading" => esc_html__("Font size",'sunix'),
         "param_name" => "font_size",
         "value" => "",
-        'group'       => esc_html__('Syring Custom', 'alacarte')
+        'group'       => esc_html__('Syring Custom', 'sunix')
     ),
 
     array(
         "type" => "textfield",
-        "heading" => esc_html__("Line height",'alacarte'),
+        "heading" => esc_html__("Line height",'sunix'),
         "param_name" => "line_height",
         "value" => "",
-        'group'            => esc_html__('Syring Custom', 'alacarte')
+        'group'            => esc_html__('Syring Custom', 'sunix')
     ),
     array(
         "type" => "textfield",
-        "heading" => esc_html__("Letter spacing (0.3px, 0.03em)",'alacarte'),
+        "heading" => esc_html__("Letter spacing (0.3px, 0.03em)",'sunix'),
         "param_name" => "letter_spacing",
         "value" => "",
-        'group'       => esc_html__('Syring Custom', 'alacarte')
+        'group'       => esc_html__('Syring Custom', 'sunix')
     ),
     array(
         "type" => "colorpicker",
         "class" => "",
-        "heading" => esc_html__("Color", 'alacarte'),
+        "heading" => esc_html__("Color", 'sunix'),
         "param_name" => "color",
         "value" => "",
-        'group'       => esc_html__('Syring Custom', 'alacarte')
+        'group'       => esc_html__('Syring Custom', 'sunix')
     ),
 ));

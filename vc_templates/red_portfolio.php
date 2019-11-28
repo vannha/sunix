@@ -57,9 +57,9 @@ $posts = new WP_Query($args);
         <?php if ($posts -> have_posts() )  : ?>
                 <?php
                 while ( $posts -> have_posts() ) : $posts -> the_post();
-                    $portfolio_style = alacarte_get_post_format_value('portfolio_style','');
-                    $portfolio_subtitle = alacarte_get_post_format_value('portfolio_subtitle','');
-                    $portfolio_link = alacarte_get_post_format_value('portfolio_link','');
+                    $portfolio_style = sunix_get_post_format_value('portfolio_style','');
+                    $portfolio_subtitle = sunix_get_post_format_value('portfolio_subtitle','');
+                    $portfolio_link = sunix_get_post_format_value('portfolio_link','');
                     switch ($portfolio_style) {
                         case '2':
                             $item_class='col-md-6';
@@ -74,7 +74,7 @@ $posts = new WP_Query($args);
                         <div class=" cms-grid-item-inner">
                             <div class="red-blog-post-thumbnail">
                                 <?php
-                                alacarte_post_media([
+                                sunix_post_media([
                                     'class'          => 'margin-0',
                                     'default_thumb'  => true,
                                     'thumbnail_size' => 'large'
@@ -94,7 +94,7 @@ $posts = new WP_Query($args);
                                     <i class="flaticon-ribbon"></i>
                                     <?php if (!empty($portfolio_link)){?>
                                         <div class="portfolio-footer">
-                                            <a class="red-btn primary fill" href="<?php echo esc_url( get_page_link($portfolio_link[0] ) ); ?>"><?php echo esc_html__('Read More','alacarte');?></a>
+                                            <a class="red-btn primary fill" href="<?php echo esc_url( get_page_link($portfolio_link[0] ) ); ?>"><?php echo esc_html__('Read More','sunix');?></a>
                                         </div>
                                     <?php }?>
 

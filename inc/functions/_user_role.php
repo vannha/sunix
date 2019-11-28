@@ -2,12 +2,12 @@
 /**
  * Add new user role
 */
-if(!function_exists('alacarte_add_new_user_role')){
-	add_action('after_setup_theme','alacarte_add_new_user_role');
-	function alacarte_add_new_user_role(){
+if(!function_exists('sunix_add_new_user_role')){
+	add_action('after_setup_theme','sunix_add_new_user_role');
+	function sunix_add_new_user_role(){
 		add_role(
-		    'alacarte_support_manager',
-		    esc_html__( 'AlaCarte Support Manager','alacarte'),
+		    'sunix_support_manager',
+		    esc_html__( 'sunix Support Manager','sunix'),
 		    array(
 		        'read'         => true,  // true allows this capability
 		        'edit_posts'   => false,
@@ -20,7 +20,7 @@ if(!function_exists('alacarte_add_new_user_role')){
  * Get list of user by user role
  * @param $user_role
 */
-function alacarte_list_user_by_role($args = []){
+function sunix_list_user_by_role($args = []){
 	$args = wp_parse_args($args, [
 	    'role'    => 'subcrible',
 	    'orderby' => 'user_nicename',

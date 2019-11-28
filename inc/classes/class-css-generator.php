@@ -4,7 +4,7 @@ if ( ! class_exists( 'ReduxFrameworkInstances' ) )
     return;
 }
 
-class alacarte_CSS_Generator
+class sunix_CSS_Generator
 {
     /**
      * Compiler class instance
@@ -46,7 +46,7 @@ class alacarte_CSS_Generator
      */
     function __construct()
     {
-        $this->opt_name = alacarte_get_theme_opt_name();
+        $this->opt_name = sunix_get_theme_opt_name();
 
         if ( empty( $this->opt_name ) )
         {
@@ -71,7 +71,7 @@ class alacarte_CSS_Generator
         {
             return;
         }
-        $this->dev_mode = alacarte_get_theme_opt('dev_mode', false);
+        $this->dev_mode = sunix_get_theme_opt('dev_mode', false);
 
         if ( $this->dev_mode )
         {
@@ -255,80 +255,80 @@ class alacarte_CSS_Generator
     {
         ob_start();
 
-        $primary_color = alacarte_get_theme_opt( 'primary_color', apply_filters('alacarte_primary_color',alacarte_configs('primary_color')) );
-        $accent_color = alacarte_get_theme_opt( 'accent_color', apply_filters('alacarte_accent_color',alacarte_configs('accent_color') ));
-        $secondary_color = alacarte_get_theme_opt( 'secondary_color', apply_filters('alacarte_secondary_color',alacarte_configs('secondary_color') ));
+        $primary_color = sunix_get_theme_opt( 'primary_color', apply_filters('sunix_primary_color',sunix_configs('primary_color')) );
+        $accent_color = sunix_get_theme_opt( 'accent_color', apply_filters('sunix_accent_color',sunix_configs('accent_color') ));
+        $secondary_color = sunix_get_theme_opt( 'secondary_color', apply_filters('sunix_secondary_color',sunix_configs('secondary_color') ));
         printf( '$primary_color: %s;', esc_attr( $primary_color ) );
         printf( '$accent_color: %s;', esc_attr( $accent_color ) );
         printf( '$secondary_color: %s;', esc_attr( $secondary_color ) );
         // Typography 
-        printf( '$BodyBG: %s;', alacarte_configs('body_bg'));
-        printf( '$BodyFont: %s;', alacarte_configs('body_font'));
-        printf( '$BodyFontSize: %s;', alacarte_configs('body_font_size'));
-        printf( '$BodyLineHeight: %s;',alacarte_configs('body_line_height'));
-        printf( '$BodyFontSizeL: %s;', alacarte_configs('body_font_size_large'));
-        printf( '$BodyFontSizeM: %s;', alacarte_configs('body_font_size_medium'));
-        printf( '$BodyFontSizeS: %s;', alacarte_configs('body_font_size_small'));
-        printf( '$BodyFontSizeXS: %s;', alacarte_configs('body_font_size_xsmall'));
-        printf( '$BodyFontSizeXXS: %s;', alacarte_configs('body_font_size_xxsmall'));
-        printf( '$BodyColor: %s;', alacarte_configs('body_font_color'));
-        printf( '$H1Size: %s;', alacarte_configs('h1_size'));
-        printf( '$H2Size: %s;', alacarte_configs('h2_size'));
-        printf( '$H3Size: %s;', alacarte_configs('h3_size'));
-        printf( '$H4Size: %s;', alacarte_configs('h4_size'));
-        printf( '$H5Size: %s;', alacarte_configs('h5_size'));
-        printf( '$H6Size: %s;', alacarte_configs('h6_size'));
-        printf( '$HeadingFont: %s;', alacarte_configs('heading_font'));
-        printf( '$HeadingColor: %s;', alacarte_configs('heading_color'));
-        printf( '$HeadingColorHover: %s;', alacarte_configs('heading_color_hover'));
-        printf( '$HeadingFontW: %s;', alacarte_configs('heading_font_weight'));
-        printf( '$MetaFont : %s;', alacarte_configs('meta_font'));
-        printf( '$MetaColor: %s;', alacarte_configs('meta_color'));
-        printf( '$MetaColorHover: %s;', alacarte_configs('meta_color_hover'));
+        printf( '$BodyBG: %s;', sunix_configs('body_bg'));
+        printf( '$BodyFont: %s;', sunix_configs('body_font'));
+        printf( '$BodyFontSize: %s;', sunix_configs('body_font_size'));
+        printf( '$BodyLineHeight: %s;',sunix_configs('body_line_height'));
+        printf( '$BodyFontSizeL: %s;', sunix_configs('body_font_size_large'));
+        printf( '$BodyFontSizeM: %s;', sunix_configs('body_font_size_medium'));
+        printf( '$BodyFontSizeS: %s;', sunix_configs('body_font_size_small'));
+        printf( '$BodyFontSizeXS: %s;', sunix_configs('body_font_size_xsmall'));
+        printf( '$BodyFontSizeXXS: %s;', sunix_configs('body_font_size_xxsmall'));
+        printf( '$BodyColor: %s;', sunix_configs('body_font_color'));
+        printf( '$H1Size: %s;', sunix_configs('h1_size'));
+        printf( '$H2Size: %s;', sunix_configs('h2_size'));
+        printf( '$H3Size: %s;', sunix_configs('h3_size'));
+        printf( '$H4Size: %s;', sunix_configs('h4_size'));
+        printf( '$H5Size: %s;', sunix_configs('h5_size'));
+        printf( '$H6Size: %s;', sunix_configs('h6_size'));
+        printf( '$HeadingFont: %s;', sunix_configs('heading_font'));
+        printf( '$HeadingColor: %s;', sunix_configs('heading_color'));
+        printf( '$HeadingColorHover: %s;', sunix_configs('heading_color_hover'));
+        printf( '$HeadingFontW: %s;', sunix_configs('heading_font_weight'));
+        printf( '$MetaFont : %s;', sunix_configs('meta_font'));
+        printf( '$MetaColor: %s;', sunix_configs('meta_color'));
+        printf( '$MetaColorHover: %s;', sunix_configs('meta_color_hover'));
         // Border
-        printf( '$MainBorder: %s;', alacarte_configs('main_border'));
-        printf( '$MainBorder2: %s;', alacarte_configs('main_border2'));
-        printf( '$MainBorderColor: %s;', alacarte_configs('main_border_color'));
+        printf( '$MainBorder: %s;', sunix_configs('main_border'));
+        printf( '$MainBorder2: %s;', sunix_configs('main_border2'));
+        printf( '$MainBorderColor: %s;', sunix_configs('main_border_color'));
         // Comments
-        printf( '$cmt_avatar_size: %s;', alacarte_configs('cmt_avatar_size'));
-        printf( '$cmt_border: %s;', alacarte_configs('cmt_border'));
+        printf( '$cmt_avatar_size: %s;', sunix_configs('cmt_avatar_size'));
+        printf( '$cmt_border: %s;', sunix_configs('cmt_border'));
 
         /*height*/
 
-        $header_height = alacarte_get_theme_opt('header_height', ['height' => apply_filters('alacarte_header_height',alacarte_configs('header_height'))] );
+        $header_height = sunix_get_theme_opt('header_height', ['height' => apply_filters('sunix_header_height',sunix_configs('header_height'))] );
         if ($header_height['height'] === 'px'){
-            printf('$header_height: %s;', alacarte_configs('header_height'));
+            printf('$header_height: %s;', sunix_configs('header_height'));
         }
         else{
             printf('$header_height: %s;', esc_attr($header_height['height']));
         }
 
         /* Header side width */
-        $header_sidewidth = alacarte_get_theme_opt('header_sidewidth',['width' => apply_filters('alacarte_header_sidewidth',alacarte_configs('header_sidewidth'))]);
+        $header_sidewidth = sunix_get_theme_opt('header_sidewidth',['width' => apply_filters('sunix_header_sidewidth',sunix_configs('header_sidewidth'))]);
         printf('$header_sidewidth: %s;', esc_attr($header_sidewidth['width']));
 
         /* Default Header Color */
-        $header_link_color = alacarte_get_theme_opt('header_link_colors',apply_filters('alacarte_header_link_color', ['regular' => $accent_color, 'hover' => $primary_color, 'active' => $primary_color]) );
+        $header_link_color = sunix_get_theme_opt('header_link_colors',apply_filters('sunix_header_link_color', ['regular' => $accent_color, 'hover' => $primary_color, 'active' => $primary_color]) );
         printf( '$header_regular: %s;', esc_attr( $header_link_color['regular'] ) );
         printf( '$header_hover: %s;', esc_attr( $header_link_color['hover'] ) );
         printf( '$header_active: %s;', esc_attr( $header_link_color['active'] ) );
 
         /* Ontop Header Color */
-        $ontop_link_color = alacarte_get_theme_opt('ontop_link_colors', apply_filters('alacarte_ontop_link_color', ['regular' => '#FFFFFF', 'hover' => $accent_color, 'active' => $accent_color]) );
+        $ontop_link_color = sunix_get_theme_opt('ontop_link_colors', apply_filters('sunix_ontop_link_color', ['regular' => '#FFFFFF', 'hover' => $accent_color, 'active' => $accent_color]) );
         printf( '$ontop_regular: %s;', esc_attr( $ontop_link_color['regular'] ) );
         printf( '$ontop_hover: %s;', esc_attr( $ontop_link_color['hover'] ) );
         printf( '$ontop_active: %s;', esc_attr( $ontop_link_color['active'] ) );
 
         /* Sticky Header Color */
-        $sticky_link_color = alacarte_get_theme_opt('sticky_link_colors',apply_filters('alacarte_sticky_link_color',['regular' => '#FFFFFF', 'hover' => $accent_color, 'active' => $accent_color]));
+        $sticky_link_color = sunix_get_theme_opt('sticky_link_colors',apply_filters('sunix_sticky_link_color',['regular' => '#FFFFFF', 'hover' => $accent_color, 'active' => $accent_color]));
         printf( '$sticky_regular: %s;', esc_attr( $sticky_link_color['regular'] ) );
         printf( '$sticky_hover: %s;', esc_attr( $sticky_link_color['hover'] ) );
         printf( '$sticky_active: %s;', esc_attr( $sticky_link_color['active'] ) );
 
         /* Dropdown && Mobile */
-        $dropdown_bg_opt = alacarte_get_theme_opt('dropdown_bg',['rgba' => apply_filters('alacarte_dropdown_bg', alacarte_configs('dropdown_bg'))]);
+        $dropdown_bg_opt = sunix_get_theme_opt('dropdown_bg',['rgba' => apply_filters('sunix_dropdown_bg', sunix_configs('dropdown_bg'))]);
         printf('$dropdown_bg: %s;', esc_attr($dropdown_bg_opt['rgba']));
-        $dropdown_link_colors = alacarte_get_theme_opt('dropdown_link_colors', apply_filters('alacarte_dropdown_link_colors',['regular' => '#111', 'hover' => $primary_color, 'active' => $primary_color]) );
+        $dropdown_link_colors = sunix_get_theme_opt('dropdown_link_colors', apply_filters('sunix_dropdown_link_colors',['regular' => '#111', 'hover' => $primary_color, 'active' => $primary_color]) );
         printf( '$dropdown_regular: %s;', esc_attr( $dropdown_link_colors['regular'] ) );
         printf( '$dropdown_hover: %s;', esc_attr( $dropdown_link_colors['hover'] ) );
         printf( '$dropdown_active: %s;', esc_attr( $dropdown_link_colors['active'] ) );
@@ -336,22 +336,22 @@ class alacarte_CSS_Generator
         /* Side Header Width */
 
         /* WooCommerce */
-        printf( '$alacarte_product_single_image_w: %s;', alacarte_configs('alacarte_product_single_image_w') );
-        printf( '$alacarte_product_single_image_h: %s;', alacarte_configs('alacarte_product_single_image_h') );
+        printf( '$sunix_product_single_image_w: %s;', sunix_configs('sunix_product_single_image_w') );
+        printf( '$sunix_product_single_image_h: %s;', sunix_configs('sunix_product_single_image_h') );
         
-        printf( '$alacarte_product_loop_image_w: %s;', alacarte_configs('alacarte_product_loop_image_w') );
-        printf( '$alacarte_product_loop_image_h: %s;', alacarte_configs('alacarte_product_loop_image_h') );
+        printf( '$sunix_product_loop_image_w: %s;', sunix_configs('sunix_product_loop_image_w') );
+        printf( '$sunix_product_loop_image_h: %s;', sunix_configs('sunix_product_loop_image_h') );
 
-        printf( '$alacarte_product_gallery_thumbnail_w: %s;', alacarte_configs('alacarte_product_gallery_thumbnail_w') );
-        printf( '$alacarte_product_gallery_thumbnail_h: %s;', alacarte_configs('alacarte_product_gallery_thumbnail_h') );
+        printf( '$sunix_product_gallery_thumbnail_w: %s;', sunix_configs('sunix_product_gallery_thumbnail_w') );
+        printf( '$sunix_product_gallery_thumbnail_h: %s;', sunix_configs('sunix_product_gallery_thumbnail_h') );
 
-        printf( '$alacarte_product_gallery_thumbnail_v_w: %s;', alacarte_configs('alacarte_product_gallery_thumbnail_v_w') );
-        printf( '$alacarte_gallery_thumbnail_v_h: %s;', alacarte_configs('alacarte_product_gallery_thumbnail_v_h') );
+        printf( '$sunix_product_gallery_thumbnail_v_w: %s;', sunix_configs('sunix_product_gallery_thumbnail_v_w') );
+        printf( '$sunix_gallery_thumbnail_v_h: %s;', sunix_configs('sunix_product_gallery_thumbnail_v_h') );
 
-        printf( '$alacarte_gallery_thumbnail_h_w: %s;', alacarte_configs('alacarte_product_gallery_thumbnail_h_w') );
-        printf( '$alacarte_gallery_thumbnail_h_h: %s;', alacarte_configs('alacarte_product_gallery_thumbnail_h_h') );
+        printf( '$sunix_gallery_thumbnail_h_w: %s;', sunix_configs('sunix_product_gallery_thumbnail_h_w') );
+        printf( '$sunix_gallery_thumbnail_h_h: %s;', sunix_configs('sunix_product_gallery_thumbnail_h_h') );
 
-        printf( '$alacarte_product_gallery_thumbnail_space: %s;', alacarte_configs('alacarte_product_gallery_thumbnail_space') );
+        printf( '$sunix_product_gallery_thumbnail_space: %s;', sunix_configs('sunix_product_gallery_thumbnail_space') );
 
 
         return ob_get_clean();
@@ -367,7 +367,7 @@ class alacarte_CSS_Generator
 
         if ( $css )
         {
-            wp_add_inline_style( 'alacarte', $css );
+            wp_add_inline_style( 'sunix', $css );
         }
     }
 
@@ -377,11 +377,11 @@ class alacarte_CSS_Generator
     protected function inline_css()
     {
         ob_start();
-        $primary_color = alacarte_get_theme_opt( 'primary_color', apply_filters('alacarte_primary_color', alacarte_configs('primary_color')) );
-        $accent_color  = alacarte_get_theme_opt( 'accent_color', apply_filters('alacarte_accent_color', alacarte_configs('accent_color')) );
+        $primary_color = sunix_get_theme_opt( 'primary_color', apply_filters('sunix_primary_color', sunix_configs('primary_color')) );
+        $accent_color  = sunix_get_theme_opt( 'accent_color', apply_filters('sunix_accent_color', sunix_configs('accent_color')) );
         // Menu links color for options page
         //--------------------------------------------------
-        $body_padding = alacarte_get_page_opt( 'site_bordered_w', ['padding-top' => '', 'padding-right' => '', 'padding-bottom' => '','padding-left' => ''] );
+        $body_padding = sunix_get_page_opt( 'site_bordered_w', ['padding-top' => '', 'padding-right' => '', 'padding-bottom' => '','padding-left' => ''] );
         if(!empty( $body_padding['padding-top'])){
 
              printf(
@@ -418,7 +418,7 @@ class alacarte_CSS_Generator
                  esc_attr($body_padding['padding-left'])
              );
         }
-        $header_link_colors = alacarte_get_page_opt( 'header_link_colors', ['regular' => '', 'hover' => '', 'active' => ''] );
+        $header_link_colors = sunix_get_page_opt( 'header_link_colors', ['regular' => '', 'hover' => '', 'active' => ''] );
         // menu regular
         if(!empty($header_link_colors['regular'])){
             printf(
@@ -501,7 +501,7 @@ class alacarte_CSS_Generator
             );
         }
         // OnTop Menu
-        $ontop_link_colors = alacarte_get_page_opt( 'ontop_link_colors', ['regular' => '', 'hover' => '', 'active' => ''] );
+        $ontop_link_colors = sunix_get_page_opt( 'ontop_link_colors', ['regular' => '', 'hover' => '', 'active' => ''] );
         // menu regular
         if(!empty($ontop_link_colors['regular'])){
             printf(
@@ -563,8 +563,8 @@ class alacarte_CSS_Generator
             );
         }
         /*header height*/
-        $header_height = alacarte_get_theme_opt('header_height', ['height' => apply_filters('alacarte_header_height',alacarte_configs('header_height'))] );
-        $header_height_page = alacarte_get_page_opt('header_height', ['height' => apply_filters('alacarte_header_height',alacarte_configs('header_height'))] );
+        $header_height = sunix_get_theme_opt('header_height', ['height' => apply_filters('sunix_header_height',sunix_configs('header_height'))] );
+        $header_height_page = sunix_get_page_opt('header_height', ['height' => apply_filters('sunix_header_height',sunix_configs('header_height'))] );
         if ($header_height_page['height'] !== 'px'){
             $header_height  = $header_height_page;
         }
@@ -581,8 +581,8 @@ class alacarte_CSS_Generator
          * Header side menu 
          *
         */
-        $header_sidewidth = alacarte_get_theme_opt('header_sidewidth', ['width' => ''] );
-        $header_sidewidth_page = alacarte_get_page_opt('header_sidewidth', ['width' => ''] );
+        $header_sidewidth = sunix_get_theme_opt('header_sidewidth', ['width' => ''] );
+        $header_sidewidth_page = sunix_get_page_opt('header_sidewidth', ['width' => ''] );
         if($header_sidewidth_page['width'] !== 'px' && $header_sidewidth_page['width'] !== $header_sidewidth['width']){
             $header_sidewidth['width'] = $header_sidewidth_page['width'];
         }
@@ -591,7 +591,7 @@ class alacarte_CSS_Generator
                 printf(
                     'body.header-3:not(.side-header-ontop){
                         padding-%s: %s !important;
-                    }', alacarte_align(), esc_attr($header_sidewidth['width'])
+                    }', sunix_align(), esc_attr($header_sidewidth['width'])
                 );
                 //  Header side menu width
                 printf(
@@ -603,7 +603,7 @@ class alacarte_CSS_Generator
                 printf(
                     'body.header-3 #red-loading{
                         margin-%s: calc(%s / -2) !important;
-                    }', alacarte_align(), esc_attr($header_sidewidth['width'])
+                    }', sunix_align(), esc_attr($header_sidewidth['width'])
                 );
             echo '}';
         }
@@ -612,4 +612,4 @@ class alacarte_CSS_Generator
     }
 }
 
-new alacarte_CSS_Generator();
+new sunix_CSS_Generator();

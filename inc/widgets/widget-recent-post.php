@@ -4,24 +4,24 @@ if(!function_exists('register_ef5_widget')) return;
 /**
  * Recent Posts widgets
  *
- * @package AlaCarte
+ * @package sunix
  * @version 1.0
  */
 
-add_action('widgets_init', 'alacarte_Recent_Posts_Widget');
-function alacarte_Recent_Posts_Widget() {
-    register_ef5_widget('alacarte_Recent_Posts_Widget');
+add_action('widgets_init', 'sunix_Recent_Posts_Widget');
+function sunix_Recent_Posts_Widget() {
+    register_ef5_widget('sunix_Recent_Posts_Widget');
 }
 
-class alacarte_Recent_Posts_Widget extends WP_Widget
+class sunix_Recent_Posts_Widget extends WP_Widget
 {
     function __construct()
     {
         parent::__construct(
-            'alacarte_recent_posts',
-            esc_html__( '[AlaCarte] Recent Posts', 'alacarte' ),
+            'sunix_recent_posts',
+            esc_html__( '[sunix] Recent Posts', 'sunix' ),
             array(
-                'description' => __( 'Shows your most recent posts.', 'alacarte' ),
+                'description' => __( 'Shows your most recent posts.', 'sunix' ),
                 'customize_selective_refresh' => true,
             )
         );
@@ -37,7 +37,7 @@ class alacarte_Recent_Posts_Widget extends WP_Widget
     function widget( $args, $instance )
     {
         $instance = wp_parse_args( (array) $instance, array(
-            'title'         => esc_html__( 'Recent Posts', 'alacarte' ),
+            'title'         => esc_html__( 'Recent Posts', 'sunix' ),
             'post_type'     => 'post',
             'thumbnail_size'=> '80x80',
             'number'        => 4,
@@ -48,7 +48,7 @@ class alacarte_Recent_Posts_Widget extends WP_Widget
             'show_cat'      => false,
         ) );
 
-        $title = empty( $instance['title'] ) ? esc_html__( 'Recent Posts', 'alacarte' ) : $instance['title'];
+        $title = empty( $instance['title'] ) ? esc_html__( 'Recent Posts', 'sunix' ) : $instance['title'];
         $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
         printf('%s', $args['before_widget']);
@@ -91,7 +91,7 @@ class alacarte_Recent_Posts_Widget extends WP_Widget
                 );
 
                 
-                $thumbnail_url = alacarte_get_image_url_by_size([
+                $thumbnail_url = sunix_get_image_url_by_size([
                     'size'          => $thumbnail_size,
                     'default_thumb' => true,
                 ]);
@@ -118,10 +118,10 @@ class alacarte_Recent_Posts_Widget extends WP_Widget
                 if ( $show_author || $show_comments || $show_date || $show_cat )
                 {
                     ob_start();
-                    if($show_author) alacarte_posted_by();
-                    if($show_date) alacarte_posted_on();
-                    if($show_comments) alacarte_comments_popup_link(['show_text'=> true]);
-                    if($show_cat) alacarte_posted_in();
+                    if($show_author) sunix_posted_by();
+                    if($show_date) sunix_posted_on();
+                    if($show_comments) sunix_comments_popup_link(['show_text'=> true]);
+                    if($show_cat) sunix_posted_in();
                     $post_meta = ob_get_clean();
 
                     if ( $post_meta )
@@ -174,7 +174,7 @@ class alacarte_Recent_Posts_Widget extends WP_Widget
     function form( $instance )
     {
         $instance = wp_parse_args( (array) $instance, array(
-            'title'          => esc_html__( 'Recent Posts', 'alacarte' ),
+            'title'          => esc_html__( 'Recent Posts', 'sunix' ),
             'post_type'      => 'post',
             'thumbnail_size' => '80x80',
             'number'         => 4,
@@ -185,7 +185,7 @@ class alacarte_Recent_Posts_Widget extends WP_Widget
             'show_cat'       => false
         ) );
 
-        $title          = $instance['title'] ? esc_attr( $instance['title'] ) : esc_html__( 'Recent Posts', 'alacarte' );
+        $title          = $instance['title'] ? esc_attr( $instance['title'] ) : esc_html__( 'Recent Posts', 'sunix' );
         $post_type      = $instance['post_type'] ? $instance['post_type']  : 'post';
         $thumbnail_size = $instance['thumbnail_size'] ? $instance['thumbnail_size']  : '80x80';
         $number         = absint( $instance['number'] );
@@ -197,46 +197,46 @@ class alacarte_Recent_Posts_Widget extends WP_Widget
 
         ?>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'alacarte' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'sunix' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'post_type' ) ); ?>"><?php esc_html_e( 'Emter custom post type slug. Default \'post\'', 'alacarte' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'post_type' ) ); ?>"><?php esc_html_e( 'Emter custom post type slug. Default \'post\'', 'sunix' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'post_type' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'post_type' ) ); ?>" type="text" value="<?php echo esc_attr( $post_type ); ?>" />
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'thumbnail_size' ) ); ?>"><?php esc_html_e( 'Thumbnail Size', 'alacarte' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'thumbnail_size' ) ); ?>"><?php esc_html_e( 'Thumbnail Size', 'sunix' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'thumbnail_size' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'thumbnail_size' ) ); ?>" type="text" value="<?php echo esc_attr( $thumbnail_size ); ?>" />
         </p>
         <p>
             <select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'layout' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'layout' ) ); ?>">
-                <option value="1" <?php if( $layout == '1' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Layout 1', 'alacarte');?></option>
-                <option value="2" <?php if( $layout == '2' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Layout 2', 'alacarte');?></option>
-                <option value="3" <?php if( $layout == '3' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Layout 3', 'alacarte');?></option>
+                <option value="1" <?php if( $layout == '1' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Layout 1', 'sunix');?></option>
+                <option value="2" <?php if( $layout == '2' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Layout 2', 'sunix');?></option>
+                <option value="3" <?php if( $layout == '3' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Layout 3', 'sunix');?></option>
             </select>
         </p>
 
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number of posts to show:', 'alacarte' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number of posts to show:', 'sunix' ); ?></label>
             <input class="tiny-text" id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="number" step="1" min="1" value="<?php echo esc_attr( $number ); ?>" size="3" />
         </p>
         
         <p>
             <input class="checkbox" type="checkbox"<?php checked( $show_author ); ?> id="<?php echo esc_attr( $this->get_field_id( 'show_author' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_author' ) ); ?>" value="1" />
-            <label for="<?php echo esc_attr( $this->get_field_id( 'show_author' ) ); ?>"><?php esc_html_e( 'Display post Author?', 'alacarte' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'show_author' ) ); ?>"><?php esc_html_e( 'Display post Author?', 'sunix' ); ?></label>
         </p>
 
         <p>
             <input class="checkbox" type="checkbox"<?php checked( $show_date ); ?> id="<?php echo esc_attr( $this->get_field_id( 'show_date' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_date' ) ); ?>" value="1" />
-            <label for="<?php echo esc_attr( $this->get_field_id( 'show_date' ) ); ?>"><?php esc_html_e( 'Display post date?', 'alacarte' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'show_date' ) ); ?>"><?php esc_html_e( 'Display post date?', 'sunix' ); ?></label>
         </p>
         <p>
             <input class="checkbox" type="checkbox"<?php checked( $show_cat ); ?> id="<?php echo esc_attr( $this->get_field_id( 'show_cat' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_cat' ) ); ?>" value="1" />
-            <label for="<?php echo esc_attr( $this->get_field_id( 'show_cat' ) ); ?>"><?php esc_html_e( 'Display post Category?', 'alacarte' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'show_cat' ) ); ?>"><?php esc_html_e( 'Display post Category?', 'sunix' ); ?></label>
         </p>
         <p>
             <input class="checkbox" type="checkbox"<?php checked( $show_comments ); ?> id="<?php echo esc_attr( $this->get_field_id( 'show_comments' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_comments' ) ); ?>" value="1" />
-            <label for="<?php echo esc_attr( $this->get_field_id( 'show_comments' ) ); ?>"><?php esc_html_e( 'Display post comments?', 'alacarte' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'show_comments' ) ); ?>"><?php esc_html_e( 'Display post comments?', 'sunix' ); ?></label>
         </p>
         <?php
     }

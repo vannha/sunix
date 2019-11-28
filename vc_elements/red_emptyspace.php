@@ -1,15 +1,15 @@
 <?php
 vc_map(array(
-    'name' => 'AlaCarte Empty Space',
+    'name' => 'sunix Empty Space',
     'base' => 'red_emptyspace',
     'icon' => 'icon-wpb-ui-empty_space',
-    'category' => esc_html__('RedExp', 'alacarte'),
-    'description' => esc_html__('Blank space with custom height for each screen size', 'alacarte'),
+    'category' => esc_html__('RedExp', 'sunix'),
+    'description' => esc_html__('Blank space with custom height for each screen size', 'sunix'),
     'params' => array(
         array(
             'type'       => 'param_group',
-            'heading'    => esc_html__( 'Add Custom Screen Size', 'alacarte' ),
-            'description' => esc_html__('Enter your screen size, ex: 1920px (Note: CSS measurement units allowed).','alacarte'),
+            'heading'    => esc_html__( 'Add Custom Screen Size', 'sunix' ),
+            'description' => esc_html__('Enter your screen size, ex: 1920px (Note: CSS measurement units allowed).','sunix'),
             'param_name' => 'values',
             'value'      => urlencode( json_encode( array(
                 array(
@@ -19,35 +19,35 @@ vc_map(array(
             'params' => array(
                 array(
                     'type'             => 'textfield',
-                    'heading'          => esc_html__( 'Min Screen Size', 'alacarte' ),
+                    'heading'          => esc_html__( 'Min Screen Size', 'sunix' ),
                     'edit_field_class' => 'vc_col-sm-6',
                     'param_name'       => 'screen_size_min',
                     'admin_label'      => true,
                 ),
                 array(
                     'type'             => 'textfield',
-                    'heading'          => esc_html__( 'Max Screen Size', 'alacarte' ),
-                    'description'      => esc_html__( 'Default: 4800px', 'alacarte' ),
+                    'heading'          => esc_html__( 'Max Screen Size', 'sunix' ),
+                    'description'      => esc_html__( 'Default: 4800px', 'sunix' ),
                     'edit_field_class' => 'vc_col-sm-6',
                     'param_name'       => 'screen_size_max',
                     'admin_label'      => true,
                 ),
                 array(
                     'type'        => 'textfield',
-                    'heading'     => esc_html__( 'Empty space height', 'alacarte' ),
+                    'heading'     => esc_html__( 'Empty space height', 'sunix' ),
                     'param_name'  => 'height',
-                    'description' => esc_html__('Enter empty space height (Note: CSS measurement units allowed).','alacarte'),
+                    'description' => esc_html__('Enter empty space height (Note: CSS measurement units allowed).','sunix'),
                 ),
             ),
         ),
         array(
             'type'       => 'el_id',
-            'heading'    => esc_html__('Element ID','alacarte'),
+            'heading'    => esc_html__('Element ID','sunix'),
             'param_name' => 'el_id',
             'settings' => array(
                 'auto_generate' => true,
             ),
-            'description'   => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'alacarte' ), 'http://www.w3schools.com/tags/att_global_id.asp' ),
+            'description'   => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'sunix' ), 'http://www.w3schools.com/tags/att_global_id.asp' ),
         ),
     ),
 ));

@@ -7,8 +7,8 @@
  * and that other 'pages' on your WordPress site may use a
  * different template.
  *
- * @package AlaCarte
- * @subpackage AlaCarte
+ * @package sunix
+ * @subpackage sunix
  * @since 1.0.0
  * @author EF5 Team
  *
@@ -33,22 +33,22 @@ get_header();
                         </div>
                         <div class="col-right col-md-5 col-xl-4">
                             <div class="col-right-inner">
-                                <h4><?php echo esc_html__('MORE INFO','alacarte');?></h4>
-                                <div class="org-name"><span><?php echo esc_html__('Time:','alacarte');?></span> <?php echo alacarte_get_post_format_value('event_time',''); ?></div>
+                                <h4><?php echo esc_html__('MORE INFO','sunix');?></h4>
+                                <div class="org-name"><span><?php echo esc_html__('Time:','sunix');?></span> <?php echo sunix_get_post_format_value('event_time',''); ?></div>
                                 <div class="events-schedule">
                                     <div class="event-date">
-                                        <span><?php echo esc_html__('Date:','alacarte');?></span> <?php echo alacarte_get_post_format_value('event_date',''); ?>
+                                        <span><?php echo esc_html__('Date:','sunix');?></span> <?php echo sunix_get_post_format_value('event_date',''); ?>
                                     </div>
                                     <div class="event-duration">
-                                        <span><?php echo esc_html__('Duration:','alacarte');?></span> <?php echo alacarte_get_post_format_value('event_duration',''); ?>
+                                        <span><?php echo esc_html__('Duration:','sunix');?></span> <?php echo sunix_get_post_format_value('event_duration',''); ?>
                                     </div>
                                     <div class="event-type">
-                                        <?php $event_type = alacarte_get_post_format_value('event_type',''); ?>
-                                        <span><?php echo esc_html__('Type:','alacarte');?></span> <?php if ($event_type==1){ echo esc_html('Open','alacarte');}else{ echo esc_html('Close','alacarte');}?>
+                                        <?php $event_type = sunix_get_post_format_value('event_type',''); ?>
+                                        <span><?php echo esc_html__('Type:','sunix');?></span> <?php if ($event_type==1){ echo esc_html('Open','sunix');}else{ echo esc_html('Close','sunix');}?>
 
                                     </div>
                                     <div class="event-entrants">
-                                        <span><?php echo esc_html__('Entrants:','alacarte');?></span> <?php echo esc_html__('Up to ','alacarte').alacarte_get_post_format_value('event_entrants','').esc_html__(' Peoples ','alacarte') ;?>
+                                        <span><?php echo esc_html__('Entrants:','sunix');?></span> <?php echo esc_html__('Up to ','sunix').sunix_get_post_format_value('event_entrants','').esc_html__(' Peoples ','sunix') ;?>
                                     </div>
 
                                 </div>
@@ -56,12 +56,12 @@ get_header();
                         </div>
                     </div>
 
-                    <?php alacarte_single_events_footer(); ?>
+                    <?php sunix_single_events_footer(); ?>
                     <div class="event-action event-book-event">
                         <?php echo do_shortcode('[reservation]'); ?>
                     </div>
                     <div class="single-event-gallery">
-                        <?php alacarte_single_events_gallery(); ?>
+                        <?php sunix_single_events_gallery(); ?>
                     </div>
 
 

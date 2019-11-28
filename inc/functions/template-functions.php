@@ -6,8 +6,8 @@
  * Showing post header in loop / single
  *
 **/
-if(!function_exists('alacarte_post_header')){
-	function alacarte_post_header($args=[]){
+if(!function_exists('sunix_post_header')){
+	function sunix_post_header($args=[]){
 		$args = wp_parse_args($args, [
             'heading_tag' => 'h2',
             'class'       => '',
@@ -23,17 +23,17 @@ if(!function_exists('alacarte_post_header')){
 
 	?>
 		<header class="<?php echo trim(implode(' ', $classes));?>">
-            <div class="red-before-title empty-none"><?php do_action('alacarte_before_loop_title', $args['before_args']); ?></div>
+            <div class="red-before-title empty-none"><?php do_action('sunix_before_loop_title', $args['before_args']); ?></div>
 	        <?php  the_title( '<div class="'.trim(implode(' ', $title_classes)).'">'.$link_open.$stick_icon, $link_close.'</div>' ); ?>
-            <div class="red-after-title empty-none"><?php do_action('alacarte_after_loop_title', $args['after_args']); ?></div>
+            <div class="red-after-title empty-none"><?php do_action('sunix_after_loop_title', $args['after_args']); ?></div>
 	    </header>
 	<?php
 	}
 }
 
 
-if(!function_exists('alacarte_post_title')){
-    function alacarte_post_title($args=[]){
+if(!function_exists('sunix_post_title')){
+    function sunix_post_title($args=[]){
         $args = wp_parse_args($args, [
             'heading_tag' => 'h2',
             'class'       => ''
@@ -50,24 +50,24 @@ if(!function_exists('alacarte_post_title')){
  * Post Meta TOp
  * Prints HTML with meta information for the current post.
  */
-if ( ! function_exists( 'alacarte_post_meta_top' ) ) {
-    add_action('alacarte_before_loop_title','alacarte_post_meta_top');
-    function alacarte_post_meta_top($args=['show_cat' => false])
+if ( ! function_exists( 'sunix_post_meta_top' ) ) {
+    add_action('sunix_before_loop_title','sunix_post_meta_top');
+    function sunix_post_meta_top($args=['show_cat' => false])
     {
         if ( is_singular() ) {
-            $author_on   = !empty($args['show_author']) ? $args['show_author'] : alacarte_get_theme_opt( 'post_author_on', '1' );
-            $date_on     = !empty($args['show_date']) ? $args['show_date'] : alacarte_get_theme_opt( 'post_date_on', '1' );
-            $cats_on     = !empty($args['show_cat']) ? $args['show_cat'] : alacarte_get_theme_opt( 'post_categories_on', '1' );
-            $comments_on = !empty($args['show_cmt']) ? $args['show_cmt'] : alacarte_get_theme_opt( 'post_comments_on', '1' );
-            $show_view = !empty($args['show_view']) ? $args['show_view'] : alacarte_get_theme_opt( 'post_view_on', '0' );
-            $show_like = !empty($args['show_like']) ? $args['show_like'] : alacarte_get_theme_opt( 'post_like_on', '0' );
+            $author_on   = !empty($args['show_author']) ? $args['show_author'] : sunix_get_theme_opt( 'post_author_on', '1' );
+            $date_on     = !empty($args['show_date']) ? $args['show_date'] : sunix_get_theme_opt( 'post_date_on', '1' );
+            $cats_on     = !empty($args['show_cat']) ? $args['show_cat'] : sunix_get_theme_opt( 'post_categories_on', '1' );
+            $comments_on = !empty($args['show_cmt']) ? $args['show_cmt'] : sunix_get_theme_opt( 'post_comments_on', '1' );
+            $show_view = !empty($args['show_view']) ? $args['show_view'] : sunix_get_theme_opt( 'post_view_on', '0' );
+            $show_like = !empty($args['show_like']) ? $args['show_like'] : sunix_get_theme_opt( 'post_like_on', '0' );
         }  else {
-        $author_on   = !empty($args['show_author']) ? $args['show_author'] : alacarte_get_theme_opt( 'archive_author_on', '1' );
-        $date_on     = !empty($args['show_date']) ? $args['show_date'] : alacarte_get_theme_opt( 'archive_date_on', '1' );
-        $cats_on     = !empty($args['show_cat']) ? $args['show_cat'] : alacarte_get_theme_opt( 'archive_categories_on', '1' );
-        $comments_on = !empty($args['show_cmt']) ? $args['show_cmt'] : alacarte_get_theme_opt( 'archive_comments_on', '1' );
-        $show_view = !empty($args['show_view']) ? $args['show_view'] : alacarte_get_theme_opt( 'archive_view_on', '0' );
-        $show_like = !empty($args['show_like']) ? $args['show_like'] : alacarte_get_theme_opt( 'archive_like_on', '0' );
+        $author_on   = !empty($args['show_author']) ? $args['show_author'] : sunix_get_theme_opt( 'archive_author_on', '1' );
+        $date_on     = !empty($args['show_date']) ? $args['show_date'] : sunix_get_theme_opt( 'archive_date_on', '1' );
+        $cats_on     = !empty($args['show_cat']) ? $args['show_cat'] : sunix_get_theme_opt( 'archive_categories_on', '1' );
+        $comments_on = !empty($args['show_cmt']) ? $args['show_cmt'] : sunix_get_theme_opt( 'archive_comments_on', '1' );
+        $show_view = !empty($args['show_view']) ? $args['show_view'] : sunix_get_theme_opt( 'archive_view_on', '0' );
+        $show_like = !empty($args['show_like']) ? $args['show_like'] : sunix_get_theme_opt( 'archive_like_on', '0' );
     }
 
         $args = wp_parse_args($args, [
@@ -84,9 +84,9 @@ if ( ! function_exists( 'alacarte_post_meta_top' ) ) {
             'sep'             => '/',
         ]);
         $metas = [];
-        if($args['show_cat']) $metas[] = alacarte_posted_in(['show_cat' => $args['show_cat'], 'echo' => false]);
-        if($args['show_date']) $metas[] = alacarte_posted_on(['show_date' => $args['show_date'], 'echo' => false]);
-        $taxo = alacarte_get_post_taxonomies();
+        if($args['show_cat']) $metas[] = sunix_posted_in(['show_cat' => $args['show_cat'], 'echo' => false]);
+        if($args['show_date']) $metas[] = sunix_posted_on(['show_date' => $args['show_date'], 'echo' => false]);
+        $taxo = sunix_get_post_taxonomies();
         $terms = get_the_term_list( get_the_ID(), $taxo, '', $args['sep'], '' );
         if(!empty($terms))
         {
@@ -109,26 +109,26 @@ if ( ! function_exists( 'alacarte_post_meta_top' ) ) {
  * Post Meta
  * Prints HTML with meta information for the current post.
 */
-if ( ! function_exists( 'alacarte_post_meta' ) ) {
-    add_action('alacarte_after_loop_title','alacarte_post_meta');
-    function alacarte_post_meta($args=['show_cat' => false,'show_date' => false])
+if ( ! function_exists( 'sunix_post_meta' ) ) {
+    add_action('sunix_after_loop_title','sunix_post_meta');
+    function sunix_post_meta($args=['show_cat' => false,'show_date' => false])
     {
         if ( is_singular() ) {
-            $author_on   = !empty($args['show_author']) ? $args['show_author'] : alacarte_get_theme_opt( 'post_author_on', '1' );
-            $date_on     = !empty($args['show_date']) ? $args['show_date'] : alacarte_get_theme_opt( 'post_date_on', '1' );
-            $cats_on     = !empty($args['show_cat']) ? $args['show_cat'] : alacarte_get_theme_opt( 'post_categories_on', '1' );
-            $comments_on = !empty($args['show_cmt']) ? $args['show_cmt'] : alacarte_get_theme_opt( 'post_comments_on', '1' );
-            $show_view = !empty($args['show_view']) ? $args['show_view'] : alacarte_get_theme_opt( 'post_view_on', '0' );
-            $show_like = !empty($args['show_like']) ? $args['show_like'] : alacarte_get_theme_opt( 'post_like_on', '0' );
-            $show_tag = !empty($args['show_tag']) ? $args['show_tag'] : alacarte_get_theme_opt( 'post_tags_on', '0' );
+            $author_on   = !empty($args['show_author']) ? $args['show_author'] : sunix_get_theme_opt( 'post_author_on', '1' );
+            $date_on     = !empty($args['show_date']) ? $args['show_date'] : sunix_get_theme_opt( 'post_date_on', '1' );
+            $cats_on     = !empty($args['show_cat']) ? $args['show_cat'] : sunix_get_theme_opt( 'post_categories_on', '1' );
+            $comments_on = !empty($args['show_cmt']) ? $args['show_cmt'] : sunix_get_theme_opt( 'post_comments_on', '1' );
+            $show_view = !empty($args['show_view']) ? $args['show_view'] : sunix_get_theme_opt( 'post_view_on', '0' );
+            $show_like = !empty($args['show_like']) ? $args['show_like'] : sunix_get_theme_opt( 'post_like_on', '0' );
+            $show_tag = !empty($args['show_tag']) ? $args['show_tag'] : sunix_get_theme_opt( 'post_tags_on', '0' );
         }  else {
-            $author_on   = !empty($args['show_author']) ? $args['show_author'] : alacarte_get_theme_opt( 'archive_author_on', '1' );
-            $date_on     = !empty($args['show_date']) ? $args['show_date'] : alacarte_get_theme_opt( 'archive_date_on', '1' );
-            $cats_on     = !empty($args['show_cat']) ? $args['show_cat'] : alacarte_get_theme_opt( 'archive_categories_on', '1' );
-            $comments_on = !empty($args['show_cmt']) ? $args['show_cmt'] : alacarte_get_theme_opt( 'archive_comments_on', '1' );
-            $show_view = !empty($args['show_view']) ? $args['show_view'] : alacarte_get_theme_opt( 'archive_view_on', '0' );
-            $show_like = !empty($args['show_like']) ? $args['show_like'] : alacarte_get_theme_opt( 'archive_like_on', '0' );
-            $show_tag = !empty($args['show_tag']) ? $args['show_tag'] : alacarte_get_theme_opt( 'archive_tags_on', '0' );
+            $author_on   = !empty($args['show_author']) ? $args['show_author'] : sunix_get_theme_opt( 'archive_author_on', '1' );
+            $date_on     = !empty($args['show_date']) ? $args['show_date'] : sunix_get_theme_opt( 'archive_date_on', '1' );
+            $cats_on     = !empty($args['show_cat']) ? $args['show_cat'] : sunix_get_theme_opt( 'archive_categories_on', '1' );
+            $comments_on = !empty($args['show_cmt']) ? $args['show_cmt'] : sunix_get_theme_opt( 'archive_comments_on', '1' );
+            $show_view = !empty($args['show_view']) ? $args['show_view'] : sunix_get_theme_opt( 'archive_view_on', '0' );
+            $show_like = !empty($args['show_like']) ? $args['show_like'] : sunix_get_theme_opt( 'archive_like_on', '0' );
+            $show_tag = !empty($args['show_tag']) ? $args['show_tag'] : sunix_get_theme_opt( 'archive_tags_on', '0' );
 
         }
 
@@ -147,15 +147,15 @@ if ( ! function_exists( 'alacarte_post_meta' ) ) {
             'sep'             => '',
         ]);
         $metas = [];
-        if($args['show_author']) $metas[] = alacarte_posted_by(['show_author' => $args['show_author'], 'echo' => false]);
-        if($args['show_view']) $metas[] = alacarte_post_count_view(['show_view' => $args['show_view'], 'echo' => false, 'icon' =>'flaticon-view']);
-        if($args['show_cmt'] && comments_open()) $metas[] = alacarte_comments_popup_link(['show_cmt' => $args['show_cmt'], 'echo' => false]);
-        if($args['show_like']) $metas[] =  alacarte_like_post(['echo' => false]);
-        if($args['show_edit']) $metas[] = alacarte_edit_link(['show_edit' => $args['show_edit'], 'echo' => false]);
+        if($args['show_author']) $metas[] = sunix_posted_by(['show_author' => $args['show_author'], 'echo' => false]);
+        if($args['show_view']) $metas[] = sunix_post_count_view(['show_view' => $args['show_view'], 'echo' => false, 'icon' =>'flaticon-view']);
+        if($args['show_cmt'] && comments_open()) $metas[] = sunix_comments_popup_link(['show_cmt' => $args['show_cmt'], 'echo' => false]);
+        if($args['show_like']) $metas[] =  sunix_like_post(['echo' => false]);
+        if($args['show_edit']) $metas[] = sunix_edit_link(['show_edit' => $args['show_edit'], 'echo' => false]);
         if(!is_singular()){
-            if($args['show_tag']) $metas[] =  alacarte_tagged_in(['echo' => false,'icon'=>'flaticon-tag']);
-            if($args['show_cat']) $metas[] = alacarte_posted_in(['show_cat' => $args['show_cat'], 'echo' => false]);
-            if($args['show_date']) $metas[] = alacarte_posted_on(['show_date' => $args['show_date'], 'echo' => false]);
+            if($args['show_tag']) $metas[] =  sunix_tagged_in(['echo' => false,'icon'=>'flaticon-tag']);
+            if($args['show_cat']) $metas[] = sunix_posted_in(['show_cat' => $args['show_cat'], 'echo' => false]);
+            if($args['show_date']) $metas[] = sunix_posted_on(['show_date' => $args['show_date'], 'echo' => false]);
 
         }
         $output = implode($args['sep'], $metas);
@@ -173,18 +173,18 @@ if ( ! function_exists( 'alacarte_post_meta' ) ) {
 /**
  * Post Excerpt
 */
-if(!function_exists('alacarte_post_excerpt')){
-	function alacarte_post_excerpt($args =[]){
+if(!function_exists('sunix_post_excerpt')){
+	function sunix_post_excerpt($args =[]){
 		$args = wp_parse_args($args,[
             'show_excerpt' => '1',
             'class'        => '',
-            'length'       => apply_filters('alacarte_excerpt_length', 55),
+            'length'       => apply_filters('sunix_excerpt_length', 55),
             'more'         => '&hellip;'
 		]);
         if($args['show_excerpt'] !== '1') return;
         $classes   = ['red-excerpt', $args['class']];
         $content      = get_the_excerpt();
-        $excerpt_more = apply_filters('alacarte_excerpt_more', $args['more']);
+        $excerpt_more = apply_filters('sunix_excerpt_more', $args['more']);
         $excerpt      = wp_trim_words($content, $args['length'], $excerpt_more);
         if (!$content){ return;}
 	?>
@@ -198,8 +198,8 @@ if(!function_exists('alacarte_post_excerpt')){
 /**
  * Post Content
 */
-if(!function_exists('alacarte_post_content')){
-    function alacarte_post_content($args = []){
+if(!function_exists('sunix_post_content')){
+    function sunix_post_content($args = []){
         $args = wp_parse_args($args, [
             'class' => ''
         ]);
@@ -219,8 +219,8 @@ if(!function_exists('alacarte_post_content')){
 /**
  * Loop Pagination 
 */
-if(!function_exists('alacarte_loop_pagination')){
-    function alacarte_loop_pagination($args=[]){
+if(!function_exists('sunix_loop_pagination')){
+    function sunix_loop_pagination($args=[]){
         $args = wp_parse_args($args, [
             'show_pagination' => '1',
             'style'           => ''
@@ -233,37 +233,37 @@ if(!function_exists('alacarte_loop_pagination')){
         switch ($args['style']) {
             case '5':
                 previous_posts_link(
-                    apply_filters('alacarte_loop_pagination_prev_text', esc_html__('Previous', 'alacarte'))
+                    apply_filters('sunix_loop_pagination_prev_text', esc_html__('Previous', 'sunix'))
                 );
                 next_posts_link(
-                    apply_filters('alacarte_loop_pagination_next_text', esc_html__('Next', 'alacarte'))
+                    apply_filters('sunix_loop_pagination_next_text', esc_html__('Next', 'sunix'))
                 );
                 break;
             case '4':
                 posts_nav_link(
-                    apply_filters('alacarte_loop_pagination_sep_text', '<span class="d-none"></span>'),
-                    apply_filters('alacarte_loop_pagination_prev_text', esc_html__('Previous', 'alacarte')),
-                    apply_filters('alacarte_loop_pagination_next_text', esc_html__('Next', 'alacarte'))
+                    apply_filters('sunix_loop_pagination_sep_text', '<span class="d-none"></span>'),
+                    apply_filters('sunix_loop_pagination_prev_text', esc_html__('Previous', 'sunix')),
+                    apply_filters('sunix_loop_pagination_next_text', esc_html__('Next', 'sunix'))
                 );
                 break;
             case '3':
                 echo '<div class="nav-links">';
                     echo paginate_links([
-                        'prev_text' => '<span class="prev hint--top" data-hint="'.apply_filters('alacarte_loop_pagination_prev_text', esc_html__('Previous', 'alacarte')).'"><span></span></span>',
-                        'next_text' => '<span class="next hint--top" data-hint="'.apply_filters('alacarte_loop_pagination_next_text', esc_html__('Next', 'alacarte')).'"><span></span></span>'
+                        'prev_text' => '<span class="prev hint--top" data-hint="'.apply_filters('sunix_loop_pagination_prev_text', esc_html__('Previous', 'sunix')).'"><span></span></span>',
+                        'next_text' => '<span class="next hint--top" data-hint="'.apply_filters('sunix_loop_pagination_next_text', esc_html__('Next', 'sunix')).'"><span></span></span>'
                     ]); 
                 echo '</div>';
                 break;
             case '2':
                 the_posts_pagination([
-                    'prev_text' => '<span class="prev">'.esc_html__('Previous', 'alacarte').'</span>',
-                    'next_text' => '<span class="next">'.esc_html__('Next', 'alacarte').'</span>'
+                    'prev_text' => '<span class="prev">'.esc_html__('Previous', 'sunix').'</span>',
+                    'next_text' => '<span class="next">'.esc_html__('Next', 'sunix').'</span>'
                 ]);
                 break;
             default:
                 the_posts_pagination([
-                    'prev_text' => '<span class="prev">'.esc_html__('Previous', 'alacarte').'</span>',
-                    'next_text' => '<span class="next">'.esc_html__('Next', 'alacarte').'</span>'
+                    'prev_text' => '<span class="prev">'.esc_html__('Previous', 'sunix').'</span>',
+                    'next_text' => '<span class="next">'.esc_html__('Next', 'sunix').'</span>'
                 ]);
                 break;
         }
@@ -278,15 +278,15 @@ if(!function_exists('alacarte_loop_pagination')){
  *
  * @since 1.0.0
 */
-if(!function_exists('alacarte_post_author')){
-    function alacarte_post_author($args = array()){
+if(!function_exists('sunix_post_author')){
+    function sunix_post_author($args = array()){
         $args = wp_parse_args($args, array('layout' => '1'));
         extract( $args );
-        $show_author = alacarte_get_opts('post_author_info', '0');
+        $show_author = sunix_get_opts('post_author_info', '0');
         if('0' === $show_author || empty(get_the_author_meta('description'))) return;
         $user_info = get_userdata(get_the_author_meta('ID'));
     ?>
-    <div class="author-box red-box text-center text-md-<?php echo alacarte_align();?>">
+    <div class="author-box red-box text-center text-md-<?php echo sunix_align();?>">
         <div class="row">
             <div class="author-avatar col-12 col-md-2 col-lg-auto"><?php 
                     echo get_avatar(get_the_author_meta('ID'));
@@ -297,7 +297,7 @@ if(!function_exists('alacarte_post_author')){
                     <small class="author-roles d-block"><?php echo implode(' / ', $user_info->roles); ?></small>
                 </div>
                 <div class="author-bio"><?php the_author_meta('description'); ?></div>
-                <?php alacarte_user_social(['class' => 'align-self-end w-100']); ?>
+                <?php sunix_user_social(['class' => 'align-self-end w-100']); ?>
             </div>
         </div>
     </div>
@@ -315,8 +315,8 @@ if(!function_exists('alacarte_post_author')){
  *
  * @since 1.0.0
 */
-if(!function_exists('alacarte_get_custom_post_tag_taxonomy')){
-    function alacarte_get_custom_post_tag_taxonomy()
+if(!function_exists('sunix_get_custom_post_tag_taxonomy')){
+    function sunix_get_custom_post_tag_taxonomy()
     {
         $post = get_post();
         $tax_names = get_object_taxonomies($post);
@@ -324,7 +324,7 @@ if(!function_exists('alacarte_get_custom_post_tag_taxonomy')){
         if(is_array($tax_names))
         {
             foreach ($tax_names as $name){
-                if(strpos($name,apply_filters('alacarte_post_related_by', 'cat')) !== false) {
+                if(strpos($name,apply_filters('sunix_post_related_by', 'cat')) !== false) {
                     $result = $name;
                 }
             }
@@ -332,21 +332,21 @@ if(!function_exists('alacarte_get_custom_post_tag_taxonomy')){
         return $result;
     }
 }
-if(!function_exists('alacarte_post_related')){
-    function alacarte_post_related( $args = array ()){
+if(!function_exists('sunix_post_related')){
+    function sunix_post_related( $args = array ()){
         global $post;
         /**
          * Parse incoming $args into an array and merge it with $defaults
          */ 
         $args = wp_parse_args($args, array(
-            'title'          => esc_html__('Related Posts','alacarte'),
+            'title'          => esc_html__('Related Posts','sunix'),
             'posts_per_page' => '2', 
             'columns'        => '2', 
-            'carousel'       => apply_filters('alacarte_post_related_carousel', false)
+            'carousel'       => apply_filters('sunix_post_related_carousel', false)
         ));
         extract($args);
 
-        $show_related = alacarte_get_theme_opt('post_related_on', '0');
+        $show_related = sunix_get_theme_opt('post_related_on', '0');
         
         if('0' === $show_related) return;
 
@@ -357,7 +357,7 @@ if(!function_exists('alacarte_post_related')){
         }
 
         //for use in the loop, list 2 posts related to first tag on current post
-        $tag_tax_name = alacarte_get_custom_post_tag_taxonomy();
+        $tag_tax_name = sunix_get_custom_post_tag_taxonomy();
         $post = get_post();
         $tags = get_the_terms($post->ID,$tag_tax_name);
         $rtl = is_rtl() ? true : false;
@@ -398,8 +398,8 @@ if(!function_exists('alacarte_post_related')){
 /**
  * Single Post Pagination 
 */
-if(!function_exists('alacarte_post_navigation')){
-    function alacarte_post_navigation($args = []){
+if(!function_exists('sunix_post_navigation')){
+    function sunix_post_navigation($args = []){
         $args = wp_parse_args($args, [
             'layout' => '1'
         ]);
@@ -424,7 +424,7 @@ if(!function_exists('alacarte_post_navigation')){
                                         if(!empty($prevthumbnail)) echo '<div class="col-image"><a href="'.esc_url(get_the_permalink($prevPost->ID)).'">'.get_the_post_thumbnail($prevPost->ID,'thumbnail').'</a></div>'; ?>
                                      <div class="col-text <?php if(empty($prevthumbnail)) echo 'full'?>">
                                         <div class="h5"><a href="<?php echo esc_url(get_the_permalink($prevPost->ID));?>"><?php echo get_the_title($prevPost->ID); ?></a></div>
-                                        <div class="link"><a href="<?php echo esc_url(get_the_permalink($prevPost->ID));?>"><?php esc_html_e('Previous','alacarte'); ?></a></div>
+                                        <div class="link"><a href="<?php echo esc_url(get_the_permalink($prevPost->ID));?>"><?php esc_html_e('Previous','sunix'); ?></a></div>
                                     </div>
                                 </div>
                             <?php } ?>
@@ -434,7 +434,7 @@ if(!function_exists('alacarte_post_navigation')){
                                 <div class="row">
                                     <div class="col-text <?php if(empty($nextthumbnail)) echo 'full'?>">
                                        <div class="h5"><a href="<?php echo esc_url(get_the_permalink($nextPost->ID));?>"><?php echo get_the_title($nextPost->ID); ?></a></div>
-                                        <div class="link"><a href="<?php echo esc_url(get_the_permalink($nextPost->ID));?>"><?php esc_html_e('Next','alacarte'); ?></a></div>
+                                        <div class="link"><a href="<?php echo esc_url(get_the_permalink($nextPost->ID));?>"><?php esc_html_e('Next','sunix'); ?></a></div>
                                     </div>
                                     <?php
                                         if(!empty($nextthumbnail)) echo '<div class="col-image"><a href="'.esc_url(get_the_permalink($nextPost->ID)).'">'.get_the_post_thumbnail($nextPost->ID,'thumbnail').'</a></div>'; ?>
@@ -448,7 +448,7 @@ if(!function_exists('alacarte_post_navigation')){
         </div>
             <?php
         } elseif (is_singular('ef5_portfolio')){
-            alacarte_portfolio_navigation($args);
+            sunix_portfolio_navigation($args);
         }
     }
 }
@@ -458,8 +458,8 @@ if(!function_exists('alacarte_post_navigation')){
  *
  * @since 1.0.0
 */
-if(!function_exists('alacarte_portfolio_navigation')){
-    function alacarte_portfolio_navigation($args = array()){
+if(!function_exists('sunix_portfolio_navigation')){
+    function sunix_portfolio_navigation($args = array()){
         $args = wp_parse_args($args, array('layout' => '1'));
         extract( $args );
         $prevthumbnail = $nextthumbnail = '';
@@ -467,19 +467,19 @@ if(!function_exists('alacarte_portfolio_navigation')){
         $nextPost = get_next_post();
         if(!$prevPost && !$nextPost) return;
 
-        $portfolio_archive_page = alacarte_get_opts('portfolio_page','-1');
+        $portfolio_archive_page = sunix_get_opts('portfolio_page','-1');
 
         if($portfolio_archive_page === '-1')
             $portfolio_archive_link = get_post_type_archive_link( 'ef5_portfolio' );
         else 
-            $portfolio_archive_link = alacarte_get_link_by_slug($portfolio_archive_page, 'page');
+            $portfolio_archive_link = sunix_get_link_by_slug($portfolio_archive_page, 'page');
 
         switch ($layout) {
             case '2':
                 if($prevPost) { ?>
                     <a href="<?php echo esc_url(get_the_permalink($prevPost->ID));?>" class="hint--top" data-hint="<?php echo get_the_title($prevPost->ID); ?>"><span class="flaticon-left-arrow-1"></span></a>
                 <?php } ?>
-                <a href="<?php echo esc_url($portfolio_archive_link); ?>" class="archive-link hint--top" data-hint="<?php esc_attr_e('View All Projects','alacarte');?>"><span class="flaticon-menu"></span></a>
+                <a href="<?php echo esc_url($portfolio_archive_link); ?>" class="archive-link hint--top" data-hint="<?php esc_attr_e('View All Projects','sunix');?>"><span class="flaticon-menu"></span></a>
                 <?php if($nextPost) { ?>
                     <a href="<?php echo esc_url(get_the_permalink($nextPost->ID));?>" class="hint--top" data-hint="<?php echo get_the_title($nextPost->ID); ?>">
                     <span class="flaticon-right-arrow-1"></span></a>   
@@ -492,18 +492,18 @@ if(!function_exists('alacarte_portfolio_navigation')){
                 <div class="col-md-2 order-md-2 text-center">
                     <a href="<?php echo esc_url($portfolio_archive_link); ?>" class="archive-link"><span class="fa fa-th-large"></span></a>
                 </div>
-                <div class="nav-box previous col-sm-auto col-md-5 order-md-1 text-<?php echo alacarte_align();?>">
+                <div class="nav-box previous col-sm-auto col-md-5 order-md-1 text-<?php echo sunix_align();?>">
                     <?php if($prevPost) { ?>
                         <a class="nav-link" href="<?php echo esc_url(get_the_permalink($prevPost->ID));?>">
-                            <div class="meta-nav"><?php esc_html_e('Previous Post','alacarte'); ?></div>
+                            <div class="meta-nav"><?php esc_html_e('Previous Post','sunix'); ?></div>
                             <div class="post-title h6"><?php echo get_the_title($prevPost->ID); ?></div>
                         </a>            
                     <?php } ?>
                 </div>
-                <div class="nav-box next col-sm-auto col-md-5 order-md-3 text-<?php echo alacarte_align2();?>">
+                <div class="nav-box next col-sm-auto col-md-5 order-md-3 text-<?php echo sunix_align2();?>">
                     <?php if($nextPost) { ?>
                         <a class="nav-link" href="<?php echo esc_url(get_the_permalink($nextPost->ID));?>">
-                            <div class="meta-nav"><?php esc_html_e('Next Post','alacarte'); ?></div>
+                            <div class="meta-nav"><?php esc_html_e('Next Post','sunix'); ?></div>
                             <div class="post-title h6"><?php echo get_the_title($nextPost->ID); ?></div>
                         </a>   
                     <?php } ?>

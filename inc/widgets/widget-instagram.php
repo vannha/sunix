@@ -1,33 +1,33 @@
 <?php
 // Enable Instagram Widget
 if(!function_exists('enable_instagram_widget')){
-    add_filter('enable_instagram_widget', 'alacarte_instagram');
-    function alacarte_instagram(){
+    add_filter('enable_instagram_widget', 'sunix_instagram');
+    function sunix_instagram(){
         return true;
     }
 }
 // Update Instagrame username from theme options to widget
-if(!function_exists('alacarte_instagram_api_username')){
-    add_filter('ef5_instagram_api_username', 'alacarte_instagram_api_username');
-    function alacarte_instagram_api_username(){
-        return alacarte_get_opts('instagram_api_username','thuylinh3112507');
+if(!function_exists('sunix_instagram_api_username')){
+    add_filter('ef5_instagram_api_username', 'sunix_instagram_api_username');
+    function sunix_instagram_api_username(){
+        return sunix_get_opts('instagram_api_username','thuylinh3112507');
     }
 }
 // Custom layout 
-if(!function_exists('alacarte_instagram_custom_layout')){
+if(!function_exists('sunix_instagram_custom_layout')){
 
-    function alacarte_instagram_custom_layout(){
+    function sunix_instagram_custom_layout(){
         return [
-            '1' => esc_html__('Layout 1','alacarte'),
-            '2' => esc_html__('Layout 2','alacarte'),
-            '3' => esc_html__('Layout 3','alacarte'),
+            '1' => esc_html__('Layout 1','sunix'),
+            '2' => esc_html__('Layout 2','sunix'),
+            '3' => esc_html__('Layout 3','sunix'),
         ];
     }
 }
 // Output HTML 
-if(!function_exists('alacarte_instagram_html_output')){
-    add_filter('ef5systems_instagram_output_html','alacarte_instagram_html_output', 10, 11);
-    function alacarte_instagram_html_output($layout_mode, $span, $columns_space, $media_array, $size, $target, $show_like, $show_cmt, $show_author, $author_text, $username){
+if(!function_exists('sunix_instagram_html_output')){
+    add_filter('ef5systems_instagram_output_html','sunix_instagram_html_output', 10, 11);
+    function sunix_instagram_html_output($layout_mode, $span, $columns_space, $media_array, $size, $target, $show_like, $show_cmt, $show_author, $author_text, $username){
         switch ($layout_mode) {
             default:
                 echo '<div class="red-instagram layout'.$layout_mode.'">';
@@ -37,7 +37,7 @@ if(!function_exists('alacarte_instagram_html_output')){
                     foreach ($media_array as $item) {
                     ?>
                         <div class="<?php echo trim(implode(' ', array('instagram-item', $span, 'overlay-wrap')));?>">
-                            <a alacarte"<?php echo esc_url( $item['link'] ); ?>" target="<?php echo esc_attr( $target );?>">
+                            <a sunix"<?php echo esc_url( $item['link'] ); ?>" target="<?php echo esc_attr( $target );?>">
                                 <img src="<?php echo esc_url($item[$size]);?>" alt="<?php echo esc_attr(get_bloginfo('name'));?>" />
                             </a>
                             <div class="overlay d-flex align-items-center animated" data-animation-in="zoomIn" data-animation-out="zoomOut">

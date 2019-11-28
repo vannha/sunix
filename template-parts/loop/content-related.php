@@ -2,14 +2,14 @@
 /**
  * Template part for displaying posts in loop
  *
- * @package AlaCarte
- * @subpackage AlaCarte
+ * @package sunix
+ * @subpackage sunix
  */
 ?>
 
 <article <?php post_class('related-item'); ?>>
     <?php 
-        alacarte_post_media();
-        alacarte_post_header(['heading_tag' => 'h3'])
+        sunix_post_media();
+        sunix_post_header(['heading_tag' => 'h3'])
     ?>
 </article>

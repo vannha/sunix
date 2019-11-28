@@ -2,22 +2,22 @@
 /**
  * Get Servive Menu
 */
-if(!function_exists('alacarte_service_menu')){
-	function alacarte_service_menu($args=[]){
-		$menu = alacarte_get_post_format_value('service_menu','-1');
-		if($menu === '-1') $menu = alacarte_get_theme_opt('service_menu','');
+if(!function_exists('sunix_service_menu')){
+	function sunix_service_menu($args=[]){
+		$menu = sunix_get_post_format_value('service_menu','-1');
+		if($menu === '-1') $menu = sunix_get_theme_opt('service_menu','');
 		if($menu === 'none' || $menu === '') return;
 		if($menu === '0') $menu = '';
 		$args = wp_parse_args($args, [
-			'title'          => esc_html__('Service Menu','alacarte'),
+			'title'          => esc_html__('Service Menu','sunix'),
 			'menu'			 => $menu,		
 			'theme_location' => 'red-primary',
-			'walker'         => new alacarte_Menu_Walker(),
+			'walker'         => new sunix_Menu_Walker(),
 			'fallback_cb'    => ''
 		]);
 	?>
 	<div class="pf-sidebar-box pf-featured-box red-sidebar-area">
-        <div class="red-heading h3"><?php echo alacarte_html($args['title']); ?></div>
+        <div class="red-heading h3"><?php echo sunix_html($args['title']); ?></div>
         <div class="inner widget feature-post-inner red-box-shadow red-bg-white transition">
 			<?php 
 				wp_nav_menu([
@@ -36,10 +36,10 @@ if(!function_exists('alacarte_service_menu')){
  * Get Featured Service
  * @param: $posts_per_page  // Number of post to show
 */
-if(!function_exists('alacarte_service_featured')){
-	function alacarte_service_featured($args = []){
+if(!function_exists('sunix_service_featured')){
+	function sunix_service_featured($args = []){
 		$args = wp_parse_args($args, [
-			'title'          => esc_html__('Featured Service','alacarte'),
+			'title'          => esc_html__('Featured Service','sunix'),
 			'posts_per_page' => '3'
 		]);
 		if($args['posts_per_page'] === '0' || $args['posts_per_page'] === '') return;
@@ -55,11 +55,11 @@ if(!function_exists('alacarte_service_featured')){
         if ( $r->have_posts() ) {
         ?>
             <div class="pf-sidebar-box pf-featured-box">
-            	<div class="red-heading h3"><?php echo alacarte_html($args['title']); ?></div>
+            	<div class="red-heading h3"><?php echo sunix_html($args['title']); ?></div>
 	        	<div class="inner feature-post-inner red-box-shadow red-bg-white transition">
 		            <?php while ( $r->have_posts() ) {
 		                $r->the_post();
-		                $thumbnail_url = alacarte_get_image_url_by_size( ['size' => implode('x', $thumbnail_size), 'default_thumb' => true,'class'=>'d-block'] );
+		                $thumbnail_url = sunix_get_image_url_by_size( ['size' => implode('x', $thumbnail_size), 'default_thumb' => true,'class'=>'d-block'] );
 		                echo '<div class="pf-feature-item red-shadow-hover transition"><div class="row gutters-20 ">';
 			                printf(
 			                    '<div class="red-featured col-auto">' .
@@ -80,7 +80,7 @@ if(!function_exists('alacarte_service_featured')){
 				                );
 				                printf(
 				                	'<div class="red-meta">%s</div>',
-				                	get_the_term_list( get_the_ID(), alacarte_get_post_taxonomies(), '', ', ', '' )
+				                	get_the_term_list( get_the_ID(), sunix_get_post_taxonomies(), '', ', ', '' )
 				                );
 			                echo '</div>';
 		                echo '</div></div>';
@@ -96,14 +96,14 @@ if(!function_exists('alacarte_service_featured')){
  * Get Project Supporter
  * @param $user_ID
 */
-if(!function_exists('alacarte_service_supporter')){
-	function alacarte_service_supporter($args = []){
+if(!function_exists('sunix_service_supporter')){
+	function sunix_service_supporter($args = []){
 		$args = wp_parse_args($args, [
-			'email' => alacarte_get_post_format_value('post-support',''),
-			'title' => esc_html__('Support','alacarte')
+			'email' => sunix_get_post_format_value('post-support',''),
+			'title' => esc_html__('Support','sunix')
 		]);
 		if(empty($args['email']) || $args['email'] = null) return;
-	        $user = get_user_by( 'email', alacarte_get_post_format_value('post-support','') );
+	        $user = get_user_by( 'email', sunix_get_post_format_value('post-support','') );
 	        if($user !== false){ 
 	            global $wp_roles; 
 	            $user_info = get_userdata($user->ID);
@@ -116,7 +116,7 @@ if(!function_exists('alacarte_service_supporter')){
 	            }
 	    ?>
 	        <div class="pf-sidebar-box pf-supported-box">
-	        	<div class="red-heading h3"><?php echo alacarte_html($args['title']); ?></div>
+	        	<div class="red-heading h3"><?php echo sunix_html($args['title']); ?></div>
 	        	<div class="inner supported-inner text-center red-box-shadow red-bg-white transition">
 		            <?php
 		            	echo '<div class="sp-avatar">'.get_avatar($user->ID, 90, '', $user_info->display_name, ['class' => 'circle']).'</div>';
@@ -124,7 +124,7 @@ if(!function_exists('alacarte_service_supporter')){
 		                echo '<div class="sp-role text-xsmall">' . implode(' / ', $role_label).'</div>';
 		                echo '<div class="sp-bio">'.get_user_meta($user->ID,'description', true).'</div>';
 		                echo '<div class="sp-phone red-heading h3">'.get_user_meta($user->ID,'ef5_phone_number', true).'</div>';
-		                /*alacarte_user_social([
+		                /*sunix_user_social([
 	                        'author_id' => $user->ID,
 	                        'class' 	=> 'justify-content-center'
 	                    ]);*/
@@ -139,16 +139,16 @@ if(!function_exists('alacarte_service_supporter')){
  * Get Project Attachment
  * @param $user_ID
 */
-if(!function_exists('alacarte_service_attachment')){
-	function alacarte_service_attachment($args = []){
+if(!function_exists('sunix_service_attachment')){
+	function sunix_service_attachment($args = []){
 		$args = wp_parse_args($args, [
-			'title' => esc_html__('Download','alacarte'),
+			'title' => esc_html__('Download','sunix'),
 			'class' => ''
 		]);
-		$number_of_att = apply_filters('alacarte_number_of_service_attachment', 5);
+		$number_of_att = apply_filters('sunix_number_of_service_attachment', 5);
 		$files = [];
 		for ($i=0; $i <= $number_of_att ; $i++) { 
-			$att = alacarte_get_post_format_value('post-attachment-'.$i,'');
+			$att = sunix_get_post_format_value('post-attachment-'.$i,'');
 			if(!empty($att)){
 				$files[] = $att;
 			}
@@ -156,7 +156,7 @@ if(!function_exists('alacarte_service_attachment')){
 		if(empty($files)) return;
 		?>
 		<div class="pf-sidebar-box pf-attachment-box">
-	        <div class="red-heading h3"><?php echo alacarte_html($args['title']); ?></div>
+	        <div class="red-heading h3"><?php echo sunix_html($args['title']); ?></div>
 	        <div class="inner attachment-inner">
 	        	<?php foreach ($files as $file) {
 	        		$_file = get_post($file);

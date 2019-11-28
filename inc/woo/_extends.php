@@ -5,7 +5,7 @@
  * @return string
  * @since  3.3.0
  */
-function alacarte_get_current_page_url() {
+function sunix_get_current_page_url() {
 	if ( defined( 'SHOP_IS_ON_FRONT' ) ) {
 		$link = home_url();
 	} elseif ( is_shop() ) {

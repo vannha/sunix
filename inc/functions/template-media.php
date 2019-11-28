@@ -2,22 +2,22 @@
 /**
  * Post Thumbnail
 */
-if(!function_exists('alacarte_post_thumbnail')){
-    function alacarte_post_thumbnail($args=[]){
+if(!function_exists('sunix_post_thumbnail')){
+    function sunix_post_thumbnail($args=[]){
         $args = wp_parse_args($args,[
             'id'             => null,
             'thumbnail_size' => is_single() ? 'large' : 'medium',
             'echo'           => true,
-            'default_thumb'  => apply_filters('alacarte_default_post_thumbnail', false)
+            'default_thumb'  => apply_filters('sunix_default_post_thumbnail', false)
         ]);
         extract($args);
         if(!has_post_thumbnail() && !$default_thumb) return;
         if($echo) {
         ?>
-            <div class="post-image red-post" style="background-image: url(<?php echo alacarte_get_image_url_by_size(['id'=>$id,'size'=> 'full', 'default_thumb' => $default_thumb]); ?>);"><?php alacarte_image_by_size(['id' => $id,'size' => $thumbnail_size]);?></div>
-            <?php do_action('alacarte_post_thumbnail_content');
+            <div class="post-image red-post" style="background-image: url(<?php echo sunix_get_image_url_by_size(['id'=>$id,'size'=> 'full', 'default_thumb' => $default_thumb]); ?>);"><?php sunix_image_by_size(['id' => $id,'size' => $thumbnail_size]);?></div>
+            <?php do_action('sunix_post_thumbnail_content');
         } else {
-            return '<div class="post-image red-post" style="background-image: url('.alacarte_get_image_url_by_size(['id'=>$id,'size'=> $thumbnail_size, 'default_thumb' => $default_thumb]).');"><img src="'.alacarte_get_image_url_by_size($id,$thumbnail_size).'" alt="'.esc_attr(get_the_title()).'" /></div>'.do_action('alacarte_post_thumbnail_content');
+            return '<div class="post-image red-post" style="background-image: url('.sunix_get_image_url_by_size(['id'=>$id,'size'=> $thumbnail_size, 'default_thumb' => $default_thumb]).');"><img src="'.sunix_get_image_url_by_size($id,$thumbnail_size).'" alt="'.esc_attr(get_the_title()).'" /></div>'.do_action('sunix_post_thumbnail_content');
         }
     }
 }
@@ -25,25 +25,25 @@ if(!function_exists('alacarte_post_thumbnail')){
 /**
  * Post Gallery 
 */
-if(!function_exists('alacarte_post_gallery')){
-    function alacarte_post_gallery($args=[]){
+if(!function_exists('sunix_post_gallery')){
+    function sunix_post_gallery($args=[]){
         $args = wp_parse_args($args, array(
             'id'             => null,
             'show_media'     => '1',
             'thumbnail_size' => 'large',
-            'show_author'    => is_singular() ? alacarte_get_opts('archive_author_on','1') : alacarte_get_opts('post_author_on','1'),
+            'show_author'    => is_singular() ? sunix_get_opts('archive_author_on','1') : sunix_get_opts('post_author_on','1'),
             'echo'           => true,
-            'default_thumb'  => apply_filters('alacarte_default_post_thumbnail', false)
+            'default_thumb'  => apply_filters('sunix_default_post_thumbnail', false)
         ));
         if('0' === $args['show_media']) return;
         // Get gallery from option
-        $gallery_list = explode(',', alacarte_get_post_format_value('post-gallery-images', ''));
+        $gallery_list = explode(',', sunix_get_post_format_value('post-gallery-images', ''));
         // Get first gallery in content 
         $gallery_in_content = get_post_gallery( get_the_ID(), false );
         if($gallery_in_content && empty($gallery_list[0]) && !is_singular()){
             $gallery_list = isset($gallery_in_content['ids']) ? explode(',', $gallery_in_content['ids']) : [];
         }
-        $light_box = alacarte_get_post_format_value('post-gallery-lightbox', '1');
+        $light_box = sunix_get_post_format_value('post-gallery-lightbox', '1');
         global $post;
         if('1' === $light_box ) 
             $gallery_classes = ['red-gallery-lightbox'];
@@ -52,7 +52,7 @@ if(!function_exists('alacarte_post_gallery')){
         if( !empty($gallery_list[0]) || has_post_thumbnail() ){
             if(!empty($gallery_list[0])){
                 if($light_box === '0'){
-                    //global $alacarte_owl;
+                    //global $sunix_owl;
                     $gallery_classes[] = 'red-owl owl-carousel owl-theme red-nav-vertical';
                     wp_enqueue_script('owl-carousel');
                     wp_enqueue_script('owl-carousel-theme');
@@ -61,9 +61,9 @@ if(!function_exists('alacarte_post_gallery')){
                     $rtl = is_rtl() ? true : false;
                     $icon_prev = is_rtl() ? 'right' : 'left';
                     $icon_next = is_rtl() ? 'left' : 'right';
-                    $nav_icon = ['<span class="red-owl-nav-icon prev" data-title="'.esc_attr__('Previous','alacarte').'"></span>', '<span class="red-owl-nav-icon next" data-title="'.esc_attr__('Next','alacarte').'"></span>'];
+                    $nav_icon = ['<span class="red-owl-nav-icon prev" data-title="'.esc_attr__('Previous','sunix').'"></span>', '<span class="red-owl-nav-icon next" data-title="'.esc_attr__('Next','sunix').'"></span>'];
 
-                    $alacarte_owl[$gal_id] = array(
+                    $sunix_owl[$gal_id] = array(
                         'items'              => 1,
                         'rtl'                => $rtl,
                         'margin'             => 0,
@@ -80,7 +80,7 @@ if(!function_exists('alacarte_post_gallery')){
                         'slideBy'            => 'page',
                         
                     );
-                    wp_localize_script('owl-carousel', 'alacarte_owl', $alacarte_owl);
+                    wp_localize_script('owl-carousel', 'sunix_owl', $sunix_owl);
                 }
             ?>
                 <div id="gal-<?php echo get_the_ID();?>" class="<?php echo trim(implode(' ', $gallery_classes));?>">
@@ -95,7 +95,7 @@ if(!function_exists('alacarte_post_gallery')){
                             href="<?php echo esc_url(wp_get_attachment_image_url($img_id, 'full'));?>" 
                             title="<?php echo esc_attr(get_post_meta( $img_id, '_wp_attachment_image_alt', true )) ?>" 
                             data-effect="red-zoomIn"><?php if($light_box === '1' && $d === 1) { ?><img
-                                src="<?php echo esc_url(alacarte_get_image_url_by_size([
+                                src="<?php echo esc_url(sunix_get_image_url_by_size([
                                     'id'            => $img_id, 
                                     'size'          => $args['thumbnail_size'],
                                     'default_thumb' => true
@@ -106,7 +106,7 @@ if(!function_exists('alacarte_post_gallery')){
                     } else {
                         foreach ($gallery_list as $img_id): 
                     ?>
-                        <img src="<?php echo esc_url(alacarte_get_image_url_by_size([
+                        <img src="<?php echo esc_url(sunix_get_image_url_by_size([
                             'id'            => $img_id, 
                             'size'          => $args['thumbnail_size'], 
                             'default_thumb' => true
@@ -118,12 +118,12 @@ if(!function_exists('alacarte_post_gallery')){
                 </div>
             <?php 
                 if($light_box === '0') {
-                    alacarte_loading_animation();
+                    sunix_loading_animation();
                     echo '<div class="red-owl-nav vertical inside"></div>
                     <div class="red-owl-dots"></div>';
                 }
             } elseif(has_post_thumbnail()) {
-                alacarte_post_thumbnail($args);
+                sunix_post_thumbnail($args);
             }
         }
     }
@@ -131,19 +131,19 @@ if(!function_exists('alacarte_post_gallery')){
 /**
  * Post Video
 */
-if(!function_exists('alacarte_post_video')){
-    function alacarte_post_video($args=[]){
+if(!function_exists('sunix_post_video')){
+    function sunix_post_video($args=[]){
         global $wp_embed;
         $args = wp_parse_args($args, [
             'id'             => null,
             'thumbnail_size' => is_single() ? 'large' : 'medium',
             'echo'           => true,
-            'default_thumb'  => apply_filters('alacarte_default_post_thumbnail', false)
+            'default_thumb'  => apply_filters('sunix_default_post_thumbnail', false)
         ]);
-        $video_url = alacarte_get_post_format_value('post-video-url', '');
-        $video_file = alacarte_get_post_format_value('post-video-file', []);
+        $video_url = sunix_get_post_format_value('post-video-url', '');
+        $video_file = sunix_get_post_format_value('post-video-file', []);
             $video_file_id  = isset($video_file['id']) ? $video_file['id'] : '';
-        $video_html = alacarte_get_post_format_value('post-video-html', '');
+        $video_html = sunix_get_post_format_value('post-video-html', '');
 
         // Only get video from the content if a playlist isn't present.
         $_video_in_content = apply_filters( 'the_content', get_the_content() );
@@ -156,7 +156,7 @@ if(!function_exists('alacarte_post_video')){
             if(!has_post_thumbnail()){
                 $video = do_shortcode($wp_embed->autoembed($video_url));
             } else{
-                $video = alacarte_post_thumbnail($args).'<div class="popup-iframe" href="'.esc_url($video_url).'"><div id="video_popup"><i class="flaticon-play-button"></i></div></div>';
+                $video = sunix_post_thumbnail($args).'<div class="popup-iframe" href="'.esc_url($video_url).'"><div id="video_popup"><i class="flaticon-play-button"></i></div></div>';
 
             }
 
@@ -196,12 +196,12 @@ if(!function_exists('alacarte_post_video')){
                 $video .= $video_in_content_html;
             }
         } else {
-        	$video = alacarte_post_thumbnail($args);
+        	$video = sunix_post_thumbnail($args);
         }
         $video .= ob_get_clean();
         // Show video 
         if($args['echo'])
-            echo apply_filters('alacarte_post_video', $video);
+            echo apply_filters('sunix_post_video', $video);
         else 
             return $video;
     }
@@ -210,17 +210,17 @@ if(!function_exists('alacarte_post_video')){
 /**
  * Post Audio
 */
-if(!function_exists('alacarte_post_audio')){
-    function alacarte_post_audio($args = []){
+if(!function_exists('sunix_post_audio')){
+    function sunix_post_audio($args = []){
         $args = wp_parse_args($args, [
             'id'             => null,
             'thumbnail_size' => is_single() ? 'large' : 'medium',
             'echo'           => true,
-            'default_thumb'  => apply_filters('alacarte_default_post_thumbnail', false)
+            'default_thumb'  => apply_filters('sunix_default_post_thumbnail', false)
         ]);
         global $wp_embed;
-        $audio_url = alacarte_get_post_format_value('post-audio-url', '');
-        $audio_file = alacarte_get_post_format_value('post-audio-file', ['id'=>'']);
+        $audio_url = sunix_get_post_format_value('post-audio-url', '');
+        $audio_file = sunix_get_post_format_value('post-audio-file', ['id'=>'']);
         if(!empty($audio_file['id'])){
             /* Get default video poster */
             $poster = (is_array($audio_file) && !empty(get_the_post_thumbnail_url($audio_file['id']))) ? get_the_post_thumbnail_url($audio_file['id'],'full') : get_the_post_thumbnail_url(get_the_ID(),'full');
@@ -268,16 +268,16 @@ if(!function_exists('alacarte_post_audio')){
                 $audio .= $audio_in_content_html;
             }
         } elseif ( has_post_thumbnail() ){
-            $audio = alacarte_post_thumbnail($args);
+            $audio = sunix_post_thumbnail($args);
         }
         $audio .= ob_get_clean();
         // Show video
         if($args['echo']){
 
             if(!has_post_thumbnail()){
-                echo apply_filters('alacarte_post_audio', $audio);
+                echo apply_filters('sunix_post_audio', $audio);
             } else{
-                echo alacarte_post_thumbnail($args).apply_filters('alacarte_post_audio', $audio);
+                echo sunix_post_thumbnail($args).apply_filters('sunix_post_audio', $audio);
 
             }
         }
@@ -288,22 +288,22 @@ if(!function_exists('alacarte_post_audio')){
 /**
  * Post Quote
 */
-if(!function_exists('alacarte_post_quote')){
-    function alacarte_post_quote($args = []){
+if(!function_exists('sunix_post_quote')){
+    function sunix_post_quote($args = []){
         $args = wp_parse_args($args, [
             'id'             => null,
             'thumbnail_size' => is_single() ? 'large' : 'medium',
             'echo'           => true,
-            'default_thumb'  => apply_filters('alacarte_default_post_thumbnail', false)
+            'default_thumb'  => apply_filters('sunix_default_post_thumbnail', false)
         ]);
-        $text = alacarte_get_post_format_value('post-quote-text', '');
-        $cite = alacarte_get_post_format_value('post-quote-cite', '');
+        $text = sunix_get_post_format_value('post-quote-text', '');
+        $cite = sunix_get_post_format_value('post-quote-cite', '');
         $quote = '';
         $quote_attrs = $quote_style = [];
         $quote_css_class = ['quote-wrap'];
         
         // Inline Style
-        $bg_img = alacarte_get_image_url_by_size($args['id'],'post-thumbnail');
+        $bg_img = sunix_get_image_url_by_size($args['id'],'post-thumbnail');
         if(!empty($bg_img)) {
             $quote_style[] = 'background-image:url('.$bg_img.')';
             $quote_css_class[] = 'has-bg';
@@ -314,11 +314,11 @@ if(!function_exists('alacarte_post_quote')){
         if(!empty($text) || !empty($cite)){
             $quote = '<div '.trim(implode(' ', $quote_attrs)).'><blockquote><div class="quote-text">'.$text.'</div><cite>'.$cite.'</cite></blockquote></div>';
         } else {
-            $quote = alacarte_post_thumbnail($args);
+            $quote = sunix_post_thumbnail($args);
         }
 
         if($args['echo'])
-            echo apply_filters('alacarte_post_quote', $quote);
+            echo apply_filters('sunix_post_quote', $quote);
         else 
             return $quote;
     }
@@ -326,24 +326,24 @@ if(!function_exists('alacarte_post_quote')){
 /**
  * Post Link
 */
-if(!function_exists('alacarte_post_link')){
-    function alacarte_post_link($args = []){
+if(!function_exists('sunix_post_link')){
+    function sunix_post_link($args = []){
         $args = wp_parse_args($args, [
             'id'             => null,
             'thumbnail_size' => is_single() ? 'large' : 'medium',
             'echo'           => true,
-            'default_thumb'  => apply_filters('alacarte_default_post_thumbnail', false)
+            'default_thumb'  => apply_filters('sunix_default_post_thumbnail', false)
         ]);
-        $title = alacarte_get_post_format_value('post-link-title', esc_html__('View Our Portfolio','alacarte'));
-        $link = alacarte_get_post_format_value('post-link-url', 'https://themeforest.net/user/zookastudio/portfolio');
+        $title = sunix_get_post_format_value('post-link-title', esc_html__('View Our Portfolio','sunix'));
+        $link = sunix_get_post_format_value('post-link-url', 'https://themeforest.net/user/zookastudio/portfolio');
         // Get first link in content 
-        $link_in_content =  alacarte_get_content_link(['echo' => false]);
+        $link_in_content =  sunix_get_content_link(['echo' => false]);
         // Link attribute
         $link_attrs = $link_style = [];
         $link_css_class = ['link-wrap'];
         
         // Inline Style
-        $bg_img = alacarte_get_image_url_by_size($args['id'],'post-thumbnail', true);
+        $bg_img = sunix_get_image_url_by_size($args['id'],'post-thumbnail', true);
         if(!empty($bg_img)) {
             $link_style[] = 'background-image:url('.$bg_img.')';
             $link_css_class[] = 'has-bg';
@@ -356,13 +356,13 @@ if(!function_exists('alacarte_post_link')){
             $link = '<div '.trim(implode(' ', $link_attrs)).'><a href="'.esc_url($link).'" class="" target="_blank"><span>'.esc_html($title).'</span></a></div>';
         } elseif($link_in_content){
             // link 
-            $link = '<div '.trim(implode(' ', $link_attrs)).'>' . alacarte_get_content_link(['echo' => false]) . '</div>';
+            $link = '<div '.trim(implode(' ', $link_attrs)).'>' . sunix_get_content_link(['echo' => false]) . '</div>';
         } else {
-            $link = alacarte_post_thumbnail($args);
+            $link = sunix_post_thumbnail($args);
         }
 
         if($args['echo'])
-            echo apply_filters('alacarte_post_link', $link);
+            echo apply_filters('sunix_post_link', $link);
         else 
             return $link;
     }
@@ -372,26 +372,26 @@ if(!function_exists('alacarte_post_link')){
  * Post Image
  * @since 1.0.1
 */
-if(!function_exists('alacarte_post_image')){
-    function alacarte_post_image($args = []){
+if(!function_exists('sunix_post_image')){
+    function sunix_post_image($args = []){
         $args = wp_parse_args($args, [
             'id'             => null,
             'thumbnail_size' => is_single() ? 'large' : 'medium',
             'echo'           => true,
-            'default_thumb'  => apply_filters('alacarte_default_post_thumbnail', false)
+            'default_thumb'  => apply_filters('sunix_default_post_thumbnail', false)
         ]);
         $image = $image_in_content = '';
         // Get first link in content 
-        $image_in_content =  alacarte_get_content_image(['echo' => false]);
+        $image_in_content =  sunix_get_content_image(['echo' => false]);
         
         if(has_post_thumbnail()){
-           $image =  alacarte_post_thumbnail($args);
+           $image =  sunix_post_thumbnail($args);
         } elseif(!empty($image_in_content)){
             // images
-            $image =  alacarte_get_content_image(['echo' => false]);
+            $image =  sunix_get_content_image(['echo' => false]);
         }
         if($args['echo'])
-            echo apply_filters('alacarte_post_image', $image);
+            echo apply_filters('sunix_post_image', $image);
         else 
             return $image;
     }
@@ -400,60 +400,60 @@ if(!function_exists('alacarte_post_image')){
  * Post Media
  * @since 1.0.1
 */
-if(!function_exists('alacarte_post_media')){
-    function alacarte_post_media($args = []){
+if(!function_exists('sunix_post_media')){
+    function sunix_post_media($args = []){
         $args = wp_parse_args($args, [
             'id'             => null,
             'thumbnail_size' => is_single() ? 'large' : 'medium',
             'echo'           => true,
-            'default_thumb'  => apply_filters('alacarte_default_post_thumbnail', false),
+            'default_thumb'  => apply_filters('sunix_default_post_thumbnail', false),
             'class'          => '',
             'before'         => '',
             'after'          => ''
         ]);
-        do_action('alacarte_before_post_media');
+        do_action('sunix_before_post_media');
         $post_format = !empty(get_post_format()) ? get_post_format() : 'standard';
 
         $classes = [
             'red-featured',
             'red-'.$post_format,
         ];
-        $classes[] = alacarte_is_loop() ? 'loop' : 'single';
+        $classes[] = sunix_is_loop() ? 'loop' : 'single';
         if(!empty($args['class'])) $classes[] = $args['class'];
     ?>
     <div class="<?php echo trim(implode(' ', $classes));?>"><?php
         printf('%s', $args['before']);
         switch (get_post_format()) {
             case 'gallery':
-                alacarte_post_gallery($args);
+                sunix_post_gallery($args);
                 break;
             case 'video':
-                alacarte_post_video($args);
+                sunix_post_video($args);
                 break;
             case 'audio':
-                alacarte_post_audio($args);
+                sunix_post_audio($args);
                 break;
             case 'quote':
-                alacarte_post_quote($args);
+                sunix_post_quote($args);
                 break;
             case 'link':
-                alacarte_post_link($args);
+                sunix_post_link($args);
                 break;
              case 'image':
-                alacarte_post_image($args);
+                sunix_post_image($args);
                 break;
             default:
-                alacarte_post_thumbnail($args);
+                sunix_post_thumbnail($args);
                 break;
         }
         printf('%s', $args['after']);
-        do_action('alacarte_post_media_content');
+        do_action('sunix_post_media_content');
     ?></div><?php
-    do_action('alacarte_after_post_media');
+    do_action('sunix_after_post_media');
     }
 }
-if(!function_exists('alacarte_loop_media')){
-    function alacarte_loop_media($args = []){
+if(!function_exists('sunix_loop_media')){
+    function sunix_loop_media($args = []){
         $args = wp_parse_args($args, [
             'show_media'     => '1',
             'thumbnail_size' => 'large',
@@ -462,20 +462,20 @@ if(!function_exists('alacarte_loop_media')){
         extract($args);
         if('1' !== $show_media) return;
         
-        alacarte_post_media($args);
+        sunix_post_media($args);
     }
 }
 
 /**
  * Post Author's on Media 
- * action hook : alacarte_post_thumbnail_content
+ * action hook : sunix_post_thumbnail_content
  * @since 1.0.0
 */
-if(!function_exists('alacarte_post_author_on_media')){
-    function alacarte_post_author_on_media($args = []){
+if(!function_exists('sunix_post_author_on_media')){
+    function sunix_post_author_on_media($args = []){
         $args = wp_parse_args($args, [
 			'echo'        => true,
-			'show_author' => is_singular() ? alacarte_get_opts('post_author_on','1') : alacarte_get_opts('archive_author_on','1')
+			'show_author' => is_singular() ? sunix_get_opts('post_author_on','1') : sunix_get_opts('archive_author_on','1')
         ]);
         extract($args);
 
@@ -484,7 +484,7 @@ if(!function_exists('alacarte_post_author_on_media')){
         ob_start();
             echo '<div class="post-author">'
             .get_avatar(get_the_author_meta('ID'), 30,  '' , get_the_author(), array('class' => 'circle')).'&nbsp;&nbsp;'
-            .esc_html__('By','alacarte').':&nbsp;'
+            .esc_html__('By','sunix').':&nbsp;'
             .get_the_author_posts_link()
             .'</div>';
         if($args['echo'])
@@ -496,15 +496,15 @@ if(!function_exists('alacarte_post_author_on_media')){
 
 /**
  * Post Category on Media
- * action hook: alacarte_post_thumbnail_content
+ * action hook: sunix_post_thumbnail_content
  * @since 1.0.0
 */
-if(!function_exists('alacarte_post_category_on_media')){
-    //add_action('alacarte_post_thumbnail_content', 'alacarte_post_category_on_media', 10);
-    function alacarte_post_category_on_media($args =[]){
+if(!function_exists('sunix_post_category_on_media')){
+    //add_action('sunix_post_thumbnail_content', 'sunix_post_category_on_media', 10);
+    function sunix_post_category_on_media($args =[]){
         $args = wp_parse_args($args, [
             'echo'     => true,
-            'show_cat' => is_singular() ? alacarte_get_opts('post_categories_on','1') : alacarte_get_opts('archive_categories_on','1'),
+            'show_cat' => is_singular() ? sunix_get_opts('post_categories_on','1') : sunix_get_opts('archive_categories_on','1'),
             'taxonomy' => 'category',
             'before'   => '<span class="icon-pencil icon"></span>',
             'sep'      => ' / ',
@@ -528,8 +528,8 @@ if(!function_exists('alacarte_post_category_on_media')){
  * Read more on media 
  *
 */
-if(!function_exists('alacarte_post_readmore_on_media')){
-    function alacarte_post_readmore_on_media($args=[]){
+if(!function_exists('sunix_post_readmore_on_media')){
+    function sunix_post_readmore_on_media($args=[]){
         $args = wp_parse_args($args, [
             'icon' => 'fa fa-plus',
 

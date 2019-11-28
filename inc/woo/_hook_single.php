@@ -5,35 +5,35 @@
 */
 
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
-if(!function_exists('alacarte_woocommerce_get_sidebar')){
-	add_action('woocommerce_after_main_content','alacarte_woocommerce_get_sidebar', 9);
-	function alacarte_woocommerce_get_sidebar(){
-        alacarte_sidebar();
+if(!function_exists('sunix_woocommerce_get_sidebar')){
+	add_action('woocommerce_after_main_content','sunix_woocommerce_get_sidebar', 9);
+	function sunix_woocommerce_get_sidebar(){
+        sunix_sidebar();
     }
 }
-if(!function_exists('alacarte_woocommerce_before_main_content')){
-	add_action('woocommerce_before_main_content','alacarte_woocommerce_before_main_content', 11);
-	function alacarte_woocommerce_before_main_content(){
-		?><div class="<?php alacarte_content_css_class();?>">
+if(!function_exists('sunix_woocommerce_before_main_content')){
+	add_action('woocommerce_before_main_content','sunix_woocommerce_before_main_content', 11);
+	function sunix_woocommerce_before_main_content(){
+		?><div class="<?php sunix_content_css_class();?>">
 	<?php }
 }
-if(!function_exists('alacarte_woocommerce_before_main_end_content')){
-	add_action('woocommerce_after_main_content','alacarte_woocommerce_before_main_end_content', 6);
-	function alacarte_woocommerce_before_main_end_content(){
+if(!function_exists('sunix_woocommerce_before_main_end_content')){
+	add_action('woocommerce_after_main_content','sunix_woocommerce_before_main_end_content', 6);
+	function sunix_woocommerce_before_main_end_content(){
 		?></div>
 	<?php }
 }
 
-if(!function_exists('alacarte_woocommerce_before_single_product_summary')){
-	add_action('woocommerce_before_single_product_summary','alacarte_woocommerce_before_single_product_summary', 0);
-	function alacarte_woocommerce_before_single_product_summary(){
-		$classes = ['red-wc-img-summary', alacarte_get_opts('product_gallery_layout','simple')];
+if(!function_exists('sunix_woocommerce_before_single_product_summary')){
+	add_action('woocommerce_before_single_product_summary','sunix_woocommerce_before_single_product_summary', 0);
+	function sunix_woocommerce_before_single_product_summary(){
+		$classes = ['red-wc-img-summary', sunix_get_opts('product_gallery_layout','simple')];
 		echo '<div class="'.trim(implode(' ', $classes)).'">';
 	}
 }
-if(!function_exists('alacarte_woocommerce_after_single_product_summary')){
-	add_action('woocommerce_after_single_product_summary','alacarte_woocommerce_after_single_product_summary', 0);
-	function alacarte_woocommerce_after_single_product_summary(){
+if(!function_exists('sunix_woocommerce_after_single_product_summary')){
+	add_action('woocommerce_after_single_product_summary','sunix_woocommerce_after_single_product_summary', 0);
+	function sunix_woocommerce_after_single_product_summary(){
 		echo '</div>';
 	}
 }
@@ -41,16 +41,16 @@ if(!function_exists('alacarte_woocommerce_after_single_product_summary')){
 /**
  * Wrap Product Image / Gallery in a Div
  * add new acction to add new content
- * new acction: alacarte_before_single_product_gallery, alacarte_after_single_product_gallery
+ * new acction: sunix_before_single_product_gallery, sunix_after_single_product_gallery
 */
 add_action('woocommerce_before_single_product_summary', function() {
 	echo '<div class="red-product-gallery-wrap"><div class="red-product-gallery-inner">';
 }, 0);
 add_action('woocommerce_before_single_product_summary', function() { 
-	do_action('alacarte_before_single_product_gallery');
+	do_action('sunix_before_single_product_gallery');
 }, 1);
 add_action('woocommerce_before_single_product_summary', function() { 
-	do_action('alacarte_after_single_product_gallery');
+	do_action('sunix_after_single_product_gallery');
 }, 999);
 add_action('woocommerce_before_single_product_summary', function() {
 	echo '</div></div>';
@@ -59,7 +59,7 @@ add_action('woocommerce_before_single_product_summary', function() {
 /**
  * Wrap gallery in div
 */
-if(!function_exists('alacarte_woocommerce_single_gallery')){
+if(!function_exists('sunix_woocommerce_single_gallery')){
 	/**
 	 * Add product attributes to inside gallery
 	 * 
@@ -69,17 +69,17 @@ if(!function_exists('alacarte_woocommerce_single_gallery')){
 	remove_action('woocommerce_before_single_product_summary','woocommerce_show_product_sale_flash', 10);
 	remove_action('woocommerce_before_single_product_summary','woocommerce_show_product_images', 20);
 
-	add_action('woocommerce_before_single_product_summary','alacarte_woocommerce_single_gallery', 1);
-	add_action('alacarte_woocommerce_single_gallery', 'alacarte_woocommerce_sale', 1);
-	add_action('alacarte_woocommerce_single_gallery', 'alacarte_woocommerce_show_product_loop_badges', 2);
-	add_action('alacarte_woocommerce_single_gallery', 'woocommerce_show_product_images', 3);
+	add_action('woocommerce_before_single_product_summary','sunix_woocommerce_single_gallery', 1);
+	add_action('sunix_woocommerce_single_gallery', 'sunix_woocommerce_sale', 1);
+	add_action('sunix_woocommerce_single_gallery', 'sunix_woocommerce_show_product_loop_badges', 2);
+	add_action('sunix_woocommerce_single_gallery', 'woocommerce_show_product_images', 3);
 
-	function alacarte_woocommerce_single_gallery(){
-		$class = alacarte_get_opts('product_gallery_thumb_position', 'thumb-right');
+	function sunix_woocommerce_single_gallery(){
+		$class = sunix_get_opts('product_gallery_thumb_position', 'thumb-right');
 		?>
 		<div class="red-single-product-gallery-wraps <?php echo esc_attr($class);?>">
 		<div class="red-single-product-gallery-wraps-inner">
-			<?php do_action('alacarte_woocommerce_single_gallery'); ?>
+			<?php do_action('sunix_woocommerce_single_gallery'); ?>
 		</div>
 		</div>
 		<?php
@@ -89,10 +89,10 @@ if(!function_exists('alacarte_woocommerce_single_gallery')){
 /**
  * Add Custom CSS class to Gallery
 */
-add_filter('woocommerce_single_product_image_gallery_classes','alacarte_woocommerce_single_product_image_gallery_classes');
-function alacarte_woocommerce_single_product_image_gallery_classes($class){
-	$class[] = 'red-'.alacarte_get_opts('product_gallery_layout', 'thumbnail_h');
-	$class[] = alacarte_get_opts('product_gallery_thumb_position', 'thumb-right');
+add_filter('woocommerce_single_product_image_gallery_classes','sunix_woocommerce_single_product_image_gallery_classes');
+function sunix_woocommerce_single_product_image_gallery_classes($class){
+	$class[] = 'red-'.sunix_get_opts('product_gallery_layout', 'thumbnail_h');
+	$class[] = sunix_get_opts('product_gallery_thumb_position', 'thumb-right');
 	return $class;
 }
 
@@ -102,10 +102,10 @@ function alacarte_woocommerce_single_product_image_gallery_classes($class){
  * Gallery style with thumbnail carousel in bottom
  *
 */
-if(!function_exists('alacarte_wc_single_product_gallery_layout')){
-	add_filter('woocommerce_single_product_carousel_options', 'alacarte_wc_single_product_gallery_layout' );
-    function alacarte_wc_single_product_gallery_layout($options){
-        $gallery_layout = alacarte_get_opts('product_gallery_layout', 'thumbnail_h');
+if(!function_exists('sunix_wc_single_product_gallery_layout')){
+	add_filter('woocommerce_single_product_carousel_options', 'sunix_wc_single_product_gallery_layout' );
+    function sunix_wc_single_product_gallery_layout($options){
+        $gallery_layout = sunix_get_opts('product_gallery_layout', 'thumbnail_h');
 
         $options['prevText']     = '<span class="flex-prev-icon"></span>';
 		$options['nextText']     = '<span class="flex-next-icon"></span>';
@@ -137,12 +137,12 @@ if(!function_exists('alacarte_wc_single_product_gallery_layout')){
  * Add thumbnail product gallery 
  *
 */
-if(!function_exists('alacarte_product_gallery_thumbnail_sync')){
-	add_action('alacarte_after_single_product_gallery', 'alacarte_product_gallery_thumbnail_sync');
-	function alacarte_product_gallery_thumbnail_sync($args=[]){
+if(!function_exists('sunix_product_gallery_thumbnail_sync')){
+	add_action('sunix_after_single_product_gallery', 'sunix_product_gallery_thumbnail_sync');
+	function sunix_product_gallery_thumbnail_sync($args=[]){
 		global $product;
-		$gallery_layout = alacarte_get_opts('product_gallery_layout', 'thumbnail_h');
-		$product_gallery_thumb_position = alacarte_get_opts('product_gallery_thumb_position', 'thumb-right');
+		$gallery_layout = sunix_get_opts('product_gallery_layout', 'thumbnail_h');
+		$product_gallery_thumb_position = sunix_get_opts('product_gallery_thumb_position', 'thumb-right');
         $args = wp_parse_args($args, [
             'gallery_layout' => $gallery_layout
         ]);
@@ -152,14 +152,14 @@ if(!function_exists('alacarte_product_gallery_thumbnail_sync')){
         if('simple' === $args['gallery_layout'] || empty($attachment_ids[0])) return;
         $flex_class = '';
 
-        $thumb_v_w = alacarte_configs('alacarte_product_gallery_thumbnail_v_w');
-        $thumb_v_h = alacarte_configs('alacarte_product_gallery_thumbnail_v_h');
+        $thumb_v_w = sunix_configs('sunix_product_gallery_thumbnail_v_w');
+        $thumb_v_h = sunix_configs('sunix_product_gallery_thumbnail_v_h');
 
-       // $thumb_h_w = round((alacarte_configs('alacarte_product_single_image_w') - alacarte_configs('alacarte_product_gallery_thumbnail_space')*3)/3);
-        $thumb_h_w = alacarte_configs('alacarte_product_gallery_thumbnail_v_w');
-        $thumb_h_h = alacarte_configs('alacarte_product_gallery_thumbnail_h_h');
+       // $thumb_h_w = round((sunix_configs('sunix_product_single_image_w') - sunix_configs('sunix_product_gallery_thumbnail_space')*3)/3);
+        $thumb_h_w = sunix_configs('sunix_product_gallery_thumbnail_v_w');
+        $thumb_h_h = sunix_configs('sunix_product_gallery_thumbnail_h_h');
 
-        $thumb_margin = alacarte_configs('alacarte_product_gallery_thumbnail_space');
+        $thumb_margin = sunix_configs('sunix_product_gallery_thumbnail_space');
 
         switch ($args['gallery_layout']) {
 	        case 'thumbnail_v':
@@ -182,7 +182,7 @@ if(!function_exists('alacarte_product_gallery_thumbnail_sync')){
     	<div class="<?php echo trim(implode(' ', $gallery_css_class));?>" data-thumb-w="<?php echo esc_attr($thumb_w);?>" data-thumb-h="<?php echo esc_attr($thumb_h);?>" data-thumb-margin="<?php echo esc_attr($thumb_margin); ?>">
 			<div class="wc-gallery-sync-slides flexslider <?php echo esc_attr($flex_class);?>">
 	            <?php foreach ( $attachment_ids as $attachment_id ) { ?>
-	                <div class="wc-gallery-sync-slide flex-control-thumb"><?php alacarte_image_by_size(['id' => $attachment_id, 'size' => $thumbnail_size]);?></div>
+	                <div class="wc-gallery-sync-slide flex-control-thumb"><?php sunix_image_by_size(['id' => $attachment_id, 'size' => $thumbnail_size]);?></div>
 	            <?php } ?>
 	        </div>
 	    </div>
@@ -218,9 +218,9 @@ if ( ! function_exists( 'woocommerce_template_single_price' ) ) {
 /**
  * Single Product Quantity Form
 */
-if(!function_exists('alacarte_woocommerce_quantity_input_args')){
-	add_filter('woocommerce_quantity_input_args','alacarte_woocommerce_quantity_input_args');
-	function alacarte_woocommerce_quantity_input_args($args){
+if(!function_exists('sunix_woocommerce_quantity_input_args')){
+	add_filter('woocommerce_quantity_input_args','sunix_woocommerce_quantity_input_args');
+	function sunix_woocommerce_quantity_input_args($args){
 		$args['product_name'] = '';
 		return $args;
 	}
@@ -242,14 +242,14 @@ if ( ! function_exists( 'woocommerce_template_single_meta' ) ) {
 		<?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
 
 			<span class="red-sku-wrapper meta-item">
-				<span class="red-heading text-uppercase"><?php esc_html_e( 'SKU:', 'alacarte' ); ?></span> <span class="sku"><?php if ( $sku = $product->get_sku() ) { echo esc_html($sku); } else { echo esc_html__( 'N/A', 'alacarte' );} ?></span>
+				<span class="red-heading text-uppercase"><?php esc_html_e( 'SKU:', 'sunix' ); ?></span> <span class="sku"><?php if ( $sku = $product->get_sku() ) { echo esc_html($sku); } else { echo esc_html__( 'N/A', 'sunix' );} ?></span>
 			</span>
 
 		<?php endif; ?>
 
-		<?php echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted-in meta-item"><span class="red-heading text-uppercase">' . _n( 'Category:', 'Categories:', count( $product->get_category_ids() ), 'alacarte' ) . '</span> ', '</span>' ); ?>
+		<?php echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted-in meta-item"><span class="red-heading text-uppercase">' . _n( 'Category:', 'Categories:', count( $product->get_category_ids() ), 'sunix' ) . '</span> ', '</span>' ); ?>
 
-		<?php echo wc_get_product_tag_list( $product->get_id(), ', ', '<span class="tagged-as meta-item"><span class="red-heading text-uppercase">' . _n( 'Tag:', 'Tags:', count( $product->get_tag_ids() ), 'alacarte' ) . '</span> ', '</span>' ); ?>
+		<?php echo wc_get_product_tag_list( $product->get_id(), ', ', '<span class="tagged-as meta-item"><span class="red-heading text-uppercase">' . _n( 'Tag:', 'Tags:', count( $product->get_tag_ids() ), 'sunix' ) . '</span> ', '</span>' ); ?>
 
 		<?php do_action( 'woocommerce_product_meta_end' ); ?>
 
@@ -258,10 +258,10 @@ if ( ! function_exists( 'woocommerce_template_single_meta' ) ) {
 	}
 }
 // Product meta share
-if(!function_exists('alacarte_woocommerce_product_meta_end')){
-	add_action('woocommerce_product_meta_end','alacarte_woocommerce_product_meta_end', 0);
-	function alacarte_woocommerce_product_meta_end(){
-		$show_share = alacarte_get_theme_opt( 'product_share_on', '0');
+if(!function_exists('sunix_woocommerce_product_meta_end')){
+	add_action('woocommerce_product_meta_end','sunix_woocommerce_product_meta_end', 0);
+	function sunix_woocommerce_product_meta_end(){
+		$show_share = sunix_get_theme_opt( 'product_share_on', '0');
 		if(!$show_share) return;
         wp_enqueue_script('sharethis');
         global $product;
@@ -270,13 +270,13 @@ if(!function_exists('alacarte_woocommerce_product_meta_end')){
         $title = get_the_title();
 		?>
 		<span class="meta-item">
-			<span class="red-heading text-uppercase"><?php esc_html_e('Share:','alacarte'); ?></span>
+			<span class="red-heading text-uppercase"><?php esc_html_e('Share:','sunix'); ?></span>
 			<span class="meta-share">
-                <a data-hint="<?php esc_attr_e('Share this post to Facebook','alacarte'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="facebook" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="hint--top hint--bounce facebook st-custom-button"><span class="fab fa-facebook-f"></span></a>
-                <a data-hint="<?php esc_attr_e('Share this post to Twitter','alacarte'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="twitter" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="hint--top hint--bounce twitter st-custom-button"><span class="fab fa-twitter"></span></a>
-                <a data-hint="<?php esc_attr_e('Share this post to Google Plus','alacarte'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="googleplus" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="hint--top hint--bounce googleplus st-custom-button"><span class="fab fa-google-plus"></span></a>
-                <a data-hint="<?php esc_attr_e('Share this post to Pinterest','alacarte'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="pinterest" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="hint--top hint--bounce pinterest st-custom-button"><span class="fab fa-pinterest"></span></a>
-                <a data-hint="<?php esc_attr_e('Share this post to','alacarte'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="sharethis" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="hint--top hint--bounce sharethis st-custom-button"><span class="fa fa-share-alt"></span></a>
+                <a data-hint="<?php esc_attr_e('Share this post to Facebook','sunix'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="facebook" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="hint--top hint--bounce facebook st-custom-button"><span class="fab fa-facebook-f"></span></a>
+                <a data-hint="<?php esc_attr_e('Share this post to Twitter','sunix'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="twitter" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="hint--top hint--bounce twitter st-custom-button"><span class="fab fa-twitter"></span></a>
+                <a data-hint="<?php esc_attr_e('Share this post to Google Plus','sunix'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="googleplus" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="hint--top hint--bounce googleplus st-custom-button"><span class="fab fa-google-plus"></span></a>
+                <a data-hint="<?php esc_attr_e('Share this post to Pinterest','sunix'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="pinterest" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="hint--top hint--bounce pinterest st-custom-button"><span class="fab fa-pinterest"></span></a>
+                <a data-hint="<?php esc_attr_e('Share this post to','sunix'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="sharethis" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="hint--top hint--bounce sharethis st-custom-button"><span class="fa fa-share-alt"></span></a>
 			</span>
 		</span>
 		<?php
@@ -296,18 +296,18 @@ add_filter('woocommerce_product_additional_information_heading', function(){ ret
  * Change column of related product
  * https://docs.woocommerce.com/document/change-number-of-related-products-output/
 */
-if(!function_exists('alacarte_woocommerce_output_related_products_args')){
-	add_filter( 'woocommerce_output_related_products_args', 'alacarte_woocommerce_output_related_products_args', 20 );
-	function alacarte_woocommerce_output_related_products_args($args){
+if(!function_exists('sunix_woocommerce_output_related_products_args')){
+	add_filter( 'woocommerce_output_related_products_args', 'sunix_woocommerce_output_related_products_args', 20 );
+	function sunix_woocommerce_output_related_products_args($args){
 		$args['posts_per_page'] = 6; // 4 related products
 		//$args['columns'] = 3; // arranged in 2 columns
         return $args;
 	}
 }
 // Add carousel to related
-if(!function_exists('alacarte_single_product_scripts')){
-	add_action('wp_enqueue_scripts', 'alacarte_single_product_scripts', 0);
-	function alacarte_single_product_scripts(){
+if(!function_exists('sunix_single_product_scripts')){
+	add_action('wp_enqueue_scripts', 'sunix_single_product_scripts', 0);
+	function sunix_single_product_scripts(){
 		if(!is_singular('product')) return;
 		wp_enqueue_script('owl-carousel');
 		wp_enqueue_script('owl-carousel-theme');

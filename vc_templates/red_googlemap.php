@@ -85,7 +85,7 @@ $setting = array(
     "data-template='$map_template'",
     "data-controls='$controls'"
 );
-$api = alacarte_get_opts('google_api_key','');
+$api = sunix_get_opts('google_api_key','');
 if(!empty($api)){
 ?>
 <div class="red-googlemaps">
@@ -93,6 +93,6 @@ if(!empty($api)){
 </div>
 <?php } else {
 	echo trim( vc_value_from_safe( $default_map ) );
-	//echo alacarte_html($default_map);
+	//echo sunix_html($default_map);
 	//echo rawurldecode( base64_ef5_decode( strip_tags( $default_map ) ) );
 }

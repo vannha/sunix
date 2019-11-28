@@ -9,14 +9,14 @@
  * get the wishlist URL
  * echo WPcleverWoosw::get_url();
 */
-if(!function_exists('alacarte_header_wishlist')){
-	function alacarte_header_wishlist($args = []){
+if(!function_exists('sunix_header_wishlist')){
+	function sunix_header_wishlist($args = []){
 		$args = wp_parse_args($args, [
 			'before' => '',
 			'after'  => '', 
 			'icon'	 => 'fal fa-heart'
 		]);
-		$show_wishlist = alacarte_get_opts('header_wishlist', '0');
+		$show_wishlist = sunix_get_opts('header_wishlist', '0');
 		if(!class_exists( 'WooCommerce' ) || !class_exists('WPcleverWoosw') || '0' === $show_wishlist) return;
 		echo wp_kses_post($args['before']);
 	?>

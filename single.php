@@ -7,8 +7,8 @@
  * and that other 'pages' on your WordPress site may use a
  * different template.
  *
- * @package AlaCarte
- * @subpackage AlaCarte
+ * @package sunix
+ * @subpackage sunix
  * @since 1.0.0
  * @author EF5 Team
  *
@@ -17,7 +17,7 @@ get_header();
 ?>
     <div class="container">
         <div class="row">
-            <div id="red-content-area" class="<?php alacarte_content_css_class();?>">
+            <div id="red-content-area" class="<?php sunix_content_css_class();?>">
                 <div class="red-blogs">
                 <?php
                     /* Start the Loop */
@@ -25,15 +25,15 @@ get_header();
                         the_post();
                         get_template_part( 'template-parts/single/content', get_post_format() );
                         // Post Navigation
-                        alacarte_post_navigation();
+                        sunix_post_navigation();
                         // Comment
-                        alacarte_comment();
+                        sunix_comment();
 
                     endwhile; // End of the loop.
                 ?>
                 </div>
             </div>
-            <?php alacarte_sidebar(); ?>
+            <?php sunix_sidebar(); ?>
         </div>
     </div>
 <?php

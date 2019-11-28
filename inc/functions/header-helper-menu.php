@@ -2,9 +2,9 @@
 /**
  * Header Helper Menu 
 */
-if(!function_exists('alacarte_header_helper_menu')){
-    function alacarte_header_helper_menu($args = []){
-        $header_helper_menu = alacarte_get_opts('header_helper_menu','-1');
+if(!function_exists('sunix_header_helper_menu')){
+    function sunix_header_helper_menu($args = []){
+        $header_helper_menu = sunix_get_opts('header_helper_menu','-1');
         if(!is_nav_menu($header_helper_menu)) return;
         $args = wp_parse_args($args,[
             'class'      => 'justify-content-end',

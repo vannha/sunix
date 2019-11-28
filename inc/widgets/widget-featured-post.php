@@ -4,24 +4,24 @@ if(!function_exists('register_ef5_widget')) return;
 /**
  * Recent Posts widgets
  *
- * @package AlaCarte
+ * @package sunix
  * @version 1.0
  */
 
-add_action('widgets_init', 'alacarte_Featured_Posts_Widget');
-function alacarte_Featured_Posts_Widget() {
-    register_ef5_widget('alacarte_Featured_Posts_Widget');
+add_action('widgets_init', 'sunix_Featured_Posts_Widget');
+function sunix_Featured_Posts_Widget() {
+    register_ef5_widget('sunix_Featured_Posts_Widget');
 }
 
-class alacarte_Featured_Posts_Widget extends WP_Widget
+class sunix_Featured_Posts_Widget extends WP_Widget
 {
     function __construct()
     {
         parent::__construct(
-            'alacarte_featured_posts',
-            esc_html__( '[AlaCarte] Featured Posts', 'alacarte' ),
+            'sunix_featured_posts',
+            esc_html__( '[sunix] Featured Posts', 'sunix' ),
             array(
-                'description' => __( 'Shows your most Featured posts.', 'alacarte' ),
+                'description' => __( 'Shows your most Featured posts.', 'sunix' ),
                 'customize_selective_refresh' => true,
             )
         );
@@ -37,12 +37,12 @@ class alacarte_Featured_Posts_Widget extends WP_Widget
     function widget( $args, $instance )
     {
         $instance = wp_parse_args( (array) $instance, array(
-            'title'         => esc_html__( 'Featured Posts', 'alacarte' ),
+            'title'         => esc_html__( 'Featured Posts', 'sunix' ),
             'post_type'     => 'post',
             'number'        => 6,
         ) );
 
-        $title = empty( $instance['title'] ) ? esc_html__( 'Featured Posts', 'alacarte' ) : $instance['title'];
+        $title = empty( $instance['title'] ) ? esc_html__( 'Featured Posts', 'sunix' ) : $instance['title'];
         $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
         $post_type = empty( $instance['post_type'] ) ? 'post' : $instance['post_type'];
@@ -79,9 +79,9 @@ class alacarte_Featured_Posts_Widget extends WP_Widget
                     ( has_post_thumbnail() ? 'has-post-thumbnail' : '' )
                 );
                 if(has_post_thumbnail())
-                	$thumbnail_url = alacarte_get_image_url_by_size( null, implode('x', $thumbnail_size), true );
+                	$thumbnail_url = sunix_get_image_url_by_size( null, implode('x', $thumbnail_size), true );
                 else 
-                	$thumbnail_url = alacarte_default_image_thumbnail_url(['size'=>implode('x', $thumbnail_size)]);
+                	$thumbnail_url = sunix_default_image_thumbnail_url(['size'=>implode('x', $thumbnail_size)]);
                 printf(
                     '<a href="%1$s" class="red-thumbnail hint--top" data-hint="%2$s">' .
                         '<img src="%3$s" alt="%2$s" />' .
@@ -127,26 +127,26 @@ class alacarte_Featured_Posts_Widget extends WP_Widget
     function form( $instance )
     {
         $instance = wp_parse_args( (array) $instance, array(
-            'title'         => esc_html__( 'Featured Posts', 'alacarte' ),
+            'title'         => esc_html__( 'Featured Posts', 'sunix' ),
             'post_type'     => 'post',
             'number'        => 6,
         ) );
 
-        $title         = $instance['title'] ? esc_attr( $instance['title'] ) : esc_html__( 'Featured Posts', 'alacarte' );
+        $title         = $instance['title'] ? esc_attr( $instance['title'] ) : esc_html__( 'Featured Posts', 'sunix' );
         $post_type         = $instance['post_type'] ? esc_attr( $instance['post_type'] ) : 'post';
         $number        = absint( $instance['number'] );
 
         ?>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'alacarte' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'sunix' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'post_type' ) ); ?>"><?php esc_html_e( 'Emter custom post type slug. Default \'post\'', 'alacarte' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'post_type' ) ); ?>"><?php esc_html_e( 'Emter custom post type slug. Default \'post\'', 'sunix' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'post_type' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'post_type' ) ); ?>" type="post_type" value="<?php echo esc_attr( $post_type ); ?>" />
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number of posts to show:', 'alacarte' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number of posts to show:', 'sunix' ); ?></label>
             <input class="tiny-text" id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="number" step="1" min="1" value="<?php echo esc_attr( $number ); ?>" size="3" />
         </p>
         <?php

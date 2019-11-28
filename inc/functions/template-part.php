@@ -7,7 +7,7 @@
  * @param string $template_path Template path. (default: '').
  * @param string $default_path  Default path. (default: '').
  */
-function alacarte_get_template($slug, $name, $args = array()) {
+function sunix_get_template($slug, $name, $args = array()) {
 	if ( ! empty( $args ) && is_array( $args ) ) {
 		//extract( $args ); // @codingStandardsIgnoreLine
 	}

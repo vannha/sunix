@@ -4,14 +4,14 @@
 (function ($) {
     "use strict";
     $(window).on('load',function () {
-        alacarte_owl_render();
+        sunix_owl_render();
     });
     // Ajax Complete
     jQuery(document).ajaxComplete(function(event, xhr, settings){
-        alacarte_owl_render();
+        sunix_owl_render();
     });
     /* add first/last/center class */
-    function alacarte_owl_flc(e) {
+    function sunix_owl_flc(e) {
         "use strict";
         var idx = $(e.target).find('.owl-item');
         idx.removeClass('first last center'), 
@@ -26,17 +26,17 @@
         // Remove loading
         $('.loader').remove();
     }
-    function alacarte_owl_render(){
+    function sunix_owl_render(){
         'use strict';
         $('.red-owl').each(function () {
             var $this    = $(this),
                 slide_id = $this.attr('id'),
-                slider_settings = alacarte_owl[slide_id];
+                slider_settings = sunix_owl[slide_id];
                 slider_settings['navContainer']  = $this.parent().find('.red-owl-nav');
                 slider_settings['dotsContainer'] = $this.parent().find('.red-owl-dots');
             // add first / last / center css class
             $this.on("initialized.owl.carousel", function(e) {
-               alacarte_owl_flc(e);
+               sunix_owl_flc(e);
                 if(slider_settings['dotsData'] === true){
                     slider_settings['dotsContainer'].addClass('thumbnail');
                 }
@@ -45,7 +45,7 @@
             $this.owlCarousel(slider_settings),
 
             $this.on("changed.owl.carousel", function(e) {
-                alacarte_owl_flc(e);
+                sunix_owl_flc(e);
             }),
             // add changing class  to remove overflow hidden style
             $this.on("translate.owl.carousel", function(e) {

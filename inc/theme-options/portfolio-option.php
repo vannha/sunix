@@ -1,11 +1,11 @@
 <?php
-function alacarte_portfolio_options($metabox)
+function sunix_portfolio_options($metabox)
 {
     /* Config Portfolio Options */
     if (!$metabox->isset_args('portfolio')) {
         $metabox->set_args('portfolio', array(
-            'opt_name'     => alacarte_get_page_opt_name(),
-            'display_name' => esc_html__('Portfolio Settings', 'alacarte'),
+            'opt_name'     => sunix_get_page_opt_name(),
+            'display_name' => esc_html__('Portfolio Settings', 'sunix'),
         ), array(
             'context'  => 'advanced',
             'priority' => 'default',
@@ -14,15 +14,15 @@ function alacarte_portfolio_options($metabox)
     }
 
     $metabox->add_section('portfolio', array(
-        'title'  => esc_html__('Portfolio Details', 'alacarte'),
-        'desc'   => esc_html__('Details settings for the portfolio.', 'alacarte'),
+        'title'  => esc_html__('Portfolio Details', 'sunix'),
+        'desc'   => esc_html__('Details settings for the portfolio.', 'sunix'),
         'icon'   => 'el-icon-adjust-alt',
         'fields' => array_merge(
             array(
                 array(
                     'id'       => 'portfolio_style',
                     'type'     => 'select',
-                    'title'    => __('Portfolio Style Layout', 'alacarte'),
+                    'title'    => __('Portfolio Style Layout', 'sunix'),
                     'options'  => array(
                         '1' => 'Image Equal Width Height',
                         '2' => 'Image 2 Width Height',
@@ -36,7 +36,7 @@ function alacarte_portfolio_options($metabox)
                 array(
                     'id'       => 'portfolio_subtitle',
                     'type'     => 'text',
-                    'title'    => esc_html__('Subtitle', 'alacarte'),
+                    'title'    => esc_html__('Subtitle', 'sunix'),
                     'required'  => array(
                         array('portfolio_style', '!=', '1'),
                         array('portfolio_style', '!=', '2'),
@@ -44,11 +44,11 @@ function alacarte_portfolio_options($metabox)
                 ),
                 array(
                     'id'        => 'portfolio_link',
-                    'title'     => esc_html__('Link Page', 'alacarte'),
+                    'title'     => esc_html__('Link Page', 'sunix'),
                     'type'      => 'select',
                     'data'      => 'pages',
                     'multi'     => 'true',
-                    'placeholder'   => esc_html__('Choose a page','alacarte'),
+                    'placeholder'   => esc_html__('Choose a page','sunix'),
                     'required'  => array(
                         array('portfolio_style', '!=', '1'),
                         array('portfolio_style', '!=', '2'),
@@ -59,4 +59,4 @@ function alacarte_portfolio_options($metabox)
         )
     ));
 }
-add_action('ef5_post_metabox_register', 'alacarte_portfolio_options');
+add_action('ef5_post_metabox_register', 'sunix_portfolio_options');

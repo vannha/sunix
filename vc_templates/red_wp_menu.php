@@ -21,7 +21,7 @@ $nav_menu_args = array(
 	'fallback_cb'     => '',
 	'menu'            => $nav_menu,
 	'menu_class'      => trim(implode(' ', ['menu', $layout_mode, $add_divider, $el_class])),
-	'walker'          => new alacarte_Menu_Walker()
+	'walker'          => new sunix_Menu_Walker()
 );
 ?>
 <div class="red-wp-menu">

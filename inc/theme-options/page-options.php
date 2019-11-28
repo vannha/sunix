@@ -1,11 +1,11 @@
 <?php
-function alacarte_page_options_register($metabox)
+function sunix_page_options_register($metabox)
 {
     
     if (!$metabox->isset_args('page')) {
         $metabox->set_args('page', array(
-            'opt_name'     => alacarte_get_page_opt_name(),
-            'display_name' => esc_html__('Page Settings', 'alacarte'),
+            'opt_name'     => sunix_get_page_opt_name(),
+            'display_name' => esc_html__('Page Settings', 'sunix'),
         ), array(
             'context'  => 'advanced',
             'priority' => 'default'
@@ -13,14 +13,14 @@ function alacarte_page_options_register($metabox)
     }
 
     $metabox->add_section('page', array(
-        'title'  => esc_html__('General', 'alacarte'),
-        'desc'   => esc_html__('General settings for the page.', 'alacarte'),
+        'title'  => esc_html__('General', 'sunix'),
+        'desc'   => esc_html__('General settings for the page.', 'sunix'),
         'icon'   => 'el-icon-home',
         'fields' => array_merge(
             array(
                 array(
-                    'title'     => esc_html__('Padding Content', 'alacarte'),
-                    'subtitle'  => esc_html__('Choose space for: Top, Right, Bottom, Left', 'alacarte'),
+                    'title'     => esc_html__('Padding Content', 'sunix'),
+                    'subtitle'  => esc_html__('Choose space for: Top, Right, Bottom, Left', 'sunix'),
                     'id'        => 'main_padding',
                     'type'      => 'spacing',
                     'mode'      => 'padding',
@@ -31,10 +31,10 @@ function alacarte_page_options_register($metabox)
                 array(
                     'id'       => 'page_overlay_hidden',
                     'type'     => 'button_set',
-                    'title'    => esc_html__('Page Overlay Hidden', 'alacarte'),
+                    'title'    => esc_html__('Page Overlay Hidden', 'sunix'),
                     'options'  => array(
-                        '1'     => esc_html__('Yes', 'alacarte'),
-                        '0'   => esc_html__('No', 'alacarte'),
+                        '1'     => esc_html__('Yes', 'sunix'),
+                        '0'   => esc_html__('No', 'sunix'),
 
                     ),
                     'default'  => '1'
@@ -42,7 +42,7 @@ function alacarte_page_options_register($metabox)
                 array(
                     'id'          => 'primary_color',
                     'type'        => 'color',
-                    'title'       => esc_html__('Primary Color', 'alacarte'),
+                    'title'       => esc_html__('Primary Color', 'sunix'),
                     'transparent' => false,
                     'output'      => array(
                         'background-color' => '
@@ -58,7 +58,7 @@ function alacarte_page_options_register($metabox)
                 array(
                     'id'          => 'accent_color',
                     'type'        => 'color',
-                    'title'       => esc_html__('Accent Color', 'alacarte'),
+                    'title'       => esc_html__('Accent Color', 'sunix'),
                     'transparent' => false,
                     'output'      => array(
                         'background-color' => '.header-icon .header-count, 
@@ -85,7 +85,7 @@ function alacarte_page_options_register($metabox)
                                                 .red-box-meta2 a,
                                                 .red-toggle .red-toggle-inner:before,
                                                 .red-toggle .red-toggle-inner:after,
-                                                .AlaCarte-Primary-Button-Large,
+                                                .sunix-Primary-Button-Large,
                                                 .rev_slider .tp-bannertimer', 
                         'color'            => '.text-accent,
                                                 .accent-color,
@@ -109,30 +109,30 @@ function alacarte_page_options_register($metabox)
                     )
                 ),
             ),
-            alacarte_page_opts(true),
-            alacarte_general_opts(['default' => true])
+            sunix_page_opts(true),
+            sunix_general_opts(['default' => true])
         )
     ));
     $metabox->add_section('page', array(
-        'title'  => esc_html__('Header Top', 'alacarte'),
-        'desc'   => esc_html__('Header Top settings for the page.', 'alacarte'),
+        'title'  => esc_html__('Header Top', 'sunix'),
+        'desc'   => esc_html__('Header Top settings for the page.', 'sunix'),
         'icon'   => 'el-icon-website',
         'fields' => array_merge(
-            alacarte_header_top_opts(['default' => true])
+            sunix_header_top_opts(['default' => true])
         )
     ));
     $metabox->add_section('page', array(
-        'title'  => esc_html__('Header', 'alacarte'),
-        'desc'   => esc_html__('Header settings for the page.', 'alacarte'),
+        'title'  => esc_html__('Header', 'sunix'),
+        'desc'   => esc_html__('Header settings for the page.', 'sunix'),
         'icon'   => 'el-icon-website',
         'fields' => array_merge(
-            alacarte_header_opts(['default' => true]),
-            alacarte_header_atts(true)
+            sunix_header_opts(['default' => true]),
+            sunix_header_atts(true)
         )
     ));
     // Logo 
     $metabox->add_section('page', array(
-        'title'      => esc_html__('Logo', 'alacarte'),
+        'title'      => esc_html__('Logo', 'sunix'),
         'icon'       => 'el-icon-picture',
         'subsection' => 'true',
         'fields'     => array(
@@ -140,14 +140,14 @@ function alacarte_page_options_register($metabox)
                 'id'             => 'page_logo',
                 'type'           => 'media',
                 'library_filter' => array('gif','jpg','jpeg','png','svg'),
-                'title'          => esc_html__('Logo', 'alacarte'),
-                'subtitle'       => esc_html__('Choose your logo. If not set, default Logo will be used', 'alacarte')
+                'title'          => esc_html__('Logo', 'sunix'),
+                'subtitle'       => esc_html__('Choose your logo. If not set, default Logo will be used', 'sunix')
             ),
             array(
                 'id'       => 'logo_size',
                 'type'     => 'dimensions',
-                'title'    => esc_html__('Logo Size', 'alacarte'),
-                'subtitle' => esc_html__('Enter size (width x height) for your logo, just in case the logo is too large. If not set, default size will be used', 'alacarte'),
+                'title'    => esc_html__('Logo Size', 'sunix'),
+                'subtitle' => esc_html__('Enter size (width x height) for your logo, just in case the logo is too large. If not set, default size will be used', 'sunix'),
                 'units'     => array('px'),
                 'default'   => array(),
             ),
@@ -156,22 +156,22 @@ function alacarte_page_options_register($metabox)
 
     );
     // Ontop Header
-    $metabox->add_section('page', alacarte_ontop_header_opts(['default' => true,'subsection' => false]));
+    $metabox->add_section('page', sunix_ontop_header_opts(['default' => true,'subsection' => false]));
 
     $metabox->add_section('page', array(
-        'title'  => esc_html__('Page Title', 'alacarte'),
-        'desc'   => esc_html__('Settings for page header area.', 'alacarte'),
+        'title'  => esc_html__('Page Title', 'sunix'),
+        'desc'   => esc_html__('Settings for page header area.', 'sunix'),
         'icon'   => 'el-icon-map-marker',
-        'fields' => alacarte_page_title_opts(['default' => true])
+        'fields' => sunix_page_title_opts(['default' => true])
     ));
 
-    $metabox->add_section('page', alacarte_footer_opts(['default' => true]));
+    $metabox->add_section('page', sunix_footer_opts(['default' => true]));
 
     /* Config Post Options */
     if (!$metabox->isset_args('post')) {
         $metabox->set_args('post', array(
-            'opt_name'     => alacarte_get_page_opt_name(),
-            'display_name' => esc_html__('Post Settings', 'alacarte'),
+            'opt_name'     => sunix_get_page_opt_name(),
+            'display_name' => esc_html__('Post Settings', 'sunix'),
             'class'        => 'fully-expanded'
         ), array(
             'context'  => 'advanced',
@@ -181,22 +181,22 @@ function alacarte_page_options_register($metabox)
     }
 
     $metabox->add_section('post', array(
-        'title'  => esc_html__('General', 'alacarte'),
-        'desc'   => esc_html__('General settings for this post.', 'alacarte'),
+        'title'  => esc_html__('General', 'sunix'),
+        'desc'   => esc_html__('General settings for this post.', 'sunix'),
         'icon'   => 'el-icon-home',
         'fields' => array_merge(
             array(
                 array(
                     'id'       => 'post_sidebar_pos',
                     'type'     => 'button_set',
-                    'title'    => esc_html__('Layouts', 'alacarte'),
-                    'subtitle' => esc_html__('select a layout for single...', 'alacarte'),
+                    'title'    => esc_html__('Layouts', 'sunix'),
+                    'subtitle' => esc_html__('select a layout for single...', 'sunix'),
                     'options'  => array(
-                        '-1'     => esc_html__('Default', 'alacarte'),
-                        'left'   => esc_html__('Left Sidebar', 'alacarte'),
-                        'right'  => esc_html__('Right Sidebar', 'alacarte'),
-                        'none'   => esc_html__('No sidebar (Full)', 'alacarte'),
-                        'center' => esc_html__('No sidebar (Center)', 'alacarte')
+                        '-1'     => esc_html__('Default', 'sunix'),
+                        'left'   => esc_html__('Left Sidebar', 'sunix'),
+                        'right'  => esc_html__('Right Sidebar', 'sunix'),
+                        'none'   => esc_html__('No sidebar (Full)', 'sunix'),
+                        'center' => esc_html__('No sidebar (Center)', 'sunix')
                     ),
                     'default'  => '-1'
                 )
@@ -204,10 +204,10 @@ function alacarte_page_options_register($metabox)
         )
     ));
     $metabox->add_section('post', array(
-        'title'  => esc_html__('Post Title', 'alacarte'),
-        'desc'   => esc_html__('Settings for page header area.', 'alacarte'),
+        'title'  => esc_html__('Post Title', 'sunix'),
+        'desc'   => esc_html__('Settings for page header area.', 'sunix'),
         'icon'   => 'el-icon-map-marker',
-        'fields' => alacarte_page_title_opts(['default' => true])
+        'fields' => sunix_page_title_opts(['default' => true])
     ));
 
     /**
@@ -217,7 +217,7 @@ function alacarte_page_options_register($metabox)
     if (!$metabox->isset_args('ef5_pf_audio')) {
         $metabox->set_args('ef5_pf_audio', array(
             'opt_name'     => 'post_format_audio',
-            'display_name' => esc_html__('Audio', 'alacarte'),
+            'display_name' => esc_html__('Audio', 'sunix'),
             'class'        => 'fully-expanded'
         ), array(
             'context'  => 'advanced',
@@ -228,7 +228,7 @@ function alacarte_page_options_register($metabox)
     if (!$metabox->isset_args('ef5_pf_link')) {
         $metabox->set_args('ef5_pf_link', array(
             'opt_name'     => 'post_format_link',
-            'display_name' => esc_html__('Link', 'alacarte'),
+            'display_name' => esc_html__('Link', 'sunix'),
             'class'        => 'fully-expanded'
         ), array(
             'context'  => 'advanced',
@@ -239,7 +239,7 @@ function alacarte_page_options_register($metabox)
     if (!$metabox->isset_args('ef5_pf_quote')) {
         $metabox->set_args('ef5_pf_quote', array(
             'opt_name'     => 'post_format_quote',
-            'display_name' => esc_html__('Quote', 'alacarte'),
+            'display_name' => esc_html__('Quote', 'sunix'),
             'class'        => 'fully-expanded'
         ), array(
             'context'  => 'advanced',
@@ -250,7 +250,7 @@ function alacarte_page_options_register($metabox)
     if (!$metabox->isset_args('ef5_pf_video')) {
         $metabox->set_args('ef5_pf_video', array(
             'opt_name'     => 'post_format_video',
-            'display_name' => esc_html__('Video', 'alacarte'),
+            'display_name' => esc_html__('Video', 'sunix'),
             'class'        => 'fully-expanded'
         ), array(
             'context'  => 'advanced',
@@ -261,7 +261,7 @@ function alacarte_page_options_register($metabox)
     if (!$metabox->isset_args('ef5_pf_gallery')) {
         $metabox->set_args('ef5_pf_gallery', array(
             'opt_name'     => 'post_format_gallery',
-            'display_name' => esc_html__('Gallery', 'alacarte'),
+            'display_name' => esc_html__('Gallery', 'sunix'),
             'class'        => 'fully-expanded'
         ), array(
             'context'  => 'advanced',
@@ -269,60 +269,60 @@ function alacarte_page_options_register($metabox)
         ));
     }
     $metabox->add_section('ef5_pf_video', array(
-        'title'  => esc_html__('Video', 'alacarte'),
+        'title'  => esc_html__('Video', 'sunix'),
         'fields' => array(
             array(
                 'id'    => 'post-video-url',
                 'type'  => 'text',
-                'title' => esc_html__( 'Video URL', 'alacarte' ),
-                'desc'  => esc_html__( 'YouTube or Vimeo video URL', 'alacarte' )
+                'title' => esc_html__( 'Video URL', 'sunix' ),
+                'desc'  => esc_html__( 'YouTube or Vimeo video URL', 'sunix' )
             ),
 
             array(
                 'id'             => 'post-video-file',
                 'type'           => 'media',
                 'library_filter' => array('mp4','m4v','wmv','avi','mpg','ogv','3gp','3g2','ogg','mine'),
-                'title'          => esc_html__( 'Video Upload', 'alacarte' ),
-                'desc'           => esc_html__( 'Upload or Choose video file', 'alacarte' ),
+                'title'          => esc_html__( 'Video Upload', 'sunix' ),
+                'desc'           => esc_html__( 'Upload or Choose video file', 'sunix' ),
                 'url'            => true                       
             ),
 
             array(
                 'id'        => 'post-video-html',
                 'type'      => 'textarea',
-                'title'     => esc_html__( 'Embadded video', 'alacarte' ),
-                'desc'  => esc_html__( 'Use this option when the video does not come from YouTube or Vimeo', 'alacarte' )
+                'title'     => esc_html__( 'Embadded video', 'sunix' ),
+                'desc'  => esc_html__( 'Use this option when the video does not come from YouTube or Vimeo', 'sunix' )
             )
         )
     ));
 
     $metabox->add_section('ef5_pf_gallery', array(
-        'title'  => esc_html__('Gallery', 'alacarte'),
+        'title'  => esc_html__('Gallery', 'sunix'),
         'fields' => array(
             array(
                 'id'       => 'post-gallery-lightbox',
                 'type'     => 'switch',
-                'title'    => esc_html__('Lightbox?', 'alacarte'),
-                'subtitle' => esc_html__('Enable lightbox for gallery images.', 'alacarte'),
+                'title'    => esc_html__('Lightbox?', 'sunix'),
+                'subtitle' => esc_html__('Enable lightbox for gallery images.', 'sunix'),
                 'default'  => true
             ),
             array(
                 'id'          => 'post-gallery-images',
                 'type'        => 'gallery',
-                'title'       => esc_html__('Gallery Images ', 'alacarte'),
-                'subtitle'    => esc_html__('Upload images or add from media library.', 'alacarte')
+                'title'       => esc_html__('Gallery Images ', 'sunix'),
+                'subtitle'    => esc_html__('Upload images or add from media library.', 'sunix')
             )
         )
     ));
 
     $metabox->add_section('ef5_pf_audio', array(
-        'title'  => esc_html__('Audio', 'alacarte'),
+        'title'  => esc_html__('Audio', 'sunix'),
         'fields' => array(
             array(
                 'id'       => 'post-audio-url',
                 'type'     => 'text',
-                'title'    => esc_html__('Audio URL', 'alacarte'),
-                'description' => esc_html__('Audio file URL in format: mp3, ogg, wav.','alacarte'),
+                'title'    => esc_html__('Audio URL', 'sunix'),
+                'description' => esc_html__('Audio file URL in format: mp3, ogg, wav.','sunix'),
                 'validate' => 'url',
                 'msg'      => 'Url error!'
             ),
@@ -330,24 +330,24 @@ function alacarte_page_options_register($metabox)
                 'id'             => 'post-audio-file',
                 'type'           => 'media',
                 'library_filter' => array('mp3','m4a','ogg','wav'),
-                'title'          => esc_html__( 'Add a audio', 'alacarte' ),
-                'desc'           => esc_html__( 'Upload or Choose audio file', 'alacarte' ),
+                'title'          => esc_html__( 'Add a audio', 'sunix' ),
+                'desc'           => esc_html__( 'Upload or Choose audio file', 'sunix' ),
             ),
         )
     ));
 
     $metabox->add_section('ef5_pf_link', array(
-        'title'  => esc_html__('Link', 'alacarte'),
+        'title'  => esc_html__('Link', 'sunix'),
         'fields' => array(
             array(
                 'id'       => 'post-link-title',
                 'type'     => 'text',
-                'title'    => esc_html__('Title', 'alacarte'),
+                'title'    => esc_html__('Title', 'sunix'),
             ),
             array(
                 'id'       => 'post-link-url',
                 'type'     => 'text',
-                'title'    => esc_html__('URL', 'alacarte'),
+                'title'    => esc_html__('URL', 'sunix'),
                 'validate' => 'url',
                 'msg'      => 'Url error!'
             )
@@ -355,19 +355,19 @@ function alacarte_page_options_register($metabox)
     ));
 
     $metabox->add_section('ef5_pf_quote', array(
-        'title'  => esc_html__('Quote', 'alacarte'),
+        'title'  => esc_html__('Quote', 'sunix'),
         'fields' => array(
             array(
                 'id'       => 'post-quote-text',
                 'type'     => 'textarea',
-                'title'    => esc_html__('Quote Text', 'alacarte')
+                'title'    => esc_html__('Quote Text', 'sunix')
             ),
             array(
                 'id'       => 'post-quote-cite',
                 'type'     => 'text',
-                'title'    => esc_html__('Cite', 'alacarte')
+                'title'    => esc_html__('Cite', 'sunix')
             )
         )
     ));
 }
-add_action('ef5_post_metabox_register', 'alacarte_page_options_register');
+add_action('ef5_post_metabox_register', 'sunix_page_options_register');

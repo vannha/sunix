@@ -1,15 +1,15 @@
 <?php
 vc_map(array(
-    'name'        => 'AlaCarte Portfolio',
+    'name'        => 'sunix Portfolio',
     'base'        => 'red_portfolio',
-    'category'    => esc_html__('RedExp', 'alacarte'),
+    'category'    => esc_html__('RedExp', 'sunix'),
     'icon'        => 'icon-wpb-single-image',
     'class'       => 'wpb_vc_single_image',
     'params'      => array_merge(
         array(
             array(
                 'type'       => 'textfield',
-                'heading'    => esc_html__('Post Per Page','alacarte'),
+                'heading'    => esc_html__('Post Per Page','sunix'),
                 'param_name' => 'posts_per_page',
                 'value'      =>  get_option('posts_per_page'),
             ),
@@ -18,16 +18,16 @@ vc_map(array(
                 'settings' => array(
                     'auto_generate' => true,
                 ),
-                'heading'     => esc_html__( 'Element ID', 'alacarte' ),
+                'heading'     => esc_html__( 'Element ID', 'sunix' ),
                 'param_name'  => 'el_id',
-                'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'alacarte' ), 'http://www.w3schools.com/tags/att_global_id.asp' ),
+                'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'sunix' ), 'http://www.w3schools.com/tags/att_global_id.asp' ),
             ),
             array(
                 'type'       => 'textfield',
-                'heading'    => esc_html__('Extra Class','alacarte'),
+                'heading'    => esc_html__('Extra Class','sunix'),
                 'param_name' => 'el_class',
                 'value'      => '',
-                'description' => esc_html__('Style particular content element differently - add a class name and refer to it in custom CSS.', 'alacarte'),
+                'description' => esc_html__('Style particular content element differently - add a class name and refer to it in custom CSS.', 'sunix'),
             )
         )
     )

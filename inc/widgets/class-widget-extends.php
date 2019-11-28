@@ -3,7 +3,7 @@
  * This class simply add a field to widgets that allows you to add additional css class to it for further styling
  *
  * @version 1.0
- * @package AlaCarte
+ * @package sunix
  * @since   1.0
  */
 
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) )
     die();
 }
 
-class alacarte_Widget_Extends
+class sunix_Widget_Extends
 {
     /**
      * Construction
@@ -61,7 +61,7 @@ class alacarte_Widget_Extends
                 name="widget-<?php echo esc_attr( $widget->id_base . '[' . $widget->number . '][use_theme_style]' ); ?>" 
                 id="widget-<?php echo esc_attr( $widget->id_base . '-' . $widget->number ); ?>-use_theme_style" 
                 <?php checked( $instance['use_theme_style'] ); ?> />
-            <label for="widget-<?php echo esc_attr( $widget->id_base . '-' . $widget->number ); ?>-use_theme_style"><?php esc_html_e( 'Use Theme Style', 'alacarte' ); ?></label>
+            <label for="widget-<?php echo esc_attr( $widget->id_base . '-' . $widget->number ); ?>-use_theme_style"><?php esc_html_e( 'Use Theme Style', 'sunix' ); ?></label>
         </p>
         <?php
         }
@@ -69,7 +69,7 @@ class alacarte_Widget_Extends
         $hide_title = isset( $instance['hide_title'] ) ? (bool) $instance['hide_title'] : false;
         ?>
         <p>
-            <label for="widget-<?php echo esc_attr( $widget->id_base . '-' . $widget->number ); ?>-el_class"><?php esc_html_e( 'CSS Class', 'alacarte' ); ?></label>
+            <label for="widget-<?php echo esc_attr( $widget->id_base . '-' . $widget->number ); ?>-el_class"><?php esc_html_e( 'CSS Class', 'sunix' ); ?></label>
             <input type="text" class="widefat code" 
                 name="widget-<?php echo esc_attr( $widget->id_base . '[' . $widget->number . '][el_class]' ); ?>" 
                 id="widget-<?php echo esc_attr( $widget->id_base . '-' . $widget->number ); ?>-el_class" 
@@ -80,7 +80,7 @@ class alacarte_Widget_Extends
                 name="widget-<?php echo esc_attr( $widget->id_base . '[' . $widget->number . '][hide_title]' ); ?>" 
                 id="widget-<?php echo esc_attr( $widget->id_base . '-' . $widget->number ); ?>-hide_title" 
                 <?php checked( $hide_title ); ?> />
-            <label for="widget-<?php echo esc_attr( $widget->id_base . '-' . $widget->number ); ?>-hide_title"><?php esc_html_e( 'Hide widget title', 'alacarte' ); ?></label>
+            <label for="widget-<?php echo esc_attr( $widget->id_base . '-' . $widget->number ); ?>-hide_title"><?php esc_html_e( 'Hide widget title', 'sunix' ); ?></label>
         </p>
         <?php
 
@@ -170,4 +170,4 @@ class alacarte_Widget_Extends
     }
 }
 
-new alacarte_Widget_Extends();
+new sunix_Widget_Extends();

@@ -2,82 +2,82 @@
 /**
  * Page loading style 
 */
-function alacarte_page_loading_styles($default){
+function sunix_page_loading_styles($default){
   $loading = array(
-      'flip-box'         => esc_html__('Flip Box','alacarte'),
-      'double-bounce'    => esc_html__('Double Bounce','alacarte'),
-      'wave'             => esc_html__('Wave','alacarte'),
-      'double-cube'      => esc_html__('Double Cube','alacarte'),
-      'scaleout'         => esc_html__('Scale Out','alacarte'),
-      'double-dots'      => esc_html__('Double Dots','alacarte'),
-      'three-dot-bounce' => esc_html__('Three Circle Bounce','alacarte'),
-      'circle-loading'   => esc_html__('Circle Loading','alacarte'),
-      'cube-grid'        => esc_html__('Cube Grid','alacarte'),
-      'fading-circle'    => esc_html__('Fading Circle','alacarte'),
-      'folding-cube'     => esc_html__('Folding Cube','alacarte')
+      'flip-box'         => esc_html__('Flip Box','sunix'),
+      'double-bounce'    => esc_html__('Double Bounce','sunix'),
+      'wave'             => esc_html__('Wave','sunix'),
+      'double-cube'      => esc_html__('Double Cube','sunix'),
+      'scaleout'         => esc_html__('Scale Out','sunix'),
+      'double-dots'      => esc_html__('Double Dots','sunix'),
+      'three-dot-bounce' => esc_html__('Three Circle Bounce','sunix'),
+      'circle-loading'   => esc_html__('Circle Loading','sunix'),
+      'cube-grid'        => esc_html__('Cube Grid','sunix'),
+      'fading-circle'    => esc_html__('Fading Circle','sunix'),
+      'folding-cube'     => esc_html__('Folding Cube','sunix')
   );
   if($default) 
-    $loading['-1'] = esc_html__('Default','alacarte');
+    $loading['-1'] = esc_html__('Default','sunix');
 
   return $loading; 
 }
 /**
  * Get Page Loading
 */
-if(!function_exists('alacarte_page_loading')){
-    function alacarte_page_loading(){
-        $show_page_loading = alacarte_get_opts('show_page_loading', '0');
-        $page_loading_style = alacarte_get_opts('page_loading_style','fading-circle');
+if(!function_exists('sunix_page_loading')){
+    function sunix_page_loading(){
+        $show_page_loading = sunix_get_opts('show_page_loading', '0');
+        $page_loading_style = sunix_get_opts('page_loading_style','fading-circle');
         if($show_page_loading === '1'){
             echo '<div id="red-loading">';
                 switch ($page_loading_style) {
                     case 'flip-box':
-                        alacarte_spin_flip_box();
+                        sunix_spin_flip_box();
                         break;
                     case 'double-bounce':
-                        alacarte_spin_double_bounce();
+                        sunix_spin_double_bounce();
                         break;
                     case 'wave':
-                        alacarte_spin_wave();
+                        sunix_spin_wave();
                         break;
                     case 'double-cube':
-                        alacarte_spin_double_cube();
+                        sunix_spin_double_cube();
                         break;
                     case 'scaleout':
-                        alacarte_spin_scaleout();
+                        sunix_spin_scaleout();
                         break;
                     case 'double-dots':
-                        alacarte_spin_double_dots();
+                        sunix_spin_double_dots();
                         break;
                     case 'three-dot-bounce':
-                        alacarte_spin_three_dot_bounce();
+                        sunix_spin_three_dot_bounce();
                         break;
                     case 'circle-loading':
-                        alacarte_spin_circle_loading();
+                        sunix_spin_circle_loading();
                         break;
                     case 'cube-grid':
-                        alacarte_spin_cube_grid();
+                        sunix_spin_cube_grid();
                         break;
                     case 'fading-circle':
-                        alacarte_spin_fading_circle();
+                        sunix_spin_fading_circle();
                         break;
                     case 'folding-cube':
-                        alacarte_spin_folding_cube();
+                        sunix_spin_folding_cube();
                         break;
                     default:
-                        alacarte_spin_fading_circle();
+                        sunix_spin_fading_circle();
                         break;
                 }
             echo '</div>';
         }  
     }
 }
-function alacarte_spin_flip_box(){
+function sunix_spin_flip_box(){
     ?>
         <div class="spinner rotateplane"></div>
     <?php
 }
-function alacarte_spin_double_bounce(){
+function sunix_spin_double_bounce(){
     ?>
         <div class="spinner double-bounce">
           <div class="double-bounce1"></div>
@@ -85,7 +85,7 @@ function alacarte_spin_double_bounce(){
         </div>
     <?php
 }
-function alacarte_spin_wave(){
+function sunix_spin_wave(){
     ?>
         <div class="spinner wave">
           <div class="rect1"></div>
@@ -96,7 +96,7 @@ function alacarte_spin_wave(){
         </div>
     <?php
 }
-function alacarte_spin_double_cube(){
+function sunix_spin_double_cube(){
     ?>
         <div class="spinner">
           <div class="cube1"></div>
@@ -104,12 +104,12 @@ function alacarte_spin_double_cube(){
         </div>
     <?php
 }
-function alacarte_spin_scaleout(){
+function sunix_spin_scaleout(){
     ?>
         <div class="spinner scaleout"></div>
     <?php
 }
-function alacarte_spin_double_dots(){
+function sunix_spin_double_dots(){
     ?>
         <div class="spinner double-dots">
           <div class="dot1"></div>
@@ -117,7 +117,7 @@ function alacarte_spin_double_dots(){
         </div>
     <?php
 }
-function alacarte_spin_three_dot_bounce(){
+function sunix_spin_three_dot_bounce(){
     ?>
         <div class="spinner three-circle-bounce">
           <div class="bounce1"></div>
@@ -126,7 +126,7 @@ function alacarte_spin_three_dot_bounce(){
         </div>
     <?php
 }
-function alacarte_spin_circle_loading(){
+function sunix_spin_circle_loading(){
     ?>
         <div class="spinner sk-circle">
           <div class="sk-circle1 sk-child"></div>
@@ -144,7 +144,7 @@ function alacarte_spin_circle_loading(){
         </div>
     <?php
 }
-function alacarte_spin_cube_grid(){
+function sunix_spin_cube_grid(){
     ?>
         <div class="spinner sk-cube-grid">
           <div class="sk-cube sk-cube1"></div>
@@ -159,7 +159,7 @@ function alacarte_spin_cube_grid(){
         </div>
     <?php
 }
-function alacarte_spin_fading_circle(){
+function sunix_spin_fading_circle(){
     ?>
         <div class="spinner sk-fading-circle">
           <div class="sk-circle1 sk-circle"></div>
@@ -177,7 +177,7 @@ function alacarte_spin_fading_circle(){
         </div>
     <?php
 }
-function alacarte_spin_folding_cube(){
+function sunix_spin_folding_cube(){
     ?>
         <div class="spinner sk-folding-cube">
           <div class="sk-cube1 sk-cube"></div>
@@ -192,45 +192,45 @@ function alacarte_spin_folding_cube(){
  * loading animation
  *
 */
-if(!function_exists('alacarte_loading_animation')){
-  function alacarte_loading_animation($style = 'circle-loading'){
+if(!function_exists('sunix_loading_animation')){
+  function sunix_loading_animation($style = 'circle-loading'){
     echo '<div class="loader d-flex align-items-center justify-content-center">';
       switch ($style) {
                 case 'flip-box':
-                    alacarte_spin_flip_box();
+                    sunix_spin_flip_box();
                     break;
                 case 'double-bounce':
-                    alacarte_spin_double_bounce();
+                    sunix_spin_double_bounce();
                     break;
                 case 'wave':
-                    alacarte_spin_wave();
+                    sunix_spin_wave();
                     break;
                 case 'double-cube':
-                    alacarte_spin_double_cube();
+                    sunix_spin_double_cube();
                     break;
                 case 'scaleout':
-                    alacarte_spin_scaleout();
+                    sunix_spin_scaleout();
                     break;
                 case 'double-dots':
-                    alacarte_spin_double_dots();
+                    sunix_spin_double_dots();
                     break;
                 case 'three-dot-bounce':
-                    alacarte_spin_three_dot_bounce();
+                    sunix_spin_three_dot_bounce();
                     break;
                 case 'circle-loading':
-                    alacarte_spin_circle_loading();
+                    sunix_spin_circle_loading();
                     break;
                 case 'cube-grid':
-                    alacarte_spin_cube_grid();
+                    sunix_spin_cube_grid();
                     break;
                 case 'fading-circle':
-                    alacarte_spin_fading_circle();
+                    sunix_spin_fading_circle();
                     break;
                 case 'folding-cube':
-                    alacarte_spin_folding_cube();
+                    sunix_spin_folding_cube();
                     break;
                 default:
-                    alacarte_spin_fading_circle();
+                    sunix_spin_fading_circle();
                     break;
             }
     echo '</div>';

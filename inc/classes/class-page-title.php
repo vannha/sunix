@@ -2,8 +2,8 @@
 /**
  * Page title class for the theme.
  * 
- * @package AlaCarte
- * @subpackage AlaCarte
+ * @package sunix
+ * @subpackage sunix
  * @since 1.0.0
  * @author EF5 Team
  */
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) )
  *
  * @return array Contains 'title' and 'desc'
  */
-function alacarte_get_page_titles()
+function sunix_get_page_titles()
 {
     $title = $desc = '';
     // Default titles
@@ -41,7 +41,7 @@ function alacarte_get_page_titles()
             $title = get_post_meta(get_the_ID(), 'custom_title', true);
             if (!$title) {
                 if (is_singular('post')){
-                    $title = esc_html__('Single Post','alacarte');
+                    $title = esc_html__('Single Post','sunix');
                 }
                 else{
                     $title= get_the_title();
@@ -51,23 +51,23 @@ function alacarte_get_page_titles()
             $desc = get_post_meta(get_the_ID(), 'custom_desc', true);
             /* Single Events */
             if ( is_singular( 'event' ) ) {
-                $title = esc_html__('Event Details', 'alacarte');
+                $title = esc_html__('Event Details', 'sunix');
 
             }
            if(is_singular('product') ){
-               $title = esc_html__( 'Shop Single', 'alacarte' );
+               $title = esc_html__( 'Shop Single', 'sunix' );
            }
 
         }
 
         // 404
         elseif (is_404()) {
-            $title = alacarte_get_opts('ptitle_404_title', esc_html__('Error 404', 'alacarte'));
+            $title = sunix_get_opts('ptitle_404_title', esc_html__('Error 404', 'sunix'));
         } 
         // Search result
         elseif (is_search()) {
-            $title = esc_html__('Search results', 'alacarte');
-            $desc = esc_html__('You searched for:','alacarte').' "'. get_search_query(). '" ';
+            $title = esc_html__('Search results', 'sunix');
+            $desc = esc_html__('You searched for:','sunix').' "'. get_search_query(). '" ';
         } 
         // Anything else
         else {

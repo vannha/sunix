@@ -6,8 +6,8 @@
 /**
  * Page title Layout
 */
-function alacarte_page_title(){
-    $ptitle_layout = alacarte_get_opts('ptitle_layout', '1');
+function sunix_page_title(){
+    $ptitle_layout = sunix_get_opts('ptitle_layout', '1');
     if($ptitle_layout === 'none' || is_404() ) return;
     get_template_part('template-parts/page-title/layout', $ptitle_layout);
 }
@@ -15,9 +15,9 @@ function alacarte_page_title(){
 /**
  * Page title inner class
 */
-function alacarte_ptitle_inner_class($class=''){
+function sunix_ptitle_inner_class($class=''){
 	$classes = ['red-pagetitle-inner'];
-	$full = alacarte_get_opts('ptitle_full_width', '0');
+	$full = sunix_get_opts('ptitle_full_width', '0');
 	if($full === '1')
 		$classes[] = 'container-fluid';
 	else 
@@ -30,9 +30,9 @@ function alacarte_ptitle_inner_class($class=''){
 /**
  * Prints HTML for breadcrumbs.
  */
-function alacarte_breadcrumb($args = [])
+function sunix_breadcrumb($args = [])
 {
-    if ( ! class_exists( 'alacarte_Breadcrumb' ) )
+    if ( ! class_exists( 'sunix_Breadcrumb' ) )
     {
         return;
     }
@@ -40,14 +40,14 @@ function alacarte_breadcrumb($args = [])
         'class'     => '',
         'separator' => ''
     ]);
-    $breadcrumb = new alacarte_Breadcrumb();
+    $breadcrumb = new sunix_Breadcrumb();
     $entries = $breadcrumb->get_entries();
 
     if ( empty( $entries ) )
     {
         return;
     }
-    $separator = apply_filters('alacarte_breadcrumb_separator', $args['separator']);
+    $separator = apply_filters('sunix_breadcrumb_separator', $args['separator']);
     ob_start();
     $count = count($entries);
     $d = 0;
@@ -90,9 +90,9 @@ function alacarte_breadcrumb($args = [])
 /**
  * Parallax Image
 */
-function alacarte_ptitle_parallax_image(){
-    $parallax_url = alacarte_get_opts('ptitle_parallax',['url'=> get_template_directory_uri().'/assets/images/page-title/bg-pagetitle.png']);
-    $titles = alacarte_get_page_titles();
+function sunix_ptitle_parallax_image(){
+    $parallax_url = sunix_get_opts('ptitle_parallax',['url'=> get_template_directory_uri().'/assets/images/page-title/bg-pagetitle.png']);
+    $titles = sunix_get_page_titles();
     if(!empty($parallax_url)){
         echo '<img src="'.esc_url($parallax_url['url']).'"  alt="" />';
     }

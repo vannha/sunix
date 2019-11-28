@@ -1,9 +1,9 @@
 <?php
 /**
- * alacarte_Categories_Walker
+ * sunix_Categories_Walker
  *
  * @version 1.0
- * @package AlaCarte
+ * @package sunix
  * @since   1.0.2
  *
  */
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) )
 {
     die();
 }
-class alacarte_Categories_Walker extends Walker_Category {
+class sunix_Categories_Walker extends Walker_Category {
     /**
      * Starts the element output.
      *
@@ -60,7 +60,7 @@ class alacarte_Categories_Walker extends Walker_Category {
         }
         
         if ( $args['has_children'] && $args['hierarchical'] && ( empty( $args['max_depth'] ) || $args['max_depth'] > $depth + 1 ) ) {
-            $link .= alacarte_widget_expander();
+            $link .= sunix_widget_expander();
         }
 
         $link .= '</a>';
@@ -75,7 +75,7 @@ class alacarte_Categories_Walker extends Walker_Category {
             $link .= '<a href="' . esc_url( get_term_feed_link( $category->term_id, $category->taxonomy, $args['feed_type'] ) ) . '"';
  
             if ( empty( $args['feed'] ) ) {
-                $alt = ' alt="' . sprintf(__( 'Feed for all posts filed under %s','alacarte' ), $cat_name ) . '"';
+                $alt = ' alt="' . sprintf(__( 'Feed for all posts filed under %s','sunix' ), $cat_name ) . '"';
             } else {
                 $alt = ' alt="' . $args['feed'] . '"';
                 $name = $args['feed'];

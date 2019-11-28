@@ -18,7 +18,7 @@ $small_heading_attrs = $small_heading_css = [];
 $small_heading_css_class = [
 	'small-heading',
 ];
-$small_heading_attrs[] = 'class="'.alacarte_optimize_css_class(implode(' ', $small_heading_css_class)).'"';
+$small_heading_attrs[] = 'class="'.sunix_optimize_css_class(implode(' ', $small_heading_css_class)).'"';
 
 if(!empty($small_heading_color)) $small_heading_css[] = 'color:'.$small_heading_color;
 $small_heading_attrs[] = 'style="'.trim(implode(';',$small_heading_css)).'"';
@@ -32,7 +32,7 @@ $heading_css_class = [
 	!empty($heading_text_transform) ? 'text-'.$heading_text_transform : '',
 	!empty($heading_font_color) ? 'text-'.$heading_font_color : '',
 ];
-$heading_attrs[] = 'class="'.alacarte_optimize_css_class(implode(' ', $heading_css_class)).'"';
+$heading_attrs[] = 'class="'.sunix_optimize_css_class(implode(' ', $heading_css_class)).'"';
 if(!empty($heading_size)) $heading_css[]           = 'font-size:'.(int)$heading_size.'px'; 
 if(!empty($heading_color)) $heading_css[]          = 'color:'.$heading_color;
 if(!empty($heading_letter_spacing)) $heading_css[] = 'letter-spacing:'.(int)$heading_letter_spacing.'px';
@@ -48,7 +48,7 @@ $heading2_css_class = [
     !empty($heading2_text_transform) ? 'text-'.$heading2_text_transform : '',
     !empty($heading2_font_color) ? 'text-'.$heading2_font_color : ''
 ];
-$heading2_attrs[] = 'class="'.alacarte_optimize_css_class(implode(' ', $heading2_css_class)).'"';
+$heading2_attrs[] = 'class="'.sunix_optimize_css_class(implode(' ', $heading2_css_class)).'"';
 if(!empty($heading2_size)) $heading2_css[]           = 'font-size:'.(int)$heading2_size.'px'; 
 if(!empty($heading2_color)) $heading2_css[]          = 'color:'.$heading2_color;
 if(!empty($heading2_letter_spacing)) $heading2_css[] = 'letter-spacing:'.(int)$heading2_letter_spacing.'px';
@@ -63,7 +63,7 @@ $desc_css_class = [
 	!empty($desc_style) ? 'font-style-'.$desc_style : '', 
 	!empty($desc_text_transform) ? 'text-'.$desc_text_transform : ''
 ];
-$desc_attrs[] = 'class="'.alacarte_optimize_css_class(implode(' ', $desc_css_class)).'"';
+$desc_attrs[] = 'class="'.sunix_optimize_css_class(implode(' ', $desc_css_class)).'"';
 
 if(!empty($desc_size)) $desc_css[]           = 'font-size:'.(int)$desc_size.'px'; 
 if(!empty($desc_color)) $desc_css[]          = 'color:'.$desc_color;
@@ -73,7 +73,7 @@ if(!empty($desc_css))
 	$desc_attrs[] = 'style="'.trim(implode(';',$desc_css)).'"';
 
 ?>
-<div class="<?php echo alacarte_optimize_css_class(implode(' ', $wrap_css_class)); ?>">
+<div class="<?php echo sunix_optimize_css_class(implode(' ', $wrap_css_class)); ?>">
 	<?php 
 
 	switch ($layout_template) {
@@ -81,18 +81,18 @@ if(!empty($desc_css))
             if(!empty($small_heading_text)){
                 ?>
                 <h5 <?php echo implode(' ', $small_heading_attrs);?>><?php
-                    echo alacarte_html($small_heading_text);
+                    echo sunix_html($small_heading_text);
                     ?></h5>
                 <?php
             }
             if(!empty($heading_text) || !empty($heading2_text)) {
                 ?>
                 <h3 <?php echo implode(' ', $heading_attrs);?>><?php
-                    echo alacarte_html($heading_text);
+                    echo sunix_html($heading_text);
                     if(!empty($heading2_text)) {
                         ?>
                         <span <?php echo implode(' ', $heading2_attrs);?>><?php
-                            echo alacarte_html($heading2_text);
+                            echo sunix_html($heading2_text);
                             ?></span>
                     <?php }
                     ?></h3>
@@ -100,7 +100,7 @@ if(!empty($desc_css))
 
             if(!empty($desc_text)) { ?>
                 <div <?php echo implode(' ', $desc_attrs);?>><?php
-                    echo alacarte_html($desc_text);
+                    echo sunix_html($desc_text);
                     ?></div>
             <?php }
             break;
@@ -109,23 +109,23 @@ if(!empty($desc_css))
 				?>
 				<div class="heading-top">
 					<h3 <?php echo implode(' ', $heading_attrs);?>><?php
-						echo alacarte_html($heading_text);
+						echo sunix_html($heading_text);
 						if(!empty($heading2_text)) {
 							?>
 							<span <?php echo implode(' ', $heading2_attrs);?>><?php
-								echo alacarte_html($heading2_text);
+								echo sunix_html($heading2_text);
 								?></span>
 						<?php }
 				  ?></h3>
 					<h5 <?php echo implode(' ', $small_heading_attrs);?>><?php
-						echo alacarte_html($small_heading_text);
+						echo sunix_html($small_heading_text);
 						?>
 					</h5>
 				</div>
 			<?php }
 			if(!empty($desc_text)) { ?>
 				<div <?php echo implode(' ', $desc_attrs);?>><?php
-					echo alacarte_html($desc_text);
+					echo sunix_html($desc_text);
 					?></div>
 			<?php }
 			break;
@@ -133,25 +133,25 @@ if(!empty($desc_css))
 			 if(!empty($small_heading_text)){
 				 ?>
 				 <h5 <?php echo implode(' ', $small_heading_attrs);?>><?php
-					 echo alacarte_html($small_heading_text);
+					 echo sunix_html($small_heading_text);
 					 ?></h5>
 				 <?php
 			 }
 			 if(!empty($heading_text) || !empty($heading2_text)) {
 				 ?>
 				 <h3 <?php echo implode(' ', $heading_attrs);?>><?php
-					 echo alacarte_html($heading_text);
+					 echo sunix_html($heading_text);
 					 if(!empty($heading2_text)) {
 						 ?>
 						 <span <?php echo implode(' ', $heading2_attrs);?>><?php
-							 echo alacarte_html($heading2_text);
+							 echo sunix_html($heading2_text);
 							 ?></span>
 					 <?php }
 					 ?></h3>
 			 <?php }
 			 if(!empty($desc_text)) { ?>
 				 <div <?php echo implode(' ', $desc_attrs);?>><?php
-					 echo alacarte_html($desc_text);
+					 echo sunix_html($desc_text);
 					 ?></div>
 			 <?php }
 			break;

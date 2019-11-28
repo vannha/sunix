@@ -1,24 +1,24 @@
 <?php
 vc_map(array(
-    'name'          => 'AlaCarte Posts Grid',
+    'name'          => 'sunix Posts Grid',
     'base'          => 'red_posts_grid',
-    'category'      => esc_html__('RedExp', 'alacarte'),
-    'description'   => esc_html__('Display your posts with grid layout', 'alacarte'),
+    'category'      => esc_html__('RedExp', 'sunix'),
+    'description'   => esc_html__('Display your posts with grid layout', 'sunix'),
     'icon'         => 'icon-wpb-application-icon-large',
     'params'        => array_merge(
         array(
             array(
                 'type'        => 'dropdown',
-                'heading'     => esc_html__( 'Data source', 'alacarte' ),
+                'heading'     => esc_html__( 'Data source', 'sunix' ),
                 'param_name'  => 'post_type',
-                'value'       => alacarte_vc_post_type_list(),
+                'value'       => sunix_vc_post_type_list(),
                 'std'         => 'post',
-                'description' => esc_html__( 'Select content type for your grid.', 'alacarte' ),
+                'description' => esc_html__( 'Select content type for your grid.', 'sunix' ),
                 'admin_label' => true,
             ),
             array(
                 'type'       => 'autocomplete',
-                'heading'    => esc_html__( 'Narrow data source', 'alacarte' ),
+                'heading'    => esc_html__( 'Narrow data source', 'sunix' ),
                 'param_name' => 'taxonomies',
                 'settings'   => array(
                     'multiple'       => true,
@@ -28,14 +28,14 @@ vc_map(array(
                     'display_inline' => true,
                     'delay'          => 500,
                     'auto_focus'     => true,
-                    'values'         => alacarte_taxonomies_for_autocomplete(),
+                    'values'         => sunix_taxonomies_for_autocomplete(),
                 ),
-                'description' => esc_html__( 'Enter categories.', 'alacarte' ),
+                'description' => esc_html__( 'Enter categories.', 'sunix' ),
                 'admin_label' => true,
             ),
             array(
                 'type'       => 'autocomplete',
-                'heading'    => esc_html__( 'Exclude from Content and filter list', 'alacarte' ),
+                'heading'    => esc_html__( 'Exclude from Content and filter list', 'sunix' ),
                 'param_name' => 'taxonomies_exclude',
                 'settings'   => array(
                     'multiple'       => true,
@@ -45,16 +45,16 @@ vc_map(array(
                     'display_inline' => true,
                     'delay'          => 500,
                     'auto_focus'     => true,
-                    'values'         => alacarte_taxonomies_for_autocomplete(),
+                    'values'         => sunix_taxonomies_for_autocomplete(),
                 ),
-                'description' => esc_html__( 'Enter categories won\'t be shown in the content and filters list', 'alacarte' ),
+                'description' => esc_html__( 'Enter categories won\'t be shown in the content and filters list', 'sunix' ),
                 'admin_label' => true
             ),
             array(
                 'type'          => 'textfield',
                 'param_name'    => 'posts_per_page',
-                'heading'       => esc_html__( 'Number of posts', 'alacarte' ),
-                'description'   => esc_html__( 'number of post to show per page', 'alacarte' ),
+                'heading'       => esc_html__( 'Number of posts', 'sunix' ),
+                'description'   => esc_html__( 'number of post to show per page', 'sunix' ),
                 'std'           => '8',
             ),
             vc_map_add_css_animation(),
@@ -63,20 +63,20 @@ vc_map(array(
                 'settings' => array(
                     'auto_generate' => true,
                 ),
-                'heading'     => esc_html__( 'Element ID', 'alacarte' ),
+                'heading'     => esc_html__( 'Element ID', 'sunix' ),
                 'param_name'  => 'el_id',
-                'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'alacarte' ), 'http://www.w3schools.com/tags/att_global_id.asp' ),
+                'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'sunix' ), 'http://www.w3schools.com/tags/att_global_id.asp' ),
             ),
             array(
                 'type'       => 'textfield',
-                'heading'    => esc_html__('Extra Class','alacarte'),
+                'heading'    => esc_html__('Extra Class','sunix'),
                 'param_name' => 'el_class',
                 'value'      => '',
-                'description' => esc_html__('Style particular content element differently - add a class name and refer to it in custom CSS.', 'alacarte'),
+                'description' => esc_html__('Style particular content element differently - add a class name and refer to it in custom CSS.', 'sunix'),
             ),
             array(
                 'type'       => 'img',
-                'heading'    => esc_html__('Layout Template','alacarte'),
+                'heading'    => esc_html__('Layout Template','sunix'),
                 'param_name' => 'layout_template',
                 'value' =>  array(
                     '1' => get_template_directory_uri().'/vc_extends/layouts/post_grid/posts-grid-1.jpg',
@@ -85,21 +85,21 @@ vc_map(array(
                     '4' => get_template_directory_uri().'/vc_extends/layouts/post_grid/posts-grid-4.jpg',
                 ),
                 'std'   => '1',
-                'group' => esc_html__('Layouts','alacarte'),
+                'group' => esc_html__('Layouts','sunix'),
             ),
         ),
         array(
             array(
                 'param_name'  => 'grid_settings',
                 'type'        => 'custom_markup',
-                'value'       => '<strong>'.esc_html__('Grid Settings','alacarte').'</strong>',
-                'std'         => '<strong>'.esc_html__('Grid Settings','alacarte').'</strong>',
-                'group'       => esc_html__('Layouts','alacarte'),
+                'value'       => '<strong>'.esc_html__('Grid Settings','sunix').'</strong>',
+                'std'         => '<strong>'.esc_html__('Grid Settings','sunix').'</strong>',
+                'group'       => esc_html__('Layouts','sunix'),
             )
         ),
         /* Grid settings */
-        alacarte_grid_settings(array(
-            'group'      => esc_html__('Layouts','alacarte'),
+        sunix_grid_settings(array(
+            'group'      => esc_html__('Layouts','sunix'),
             'param_name' => 'layout_type', 
             'value'      => 'grid'
             )
@@ -107,33 +107,33 @@ vc_map(array(
         array(
             array(
                 'type'       => 'dropdown',
-                'heading'    => esc_html__('Heading Tag','alacarte'),
+                'heading'    => esc_html__('Heading Tag','sunix'),
                 'param_name' => 'heading_tag',
                 'value'      =>  array_merge(
                     array(
-                        esc_html__('Default','alacarte') => ''
+                        esc_html__('Default','sunix') => ''
                     ),
-                    alacarte_heading_tag(['H4-2' => 'h4-2'])
+                    sunix_heading_tag(['H4-2' => 'h4-2'])
                 ),
                 'std'        => '',
-                'group'      => esc_html__('Post Meta','alacarte'),
+                'group'      => esc_html__('Post Meta','sunix'),
             ),
             array(
                 'type'          => 'textfield',
                 'param_name'    => 'thumbnail_size',
-                'heading'       => esc_html__('Thumbnail Size (Leave blank to use default size)','alacarte'),
-                'description'   => esc_html__('Enter our defined size: "thumbnail", "medium", "large", "post-thumbnail", "full". Or alternatively enter size in pixels (Example: 200x100 (Width x Height)).','alacarte'),
+                'heading'       => esc_html__('Thumbnail Size (Leave blank to use default size)','sunix'),
+                'description'   => esc_html__('Enter our defined size: "thumbnail", "medium", "large", "post-thumbnail", "full". Or alternatively enter size in pixels (Example: 200x100 (Width x Height)).','sunix'),
                 'std'           => '',
-                'group'         => esc_html__('Post Meta','alacarte'),
+                'group'         => esc_html__('Post Meta','sunix'),
             ),
             array(
                 'type'          => 'checkbox',
                 'param_name'    => 'show_pagination',
                 'value'         => array(
-                    esc_html__( 'Show Pagination', 'alacarte' ) => '1'
+                    esc_html__( 'Show Pagination', 'sunix' ) => '1'
                 ),
                 'std'           => '1',
-                'group'         => esc_html__('Post Meta','alacarte')
+                'group'         => esc_html__('Post Meta','sunix')
             )
         ),
         array(
@@ -142,7 +142,7 @@ vc_map(array(
                 'heading'    => '',
                 'param_name' => 'css',
                 'value'      => '',
-                'group'      => esc_html__('Design Options','alacarte'),
+                'group'      => esc_html__('Design Options','sunix'),
             )
         )
     )

@@ -1,5 +1,5 @@
 // Get number from string
-@function alacarte_string_to_number($value) {
+@function sunix_string_to_number($value) {
   @if type-of($value) == 'number' {
     @return $value;
   } @else if type-of($value) != 'string' {
@@ -33,7 +33,7 @@
 }
 
 // Strip number from string
-@function alacarte_strip_unit($number) {
+@function sunix_strip_unit($number) {
   @if type-of($number) == 'number' and not unitless($number) {
     @return $number / ($number * 0 + 1);
   }

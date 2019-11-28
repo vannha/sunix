@@ -2,22 +2,22 @@
 /**
  * All Function for Portfolio 
 */
-if(!function_exists('alacarte_portfolio_info')){
-	function alacarte_portfolio_info($args = []){
+if(!function_exists('sunix_portfolio_info')){
+	function sunix_portfolio_info($args = []){
 		if(!is_singular('ef5_portfolio')) return;
 		$args = wp_parse_args($args, [
-			'title' => esc_html__('Project Description','alacarte')
+			'title' => esc_html__('Project Description','sunix')
 		]);
 		// Client name
-		$client = alacarte_get_post_format_value('portfolio_client_name','Magdalen School');
+		$client = sunix_get_post_format_value('portfolio_client_name','Magdalen School');
 		// Location
-		$location = alacarte_get_post_format_value('portfolio_location','Oslay, Canada');
+		$location = sunix_get_post_format_value('portfolio_location','Oslay, Canada');
 		// Surface Area
-		$surface_area = alacarte_get_post_format_value('portfolio_surface_area','3,000,000 m2');
+		$surface_area = sunix_get_post_format_value('portfolio_surface_area','3,000,000 m2');
 		// Budget
-		$budgets = alacarte_get_post_format_value('portfolio_budgets','$5,000,000.00');
+		$budgets = sunix_get_post_format_value('portfolio_budgets','$5,000,000.00');
 		// Date
-		$date = alacarte_get_post_format_value('portfolio_complete','');
+		$date = sunix_get_post_format_value('portfolio_complete','');
 		$date = strtotime($date);
 		$date_sever = date_i18n('Y-m-d G:i:s');   
 		$gmt_offset = get_option( 'gmt_offset' );
@@ -25,31 +25,31 @@ if(!function_exists('alacarte_portfolio_info')){
 		$date = date(get_option('date_format'), $date);
 	?>
 		<div class="pf-sidebar-box detail-box">
-			<div class="red-heading h3"><?php echo alacarte_html($args['title']); ?></div>
+			<div class="red-heading h3"><?php echo sunix_html($args['title']); ?></div>
 			<div class="inner detail-inner red-box-shadow red-bg-white transition">
 				<ul class="pf-details-list red-unstyled">
 					<li>
-						<strong class="red-heading"><?php esc_html_e('Client','alacarte'); ?>:</strong>
+						<strong class="red-heading"><?php esc_html_e('Client','sunix'); ?>:</strong>
 						<?php echo esc_html($client); ?>
 					</li>
 					<li>
-						<strong class="red-heading"><?php esc_html_e('Location','alacarte'); ?>:</strong>
+						<strong class="red-heading"><?php esc_html_e('Location','sunix'); ?>:</strong>
 						<?php echo esc_html($location); ?>
 					</li>
 					<li>
-						<strong class="red-heading"><?php esc_html_e('Surface Area','alacarte'); ?>:</strong>
+						<strong class="red-heading"><?php esc_html_e('Surface Area','sunix'); ?>:</strong>
 						<?php echo esc_html($surface_area); ?>
 					</li>
 					<li>
-						<strong class="red-heading"><?php esc_html_e('Budgets','alacarte'); ?>:</strong>
+						<strong class="red-heading"><?php esc_html_e('Budgets','sunix'); ?>:</strong>
 						<?php echo esc_html($budgets); ?>
 					</li>
 					<li>
-						<strong class="red-heading"><?php esc_html_e('Complete','alacarte'); ?>:</strong>
+						<strong class="red-heading"><?php esc_html_e('Complete','sunix'); ?>:</strong>
 						<?php echo esc_html($date); ?>
 					</li>
 					<li>
-						<strong class="red-heading"><?php esc_html_e('Categories','alacarte'); ?>:</strong>
+						<strong class="red-heading"><?php esc_html_e('Categories','sunix'); ?>:</strong>
 						<?php echo get_the_term_list( get_the_ID(), 'portfolio_cat', '', ', ', '' );; ?>
 					</li>
 				</ul>
@@ -63,10 +63,10 @@ if(!function_exists('alacarte_portfolio_info')){
  * Get Featured Portfolio
  * @param: $posts_per_page  // Number of post to show
 */
-if(!function_exists('alacarte_portfolio_featured')){
-	function alacarte_portfolio_featured($args = []){
+if(!function_exists('sunix_portfolio_featured')){
+	function sunix_portfolio_featured($args = []){
 		$args = wp_parse_args($args, [
-			'title'          => esc_html__('Featured Projects','alacarte'),
+			'title'          => esc_html__('Featured Projects','sunix'),
 			'posts_per_page' => '3'
 		]);
 		if($args['posts_per_page'] === '0' || $args['posts_per_page'] === '') return;
@@ -82,11 +82,11 @@ if(!function_exists('alacarte_portfolio_featured')){
         if ( $r->have_posts() ) {
         ?>
             <div class="pf-sidebar-box pf-featured-box">
-            	<div class="red-heading h3"><?php echo alacarte_html($args['title']); ?></div>
+            	<div class="red-heading h3"><?php echo sunix_html($args['title']); ?></div>
 	        	<div class="inner feature-post-inner red-box-shadow red-bg-white transition">
 		            <?php while ( $r->have_posts() ) {
 		                $r->the_post();
-		                $thumbnail_url = alacarte_get_image_url_by_size( ['size' => implode('x', $thumbnail_size), 'default_thumb' => true,'class'=>'d-block'] );
+		                $thumbnail_url = sunix_get_image_url_by_size( ['size' => implode('x', $thumbnail_size), 'default_thumb' => true,'class'=>'d-block'] );
 		                echo '<div class="pf-feature-item red-shadow-hover transition"><div class="row gutters-20 ">';
 			                printf(
 			                    '<div class="red-featured col-auto">' .
@@ -107,7 +107,7 @@ if(!function_exists('alacarte_portfolio_featured')){
 				                );
 				                printf(
 				                	'<div class="red-meta">%s</div>',
-				                	get_the_term_list( get_the_ID(), alacarte_get_post_taxonomies(), '', ', ', '' )
+				                	get_the_term_list( get_the_ID(), sunix_get_post_taxonomies(), '', ', ', '' )
 				                );
 			                echo '</div>';
 		                echo '</div></div>';
@@ -123,14 +123,14 @@ if(!function_exists('alacarte_portfolio_featured')){
  * Get Project Supporter
  * @param $user_ID
 */
-if(!function_exists('alacarte_portfolio_supporter')){
-	function alacarte_portfolio_supporter($args = []){
+if(!function_exists('sunix_portfolio_supporter')){
+	function sunix_portfolio_supporter($args = []){
 		$args = wp_parse_args($args, [
-			'email' => alacarte_get_post_format_value('post-support',''),
-			'title' => esc_html__('Support','alacarte')
+			'email' => sunix_get_post_format_value('post-support',''),
+			'title' => esc_html__('Support','sunix')
 		]);
 		if(empty($args['email']) || $args['email'] = null) return;
-	        $user = get_user_by( 'email', alacarte_get_post_format_value('post-support','') );
+	        $user = get_user_by( 'email', sunix_get_post_format_value('post-support','') );
 	        if($user !== false){ 
 	            global $wp_roles; 
 	            $user_info = get_userdata($user->ID);
@@ -143,7 +143,7 @@ if(!function_exists('alacarte_portfolio_supporter')){
 	            }
 	    ?>
 	        <div class="pf-sidebar-box pf-supported-box">
-	        	<div class="red-heading h3"><?php echo alacarte_html($args['title']); ?></div>
+	        	<div class="red-heading h3"><?php echo sunix_html($args['title']); ?></div>
 	        	<div class="inner supported-inner text-center red-box-shadow red-bg-white transition">
 		            <?php
 		            	echo '<div class="sp-avatar">'.get_avatar($user->ID, 90, '', $user_info->display_name, ['class' => 'circle']).'</div>';
@@ -151,7 +151,7 @@ if(!function_exists('alacarte_portfolio_supporter')){
 		                echo '<div class="sp-role text-xsmall">' . implode(' / ', $role_label).'</div>';
 		                echo '<div class="sp-bio">'.get_user_meta($user->ID,'description', true).'</div>';
 		                echo '<div class="sp-phone red-heading h3">'.get_user_meta($user->ID,'ef5_phone_number', true).'</div>';
-		                /*alacarte_user_social([
+		                /*sunix_user_social([
 	                        'author_id' => $user->ID,
 	                        'class' 	=> 'justify-content-center'
 	                    ]);*/
@@ -166,16 +166,16 @@ if(!function_exists('alacarte_portfolio_supporter')){
  * Get Project Attachment
  * @param $user_ID
 */
-if(!function_exists('alacarte_portfolio_attachment')){
-	function alacarte_portfolio_attachment($args = []){
+if(!function_exists('sunix_portfolio_attachment')){
+	function sunix_portfolio_attachment($args = []){
 		$args = wp_parse_args($args, [
-			'title' => esc_html__('Download','alacarte'),
+			'title' => esc_html__('Download','sunix'),
 			'class' => ''
 		]);
-		$number_of_att = apply_filters('alacarte_number_of_portfolio_attachment', 5);
+		$number_of_att = apply_filters('sunix_number_of_portfolio_attachment', 5);
 		$files = [];
 		for ($i=0; $i <= $number_of_att ; $i++) { 
-			$att = alacarte_get_post_format_value('post-attachment-'.$i,'');
+			$att = sunix_get_post_format_value('post-attachment-'.$i,'');
 			if(!empty($att)){
 				$files[] = $att;
 			}
@@ -183,7 +183,7 @@ if(!function_exists('alacarte_portfolio_attachment')){
 		if(empty($files)) return;
 		?>
 		<div class="pf-sidebar-box pf-attachment-box">
-	        <div class="red-heading h3"><?php echo alacarte_html($args['title']); ?></div>
+	        <div class="red-heading h3"><?php echo sunix_html($args['title']); ?></div>
 	        <div class="inner attachment-inner">
 	        	<?php foreach ($files as $file) {
 	        		$_file = get_post($file);

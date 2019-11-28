@@ -2,8 +2,8 @@
 /**
  * Check post type have post or not 
 */
-if(!function_exists('alacarte_have_post')){
-	function alacarte_have_post($post_type){
+if(!function_exists('sunix_have_post')){
+	function sunix_have_post($post_type){
 		if(!post_type_exists($post_type))
 			return false;
 		$count_posts = wp_count_posts($post_type);
