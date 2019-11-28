@@ -1,191 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/404.php" beforeDir="false" afterPath="$PROJECT_DIR$/404.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/theme.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/theme.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/libs/datepicker/bootstrap-datetimepicker-theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/libs/datepicker/bootstrap-datetimepicker-theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/libs/datepicker/bootstrap-datetimepicker-theme.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/libs/datepicker/bootstrap-datetimepicker-theme.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/libs/owl/owl.carousel.theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/libs/owl/owl.carousel.theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/libs/owl/owl.carousel.theme.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/libs/owl/owl.carousel.theme.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/functions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/functions.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/menus/_sidemenu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/menus/_sidemenu.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/menus/_toggle.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/menus/_toggle.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/options.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/options.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/typo/_classes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/typo/_classes.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/widgets/_recentpost.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/widgets/_recentpost.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/widgets/_social.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/widgets/_social.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/woocommerce/_single.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/woocommerce/_single.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/woocommerce/_single_gallery_vertical.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/woocommerce/_single_gallery_vertical.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/comments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/_get_options.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/_get_options.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/classes/class-breadcrumb.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/classes/class-breadcrumb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/classes/class-css-generator.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/classes/class-css-generator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/classes/class-page-title.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/classes/class-page-title.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/classes/class-tgm-plugin-activation.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/classes/class-tgm-plugin-activation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/custom-post/_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/custom-post/_functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/custom-post/core.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/custom-post/core.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/demo-data.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/demo-data.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/extends/animations.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/extends/animations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/extends/images.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/extends/images.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/extends/loading.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/extends/loading.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/extends/owl-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/extends/owl-settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/extends/snippets.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/extends/snippets.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/extensions/cf7_submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/extensions/cf7_submit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/extensions/gutenberg.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/extensions/gutenberg.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/extensions/require-plugins.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/extensions/require-plugins.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/_loop.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/_loop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/_user_extra_fields.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/_user_extra_fields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/_user_role.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/_user_role.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/avatar.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/avatar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/comments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/header-book-now.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/header-book-now.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/header-cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/header-cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/header-compare.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/header-compare.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/header-contact-button.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/header-contact-button.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/header-contact-plain.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/header-contact-plain.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/header-helper-menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/header-helper-menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/header-icons.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/header-icons.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/header-main.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/header-main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/header-popup-nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/header-popup-nav.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/header-profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/header-profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/header-search.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/header-search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/header-side-nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/header-side-nav.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/header-top.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/header-top.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/header-wishlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/header-wishlist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/page-title.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/page-title.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/portfolios.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/portfolios.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/template-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/template-functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/template-media.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/template-media.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/template-part.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/template-part.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/template-tags.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/template-tags.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/theme.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/theme.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/theme-options/_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/theme-options/_functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/theme-options/core-options.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/theme-options/core-options.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/theme-options/event-options.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/theme-options/event-options.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/theme-options/page-options.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/theme-options/page-options.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/theme-options/portfolio-option.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/theme-options/portfolio-option.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/theme-options/theme-options.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/theme-options/theme-options.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/theme_hook.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/theme_hook.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/walker/class-comment-walker.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/walker/class-comment-walker.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/walker/class-menu-walkers.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/walker/class-menu-walkers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/widgets/class-sub-mega-menu-walker.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/widgets/class-sub-mega-menu-walker.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/widgets/class-widget-extends.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/widgets/class-widget-extends.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/widgets/class-widget-walker-categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/widgets/class-widget-walker-categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/widgets/class-widget-walker-nav-menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/widgets/class-widget-walker-nav-menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/widgets/class-widget-walker-pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/widgets/class-widget-walker-pages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/widgets/widget-featured-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/widgets/widget-featured-post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/widgets/widget-instagram.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/widgets/widget-instagram.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/widgets/widget-recent-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/widgets/widget-recent-post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/widgets/widgets-hook.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/widgets/widgets-hook.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/woo/_extends.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/woo/_extends.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/woo/_hook_badge.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/woo/_hook_badge.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/woo/_hook_cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/woo/_hook_cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/woo/_hook_exts.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/woo/_hook_exts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/woo/_hook_filtered_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/woo/_hook_filtered_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/woo/_hook_image.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/woo/_hook_image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/woo/_hook_loop.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/woo/_hook_loop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/woo/_hook_loop_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/woo/_hook_loop_products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/woo/_hook_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/woo/_hook_message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/woo/_hook_orderby.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/woo/_hook_orderby.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/woo/_hook_price_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/woo/_hook_price_html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/woo/_hook_single.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/woo/_hook_single.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/woo/_widgets.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/woo/_widgets.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/woo/_woo_filter.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/woo/_woo_filter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/woo/hook_checkout.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/woo/hook_checkout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/wp_hook.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/wp_hook.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/alacarte.pot" beforeDir="false" afterPath="$PROJECT_DIR$/languages/alacarte.pot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-templates/blog-list-fullwidth.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-templates/blog-list-fullwidth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-templates/blog-list-left-sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-templates/blog-list-left-sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-templates/blog-list-right-sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-templates/blog-list-right-sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-templates/coming-soon.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-templates/coming-soon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page.php" beforeDir="false" afterPath="$PROJECT_DIR$/page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/searchform.php" beforeDir="false" afterPath="$PROJECT_DIR$/searchform.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single-event.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/single.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/content-none.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/content-none.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/header/header-logo.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/header/header-logo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/header/header-menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/header/header-menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/header/header-social.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/header/header-social.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/header/header-translate.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/header/header-translate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/header/layout-1.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/header/layout-1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/header/layout-2.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/header/layout-2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/header/layout-3.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/header/layout-3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/header/layout-4.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/header/layout-4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/header/layout-5.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/header/layout-5.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/loop/content-related.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/loop/content-related.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/loop/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/loop/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/page-builder.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/page-builder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/page-title/layout-1.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/page-title/layout-1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/single/author-bio.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/single/author-bio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/single/content-link.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/single/content-link.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/single/content-quote.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/single/content-quote.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/single/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/single/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/single/discussion-meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/single/discussion-meta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_buttons.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_buttons.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_countdown.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_countdown.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_emptyspace.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_emptyspace.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_fancy_box.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_fancy_box.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_gallery_image.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_gallery_image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_googlemap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_googlemap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_heading.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_heading.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_instagram.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_instagram.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_logo_footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_logo_footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_newsletter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_newsletter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_portfolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_portfolio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_posts_carousel.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_posts_carousel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_posts_grid.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_posts_grid.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_posts_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_posts_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_reservation.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_reservation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_restaurant_filter_carousel.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_restaurant_filter_carousel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_restaurant_grid_menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_restaurant_grid_menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_restaurant_menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_restaurant_menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_restaurant_menu_simple.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_restaurant_menu_simple.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_single_image.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_single_image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_socials.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_socials.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_team.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_team.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_testimonial.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_testimonial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_video.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_video.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_elements/red_wp_menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_elements/red_wp_menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_extends/_vc_extends.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_extends/_vc_extends.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_extends/_vc_output.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_extends/_vc_output.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_extends/icons/flaticon.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_extends/icons/flaticon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_extends/like-posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/vc_extends/like-posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_button.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_button.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_fancy_box.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_fancy_box.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_googlemap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_googlemap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_heading.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_heading.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_instagram.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_instagram.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_logo_footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_logo_footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_portfolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_portfolio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_posts_carousel.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_posts_carousel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_posts_grid.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_posts_grid.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_posts_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_posts_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_restaurant_filter_carousel.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_restaurant_filter_carousel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_restaurant_grid_menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_restaurant_grid_menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_restaurant_menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_restaurant_menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_restaurant_menu_simple.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_restaurant_menu_simple.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_single_image.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_single_image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_socials.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_socials.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_team.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_team.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_testimonial.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_testimonial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_video.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_video.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_templates/red_wp_menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/red_wp_menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/woocommerce/checkout/payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/woocommerce/checkout/payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/woocommerce/loop/loop-start.php" beforeDir="false" afterPath="$PROJECT_DIR$/woocommerce/loop/loop-start.php" afterDir="false" />
-    </list>
+    <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+            <state relative-caret-position="-1305">
+              <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -435,12 +251,12 @@
       <workItem from="1574131883753" duration="23076000" />
       <workItem from="1574301506619" duration="7340000" />
       <workItem from="1574736733602" duration="5256000" />
-      <workItem from="1574911927616" duration="4052000" />
+      <workItem from="1574911927616" duration="4448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39724000" />
+    <option name="totallyTimeSpent" value="40120000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -772,8 +588,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        <state relative-caret-position="-1305">
+          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
         </state>
       </provider>
     </entry>
