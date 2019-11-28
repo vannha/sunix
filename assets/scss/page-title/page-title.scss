@@ -33,8 +33,9 @@
 	}
 	.red-pagetitle .parallax img {
 		opacity: 0;
-		.red-pagetitle.ptitle-layout-1 .page-title {
-			color: $accent_color;
-		}
+
+	}
+	.red-pagetitle.ptitle-layout-1 .page-title {
+		color: $accent_color;
 	}
 }
