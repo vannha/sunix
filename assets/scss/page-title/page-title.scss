@@ -32,6 +32,9 @@
 		padding-top: 170px;
 	}
 	.red-pagetitle .parallax img {
-   opacity: 0; 
-}
+		opacity: 0;
+		.red-pagetitle.ptitle-layout-1 .page-title {
+			color: $accent_color;
+		}
+	}
 }
