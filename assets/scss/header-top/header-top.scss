@@ -39,53 +39,75 @@
 
 	}
   }
-.lang-currency{
-		text-transform: uppercase;
-	    margin-right: 18px;
-    	font-weight: 500;
-    	display: inline-block;
-    	vertical-align: top;
-		li.dropdown{
-			position: relative;
-			overflow: hidden;
-			a{
-				display: block;
-				i{
-					margin-left: 5px;
-					font-weight: bold;
-				}
+.widget-woocommerce-currency-switcher{
+        .woocommerce-currency-switcher{
+        	border: 0;
+		    padding: 0;
+		    background: transparent;
+		    color: inherit;
+		    font-size: inherit;
+		    height: 40px;
+		    line-height: 40px;
+        }
+        .chosen-container{
+        	min-width: 0;
+		    font-size: inherit;
+		    color: inherit;
+		    font-weight: 500;
+        }
+        .chosen-container-single .chosen-single{
+        	border: 0;
+		    background-image: none;
+		    box-shadow: none;
+		    line-height: 40px;
+		    display: block;
+		    height: 40px;
+		    color: inherit;
+		    position: relative;
+		    padding: 0 8px 0 8px;
+		    @include transition();
+	    	&:hover{
+	    		color: $link_color_hover;
+	    	}
+		    span{
+	    	    margin-right: 10px;
+		    }
+		    div{
+		    	display: none;
+		    }
+		    &:after{
+				content: "\f107";
+				font-family: FontAwesome;
+			    margin-left: 5px;
+				font-weight: bold;
+				line-height: 1;
+				display: inline-block;
+			    position: absolute;
+			    right: 0;
+			    top: 50%;
+			    margin-top: -6px;
 			}
-			&:hover{
-				overflow: visible;
-				ul.dropdown-menu{
-					top: 100%;
-					@include opacity(1);
-					visibility: visible;
-				}
-			}
-		}
-		ul.dropdown-menu{
-			position: absolute;
-			top: calc(100% + 50px);
-			left: -20px;
-			padding: 10px 20px;
-			min-width: 120px;
-			background-color: $white;
-			@include box-shadow(0, 9px, 32px, rgba(19,18,21,0.11));
-			@include opacity(0);
-			visibility: hidden;
-			@include transition();
-			@media (max-width: $screen_lg_max){
-				left: 0;
-				padding: 10px;
-				min-width: 100px;
-			}
-			a{
-				color: $link_color;
-				&:hover{
-					color: $link_color_hover;
-				}
-			}
-		}
-	}
+        }
+        .chosen-container-single .chosen-drop{
+	    	border: 0;
+			margin-top: 2px;
+			min-width: 100px;
+		    padding: 14px 10px;
+    		border-radius: 0;
+    		@include transition();
+    		@include box-shadow(0, 9px, 32px, rgba(19,18,21,0.11));
+	    }
+	    .chosen-container .chosen-results{
+	    	margin: 0;
+	    	padding: 0;
+	    }
+        .chosen-container .chosen-results li.active-result{
+    	    background: transparent;
+    		color: #303030;
+    		@include transition();
+    		&:hover{
+	    		color: $link_color_hover;
+	    	}
+        }
+    }
 }
