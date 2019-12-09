@@ -39,7 +39,7 @@
 
 	}
   }
-.widget-woocommerce-currency-switcher {
+.widget-woocommerce-currency-switcher, {
 	.red-heading {
 		display: none;
 	}
@@ -48,11 +48,9 @@
 		display: none;
 	}
 }
-.widget_gtranslate{
+.widget_gtranslate,
+.vc_wp_custommenu,
+.WOOCS_SELECTOR{
 	display: inline-block;
 }
-	.WOOCS_SELECTOR{
-		display: inline-block;
-	}
-
 }
