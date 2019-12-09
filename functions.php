@@ -8,7 +8,6 @@
  * @author EF5 Team
  *
 */
-die;
 if(!function_exists('sunix_configs')){
     function sunix_configs($value){
         $configs = [
