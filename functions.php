@@ -271,6 +271,15 @@ function sunix_widgets_init()
             'after_title'   => '</div>',
         ));
     }
+     register_sidebar(array(
+        'name'          => esc_html__('Language Currency Switcher ', 'sunix'),
+        'id'            => 'sidebar-language-currency',
+        'description'   => esc_html__('Add widgets here.', 'sunix'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<div class="red-heading h3 widgettitle">',
+        'after_title'   => '</div>',
+    ));
     register_sidebar(array(
         'name'          => esc_html__('Page Sidebar', 'sunix'),
         'id'            => 'sidebar-page',
