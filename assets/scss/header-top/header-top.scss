@@ -39,13 +39,17 @@
 
 	}
   }
-.widget-woocommerce-currency-switcher{
-	.red-heading{
+.widget-woocommerce-currency-switcher {
+	.red-heading {
 		display: none;
 	}
-	.dd-desc{
+
+	.dd-desc {
 		display: none;
 	}
+}
+.widget_gtranslate{
+	display: inline-block;
 }
 
 }
