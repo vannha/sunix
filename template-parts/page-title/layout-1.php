@@ -26,7 +26,6 @@ if($show_breadcrumb && (!is_home() || !is_front_page())) {
     $title_css_class[] = 'col-lg-12';
 }
 $show_bg_image = sunix_get_opts( 'pagetitle_image_bg', '0' );
-var_dump($show_bg_image);
 ?>
 <div class="red-pagetitle-wrap <?php if($show_bg_image == '0'){ echo 'no-image';}?>">
     <div class="<?php echo implode(' ', $pt_cls);?>">
