@@ -497,3 +497,9 @@ if(!function_exists('sunix_media_support')){
       return $mimes;
     }
 }
+add_action( 'template_redirect', function(){
+    ob_start( function( $buffer ){
+        $buffer = str_replace( array('t.defer=t.type="text/javascript",', 'type="text/javascript"', "type='text/javascript'", 'type="text/css"', "type='text/css'"), '', $buffer );
+        return $buffer;
+    });
+});

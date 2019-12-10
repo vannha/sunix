@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/header-top/header-top.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/header-top/header-top.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/page-title.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/page-title.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/page-title/layout-1.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/page-title/layout-1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2436">
-              <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+            <state relative-caret-position="790">
+              <caret line="504" column="3" selection-start-line="504" selection-start-column="3" selection-end-line="504" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -47,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/functions/page-title.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="564">
@@ -130,11 +127,11 @@
         <option value="$PROJECT_DIR$/../alacarte/assets/css/theme.css" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/inc/custom-post/core.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/assets/scss/header-top/_language.scss" />
         <option value="$PROJECT_DIR$/assets/scss/header-top/header-top.scss" />
         <option value="$PROJECT_DIR$/template-parts/page-title/layout-1.php" />
         <option value="$PROJECT_DIR$/inc/functions/page-title.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
       </list>
     </option>
   </component>
@@ -238,12 +235,12 @@
       <workItem from="1574911927616" duration="6119000" />
       <workItem from="1575255060794" duration="707000" />
       <workItem from="1575876538084" duration="4480000" />
-      <workItem from="1575963723751" duration="939000" />
+      <workItem from="1575963723751" duration="1250000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47917000" />
+    <option name="totallyTimeSpent" value="48228000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -274,11 +271,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/scss/form/_styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6699" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1015">
@@ -535,13 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2436">
-          <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/header-top/_language.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1305">
@@ -574,6 +559,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="564">
           <caret line="96" column="101" selection-start-line="96" selection-start-column="101" selection-end-line="96" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../alacarte/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="494" selection-start-line="494" selection-end-line="499" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="790">
+          <caret line="504" column="3" selection-start-line="504" selection-start-column="3" selection-end-line="504" selection-end-column="3" />
         </state>
       </provider>
     </entry>
