@@ -94,7 +94,7 @@ function sunix_ptitle_parallax_image(){
     $parallax_url = sunix_get_opts('ptitle_parallax',['url'=> get_template_directory_uri().'/assets/images/page-title/bg-pagetitle.png']);
     $titles = sunix_get_page_titles();
     if(!empty($parallax_url)){
-        echo '<img src="'.esc_url($parallax_url['url']).'"  alt="" />';
+        echo '<img src="'.esc_url($parallax_url['url']).'"  alt="'.esc_attr($titles['title']).'" />';
     }
 
 }
