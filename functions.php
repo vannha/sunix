@@ -45,7 +45,7 @@ if(!function_exists('sunix_configs')){
             'main_border_color'     => '#111',
             // Thumbnail Size
             'large_size_w'     => 1170,
-            'large_size_h'     => 679,
+            'large_size_h'     => 638,
             'medium_size_w'    => 375,
             'medium_size_h'    => 280,
             'thumbnail_size_w' => 110,
