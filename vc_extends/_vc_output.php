@@ -600,6 +600,18 @@ vc_add_params('vc_column_text', array(
         "std" => '',
         'group'       => esc_html__('Syring Custom', 'sunix')
     ),
+     array(
+        "type" => "dropdown",
+        "heading" => esc_html__("Block Style",'sunix'),
+        "admin_label" => true,
+        "param_name" => "block_text_style",
+        "value" => array(
+            esc_html__('Default','sunix') => '',
+            esc_html__('First letter','sunix') => 'first-letter', 
+        ),
+        "std" => '',
+        'group'       => esc_html__('Syring Custom', 'sunix')
+    ),
     array(
         "type" => "textfield",
         "heading" => esc_html__("Font size",'sunix'),
