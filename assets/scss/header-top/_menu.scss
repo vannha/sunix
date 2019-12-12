@@ -1,11 +1,10 @@
 #red-header-top {
 	.menu{
-		@include d-flex-auto;
-		margin-left: $grid-gutter-width / -3;
-		margin-right: $grid-gutter-width / -3;
 		li{
 			padding-left: 10px;
 			padding-right: 10px;
+			list-style: none;
+			display: inline-block;
 		}
 		&.add-divider{
 			li{
