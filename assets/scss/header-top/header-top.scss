@@ -55,10 +55,14 @@
 	.widget_nav_menu{
 		li a{
 			color:inherit;
+			border-right: #e8e8e8 solid 1px;
+			line-height: 24px;
+			display: inline-block;
+			padding-right: 30px;
 			&:hover{
 				color: $primary_color;
 			}
-			border-right: #e8e8e8 solid 1px;
+
 		}
 	}
 	.widget-woocommerce-currency-switcher{
