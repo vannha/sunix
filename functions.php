@@ -16,15 +16,15 @@ if(!function_exists('sunix_configs')){
             'secondary_color'     => '#CE0023',
             // Typo
             'body_bg'               => '#fff',
-            'body_font'             => 'futurabook',
-            'body_font_size'        => '15px',
-            'body_font_size_large'  => '18px',
+            'body_font'             => 'Roboto',
+            'body_font_size'        => '18px',
+            'body_font_size_large'  => '20px',
             'body_font_size_medium' => '16px',
             'body_font_size_small'  => '14px',
             'body_font_size_xsmall' => '13px',
             'body_font_size_xxsmall'=> '12px',
-            'body_font_color'       => '#111',
-            'body_line_height'      => '1.6',
+            'body_font_color'       => '#666666',
+            'body_line_height'      => '32px',
             'content_width'         => 1170,
             'h1_size'               => '36px',
             'h2_size'               => '30px',
@@ -430,14 +430,6 @@ function sunix_fonts_url() {
     if ( 'off' !== _x( 'on', 'Roboto font: on or off', 'sunix' ) )
     {
         $fonts[] = 'Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i';
-    }
-    if ( 'off' !== _x( 'on', 'Oswald font: on or off', 'sunix' ) )
-    {
-        $fonts[] = 'Oswald:300,400,500,600';
-    }
-    if ( 'off' !== _x( 'on', 'Satisfy font: on or off', 'sunix' ) )
-    {
-        $fonts[] = 'Satisfy:400';
     }
     if ( $fonts ) {
         $fonts_url = add_query_arg( array(
