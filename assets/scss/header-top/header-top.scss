@@ -48,10 +48,12 @@
 	}
 }
 .widget_gtranslate,
-.vc_wp_custommenu,
-.wpb_content_element,
 .WOOCS_SELECTOR{
 	float: left;
+}
+.vc_wp_custommenu,
+.wpb_content_element{
+	display: inline-block;
 }
 	.widget_nav_menu{
 		li a{
