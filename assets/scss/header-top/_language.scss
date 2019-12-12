@@ -10,11 +10,11 @@
     > div.selected {
         background: none;
         position: relative;
-        padding-right: 12px;
+        padding-right: 18px;
         &:after{
             content: "\f107";
             position: absolute;
-            top: 10px;
+            top: 8px;
             right: 0;
             font-family: "Font Awesome 5 Pro";
             font-weight: 500;
