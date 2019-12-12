@@ -52,11 +52,16 @@
 .WOOCS_SELECTOR{
 	display: inline-block;
 }
+	.widget_nav_menu{
+		li a{
+			color:inherit;
+		}
+	}
 	.widget-woocommerce-currency-switcher{
 		.dd-pointer-down{
 			background: none;
 			position: relative;
-			padding-right: 12px;
+			padding-right: 19px;
 			border: none;
 			float: left;
 			top: 0;
