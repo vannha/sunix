@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/scss/header-top/_language.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/header-top/_language.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/header-top/header-top.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/header-top/header-top.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scss/header-top/header-top.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+            <state relative-caret-position="324">
+              <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -285,12 +284,12 @@
       <workItem from="1575255060794" duration="707000" />
       <workItem from="1575876538084" duration="4480000" />
       <workItem from="1575963723751" duration="3306000" />
-      <workItem from="1576122107377" duration="3481000" />
+      <workItem from="1576122107377" duration="3520000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53765000" />
+    <option name="totallyTimeSpent" value="53804000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -628,8 +627,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/header-top/header-top.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+        <state relative-caret-position="324">
+          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
         </state>
       </provider>
     </entry>
