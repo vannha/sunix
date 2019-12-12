@@ -229,11 +229,7 @@ if(!function_exists('sunix_header_top_opts')){
                 'text-transform' =>  true,
                 'letter-spacing' =>  true,
                 'text-align'     =>  false,
-                'default'        => array(
-                    'font-family' => 'Oswald',
-                    'font-weight' => '500',
-
-                ),
+                'default'        => '',
                 'output'         => '.red-header-top,.red-header-top.layout-header-top-4,.red-header-top p,.red-header-top .header-top-coontact .header-top-right b,.red-header-top span:not(.social-icon),.red-header-top ul li',
                 'required'  => array('header_top_enable', '=', '1')
             ),
