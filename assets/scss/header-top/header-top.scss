@@ -52,4 +52,10 @@
 .WOOCS_SELECTOR{
 	display: inline-block;
 }
+	.widget-woocommerce-currency-switcher{
+		.dd-select {
+			border-radius: 0;
+			border: solid 1px #ccc;
+		}
+	}
 }
