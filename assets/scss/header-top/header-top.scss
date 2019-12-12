@@ -55,6 +55,9 @@
 	.widget_nav_menu{
 		li a{
 			color:inherit;
+			&:hover{
+				color: $primary_color;
+			}
 		}
 	}
 	.widget-woocommerce-currency-switcher{
