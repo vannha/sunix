@@ -41,6 +41,7 @@ body{
     margin: 0;
     word-break: break-word;
     @include font-smoothing();
+    font-weight: 300;
     &:after{
         content: '';
         width: 100%;
