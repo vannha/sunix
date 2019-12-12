@@ -29,9 +29,9 @@ html {
   @media (min-width: 992px) {
     .container {
       max-width: 960px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 1170px) {
     .container {
-      max-width: 1200px; } }
+      max-width: 1170px; } }
 
 .container-fluid {
   width: 100%;
@@ -497,7 +497,7 @@ html {
       .offset-lg-11 {
         margin-left: 91.6666666667%; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1170px) {
     .col-xl {
       flex-basis: 0;
       flex-grow: 1;
@@ -684,7 +684,7 @@ html {
       .d-lg-inline-flex {
         display: inline-flex !important; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1170px) {
     .d-xl-none {
       display: none !important; }
       .d-xl-inline {
@@ -1049,7 +1049,7 @@ html {
       .align-self-lg-stretch {
         align-self: stretch !important; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1170px) {
     .flex-xl-row {
       flex-direction: row !important; }
       .flex-xl-column {
@@ -1436,7 +1436,7 @@ html {
       .align-self-lg-stretch {
         align-self: stretch !important; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1170px) {
     .flex-xl-row {
       flex-direction: row !important; }
       .flex-xl-column {
@@ -1553,7 +1553,7 @@ html {
       .text-lg-center {
         text-align: center !important; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1170px) {
     .text-xl-left {
       text-align: left !important; }
       .text-xl-right {
@@ -1810,7 +1810,7 @@ a.text-dark:hover, a.text-dark:focus {
         margin-left: 0;
         margin-right: 91.6666666667%; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1170px) {
     .rtl .offset-xl-0 {
       margin-left: 0;
       margin-right: 0; }
@@ -2210,7 +2210,7 @@ a.text-dark:hover, a.text-dark:focus {
       .h-lg-auto {
         height: auto; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1170px) {
     .w-xl-25 {
       width: 25%; }
       .w-xl-50 {
@@ -2657,7 +2657,7 @@ a.text-dark:hover, a.text-dark:focus {
         margin-right: 90%;
         margin-left: 0; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1170px) {
     .col-xl-1\/5 {
       flex: 0 0 20%;
       max-width: 20%; }
@@ -4396,7 +4396,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .wpcf7-submit span[class*='icon']:before {
   font-family: 'Font Awesome 5 Pro';
-  font-size: 15px; }
+  font-size: 18px; }
 
 .wpcf7-submit .icon1:before {
   content: '\f1d8'; }
@@ -4931,7 +4931,7 @@ blockquote {
   font-size: 16px;
   line-height: 28px;
   font-weight: normal;
-  color: #111;
+  color: #666;
   position: relative;
   display: block !important;
   clear: both;
@@ -5397,7 +5397,7 @@ a:hover, a:active, a:focus {
   text-decoration: none; }
 
 p {
-  margin: 0 0 23px; }
+  margin: 0 0 32px; }
 
 p::after, p::before {
   display: block;
@@ -5542,7 +5542,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
       .text-lg-center {
         text-align: center !important; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1170px) {
     .text-xl-start {
       text-align: start !important; }
       .text-xl-end {
@@ -5558,10 +5558,10 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
   display: block;
   /* Fallback for non-webkit */
   display: -webkit-box;
-  max-height: 25.6px*1;
+  max-height: 28.8px*1;
   /* Fallback for non-webkit */
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.8;
   overflow: hidden;
   text-overflow: ellipsis;
   line-clamp: 1;
@@ -5570,10 +5570,10 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     display: block;
     /* Fallback for non-webkit */
     display: -webkit-box;
-    max-height: 25.6px*1;
+    max-height: 28.8px*1;
     /* Fallback for non-webkit */
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.8;
     overflow: hidden;
     text-overflow: ellipsis;
     line-clamp: 1;
@@ -5583,10 +5583,10 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
   display: block;
   /* Fallback for non-webkit */
   display: -webkit-box;
-  max-height: 25.6px*2;
+  max-height: 28.8px*2;
   /* Fallback for non-webkit */
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.8;
   overflow: hidden;
   text-overflow: ellipsis;
   line-clamp: 2;
@@ -5595,10 +5595,10 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     display: block;
     /* Fallback for non-webkit */
     display: -webkit-box;
-    max-height: 25.6px*2;
+    max-height: 28.8px*2;
     /* Fallback for non-webkit */
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.8;
     overflow: hidden;
     text-overflow: ellipsis;
     line-clamp: 2;
@@ -5608,10 +5608,10 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
   display: block;
   /* Fallback for non-webkit */
   display: -webkit-box;
-  max-height: 24px*3;
+  max-height: 32.4px*3;
   /* Fallback for non-webkit */
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.8;
   overflow: hidden;
   text-overflow: ellipsis;
   line-clamp: 3;
@@ -5620,10 +5620,10 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     display: block;
     /* Fallback for non-webkit */
     display: -webkit-box;
-    max-height: 24px*3;
+    max-height: 32.4px*3;
     /* Fallback for non-webkit */
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 18px;
+    line-height: 1.8;
     overflow: hidden;
     text-overflow: ellipsis;
     line-clamp: 3;
@@ -5633,10 +5633,10 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
   display: block;
   /* Fallback for non-webkit */
   display: -webkit-box;
-  max-height: 24px*4;
+  max-height: 32.4px*4;
   /* Fallback for non-webkit */
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.8;
   overflow: hidden;
   text-overflow: ellipsis;
   line-clamp: 4;
@@ -5645,10 +5645,10 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     display: block;
     /* Fallback for non-webkit */
     display: -webkit-box;
-    max-height: 24px*4;
+    max-height: 32.4px*4;
     /* Fallback for non-webkit */
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 18px;
+    line-height: 1.8;
     overflow: hidden;
     text-overflow: ellipsis;
     line-clamp: 4;
@@ -5658,10 +5658,10 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
   display: block;
   /* Fallback for non-webkit */
   display: -webkit-box;
-  max-height: 24px*5;
+  max-height: 32.4px*5;
   /* Fallback for non-webkit */
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.8;
   overflow: hidden;
   text-overflow: ellipsis;
   line-clamp: 5;
@@ -5670,10 +5670,10 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     display: block;
     /* Fallback for non-webkit */
     display: -webkit-box;
-    max-height: 24px*5;
+    max-height: 32.4px*5;
     /* Fallback for non-webkit */
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 18px;
+    line-height: 1.8;
     overflow: hidden;
     text-overflow: ellipsis;
     line-clamp: 5;
@@ -5784,10 +5784,10 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
   font-size: 16px; }
 
 .text-xlarge {
-  font-size: 18px; }
+  font-size: 20px; }
 
 .text-large {
-  font-size: 18px; }
+  font-size: 20px; }
 
 .text-40 {
   font-size: 40px; }
@@ -5840,7 +5840,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
       .text-lg-20 {
         font-size: 20px; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1170px) {
     .text-xl-40 {
       font-size: 40px;
       line-height: 1.2; }
@@ -5863,18 +5863,18 @@ html {
 
 body {
   position: relative;
-  color: #111;
-  font-family: futurabook;
-  font-size: 15px;
-  line-height: 1.6;
+  color: #666;
+  font-family: Roboto;
+  font-size: 18px;
+  line-height: 1.8;
   background-color: #fff;
   overflow-x: hidden;
   padding: 0;
   margin: 0;
   word-break: break-word;
-  display: none;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300; }
 
 body:after {
   content: '';
@@ -6383,7 +6383,7 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   line-height: 28px;
   letter-spacing: 1.85714px;
   text-transform: uppercase;
-  color: #111; }
+  color: #666; }
 
 input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder, input[type="number"]::-webkit-input-placeholder, input[type="range"]::-webkit-input-placeholder, input[type="date"]::-webkit-input-placeholder, input[type="month"]::-webkit-input-placeholder, input[type="week"]::-webkit-input-placeholder, input[type="time"]::-webkit-input-placeholder, input[type="datetime"]::-webkit-input-placeholder, input[type="datetime-local"]::-webkit-input-placeholder, input[type="color"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder, select::-webkit-input-placeholder {
   color: #777; }
@@ -6538,7 +6538,7 @@ textarea {
   display: block;
   font-size: 40px;
   line-height: 60px;
-  color: #111;
+  color: #666;
   margin-top: 0;
   margin-bottom: 29px; }
 
@@ -6567,7 +6567,7 @@ textarea {
   line-height: 28px;
   padding: 10.5px 25px;
   letter-spacing: 1.85714px;
-  color: #111;
+  color: #666;
   text-transform: uppercase;
   width: 100%;
   position: relative;
@@ -6581,7 +6581,7 @@ textarea {
   font-size: 13px;
   line-height: 28px;
   letter-spacing: 1.85714px;
-  color: #111;
+  color: #666;
   text-transform: uppercase; }
 
 .fs-wrapper form input[type="text"]:-moz-placeholder, .fs-wrapper form input[type="email"]:-moz-placeholder, .fs-wrapper form input[type="url"]:-moz-placeholder, .fs-wrapper form input[type="password"]:-moz-placeholder, .fs-wrapper form input[type="search"]:-moz-placeholder, .fs-wrapper form input[type="tel"]:-moz-placeholder, .fs-wrapper form input[type="number"]:-moz-placeholder, .fs-wrapper form input[type="range"]:-moz-placeholder, .fs-wrapper form input[type="date"]:-moz-placeholder, .fs-wrapper form input[type="month"]:-moz-placeholder, .fs-wrapper form input[type="week"]:-moz-placeholder, .fs-wrapper form input[type="time"]:-moz-placeholder, .fs-wrapper form input[type="datetime"]:-moz-placeholder, .fs-wrapper form input[type="datetime-local"]:-moz-placeholder, .fs-wrapper form input[type="color"]:-moz-placeholder, .fs-wrapper form textarea:-moz-placeholder, .fs-wrapper form select:-moz-placeholder {
@@ -6591,7 +6591,7 @@ textarea {
   font-size: 13px;
   line-height: 28px;
   letter-spacing: 1.85714px;
-  color: #111;
+  color: #666;
   text-transform: uppercase; }
 
 .fs-wrapper form input[type="text"]::-moz-placeholder, .fs-wrapper form input[type="email"]::-moz-placeholder, .fs-wrapper form input[type="url"]::-moz-placeholder, .fs-wrapper form input[type="password"]::-moz-placeholder, .fs-wrapper form input[type="search"]::-moz-placeholder, .fs-wrapper form input[type="tel"]::-moz-placeholder, .fs-wrapper form input[type="number"]::-moz-placeholder, .fs-wrapper form input[type="range"]::-moz-placeholder, .fs-wrapper form input[type="date"]::-moz-placeholder, .fs-wrapper form input[type="month"]::-moz-placeholder, .fs-wrapper form input[type="week"]::-moz-placeholder, .fs-wrapper form input[type="time"]::-moz-placeholder, .fs-wrapper form input[type="datetime"]::-moz-placeholder, .fs-wrapper form input[type="datetime-local"]::-moz-placeholder, .fs-wrapper form input[type="color"]::-moz-placeholder, .fs-wrapper form textarea::-moz-placeholder, .fs-wrapper form select::-moz-placeholder {
@@ -6601,7 +6601,7 @@ textarea {
   font-size: 13px;
   line-height: 28px;
   letter-spacing: 1.85714px;
-  color: #111;
+  color: #666;
   text-transform: uppercase; }
 
 .fs-wrapper form input[type="text"]:-ms-input-placeholder, .fs-wrapper form input[type="email"]:-ms-input-placeholder, .fs-wrapper form input[type="url"]:-ms-input-placeholder, .fs-wrapper form input[type="password"]:-ms-input-placeholder, .fs-wrapper form input[type="search"]:-ms-input-placeholder, .fs-wrapper form input[type="tel"]:-ms-input-placeholder, .fs-wrapper form input[type="number"]:-ms-input-placeholder, .fs-wrapper form input[type="range"]:-ms-input-placeholder, .fs-wrapper form input[type="date"]:-ms-input-placeholder, .fs-wrapper form input[type="month"]:-ms-input-placeholder, .fs-wrapper form input[type="week"]:-ms-input-placeholder, .fs-wrapper form input[type="time"]:-ms-input-placeholder, .fs-wrapper form input[type="datetime"]:-ms-input-placeholder, .fs-wrapper form input[type="datetime-local"]:-ms-input-placeholder, .fs-wrapper form input[type="color"]:-ms-input-placeholder, .fs-wrapper form textarea:-ms-input-placeholder, .fs-wrapper form select:-ms-input-placeholder {
@@ -6611,7 +6611,7 @@ textarea {
   font-size: 13px;
   line-height: 28px;
   letter-spacing: 1.85714px;
-  color: #111;
+  color: #666;
   text-transform: uppercase; }
 
 .fs-wrapper form textarea {
@@ -6919,7 +6919,7 @@ a.ui-state-active {
   margin-bottom: 30px; }
 
 .contact-style1 form input[type="text"], .contact-style1 form input[type="email"], .contact-style1 form input[type="url"], .contact-style1 form input[type="password"], .contact-style1 form input[type="search"], .contact-style1 form input[type="tel"], .contact-style1 form input[type="number"], .contact-style1 form input[type="range"], .contact-style1 form input[type="date"], .contact-style1 form input[type="month"], .contact-style1 form input[type="week"], .contact-style1 form input[type="time"], .contact-style1 form input[type="datetime"], .contact-style1 form input[type="datetime-local"], .contact-style1 form input[type="color"], .contact-style1 form textarea, .contact-style1 form select {
-  border: 1.5px solid #111;
+  border: 1.5px solid #666;
   padding: 10.5px 30px;
   font-family: 'Oswald', sans-serif;
   font-style: normal;
@@ -6928,7 +6928,7 @@ a.ui-state-active {
   line-height: 28px;
   letter-spacing: 1.85714px;
   text-transform: uppercase;
-  color: #111; }
+  color: #666; }
 
 .contact-style1 form input[type="text"]::-webkit-input-placeholder, .contact-style1 form input[type="email"]::-webkit-input-placeholder, .contact-style1 form input[type="url"]::-webkit-input-placeholder, .contact-style1 form input[type="password"]::-webkit-input-placeholder, .contact-style1 form input[type="search"]::-webkit-input-placeholder, .contact-style1 form input[type="tel"]::-webkit-input-placeholder, .contact-style1 form input[type="number"]::-webkit-input-placeholder, .contact-style1 form input[type="range"]::-webkit-input-placeholder, .contact-style1 form input[type="date"]::-webkit-input-placeholder, .contact-style1 form input[type="month"]::-webkit-input-placeholder, .contact-style1 form input[type="week"]::-webkit-input-placeholder, .contact-style1 form input[type="time"]::-webkit-input-placeholder, .contact-style1 form input[type="datetime"]::-webkit-input-placeholder, .contact-style1 form input[type="datetime-local"]::-webkit-input-placeholder, .contact-style1 form input[type="color"]::-webkit-input-placeholder, .contact-style1 form textarea::-webkit-input-placeholder, .contact-style1 form select::-webkit-input-placeholder {
   font-family: 'Oswald', sans-serif;
@@ -6937,7 +6937,7 @@ a.ui-state-active {
   font-size: 13px;
   line-height: 28px;
   letter-spacing: 1.85714px;
-  color: #111;
+  color: #666;
   text-transform: uppercase; }
 
 .contact-style1 form input[type="text"]:-moz-placeholder, .contact-style1 form input[type="email"]:-moz-placeholder, .contact-style1 form input[type="url"]:-moz-placeholder, .contact-style1 form input[type="password"]:-moz-placeholder, .contact-style1 form input[type="search"]:-moz-placeholder, .contact-style1 form input[type="tel"]:-moz-placeholder, .contact-style1 form input[type="number"]:-moz-placeholder, .contact-style1 form input[type="range"]:-moz-placeholder, .contact-style1 form input[type="date"]:-moz-placeholder, .contact-style1 form input[type="month"]:-moz-placeholder, .contact-style1 form input[type="week"]:-moz-placeholder, .contact-style1 form input[type="time"]:-moz-placeholder, .contact-style1 form input[type="datetime"]:-moz-placeholder, .contact-style1 form input[type="datetime-local"]:-moz-placeholder, .contact-style1 form input[type="color"]:-moz-placeholder, .contact-style1 form textarea:-moz-placeholder, .contact-style1 form select:-moz-placeholder {
@@ -6947,7 +6947,7 @@ a.ui-state-active {
   font-size: 13px;
   line-height: 28px;
   letter-spacing: 1.85714px;
-  color: #111;
+  color: #666;
   text-transform: uppercase; }
 
 .contact-style1 form input[type="text"]::-moz-placeholder, .contact-style1 form input[type="email"]::-moz-placeholder, .contact-style1 form input[type="url"]::-moz-placeholder, .contact-style1 form input[type="password"]::-moz-placeholder, .contact-style1 form input[type="search"]::-moz-placeholder, .contact-style1 form input[type="tel"]::-moz-placeholder, .contact-style1 form input[type="number"]::-moz-placeholder, .contact-style1 form input[type="range"]::-moz-placeholder, .contact-style1 form input[type="date"]::-moz-placeholder, .contact-style1 form input[type="month"]::-moz-placeholder, .contact-style1 form input[type="week"]::-moz-placeholder, .contact-style1 form input[type="time"]::-moz-placeholder, .contact-style1 form input[type="datetime"]::-moz-placeholder, .contact-style1 form input[type="datetime-local"]::-moz-placeholder, .contact-style1 form input[type="color"]::-moz-placeholder, .contact-style1 form textarea::-moz-placeholder, .contact-style1 form select::-moz-placeholder {
@@ -6957,7 +6957,7 @@ a.ui-state-active {
   font-size: 13px;
   line-height: 28px;
   letter-spacing: 1.85714px;
-  color: #111;
+  color: #666;
   text-transform: uppercase; }
 
 .contact-style1 form input[type="text"]:-ms-input-placeholder, .contact-style1 form input[type="email"]:-ms-input-placeholder, .contact-style1 form input[type="url"]:-ms-input-placeholder, .contact-style1 form input[type="password"]:-ms-input-placeholder, .contact-style1 form input[type="search"]:-ms-input-placeholder, .contact-style1 form input[type="tel"]:-ms-input-placeholder, .contact-style1 form input[type="number"]:-ms-input-placeholder, .contact-style1 form input[type="range"]:-ms-input-placeholder, .contact-style1 form input[type="date"]:-ms-input-placeholder, .contact-style1 form input[type="month"]:-ms-input-placeholder, .contact-style1 form input[type="week"]:-ms-input-placeholder, .contact-style1 form input[type="time"]:-ms-input-placeholder, .contact-style1 form input[type="datetime"]:-ms-input-placeholder, .contact-style1 form input[type="datetime-local"]:-ms-input-placeholder, .contact-style1 form input[type="color"]:-ms-input-placeholder, .contact-style1 form textarea:-ms-input-placeholder, .contact-style1 form select:-ms-input-placeholder {
@@ -6967,7 +6967,7 @@ a.ui-state-active {
   font-size: 13px;
   line-height: 28px;
   letter-spacing: 1.85714px;
-  color: #111;
+  color: #666;
   text-transform: uppercase; }
 
 .contact-style1 form textarea {
@@ -6980,7 +6980,7 @@ a.ui-state-active {
   margin-bottom: 25px; }
 
 .contact-style2 form input[type="text"], .contact-style2 form input[type="email"], .contact-style2 form input[type="url"], .contact-style2 form input[type="password"], .contact-style2 form input[type="search"], .contact-style2 form input[type="tel"], .contact-style2 form input[type="number"], .contact-style2 form input[type="range"], .contact-style2 form input[type="date"], .contact-style2 form input[type="month"], .contact-style2 form input[type="week"], .contact-style2 form input[type="time"], .contact-style2 form input[type="datetime"], .contact-style2 form input[type="datetime-local"], .contact-style2 form input[type="color"], .contact-style2 form textarea, .contact-style2 form select {
-  color: #111;
+  color: #666;
   padding: 11px 25px; }
 
 @media (min-width: 992px) and (max-width: 1024px) {
@@ -6988,13 +6988,13 @@ a.ui-state-active {
           padding: 11px 10px; } }
 
 .contact-style2 form input[type="text"]:hover::-webkit-input-placeholder, .contact-style2 form input[type="email"]:hover::-webkit-input-placeholder, .contact-style2 form input[type="url"]:hover::-webkit-input-placeholder, .contact-style2 form input[type="password"]:hover::-webkit-input-placeholder, .contact-style2 form input[type="search"]:hover::-webkit-input-placeholder, .contact-style2 form input[type="tel"]:hover::-webkit-input-placeholder, .contact-style2 form input[type="number"]:hover::-webkit-input-placeholder, .contact-style2 form input[type="range"]:hover::-webkit-input-placeholder, .contact-style2 form input[type="date"]:hover::-webkit-input-placeholder, .contact-style2 form input[type="month"]:hover::-webkit-input-placeholder, .contact-style2 form input[type="week"]:hover::-webkit-input-placeholder, .contact-style2 form input[type="time"]:hover::-webkit-input-placeholder, .contact-style2 form input[type="datetime"]:hover::-webkit-input-placeholder, .contact-style2 form input[type="datetime-local"]:hover::-webkit-input-placeholder, .contact-style2 form input[type="color"]:hover::-webkit-input-placeholder, .contact-style2 form textarea:hover::-webkit-input-placeholder, .contact-style2 form select:hover::-webkit-input-placeholder {
-  color: #111; }
+  color: #666; }
   .contact-style2 form input[type="text"]:hover:-moz-placeholder, .contact-style2 form input[type="email"]:hover:-moz-placeholder, .contact-style2 form input[type="url"]:hover:-moz-placeholder, .contact-style2 form input[type="password"]:hover:-moz-placeholder, .contact-style2 form input[type="search"]:hover:-moz-placeholder, .contact-style2 form input[type="tel"]:hover:-moz-placeholder, .contact-style2 form input[type="number"]:hover:-moz-placeholder, .contact-style2 form input[type="range"]:hover:-moz-placeholder, .contact-style2 form input[type="date"]:hover:-moz-placeholder, .contact-style2 form input[type="month"]:hover:-moz-placeholder, .contact-style2 form input[type="week"]:hover:-moz-placeholder, .contact-style2 form input[type="time"]:hover:-moz-placeholder, .contact-style2 form input[type="datetime"]:hover:-moz-placeholder, .contact-style2 form input[type="datetime-local"]:hover:-moz-placeholder, .contact-style2 form input[type="color"]:hover:-moz-placeholder, .contact-style2 form textarea:hover:-moz-placeholder, .contact-style2 form select:hover:-moz-placeholder {
-    color: #111; }
+    color: #666; }
   .contact-style2 form input[type="text"]:hover::-moz-placeholder, .contact-style2 form input[type="email"]:hover::-moz-placeholder, .contact-style2 form input[type="url"]:hover::-moz-placeholder, .contact-style2 form input[type="password"]:hover::-moz-placeholder, .contact-style2 form input[type="search"]:hover::-moz-placeholder, .contact-style2 form input[type="tel"]:hover::-moz-placeholder, .contact-style2 form input[type="number"]:hover::-moz-placeholder, .contact-style2 form input[type="range"]:hover::-moz-placeholder, .contact-style2 form input[type="date"]:hover::-moz-placeholder, .contact-style2 form input[type="month"]:hover::-moz-placeholder, .contact-style2 form input[type="week"]:hover::-moz-placeholder, .contact-style2 form input[type="time"]:hover::-moz-placeholder, .contact-style2 form input[type="datetime"]:hover::-moz-placeholder, .contact-style2 form input[type="datetime-local"]:hover::-moz-placeholder, .contact-style2 form input[type="color"]:hover::-moz-placeholder, .contact-style2 form textarea:hover::-moz-placeholder, .contact-style2 form select:hover::-moz-placeholder {
-    color: #111; }
+    color: #666; }
   .contact-style2 form input[type="text"]:hover:-ms-input-placeholder, .contact-style2 form input[type="email"]:hover:-ms-input-placeholder, .contact-style2 form input[type="url"]:hover:-ms-input-placeholder, .contact-style2 form input[type="password"]:hover:-ms-input-placeholder, .contact-style2 form input[type="search"]:hover:-ms-input-placeholder, .contact-style2 form input[type="tel"]:hover:-ms-input-placeholder, .contact-style2 form input[type="number"]:hover:-ms-input-placeholder, .contact-style2 form input[type="range"]:hover:-ms-input-placeholder, .contact-style2 form input[type="date"]:hover:-ms-input-placeholder, .contact-style2 form input[type="month"]:hover:-ms-input-placeholder, .contact-style2 form input[type="week"]:hover:-ms-input-placeholder, .contact-style2 form input[type="time"]:hover:-ms-input-placeholder, .contact-style2 form input[type="datetime"]:hover:-ms-input-placeholder, .contact-style2 form input[type="datetime-local"]:hover:-ms-input-placeholder, .contact-style2 form input[type="color"]:hover:-ms-input-placeholder, .contact-style2 form textarea:hover:-ms-input-placeholder, .contact-style2 form select:hover:-ms-input-placeholder {
-    color: #111; }
+    color: #666; }
 
 .contact-style2 form textarea {
   height: 99px; }
@@ -7012,17 +7012,17 @@ a.ui-state-active {
   margin-bottom: 25px; }
 
 .contact-style3 form input[type="text"], .contact-style3 form input[type="email"], .contact-style3 form input[type="url"], .contact-style3 form input[type="password"], .contact-style3 form input[type="search"], .contact-style3 form input[type="tel"], .contact-style3 form input[type="number"], .contact-style3 form input[type="range"], .contact-style3 form input[type="date"], .contact-style3 form input[type="month"], .contact-style3 form input[type="week"], .contact-style3 form input[type="time"], .contact-style3 form input[type="datetime"], .contact-style3 form input[type="datetime-local"], .contact-style3 form input[type="color"], .contact-style3 form textarea, .contact-style3 form select {
-  color: #111;
+  color: #666;
   padding: 11px 25px; }
 
 .contact-style3 form input[type="text"]:hover::-webkit-input-placeholder, .contact-style3 form input[type="email"]:hover::-webkit-input-placeholder, .contact-style3 form input[type="url"]:hover::-webkit-input-placeholder, .contact-style3 form input[type="password"]:hover::-webkit-input-placeholder, .contact-style3 form input[type="search"]:hover::-webkit-input-placeholder, .contact-style3 form input[type="tel"]:hover::-webkit-input-placeholder, .contact-style3 form input[type="number"]:hover::-webkit-input-placeholder, .contact-style3 form input[type="range"]:hover::-webkit-input-placeholder, .contact-style3 form input[type="date"]:hover::-webkit-input-placeholder, .contact-style3 form input[type="month"]:hover::-webkit-input-placeholder, .contact-style3 form input[type="week"]:hover::-webkit-input-placeholder, .contact-style3 form input[type="time"]:hover::-webkit-input-placeholder, .contact-style3 form input[type="datetime"]:hover::-webkit-input-placeholder, .contact-style3 form input[type="datetime-local"]:hover::-webkit-input-placeholder, .contact-style3 form input[type="color"]:hover::-webkit-input-placeholder, .contact-style3 form textarea:hover::-webkit-input-placeholder, .contact-style3 form select:hover::-webkit-input-placeholder {
-  color: #111; }
+  color: #666; }
   .contact-style3 form input[type="text"]:hover:-moz-placeholder, .contact-style3 form input[type="email"]:hover:-moz-placeholder, .contact-style3 form input[type="url"]:hover:-moz-placeholder, .contact-style3 form input[type="password"]:hover:-moz-placeholder, .contact-style3 form input[type="search"]:hover:-moz-placeholder, .contact-style3 form input[type="tel"]:hover:-moz-placeholder, .contact-style3 form input[type="number"]:hover:-moz-placeholder, .contact-style3 form input[type="range"]:hover:-moz-placeholder, .contact-style3 form input[type="date"]:hover:-moz-placeholder, .contact-style3 form input[type="month"]:hover:-moz-placeholder, .contact-style3 form input[type="week"]:hover:-moz-placeholder, .contact-style3 form input[type="time"]:hover:-moz-placeholder, .contact-style3 form input[type="datetime"]:hover:-moz-placeholder, .contact-style3 form input[type="datetime-local"]:hover:-moz-placeholder, .contact-style3 form input[type="color"]:hover:-moz-placeholder, .contact-style3 form textarea:hover:-moz-placeholder, .contact-style3 form select:hover:-moz-placeholder {
-    color: #111; }
+    color: #666; }
   .contact-style3 form input[type="text"]:hover::-moz-placeholder, .contact-style3 form input[type="email"]:hover::-moz-placeholder, .contact-style3 form input[type="url"]:hover::-moz-placeholder, .contact-style3 form input[type="password"]:hover::-moz-placeholder, .contact-style3 form input[type="search"]:hover::-moz-placeholder, .contact-style3 form input[type="tel"]:hover::-moz-placeholder, .contact-style3 form input[type="number"]:hover::-moz-placeholder, .contact-style3 form input[type="range"]:hover::-moz-placeholder, .contact-style3 form input[type="date"]:hover::-moz-placeholder, .contact-style3 form input[type="month"]:hover::-moz-placeholder, .contact-style3 form input[type="week"]:hover::-moz-placeholder, .contact-style3 form input[type="time"]:hover::-moz-placeholder, .contact-style3 form input[type="datetime"]:hover::-moz-placeholder, .contact-style3 form input[type="datetime-local"]:hover::-moz-placeholder, .contact-style3 form input[type="color"]:hover::-moz-placeholder, .contact-style3 form textarea:hover::-moz-placeholder, .contact-style3 form select:hover::-moz-placeholder {
-    color: #111; }
+    color: #666; }
   .contact-style3 form input[type="text"]:hover:-ms-input-placeholder, .contact-style3 form input[type="email"]:hover:-ms-input-placeholder, .contact-style3 form input[type="url"]:hover:-ms-input-placeholder, .contact-style3 form input[type="password"]:hover:-ms-input-placeholder, .contact-style3 form input[type="search"]:hover:-ms-input-placeholder, .contact-style3 form input[type="tel"]:hover:-ms-input-placeholder, .contact-style3 form input[type="number"]:hover:-ms-input-placeholder, .contact-style3 form input[type="range"]:hover:-ms-input-placeholder, .contact-style3 form input[type="date"]:hover:-ms-input-placeholder, .contact-style3 form input[type="month"]:hover:-ms-input-placeholder, .contact-style3 form input[type="week"]:hover:-ms-input-placeholder, .contact-style3 form input[type="time"]:hover:-ms-input-placeholder, .contact-style3 form input[type="datetime"]:hover:-ms-input-placeholder, .contact-style3 form input[type="datetime-local"]:hover:-ms-input-placeholder, .contact-style3 form input[type="color"]:hover:-ms-input-placeholder, .contact-style3 form textarea:hover:-ms-input-placeholder, .contact-style3 form select:hover:-ms-input-placeholder {
-    color: #111; }
+    color: #666; }
 
 .contact-style3 form textarea {
   height: 99px; }
@@ -7204,17 +7204,17 @@ form .button, form button, form [type="button"], form [type="reset"], form [type
   line-height: 21px;
   text-align: center;
   letter-spacing: 1px;
-  color: #111;
+  color: #666;
   text-transform: uppercase;
   position: relative;
-  border-color: #111;
+  border-color: #666;
   cursor: pointer; }
 
 .red-btn-link.primary-color {
   border-color: #fbb040; }
 
 .red-btn-link > span {
-  border-bottom: #111 solid 1px;
+  border-bottom: #666 solid 1px;
   border-color: inherit; }
 
 .red-btn-link.btn-white-color {
@@ -8204,7 +8204,7 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
   top: 10px;
   right: 0;
   font-family: "Font Awesome 5 Pro";
-  font-weight: 900;
+  font-weight: 500;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -8234,18 +8234,14 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
 
 #red-header-top .switcher.notranslate a img {
   opacity: 1;
-  height: 38px;
-  width: 28px;
+  height: 20px;
+  width: 23px;
   margin-right: 3px;
   margin-top: -3px; }
 
 #red-header-top {
-  color: #777;
   font-size: 13px;
-  text-transform: uppercase;
-  line-height: 26px;
-  font-family: 'Oswald', sans-serif;
-  font-weight: 500;
+  line-height: 28px;
   padding: 16px 0 12px; }
 
 #red-header-top .contact {
@@ -8280,6 +8276,60 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
       #red-header-top .wpb_raw_html {
         float: left;
         margin-left: -15px; } }
+
+#red-header-top .widget-woocommerce-currency-switcher .red-heading, #red-header-top .widget-woocommerce-currency-switcher #wp-calendar > caption {
+  display: none; }
+
+#red-header-top .widget-woocommerce-currency-switcher .dd-desc {
+  display: none; }
+
+#red-header-top .widget_gtranslate, #red-header-top .vc_wp_custommenu, #red-header-top .wpb_content_element, #red-header-top .WOOCS_SELECTOR {
+  display: inline-block; }
+
+#red-header-top .widget-woocommerce-currency-switcher .dd-pointer-down {
+  background: none;
+  position: relative;
+  padding-right: 12px;
+  border: none;
+  float: left; }
+
+#red-header-top .widget-woocommerce-currency-switcher .dd-pointer-down:after {
+  content: "\f107";
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 500;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1; }
+
+#red-header-top .widget-woocommerce-currency-switcher .dd-select {
+  border-radius: 0;
+  border: none;
+  background: none !important; }
+
+#red-header-top .widget-woocommerce-currency-switcher label {
+  color: inherit;
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 0px;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: 0;
+  font-family: inherit; }
+
+#red-header-top .widget-woocommerce-currency-switcher .dd-selected {
+  padding: 0;
+  color: inherit;
+  font-weight: inherit;
+  float: left; }
 /* List */
 /* Level 1 */
 /* Level 2 */
@@ -8928,7 +8978,7 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
 
 .red-header-helper-menu li.highlight a {
   text-transform: uppercase;
-  font-family: futurabook;
+  font-family: Roboto;
   font-style: normal;
   letter-spacing: 0.24px; }
 
@@ -9044,7 +9094,7 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
       padding: 0;
       padding: 0 19.5px; }
       .red-header-menu > li > a {
-        height: 132px; }
+        height: 116px; }
         .red-header-menu > li > a:after {
           content: '';
           display: none;
@@ -9175,7 +9225,6 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
 .red-pagetitle .parallax:before {
   content: '';
   display: block;
-  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1; }
 
 .parallax img {
@@ -9296,7 +9345,7 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
 .no-image .red-pagetitle .parallax img {
   opacity: 0; }
 
-.no-image .red-pagetitle .parallax img .red-pagetitle.ptitle-layout-1 .page-title {
+.no-image .red-pagetitle.ptitle-layout-1 .page-title {
   color: #111; }
 
 @media (min-width: 30em) {
@@ -9496,7 +9545,7 @@ article.wpb_animate_when_almost_visible {
 
 .red-list .red-readmore {
   display: inline-block;
-  color: #111;
+  color: #666;
   transition: all 300ms ease-in-out;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
@@ -9511,7 +9560,7 @@ article.wpb_animate_when_almost_visible {
   content: '';
   width: 100%;
   height: 1px;
-  background: #111;
+  background: #666;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -9749,7 +9798,7 @@ body.noscroll {
   font-size: 16px;
   line-height: 28px;
   font-weight: normal;
-  color: #111;
+  color: #666;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif; }
 
@@ -10053,7 +10102,7 @@ article.post-grid-item .red-after-title .red-meta .avatar {
   margin-top: 30px; }
 
 .red-single-content h4 {
-  color: #111; }
+  color: #666; }
 
 .gallery + h5 {
   margin-bottom: 17px; }
@@ -10570,7 +10619,7 @@ body {
 
 .red-sidebar-area .widget .red-menu-item a, .red-sidebar-area .widget .wc-layered-nav-term a, .red-sidebar-area .widget .chosen a {
   padding: 0;
-  color: #111;
+  color: #666;
   position: relative;
   transform: translateX(0); }
   .red-sidebar-area .widget .red-menu-item a > span, .red-sidebar-area .widget .wc-layered-nav-term a > span, .red-sidebar-area .widget .chosen a > span {
@@ -10990,7 +11039,7 @@ body {
   content: ','; }
 
 .tagcloud > a:hover {
-  color: #111; }
+  color: #666; }
 
 .tagcloud > a:last-child:after {
   content: ''; }
@@ -11202,7 +11251,7 @@ body {
   padding: 0 23.5px;
   padding-left: 11.5px; }
   .red-footer-area.footer-5 .red-wp-menu ul li a, .red-footer-area.footer-6 .red-wp-menu ul li a {
-    font-family: futurabook;
+    font-family: Roboto;
     font-size: 15px;
     line-height: 18px;
     text-transform: none;
@@ -11262,7 +11311,7 @@ body {
 .comments-title, .woocommerce-Reviews-title {
   padding: 0;
   margin: 0 0 28px;
-  color: #111; }
+  color: #666; }
 
 .discussion-meta-info {
   margin: 0; }
@@ -11298,7 +11347,7 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
-  color: #111; }
+  color: #666; }
 /* Comment Form */
 .comment-form > .row {
   margin-top: 33px; }
@@ -11328,7 +11377,7 @@ body {
 
 .comment-form [type="submit"] {
   width: 100%;
-  background: #111;
+  background: #666;
   color: #fff;
   font-family: 'Oswald', sans-serif;
   font-style: normal;
@@ -11355,7 +11404,7 @@ body {
 .comment-form-rating {
   margin-left: -15px;
   margin-right: -15px;
-  color: #111;
+  color: #666;
   display: flex;
   flex-wrap: wrap; }
 
@@ -11429,7 +11478,7 @@ body {
   line-height: 28px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: #111; }
+  color: #666; }
 
 .commentlist .comment-info .author-info {
   padding-bottom: 4px; }
@@ -11446,7 +11495,7 @@ body {
   line-height: 28px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: #111; }
+  color: #666; }
 
 .commentlist .comment-metadata {
   font-size: 12px;
@@ -11464,7 +11513,7 @@ body {
   color: #888; }
 
 .commentlist .comment-metadata a {
-  color: #111;
+  color: #666;
   margin-left: 9px; }
 
 .commentlist .children {
@@ -11524,7 +11573,7 @@ body {
   line-height: 28px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: #111; }
+  color: #666; }
 
 .wpb-js-composer .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-heading .vc_tta-panel-title > a {
   color: inherit;
@@ -11548,14 +11597,14 @@ body {
   padding: 25px 0 11px;
   font-size: 15px;
   line-height: 24px;
-  color: #111; }
+  color: #666; }
 
 .wpb-js-composer .vc_tta .vc_tta-controls-icon {
   height: 9px !important;
   width: 9px !important; }
 
 .wpb-js-composer .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel-heading .vc_tta-controls-icon::after, .wpb-js-composer .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel-heading .vc_tta-controls-icon::before {
-  border-color: #111 !important; }
+  border-color: #666 !important; }
 
 .wpb-js-composer .vc_tta .vc_tta-controls-icon.vc_tta-controls-icon-plus::before, .wpb-js-composer .vc_tta .vc_tta-controls-icon.vc_tta-controls-icon-plus::after {
   border: none !important;
@@ -11596,7 +11645,7 @@ body {
   line-height: 28px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: #111; }
+  color: #666; }
 
 .wpb-js-composer .vc_tta-color-grey.vc_tta-style-outline .vc_tta-panel .vc_tta-panel-heading .vc_tta-panel-title > a {
   color: inherit;
@@ -11617,7 +11666,7 @@ body {
   padding: 26px 0 9px;
   font-size: 15px;
   line-height: 24px;
-  color: #111; }
+  color: #666; }
 
 .wpb-js-composer .vc_tta.vc_general .vc_tta-panel-title > a {
   font-family: 'Oswald', sans-serif;
@@ -11627,7 +11676,7 @@ body {
   line-height: 28px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: #111; }
+  color: #666; }
 
 .wpb-js-composer .vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panel .vc_tta-panel-heading .vc_tta-panel-title > a {
   padding: 16px 20px 16px 20px; }
@@ -11658,7 +11707,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #111; }
+  color: #666; }
 
 @media (max-width: 767px) {
       .red-countdown .red-countdown-time {
@@ -12106,7 +12155,7 @@ body {
   font-size: 24px;
   line-height: 36px;
   text-transform: uppercase;
-  color: #111; }
+  color: #666; }
 
 .red-heading-wrap.red-heading-2 .small-heading {
   font-style: normal;
@@ -12298,7 +12347,7 @@ body {
       font-size: 15px;
       line-height: 22px;
       letter-spacing: 0.3px;
-      color: #111;
+      color: #666;
       position: relative;
       overflow: hidden;
       flex: 1 1 auto;
@@ -12328,7 +12377,7 @@ body {
       font-size: 15px;
       line-height: 22px;
       letter-spacing: 0.3px;
-      color: #111;
+      color: #666;
       font-family: 'Oswald', sans-serif; }
       @media (max-width: 767px) {
           .cms-menu-food .menu-post .post-item .post-item-inner .content-right .menu-item-title .price {
@@ -12473,7 +12522,7 @@ body {
 .cms-menu-food.red-restaurant-carousel-layout2 .menu-post .post-item .post-item-inner .content-right .content-desc {
   font-size: 15px;
   line-height: 24px;
-  color: #111; }
+  color: #666; }
 
 .cms-menu-food.red-restaurant-carousel-layout2 .footer-menu-wrap {
   margin-top: 50px; }
@@ -12495,7 +12544,7 @@ body {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  border: #111 solid 1px;
+  border: #666 solid 1px;
   display: inline-block;
   padding: 0;
   background: none;
@@ -12503,7 +12552,7 @@ body {
   overflow: hidden; }
 
 .owl-dots .owl-dot span {
-  background: #111;
+  background: #666;
   width: 5px;
   height: 5px;
   border-radius: 50%;
@@ -12580,14 +12629,14 @@ body {
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    border: #111 solid 1px;
+    border: #666 solid 1px;
     display: inline-block;
     padding: 0;
     background: none;
     margin: 0 3px;
     overflow: hidden; }
     .red-filter-carousel-menu.layout-1 .cms-menu-food .menu-post .owl-dots .owl-dot span {
-      background: #111;
+      background: #666;
       width: 5px;
       height: 5px;
       border-radius: 50%;
@@ -12784,7 +12833,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  color: #111;
+  color: #666;
   text-transform: uppercase;
   -webkit-transition: linear 0.2s;
   -ms-transition: linear 0.2s;
@@ -12793,7 +12842,7 @@ body {
 .tabs-nav .tabs-nav__drag {
   margin: 26px 0 0;
   position: absolute;
-  border-bottom: 1px solid #111; }
+  border-bottom: 1px solid #666; }
 
 .tabs-nav .tabs-nav__drag.active {
   -webkit-transition-timing-function: linear;
@@ -12985,7 +13034,7 @@ body {
 .line_action {
   margin: 26px 0 0;
   position: absolute;
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid #666;
   transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s; }
 
@@ -13049,7 +13098,7 @@ body {
 .red-restaurant-grid-menu .content-right .content-right-inner {
   width: 100%;
   height: 100%;
-  border: #111 solid 1px;
+  border: #666 solid 1px;
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -13086,7 +13135,7 @@ body {
   text-align: center;
   letter-spacing: 0.48px;
   text-transform: uppercase;
-  color: #111; }
+  color: #666; }
 
 @media (min-width: 992px) and (max-width: 1200px) {
         .red-restaurant-grid-menu .content-right h3, .red-restaurant-grid-menu .content-right .price {
@@ -14271,7 +14320,7 @@ body {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  color: #111;
+  color: #666;
   margin-right: 34px;
   transition: all 300ms ease-in-out; }
 
@@ -14368,7 +14417,7 @@ body {
   padding: 0;
   text-align: center;
   flex: 0 0 auto;
-  color: #111;
+  color: #666;
   display: inline-block; }
 
 .red-social a:hover {
@@ -15901,7 +15950,7 @@ body {
   font-size: 24px;
   line-height: 36px;
   font-weight: 500;
-  color: #111; }
+  color: #666; }
 
 .red-team-layout-2.owl-carousel .owl-stage-outer {
   overflow: hidden; }
@@ -15968,7 +16017,7 @@ body {
   font-size: 24px;
   line-height: 36px;
   text-transform: uppercase;
-  color: #111;
+  color: #666;
   margin-bottom: 8px; }
 
 .red-team-layout-2 .hoverdir-wrap .team-info .team-position {
@@ -16101,7 +16150,7 @@ body {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  color: #111 !important;
+  color: #666 !important;
   padding: 0 34px 3px 0 !important; }
 
 .wpb-js-composer .vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab > a > span {
@@ -16111,7 +16160,7 @@ body {
   content: '';
   width: 100%;
   height: 1px;
-  background: #111;
+  background: #666;
   position: absolute;
   bottom: -3px;
   left: 0;
@@ -16176,7 +16225,7 @@ body {
   content: '';
   width: 100%;
   height: 1px;
-  background: #111;
+  background: #666;
   position: absolute;
   bottom: 0;
   left: 0; }
@@ -16190,7 +16239,7 @@ body {
   background: none !important;
   font-size: 15px;
   line-height: 24px;
-  color: #111;
+  color: #666;
   padding: 22px 8px 0px 0; }
 
 .wpb-js-composer .vc_tta-color-grey.vc_tta-style-modern .vc_tta-panel .vc_tta-panel-heading {
@@ -16237,7 +16286,7 @@ body {
   content: '';
   width: 1px;
   height: 100%;
-  background: #111;
+  background: #666;
   position: absolute;
   right: 0;
   top: 0; }
@@ -16255,7 +16304,7 @@ body {
 
 .wpb-js-composer .vc_tta-tabs.vc_tta-tabs-position-left .vc_tta-tab {
   margin: 0 !important;
-  color: #111 !important; }
+  color: #666 !important; }
 
 .wpb-js-composer .vc_tta.vc_general .vc_tta-panel-body {
   -webkit-transform: translate(0, 0) !important;
@@ -16441,7 +16490,7 @@ body {
 .red-testimonial .block-img {
   border-radius: 50%;
   padding: 3px;
-  border: 1px solid #111;
+  border: 1px solid #666;
   width: 56px;
   height: 56px; }
 
@@ -16464,7 +16513,7 @@ body {
   line-height: 22px;
   letter-spacing: 0.3px;
   text-transform: uppercase;
-  color: #111; }
+  color: #666; }
 
 .red-testimonial .ttmn-position {
   color: #777;
@@ -16505,7 +16554,7 @@ body {
   font-size: 15px;
   line-height: 24px;
   text-align: center;
-  color: #111;
+  color: #666;
   border-bottom: #d8d8d8 solid 1px;
   padding-bottom: 36px;
   margin-bottom: 35px; }
@@ -16642,7 +16691,7 @@ body {
   overflow: hidden; }
 
 .red-video-wrapper .small-heading {
-  color: #111;
+  color: #666;
   position: relative;
   margin-bottom: 25px;
   text-transform: uppercase; }
@@ -19640,16 +19689,16 @@ table.variations .label, .quantity > .screen-reader-text {
   margin-bottom: 20px; }
 
 .woocommerce-Reviews .comment-respond input[type="text"]::-webkit-input-placeholder, .woocommerce-Reviews .comment-respond input[type="email"]::-webkit-input-placeholder, .woocommerce-Reviews .comment-respond input[type="url"]::-webkit-input-placeholder, .woocommerce-Reviews .comment-respond input[type="password"]::-webkit-input-placeholder, .woocommerce-Reviews .comment-respond input[type="search"]::-webkit-input-placeholder, .woocommerce-Reviews .comment-respond input[type="tel"]::-webkit-input-placeholder, .woocommerce-Reviews .comment-respond input[type="number"]::-webkit-input-placeholder, .woocommerce-Reviews .comment-respond input[type="range"]::-webkit-input-placeholder, .woocommerce-Reviews .comment-respond input[type="date"]::-webkit-input-placeholder, .woocommerce-Reviews .comment-respond input[type="month"]::-webkit-input-placeholder, .woocommerce-Reviews .comment-respond input[type="week"]::-webkit-input-placeholder, .woocommerce-Reviews .comment-respond input[type="time"]::-webkit-input-placeholder, .woocommerce-Reviews .comment-respond input[type="datetime"]::-webkit-input-placeholder, .woocommerce-Reviews .comment-respond input[type="datetime-local"]::-webkit-input-placeholder, .woocommerce-Reviews .comment-respond input[type="color"]::-webkit-input-placeholder, .woocommerce-Reviews .comment-respond textarea::-webkit-input-placeholder, .woocommerce-Reviews .comment-respond select::-webkit-input-placeholder {
-  color: #111; }
+  color: #666; }
 
 .woocommerce-Reviews .comment-respond input[type="text"]:-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="email"]:-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="url"]:-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="password"]:-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="search"]:-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="tel"]:-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="number"]:-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="range"]:-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="date"]:-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="month"]:-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="week"]:-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="time"]:-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="datetime"]:-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="datetime-local"]:-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="color"]:-moz-placeholder, .woocommerce-Reviews .comment-respond textarea:-moz-placeholder, .woocommerce-Reviews .comment-respond select:-moz-placeholder {
-  color: #111; }
+  color: #666; }
 
 .woocommerce-Reviews .comment-respond input[type="text"]::-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="email"]::-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="url"]::-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="password"]::-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="search"]::-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="tel"]::-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="number"]::-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="range"]::-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="date"]::-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="month"]::-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="week"]::-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="time"]::-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="datetime"]::-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="datetime-local"]::-moz-placeholder, .woocommerce-Reviews .comment-respond input[type="color"]::-moz-placeholder, .woocommerce-Reviews .comment-respond textarea::-moz-placeholder, .woocommerce-Reviews .comment-respond select::-moz-placeholder {
-  color: #111; }
+  color: #666; }
 
 .woocommerce-Reviews .comment-respond input[type="text"]:-ms-input-placeholder, .woocommerce-Reviews .comment-respond input[type="email"]:-ms-input-placeholder, .woocommerce-Reviews .comment-respond input[type="url"]:-ms-input-placeholder, .woocommerce-Reviews .comment-respond input[type="password"]:-ms-input-placeholder, .woocommerce-Reviews .comment-respond input[type="search"]:-ms-input-placeholder, .woocommerce-Reviews .comment-respond input[type="tel"]:-ms-input-placeholder, .woocommerce-Reviews .comment-respond input[type="number"]:-ms-input-placeholder, .woocommerce-Reviews .comment-respond input[type="range"]:-ms-input-placeholder, .woocommerce-Reviews .comment-respond input[type="date"]:-ms-input-placeholder, .woocommerce-Reviews .comment-respond input[type="month"]:-ms-input-placeholder, .woocommerce-Reviews .comment-respond input[type="week"]:-ms-input-placeholder, .woocommerce-Reviews .comment-respond input[type="time"]:-ms-input-placeholder, .woocommerce-Reviews .comment-respond input[type="datetime"]:-ms-input-placeholder, .woocommerce-Reviews .comment-respond input[type="datetime-local"]:-ms-input-placeholder, .woocommerce-Reviews .comment-respond input[type="color"]:-ms-input-placeholder, .woocommerce-Reviews .comment-respond textarea:-ms-input-placeholder, .woocommerce-Reviews .comment-respond select:-ms-input-placeholder {
-  color: #111; }
+  color: #666; }
 
 .woocommerce-Reviews .comment-respond .comment-form [type="submit"] {
   width: auto; }
@@ -20482,7 +20531,7 @@ dl.variation dd {
   border-radius: 0px;
   height: 52px;
   margin-bottom: 0px;
-  border: 1px solid #111;
+  border: 1px solid #666;
   padding: 10.5px 19px;
   font-family: 'Oswald', sans-serif;
   font-style: normal;
@@ -20491,7 +20540,7 @@ dl.variation dd {
   line-height: 28px;
   letter-spacing: 1.85714px;
   text-transform: uppercase;
-  color: #111; }
+  color: #666; }
 
 .woocommerce-checkout form.checkout .select2-container .select2-choice::-webkit-input-placeholder, .woocommerce-checkout form.checkout .select2-container .select2-selection::-webkit-input-placeholder {
   font-family: 'Oswald', sans-serif;
@@ -20500,7 +20549,7 @@ dl.variation dd {
   font-size: 13px;
   line-height: 28px;
   letter-spacing: 1.85714px;
-  color: #111;
+  color: #666;
   text-transform: uppercase; }
 
 .woocommerce-checkout form.checkout .select2-container .select2-choice:-moz-placeholder, .woocommerce-checkout form.checkout .select2-container .select2-selection:-moz-placeholder {
@@ -20510,7 +20559,7 @@ dl.variation dd {
   font-size: 13px;
   line-height: 28px;
   letter-spacing: 1.85714px;
-  color: #111;
+  color: #666;
   text-transform: uppercase; }
 
 .woocommerce-checkout form.checkout .select2-container .select2-choice::-moz-placeholder, .woocommerce-checkout form.checkout .select2-container .select2-selection::-moz-placeholder {
@@ -20520,7 +20569,7 @@ dl.variation dd {
   font-size: 13px;
   line-height: 28px;
   letter-spacing: 1.85714px;
-  color: #111;
+  color: #666;
   text-transform: uppercase; }
 
 .woocommerce-checkout form.checkout .select2-container .select2-choice:-ms-input-placeholder, .woocommerce-checkout form.checkout .select2-container .select2-selection:-ms-input-placeholder {
@@ -20530,7 +20579,7 @@ dl.variation dd {
   font-size: 13px;
   line-height: 28px;
   letter-spacing: 1.85714px;
-  color: #111;
+  color: #666;
   text-transform: uppercase; }
 
 .woocommerce-checkout form.checkout .select2-container .select2-choice:hover, .woocommerce-checkout form.checkout .select2-container .select2-selection:hover, .woocommerce-checkout form.checkout .select2-container .select2-choice:active, .woocommerce-checkout form.checkout .select2-container .select2-selection:active, .woocommerce-checkout form.checkout .select2-container .select2-choice:focus, .woocommerce-checkout form.checkout .select2-container .select2-selection:focus {
@@ -21985,7 +22034,7 @@ dl.variation dd {
   content: '\f005';
   font-family: 'Font Awesome 5 Pro';
   font-size: 12px;
-  color: #111; }
+  color: #666; }
 
 .stars > span a:hover ~ a::before {
   content: '\f005';
