@@ -134,12 +134,18 @@
 			color: inherit;
 			font-weight: inherit;
 			float: left;
+			&:hover{
+				color: $primary_color;
+			}
 		}
 		.woocommerce-currency-switcher-form a.dd-option {
 			font-weight: inherit;
 			padding: 0;
 			border: none;
 			text-align: left;
+			&:hover{
+				color: $primary_color;
+			}
 
 		}
 		.dd-pointer-up {
