@@ -732,7 +732,7 @@ html {
   .d-print-inline-flex {
     display: inline-flex !important; } }
 
-.clearfix::after, #red-header-top .widget-woocommerce-currency-switcher::after, .red-newsletter-1::after, .woocommerce-Reviews::after, .woocommerce-checkout form.checkout_coupon::after, .clearfix::before, #red-header-top .widget-woocommerce-currency-switcher::before, .red-newsletter-1::before, .woocommerce-Reviews::before, .woocommerce-checkout form.checkout_coupon::before {
+.clearfix::after, #red-header-top .widget-woocommerce-currency-switcher::after, #red-header-top .widget-woocommerce-currency-switcher .dd-container::after, .red-newsletter-1::after, .woocommerce-Reviews::after, .woocommerce-checkout form.checkout_coupon::after, .clearfix::before, #red-header-top .widget-woocommerce-currency-switcher::before, #red-header-top .widget-woocommerce-currency-switcher .dd-container::before, .red-newsletter-1::before, .woocommerce-Reviews::before, .woocommerce-checkout form.checkout_coupon::before {
   display: block;
   clear: both;
   content: ""; }
@@ -1119,7 +1119,7 @@ html {
       .align-self-xl-stretch {
         align-self: stretch !important; } }
 
-.clearfix::after, #red-header-top .widget-woocommerce-currency-switcher::after, .red-newsletter-1::after, .woocommerce-Reviews::after, .woocommerce-checkout form.checkout_coupon::after, .clearfix::before, #red-header-top .widget-woocommerce-currency-switcher::before, .red-newsletter-1::before, .woocommerce-Reviews::before, .woocommerce-checkout form.checkout_coupon::before {
+.clearfix::after, #red-header-top .widget-woocommerce-currency-switcher::after, #red-header-top .widget-woocommerce-currency-switcher .dd-container::after, .red-newsletter-1::after, .woocommerce-Reviews::after, .woocommerce-checkout form.checkout_coupon::after, .clearfix::before, #red-header-top .widget-woocommerce-currency-switcher::before, #red-header-top .widget-woocommerce-currency-switcher .dd-container::before, .red-newsletter-1::before, .woocommerce-Reviews::before, .woocommerce-checkout form.checkout_coupon::before {
   display: block;
   clear: both;
   content: ""; }
@@ -8129,22 +8129,11 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
       width: auto; } }
 
 #red-header-top .menu {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -10px;
-  margin-right: -10px; }
-
-#red-header-top .menu > * {
-  flex: 0 0 auto;
-  width: auto !important;
-  max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center; }
+  float: left; }
 
 #red-header-top .menu li {
-  padding-left: 10px;
-  padding-right: 10px; }
+  list-style: none;
+  display: inline-block; }
 
 #red-header-top .menu.add-divider li {
   border-right: 1px solid #e4e4e4; }
@@ -8196,12 +8185,12 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
 #red-header-top .switcher.notranslate > div.selected {
   background: none;
   position: relative;
-  padding-right: 12px; }
+  padding-right: 18px; }
 
 #red-header-top .switcher.notranslate > div.selected:after {
   content: "\f107";
   position: absolute;
-  top: 10px;
+  top: 8px;
   right: 0;
   font-family: "Font Awesome 5 Pro";
   font-weight: 500;
@@ -8220,7 +8209,7 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
   position: absolute;
   background: #fff;
   left: 0;
-  padding: 5px 15px; }
+  padding: 5px 12px 5px 30px; }
 
 #red-header-top .switcher.notranslate a {
   border: none;
@@ -8242,7 +8231,8 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
 #red-header-top {
   font-size: 13px;
   line-height: 28px;
-  padding: 16px 0 12px; }
+  padding: 11px 0;
+  border-bottom: #e9e9e9 solid 1px; }
 
 #red-header-top .contact {
   list-style: none;
@@ -8283,8 +8273,11 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
 #red-header-top .widget-woocommerce-currency-switcher .dd-desc {
   display: none; }
 
-#red-header-top .widget_gtranslate, #red-header-top .vc_wp_custommenu, #red-header-top .wpb_content_element, #red-header-top .WOOCS_SELECTOR {
+#red-header-top .widget_gtranslate, #red-header-top .WOOCS_SELECTOR {
   float: left; }
+
+#red-header-top .vc_wp_custommenu, #red-header-top .wpb_widgetised_column {
+  float: right; }
 
 #red-header-top .widget_nav_menu li a {
   color: inherit;
@@ -8292,15 +8285,26 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
   line-height: 24px;
   display: inline-block;
   padding-right: 30px;
-  padding-left: 10px; }
+  padding-left: 27px; }
 
 #red-header-top .widget_nav_menu li a:hover {
   color: #fbb040; }
 
 #red-header-top .widget-woocommerce-currency-switcher {
-  padding-left: 30px;
+  padding-left: 20px;
   border-right: #e8e8e8 solid 1px;
-  padding-right: 30px; }
+  padding-right: 20px; }
+
+#red-header-top .widget-woocommerce-currency-switcher .dd-container {
+  padding: 0 10px 0px; }
+
+#red-header-top .widget-woocommerce-currency-switcher .dd-options {
+  border: none;
+  border-top: none;
+  box-shadow: none;
+  top: 100%;
+  padding: 0 10px 0px;
+  width: 100%; }
 
 #red-header-top .widget-woocommerce-currency-switcher .dd-pointer-down {
   background: none;
@@ -8330,7 +8334,8 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
 #red-header-top .widget-woocommerce-currency-switcher .dd-select {
   border-radius: 0;
   border: none;
-  background: none !important; }
+  background: none !important;
+  padding: 0 10px 10px; }
 
 #red-header-top .widget-woocommerce-currency-switcher label {
   color: inherit;
@@ -8349,6 +8354,22 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
   color: inherit;
   font-weight: inherit;
   float: left; }
+
+#red-header-top .widget-woocommerce-currency-switcher .dd-selected:hover {
+  color: #fbb040; }
+
+#red-header-top .widget-woocommerce-currency-switcher .woocommerce-currency-switcher-form a.dd-option {
+  font-weight: inherit;
+  padding: 0;
+  border: none;
+  text-align: left; }
+
+#red-header-top .widget-woocommerce-currency-switcher .woocommerce-currency-switcher-form a.dd-option:hover {
+  color: #fbb040; }
+
+#red-header-top .widget-woocommerce-currency-switcher .dd-pointer-up {
+  border: none !important;
+  border-bottom: none !important; }
 /* List */
 /* Level 1 */
 /* Level 2 */
