@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/inc/functions/header-cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/header-cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/header/_icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/header/_icons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/functions/header-search.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/header-search.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/assets/scss/header/_icons.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="290">
-              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+              <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -49,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/functions/header-cart.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="290">
@@ -58,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inc/functions/header-search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+            <state relative-caret-position="754">
+              <caret line="26" column="225" selection-start-line="26" selection-start-column="225" selection-end-line="26" selection-end-column="225" />
             </state>
           </provider>
         </entry>
@@ -183,9 +184,9 @@
         <option value="$PROJECT_DIR$/assets/scss/header-top/header-top.scss" />
         <option value="$PROJECT_DIR$/assets/scss/header-top/_language.scss" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/inc/functions/header-cart.php" />
         <option value="$PROJECT_DIR$/assets/scss/header/_icons.scss" />
         <option value="$PROJECT_DIR$/inc/functions/header-search.php" />
-        <option value="$PROJECT_DIR$/inc/functions/header-cart.php" />
       </list>
     </option>
   </component>
@@ -317,12 +318,12 @@
       <workItem from="1575255060794" duration="707000" />
       <workItem from="1575876538084" duration="4480000" />
       <workItem from="1575963723751" duration="3306000" />
-      <workItem from="1576122107377" duration="18310000" />
+      <workItem from="1576122107377" duration="18501000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68594000" />
+    <option name="totallyTimeSpent" value="68785000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -630,22 +631,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/header/_icons.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/header/_header_layout1.scss">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/functions/header-search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template-parts/header/layout-1.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -658,6 +645,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/header/_icons.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/functions/header-search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="26" column="225" selection-start-line="26" selection-start-column="225" selection-end-line="26" selection-end-column="225" />
         </state>
       </provider>
     </entry>

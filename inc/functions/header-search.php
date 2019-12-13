@@ -24,7 +24,7 @@ if(!function_exists('sunix_header_search')){
 		}
 		echo wp_kses_post($args['before']);
 	?>
-		<a href="#red-header-search" class="<?php echo trim(implode(' ', $link_classes));?>"><span class="icon <?php echo esc_attr($args['icon']);?>"></span> <?php esc_html_e('Search','sunix')?></a>
+        <a href="#red-header-search" class="<?php echo trim(implode(' ', $link_classes));?>"><span class="icon <?php echo esc_attr($args['icon']);?>"></span> <span class="span-text"><?php esc_html_e('Search','sunix')?></span></a>
 	<?php
 		echo wp_kses_post($args['after']);
 	}
