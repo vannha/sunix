@@ -8,7 +8,7 @@ if(!function_exists('sunix_header_search')){
 		$args = wp_parse_args($args, [
 			'before' => '',
 			'after'  => '',
-			'icon'	 => 'flaticon-magnifying-glass',
+			'icon'	 => 'fal fa-search',
 			'type'	 => ''
 		]);
 		$show_search = sunix_get_opts('header_search', '0');
