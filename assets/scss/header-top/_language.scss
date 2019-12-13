@@ -45,6 +45,9 @@
         font-family: inherit;
         font-size: inherit;
         font-weight: inherit;
+        &:hover{
+            color: $primary_color;
+        }
 
         img {
             opacity: 1;
