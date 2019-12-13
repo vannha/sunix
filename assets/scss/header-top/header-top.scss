@@ -83,6 +83,7 @@
 			border-top: none;
 			box-shadow: none;
 			top: 100%;
+			padding: 0 10px 10px;
 		}
 		.dd-pointer-down{
 			background: none;
@@ -113,6 +114,7 @@
 			border-radius: 0;
 			border: none;
 			background: none !important;
+			padding: 0 10px 10px;
 		}
 		label {
 			color: inherit;
@@ -136,6 +138,7 @@
 			font-weight: inherit;
 			padding: 0;
 			border: none;
+			text-align: left;
 		}
 		.dd-pointer-up {
 			border: none !important;
