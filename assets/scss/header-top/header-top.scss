@@ -76,6 +76,7 @@
 		@extend .clearfix;
 		.dd-container {
 			@extend .clearfix;
+			padding: 0 10px;
 		}
 		.dd-options {
 			border: none;
@@ -137,8 +138,8 @@
 			border: none;
 		}
 		.dd-pointer-up {
-			border: none;
-			border-bottom: none;
+			border: none !important;
+			border-bottom: none !important;
 		}
 	}
 }
