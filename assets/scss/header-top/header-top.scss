@@ -77,6 +77,12 @@
 		.dd-container {
 			@extend .clearfix;
 		}
+		.dd-options {
+			border: none;
+			border-top: none;
+			box-shadow: none;
+			top: 100%;
+		}
 		.dd-pointer-down{
 			background: none;
 			position: relative;
