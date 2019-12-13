@@ -52,8 +52,8 @@
 	float: left;
 }
 .vc_wp_custommenu,
-.wpb_content_element{
-	@extend .clearfix;
+.wpb_widgetised_column{
+	float: right;
 }
 	.widget_nav_menu{
 		li a{
