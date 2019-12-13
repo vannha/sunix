@@ -8,7 +8,7 @@ if(!function_exists('sunix_header_cart')){
 		$args = wp_parse_args($args, [
 			'before' => '',
 			'after'  => '', 
-			'icon'	 => 'flaticon-shopping-cart'
+			'icon'	 => 'fas fa-shopping-bag'
 		]);
 		if(!class_exists( 'WooCommerce' )) return;
 		$show_cart = sunix_get_opts('header_cart', '0');
