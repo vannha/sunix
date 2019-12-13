@@ -11,7 +11,7 @@
 if(!function_exists('sunix_configs')){
     function sunix_configs($value){
         $configs = [
-            'primary_color'    => '#fbb040',
+            'primary_color'    => '#f4436d',
             'accent_color'     => '#111',
             'secondary_color'     => '#CE0023',
             // Typo
