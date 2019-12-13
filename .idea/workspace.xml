@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/scss/header-top/header-top.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/header-top/header-top.scss" afterDir="false" />
-    </list>
+    <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scss/header-top/header-top.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+            <state relative-caret-position="208">
+              <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -294,12 +292,12 @@
       <workItem from="1575255060794" duration="707000" />
       <workItem from="1575876538084" duration="4480000" />
       <workItem from="1575963723751" duration="3306000" />
-      <workItem from="1576122107377" duration="13793000" />
+      <workItem from="1576122107377" duration="14196000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64077000" />
+    <option name="totallyTimeSpent" value="64480000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -637,8 +635,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/header-top/header-top.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+        <state relative-caret-position="208">
+          <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
         </state>
       </provider>
     </entry>
