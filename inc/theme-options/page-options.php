@@ -203,12 +203,7 @@ function sunix_page_options_register($metabox)
             )
         )
     ));
-    $metabox->add_section('post', array(
-        'title'  => esc_html__('Post Title', 'sunix'),
-        'desc'   => esc_html__('Settings for page header area.', 'sunix'),
-        'icon'   => 'el-icon-map-marker',
-        'fields' => sunix_page_title_opts(['default' => true])
-    ));
+
 
     /**
      * Config post format meta options
