@@ -6,7 +6,7 @@
   padding-top: 150px;
   }
   .page-title{
-    font-weight: 600;
+    font-weight: 900;
     line-height: 71px;
     text-transform: uppercase;
     color:$accent_color;
@@ -16,9 +16,9 @@
     }
   }
   .title-wrap{
-    padding-bottom: 157px;
+  
     @media (max-width: 767px) {
-      padding-bottom: 57px;
+     
     }
   }
 }
