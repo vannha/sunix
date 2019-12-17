@@ -73,6 +73,7 @@
 		text-align: center;
         font-size: 18px;
 		@include border-radius(50%);
+        color: inherit;
 		&:hover{
 			color: $primary_color;
 		}
