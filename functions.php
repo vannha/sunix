@@ -12,7 +12,7 @@ if(!function_exists('sunix_configs')){
     function sunix_configs($value){
         $configs = [
             'primary_color'    => '#f4436d',
-            'accent_color'     => '#111',
+            'accent_color'     => '#333',
             'secondary_color'     => '#CE0023',
             // Typo
             'body_bg'               => '#fff',
