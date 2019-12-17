@@ -13,6 +13,7 @@
 	@include transition(all 0.5s);
   font-family: $ExtraFont;
   font-weight: 500;
+  color: $accent_color;
   .btn-book-table{
     border: 1px solid #FFFFFF;
     color: #fff;
