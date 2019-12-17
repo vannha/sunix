@@ -55,6 +55,7 @@
             &.current_page_ancestor,
             &.current-menu-ancestor{
                > a {
+                   color:$primary_color;
                     &:after{
                         left: 0;
                         width: 100%;
