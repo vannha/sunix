@@ -74,6 +74,8 @@
         font-size: 18px;
 		@include border-radius(50%);
         color: inherit;
+        margin-left: 43px;
+
 		&:hover{
 			color: $primary_color;
 		}
