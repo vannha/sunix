@@ -12,7 +12,7 @@ $separator_rtl: '-';
 	padding-top: 2px;
 
 	.separator{
-		padding: 0 10px;
+		padding: 0 14.5px;
 		&:empty{
 			@include transform(translateY(4px));
 			&:before{
