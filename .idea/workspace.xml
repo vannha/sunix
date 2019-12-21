@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/scss/page-title/_layout1.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/page-title/_layout1.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/content/_single.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/content/_single.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,15 +18,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template-parts/page-title/layout-1.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/page-title/page-title.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1107">
@@ -35,11 +26,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/page-title/_layout1.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="58">
               <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/scss/content/_single.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="609">
+              <caret line="153" column="21" selection-start-line="153" selection-start-column="21" selection-end-line="153" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -147,7 +147,6 @@
         <option value="$PROJECT_DIR$/assets/scss/widgets/_wp_recent_comment.scss" />
         <option value="$PROJECT_DIR$/assets/scss/widgets/widgets.scss" />
         <option value="$PROJECT_DIR$/assets/scss/comments/_form.scss" />
-        <option value="$PROJECT_DIR$/assets/scss/content/_single.scss" />
         <option value="$PROJECT_DIR$/assets/scss/comments/_list.scss" />
         <option value="$PROJECT_DIR$/template-parts/loop/content.php" />
         <option value="$PROJECT_DIR$/assets/scss/content/_loop.scss" />
@@ -190,6 +189,7 @@
         <option value="$PROJECT_DIR$/assets/scss/page-title/_breadcrumb.scss" />
         <option value="$PROJECT_DIR$/assets/scss/page-title/_title.scss" />
         <option value="$PROJECT_DIR$/assets/scss/page-title/_layout1.scss" />
+        <option value="$PROJECT_DIR$/assets/scss/content/_single.scss" />
       </list>
     </option>
   </component>
@@ -222,6 +222,13 @@
               <item name="sunix" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sunix" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
@@ -331,12 +338,12 @@
       <workItem from="1576122107377" duration="19819000" />
       <workItem from="1576548380767" duration="8281000" />
       <workItem from="1576834208875" duration="1240000" />
-      <workItem from="1576894079006" duration="1888000" />
+      <workItem from="1576894079006" duration="2567000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81512000" />
+    <option name="totallyTimeSpent" value="82191000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -367,13 +374,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/inc/woo/_hook_single.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6989">
-          <caret line="244" column="167" selection-start-line="244" selection-start-column="167" selection-end-line="244" selection-end-column="167" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/functions/header-icons.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1247">
@@ -691,6 +691,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
           <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/content/_single.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="153" column="21" selection-start-line="153" selection-start-column="21" selection-end-line="153" selection-end-column="21" />
         </state>
       </provider>
     </entry>
