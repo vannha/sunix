@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/scss/content/_single.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/content/_single.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,11 +35,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/content/_single.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="609">
               <caret line="153" column="21" selection-start-line="153" selection-start-column="21" selection-end-line="153" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="754">
+              <caret line="53" column="42" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -58,15 +67,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="406">
               <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/scss/menus/_desktop.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1653">
-              <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -179,7 +179,6 @@
         <option value="$PROJECT_DIR$/assets/scss/header-top/_language.scss" />
         <option value="$PROJECT_DIR$/inc/functions/header-cart.php" />
         <option value="$PROJECT_DIR$/inc/functions/header-search.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/assets/scss/menus/_variations.scss" />
         <option value="$PROJECT_DIR$/assets/scss/menus/_menu.scss" />
         <option value="$PROJECT_DIR$/assets/scss/menus/_desktop.scss" />
@@ -190,6 +189,7 @@
         <option value="$PROJECT_DIR$/assets/scss/page-title/_title.scss" />
         <option value="$PROJECT_DIR$/assets/scss/page-title/_layout1.scss" />
         <option value="$PROJECT_DIR$/assets/scss/content/_single.scss" />
+        <option value="$PROJECT_DIR$/functions.php" />
       </list>
     </option>
   </component>
@@ -338,12 +338,12 @@
       <workItem from="1576122107377" duration="19819000" />
       <workItem from="1576548380767" duration="8281000" />
       <workItem from="1576834208875" duration="1240000" />
-      <workItem from="1576894079006" duration="2567000" />
+      <workItem from="1576894079006" duration="2845000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82191000" />
+    <option name="totallyTimeSpent" value="82469000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -597,13 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/header/_icons.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2233">
@@ -698,6 +691,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="153" column="21" selection-start-line="153" selection-start-column="21" selection-end-line="153" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="53" column="42" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
         </state>
       </provider>
     </entry>

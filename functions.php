@@ -51,7 +51,7 @@ if(!function_exists('sunix_configs')){
             'thumbnail_size_w' => 110,
             'thumbnail_size_h' => 110,
             'post_thumbnail_size_w' => 1170,
-            'post_thumbnail_size_h' => 679,
+            'post_thumbnail_size_h' => 638,
             // Header 
             'header_height'       => '116px',
             'logo_width'       => '149',
