@@ -1,5 +1,5 @@
-$separator_ltr: '\f105';
-$separator_rtl: '\f104';
+$separator_ltr: '-';
+$separator_rtl: '-';
 .breadcrumb{
 	font-weight:300;
 	color: #666;
@@ -13,9 +13,6 @@ $separator_rtl: '\f104';
 	.separator{
 		padding: 0 10px;
 		&:empty{
-			font-family: $FontAwesome5;
-			font-size: 10px;
-		  font-weight: 300;
 			@include transform(translateY(4px));
 			&:before{
 				content: $separator_ltr;
