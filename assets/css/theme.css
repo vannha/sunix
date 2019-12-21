@@ -9325,7 +9325,7 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
   padding-top: 2px; }
 
 .breadcrumb .separator {
-  padding: 0 10px; }
+  padding: 0 14.5px; }
 
 .breadcrumb .separator:empty {
   transform: translateY(4px); }
