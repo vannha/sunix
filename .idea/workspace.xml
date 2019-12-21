@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/scss/page-title/_title.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/page-title/_title.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/page-title/_layout1.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/page-title/_layout1.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scss/page-title/_layout1.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="58">
@@ -44,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/page-title/_title.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="261">
@@ -188,8 +188,8 @@
         <option value="$PROJECT_DIR$/assets/scss/header/header.scss" />
         <option value="$PROJECT_DIR$/template-parts/page-title/layout-1.php" />
         <option value="$PROJECT_DIR$/assets/scss/page-title/_breadcrumb.scss" />
-        <option value="$PROJECT_DIR$/assets/scss/page-title/_layout1.scss" />
         <option value="$PROJECT_DIR$/assets/scss/page-title/_title.scss" />
+        <option value="$PROJECT_DIR$/assets/scss/page-title/_layout1.scss" />
       </list>
     </option>
   </component>
@@ -331,12 +331,12 @@
       <workItem from="1576122107377" duration="19819000" />
       <workItem from="1576548380767" duration="8281000" />
       <workItem from="1576834208875" duration="1240000" />
-      <workItem from="1576894079006" duration="1872000" />
+      <workItem from="1576894079006" duration="1888000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81496000" />
+    <option name="totallyTimeSpent" value="81512000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -680,17 +680,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/page-title/_layout1.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/page-title/_title.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="9" column="21" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/page-title/_layout1.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
