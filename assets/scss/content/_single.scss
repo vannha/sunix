@@ -18,40 +18,43 @@
   .red-post-header{
 	padding-bottom: 30px;
 	  position: relative;
-	  .red-meta{
-		  display: inline-block !important;
-		  top: -90px;
-		  left: 40px;
-		  position: absolute;
-		  z-index: 2;
-		  color: #fff;
-		.red-date{
-			background: rgba(#000,0.9);
-			text-align: center;
-			padding-top: 29px;
-			a{
-				color: inherit;
-				cursor: none;
-			}
-			span{
-				width: 100%;
-				display: block;
-				
-				.day{
-					font-size: 30px;
-				}
-				.month-year{
-					text-transform: uppercase;
-					font-size: 13px;
-					padding-top: 7px;
-				}
-			}
-		}
-		  .red-posted-in{
-			  background: $primary_color;
-		  }
+	  .red-before-title{
+		  .red-meta{
+			  display: inline-block !important;
+			  top: -90px;
+			  left: 40px;
+			  position: absolute;
+			  z-index: 2;
+			  color: #fff;
+			  .red-date{
+				  background: rgba(#000,0.9);
+				  text-align: center;
+				  padding-top: 29px;
+				  a{
+					  color: inherit;
+					  cursor: none;
+				  }
+				  span{
+					  width: 100%;
+					  display: block;
 
+					  .day{
+						  font-size: 30px;
+					  }
+					  .month-year{
+						  text-transform: uppercase;
+						  font-size: 13px;
+						  padding-top: 7px;
+					  }
+				  }
+			  }
+			  .red-posted-in{
+				  background: $primary_color;
+			  }
+
+		  }
 	  }
+
 	.red-heading{
 	  padding-bottom: 23px;
 	  @media (max-width: 767px) {
