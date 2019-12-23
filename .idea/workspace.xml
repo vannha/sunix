@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/content/_single.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/content/_single.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,11 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scss/content/_single.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
-              <folding>
-                <element signature="e#367#896#0" />
-              </folding>
+            <state relative-caret-position="645">
+              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -325,12 +323,12 @@
       <workItem from="1576834208875" duration="1240000" />
       <workItem from="1576894079006" duration="7523000" />
       <workItem from="1577070861013" duration="2226000" />
-      <workItem from="1577084738387" duration="6268000" />
+      <workItem from="1577084738387" duration="6444000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95641000" />
+    <option name="totallyTimeSpent" value="95817000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -694,11 +692,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/content/_single.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
-          <folding>
-            <element signature="e#367#896#0" />
-          </folding>
+        <state relative-caret-position="645">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
         </state>
       </provider>
     </entry>
