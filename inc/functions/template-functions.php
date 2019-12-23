@@ -81,11 +81,12 @@ if ( ! function_exists( 'sunix_post_meta_top' ) ) {
             'show_edit'       => false,
             'stretch_content' => false,
             'excludes'        => ['category'=> true],
-            'sep'             => '/',
+            'sep'             => '',
         ]);
         $metas = [];
-        if($args['show_cat']) $metas[] = sunix_posted_in(['show_cat' => $args['show_cat'], 'echo' => false]);
         if($args['show_date']) $metas[] = sunix_posted_on(['show_date' => $args['show_date'], 'echo' => false]);
+        if($args['show_cat']) $metas[] = sunix_posted_in(['show_cat' => $args['show_cat'], 'echo' => false]);
+
         $taxo = sunix_get_post_taxonomies();
         $terms = get_the_term_list( get_the_ID(), $taxo, '', $args['sep'], '' );
         if(!empty($terms))
