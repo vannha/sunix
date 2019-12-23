@@ -88,6 +88,7 @@ if ( ! function_exists( 'sunix_posted_on' ) ) :
             esc_attr( get_the_date( 'c' ) ),
             esc_html( get_the_date() )
         );
+        var_dump($posted_time);
         $classes = ['red-date', 'red-posted-on', $args['class']];
         if($args['show_update']) $classes[] = 'red-updated-on';
         ob_start();
