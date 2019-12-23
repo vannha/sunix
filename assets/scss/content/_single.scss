@@ -17,6 +17,16 @@
   }
   .red-post-header{
 	padding-bottom: 30px;
+	  position: relative;
+	  .red-meta{
+		  display: inline-block !important;
+		  top: -90px;
+		  left: 40px;
+		  position: absolute;
+		  z-index: 2;
+
+
+	  }
 	.red-heading{
 	  padding-bottom: 23px;
 	  @media (max-width: 767px) {
@@ -162,14 +172,6 @@
 	  padding-bottom: 70px;
 	}
   }
-.red-meta{
-	display: inline-block !important;
-	bottom: -34px;
-	left: 40px;
-	position: absolute;
-	z-index: 2;
 
-
-}
 
 }
