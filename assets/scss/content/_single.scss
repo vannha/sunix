@@ -24,12 +24,17 @@
 		  left: 40px;
 		  position: absolute;
 		  z-index: 2;
+		  color: #fff;
 		.red-date{
 			background: rgba(#000,0.9);
 			text-align: center;
 			span{
 				width: 100%;
 				display: block;
+				
+				.day{
+					font-size: 30px;
+				}
 			}
 		}
 		  .red-posted-in{
