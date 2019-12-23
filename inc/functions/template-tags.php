@@ -84,11 +84,11 @@ if ( ! function_exists( 'sunix_posted_on' ) ) :
         if($args['show_date'] !== '1') return;
 
         $time_string = '<span class="published" data-time="%1$s">%2$s</span>';
-        $posted_time1 = sprintf( $time_string,
+        $posted_time = sprintf( $time_string,
             esc_attr( get_the_date( 'c' ) ),
             esc_html( get_the_date() )
         );
-        $posted_time= '<span class="day">'.date_format($posted_time1,'d').'</span><span class="month-year">'.date_format($posted_time1,'M Y').'</span>';
+        echo '<span class="day">'.date_format($posted_time,'d').'</span><span class="month-year">'.date_format($posted_time,'M Y').'</span>';
         $classes = ['red-date', 'red-posted-on', $args['class']];
         if($args['show_update']) $classes[] = 'red-updated-on';
         ob_start();
