@@ -28,6 +28,10 @@
 		.red-date{
 			background: rgba(#000,0.9);
 			text-align: center;
+			a{
+				color: inherit;
+				cursor: none;
+			}
 			span{
 				width: 100%;
 				display: block;
