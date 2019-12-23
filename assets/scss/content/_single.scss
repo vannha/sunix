@@ -24,7 +24,13 @@
 		  left: 40px;
 		  position: absolute;
 		  z-index: 2;
-
+		.red-date{
+			background: rgba(#000,0.9);
+			text-align: center;
+			span{
+				width: 100%;
+			}
+		}
 
 	  }
 	.red-heading{
