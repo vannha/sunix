@@ -9987,7 +9987,6 @@ article.post-grid-item .red-after-title .red-meta > * {
   display: inline-block; }
 
 article.post-grid-item .red-after-title .red-meta a {
-  font-family: 'futurabook';
   font-size: 15px;
   line-height: 18px;
   color: #777; }
@@ -10039,7 +10038,45 @@ article.post-grid-item .red-after-title .red-meta .avatar {
   margin-top: -4px; }
 
 .red-single .red-post-header {
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  position: relative; }
+
+.red-single .red-post-header .red-before-title .red-meta {
+  display: inline-block !important;
+  top: -90px;
+  left: 40px;
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  margin: 0; }
+  .red-single .red-post-header .red-before-title .red-meta .red-date {
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 0 20px;
+    padding-top: 29px;
+    min-width: 107px;
+    padding-bottom: 18px; }
+    .red-single .red-post-header .red-before-title .red-meta .red-date a {
+      color: inherit;
+      cursor: none; }
+    .red-single .red-post-header .red-before-title .red-meta .red-date span {
+      width: 100%;
+      display: block; }
+    .red-single .red-post-header .red-before-title .red-meta .red-date span .day {
+      font-size: 30px; }
+    .red-single .red-post-header .red-before-title .red-meta .red-date span .month-year {
+      text-transform: uppercase;
+      font-size: 13px;
+      padding-top: 7px; }
+  .red-single .red-post-header .red-before-title .red-meta .red-posted-in {
+    background: #f4436d;
+    padding: 0 20px;
+    text-align: center;
+    min-width: 107px;
+    text-transform: uppercase;
+    font-weight: 700; }
+    .red-single .red-post-header .red-before-title .red-meta .red-posted-in a {
+      color: #fff; }
 
 .red-single .red-post-header .red-heading, .red-single .red-post-header #wp-calendar > caption {
   padding-bottom: 23px; }
