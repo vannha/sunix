@@ -366,7 +366,7 @@ Redux::setSection($opt_name, array(
                 'title'    => esc_html__('Author', 'sunix'),
                 'subtitle' => esc_html__('Show author name.', 'sunix'),
                 'type'     => 'switch',
-                'default'  => '0'
+                'default'  => '1'
             ),
             array(
                 'id'       => 'post_categories_on',
@@ -394,7 +394,7 @@ Redux::setSection($opt_name, array(
                 'title'    => esc_html__('Like', 'sunix'),
                 'subtitle' => esc_html__('Show Likes Count.', 'sunix'),
                 'type'     => 'switch',
-                'default'  => '1'
+                'default'  => '0'
             ),
             array(
                 'id'       => 'post_share_on',
