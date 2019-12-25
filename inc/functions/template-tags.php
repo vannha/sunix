@@ -237,7 +237,7 @@ if ( ! function_exists( 'sunix_comments_popup_link' ) ) {
             'class'     => '',
             'before'    => '',
             'after'     => '',
-            'icon'      => 'meta-icon flaticon-comment-1',
+            'icon'      => '',
             'echo'      => true,
             'show_text' => true,
             'show_cmt'  => '1'
