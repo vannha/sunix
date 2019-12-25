@@ -44,7 +44,7 @@ if ( ! function_exists( 'sunix_posted_by' ) ) :
         ob_start();
             printf(
                 '<div class="%1$s" data-hint="%2$s">
-                    %3$s %4$s %5$s <a class="author-url" href="%6$s">%7$s</a>%8$s
+                    %3$s %4$s <a class="author-url" href="%5$s">%6$s</a>%7$s
                 </div>',
                 trim(implode(' ', $classes)),
                 esc_html($args['hint']),
