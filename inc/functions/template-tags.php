@@ -18,7 +18,7 @@ if ( ! function_exists( 'sunix_posted_by' ) ) :
             'hint'               => esc_html__( 'Posted By', 'sunix' ),
             'icon'               => '',
             'author_avatar'      => true,
-            'before_author_name' => esc_html__( 'Posted By', 'sunix' ).' ',
+            'before_author_name' => esc_html__( 'Posted By:', 'sunix' ).' ',
             'after_author_name'  => '',
             'show_author'        => '1',
             'echo'               => true   
