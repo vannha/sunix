@@ -34,10 +34,8 @@
 				  padding-top: 29px;
 				  min-width: 107px;
 				  padding-bottom: 18px;
-				  a{
-					  color: inherit;
-					  cursor: none;
-				  }
+				  line-height: 18px;
+				
 				  span{
 					  width: 100%;
 					  display: block;
@@ -54,7 +52,7 @@
 			  }
 			  .red-posted-in{
 				  background: $primary_color;
-				  padding: 1px 20px;
+				  padding: 7px 20px;
 				  text-align: center;
 				  min-width: 107px;
 				  text-transform: uppercase;
