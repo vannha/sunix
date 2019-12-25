@@ -97,7 +97,7 @@
 	  padding-right: 4px;
 	}
 	.red-meta{
-	  margin: 0 -10px;
+	  margin: 0 -30px;
 	  .author-url{
 	  		color: $primary_color;
 	  		font-weight: 700;
@@ -123,15 +123,11 @@
 	  	}
 	  }
 	  > * {
-		padding: 0 10px;
+		padding: 0 30px;
 		position: relative;
 		z-index: 1;
 		font-size: 16px;
 		color: $MetaColor;
-		padding-right: 30px
-		&:last-child{
-		  padding-right: 0px;
-		}
 	  }
 	  a{
 		color: $MetaColor;
