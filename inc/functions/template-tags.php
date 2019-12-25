@@ -15,10 +15,10 @@ if ( ! function_exists( 'sunix_posted_by' ) ) :
         $author_id   = $post->post_author;
         $args = wp_parse_args($args, [
             'class'              => '',
-            'hint'               => esc_html__( 'Posted by', 'sunix' ),
+            'hint'               => esc_html__( 'Posted By', 'sunix' ),
             'icon'               => '',
             'author_avatar'      => true,
-            'before_author_name' => esc_html__( 'By', 'sunix' ).' ',
+            'before_author_name' => esc_html__( 'sunix_posted_by', 'sunix' ).' ',
             'after_author_name'  => '',
             'show_author'        => '1',
             'echo'               => true   
@@ -48,7 +48,6 @@ if ( ! function_exists( 'sunix_posted_by' ) ) :
                 </div>',
                 trim(implode(' ', $classes)),
                 esc_html($args['hint']),
-                $author_avatar,
                 !empty($args['icon']) ? '<span class="'.$args['icon'].'"> </span>' : '',
                 $args['before_author_name'],
                 esc_url( $author_url ),
