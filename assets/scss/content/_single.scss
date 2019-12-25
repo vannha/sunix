@@ -105,9 +105,21 @@
 	  	
 	  }
 	  > div{
-	  	border-right: #acacac solid 1px;
+	  	position: relative;
+	  	&:after{
+	  		content: '';
+	  		height: 10px;
+	  		width: 1px;
+	  		background: #acacac;
+	  		position: absolute;
+	  		right: 0;
+	  		top: 5px;
+	  	}
 	  	&:last-child{
 	  		border-right: none;
+	  		&:after{
+	  			display: none;
+	  		}
 	  	}
 	  }
 	  > * {
