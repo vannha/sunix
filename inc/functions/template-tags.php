@@ -104,6 +104,33 @@ if ( ! function_exists( 'sunix_posted_on' ) ) :
                 $posted_time,
                 $args['after_date']
             );
+           if(is_single()){
+              printf(
+                '<div class="%1$s" data-hint="%2$s">
+                    %3$s%4$s%5$s%6$s
+                </div>',
+                trim(implode(' ', $classes)),
+                esc_html($args['hint']),
+                !empty($args['icon']) ? '<span class="'.$args['icon'].'">&nbsp;&nbsp;</span>' : '',
+                $args['before_date'],
+                $posted_time,
+                $args['after_date']
+            );
+           }
+           else{
+              printf(
+                '<div class="%1$s" data-hint="%2$s">
+                    %3$s%4$s<a href="%5$s" rel="bookmark">%6$s</a>%7$s
+                </div>',
+                trim(implode(' ', $classes)),
+                esc_html($args['hint']),
+                !empty($args['icon']) ? '<span class="'.$args['icon'].'">&nbsp;&nbsp;</span>' : '',
+                $args['before_date'],
+                esc_url( get_permalink()),
+                $posted_time,
+                $args['after_date']
+            );
+           }
             if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) && $args['show_update'] )
             {
                 $time_string = '<span class="updated" data-datetime="%1$s">%2$s</span>';
