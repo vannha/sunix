@@ -92,18 +92,6 @@ if ( ! function_exists( 'sunix_posted_on' ) ) :
         $classes = ['red-date', 'red-posted-on', $args['class']];
         if($args['show_update']) $classes[] = 'red-updated-on';
         ob_start();
-            printf(
-                '<div class="%1$s" data-hint="%2$s">
-                    %3$s%4$s<a href="%5$s" rel="bookmark">%6$s</a>%7$s
-                </div>',
-                trim(implode(' ', $classes)),
-                esc_html($args['hint']),
-                !empty($args['icon']) ? '<span class="'.$args['icon'].'">&nbsp;&nbsp;</span>' : '',
-                $args['before_date'],
-                !is_single() ? esc_url( get_permalink()) : '',
-                $posted_time,
-                $args['after_date']
-            );
            if(is_single()){
               printf(
                 '<div class="%1$s" data-hint="%2$s">
