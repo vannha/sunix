@@ -37,8 +37,8 @@ if(!function_exists('sunix_configs')){
             'heading_color_hover'   => '#f4436d',
             'heading_font_weight'   => 700,
             'meta_font'             => '\'Roboto\', sans-serif',    
-            'meta_color'            => '#777',
-            'meta_color_hover'      => '#FBB040',
+            'meta_color'            => '#999',
+            'meta_color_hover'      => '#f4436d',
             // Boder
             'main_border'           => '1px solid #D8D8D8;',
             'main_border2'          => '2px solid #D8D8D8',
