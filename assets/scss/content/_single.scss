@@ -82,15 +82,7 @@
 	.red-after-title{
 	  margin-top: -1px;
 	  position: relative;
-	  &:after{
-		position: absolute;
-		content: '';
-		width: 100%;
-		left: 0;
-		top: 13px;
-		height: 1px;
-		background: #D8D8D8;
-	  }
+
 	}
 	.red-header{
 	  padding-bottom: 20px;
@@ -113,6 +105,8 @@
 		background: #fff;
 		position: relative;
 		z-index: 1;
+		font-size: 16px;
+		color: #999;
 		&:last-child{
 		  padding-right: 20px;
 		}
