@@ -104,6 +104,12 @@
 	  		padding-left: 10px;
 	  	
 	  }
+	  > div{
+	  	border-right: #acacac solid 1px;
+	  	&:last-child{
+	  		border-right: none;
+	  	}
+	  }
 	  > * {
 		padding: 0 10px;
 		position: relative;
