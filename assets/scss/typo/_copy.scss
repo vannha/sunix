@@ -10,7 +10,7 @@ i {
 }
 
 blockquote {
-    padding: 73px 55px 25px !important;
+    padding: 109px 55px 53px !important;
     margin: 30px 0;
     border: 1.5px solid $accent_color;
     font-size: 16px;
@@ -24,20 +24,20 @@ blockquote {
   text-transform: uppercase;
   font-family: $ExtraFont;
   @media (max-width: 991px) {
-	padding: 73px 30px 25px !important;
+	padding: 109px 30px 53px !important;
   }
   @media (max-width: 767px) {
-	padding: 73px 15px 25px !important;
+	padding: 109px 15px 53px !important;
   }
     &:before{
-	  font-family: Flaticon;
-	  content: "\f14b";
+		content: "\201C";
         position: absolute;
-        top: 24px;
+        top: 81px;
         left: 50%;
 	  @include transform(translateX(-50%));
 	  color: $primary_color;
-	  font-size: 27px;
+	  font-size: 100px;
+		font-weight: 700;
     }
     [dir="rtl"] & {
     	padding-right: 88px;
