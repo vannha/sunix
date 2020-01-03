@@ -92,8 +92,13 @@ switch ($layout_template) {
             var_dump($poster);
             if(!empty($poster)){
                 echo '<div class="red-video-popup-wrap text-center overlay-wrap">';
-                echo '<img src="'.wp_get_attachment_url($poster).'" alt="'.esc_attr($title).'" class="video-poster '.esc_attr($poster_style).'" />';
-            }
+                    sunix_image_by_size([
+                    'id'      => $poster,
+                    'size'    => 'large',
+                    'class'   => 'video-poster'.esc_attr($poster_style),
+                    'default' => true
+                    ]);
+                 }
                 echo ''.$this->sunix_video_popup($atts,['anim' => $play_btn_effect]);
             if(!empty($poster)) echo '</div>';
             break;
