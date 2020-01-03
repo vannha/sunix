@@ -16,7 +16,7 @@
 	margin-top: -4px;
   }
   .red-post-header{
-	padding-bottom: 30px;
+	padding-bottom: 38px;
 	  position: relative;
 	  .red-before-title{
 		  .red-meta{
@@ -34,10 +34,8 @@
 				  padding-top: 29px;
 				  min-width: 107px;
 				  padding-bottom: 18px;
-				  a{
-					  color: inherit;
-					  cursor: none;
-				  }
+				  line-height: 18px;
+				
 				  span{
 					  width: 100%;
 					  display: block;
@@ -69,7 +67,8 @@
 	  }
 
 	.red-heading{
-	  padding-bottom: 23px;
+	  padding-bottom: 10px;
+	  padding-top: 40px;
 	  @media (max-width: 767px) {
 		font-size: 23px;
 		line-height: 34px;
@@ -81,15 +80,7 @@
 	.red-after-title{
 	  margin-top: -1px;
 	  position: relative;
-	  &:after{
-		position: absolute;
-		content: '';
-		width: 100%;
-		left: 0;
-		top: 13px;
-		height: 1px;
-		background: #D8D8D8;
-	  }
+
 	}
 	.red-header{
 	  padding-bottom: 20px;
@@ -106,23 +97,40 @@
 	  padding-right: 4px;
 	}
 	.red-meta{
-	  margin: 0 -10px;
+	  margin: 0 -30px;
+	  .author-url{
+	  		color: $primary_color;
+	  		font-weight: 700;
+	  		padding-left: 10px;
+	  	
+	  }
+	  > div{
+	  	position: relative;
+	  	&:after{
+	  		content: '';
+	  		height: 10px;
+	  		width: 1px;
+	  		background: #acacac;
+	  		position: absolute;
+	  		right: 0;
+	  		top: 9px;
+	  	}
+	  	&:last-child{
+	  		border-right: none;
+	  		&:after{
+	  			display: none;
+	  		}
+	  	}
+	  }
 	  > * {
-		padding: 0 10px;
-		background: #fff;
+		padding: 0 30px;
 		position: relative;
 		z-index: 1;
-		&:last-child{
-		  padding-right: 20px;
-		}
+		font-size: 16px;
+		color: $MetaColor;
 	  }
-	  a:not(.author-url){
-		color: #999;
-		font-family: $ExtraFont;
-		font-size: 12px;
-		line-height: 18px;
-		text-transform: uppercase;
-		letter-spacing: 2px;
+	  a{
+		color: $MetaColor;
 		font-weight: 400;
 		&:hover{
 		  color: $MetaColorHover;
@@ -149,6 +157,9 @@
 	}
 }
 .red-single-content{
+	.container{
+		padding: 0;
+	}
 	p + {
 		h1, h2, h3, h4, h6{
 			padding-top: 8px;

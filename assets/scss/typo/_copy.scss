@@ -12,17 +12,17 @@ i {
 blockquote {
     padding: 109px 55px 53px !important;
     margin: 30px 0;
-    border: 1.5px solid $accent_color;
-    font-size: 16px;
-    line-height: 28px;
-    font-weight: normal;
-    color: $BodyColor;
+   background: #f5fafc;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 700;
+    font-style: italic;
+    color: $primary_color;
     position: relative;
     display: block !important;
     clear: both;
   text-align: center;
-  text-transform: uppercase;
-  font-family: $ExtraFont;
+
   @media (max-width: 991px) {
 	padding: 109px 30px 53px !important;
   }

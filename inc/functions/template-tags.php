@@ -15,10 +15,10 @@ if ( ! function_exists( 'sunix_posted_by' ) ) :
         $author_id   = $post->post_author;
         $args = wp_parse_args($args, [
             'class'              => '',
-            'hint'               => esc_html__( 'Posted by', 'sunix' ),
+            'hint'               => esc_html__( 'Posted By', 'sunix' ),
             'icon'               => '',
             'author_avatar'      => true,
-            'before_author_name' => esc_html__( 'By', 'sunix' ).' ',
+            'before_author_name' => esc_html__( 'Posted By:', 'sunix' ).' ',
             'after_author_name'  => '',
             'show_author'        => '1',
             'echo'               => true   
@@ -44,11 +44,10 @@ if ( ! function_exists( 'sunix_posted_by' ) ) :
         ob_start();
             printf(
                 '<div class="%1$s" data-hint="%2$s">
-                    %3$s %4$s %5$s <a class="author-url" href="%6$s">%7$s</a>%8$s
+                    %3$s %4$s <a class="author-url" href="%5$s">%6$s</a>%7$s
                 </div>',
                 trim(implode(' ', $classes)),
                 esc_html($args['hint']),
-                $author_avatar,
                 !empty($args['icon']) ? '<span class="'.$args['icon'].'"> </span>' : '',
                 $args['before_author_name'],
                 esc_url( $author_url ),
@@ -93,7 +92,21 @@ if ( ! function_exists( 'sunix_posted_on' ) ) :
         $classes = ['red-date', 'red-posted-on', $args['class']];
         if($args['show_update']) $classes[] = 'red-updated-on';
         ob_start();
-            printf(
+           if(is_single()){
+              printf(
+                '<div class="%1$s" data-hint="%2$s">
+                    %3$s%4$s%5$s%6$s
+                </div>',
+                trim(implode(' ', $classes)),
+                esc_html($args['hint']),
+                !empty($args['icon']) ? '<span class="'.$args['icon'].'">&nbsp;&nbsp;</span>' : '',
+                $args['before_date'],
+                $posted_time,
+                $args['after_date']
+            );
+           }
+           else{
+              printf(
                 '<div class="%1$s" data-hint="%2$s">
                     %3$s%4$s<a href="%5$s" rel="bookmark">%6$s</a>%7$s
                 </div>',
@@ -101,10 +114,11 @@ if ( ! function_exists( 'sunix_posted_on' ) ) :
                 esc_html($args['hint']),
                 !empty($args['icon']) ? '<span class="'.$args['icon'].'">&nbsp;&nbsp;</span>' : '',
                 $args['before_date'],
-                !is_single() ? esc_url( get_permalink()) : '',
+                esc_url( get_permalink()),
                 $posted_time,
                 $args['after_date']
             );
+           }
             if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) && $args['show_update'] )
             {
                 $time_string = '<span class="updated" data-datetime="%1$s">%2$s</span>';
@@ -238,7 +252,7 @@ if ( ! function_exists( 'sunix_comments_popup_link' ) ) {
             'class'     => '',
             'before'    => '',
             'after'     => '',
-            'icon'      => 'meta-icon flaticon-comment-1',
+            'icon'      => '',
             'echo'      => true,
             'show_text' => true,
             'show_cmt'  => '1'
