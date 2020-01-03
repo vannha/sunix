@@ -89,6 +89,7 @@ switch ($layout_template) {
     <div class="red-video-wrap col-lg-12">
     <?php switch ($video_type) {
         case '2':  /* popup video */
+            var_dump($poster);
             if(!empty($poster)){
                 echo '<div class="red-video-popup-wrap text-center overlay-wrap">';
                 echo '<img src="'.wp_get_attachment_url($poster).'" alt="'.esc_attr($title).'" class="video-poster '.esc_attr($poster_style).'" />';
