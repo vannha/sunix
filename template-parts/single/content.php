@@ -18,7 +18,7 @@
         sunix_post_content();
         sunix_link_pages();
     ?>
-    <footer class="red-post-footer row justify-content-between align-items-center empty-none"><?php
+    <footer class="red-post-footer"><?php
         do_action('sunix_single_post_footer');
         sunix_tagged_in();
 
