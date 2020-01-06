@@ -5056,9 +5056,6 @@ dd {
   /**
    * CMS List 
    */ }
-  .mceContentBody ul:not(.red-list) li, .red-single-content ul:not(.red-list) li, .wpb_text_column ul:not(.red-list) li {
-    padding: 9px 0;
-    position: relative; }
   .mceContentBody ul.red-list.ordered, .red-single-content ul.red-list.ordered, .wpb_text_column ul.red-list.ordered {
     list-style: none;
     counter-reset: red-list-counter; }
