@@ -65,9 +65,6 @@ dd {
 		list-style: none;
 		&:not(.red-list){
 			li{
-				padding: 9px 0;
-				position: relative;
-				//display: flex; fix unistest single post
 			}
 		}
 		/**
