@@ -27,7 +27,7 @@ if ( post_password_required() ) {
 <div id="comments" class="<?php echo comments_open() ? 'comments-area' : 'comments-area comments-closed'; ?>">
 	<?php if ( have_comments() ) : ?>
 		<div class="commentlist-wrap">
-			<div class="comments-title h4"><?php
+			<div class="comments-title h3"><?php
 				$comments_number = get_comments_number();
 				printf(
 					_nx(
