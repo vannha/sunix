@@ -4925,37 +4925,36 @@ dfn, cite, em, i {
   font-style: italic; }
 
 blockquote {
-  padding: 73px 55px 25px !important;
+  padding: 109px 55px 53px !important;
   margin: 30px 0;
-  border: 1.5px solid #333;
-  font-size: 16px;
-  line-height: 28px;
-  font-weight: normal;
-  color: #666;
+  background: #f5fafc;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 700;
+  font-style: italic;
+  color: #f4436d;
   position: relative;
   display: block !important;
   clear: both;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Oswald', sans-serif; }
+  text-align: center; }
 
 @media (max-width: 991px) {
     blockquote {
-      padding: 73px 30px 25px !important; } }
+      padding: 109px 30px 53px !important; } }
 
 @media (max-width: 767px) {
     blockquote {
-      padding: 73px 15px 25px !important; } }
+      padding: 109px 15px 53px !important; } }
 
 blockquote:before {
-  font-family: Flaticon;
-  content: "\f14b";
+  content: "\201C";
   position: absolute;
-  top: 24px;
+  top: 81px;
   left: 50%;
   transform: translateX(-50%);
   color: #f4436d;
-  font-size: 27px; }
+  font-size: 100px;
+  font-weight: 700; }
 
 [dir="rtl"] blockquote {
   padding-right: 88px;
@@ -5419,6 +5418,13 @@ figure {
 
 figcaption {
   display: block; }
+
+.first-letter .wpb_wrapper > p::first-letter {
+  font-size: 100px;
+  font-weight: 900;
+  line-height: 1;
+  margin-top: 100px;
+  float: left; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, table.woocommerce-cart-form__contents thead th, .h4, .woocommerce-account .woocommerce-MyAccount-content form.edit-account legend, .h4-1, .h5, .h6, .widget_shopping_cart_content .cart-item-name-wrap, .red-heading, #wp-calendar > caption {
   font-family: 'Roboto', sans-serif;
@@ -9543,7 +9549,7 @@ article.wpb_animate_when_almost_visible {
   font-weight: 400; }
 
 .red-list > .red-meta a:hover {
-  color: #fbb040; }
+  color: #f4436d; }
 
 .red-list > .red-meta .red-view, .red-list > .red-meta .red-posted-by {
   color: #999;
@@ -9960,13 +9966,11 @@ body.noscroll {
   padding: 0 5px; }
 
 .red-meta a {
-  color: #777;
-  font-family: 'futurabook';
-  font-size: 15px;
+  color: #999;
   line-height: 18px; }
 
 .red-meta a:hover {
-  color: #fbb040; }
+  color: #f4436d; }
 
 .red-meta .avatar {
   margin-right: 10px; }
@@ -9991,7 +9995,7 @@ article.post-grid-item .red-after-title .red-meta a {
   line-height: 18px;
   color: #777; }
   article.post-grid-item .red-after-title .red-meta a:hover {
-    color: #fbb040; }
+    color: #f4436d; }
 
 article.post-grid-item .red-after-title .red-meta .avatar {
   margin-right: 10px; }
@@ -10038,12 +10042,12 @@ article.post-grid-item .red-after-title .red-meta .avatar {
   margin-top: -4px; }
 
 .red-single .red-post-header {
-  padding-bottom: 30px;
+  padding-bottom: 38px;
   position: relative; }
 
 .red-single .red-post-header .red-before-title .red-meta {
   display: inline-block !important;
-  top: -90px;
+  top: -121px;
   left: 40px;
   position: absolute;
   z-index: 2;
@@ -10055,10 +10059,8 @@ article.post-grid-item .red-after-title .red-meta .avatar {
     padding: 0 20px;
     padding-top: 29px;
     min-width: 107px;
-    padding-bottom: 18px; }
-    .red-single .red-post-header .red-before-title .red-meta .red-date a {
-      color: inherit;
-      cursor: none; }
+    padding-bottom: 18px;
+    line-height: 18px; }
     .red-single .red-post-header .red-before-title .red-meta .red-date span {
       width: 100%;
       display: block; }
@@ -10070,16 +10072,18 @@ article.post-grid-item .red-after-title .red-meta .avatar {
       padding-top: 7px; }
   .red-single .red-post-header .red-before-title .red-meta .red-posted-in {
     background: #f4436d;
-    padding: 0 20px;
+    padding: 1px 20px;
     text-align: center;
     min-width: 107px;
     text-transform: uppercase;
     font-weight: 700; }
     .red-single .red-post-header .red-before-title .red-meta .red-posted-in a {
-      color: #fff; }
+      color: #fff;
+      font-size: 13px; }
 
 .red-single .red-post-header .red-heading, .red-single .red-post-header #wp-calendar > caption {
-  padding-bottom: 23px; }
+  padding-bottom: 10px;
+  padding-top: 40px; }
 
 @media (max-width: 767px) {
         .red-single .red-post-header .red-heading, .red-single .red-post-header #wp-calendar > caption {
@@ -10092,15 +10096,6 @@ article.post-grid-item .red-after-title .red-meta .avatar {
 .red-single .red-post-header .red-after-title {
   margin-top: -1px;
   position: relative; }
-
-.red-single .red-post-header .red-after-title:after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  left: 0;
-  top: 13px;
-  height: 1px;
-  background: #d8d8d8; }
 
 .red-single .red-post-header .red-header {
   padding-bottom: 20px; }
@@ -10115,26 +10110,40 @@ article.post-grid-item .red-after-title .red-meta .avatar {
   padding-right: 4px; }
 
 .red-single .red-after-title .red-meta {
-  margin: 0 -10px; }
+  margin: 0 -30px; }
+
+.red-single .red-after-title .red-meta .author-url {
+  color: #f4436d;
+  font-weight: 700;
+  padding-left: 10px; }
+
+.red-single .red-after-title .red-meta > div {
+  position: relative; }
+  .red-single .red-after-title .red-meta > div:after {
+    content: '';
+    height: 10px;
+    width: 1px;
+    background: #acacac;
+    position: absolute;
+    right: 0;
+    top: 9px; }
+  .red-single .red-after-title .red-meta > div:last-child {
+    border-right: none; }
+    .red-single .red-after-title .red-meta > div:last-child:after {
+      display: none; }
 
 .red-single .red-after-title .red-meta > * {
-  padding: 0 10px;
-  background: #fff;
+  padding: 0 30px;
   position: relative;
-  z-index: 1; }
-  .red-single .red-after-title .red-meta > *:last-child {
-    padding-right: 20px; }
+  z-index: 1;
+  font-size: 16px;
+  color: #999; }
 
-.red-single .red-after-title .red-meta a:not(.author-url) {
+.red-single .red-after-title .red-meta a {
   color: #999;
-  font-family: 'Oswald', sans-serif;
-  font-size: 12px;
-  line-height: 18px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   font-weight: 400; }
-  .red-single .red-after-title .red-meta a:not(.author-url):hover {
-    color: #fbb040; }
+  .red-single .red-after-title .red-meta a:hover {
+    color: #f4436d; }
 
 .red-single .red-after-title .red-meta .avatar {
   margin-right: 10px; }
@@ -10151,6 +10160,9 @@ article.post-grid-item .red-after-title .red-meta .avatar {
 
 .red-single .red-social.outline a {
   border: 1px solid #d8d8d8; }
+
+.red-single-content .container {
+  padding: 0; }
 
 .red-single-content p + h1, .red-single-content p + h2, .red-single-content p + h3, .red-single-content p + h4, .red-single-content p + h6 {
   padding-top: 8px; }
@@ -10590,12 +10602,12 @@ body {
   padding-right: 0; }
 
 .single-ef5_portfolio .pf-navigation {
-  color: #777;
+  color: #999;
   margin-left: -5px;
   margin-right: -5px; }
 
 .single-ef5_portfolio .pf-navigation a {
-  color: #777;
+  color: #999;
   padding-left: 5px;
   padding-right: 5px; }
 
@@ -10929,7 +10941,7 @@ body {
   height: 56px;
   line-height: 56px;
   background: white;
-  color: #777;
+  color: #999;
   padding: 0 56px 0 15px;
   border: 0;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); }
@@ -11156,7 +11168,7 @@ body {
   clear: both;
   padding: 0 0 10px 0;
   font-style: italic;
-  color: #777; }
+  color: #999; }
 
 .widget_rss cite {
   color: #f4436d; }
@@ -21281,7 +21293,7 @@ dl.variation dd {
   transition: all 300ms ease-in-out; }
 
 .meta-color {
-  color: #777; }
+  color: #999; }
 
 .meta-color a {
   color: inherit; }
