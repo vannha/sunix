@@ -191,17 +191,13 @@
   margin-bottom: 17px;
 }
 .red-tagged-in{
-  font-family: $ExtraFont;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
+  font-size: 17px;
   line-height: 28px;
   letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #888888;
+  color: $primary_color;
   padding-right: 20px;
   a{
-	color: inherit;
+	color: #fff;
 	&:hover{
 	  color: $primary_color;
 	}

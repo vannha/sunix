@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/content/_loop.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/content/_loop.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/content/_single.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/content/_single.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scss/content/_single.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
+            <state relative-caret-position="408">
+              <caret line="199" column="16" lean-forward="true" selection-start-line="199" selection-start-column="16" selection-end-line="199" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -81,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/content/_loop.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="230" column="22" selection-start-line="230" selection-start-column="22" selection-end-line="230" selection-end-column="22" />
+            <state relative-caret-position="290">
+              <caret line="226" column="21" selection-start-line="226" selection-start-column="21" selection-end-line="226" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -205,10 +204,10 @@
         <option value="$PROJECT_DIR$/assets/scss/typo/_list.scss" />
         <option value="$PROJECT_DIR$/assets/scss/typo/_tags.scss" />
         <option value="$PROJECT_DIR$/inc/theme-options/theme-options.php" />
-        <option value="$PROJECT_DIR$/assets/scss/content/_single.scss" />
         <option value="$PROJECT_DIR$/inc/functions/template-tags.php" />
         <option value="$PROJECT_DIR$/template-parts/single/content.php" />
         <option value="$PROJECT_DIR$/assets/scss/content/_loop.scss" />
+        <option value="$PROJECT_DIR$/assets/scss/content/_single.scss" />
       </list>
     </option>
   </component>
@@ -361,12 +360,12 @@
       <workItem from="1577070861013" duration="2226000" />
       <workItem from="1577084738387" duration="8198000" />
       <workItem from="1577328226797" duration="273000" />
-      <workItem from="1578036438669" duration="10839000" />
+      <workItem from="1578036438669" duration="11183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108683000" />
+    <option name="totallyTimeSpent" value="109027000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -698,13 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/content/_single.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/theme-options/theme-options.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="820">
@@ -728,8 +720,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/content/_loop.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="230" column="22" selection-start-line="230" selection-start-column="22" selection-end-line="230" selection-end-column="22" />
+        <state relative-caret-position="290">
+          <caret line="226" column="21" selection-start-line="226" selection-start-column="21" selection-end-line="226" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/content/_single.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="199" column="16" lean-forward="true" selection-start-line="199" selection-start-column="16" selection-end-line="199" selection-end-column="16" />
         </state>
       </provider>
     </entry>
