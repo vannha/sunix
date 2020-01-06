@@ -199,6 +199,9 @@
 	font-weight: 700;
 	span{
 		color: $primary_color;
+		&.fas{
+			padding-right: 1px;
+		}
 	}
   a{
 	color: #fff;
