@@ -205,7 +205,7 @@ if ( ! function_exists( 'sunix_tagged_in' ) ) :
         $args = wp_parse_args($args, [
             'class'      => '',
             'hint'       => '',
-            'icon'       => '',
+            'icon'       => '<i class="fas fa-tag"></i>',
             'before'     => '',
             'after'      => '',
             'before_tag' => '',
