@@ -5425,7 +5425,8 @@ figcaption {
   line-height: 1;
   margin-top: -6px;
   float: left;
-  padding-right: 29px; }
+  padding-right: 33px;
+  margin-left: -4px; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, table.woocommerce-cart-form__contents thead th, .h4, .woocommerce-account .woocommerce-MyAccount-content form.edit-account legend, .h4-1, .h5, .h6, .widget_shopping_cart_content .cart-item-name-wrap, .red-heading, #wp-calendar > caption {
   font-family: 'Roboto', sans-serif;
