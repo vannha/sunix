@@ -17,6 +17,11 @@
 	.pingback,
 	.trackback{
 		border: $cmt_border;
+		margin-bottom: 20px;
+		&.parent{
+			border: none;
+
+		}
 		// Reply Form 
 		.comment-respond{
 			margin: 0 0 30px 0;
