@@ -53,8 +53,9 @@ figcaption{
 		> p::first-letter{
 			font-size: 100px;
 			font-weight: 900;
-			display: inline-block;
 			line-height: 1;
+			position: relative;
+			top: 100px;
 		}
 	}
 }
