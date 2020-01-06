@@ -5429,7 +5429,8 @@ figcaption {
   margin-left: -4px; }
 
 .checked-list ul li {
-  position: relative; }
+  position: relative;
+  padding-left: 24px; }
   .checked-list ul li:before {
     content: "\f00c";
     font-family: "Font Awesome 5 Pro";
