@@ -598,7 +598,7 @@ vc_add_params('vc_column_text', array(
             esc_html__('Arrow list','sunix') => 'arrow-list',
         ),
         "std" => '',
-        'group'       => esc_html__('Syring Custom', 'sunix')
+        'group'       => esc_html__('Sunix Custom', 'sunix')
     ),
      array(
         "type" => "dropdown",
@@ -610,14 +610,14 @@ vc_add_params('vc_column_text', array(
             esc_html__('First letter','sunix') => 'first-letter', 
         ),
         "std" => '',
-        'group'       => esc_html__('Syring Custom', 'sunix')
+        'group'       => esc_html__('Sunix Custom', 'sunix')
     ),
     array(
         "type" => "textfield",
         "heading" => esc_html__("Font size",'sunix'),
         "param_name" => "font_size",
         "value" => "",
-        'group'       => esc_html__('Syring Custom', 'sunix')
+        'group'       => esc_html__('Sunix Custom', 'sunix')
     ),
 
     array(
@@ -625,14 +625,14 @@ vc_add_params('vc_column_text', array(
         "heading" => esc_html__("Line height",'sunix'),
         "param_name" => "line_height",
         "value" => "",
-        'group'            => esc_html__('Syring Custom', 'sunix')
+        'group'            => esc_html__('Sunix Custom', 'sunix')
     ),
     array(
         "type" => "textfield",
         "heading" => esc_html__("Letter spacing (0.3px, 0.03em)",'sunix'),
         "param_name" => "letter_spacing",
         "value" => "",
-        'group'       => esc_html__('Syring Custom', 'sunix')
+        'group'       => esc_html__('Sunix Custom', 'sunix')
     ),
     array(
         "type" => "colorpicker",
@@ -640,6 +640,6 @@ vc_add_params('vc_column_text', array(
         "heading" => esc_html__("Color", 'sunix'),
         "param_name" => "color",
         "value" => "",
-        'group'       => esc_html__('Syring Custom', 'sunix')
+        'group'       => esc_html__('Sunix Custom', 'sunix')
     ),
 ));

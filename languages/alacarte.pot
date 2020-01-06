@@ -5528,7 +5528,7 @@ msgstr ""
 #: vc_extends/_vc_output.php:579 vc_extends/_vc_output.php:586
 #: vc_extends/_vc_output.php:594 vc_extends/_vc_output.php:601
 #: vc_extends/_vc_output.php:609
-msgid "Syring Custom"
+msgid "Sunix Custom"
 msgstr ""
 
 #: vc_extends/_vc_output.php:583

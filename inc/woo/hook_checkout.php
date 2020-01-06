@@ -16,17 +16,17 @@ if (!defined('ABSPATH')) {
 
 /**
  * Remove field label
- * add_filter( 'woocommerce_form_field_args' , 'syring_override_woocommerce_form_field' );
+ * add_filter( 'woocommerce_form_field_args' , 'sunix_override_woocommerce_form_field' );
  */
-add_filter( 'woocommerce_form_field_args' , 'syring_override_woocommerce_form_field' );
-function syring_override_woocommerce_form_field($args)
+add_filter( 'woocommerce_form_field_args' , 'sunix_override_woocommerce_form_field' );
+function sunix_override_woocommerce_form_field($args)
 {
     $args['label'] = false;
     return $args;
 }
 
-add_action('woocommerce_before_checkout_form','syring_wc_before_checkout_form');
-function syring_wc_before_checkout_form(){
+add_action('woocommerce_before_checkout_form','sunix_wc_before_checkout_form');
+function sunix_wc_before_checkout_form(){
     echo '<div class="checkout-heading">';
     echo '<h3 class="checkout-heading-title">'.esc_html__( 'Cart Checkout','sunix' ).'</h3>';
     echo '<span class="silent-heading"><a href="'.esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ).'">'.esc_html__( 'Return to shoping cart','sunix' ).'</a></span>';
@@ -34,8 +34,8 @@ function syring_wc_before_checkout_form(){
 }
 
 /* Overide checkout field */
-add_filter( 'woocommerce_checkout_fields' , 'syring_override_checkout_fields' );
-function syring_override_checkout_fields( $fields ) {
+add_filter( 'woocommerce_checkout_fields' , 'sunix_override_checkout_fields' );
+function sunix_override_checkout_fields( $fields ) {
     $fields['billing']['billing_first_name']['placeholder'] = esc_html__('First Name *','sunix');
     $fields['billing']['billing_last_name']['placeholder'] = esc_html__('Last Name *','sunix');
     $fields['billing']['billing_company']['placeholder'] = esc_html__('Company Name','sunix');
@@ -63,9 +63,9 @@ return $fields;
 /**
  * Reordering Checkout form field
  */
-add_filter("woocommerce_default_address_fields", "syring_woocommerce_default_address_fields");
-if(!function_exists('syring_woocommerce_default_address_fields')){
-    function syring_woocommerce_default_address_fields($fields)
+add_filter("woocommerce_default_address_fields", "sunix_woocommerce_default_address_fields");
+if(!function_exists('sunix_woocommerce_default_address_fields')){
+    function sunix_woocommerce_default_address_fields($fields)
     {
         $fields['country']['priority'] = 1;
         $fields['first_name']['placeholder'] = esc_html__('First Name *', 'sunix');
@@ -81,9 +81,9 @@ if(!function_exists('syring_woocommerce_default_address_fields')){
 /**
  * Reordering Address My Account form field
  */
-add_filter("woocommerce_billing_fields", "syring_woocommerce_billing_fields");
-if(!function_exists('syring_woocommerce_billing_fields')){
-    function syring_woocommerce_billing_fields($fields)
+add_filter("woocommerce_billing_fields", "sunix_woocommerce_billing_fields");
+if(!function_exists('sunix_woocommerce_billing_fields')){
+    function sunix_woocommerce_billing_fields($fields)
     {
         $fields['billing_phone']['placeholder'] = esc_html__('Phone', 'sunix');
         $fields['billing_email']['placeholder'] = esc_html__('Email Address', 'sunix');
