@@ -16,11 +16,9 @@
 	.comment,
 	.pingback,
 	.trackback{
-		border: $cmt_border;
-		margin-bottom: 20px;
-		&.parent{
-			border: none;
-
+		article{
+			border: $cmt_border;
+			margin-bottom: 20px;
 		}
 		// Reply Form 
 		.comment-respond{
