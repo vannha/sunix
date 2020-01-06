@@ -229,8 +229,6 @@ article.wpb_animate_when_almost_visible{
   position: relative;
 	background: #000;
 	> div {
-		padding: 0 $grid-gutter-width / 2;
-	  background: #fff;
 	  position: relative;
 	  z-index: 2;
 	  &.red-shares{
