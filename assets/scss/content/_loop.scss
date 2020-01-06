@@ -227,15 +227,7 @@ article.wpb_animate_when_almost_visible{
 	margin-top: 35px;
 	padding: 0;
   position: relative;
-  &:after{
-	position: absolute;
-	content: '';
-	width: calc(100% - 30px);
-	left: 15px;
-	top: 16px;
-	height: 1px;
-	background: #D8D8D8;
-  }
+	background: #000;
 	> div {
 		padding: 0 $grid-gutter-width / 2;
 	  background: #fff;
