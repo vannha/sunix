@@ -2,7 +2,6 @@
 	list-style: none;
 	padding: 0;
 	margin: 0;
-  border-bottom: $cmt_border;
 	@media (min-width: $screen-md-min){
 		.comment-info{
 			max-width: calc( 100% - #{$cmt_avatar_size + $grid-gutter-width});
