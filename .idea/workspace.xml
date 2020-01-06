@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/scss/content/_single.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/content/_single.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions/template-tags.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions/template-tags.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/theme.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,15 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vc_extends/_vc_output.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="606" column="41" selection-start-line="606" selection-start-column="25" selection-end-line="606" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/typo/_tags.scss">
           <provider selected="true" editor-type-id="text-editor">
@@ -45,11 +35,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/content/_single.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="321">
               <caret line="196" column="13" selection-start-line="196" selection-start-column="13" selection-end-line="196" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/scss/theme.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="99" column="28" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -160,7 +159,6 @@
       <list>
         <option value="$PROJECT_DIR$/template-parts/loop/content.php" />
         <option value="$USER_HOME$/Desktop/admin.css" />
-        <option value="$PROJECT_DIR$/assets/scss/theme.scss" />
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/assets/css/theme.css" />
         <option value="$PROJECT_DIR$/404.php" />
@@ -209,6 +207,7 @@
         <option value="$PROJECT_DIR$/assets/scss/content/_loop.scss" />
         <option value="$PROJECT_DIR$/inc/functions/template-tags.php" />
         <option value="$PROJECT_DIR$/assets/scss/content/_single.scss" />
+        <option value="$PROJECT_DIR$/assets/scss/theme.scss" />
       </list>
     </option>
   </component>
@@ -361,12 +360,12 @@
       <workItem from="1577070861013" duration="2226000" />
       <workItem from="1577084738387" duration="8198000" />
       <workItem from="1577328226797" duration="273000" />
-      <workItem from="1578036438669" duration="11526000" />
+      <workItem from="1578036438669" duration="11661000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109370000" />
+    <option name="totallyTimeSpent" value="109505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -397,9 +396,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/inc/theme-options/page-options.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/theme-options/portfolio-option.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -730,6 +726,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="196" column="13" selection-start-line="196" selection-start-column="13" selection-end-line="196" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/theme.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="99" column="28" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
         </state>
       </provider>
     </entry>
