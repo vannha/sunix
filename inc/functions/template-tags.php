@@ -222,12 +222,13 @@ if ( ! function_exists( 'sunix_tagged_in' ) ) :
             {
                 printf(
                     '%1$s<div class="%2$s" data-hint="%3$s">
-                        %4$s %5$s %6$s %7$s
+                        %4$s %5$s %6$s %7$s%8$s
                     </div>%8$s',
                     $args['before'],
                     trim(implode(' ', $classes)),
                     esc_html($args['hint']),
                     !empty($args['icon']) ? '<span class="'.$args['icon'].'"></span>' : '',
+                    esc_html__('Posted in:','sunix'),
                     $args['before_tag'],
                     $tags_list,
                     $args['after_tag'],
