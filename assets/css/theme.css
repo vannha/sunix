@@ -5428,6 +5428,25 @@ figcaption {
   padding-right: 33px;
   margin-left: -4px; }
 
+.checked-list ul li {
+  position: relative; }
+  .checked-list ul li:before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    color: #f4436d; }
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, table.woocommerce-cart-form__contents thead th, .h4, .woocommerce-account .woocommerce-MyAccount-content form.edit-account legend, .h4-1, .h5, .h6, .widget_shopping_cart_content .cart-item-name-wrap, .red-heading, #wp-calendar > caption {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
