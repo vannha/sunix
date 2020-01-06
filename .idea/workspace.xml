@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/scss/typo/_tags.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/typo/_tags.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/content/_single.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/content/_single.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,10 +26,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/typo/_tags.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="674">
+            <state relative-caret-position="1109">
               <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
             </state>
           </provider>
@@ -40,6 +40,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="348">
               <caret line="66" column="15" selection-start-line="66" selection-start-column="15" selection-end-line="66" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/scss/content/_single.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="64" column="40" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -57,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/vc_templates/vc_column_text.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="522">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -165,12 +174,12 @@
         <option value="$PROJECT_DIR$/inc/functions/template-functions.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-3/wp-config.php" />
         <option value="$PROJECT_DIR$/assets/scss/content/_meta.scss" />
-        <option value="$PROJECT_DIR$/assets/scss/content/_single.scss" />
         <option value="$PROJECT_DIR$/assets/scss/typo/_copy.scss" />
         <option value="$PROJECT_DIR$/vc_templates/vc_column_text.php" />
         <option value="$PROJECT_DIR$/vc_templates/red_video.php" />
         <option value="$PROJECT_DIR$/assets/scss/typo/_list.scss" />
         <option value="$PROJECT_DIR$/assets/scss/typo/_tags.scss" />
+        <option value="$PROJECT_DIR$/assets/scss/content/_single.scss" />
       </list>
     </option>
   </component>
@@ -203,6 +212,13 @@
               <item name="sunix" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sunix" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
@@ -310,12 +326,12 @@
       <workItem from="1577070861013" duration="2226000" />
       <workItem from="1577084738387" duration="8198000" />
       <workItem from="1577328226797" duration="273000" />
-      <workItem from="1578036438669" duration="8034000" />
+      <workItem from="1578036438669" duration="8561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105878000" />
+    <option name="totallyTimeSpent" value="106405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -586,13 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/content/_single.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
-          <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/typo/_copy.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -653,7 +662,7 @@
     <entry file="file://$PROJECT_DIR$/vc_templates/vc_column_text.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
@@ -673,8 +682,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/typo/_tags.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
+        <state relative-caret-position="1109">
           <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/content/_single.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="64" column="40" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="40" />
         </state>
       </provider>
     </entry>
