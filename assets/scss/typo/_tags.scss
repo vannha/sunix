@@ -64,6 +64,7 @@ figcaption{
 .checked-list{
 	ul li{
 		position: relative;
+		padding-left: 24px;
 		&:before{
 			content: "\f00c";
 			font-family: "Font Awesome 5 Pro";
