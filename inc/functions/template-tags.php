@@ -228,7 +228,7 @@ if ( ! function_exists( 'sunix_tagged_in' ) ) :
                     trim(implode(' ', $classes)),
                     esc_html($args['hint']),
                     !empty($args['icon']) ? '<span class="'.$args['icon'].'"></span>' : '',
-                    esc_html__('Posted in:','sunix'),
+                    '<span>'.esc_html__('Posted in:','sunix').'</span>',
                     $args['before_tag'],
                     $tags_list,
                     $args['after_tag'],

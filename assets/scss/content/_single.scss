@@ -194,9 +194,12 @@
   font-size: 17px;
   line-height: 28px;
   letter-spacing: 1px;
-  color: $primary_color;
+  color: #fff;
   padding-right: 20px;
 	font-weight: 700;
+	span{
+		color: $primary_color;
+	}
   a{
 	color: #fff;
 	&:hover{
