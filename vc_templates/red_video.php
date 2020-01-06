@@ -97,7 +97,6 @@ switch ($layout_template) {
                     'class'   => 'video-poster'.esc_attr($poster_style),
                     'default' => true
                     ]);
-                    echo '</div>';
                  }
                 echo ''.$this->sunix_video_popup($atts,['anim' => $play_btn_effect]);
             if(!empty($poster)) echo '</div>';
