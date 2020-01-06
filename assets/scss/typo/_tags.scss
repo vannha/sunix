@@ -48,3 +48,11 @@ figure{
 figcaption{
 	display: block;
 }
+.first-letter{
+	.wpb_wrapper{
+		> p::first-letter{
+			font-size: 100px;
+			font-weight: 900;
+		}
+	}
+}

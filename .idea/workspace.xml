@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/vc_templates/vc_column_text.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/vc_column_text.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/typo/_tags.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/typo/_tags.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +27,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/scss/typo/_tags.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="790">
+              <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vc_templates/vc_column_text.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="522">
@@ -119,7 +128,6 @@
         <option value="$PROJECT_DIR$/inc/functions/page-title.php" />
         <option value="$PROJECT_DIR$/assets/scss/page-title/_parallax.scss" />
         <option value="$PROJECT_DIR$/assets/scss/typo/typo.scss" />
-        <option value="$PROJECT_DIR$/assets/scss/typo/_tags.scss" />
         <option value="$PROJECT_DIR$/inc/theme-options/core-options.php" />
         <option value="$PROJECT_DIR$/assets/scss/header-top/_menu.scss" />
         <option value="$PROJECT_DIR$/assets/scss/header-top/header-top.scss" />
@@ -144,6 +152,7 @@
         <option value="$PROJECT_DIR$/assets/scss/typo/_copy.scss" />
         <option value="$PROJECT_DIR$/vc_templates/red_video.php" />
         <option value="$PROJECT_DIR$/vc_templates/vc_column_text.php" />
+        <option value="$PROJECT_DIR$/assets/scss/typo/_tags.scss" />
       </list>
     </option>
   </component>
@@ -182,49 +191,7 @@
               <item name="sunix" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sunix" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sunix" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="header-top" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sunix" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="menus" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sunix" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="page-title" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sunix" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
               <item name="typo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sunix" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="vc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
@@ -325,12 +292,12 @@
       <workItem from="1577070861013" duration="2226000" />
       <workItem from="1577084738387" duration="8198000" />
       <workItem from="1577328226797" duration="273000" />
-      <workItem from="1578036438669" duration="4268000" />
+      <workItem from="1578036438669" duration="4563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102112000" />
+    <option name="totallyTimeSpent" value="102407000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -615,13 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/typo/_tags.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/typo/_copy.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -679,6 +639,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vc_templates/vc_column_text.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vc_extends/_vc_output.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
@@ -686,10 +653,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vc_templates/vc_column_text.php">
+    <entry file="file://$PROJECT_DIR$/assets/scss/typo/_tags.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="790">
+          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
         </state>
       </provider>
     </entry>
