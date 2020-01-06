@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/inc/woo/hook_checkout.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/woo/hook_checkout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/alacarte.pot" beforeDir="false" afterPath="$PROJECT_DIR$/languages/alacarte.pot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vc_extends/_vc_output.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_extends/_vc_output.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vc_templates/vc_column_text.php" beforeDir="false" afterPath="$PROJECT_DIR$/vc_templates/vc_column_text.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +16,35 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vc_extends/_vc_output.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="472">
+              <caret line="606" column="41" selection-start-line="606" selection-start-column="25" selection-end-line="606" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vc_templates/vc_column_text.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vc_extends/_vc_extends.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17041">
+              <caret line="1093" column="6" selection-start-line="1093" selection-start-column="6" selection-end-line="1093" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -45,6 +71,9 @@
       <find>syring</find>
       <find>Syring Custom</find>
       <find>$poster</find>
+      <find>letter_spacing</find>
+      <find>list_style</find>
+      <find>vc_column_text</find>
     </findStrings>
     <replaceStrings>
       <replace>alacarte</replace>
@@ -64,7 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/scss/widgets/_wp_recent_comment.scss" />
         <option value="$PROJECT_DIR$/assets/scss/widgets/widgets.scss" />
         <option value="$PROJECT_DIR$/assets/scss/comments/_form.scss" />
         <option value="$PROJECT_DIR$/assets/scss/comments/_list.scss" />
@@ -115,6 +143,7 @@
         <option value="$PROJECT_DIR$/assets/scss/content/_single.scss" />
         <option value="$PROJECT_DIR$/assets/scss/typo/_copy.scss" />
         <option value="$PROJECT_DIR$/vc_templates/red_video.php" />
+        <option value="$PROJECT_DIR$/vc_templates/vc_column_text.php" />
       </list>
     </option>
   </component>
@@ -193,6 +222,13 @@
             <path>
               <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
               <item name="sunix" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
+              <item name="vc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sunix" type="462c0819:PsiDirectoryNode" />
               <item name="inc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -200,6 +236,12 @@
               <item name="sunix" type="462c0819:PsiDirectoryNode" />
               <item name="inc" type="462c0819:PsiDirectoryNode" />
               <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sunix" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
+              <item name="extensions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
@@ -223,6 +265,11 @@
               <item name="sunix" type="462c0819:PsiDirectoryNode" />
               <item name="template-parts" type="462c0819:PsiDirectoryNode" />
               <item name="single" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sunix" type="462c0819:PsiDirectoryNode" />
+              <item name="vc_extends" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
@@ -278,12 +325,12 @@
       <workItem from="1577070861013" duration="2226000" />
       <workItem from="1577084738387" duration="8198000" />
       <workItem from="1577328226797" duration="273000" />
-      <workItem from="1578036438669" duration="3804000" />
+      <workItem from="1578036438669" duration="4268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101648000" />
+    <option name="totallyTimeSpent" value="102112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -314,27 +361,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/custom-post/_functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/custom-post/core.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1653">
-          <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/theme-options/theme-options.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5046">
@@ -643,6 +669,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1110">
           <caret line="94" column="41" lean-forward="true" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vc_extends/_vc_extends.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17041">
+          <caret line="1093" column="6" selection-start-line="1093" selection-start-column="6" selection-end-line="1093" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vc_extends/_vc_output.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="606" column="41" selection-start-line="606" selection-start-column="25" selection-end-line="606" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vc_templates/vc_column_text.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>

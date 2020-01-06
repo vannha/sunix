@@ -13,13 +13,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @var $this WPBakeryShortCode_VC_Column_text
  */
 
-$el_class = $css = $list_style = '';
+$el_class = $css = $list_style = $block_text_style = '';
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
 
 $class_to_filter = 'wpb_text_column wpb_content_element ';
 $class_to_filter .= vc_shortcode_custom_css_class( $css, ' ' ) . $this->getExtraClass( $el_class );
-$css_class = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, $class_to_filter.' '.$list_style, $this->settings['base'], $atts );
+$css_class = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, $class_to_filter.' '.$list_style.' '.$block_text_style, $this->settings['base'], $atts );
 
 $wrapper_attributes = array();
 if ( ! empty( $el_id ) ) {
