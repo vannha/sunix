@@ -396,13 +396,6 @@ Redux::setSection($opt_name, array(
                 'type'     => 'switch',
                 'default'  => '0'
             ),
-            array(
-                'id'       => 'post_share_on',
-                'title'    => esc_html__('Share', 'sunix'),
-                'subtitle' => esc_html__('Show share post to some socials network on each post.', 'sunix'),
-                'type'     => 'switch',
-                'default'  => '0',
-            ),
         )
     )
 

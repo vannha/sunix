@@ -21,6 +21,6 @@
     <footer class="red-post-footer row justify-content-between align-items-center empty-none"><?php
         do_action('sunix_single_post_footer');
         sunix_tagged_in();
-        sunix_post_share(array('show_title' => false, 'social_args' => ['class' => 'size-28 shape-circle outline colored-hover']));
+
     ?></footer>
 </article>
