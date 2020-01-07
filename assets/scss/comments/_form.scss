@@ -45,15 +45,12 @@
   }
 
    [type="submit"]{
-	width: 100%;
-	 background: $BodyColor;
+	 background: $primary_color;
 	 color: #fff;
-	 font-family: $ExtraFont;
 	 font-style: normal;
-	 font-size: 13px;
+	 font-size: 14px;
 	 text-transform: uppercase;
-	 letter-spacing: 1.85714px;
-	 font-weight: normal;
+	 font-weight: 700;
 	 padding: 11px 31px;
 	 &:hover{
 	   color: #fff;
