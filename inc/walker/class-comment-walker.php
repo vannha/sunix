@@ -38,7 +38,7 @@ class sunix_Walker_Comment extends Walker_Comment {
 				<?php if ( 0 != $args['avatar_size'] ) { ?>
 				<div class="comment-avatar col-12 col-md-auto">
 					<div class="row align-items-center">
-						<div class="col-auto">
+						<div class="col-auto col-img-avt">
 							<?php 
 								if ( empty( $comment_author_url ) ) {
 									printf('%s', $avatar);
