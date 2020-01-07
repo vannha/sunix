@@ -64,7 +64,7 @@ if ( post_password_required() ) {
 			$args = array(
 				'title_reply' => have_comments() ? esc_html__( 'Leave A Comment', 'sunix' ) : sprintf( esc_html__( 'Leave A Comment', 'sunix' ), get_the_title() ),
 				'title_reply_before' => '<h3 id="reply-title" class="comment-reply-title"><i class="icon-comment-2"></i>',
-				'label_submit'      => esc_html__( 'Submit','sunix'),
+				'label_submit'      => esc_html__( 'Post COmment','sunix'),
 				'comment_notes_before' => esc_html__( 'Your email address will not be published. Required fields are marked *', 'sunix' ),
 				'fields' => apply_filters( 'sunix_comment_form_default_fields', array(
 
