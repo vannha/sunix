@@ -31,7 +31,7 @@ class sunix_Walker_Comment extends Walker_Comment {
 		$comment_author_link = get_comment_author_link( $comment );
 		$comment_author_url  = get_comment_author_url( $comment );
 		$comment_author      = get_comment_author( $comment );
-		$avatar              = get_avatar( $comment, $args['avatar_size'], '', $comment_author, ['class'=>'cmt-avatar circle'] );
+		$avatar              = get_avatar( $comment, $args['avatar_size'], '', $comment_author, ['class'=>'cmt-avatar'] );
 		?>
 		<<?php echo esc_attr($tag); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
 			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body row">
