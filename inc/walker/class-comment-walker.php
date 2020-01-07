@@ -53,34 +53,35 @@ class sunix_Walker_Comment extends Walker_Comment {
 				<?php } ?>
 				<div class="comment-info col">
 					<?php $this->sunix_comment_author_info([], $comment , $comment_author ); ?>
+                    <div class="comment-metadata">
+						<span class="comment-time meta-color"><?php
+                            /* translators: 1: comment date, 2: comment time */
+                            $comment_timestamp = sprintf( __( '%1$s at %2$s', 'sunix' ), get_comment_date( '', $comment ), get_comment_time() );
+                            echo sunix_html($comment_timestamp);
+                            ?></span>
+                        <?php
+                        comment_reply_link(
+                            array_merge(
+                                $args,
+                                array(
+                                    'add_below' => 'div-comment',
+                                    'depth'     => $depth,
+                                    'max_depth' => $args['max_depth'],
+                                    'before'    => '',
+                                    'after'     => '',
+                                )
+                            )
+                        );
+                        edit_comment_link(esc_html__('Edit','sunix'));
+                        ?>
+                    </div>
 					<?php if ( '0' == $comment->comment_approved ) : ?>
 						<div class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'sunix' ); ?></div>
 					<?php endif; ?>
 					<div class="comment-content">
 						<?php comment_text(); ?>
 					</div>
-					<div class="comment-metadata">
-						<span class="comment-time meta-color"><?php
-								/* translators: 1: comment date, 2: comment time */
-								$comment_timestamp = sprintf( __( '%1$s at %2$s', 'sunix' ), get_comment_date( '', $comment ), get_comment_time() );
-							echo sunix_html($comment_timestamp);
-						?></span>
-						<?php
-							comment_reply_link(
-								array_merge(
-									$args,
-									array(
-										'add_below' => 'div-comment',
-										'depth'     => $depth,
-										'max_depth' => $args['max_depth'],
-										'before'    => '',
-										'after'     => '',
-									)
-								)
-							);
-							edit_comment_link(esc_html__('Edit','sunix'));
-						?>
-					</div>
+
 				</div>
 			</article>
 		<?php
