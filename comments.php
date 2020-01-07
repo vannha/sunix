@@ -77,7 +77,7 @@ if ( post_password_required() ) {
 							'" size="30" aria-required="true" required="required" placeholder="'.esc_html__('Your Email*','sunix').'"/></p></div></div>',
 					)
 				),
-				'comment_field' =>  '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="3" aria-required="true" required="required" placeholder="'.esc_attr__('Comment','sunix').'"></textarea></p>',
+				'comment_field' =>  '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="3" aria-required="true" required="required" placeholder="'.esc_attr__('Comment*','sunix').'"></textarea></p>',
 			);
 			comment_form($args); ?>
 		</div>
