@@ -11613,9 +11613,15 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   position: absolute;
-  top: 0;
-  right: 10px;
+  top: -42px;
+  right: 40px;
   padding: 4px 22px 2px; }
+
+.commentlist .comment-metadata .comment-reply-link:hover {
+  background: #333; }
+
+.commentlist .comment-metadata .comment-edit-link {
+  padding-left: 16px; }
 
 .commentlist .children {
   padding: 0;
