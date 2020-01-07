@@ -66,6 +66,7 @@
 	.comment-info {
 		.author-info{
 			padding-bottom: 4px;
+			float: left;
 			@media (max-width: 767px){
 				display: none;
 			}
@@ -82,15 +83,10 @@
 		line-height: 30px;
 	}
 	.comment-metadata{
-		font-size: $BodyFontSizeXXS;
 		padding-top: 12px;
-		margin: -10px;
-		@include d-flex();
 	  padding-bottom: 4px;
+		float: left;
 		> * {
-			flex: 0 0 auto;
-		    width: auto;
-		    max-width: 100%;
 			padding: 10px;
 		  color: #888;
 		  
