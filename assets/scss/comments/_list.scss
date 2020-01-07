@@ -89,6 +89,9 @@
 		float: left;
 		font-size: 16px;
 		color: $primary_color;
+		> *{
+			color: inherit;
+		}
 	}
 	.children{
 		padding: 0;
