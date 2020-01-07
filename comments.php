@@ -69,15 +69,15 @@ if ( post_password_required() ) {
 				'fields' => apply_filters( 'sunix_comment_form_default_fields', array(
 
 						'author' =>
-							'<div class="row"><div class="col-md-6"><p class="comment-form-author"><label>'.esc_html__('Your Name*','sunix').'</label><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-							'" size="30" aria-required="true" required="required" placeholder="e.g, Andrea Robesson"/></p></div>',
+							'<div class="row"><div class="col-md-6"><p class="comment-form-author"><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+							'" size="30" aria-required="true" required="required" placeholder="'.esc_html__('Your Name*','sunix').'"/></p></div>',
 
 						'email' =>
-							'<div class="col-md-6"><p class="comment-form-email"><label>'.esc_html__('Your Email*','sunix').'</label><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-							'" size="30" aria-required="true" required="required" placeholder="name@youraddress.com"/></p></div></div>',
+							'<div class="col-md-6"><p class="comment-form-email"><label>'.'</label><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+							'" size="30" aria-required="true" required="required" placeholder="'.esc_html__('Your Email*','sunix').'"/></p></div></div>',
 					)
 				),
-				'comment_field' =>  '<p class="comment-form-comment"><label>'.esc_html__('Comment*','sunix').'</label><textarea id="comment" name="comment" cols="45" rows="3" aria-required="true" required="required" placeholder="'.esc_attr__('Your text','sunix').'"></textarea></p>',
+				'comment_field' =>  '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="3" aria-required="true" required="required" placeholder="'.esc_attr__('Comment','sunix').'"></textarea></p>',
 			);
 			comment_form($args); ?>
 		</div>
