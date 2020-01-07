@@ -60,7 +60,7 @@ if(!function_exists('sunix_configs')){
             'header_sidewidth' => '320px',
             'dropdown_bg'      => 'rgba(#fff, 1)',
             // Comments 
-            'cmt_avatar_size'  => 80,
+            'cmt_avatar_size'  => 100,
             'cmt_border'       => '3px solid #f4f4f4',
             // WooCommerce,
             'sunix_product_single_image_w' => '570',
