@@ -6,10 +6,7 @@ $sidebar_bg : #fff;
 	.sidebar-inner{
 		position: relative;
 		z-index: 1;
-		@media (min-width: $screen-lg-min){
-			padding-left: 5px;
-
-		}
+		border: #f4f4f4 solid 3px;
 	}
 	&.red-blogs{
 		position: relative;

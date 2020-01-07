@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/comments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,11 +62,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/comments.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
               <caret line="66" column="64" selection-start-line="66" selection-start-column="64" selection-end-line="66" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -138,7 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/scss/woocommerce/_checkout.scss" />
         <option value="$PROJECT_DIR$/assets/scss/woocommerce/_widgets.scss" />
         <option value="$PROJECT_DIR$/assets/scss/menus/_toggle.scss" />
         <option value="$PROJECT_DIR$/inc/functions/theme.php" />
@@ -189,6 +197,7 @@
         <option value="$PROJECT_DIR$/assets/scss/buttons/_accent.scss" />
         <option value="$PROJECT_DIR$/assets/scss/comments/_form.scss" />
         <option value="$PROJECT_DIR$/comments.php" />
+        <option value="$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss" />
       </list>
     </option>
   </component>
@@ -234,6 +243,13 @@
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
               <item name="form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sunix" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
+              <item name="sidebar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
@@ -349,12 +365,12 @@
       <workItem from="1577084738387" duration="8198000" />
       <workItem from="1577328226797" duration="273000" />
       <workItem from="1578036438669" duration="17869000" />
-      <workItem from="1578364387719" duration="13679000" />
+      <workItem from="1578364387719" duration="14102000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129392000" />
+    <option name="totallyTimeSpent" value="129815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -385,9 +401,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/scss/header/_header_layout1.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/header/header.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1218">
@@ -725,6 +738,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="66" column="64" selection-start-line="66" selection-start-column="64" selection-end-line="66" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
         </state>
       </provider>
     </entry>
