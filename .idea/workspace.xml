@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/assets/scss/form/_fields.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/form/_fields.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/form/_variations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/form/_variations.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,11 +63,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/form/_fields.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="290">
+              <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/scss/form/_variations.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -103,15 +113,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="790">
               <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/scss/typo/_heading.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -169,7 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/scss/woocommerce/_message.scss" />
         <option value="$PROJECT_DIR$/assets/scss/woocommerce/_single.scss" />
         <option value="$PROJECT_DIR$/assets/scss/woocommerce/_checkout.scss" />
         <option value="$PROJECT_DIR$/assets/scss/woocommerce/_widgets.scss" />
@@ -220,6 +220,7 @@
         <option value="$PROJECT_DIR$/inc/walker/class-comment-walker.php" />
         <option value="$PROJECT_DIR$/comments.php" />
         <option value="$PROJECT_DIR$/assets/scss/form/_fields.scss" />
+        <option value="$PROJECT_DIR$/assets/scss/form/_variations.scss" />
       </list>
     </option>
   </component>
@@ -380,12 +381,12 @@
       <workItem from="1577084738387" duration="8198000" />
       <workItem from="1577328226797" duration="273000" />
       <workItem from="1578036438669" duration="17869000" />
-      <workItem from="1578364387719" duration="9935000" />
+      <workItem from="1578364387719" duration="10301000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125648000" />
+    <option name="totallyTimeSpent" value="126014000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -416,13 +417,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/scss/header-top/_language.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1421">
-          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/header/_icons.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2233">
@@ -758,8 +752,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/form/_fields.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="290">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/form/_variations.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>

@@ -24,19 +24,15 @@ textarea,
 select {
 	-webkit-backface-visibility: hidden;
 	background: $FF_Background;
-	border: $FF_Border;
 	box-sizing: border-box;
 	outline: none;
 	padding: $FF_Spacing;
 	outline-offset: 0;
 	border-radius: $FF_BorderRadius;
-	font-family: $ExtraFont;
 	font-style: normal;
-	font-weight: 500;
-	font-size: 13px;
+	font-weight: 300;
+	font-size: 14px;
 	line-height: 28px;
-	letter-spacing: 1.85714px;
-	text-transform: uppercase;
 	color: $BodyColor;
 	@include placeholder() {
 		color: $FF_placeholder_color;
