@@ -86,8 +86,9 @@
 	}
 	.comment-metadata{
 		padding-top: 12px;
-	  padding-bottom: 4px;
 		float: left;
+		font-size: 16px;
+		color: $primary_color;
 		> * {
 			padding: 10px;
 		  color: #888;
