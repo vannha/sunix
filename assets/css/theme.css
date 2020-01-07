@@ -11428,18 +11428,13 @@ body {
   border: none !important; }
 
 .comment-respond {
-  margin-top: 76px; }
-
-@media (max-width: 767px) {
-    .comment-respond {
-      margin-top: 50px; } }
+  margin-top: 55px; }
 
 .comment-reply-title {
   margin: 0 0 9px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
-  color: #666; }
+  font-weight: 700;
+  font-size: 28px;
+  color: #333; }
 /* Comment Form */
 .comment-form > .row {
   margin-top: 33px; }
@@ -11631,7 +11626,7 @@ body {
   padding-left: 20px; }
   @media (min-width: 992px) {
         .commentlist .children .comment.depth-1, .commentlist .children .comment.depth-2, .commentlist .children .comment.depth-3 {
-          padding-left: 130px; } }
+          padding-left: 32px; } }
 
 .commentlist .children .comment.depth-4 {
   padding-left: 10px; }
