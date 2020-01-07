@@ -66,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/assets/scss/comments/_form.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="290">
-              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -102,7 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.commentlist</find>
       <find>post-navigation</find>
       <find>'syring'</find>
       <find>sidebar-page</find>
@@ -132,6 +131,7 @@
       <find>avatar_size</find>
       <find>heading_color</find>
       <find>author-info</find>
+      <find>#dd9933</find>
     </findStrings>
     <replaceStrings>
       <replace>alacarte</replace>
@@ -355,12 +355,12 @@
       <workItem from="1577084738387" duration="8198000" />
       <workItem from="1577328226797" duration="273000" />
       <workItem from="1578036438669" duration="17869000" />
-      <workItem from="1578364387719" duration="7905000" />
+      <workItem from="1578364387719" duration="8081000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123618000" />
+    <option name="totallyTimeSpent" value="123794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -734,7 +734,7 @@
     <entry file="file://$PROJECT_DIR$/assets/scss/comments/_form.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>
