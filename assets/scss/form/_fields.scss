@@ -39,9 +39,8 @@ select {
 	text-transform: uppercase;
 	color: $BodyColor;
 	@include placeholder() {
-	  color: $FF_placeholder_color;
+		color: $FF_placeholder_color;
 	}
-
 }
 input[type="text"],
 input[type="email"],
