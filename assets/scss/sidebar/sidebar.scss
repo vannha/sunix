@@ -16,23 +16,6 @@ $sidebar_bg : #fff;
 		}
 	}
 }
-@media (min-width: $screen-lg-min){
-	.red-content-area[class*="col-lg"] .red-blogs{
-		padding-right: $grid-gutter-width /2;
-		[dir="rtl"] &{
-			padding-left: $grid-gutter-width /2;
-		}
-	}
-
-	.red-content-area.order-lg-1[class*="col-lg"] .red-blogs{
-		padding-right: 0;
-		padding-left: $grid-gutter-width /2;
-		[dir="rtl"] &{
-			padding-left: 0;
-			padding-right: $grid-gutter-width /2;
-		}
-	}
-}
 .new-dishes{
   position: relative;
   min-height: 379px;
