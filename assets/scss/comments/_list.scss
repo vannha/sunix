@@ -95,6 +95,16 @@
 		.meta-color{
 			padding-left: 16px;
 		}
+		.comment-reply-link{
+			background: $primary_color;
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: 700;
+			position: absolute;
+			top: 0 ;
+		right:10px;
+		;
+		}
 
 	}
 	.children{
