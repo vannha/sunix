@@ -30,7 +30,7 @@ if(!function_exists('sunix_configs')){
             'h2_size'               => '30px',
             'h3_size'               => '28px',
             'h4_size'               => '20px',
-            'h5_size'               => '16px',
+            'h5_size'               => '17px',
             'h6_size'               => '14px',
             'heading_font'          => '\'Roboto\', sans-serif',
             'heading_color'         => '#333',
