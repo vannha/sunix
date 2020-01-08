@@ -1,54 +1,60 @@
 /* CMS Recent Post */
 .widget_sunix_recent_posts{
-
-}
-.posts-list{
-	overflow: hidden;
-  padding-top: 10px;
-	.post-list-entry{
-		margin-bottom: 20px;
-		align-items: center;
-		&:last-child{
-			margin-bottom: 0;
-		}
-	}
-	.red-heading{
-		margin: 0 0 4px;
-	  font-size: 16px;
-	  line-height: 24px;
-	  @media (min-width: 768px) and (max-width:1024px){
-		margin: -5px 0 4px;
-		font-size: 13px;
-		line-height: 22px;
-	  }
-	}
-	.red-meta{
-		font-size: $BodyFontSizeS;
-	}
-	.red-featured{
-		margin-bottom: 0;
-		> a{
-			display: block;
-		  > img{
-			@media (min-width: 768px) and (max-width:1024px){
-			 max-width: 50px;
-			}
-		  }
-		}
-	}
-	
-	&.layout-1,
-	&.layout-3{
-
-	}
-	&.layout-2{
+	.posts-list{
+		overflow: hidden;
+		padding-top: 10px;
 		.post-list-entry{
-			padding: 20px 0;
+			margin-bottom: 20px;
+			align-items: center;
+			&:last-child{
+				margin-bottom: 0;
+			}
 		}
-	}
-	&.layout-3{
-		.post-list-entry:hover{
-			@include box-shadow($BoxShadowHover);
+		.red-heading{
+			margin: 0 0 4px;
+			font-size: 16px;
+			line-height: 24px;
+			@media (min-width: 768px) and (max-width:1024px){
+				margin: -5px 0 4px;
+				font-size: 13px;
+				line-height: 22px;
+			}
+		}
+		.red-meta{
+			font-size: $BodyFontSizeS;
+		}
+		.red-featured{
+			margin-bottom: 0;
+			background: $primary_color;
+			> span{
+				width: 100%;
+				display: block;
+				&.day{
+					font-size: 24px;
+					font-weight: 700;
+					color: #fff;
+				}
+				&.month{
+					text-transform: uppercase;
+					font-size: 15px;
+					font-weight: 400;
+				}
+			}
+		}
+
+		&.layout-1,
+		&.layout-3{
+
+		}
+		&.layout-2{
+			.post-list-entry{
+				padding: 20px 0;
+			}
+		}
+		&.layout-3{
+			.post-list-entry:hover{
+				@include box-shadow($BoxShadowHover);
+			}
 		}
 	}
 }
