@@ -90,11 +90,10 @@ class sunix_Recent_Posts_Widget extends WP_Widget
                     ( has_post_thumbnail() ? 'has-post-thumbnail' : '' )
                 );
 
-                
-                $thumbnail_url = sunix_get_image_url_by_size([
-                    'size'          => $thumbnail_size,
-                    'default_thumb' => true,
-                ]);
+
+                if($show_date){
+                   echo '<span class="day">'.get_the_date ('d').'</span><span class="month">'.get_the_date('M').'</span>';
+                };
                 printf(
                     '<div class="red-featured col-auto">' .
                         '<a href="%1$s" title="%2$s" class="red-thumbnail">' .
@@ -119,7 +118,6 @@ class sunix_Recent_Posts_Widget extends WP_Widget
                 {
                     ob_start();
                     if($show_author) sunix_posted_by();
-                    if($show_date) sunix_posted_on();
                     if($show_comments) sunix_comments_popup_link(['show_text'=> true]);
                     if($show_cat) sunix_posted_in();
                     $post_meta = ob_get_clean();
