@@ -4,7 +4,7 @@
 	margin: 0;
 	@media (min-width: $screen-md-min){
 		.comment-info{
-			max-width: calc( 100% - #{$cmt_avatar_size + $grid-gutter-width});
+			max-width: calc( 100% - #{$cmt_avatar_size});
 		}
 	}
 	.comment-content{
