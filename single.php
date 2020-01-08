@@ -24,8 +24,6 @@ get_header();
                     while ( have_posts() ) :
                         the_post();
                         get_template_part( 'template-parts/single/content', get_post_format() );
-                        // Post Navigation
-                        sunix_post_navigation();
                         // Comment
                         sunix_comment();
 

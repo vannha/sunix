@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/single.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,15 +54,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/scss/comments/_list.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3770">
-              <caret line="130" column="39" selection-start-line="130" selection-start-column="39" selection-end-line="130" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/comments/_form.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1682">
@@ -80,11 +71,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="261">
               <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/single.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="25" column="96" selection-start-line="25" selection-start-column="96" selection-end-line="25" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -156,7 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/inc/functions/theme.php" />
         <option value="$PROJECT_DIR$/assets/scss/page-title/page-title.scss" />
         <option value="$PROJECT_DIR$/../alacarte/assets/scss/page-title/page-title.scss" />
         <option value="$PROJECT_DIR$/../alacarte/assets/css/theme.css" />
@@ -207,6 +206,7 @@
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/assets/scss/sidebar/_widgets.scss" />
         <option value="$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss" />
+        <option value="$PROJECT_DIR$/single.php" />
       </list>
     </option>
   </component>
@@ -389,12 +389,12 @@
       <workItem from="1577328226797" duration="273000" />
       <workItem from="1578036438669" duration="17869000" />
       <workItem from="1578364387719" duration="15353000" />
-      <workItem from="1578447241601" duration="1117000" />
+      <workItem from="1578447241601" duration="1731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132183000" />
+    <option name="totallyTimeSpent" value="132797000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -425,13 +425,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/scss/menus/_desktop.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1653">
-          <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/menus/menus.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -769,6 +762,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="25" column="96" selection-start-line="25" selection-start-column="96" selection-end-line="25" selection-end-column="96" />
         </state>
       </provider>
     </entry>
