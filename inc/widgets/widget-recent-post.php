@@ -92,18 +92,8 @@ class sunix_Recent_Posts_Widget extends WP_Widget
 
 
                 if($show_date){
-                   echo '<span class="day">'.get_the_date ('d').'</span><span class="month">'.get_the_date('M').'</span>';
+                   echo '<div class="red-featured col-auto"><span class="day">'.get_the_date ('d').'</span><span class="month">'.get_the_date('M').'</span></div>';
                 };
-                printf(
-                    '<div class="red-featured col-auto">' .
-                        '<a href="%1$s" title="%2$s" class="red-thumbnail">' .
-                            '<img src="%3$s" alt="%2$s" />' .
-                        '</a>' .
-                    '</div>',
-                    esc_url( get_permalink() ),
-                    esc_attr( get_the_title() ),
-                    esc_url( $thumbnail_url )
-                );
 
                 echo '<div class="red-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
 

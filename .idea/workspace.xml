@@ -66,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/inc/widgets/widget-recent-post.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="406">
-              <caret line="94" column="90" selection-start-line="94" selection-start-column="90" selection-end-line="94" selection-end-column="90" />
+              <caret line="94" column="161" selection-start-line="94" selection-start-column="161" selection-end-line="94" selection-end-column="161" />
             </state>
           </provider>
         </entry>
@@ -434,12 +434,12 @@
       <workItem from="1577328226797" duration="273000" />
       <workItem from="1578036438669" duration="17869000" />
       <workItem from="1578364387719" duration="15353000" />
-      <workItem from="1578447241601" duration="4978000" />
+      <workItem from="1578447241601" duration="5121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136044000" />
+    <option name="totallyTimeSpent" value="136187000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -818,7 +818,7 @@
     <entry file="file://$PROJECT_DIR$/inc/widgets/widget-recent-post.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
-          <caret line="94" column="90" selection-start-line="94" selection-start-column="90" selection-end-line="94" selection-end-column="90" />
+          <caret line="94" column="161" selection-start-line="94" selection-start-column="161" selection-end-line="94" selection-end-column="161" />
         </state>
       </provider>
     </entry>
