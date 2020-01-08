@@ -25,7 +25,7 @@ if(!function_exists('sunix_configs')){
             'body_font_size_xxsmall'=> '12px',
             'body_font_color'       => '#666666',
             'body_line_height'      => '1.8',
-            'content_width'         => 1170,
+            'content_width'         => 1200,
             'h1_size'               => '36px',
             'h2_size'               => '30px',
             'h3_size'               => '28px',
