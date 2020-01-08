@@ -92,7 +92,7 @@ class sunix_Recent_Posts_Widget extends WP_Widget
 
 
                 if($show_date){
-                   echo '<div class="red-featured col-auto"><span class="day">'.get_the_date ('d').'</span><span class="month">'.get_the_date('M').'</span></div>';
+                   echo '<div class="red-featured col-auto"><div class="red-featured-inner"><span class="day">'.get_the_date ('d').'</span><span class="month">'.get_the_date('M').'</span></div></div>';
                 };
 
                 echo '<div class="red-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';

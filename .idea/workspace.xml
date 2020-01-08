@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/scss/widgets/_recentpost.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/widgets/_recentpost.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/widgets/widget-recent-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/widgets/widget-recent-post.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/widgets/_recentpost.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+            <state>
+              <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -62,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inc/widgets/widget-recent-post.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="406">
-              <caret line="94" column="161" selection-start-line="94" selection-start-column="161" selection-end-line="94" selection-end-column="161" />
+              <caret line="94" column="199" selection-start-line="94" selection-start-column="199" selection-end-line="94" selection-end-column="199" />
             </state>
           </provider>
         </entry>
@@ -219,8 +219,8 @@
         <option value="$PROJECT_DIR$/inc/walker/class-comment-walker.php" />
         <option value="$PROJECT_DIR$/assets/scss/comments/_list.scss" />
         <option value="$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss" />
-        <option value="$PROJECT_DIR$/inc/widgets/widget-recent-post.php" />
         <option value="$PROJECT_DIR$/assets/scss/widgets/_recentpost.scss" />
+        <option value="$PROJECT_DIR$/inc/widgets/widget-recent-post.php" />
       </list>
     </option>
   </component>
@@ -441,12 +441,12 @@
       <workItem from="1577328226797" duration="273000" />
       <workItem from="1578036438669" duration="17869000" />
       <workItem from="1578364387719" duration="15353000" />
-      <workItem from="1578447241601" duration="5583000" />
+      <workItem from="1578447241601" duration="5811000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136649000" />
+    <option name="totallyTimeSpent" value="136877000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -770,19 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/functions/template-functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="86" column="50" selection-start-line="86" selection-start-column="50" selection-end-line="86" selection-end-column="50" />
-          <folding>
-            <element signature="e#38#44#0" expanded="true" />
-            <element signature="e#44#50#0" expanded="true" />
-            <element signature="e#38#44#0" expanded="true" />
-            <element signature="e#44#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/functions/template-tags.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -797,10 +784,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/widgets/widget-recent-post.php">
+    <entry file="file://$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/widgets/_recentpost.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/functions/template-functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
-          <caret line="94" column="161" selection-start-line="94" selection-start-column="161" selection-end-line="94" selection-end-column="161" />
+          <caret line="86" column="50" selection-start-line="86" selection-start-column="50" selection-end-line="86" selection-end-column="50" />
+          <folding>
+            <element signature="e#38#44#0" expanded="true" />
+            <element signature="e#44#50#0" expanded="true" />
+            <element signature="e#38#44#0" expanded="true" />
+            <element signature="e#44#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -815,17 +822,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss">
+    <entry file="file://$PROJECT_DIR$/inc/widgets/widget-recent-post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/widgets/_recentpost.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+        <state relative-caret-position="406">
+          <caret line="94" column="199" selection-start-line="94" selection-start-column="199" selection-end-line="94" selection-end-column="199" />
         </state>
       </provider>
     </entry>
