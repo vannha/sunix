@@ -204,10 +204,10 @@ add_action('admin_enqueue_scripts', 'sunix_admin_style');
  */
 // Set up the content width value based on the theme's design and stylesheet.
 if (!isset($content_width))
-    $content_width = apply_filters('sunix_content_width', 1170);
+    $content_width = apply_filters('sunix_content_width', 1200);
 function sunix_content_width()
 {
-    $GLOBALS['content_width'] = apply_filters('sunix_content_width', 1170);
+    $GLOBALS['content_width'] = apply_filters('sunix_content_width', 1200);
 }
 add_action('after_setup_theme', 'sunix_content_width', 0);
 
