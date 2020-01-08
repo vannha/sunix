@@ -1,30 +1,6 @@
 .red-instagram{
   &:not(.layout-2) .user{
-    min-width: 120px;
-    min-height: 120px;
-    line-height: 120px;
-    background: $primary_color;
-    border-radius: 50%;
-    font-family: $ExtraFont;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    color: inherit;
-    position: absolute;
-    display: inline-block;
-    text-align: center;
-    z-index: 10;
-    top: 50%;
-    left: 50%;
-    text-transform: uppercase;
-    @include transform(translate(-50%,-50%));
-    @media (max-width: 991px){
-      display: none;
-    }
-    a{
-      color: inherit;
-
-    }
+  
   }
   &:not(.layout-2){
     .instagram-item {
