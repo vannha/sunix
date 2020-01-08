@@ -215,14 +215,6 @@
 }
 .single-post{
   @media (min-width: 1300px){
-	.red-content-area.col-lg-8{
-	  flex: 0 0 66.7%;
-	  max-width: 66.7%;
-	  +  .red-sidebar-area{
-		flex: 0 0 33.3%;
-		max-width: 33.3%;
-	  }
-	}
   }
   .red-main{
 	padding-bottom: 120px;
