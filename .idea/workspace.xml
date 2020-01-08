@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/single.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/walker/class-comment-walker.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/walker/class-comment-walker.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,24 +54,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/scss/comments/_form.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1682">
-              <caret line="58" column="3" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comments.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1537">
-              <caret line="66" column="64" selection-start-line="66" selection-start-column="64" selection-end-line="66" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="261">
@@ -80,20 +62,46 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/single.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="25" column="96" selection-start-line="25" selection-start-column="96" selection-end-line="25" selection-end-column="96" />
+            <state relative-caret-position="384">
+              <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/scss/buttons/_accent.scss">
+        <entry file="file://$PROJECT_DIR$/inc/functions/comments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1508">
-              <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+            <state relative-caret-position="-986">
+              <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+              <folding>
+                <element signature="e#89#95#0" expanded="true" />
+                <element signature="e#95#101#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/inc/walker/class-comment-walker.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="36" column="80" selection-start-line="36" selection-start-column="80" selection-end-line="36" selection-end-column="80" />
+              <folding>
+                <element signature="e#100#106#0" expanded="true" />
+                <element signature="e#106#112#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template-parts/single/content.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -195,7 +203,6 @@
         <option value="$PROJECT_DIR$/assets/scss/comments/_default.scss" />
         <option value="$PROJECT_DIR$/assets/scss/theme.scss" />
         <option value="$PROJECT_DIR$/assets/scss/comments/_list.scss" />
-        <option value="$PROJECT_DIR$/inc/walker/class-comment-walker.php" />
         <option value="$PROJECT_DIR$/assets/scss/form/_fields.scss" />
         <option value="$PROJECT_DIR$/assets/scss/form/_variations.scss" />
         <option value="$PROJECT_DIR$/assets/scss/buttons/_accent.scss" />
@@ -207,6 +214,7 @@
         <option value="$PROJECT_DIR$/assets/scss/sidebar/_widgets.scss" />
         <option value="$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss" />
         <option value="$PROJECT_DIR$/single.php" />
+        <option value="$PROJECT_DIR$/inc/walker/class-comment-walker.php" />
       </list>
     </option>
   </component>
@@ -296,13 +304,31 @@
               <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
               <item name="sunix" type="462c0819:PsiDirectoryNode" />
               <item name="inc" type="462c0819:PsiDirectoryNode" />
+              <item name="extends" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sunix" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
               <item name="extensions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
               <item name="sunix" type="462c0819:PsiDirectoryNode" />
               <item name="inc" type="462c0819:PsiDirectoryNode" />
+              <item name="functions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sunix" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
               <item name="theme-options" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sunix" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
+              <item name="walker" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
@@ -389,12 +415,12 @@
       <workItem from="1577328226797" duration="273000" />
       <workItem from="1578036438669" duration="17869000" />
       <workItem from="1578364387719" duration="15353000" />
-      <workItem from="1578447241601" duration="1731000" />
+      <workItem from="1578447241601" duration="1917000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132797000" />
+    <option name="totallyTimeSpent" value="132983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -590,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template-parts/single/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/functions/template-tags.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -645,29 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/walker/class-comment-walker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2096">
-          <caret line="131" column="1" lean-forward="true" selection-start-line="131" selection-start-column="1" selection-end-line="131" selection-end-column="1" />
-          <folding>
-            <element signature="e#1934#2633#0#HTML" />
-            <element signature="e#100#106#0" expanded="true" />
-            <element signature="e#106#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/functions/comments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="279" column="28" selection-start-line="279" selection-start-column="28" selection-end-line="279" selection-end-column="28" />
-          <folding>
-            <element signature="e#89#95#0" expanded="true" />
-            <element signature="e#95#101#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -765,10 +761,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/template-parts/single/content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/single.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="25" column="96" selection-start-line="25" selection-start-column="96" selection-end-line="25" selection-end-column="96" />
+        <state relative-caret-position="384">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/functions/comments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-986">
+          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding>
+            <element signature="e#89#95#0" expanded="true" />
+            <element signature="e#95#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/walker/class-comment-walker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="36" column="80" selection-start-line="36" selection-start-column="80" selection-end-line="36" selection-end-column="80" />
+          <folding>
+            <element signature="e#100#106#0" expanded="true" />
+            <element signature="e#106#112#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
