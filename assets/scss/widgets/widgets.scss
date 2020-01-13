@@ -83,6 +83,11 @@
 		flex: 0 0 30px;
 	}
 }
+.widget_categories{
+	.count{
+		float: right;
+	}
+}
 #wp-calendar{
 	> caption{
 		@extend .red-heading;
