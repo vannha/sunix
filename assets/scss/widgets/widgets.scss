@@ -1,8 +1,4 @@
 @import "variations";
-@mixin wg-list-style(){
-  font-family: $ExtraFont2;
-}
-
 @mixin wg-list-arrow(){
 	font-family: $FontAwesome;
 	color: $accent_color;
@@ -51,7 +47,6 @@
 		margin: 0;
 	}
 	li{
-		@include wg-list-style();
 		padding: 5px 0;
 		&:after{
 			@include wg-list-arrow();
