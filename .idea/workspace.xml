@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/scss/sidebar/_widgets.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/sidebar/_widgets.scss" afterDir="false" />
-    </list>
+    <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scss/sidebar/_widgets.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
+            <state relative-caret-position="667">
               <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
             </state>
           </provider>
@@ -398,12 +396,12 @@
       <workItem from="1578036438669" duration="17869000" />
       <workItem from="1578364387719" duration="15353000" />
       <workItem from="1578447241601" duration="9528000" />
-      <workItem from="1578885715494" duration="3909000" />
+      <workItem from="1578885715494" duration="4508000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144503000" />
+    <option name="totallyTimeSpent" value="145102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -757,7 +755,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/sidebar/_widgets.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
+        <state relative-caret-position="667">
           <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
         </state>
       </provider>
