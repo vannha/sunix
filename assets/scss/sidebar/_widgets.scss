@@ -6,8 +6,10 @@
 		.chosen{
 			a{
 				padding: 0;
-				color: $BodyColor;
+				color: $HeadingColor;
 			  	position: relative;
+				font-size: 15px;
+				font-weight: 500;
 			  @include transform(translateX(0));
 			  > span{
 				display: inline-block;
