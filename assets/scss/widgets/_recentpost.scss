@@ -23,6 +23,13 @@
 		}
 		.red-meta{
 			font-size: $BodyFontSizeS;
+			.red-posted-by{
+				font-size: 0;
+				a{
+					font-size: 16px;
+					line-height: 25px;
+				}
+			}
 		}
 		.red-featured-inner{
 			margin-bottom: 0;
