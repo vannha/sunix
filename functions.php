@@ -244,8 +244,8 @@ function sunix_widgets_init()
         'description'   => esc_html__('Add widgets here.', 'sunix'),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
-        'before_title'  => '<div class="red-heading h5 widgettitle">',
-        'after_title'   => '</div>',
+        'before_title'  => '<div class="red-heading h5 widgettitle"><span>',
+        'after_title'   => '</span></div>',
     ));
 
     if(class_exists('EF5Systems')){
