@@ -45,7 +45,6 @@ class sunix_Recent_Posts_Widget extends WP_Widget
             'show_author'   => true,
             'show_date'     => true,
             'show_comments' => true,
-            'show_cat'      => false,
         ) );
 
         $title = empty( $instance['title'] ) ? esc_html__( 'Recent Posts', 'sunix' ) : $instance['title'];
@@ -67,7 +66,6 @@ class sunix_Recent_Posts_Widget extends WP_Widget
         $show_author    = (bool)$instance['show_author'];
         $show_date      = (bool)$instance['show_date'];
         $show_comments  = (bool)$instance['show_comments'];
-        $show_cat       = (bool)$instance['show_cat'];
 
         $r = new WP_Query( array(
             'post_type'           => $post_type,
@@ -104,12 +102,11 @@ class sunix_Recent_Posts_Widget extends WP_Widget
                     get_the_title()
                 );
 
-                if ( $show_author || $show_comments || $show_date || $show_cat )
+                if ( $show_author || $show_comments || $show_date )
                 {
                     ob_start();
                     if($show_author) sunix_posted_by();
                     if($show_comments) sunix_comments_popup_link(['show_text'=> true]);
-                    if($show_cat) sunix_posted_in();
                     $post_meta = ob_get_clean();
 
                     if ( $post_meta )
@@ -149,7 +146,6 @@ class sunix_Recent_Posts_Widget extends WP_Widget
         $instance['show_author']    = (bool)$new_instance['show_author'] ;
         $instance['show_date']      = (bool)$new_instance['show_date'] ;
         $instance['show_comments']  = (bool)$new_instance['show_comments'];
-        $instance['show_cat']       = (bool)$new_instance['show_cat'];
         return $instance;
     }
 
@@ -170,7 +166,6 @@ class sunix_Recent_Posts_Widget extends WP_Widget
             'show_author'    => true,
             'show_date'      => true,
             'show_comments'  => true,
-            'show_cat'       => false
         ) );
 
         $title          = $instance['title'] ? esc_attr( $instance['title'] ) : esc_html__( 'Recent Posts', 'sunix' );
@@ -181,7 +176,6 @@ class sunix_Recent_Posts_Widget extends WP_Widget
         $show_author    = (bool) $instance['show_author'];
         $show_date      = (bool) $instance['show_date'];
         $show_comments  = (bool) $instance['show_comments'];
-        $show_cat       = (bool) $instance['show_cat'];
 
         ?>
         <p>
@@ -217,10 +211,6 @@ class sunix_Recent_Posts_Widget extends WP_Widget
         <p>
             <input class="checkbox" type="checkbox"<?php checked( $show_date ); ?> id="<?php echo esc_attr( $this->get_field_id( 'show_date' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_date' ) ); ?>" value="1" />
             <label for="<?php echo esc_attr( $this->get_field_id( 'show_date' ) ); ?>"><?php esc_html_e( 'Display post date?', 'sunix' ); ?></label>
-        </p>
-        <p>
-            <input class="checkbox" type="checkbox"<?php checked( $show_cat ); ?> id="<?php echo esc_attr( $this->get_field_id( 'show_cat' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_cat' ) ); ?>" value="1" />
-            <label for="<?php echo esc_attr( $this->get_field_id( 'show_cat' ) ); ?>"><?php esc_html_e( 'Display post Category?', 'sunix' ); ?></label>
         </p>
         <p>
             <input class="checkbox" type="checkbox"<?php checked( $show_comments ); ?> id="<?php echo esc_attr( $this->get_field_id( 'show_comments' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_comments' ) ); ?>" value="1" />
