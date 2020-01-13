@@ -6,8 +6,10 @@ $sidebar_bg : #fff;
 	.sidebar-inner{
 		position: relative;
 		z-index: 1;
-		border: #f4f4f4 solid 3px;
-		padding: 31px 40px;
+		.widget{
+			border: #f4f4f4 solid 3px;
+			padding: 31px 40px;
+		}
 	}
 	&.red-blogs{
 		position: relative;
