@@ -70,12 +70,67 @@
    }
  }
 }
+  .grid-gutters-2{
+    .instagram-item .overlay {
+      top: 1px;
+      right: 1px;
+      left: 1px;
+      bottom: 1px;
+      a:hover{
+        color: $primary_color;
+      }
+    }
+  }
+  .grid-gutters-5{
+    .instagram-item .overlay {
+      top: 2.5px;
+      right: 2.5px;
+      left: 2.5px;
+      bottom: 2.5px;
+      a:hover{
+        color: $primary_color;
+      }
+    }
+  }
+  .grid-gutters-10{
+    .instagram-item .overlay {
+      top: 5px;
+      right: 5px;
+      left: 5px;
+      bottom: 5px;
+      a:hover{
+        color: $primary_color;
+      }
+    }
+  }
   .grid-gutters-15{
     .instagram-item .overlay {
       top: 7.5px;
       right: 7.5px;
       left: 7.5px;
       bottom: 7.5px;
+      a:hover{
+        color: $primary_color;
+      }
+    }
+  }
+  .grid-gutters-20{
+    .instagram-item .overlay {
+      top: 10px;
+      right: 10px;
+      left: 10px;
+      bottom: 10px;
+      a:hover{
+        color: $primary_color;
+      }
+    }
+  }
+  .grid-gutters-30{
+    .instagram-item .overlay {
+      top: 15px;
+      right: 15px;
+      left: 15px;
+      bottom: 15px;
       a:hover{
         color: $primary_color;
       }
