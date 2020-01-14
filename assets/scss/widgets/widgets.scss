@@ -84,6 +84,9 @@
 	}
 }
 .widget_categories{
+	li{
+		@extend .clearfix;
+	}
 	.title{
 		float: left;
 	}
