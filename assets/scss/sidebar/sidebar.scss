@@ -12,9 +12,11 @@ $sidebar_bg : #fff;
 			&.widget_newsletterwidget{
 				border: none;
 				background-image: url("../images/bg-newletter.jpg");
+				text-align: center;
 				.widgettitle {
 				color: #fff;
-					
+					background: url("../images/icon-newletter.jpg") top center;
+
 				}
 			}
 		}
