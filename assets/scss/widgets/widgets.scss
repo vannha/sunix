@@ -48,12 +48,10 @@
 	}
 	li{
 		padding: 10px 0 8px;
-		li{
-			@extend .clearfix;
-			border-bottom: #e6e6e6 dashed 1px;
-			&:last-child{
-				border-bottom: none;
-			}
+		@extend .clearfix;
+		border-bottom: #e6e6e6 dashed 1px;
+		&:last-child{
+			border-bottom: none;
 		}
 		.title{
 			float: left;
