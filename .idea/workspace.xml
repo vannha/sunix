@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/scss/widgets/widgets.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/widgets/widgets.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+            <state relative-caret-position="377">
+              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -58,10 +60,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/widgets/widgets.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
+            <state relative-caret-position="1566">
               <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
             </state>
           </provider>
@@ -176,10 +178,10 @@
         <option value="$PROJECT_DIR$/inc/widgets/widget-recent-post.php" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/assets/scss/widgets/_recentpost.scss" />
-        <option value="$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss" />
         <option value="$PROJECT_DIR$/assets/scss/sidebar/_widgets.scss" />
         <option value="$PROJECT_DIR$/assets/scss/elements/_instagram.scss" />
         <option value="$PROJECT_DIR$/assets/scss/widgets/widgets.scss" />
+        <option value="$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss" />
       </list>
     </option>
   </component>
@@ -416,12 +418,12 @@
       <workItem from="1578036438669" duration="17869000" />
       <workItem from="1578364387719" duration="15353000" />
       <workItem from="1578447241601" duration="9528000" />
-      <workItem from="1578885715494" duration="14466000" />
+      <workItem from="1578885715494" duration="15384000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155060000" />
+    <option name="totallyTimeSpent" value="155978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -745,13 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/elements/_instagram.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
@@ -768,6 +763,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/widgets/widgets.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1566">
+          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/sidebar/_widgets.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -775,10 +777,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/widgets/widgets.scss">
+    <entry file="file://$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+        <state relative-caret-position="377">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
         </state>
       </provider>
     </entry>

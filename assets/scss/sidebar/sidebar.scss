@@ -9,6 +9,10 @@ $sidebar_bg : #fff;
 		.widget{
 			border: #f4f4f4 solid 3px;
 			padding: 31px 40px 35px;
+			&.widget_newsletterwidget{
+				border: none;
+				background: url("../../images/bg-newletter.jpg") repeat top left;
+			}
 		}
 	}
 	&.red-blogs{
