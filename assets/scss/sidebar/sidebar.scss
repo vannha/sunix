@@ -18,7 +18,9 @@ $sidebar_bg : #fff;
 				color: #fff;
 					background: url("../images/icon-letter.png") no-repeat top center;
 					padding-top: 68px;
-
+					span:after {
+						background: #fff;
+					}
 				}
 			}
 		}
