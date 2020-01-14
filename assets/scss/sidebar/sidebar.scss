@@ -12,6 +12,10 @@ $sidebar_bg : #fff;
 			&.widget_newsletterwidget{
 				border: none;
 				background-image: url("../images/bg-newletter.jpg");
+				.widgettitle {
+				color: #fff;
+					
+				}
 			}
 		}
 	}
