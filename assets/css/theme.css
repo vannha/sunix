@@ -10843,6 +10843,9 @@ body {
 .red-sidebar-area .widget .red-toggle {
   flex: 0 0 30px; }
 
+.red-sidebar-area .widget .red-instagram {
+  padding-top: 12px; }
+
 .widget_categories li {
   border-bottom: #e6e6e6 dashed 1px; }
 
