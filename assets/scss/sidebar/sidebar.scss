@@ -21,8 +21,14 @@ $sidebar_bg : #fff;
 				color: #fff;
 					background: url("../images/icon-letter.png") no-repeat top center;
 					padding-top: 68px;
+					margin-bottom: 28px;
 					span:after {
 						background: #fff;
+					}
+				}
+				.tnp-field-email{
+					label{
+						display: none;
 					}
 				}
 			}
