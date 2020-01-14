@@ -1,6 +1,14 @@
 .red-instagram{
-  &:not(.layout-2) .user{
-
+ .user{
+background: #000;
+   color: #fff;
+   text-align: center;
+   a{
+     color: inherit;
+     &:hover{
+      color: $primary_color;
+     }
+   }
   }
   &:not(.layout-2){
     .instagram-item {
