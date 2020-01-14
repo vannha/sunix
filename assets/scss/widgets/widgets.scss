@@ -86,6 +86,7 @@
 .widget_categories{
 	li{
 		@extend .clearfix;
+		border-bottom: #e6e6e6 dashed 1px;
 	}
 	.title{
 		float: left;
