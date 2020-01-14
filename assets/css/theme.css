@@ -732,7 +732,7 @@ html {
   .d-print-inline-flex {
     display: inline-flex !important; } }
 
-.clearfix::after, #red-header-top .widget-woocommerce-currency-switcher::after, #red-header-top .widget-woocommerce-currency-switcher .dd-container::after, .red-newsletter-1::after, .woocommerce-Reviews::after, .woocommerce-checkout form.checkout_coupon::after, .clearfix::before, #red-header-top .widget-woocommerce-currency-switcher::before, #red-header-top .widget-woocommerce-currency-switcher .dd-container::before, .red-newsletter-1::before, .woocommerce-Reviews::before, .woocommerce-checkout form.checkout_coupon::before {
+.clearfix::after, #red-header-top .widget-woocommerce-currency-switcher::after, #red-header-top .widget-woocommerce-currency-switcher .dd-container::after, .widget_categories li::after, .red-newsletter-1::after, .woocommerce-Reviews::after, .woocommerce-checkout form.checkout_coupon::after, .clearfix::before, #red-header-top .widget-woocommerce-currency-switcher::before, #red-header-top .widget-woocommerce-currency-switcher .dd-container::before, .widget_categories li::before, .red-newsletter-1::before, .woocommerce-Reviews::before, .woocommerce-checkout form.checkout_coupon::before {
   display: block;
   clear: both;
   content: ""; }
@@ -1119,7 +1119,7 @@ html {
       .align-self-xl-stretch {
         align-self: stretch !important; } }
 
-.clearfix::after, #red-header-top .widget-woocommerce-currency-switcher::after, #red-header-top .widget-woocommerce-currency-switcher .dd-container::after, .red-newsletter-1::after, .woocommerce-Reviews::after, .woocommerce-checkout form.checkout_coupon::after, .clearfix::before, #red-header-top .widget-woocommerce-currency-switcher::before, #red-header-top .widget-woocommerce-currency-switcher .dd-container::before, .red-newsletter-1::before, .woocommerce-Reviews::before, .woocommerce-checkout form.checkout_coupon::before {
+.clearfix::after, #red-header-top .widget-woocommerce-currency-switcher::after, #red-header-top .widget-woocommerce-currency-switcher .dd-container::after, .widget_categories li::after, .red-newsletter-1::after, .woocommerce-Reviews::after, .woocommerce-checkout form.checkout_coupon::after, .clearfix::before, #red-header-top .widget-woocommerce-currency-switcher::before, #red-header-top .widget-woocommerce-currency-switcher .dd-container::before, .widget_categories li::before, .red-newsletter-1::before, .woocommerce-Reviews::before, .woocommerce-checkout form.checkout_coupon::before {
   display: block;
   clear: both;
   content: ""; }
@@ -10595,9 +10595,11 @@ body {
 
 #red-sidebar-area .sidebar-inner {
   position: relative;
-  z-index: 1;
+  z-index: 1; }
+
+#red-sidebar-area .sidebar-inner .widget {
   border: #f4f4f4 solid 3px;
-  padding: 31px 40px; }
+  padding: 31px 40px 35px; }
 
 #red-sidebar-area.red-blogs {
   position: relative;
@@ -10656,8 +10658,10 @@ body {
 
 .red-sidebar-area .widget .red-menu-item a, .red-sidebar-area .widget .wc-layered-nav-term a, .red-sidebar-area .widget .chosen a {
   padding: 0;
-  color: #666;
+  color: #333;
   position: relative;
+  font-size: 15px;
+  font-weight: 500;
   transform: translateX(0); }
   .red-sidebar-area .widget .red-menu-item a > span, .red-sidebar-area .widget .wc-layered-nav-term a > span, .red-sidebar-area .widget .chosen a > span {
     display: inline-block; }
@@ -10665,14 +10669,14 @@ body {
     color: #f4436d; }
 
 .red-sidebar-area .widget .widgettitle {
-  margin-bottom: 20px;
+  margin-bottom: 13px;
   text-transform: uppercase; }
 
 .red-sidebar-area .widget .widgettitle span {
   position: relative; }
   .red-sidebar-area .widget .widgettitle span:after {
     content: '';
-    bottom: 3px;
+    bottom: 0px;
     left: 0;
     width: 100%;
     height: 1px;
@@ -10794,8 +10798,10 @@ body {
   margin: 0; }
 
 .red-sidebar-area .widget li {
-  font-family: 'futurabook';
-  padding: 5px 0; }
+  padding: 10px 0 8px; }
+
+.red-sidebar-area .widget li:first-child {
+  padding-top: 5px; }
 
 .red-sidebar-area .widget li:after {
   font-family: 'Font Awesome 5 Pro';
@@ -10806,7 +10812,8 @@ body {
   content: ''; }
 
 .red-sidebar-area .widget li:last-child {
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  margin-bottom: -3px; }
 
 .red-sidebar-area .widget li ul {
   padding-left: 20px;
@@ -10835,6 +10842,18 @@ body {
 
 .red-sidebar-area .widget .red-toggle {
   flex: 0 0 30px; }
+
+.widget_categories li {
+  border-bottom: #e6e6e6 dashed 1px; }
+
+.widget_categories li:last-child {
+  border-bottom: none; }
+
+.widget_categories .title {
+  float: left; }
+
+.widget_categories .count {
+  float: right; }
 
 #wp-calendar > caption {
   padding-bottom: 10px; }
@@ -10926,7 +10945,7 @@ body {
   padding-top: 10px; }
 
 .widget_sunix_recent_posts .posts-list .post-list-entry {
-  margin-bottom: 20px;
+  margin-bottom: 26px;
   align-items: center; }
 
 .widget_sunix_recent_posts .posts-list .post-list-entry:last-child {
@@ -13391,6 +13410,33 @@ body {
     .red-instagram.layout-2 .user > a:hover:after {
       background-color: #f4436d; }
 
+.red-instagram .grid-gutters-2 .instagram-item .overlay {
+  top: 1px;
+  right: 1px;
+  left: 1px;
+  bottom: 1px; }
+
+.red-instagram .grid-gutters-2 .instagram-item .overlay a:hover {
+  color: #f4436d; }
+
+.red-instagram .grid-gutters-5 .instagram-item .overlay {
+  top: 2.5px;
+  right: 2.5px;
+  left: 2.5px;
+  bottom: 2.5px; }
+
+.red-instagram .grid-gutters-5 .instagram-item .overlay a:hover {
+  color: #f4436d; }
+
+.red-instagram .grid-gutters-10 .instagram-item .overlay {
+  top: 5px;
+  right: 5px;
+  left: 5px;
+  bottom: 5px; }
+
+.red-instagram .grid-gutters-10 .instagram-item .overlay a:hover {
+  color: #f4436d; }
+
 .red-instagram .grid-gutters-15 .instagram-item .overlay {
   top: 7.5px;
   right: 7.5px;
@@ -13398,6 +13444,24 @@ body {
   bottom: 7.5px; }
 
 .red-instagram .grid-gutters-15 .instagram-item .overlay a:hover {
+  color: #f4436d; }
+
+.red-instagram .grid-gutters-20 .instagram-item .overlay {
+  top: 10px;
+  right: 10px;
+  left: 10px;
+  bottom: 10px; }
+
+.red-instagram .grid-gutters-20 .instagram-item .overlay a:hover {
+  color: #f4436d; }
+
+.red-instagram .grid-gutters-30 .instagram-item .overlay {
+  top: 15px;
+  right: 15px;
+  left: 15px;
+  bottom: 15px; }
+
+.red-instagram .grid-gutters-30 .instagram-item .overlay a:hover {
   color: #f4436d; }
 /**newsletter*/
 .red-newsletter-1 {
