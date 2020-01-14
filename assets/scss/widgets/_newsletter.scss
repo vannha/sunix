@@ -17,12 +17,6 @@
 			min-width: auto;
 			@include opacity(0);
 		}
-		&:after{
-			content: "\f12e";
-			font-family: $FontFlaticon;
-			font-size: 20px;
-			display: block;
-		}
 		input.tnp-email{
 			height: 56px;
 			line-height: 56px;
