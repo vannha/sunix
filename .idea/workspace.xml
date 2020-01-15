@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="" />
+    <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/assets/js/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/theme.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,20 +49,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/theme.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="364" column="76" selection-start-line="364" selection-start-column="76" selection-end-line="364" selection-end-column="76" />
+            <state relative-caret-position="445">
+              <caret line="364" column="52" selection-start-line="364" selection-start-column="52" selection-end-line="364" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="634">
-              <caret line="335" column="19" lean-forward="true" selection-start-line="335" selection-start-column="19" selection-end-line="335" selection-end-column="19" />
+            <state relative-caret-position="25">
+              <caret line="329" column="69" lean-forward="true" selection-start-line="329" selection-start-column="69" selection-end-line="329" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -96,7 +98,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>echo esc</find>
       <find>screen-reader-text</find>
       <find>sidebar-portfolio</find>
       <find>alacarte_</find>
@@ -126,12 +127,13 @@
       <find>1170</find>
       <find>NewsletterWidget_widget_form</find>
       <find>newl</find>
+      <find>bixbang</find>
     </findStrings>
     <replaceStrings>
       <replace>alacarte</replace>
-      <replace>sunix</replace>
       <replace>sunix_</replace>
       <replace>Sunix Custom</replace>
+      <replace>sunix</replace>
     </replaceStrings>
     <dirStrings>
       <dir>F:\themes\alacarte\assets\scss\woocommerce</dir>
@@ -194,8 +196,8 @@
         <option value="$PROJECT_DIR$/assets/scss/widgets/widgets.scss" />
         <option value="$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss" />
         <option value="$PROJECT_DIR$/assets/scss/widgets/_newsletter.scss" />
-        <option value="$PROJECT_DIR$/assets/js/theme.js" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/assets/js/theme.js" />
       </list>
     </option>
   </component>
@@ -445,12 +447,12 @@
       <workItem from="1578036438669" duration="17869000" />
       <workItem from="1578364387719" duration="15353000" />
       <workItem from="1578447241601" duration="9528000" />
-      <workItem from="1578885715494" duration="22269000" />
+      <workItem from="1578885715494" duration="22654000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162863000" />
+    <option name="totallyTimeSpent" value="163248000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -803,17 +805,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/theme.js">
+    <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="364" column="76" selection-start-line="364" selection-start-column="76" selection-end-line="364" selection-end-column="76" />
+        <state relative-caret-position="25">
+          <caret line="329" column="69" lean-forward="true" selection-start-line="329" selection-start-column="69" selection-end-line="329" selection-end-column="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
+    <entry file="file://$PROJECT_DIR$/assets/js/theme.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="335" column="19" lean-forward="true" selection-start-line="335" selection-start-column="19" selection-end-line="335" selection-end-column="19" />
+        <state relative-caret-position="445">
+          <caret line="364" column="52" selection-start-line="364" selection-start-column="52" selection-end-line="364" selection-end-column="52" />
         </state>
       </provider>
     </entry>
