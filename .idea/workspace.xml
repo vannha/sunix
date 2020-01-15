@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/js/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/widgets/_newsletter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/widgets/_newsletter.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,16 +40,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scss/widgets/_newsletter.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            <state relative-caret-position="529">
+              <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/scss/form/_fields.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="582">
+              <caret line="39" column="5" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/theme.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="445">
@@ -195,9 +204,9 @@
         <option value="$PROJECT_DIR$/assets/scss/elements/_instagram.scss" />
         <option value="$PROJECT_DIR$/assets/scss/widgets/widgets.scss" />
         <option value="$PROJECT_DIR$/assets/scss/sidebar/sidebar.scss" />
-        <option value="$PROJECT_DIR$/assets/scss/widgets/_newsletter.scss" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/assets/js/theme.js" />
+        <option value="$PROJECT_DIR$/assets/scss/widgets/_newsletter.scss" />
       </list>
     </option>
   </component>
@@ -249,14 +258,6 @@
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
               <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sunix" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-              <item name="mixins" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sunix" type="b2602c69:ProjectViewProjectNode" />
@@ -447,12 +448,12 @@
       <workItem from="1578036438669" duration="17869000" />
       <workItem from="1578364387719" duration="15353000" />
       <workItem from="1578447241601" duration="9528000" />
-      <workItem from="1578885715494" duration="22654000" />
+      <workItem from="1578885715494" duration="22823000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163248000" />
+    <option name="totallyTimeSpent" value="163417000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -609,13 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/form/_fields.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -798,13 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/widgets/_newsletter.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -816,6 +803,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="445">
           <caret line="364" column="52" selection-start-line="364" selection-start-column="52" selection-end-line="364" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/form/_fields.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/widgets/_newsletter.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
         </state>
       </provider>
     </entry>
