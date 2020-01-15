@@ -15,7 +15,9 @@
 			font-size: 0;
 			z-index: 2;
 			padding: 0;
-			min-width: auto;
+			width: 100%;
+			background: $primary_color;
+			color: #fff;
 		}
 		input.tnp-email{
 			height: 70px;
