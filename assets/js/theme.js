@@ -362,6 +362,7 @@
         $(".red-accordion .card").removeClass("active");
         $(this).addClass("active");
     });
+    $(".tnp-email").attr("placeholder", sunix_js_options.email_placeholder);
     // VC Row 
     function sunix_vcRow() {
         'use strict';

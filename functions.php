@@ -316,6 +316,7 @@ function sunix_scripts()
     }
     // Custom Options
     $filter_reset = function_exists('ef5systems_uri') ? ef5systems_uri() : '';;
+
     $sunix_ajax_opts = array(
         'ajaxurl'             => admin_url( 'admin-ajax.php' ),
         'primary_color'       => sunix_configs('primary_color'),
@@ -324,9 +325,14 @@ function sunix_scripts()
         'filter_reset'        => ( strpos($filter_reset,'filter_') !== false || strpos($filter_reset,'min_price') !== false || strpos($filter_reset,'max_price') || strpos($filter_reset, 'rating_filter')) ? 'true' : 'false',
         'filter_clear_text' => esc_html__('Clear All', 'sunix')
     );
+    $script_options = array(
+        'email_placeholder'=> esc_html__( 'Enter Your Email', 'sunix' ),
+        'name_placeholder' => esc_html__( 'Complete Name', 'sunix' ),
+    );
     // Scripts
     wp_enqueue_script('sunix-theme', get_template_directory_uri() . '/assets/js/theme'.$min.'.js', array('jquery'), '', true);
     wp_localize_script( 'sunix-theme', 'sunix_ajax_opts', $sunix_ajax_opts);
+    wp_localize_script( 'sunix-theme', 'sunix_js_opts', $script_options);
     // Owl Carousel
     wp_register_script('owl-carousel', get_template_directory_uri() . '/assets/libs/owl/owl.carousel'.$min.'.js', array('jquery'), '', true);
     wp_register_script('owl-carousel-theme', get_template_directory_uri() . '/assets/libs/owl/owl.carousel.theme'.$min.'.js', array('owl-carousel'), '', true);
