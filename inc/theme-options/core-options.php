@@ -1492,7 +1492,7 @@ if(!function_exists('sunix_footer_opts')){
                     'type'      => 'color_rgba',
                     'default'   => array(),
                     'output'    => array(
-                        'background-color' => 'footer#red-footer.red-footer-area:after',
+                        'background-color' => 'footer#red-footer.red-footer-area:before',
                     ),
                     'validate'  => 'colorrgba',
                     'force_output'   => $force_output,
