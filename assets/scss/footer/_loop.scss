@@ -137,8 +137,11 @@
 	  padding-right: 17px;
 	}
 	.row-footer-bottom{
-	  color: #777;
-	  line-height: 20px;
+	 font-weight: 400;
+	  color: #fff;
+	  span{
+		color: $primary_color;
+	  }
 	  .red-social{
 		font-size: 17px;
 		margin: -2px -17px -3px;
