@@ -8,6 +8,8 @@
   padding-top: 112px;
   padding-bottom: 120px;
   position: relative;
+  font-size: 18px;
+  line-height: 26px;
   &:before{
 	content: '';
 	width: 100%;
@@ -43,18 +45,14 @@
 	color: #FFFFFF;
 	padding-bottom: 14px;
   }
-  .footer-contact{
+  .contact{
 	list-style: none;
 	li{
 	  padding-bottom: 11px;
 	  position: relative;
 	  padding-left: 30px;
-	  i{
-		color: #fff;
-		font-size: 16px;
-		position: absolute;
-		top: 0;
-		left: 0;
+	  span{
+		font-weight: 700;
 
 	  }
 	}
