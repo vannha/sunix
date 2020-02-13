@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/theme-options/core-options.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/theme-options/core-options.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inc/theme-options/core-options.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="1470" column="71" selection-start-line="1470" selection-start-column="71" selection-end-line="1470" selection-end-column="71" />
+            <state relative-caret-position="529">
+              <caret line="1482" column="47" lean-forward="true" selection-start-line="1482" selection-start-column="47" selection-end-line="1482" selection-end-column="47" />
               <folding>
                 <element signature="e#0#6#0" expanded="true" />
               </folding>
@@ -219,10 +218,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-7" />
+    <option name="y" value="1" />
+    <option name="width" value="1378" />
+    <option name="height" value="733" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -427,7 +426,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../alacarte" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -474,12 +473,12 @@
       <workItem from="1579234246593" duration="878000" />
       <workItem from="1581411216288" duration="2957000" />
       <workItem from="1581558804237" duration="1952000" />
-      <workItem from="1581561101454" duration="89000" />
+      <workItem from="1581561101454" duration="395000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170541000" />
+    <option name="totallyTimeSpent" value="170847000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -845,8 +844,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/theme-options/core-options.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="1470" column="71" selection-start-line="1470" selection-start-column="71" selection-end-line="1470" selection-end-column="71" />
+        <state relative-caret-position="529">
+          <caret line="1482" column="47" lean-forward="true" selection-start-line="1482" selection-start-column="47" selection-end-line="1482" selection-end-column="47" />
           <folding>
             <element signature="e#0#6#0" expanded="true" />
           </folding>

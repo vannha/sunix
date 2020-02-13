@@ -1473,6 +1473,18 @@ if(!function_exists('sunix_footer_opts')){
                     'required'  => array('footer_enable', '=', '1')
                 ),
                 array(
+                    'title'     => esc_html__('Background Overlay Color', 'alacarte'),
+                    'id'        => 'footer_bg_overlay_color',
+                    'type'      => 'color_rgba',
+                    'default'   => array(),
+                    'output'    => array(
+                        'background-color' => 'footer#red-footer.red-footer-area:after',
+                    ),
+                    'validate'  => 'colorrgba',
+                    'force_output'   => $force_output,
+                    'required'  => array('footer_enable', '=', '1')
+                ),
+                array(
                     'title'          => esc_html__('Columns Title', 'sunix'),
                     'subtitle'       => esc_html__('Choose typography style for columns title', 'sunix'),
                     'id'             => 'footer_typo_title',
