@@ -1466,12 +1466,9 @@ if(!function_exists('sunix_footer_opts')){
                 array(
                     'title'     => esc_html__('Background Color', 'sunix'),
                     'id'        => 'footer_bg_color',
-                    'type'      => 'color_rgba',
+                    'type'      => 'background',
                     'default'   => array(),
-                    'output'    => array(
-                        'background-color' => 'footer#red-footer.red-footer-area,.red-footer-area .open-hours li span',
-                    ),
-                    'validate'  => 'colorrgba',
+                    'output'    => 'footer#red-footer.red-footer-area',
                     'force_output'   => $force_output,
                     'required'  => array('footer_enable', '=', '1')
                 ),
