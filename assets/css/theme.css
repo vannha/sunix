@@ -11221,7 +11221,9 @@ body {
   color: #888;
   padding-top: 112px;
   padding-bottom: 120px;
-  position: relative; }
+  position: relative;
+  font-size: 18px;
+  line-height: 26px; }
 
 .red-footer-area:before {
   content: '';
@@ -11254,20 +11256,16 @@ body {
   color: #fff;
   padding-bottom: 14px; }
 
-.red-footer-area .footer-contact {
+.red-footer-area .contact {
   list-style: none; }
 
-.red-footer-area .footer-contact li {
+.red-footer-area .contact li {
   padding-bottom: 11px;
   position: relative;
   padding-left: 30px; }
 
-.red-footer-area .footer-contact li i {
-  color: #fff;
-  font-size: 16px;
-  position: absolute;
-  top: 0;
-  left: 0; }
+.red-footer-area .contact li span {
+  font-weight: 700; }
 
 .red-footer-area .open-hours {
   list-style: none;
