@@ -18,31 +18,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/scss/footer/_loop.scss">
+        <entry file="file://$PROJECT_DIR$/inc/theme-options/theme-options.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2813">
-              <caret line="97" column="17" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
+            <state relative-caret-position="356">
+              <caret line="822" column="37" selection-start-line="822" selection-start-column="37" selection-end-line="822" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inc/theme-options/theme-options.php">
+        <entry file="file://$PROJECT_DIR$/inc/theme-options/core-options.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23838">
-              <caret line="822" column="32" selection-start-line="822" selection-start-column="32" selection-end-line="822" selection-end-column="32" />
+            <state relative-caret-position="722">
+              <caret line="1485" column="57" lean-forward="true" selection-start-line="1485" selection-start-column="57" selection-end-line="1485" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#6#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/inc/theme-options/core-options.php">
+        <entry file="file://C:/Windows/System32/drivers/etc/hosts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="1482" column="47" lean-forward="true" selection-start-line="1482" selection-start-column="47" selection-end-line="1482" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#6#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="725">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -114,8 +114,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sidebar-portfolio</find>
-      <find>alacarte_</find>
       <find>alacarte</find>
       <find>sunix</find>
       <find>body_line_height</find>
@@ -144,6 +142,8 @@
       <find>newl</find>
       <find>bixbang</find>
       <find>footer</find>
+      <find>page_titl</find>
+      <find>page_title</find>
     </findStrings>
     <replaceStrings>
       <replace>alacarte</replace>
@@ -163,7 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/scss/header-top/_menu.scss" />
         <option value="$PROJECT_DIR$/assets/scss/header-top/header-top.scss" />
         <option value="$PROJECT_DIR$/assets/scss/header-top/_language.scss" />
         <option value="$PROJECT_DIR$/inc/functions/header-cart.php" />
@@ -214,6 +213,7 @@
         <option value="$PROJECT_DIR$/assets/scss/extensions/_newsletter.scss" />
         <option value="$PROJECT_DIR$/assets/scss/footer/_loop.scss" />
         <option value="$PROJECT_DIR$/inc/theme-options/core-options.php" />
+        <option value="C:/Windows/System32/drivers/etc/hosts" />
       </list>
     </option>
   </component>
@@ -473,12 +473,12 @@
       <workItem from="1579234246593" duration="878000" />
       <workItem from="1581411216288" duration="2957000" />
       <workItem from="1581558804237" duration="1952000" />
-      <workItem from="1581561101454" duration="395000" />
+      <workItem from="1581561101454" duration="1760000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170847000" />
+    <option name="totallyTimeSpent" value="172212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -509,13 +509,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/inc/extends/images.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2755">
-          <caret line="317" column="13" selection-start-line="317" selection-start-column="13" selection-end-line="317" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vc_templates/red_team.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
@@ -786,13 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/theme-options/theme-options.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23838">
-          <caret line="822" column="32" selection-start-line="822" selection-start-column="32" selection-end-line="822" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/extensions/_newsletter.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
@@ -842,13 +828,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/inc/theme-options/theme-options.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="822" column="37" selection-start-line="822" selection-start-column="37" selection-end-line="822" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/inc/theme-options/core-options.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="1482" column="47" lean-forward="true" selection-start-line="1482" selection-start-column="47" selection-end-line="1482" selection-end-column="47" />
+        <state relative-caret-position="722">
+          <caret line="1485" column="57" lean-forward="true" selection-start-line="1485" selection-start-column="57" selection-end-line="1485" selection-end-column="57" />
           <folding>
             <element signature="e#0#6#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Windows/System32/drivers/etc/hosts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
         </state>
       </provider>
     </entry>

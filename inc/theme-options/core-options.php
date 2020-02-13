@@ -1464,13 +1464,27 @@ if(!function_exists('sunix_footer_opts')){
                     'required'  => array('footer_enable', '=', '1')
                 ),
                 array(
-                    'title'     => esc_html__('Background Color', 'sunix'),
+                    'id'       => 'enable_background_footer',
+                    'type'     => 'button_set',
+                    'title'    => __('Enable Background Footer ', 'sunix'),
+                    'subtitle' => __('Enable Background Image for Footer', 'sunix'),
+                    'options' => array(
+                        '1' => 'Yes',
+                        '0' => 'No',
+                    ),
+                    'default' => '0',
+                ),
+                array(
+                    'title'     => esc_html__('Background ', 'sunix'),
                     'id'        => 'footer_bg_color',
                     'type'      => 'background',
                     'default'   => array(),
                     'output'    => 'footer#red-footer.red-footer-area',
                     'force_output'   => $force_output,
-                    'required'  => array('footer_enable', '=', '1')
+                    'required'  => array(
+                        array('enable_background_footer', '=', '1'),
+                        array('footer_enable', '=', '1'),
+                    )
                 ),
                 array(
                     'title'     => esc_html__('Background Overlay Color', 'alacarte'),
@@ -1482,7 +1496,10 @@ if(!function_exists('sunix_footer_opts')){
                     ),
                     'validate'  => 'colorrgba',
                     'force_output'   => $force_output,
-                    'required'  => array('footer_enable', '=', '1')
+                    'required'  => array(
+                        array('enable_background_footer', '=', '1'),
+                        array('footer_enable', '=', '1'),
+                    )
                 ),
                 array(
                     'title'          => esc_html__('Columns Title', 'sunix'),
