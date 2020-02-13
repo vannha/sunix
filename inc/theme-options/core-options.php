@@ -1473,6 +1473,7 @@ if(!function_exists('sunix_footer_opts')){
                         '0' => 'No',
                     ),
                     'default' => '0',
+                    'required'  => array('footer_enable', '=', '1')
                 ),
                 array(
                     'title'     => esc_html__('Background ', 'sunix'),
