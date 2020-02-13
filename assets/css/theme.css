@@ -4414,7 +4414,7 @@ a.text-dark:hover, a.text-dark:focus {
   content: '\f1d8'; }
 
 .tnp-field {
-  margin-bottom: 15px; }
+  margin-bottom: 11px; }
 
 .tnp-field:last-child {
   margin-bottom: 0; }
@@ -10602,6 +10602,7 @@ body {
   padding: 31px 40px 35px; }
 
 #red-sidebar-area .sidebar-inner .widget.widget_newsletterwidget {
+  padding-bottom: 50px;
   border: none;
   background-image: url("../images/bg-newletter.jpg");
   text-align: center;
@@ -10927,17 +10928,21 @@ body {
   position: relative; }
 
 .widget .tnp form {
-  position: relative; }
+  position: relative;
+  margin-top: 24px; }
 
 [dir="rtl"] .widget .tnp form:after, [dir="rtl"] .widget .tnp form input.tnp-submit {
   right: auto;
   left: 0; }
 
 .widget .tnp form input.tnp-submit {
-  font-size: 0;
   z-index: 2;
-  padding: 0;
-  min-width: auto; }
+  width: 100%;
+  background: #f4436d;
+  color: #fff;
+  padding: 20px 31px;
+  font-weight: 700;
+  font-size: 16px; }
 
 .widget .tnp form input.tnp-email {
   height: 70px;
@@ -10946,10 +10951,23 @@ body {
   color: #999;
   padding: 0 56px 0 15px;
   border: 0;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center; }
 
 [dir="rtl"] .widget .tnp form input.tnp-email {
   padding: 0 15px 0 56px; }
+
+.widget .tnp form input.tnp-email::-webkit-input-placeholder {
+  color: #999; }
+
+.widget .tnp form input.tnp-email:-moz-placeholder {
+  color: #999; }
+
+.widget .tnp form input.tnp-email::-moz-placeholder {
+  color: #999; }
+
+.widget .tnp form input.tnp-email:-ms-input-placeholder {
+  color: #999; }
 /* CMS Recent Post */
 .widget_sunix_recent_posts .posts-list {
   overflow: hidden;
@@ -11220,10 +11238,10 @@ body {
         text-align: left !important; } }
 
 .red-footer-area .widget-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
-  letter-spacing: 0.3px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 35px;
+  letter-spacing: 0px;
   color: #fff;
   padding-bottom: 14px; }
 
