@@ -63,7 +63,7 @@
   }
   .red-social{
 	display: inline-block;
-	.shape-square {
+	&.shape-square {
 	  a{
 		border: none;
 		span{
