@@ -1,6 +1,10 @@
 #red-header-top {
 	.menu{
 		float: left;
+	  @media (max-width:767px){
+		width: 100%;
+		text-align: center;
+	  }
 		li{
 			list-style: none;
 			display: inline-block;
