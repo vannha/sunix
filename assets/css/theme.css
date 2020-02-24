@@ -5911,6 +5911,10 @@ body:after {
   position: absolute;
   z-index: -1; }
 
+@media (max-width: 991px) {
+    body {
+      font-size: 16px; } }
+
 @media (max-width: 600px) {
       html body.admin-bar {
         padding-top: 46px !important; } }
@@ -10763,6 +10767,10 @@ body {
   margin-bottom: 13px;
   text-transform: uppercase; }
 
+@media (min-width: 768px) and (max-width: 991px) {
+        .red-sidebar-area .widget .widgettitle {
+          font-size: 15px; } }
+
 .red-sidebar-area .widget .widgettitle span {
   position: relative; }
   .red-sidebar-area .widget .widgettitle span:after {
@@ -11302,6 +11310,11 @@ body {
   position: relative;
   font-size: 18px;
   line-height: 26px; }
+
+@media (max-width: 991px) {
+    .red-footer-area {
+      font-size: 16px;
+      line-height: 24px; } }
 
 .red-footer-area:before {
   content: '';
