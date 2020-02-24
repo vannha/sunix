@@ -72,6 +72,7 @@
 		  background: $primary_color;
 		  color: #fff;
 		  line-height: 60px;
+		  @include transition();
 		  &.fa-facebook{
 			background: #4240b6;
 		  }
