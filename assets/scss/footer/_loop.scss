@@ -70,6 +70,21 @@
 	  background: $primary_color;
 	  color: #fff;
 	  line-height: 60px;
+	  &.fa-facebook{
+		background: #4240b6;
+	  }
+	  &.fa-twitter{
+		background: #d84124;
+	  }
+	  &.fa-google-plus{
+		background: #609edd;
+	  }
+	  &.fa-linkedin{
+		background: #609edd;
+	  }
+	  &.fa-linkedin{
+		background: #b20a0a;
+	  }
 	}
 	  &:hover{
 		span{
