@@ -113,6 +113,10 @@
 			&:hover{
 				background: $accent_color;
 			}
+			@media (max-width: 767px){
+			  top: -114px;
+			  right: 5px;
+			}
 		}
 		.comment-edit-link{
 			padding-left: 16px;
