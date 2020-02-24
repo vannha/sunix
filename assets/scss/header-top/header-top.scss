@@ -10,6 +10,9 @@
 	border-bottom: #e9e9e9 solid 1px;
   @media (max-width:767px){
 	text-align: center;
+	.text-right{
+	  text-align: center !important;
+	}
   }
   .contact{
 	list-style: none;
@@ -53,6 +56,9 @@
 .widget_gtranslate,
 .WOOCS_SELECTOR{
 	float: left;
+  @media (max-width:767px){
+	float: none;
+  }
 }
 .vc_wp_custommenu,
 .wpb_widgetised_column{
