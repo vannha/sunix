@@ -11280,6 +11280,16 @@ body {
   background: #f4436d;
   color: #fff;
   line-height: 60px; }
+  .red-footer-area .red-social.shape-square a span.fa-facebook {
+    background: #4240b6; }
+  .red-footer-area .red-social.shape-square a span.fa-twitter {
+    background: #d84124; }
+  .red-footer-area .red-social.shape-square a span.fa-google-plus {
+    background: #609edd; }
+  .red-footer-area .red-social.shape-square a span.fa-linkedin {
+    background: #609edd; }
+  .red-footer-area .red-social.shape-square a span.fa-linkedin {
+    background: #b20a0a; }
 
 .red-footer-area .red-social.shape-square a:hover span {
   background: #fff;
