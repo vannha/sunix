@@ -10,7 +10,7 @@ $megamenu = apply_filters('ef5_enable_megamenu', false);
 $args =  array(
     'theme_location' => 'red-primary',
     'menu'           => $header_menu,
-    'container'      => '',
+    'container'      => 'container',
     'menu_id'        => 'red-header-menu',
     'menu_class'     => sunix_header_menu_class(),
     'link_before'	 => '<span class="menu-title">',
