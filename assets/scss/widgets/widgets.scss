@@ -99,6 +99,14 @@
 	}
 	.red-instagram{
 		padding-top: 12px;
+	  @media (min-width:768px) and (max-width:991px){
+		.grid-gutters-20 {
+		  margin: -5px;
+		  > [class*='col'] {
+			padding: 5px;
+		  }
+		}
+	  }
 	}
 }
 .widget_categories{
