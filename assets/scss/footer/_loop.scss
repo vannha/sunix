@@ -63,15 +63,20 @@
   }
   .red-social.shape-square {
 	a{
+	  border: none;
+	span{
 	  width: 60px;
 	  height: 60px;
 	  background: $primary_color;
-	  border: none;
 	  color: #fff;
 	  line-height: 60px;
+	}
 	  &:hover{
-		background: #fff;
-		color: $primary_color;
+		span{
+		  background: #fff;
+		  color: $primary_color;
+		}
+
 	  }
 	}
   }
