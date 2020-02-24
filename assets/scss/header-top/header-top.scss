@@ -53,6 +53,14 @@
 		display: none;
 	}
 }
+.widget_gtranslate{
+
+  @media (max-width:767px){
+	top: -10px;
+	position: relative;
+  }
+}
+
 .widget_gtranslate,
 .WOOCS_SELECTOR{
 	float: left;
