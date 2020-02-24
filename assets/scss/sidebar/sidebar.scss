@@ -12,6 +12,9 @@ $sidebar_bg : #fff;
 			@media (max-width: 767px){
 			  padding: 31px 20px 35px;
 			}
+		  @media (min-width:768px) and (max-width:991px){
+			padding: 31px 10px 35px;
+		  }
 			&.widget_newsletterwidget{
 				padding-bottom: 50px;
 				border: none;
