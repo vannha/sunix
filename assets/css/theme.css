@@ -11267,12 +11267,30 @@ body {
   font-weight: 700;
   color: #f4436d; }
 
+.red-footer-area .wpb_text_column a {
+  color: #f4436d;
+  text-decoration: none; }
+
+.red-footer-area .red-social.shape-square a {
+  border: none; }
+
+.red-footer-area .red-social.shape-square a span {
+  width: 60px;
+  height: 60px;
+  background: #f4436d;
+  color: #fff;
+  line-height: 60px; }
+
+.red-footer-area .red-social.shape-square a:hover span {
+  background: #fff;
+  color: #f4436d; }
+
 .red-footer-area .widget_nav_menu ul {
   list-style: none; }
 
 .red-footer-area .widget_nav_menu ul li {
   letter-spacing: 0.03em;
-  padding-bottom: 10px; }
+  padding-bottom: 14px; }
   .red-footer-area .widget_nav_menu ul li a {
     position: relative;
     padding-left: 20px; }
@@ -11286,7 +11304,11 @@ body {
       font-style: normal;
       font-variant: normal;
       text-rendering: auto;
-      line-height: 1; }
+      line-height: 1;
+      font-size: 11px;
+      position: absolute;
+      top: 7px;
+      left: 0; }
 
 .red-footer-area.footer-2, .red-footer-area.footer-4 {
   background: #fff;
@@ -11336,8 +11358,11 @@ body {
   padding-right: 17px; }
 
 .red-footer-area.footer-3 .row-footer-bottom {
-  color: #777;
-  line-height: 20px; }
+  font-weight: 400;
+  color: #fff; }
+
+.red-footer-area.footer-3 .row-footer-bottom span, .red-footer-area.footer-3 .row-footer-bottom a {
+  color: #f4436d; }
 
 .red-footer-area.footer-3 .row-footer-bottom .red-social {
   font-size: 17px;
