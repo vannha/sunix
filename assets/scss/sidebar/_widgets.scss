@@ -28,6 +28,9 @@
 		.widgettitle{
 			margin-bottom: 13px;
 			text-transform: uppercase;
+		  @media (min-width:768px) and (max-width:991px){
+			font-size: 15px;
+		  }
 			span{
 				position: relative;
 				&:after{
