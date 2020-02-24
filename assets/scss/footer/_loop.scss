@@ -67,6 +67,12 @@
 	  height: 60px;
 	  background: $primary_color;
 	  border: none;
+	  color: #fff;
+	  line-height: 60px;
+	  &:hover{
+		background: #fff;
+		color: $primary_color;
+	  }
 	}
   }
  .widget_nav_menu{
