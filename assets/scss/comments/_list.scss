@@ -17,6 +17,9 @@
 	.pingback,
 	.trackback{
 		padding-left: 20px;
+	  @media (max-width: 767px){
+		padding-left: 0px;
+	  }
 		article{
 			border: $cmt_border;
 			margin: 0;
