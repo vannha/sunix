@@ -196,6 +196,9 @@ article.wpb_animate_when_almost_visible{
   @media (max-width: 767px){
 	padding: 24px 20px;
   }
+  @media (max-width: 321px){
+	padding: 24px 10px;
+  }
 	> div {
 	  position: relative;
 	  z-index: 2;
