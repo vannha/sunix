@@ -58,8 +58,10 @@
     }
     .red-menu{
         list-style: none;
-        margin: 0;
-        padding: 0;
+        margin: 0 auto;
+        padding: 0 15px;
+        @extend .container;
+
         /* level 1 */
         > li{
             > a{
