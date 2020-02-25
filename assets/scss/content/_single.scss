@@ -12,10 +12,14 @@
   .layout-center{
 	.red-post-header,
 	.red-single-content,
-	.red-post-footer,
 	.comments-area{
 	  padding-left: 100px ;
 	  padding-right: 100px;
+	}
+	.red-post-footer,
+	.comments-area{
+	  margin-left: 100px ;
+	  margin-right: 100px;
 	}
 
   }
