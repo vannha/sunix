@@ -159,7 +159,7 @@ function sunix_content_css_class($class=''){
     else {
         $classes[] = 'col-12';
     }
-    if($sidebar && ('center' == $sidebar_position)){
+    if(is_singular('post') && $sidebar && ('center' == $sidebar_position)){
 
             $classes[] = 'col-lg-8 col-md-12 offset-lg-2';
         }
