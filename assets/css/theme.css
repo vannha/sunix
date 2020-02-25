@@ -8273,7 +8273,7 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
 #red-header-top {
   font-size: 13px;
   line-height: 28px;
-  padding: 11px 0;
+  padding: 12px 0 10px;
   border-bottom: #e9e9e9 solid 1px; }
 
 @media (max-width: 991px) {
@@ -8334,6 +8334,18 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
         float: none;
         display: inline-block; } }
 
+#red-header-top .widget_gtranslate {
+  position: relative; }
+
+#red-header-top .widget_gtranslate:before {
+  content: '';
+  height: 14px;
+  width: 1px;
+  background: #e8e8e8;
+  position: absolute;
+  top: 8px;
+  left: 0; }
+
 #red-header-top .vc_wp_custommenu, #red-header-top .wpb_widgetised_column {
   float: right; }
 
@@ -8346,10 +8358,13 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
         float: none;
         display: inline-block; } }
 
+#red-header-top .widget_nav_menu li {
+  line-height: 24px; }
+
 #red-header-top .widget_nav_menu li a {
   color: inherit;
   border-right: #e8e8e8 solid 1px;
-  line-height: 24px;
+  line-height: 14px;
   display: inline-block;
   padding-right: 30px;
   padding-left: 27px; }
@@ -8370,11 +8385,7 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
 
 #red-header-top .widget-woocommerce-currency-switcher {
   padding-left: 20px;
-  border-right: #e8e8e8 solid 1px;
   padding-right: 20px; }
-
-#red-header-top .widget-woocommerce-currency-switcher .dd-container {
-  padding: 0 10px 0px; }
 
 #red-header-top .widget-woocommerce-currency-switcher .dd-options {
   border: none;
@@ -9182,15 +9193,7 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
       margin-left: -19.5px;
       margin-right: -19.5px;
       display: flex;
-      flex-wrap: wrap;
       /* Level 1 */ }
-    .red-header-menu > * {
-      flex: 0 0 auto;
-      width: auto !important;
-      max-width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center; }
     .red-header-menu.primary-menu-not-set {
       margin-right: -45px; }
     .red-header-menu > li {
@@ -11319,7 +11322,7 @@ body {
       font-size: 16px;
       line-height: 24px; } }
 
-@media (min-width: 992px) and (max-width: 1024px) {
+@media (min-width: 992px) and (max-width: 1200px) {
     .red-footer-area {
       font-size: 17px; } }
 
