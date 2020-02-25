@@ -159,7 +159,6 @@ function sunix_content_css_class($class=''){
     else {
         $classes[] = 'col-12';
     }
-    var_dump($sidebar_position);
     if($sidebar && ('center' == $sidebar_position)){
 
             $classes[] = 'col-lg-8 col-md-12 offset-lg-2';
