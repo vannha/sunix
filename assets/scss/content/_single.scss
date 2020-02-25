@@ -23,7 +23,12 @@
 	.red-single .red-post-header .red-before-title .red-meta {
 	  left: 100px;
 	}
-
+	blockquote {
+	  padding: 117px 55px 53px !important;
+	}
+	blockquote:before {
+	  top: 89px;
+	}
   }
 }
 .red-single{
