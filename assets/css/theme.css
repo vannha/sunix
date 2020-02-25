@@ -9193,7 +9193,16 @@ form .button:hover, form button:hover, form [type="button"]:hover, form [type="r
       margin-left: -19.5px;
       margin-right: -19.5px;
       display: flex;
+      flex-wrap: wrap;
+      flex-wrap: nowrap;
       /* Level 1 */ }
+    .red-header-menu > * {
+      flex: 0 0 auto;
+      width: auto !important;
+      max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; }
     .red-header-menu.primary-menu-not-set {
       margin-right: -45px; }
     .red-header-menu > li {
