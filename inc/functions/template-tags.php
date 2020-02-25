@@ -517,7 +517,7 @@ if(!function_exists('sunix_post_share')){
         global $post;
         $defaults = array(
             'show_share'  => is_single() ? sunix_get_theme_opt( 'post_share_on', '0' ) : sunix_get_theme_opt( 'archive_share_on', '0' ),
-            'class'       => 'shape-square',
+            'class'       => '',
             'show_title'  => true,
             'show_tooltip'  => true,
             'title'       => '',
@@ -529,7 +529,7 @@ if(!function_exists('sunix_post_share')){
         if($show_share !== '1') return;
 
         $social_args    = wp_parse_args($social_args, ['class'=>'','size' => '28']);
-        $social_classes = trim(implode(' ', ['red-social', $social_args['class'], 'size-'.$social_args['size']] ));
+        $social_classes = trim(implode(' ', ['red-social shape-square', $social_args['class'], 'size-'.$social_args['size']] ));
 
         $classes   = array('red-shares');
         $classes[] = $class;
