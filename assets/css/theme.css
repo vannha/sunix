@@ -10082,6 +10082,23 @@ article.post-grid-item .red-after-title .red-meta .avatar {
         padding-left: 0;
         padding-right: 0; } }
 
+.single-post .layout-center .red-post-header, .single-post .layout-center .red-single-content, .single-post .layout-center .comments-area {
+  padding-left: 100px;
+  padding-right: 100px; }
+
+.single-post .layout-center .red-post-footer {
+  margin-left: 100px;
+  margin-right: 100px; }
+
+.single-post .layout-center .red-single .red-post-header .red-before-title .red-meta {
+  left: 100px; }
+
+.single-post .layout-center blockquote {
+  padding: 119px 55px 54px !important; }
+
+.single-post .layout-center blockquote:before {
+  top: 89px; }
+
 .red-single {
   background: #fff; }
 
