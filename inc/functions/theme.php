@@ -161,7 +161,7 @@ function sunix_content_css_class($class=''){
     }
     if(is_singular('post') && $sidebar && ('center' == $sidebar_position)){
 
-            $classes[] = 'col-lg-8 col-md-12 offset-lg-2';
+            $classes[] = 'layout-center col-lg-8 col-md-12 offset-lg-2';
         }
     echo sunix_optimize_css_class(implode(' ', $classes));
 }
