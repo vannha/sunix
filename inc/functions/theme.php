@@ -150,7 +150,7 @@ function sunix_content_css_class($class=''){
             $classes[] = 'col-lg-12 col-md-12';
         }
         elseif ( is_singular('post')){
-            $classes[] = 'col-lg-12 col-md-12';
+            $classes[] = 'layout-center col-lg-12 col-md-12';
         }
         else{
             $classes[] = 'col-lg-8 col-md-12 offset-lg-2';
@@ -161,7 +161,7 @@ function sunix_content_css_class($class=''){
     }
     if(is_singular('post') && $sidebar && ('center' == $sidebar_position)){
 
-            $classes[] = 'layout-center col-lg-8 col-md-12 offset-lg-2';
+            $classes[] = 'col-lg-8 col-md-12 offset-lg-2';
         }
     echo sunix_optimize_css_class(implode(' ', $classes));
 }
