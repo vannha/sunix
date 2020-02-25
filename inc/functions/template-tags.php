@@ -552,21 +552,11 @@ if(!function_exists('sunix_post_share')){
                     <div class="col-auto">
             <?php endif; ?>
                     <div class="<?php echo esc_attr($social_classes);?>">
-                        <?php if($show_fb == '1'): ?>
                         <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Facebook','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="facebook" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> facebook st-custom-button"><span class="fab fa-facebook-f"></span></a>
-                        <?php endif;
-                        if($show_tw == '1'): ?>
                         <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Twitter','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="twitter" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> twitter st-custom-button"><span class="fab fa-twitter"></span></a>
-                        <?php endif;
-                        if($show_gplus == '1'): ?>
                         <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Google Plus','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="googleplus" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> googleplus st-custom-button"><span class="fab fa-google-plus"></span></a>
-                        <?php endif;
-                        if($show_pin == '1'): ?>
                         <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Pinterest','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="pinterest" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> pinterest st-custom-button"><span class="fab fa-pinterest"></span></a>
-                        <?php endif;
-                        if($show_all == '1'): ?>
                         <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="sharethis" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> sharethis st-custom-button"><span class="fa fa-share-alt"></span></a>
-                        <?php endif; ?>
                     </div>
             <?php if($show_title): ?>
                     </div>
