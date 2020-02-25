@@ -38,6 +38,49 @@
   &.post_format-post-format-link{
 	margin-top: -4px;
   }
+  .red-social{
+	display: inline-block;
+	&.shape-square {
+	  a{
+		border: none;
+		span{
+		  width: 60px;
+		  height: 60px;
+		  background: $primary_color;
+		  color: #fff;
+		  line-height: 60px;
+		  @include transition();
+		  @media (max-width: 991px){
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+		  }
+		  &.fa-facebook{
+			background: #4240b6;
+		  }
+		  &.fa-twitter{
+			background: #d84124;
+		  }
+		  &.fa-google-plus{
+			background: #609edd;
+		  }
+		  &.fa-linkedin{
+			background: #609edd;
+		  }
+		  &.fa-pinterest-p{
+			background: #b20a0a;
+		  }
+		}
+		&:hover{
+		  span{
+			background: #fff;
+			color: $primary_color;
+		  }
+
+		}
+	  }
+	}
+  }
   .red-post-header{
 	padding-bottom: 38px;
 	  position: relative;

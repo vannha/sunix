@@ -517,7 +517,7 @@ if(!function_exists('sunix_post_share')){
         global $post;
         $defaults = array(
             'show_share'  => is_single() ? sunix_get_theme_opt( 'post_share_on', '0' ) : sunix_get_theme_opt( 'archive_share_on', '0' ),
-            'class'       => '',
+            'class'       => 'shape-square',
             'show_title'  => true,
             'show_tooltip'  => true,
             'title'       => '',
