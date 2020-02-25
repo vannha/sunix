@@ -268,6 +268,13 @@ Redux::setSection($opt_name, array(
             'default'  => '1',
         ),
         array(
+            'id'       => 'archive_share_on',
+            'title'    => esc_html__('Share', 'sunix'),
+            'subtitle' => esc_html__('Show share post.', 'sunix'),
+            'type'     => 'switch',
+            'default'  => '0'
+        ),
+        array(
             'id'       => 'archive_comments_on',
             'title'    => esc_html__('Comments', 'sunix'),
             'subtitle' => esc_html__('Show comments count on each post.', 'sunix'),
@@ -393,6 +400,13 @@ Redux::setSection($opt_name, array(
                 'id'       => 'post_like_on',
                 'title'    => esc_html__('Like', 'sunix'),
                 'subtitle' => esc_html__('Show Likes Count.', 'sunix'),
+                'type'     => 'switch',
+                'default'  => '0'
+            ),
+            array(
+                'id'       => 'post_share_on',
+                'title'    => esc_html__('Share', 'sunix'),
+                'subtitle' => esc_html__('Show share post.', 'sunix'),
                 'type'     => 'switch',
                 'default'  => '0'
             ),
