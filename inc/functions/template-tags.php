@@ -520,7 +520,7 @@ if(!function_exists('sunix_post_share')){
             'class'       => '',
             'show_title'  => true,
             'show_tooltip'  => true,
-            'title'       => esc_html__('Share this article','sunix'),
+            'title'       => '',
             'social_args' => [],
             'echo'        => true
         );
