@@ -149,9 +149,16 @@ function sunix_content_css_class($class=''){
         elseif ( is_page()){
             $classes[] = 'col-lg-12 col-md-12';
         }
+        elseif ( is_singular('post')){
+            $classes[] = 'col-lg-12 col-md-12';
+        }
         else{
             $classes[] = 'col-lg-8 col-md-12 offset-lg-2';
         }
+    }
+    elseif($sidebar && ('center' == $sidebar_position)){
+
+            $classes[] = 'col-lg-8 col-md-12 offset-lg-2';
     }
     else {
         $classes[] = 'col-12';
