@@ -14,6 +14,7 @@
     <?php 
 
         sunix_post_media();
+    sunix_post_share();
     sunix_post_header();
         sunix_post_content();
         sunix_link_pages();

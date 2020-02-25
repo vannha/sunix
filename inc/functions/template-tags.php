@@ -539,21 +539,9 @@ if(!function_exists('sunix_post_share')){
         $image = get_the_post_thumbnail_url($post->ID);
         $title = get_the_title();
 
-        if(is_singular()){
-            $show_fb    = sunix_get_theme_opt( 'post_share_fb', '1' );
-            $show_tw    = sunix_get_theme_opt( 'post_share_tw', '1' );
-            $show_gplus = sunix_get_theme_opt( 'post_share_gplus', '1' );
-            $show_pin   = sunix_get_theme_opt( 'post_share_pin', '1' );
-            $show_all   = sunix_get_theme_opt( 'post_share_all', '1' );
-        } else {
-            $show_fb    = sunix_get_theme_opt( 'archive_share_fb', '1' );
-            $show_tw    = sunix_get_theme_opt( 'archive_share_tw', '1' );
-            $show_gplus = sunix_get_theme_opt( 'archive_share_gplus', '1' );
-            $show_pin   = sunix_get_theme_opt( 'archive_share_pin', '1' );
-            $show_all   = sunix_get_theme_opt( 'archive_share_all', '1' );
-        }
+
         ob_start();
-        if($show_fb == '1' || $show_tw == '1' || $show_gplus == '1' || $show_pin == '1' || $show_all == '1') {
+        if($show_share) {
         ?>
         <div class="<?php echo trim(implode(' ', $classes)); ?>">
             <?php if($show_title): ?>
