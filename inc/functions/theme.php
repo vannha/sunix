@@ -156,13 +156,13 @@ function sunix_content_css_class($class=''){
             $classes[] = 'col-lg-8 col-md-12 offset-lg-2';
         }
     }
-    elseif($sidebar && ('center' == $sidebar_position)){
-
-            $classes[] = 'col-lg-8 col-md-12 offset-lg-2';
-    }
     else {
         $classes[] = 'col-12';
     }
+    if($sidebar && ('center' == $sidebar_position)){
+
+            $classes[] = 'col-lg-8 col-md-12 offset-lg-2';
+        }
     echo sunix_optimize_css_class(implode(' ', $classes));
 }
 /**
