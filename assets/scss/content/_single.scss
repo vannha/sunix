@@ -39,10 +39,15 @@
 	margin-top: -4px;
   }
   .red-social{
-	display: inline-block;
+	position: absolute;
+	top: -58px;
+	right: 95px;
+	margin: -5px;
+	padding-left: 5px;
 	&.shape-square {
 	  a{
 		border: none;
+		margin: 5px 5px;
 		span{
 		  width: 60px;
 		  height: 60px;
