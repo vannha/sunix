@@ -528,7 +528,7 @@ if(!function_exists('sunix_post_share')){
         extract($args);
         if($show_share !== '1') return;
 
-        $social_args    = wp_parse_args($social_args, ['class'=>'','size' => '28']);
+        $social_args    = wp_parse_args($social_args, ['class'=>'','size' => '50']);
         $social_classes = trim(implode(' ', ['red-social shape-square', $social_args['class'], 'size-'.$social_args['size']] ));
 
         $classes   = array('red-shares');
