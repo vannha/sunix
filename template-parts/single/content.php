@@ -15,6 +15,7 @@
 
         sunix_post_media();
     $sidebar_position   = sunix_sidebar_position();
+    var_dump($sidebar_position);
     if(($sidebar_position == 'none') || ($sidebar_position == 'center')) {
         sunix_post_share();
     }
