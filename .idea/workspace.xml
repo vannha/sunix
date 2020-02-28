@@ -48,15 +48,15 @@
       <file leaf-file-name="template-tags.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inc/functions/template-tags.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5039909">
-              <caret line="530" column="80" selection-start-line="530" selection-start-column="80" selection-end-line="530" selection-end-column="80" />
+            <state vertical-scroll-proportion="0.32611173">
+              <caret line="557" column="606" selection-start-line="557" selection-start-column="606" selection-end-line="557" selection-end-column="606" />
               <folding>
-                <marker date="1582861359503" expanded="true" signature="1619:1719" placeholder="..." />
-                <marker date="1582861359503" expanded="true" signature="3495:3555" placeholder="..." />
-                <marker date="1582861359503" expanded="true" signature="3968:4062" placeholder="..." />
-                <marker date="1582861359503" expanded="true" signature="4898:5000" placeholder="..." />
-                <marker date="1582861359503" expanded="true" signature="6634:6705" placeholder="..." />
-                <marker date="1582861359503" expanded="true" signature="8316:8391" placeholder="..." />
+                <marker date="1582861456574" expanded="true" signature="1619:1719" placeholder="..." />
+                <marker date="1582861456574" expanded="true" signature="3495:3555" placeholder="..." />
+                <marker date="1582861456574" expanded="true" signature="3968:4062" placeholder="..." />
+                <marker date="1582861456574" expanded="true" signature="4898:5000" placeholder="..." />
+                <marker date="1582861456574" expanded="true" signature="6634:6705" placeholder="..." />
+                <marker date="1582861456574" expanded="true" signature="8316:8391" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1016,15 +1016,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/functions/template-tags.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5039909">
-          <caret line="530" column="80" selection-start-line="530" selection-start-column="80" selection-end-line="530" selection-end-column="80" />
+        <state vertical-scroll-proportion="0.32611173">
+          <caret line="557" column="606" selection-start-line="557" selection-start-column="606" selection-end-line="557" selection-end-column="606" />
           <folding>
-            <marker date="1582861359503" expanded="true" signature="1619:1719" placeholder="..." />
-            <marker date="1582861359503" expanded="true" signature="3495:3555" placeholder="..." />
-            <marker date="1582861359503" expanded="true" signature="3968:4062" placeholder="..." />
-            <marker date="1582861359503" expanded="true" signature="4898:5000" placeholder="..." />
-            <marker date="1582861359503" expanded="true" signature="6634:6705" placeholder="..." />
-            <marker date="1582861359503" expanded="true" signature="8316:8391" placeholder="..." />
+            <marker date="1582861456574" expanded="true" signature="1619:1719" placeholder="..." />
+            <marker date="1582861456574" expanded="true" signature="3495:3555" placeholder="..." />
+            <marker date="1582861456574" expanded="true" signature="3968:4062" placeholder="..." />
+            <marker date="1582861456574" expanded="true" signature="4898:5000" placeholder="..." />
+            <marker date="1582861456574" expanded="true" signature="6634:6705" placeholder="..." />
+            <marker date="1582861456574" expanded="true" signature="8316:8391" placeholder="..." />
           </folding>
         </state>
       </provider>
