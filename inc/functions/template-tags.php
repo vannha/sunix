@@ -513,10 +513,6 @@ function sunix_link_pages()
 if(!function_exists('sunix_post_share')){
     function sunix_post_share($args = array()){
         if(!class_exists('EF5Systems')) return;
-        $sidebar_position   = sunix_sidebar_position();
-        $sidebar            = sunix_get_sidebar();
-        if($sidebar && ($sidebar_position != 'none') && ($sidebar_position != 'center')){ return;}
-        var_dump($sidebar_position);
         wp_enqueue_script('sharethis');
         global $post;
         $defaults = array(

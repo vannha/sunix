@@ -14,7 +14,10 @@
     <?php 
 
         sunix_post_media();
-    sunix_post_share();
+    $sidebar_position   = sunix_sidebar_position();
+    if(($sidebar_position == 'none') || ($sidebar_position == 'center')) {
+        sunix_post_share();
+    }
     sunix_post_header();
         sunix_post_content();
         sunix_link_pages();
