@@ -513,6 +513,9 @@ function sunix_link_pages()
 if(!function_exists('sunix_post_share')){
     function sunix_post_share($args = array()){
         if(!class_exists('EF5Systems')) return;
+        $sidebar_position   = sunix_sidebar_position();
+        $sidebar            = sunix_get_sidebar();
+        if($sidebar && (('none' != $sidebar_position) || ('center' != $sidebar_position))){ return;}
         wp_enqueue_script('sharethis');
         global $post;
         $defaults = array(
@@ -539,7 +542,6 @@ if(!function_exists('sunix_post_share')){
         $image = get_the_post_thumbnail_url($post->ID);
         $title = get_the_title();
 
-
         ob_start();
         if($show_share) {
         ?>
@@ -550,15 +552,15 @@ if(!function_exists('sunix_post_share')){
                         <?php echo esc_html($args['title']); ?>
                     </div>
                     <div class="col-auto">
-            <?php endif; ?>
-                    <div class="<?php echo esc_attr($social_classes);?>">
-                        <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Facebook','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="facebook" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> facebook st-custom-button"><span class="fa fa-facebook"></span></a>
-                        <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Twitter','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="twitter" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> twitter st-custom-button"><span class="fa fa-twitter"></span></a>
-                        <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Google Plus','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="googleplus" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> googleplus st-custom-button"><span class="fa fa-google-plus"></span></a>
-                        <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Pinterest','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="pinterest" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> pinterest st-custom-button"><span class="fa fa-pinterest"></span></a>
-                        <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="sharethis" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> sharethis st-custom-button"><span class="fa fa-share-alt"></span></a>
-                    </div>
-            <?php if($show_title): ?>
+                        <?php endif; ?>
+                                <div class="<?php echo esc_attr($social_classes);?>">
+                                    <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Facebook','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="facebook" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> facebook st-custom-button"><span class="fa fa-facebook"></span></a>
+                                    <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Twitter','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="twitter" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> twitter st-custom-button"><span class="fa fa-twitter"></span></a>
+                                    <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Google Plus','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="googleplus" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> googleplus st-custom-button"><span class="fa fa-google-plus"></span></a>
+                                    <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to Pinterest','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="pinterest" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> pinterest st-custom-button"><span class="fa fa-pinterest"></span></a>
+                                    <a <?php if ($show_tooltip){ ?>data-hint="<?php esc_attr_e('Share this post to','sunix'); ?>" data-toggle="tooltip" <?php } ?> href="javascript:void(0);" data-network="sharethis" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php if ($show_tooltip){ echo 'hint--top hint--bounce'; }?> sharethis st-custom-button"><span class="fa fa-share-alt"></span></a>
+                                </div>
+                        <?php if($show_title): ?>
                     </div>
                 </div>
             <?php endif; ?>
