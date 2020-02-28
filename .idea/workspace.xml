@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f0d8d5-5d2b-4b86-b378-c94ab2a57edd" name="Default Changelist" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/content/_single.scss" afterPath="$PROJECT_DIR$/assets/scss/content/_single.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -65,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template-tags.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="template-tags.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inc/functions/template-tags.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.709678">
+            <state vertical-scroll-proportion="0.55530214">
               <caret line="517" column="99" selection-start-line="517" selection-start-column="99" selection-end-line="517" selection-end-column="99" />
               <folding>
                 <marker date="1582863081511" expanded="true" signature="1619:1719" placeholder="..." />
@@ -82,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_single.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_single.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/content/_single.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6146572">
+            <state vertical-scroll-proportion="-8.387096">
               <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
               <folding />
             </state>
@@ -1020,6 +1019,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/content/_single.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.387096">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/inc/functions/theme.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.225806">
@@ -1030,7 +1037,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/functions/template-tags.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.709678">
+        <state vertical-scroll-proportion="0.55530214">
           <caret line="517" column="99" selection-start-line="517" selection-start-column="99" selection-end-line="517" selection-end-column="99" />
           <folding>
             <marker date="1582863081511" expanded="true" signature="1619:1719" placeholder="..." />
@@ -1040,14 +1047,6 @@
             <marker date="1582863081511" expanded="true" signature="6634:6705" placeholder="..." />
             <marker date="1582863081511" expanded="true" signature="8316:8391" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/content/_single.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6146572">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
