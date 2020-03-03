@@ -47,6 +47,9 @@
 	  top: 89px;
 	}
   }
+  .media-share{
+	position: relative;
+  }
 }
 .red-single{
 
@@ -62,7 +65,7 @@
 	flex-wrap: nowrap;
 	@media (min-width: 768px){
 	  position: absolute;
-	  top: -58px;
+	  bottom: -58px;
 	  right: 95px;
 	}
 	@media (max-width: 767px){
