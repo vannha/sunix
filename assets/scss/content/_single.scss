@@ -58,7 +58,7 @@
   .red-social{
 
 	margin: -5px;
-	padding-left: 0px;
+	padding-left: 0px !important;
 	flex-wrap: nowrap;
 	@media (min-width: 768px){
 	  position: absolute;
@@ -316,9 +316,6 @@
 	  color: $primary_color;
 	}
   }
-}
-.red-shares{
-  padding-left: 20px;
 }
 .single-post{
   @media (min-width: 1300px){
