@@ -65,6 +65,9 @@
 	  top: -58px;
 	  right: 95px;
 	}
+	@media (max-width: 767px){
+	  padding-top: 36px;
+	}
 	&.shape-square {
 	  a{
 		border: none;
@@ -86,6 +89,7 @@
 			height: 45px;
 			line-height: 45px;
 		  }
+
 		  &.fa-facebook{
 			background: #4240b6;
 		  }
