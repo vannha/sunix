@@ -32,6 +32,10 @@
 		left: 100px;
 		top: -130px;
 	  }
+	  @media (max-width: 767px){
+		left: 10px;
+		top: -193px;
+	  }
 	}
 	.red-single .red-post-header .red-before-title {
 	  margin-bottom: 7px;
