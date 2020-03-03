@@ -13,10 +13,20 @@
 <article <?php post_class('red-single'); ?>>
     <?php 
 
-        sunix_post_media();
+
     $sidebar_position   = sunix_sidebar_position();
-    if(($sidebar_position == 'none') || ($sidebar_position == 'center')) {
-        sunix_post_share();
+    if(($sidebar_position == 'none') || ($sidebar_position == 'center')) {?>
+        <div class="media-share">
+            <?php
+                 sunix_post_media();
+                 sunix_post_share();
+
+            ?>
+        </div>
+
+   <?php }
+    else{
+        sunix_post_media();
     }
     sunix_post_header();
         sunix_post_content();
