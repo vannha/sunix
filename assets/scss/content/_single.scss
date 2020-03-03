@@ -56,12 +56,15 @@
 	margin-top: -4px;
   }
   .red-social{
-	position: absolute;
-	top: -58px;
-	right: 95px;
+
 	margin: -5px;
 	padding-left: 0px;
 	flex-wrap: nowrap;
+	@media (min-width: 768px){
+	  position: absolute;
+	  top: -58px;
+	  right: 95px;
+	}
 	&.shape-square {
 	  a{
 		border: none;
