@@ -27,8 +27,11 @@
 	  }
 	}
 	.red-single .red-post-header .red-before-title .red-meta {
-	  left: 100px;
-	  top: -130px;
+
+	  @media (min-width: 1200px){
+		left: 100px;
+		top: -130px;
+	  }
 	}
 	.red-single .red-post-header .red-before-title {
 	  margin-bottom: 7px;
