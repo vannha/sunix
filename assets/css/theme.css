@@ -10091,7 +10091,8 @@ article.post-grid-item .red-after-title .red-meta .avatar {
   margin-right: 100px; }
 
 .single-post .layout-center .red-single .red-post-header .red-before-title .red-meta {
-  left: 100px; }
+  left: 100px;
+  top: -130px; }
 
 .single-post .layout-center blockquote {
   padding: 119px 55px 54px !important; }
@@ -10104,6 +10105,43 @@ article.post-grid-item .red-after-title .red-meta .avatar {
 
 .red-single.post_format-post-format-quote, .red-single.post_format-post-format-link {
   margin-top: -4px; }
+
+.red-single .red-social {
+  position: absolute;
+  top: -58px;
+  right: 95px;
+  margin: -5px;
+  padding-left: 0px;
+  flex-wrap: nowrap; }
+
+.red-single .red-social.shape-square a {
+  border: none;
+  margin: 5px 5px; }
+  .red-single .red-social.shape-square a span {
+    width: 60px;
+    height: 60px;
+    background: #f4436d;
+    color: #fff;
+    line-height: 60px;
+    transition: all 300ms ease-in-out; }
+    @media (max-width: 991px) {
+        .red-single .red-social.shape-square a span {
+          width: 50px;
+          height: 50px;
+          line-height: 50px; } }
+    .red-single .red-social.shape-square a span.fa-facebook {
+      background: #4240b6; }
+    .red-single .red-social.shape-square a span.fa-twitter {
+      background: #d84124; }
+    .red-single .red-social.shape-square a span.fa-google-plus {
+      background: #609edd; }
+    .red-single .red-social.shape-square a span.fa-linkedin {
+      background: #609edd; }
+    .red-single .red-social.shape-square a span.fa-pinterest-p {
+      background: #b20a0a; }
+  .red-single .red-social.shape-square a:hover span {
+    background: #fff;
+    color: #f4436d; }
 
 .red-single .red-post-header {
   padding-bottom: 38px;
