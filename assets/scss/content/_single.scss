@@ -13,12 +13,18 @@
 	.red-post-header,
 	.red-single-content,
 	.comments-area{
-	  padding-left: 100px ;
-	  padding-right: 100px;
+
+	  @media (min-width: 1200px){
+		padding-left: 100px ;
+		padding-right: 100px;
+	  }
 	}
 	.red-post-footer{
-	  margin-left: 100px ;
-	  margin-right: 100px;
+
+	  @media (min-width: 1200px){
+		margin-left: 100px ;
+		margin-right: 100px;
+	  }
 	}
 	.red-single .red-post-header .red-before-title .red-meta {
 	  left: 100px;
