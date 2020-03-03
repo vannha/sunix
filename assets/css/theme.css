@@ -10082,17 +10082,28 @@ article.post-grid-item .red-after-title .red-meta .avatar {
         padding-left: 0;
         padding-right: 0; } }
 
-.single-post .layout-center .red-post-header, .single-post .layout-center .red-single-content, .single-post .layout-center .comments-area {
-  padding-left: 100px;
-  padding-right: 100px; }
+@media (min-width: 1200px) {
+        .single-post .layout-center .red-post-header, .single-post .layout-center .red-single-content, .single-post .layout-center .comments-area {
+          padding-left: 100px;
+          padding-right: 100px; } }
 
-.single-post .layout-center .red-post-footer {
-  margin-left: 100px;
-  margin-right: 100px; }
+@media (min-width: 1200px) {
+        .single-post .layout-center .red-post-footer {
+          margin-left: 100px;
+          margin-right: 100px; } }
 
-.single-post .layout-center .red-single .red-post-header .red-before-title .red-meta {
-  left: 100px;
-  top: -130px; }
+@media (min-width: 1200px) {
+        .single-post .layout-center .red-single .red-post-header .red-before-title .red-meta {
+          left: 100px;
+          top: -130px; } }
+
+@media (max-width: 767px) {
+        .single-post .layout-center .red-single .red-post-header .red-before-title .red-meta {
+          left: 10px;
+          top: -193px; } }
+
+.single-post .layout-center .red-single .red-post-header .red-before-title {
+  margin-bottom: 7px; }
 
 .single-post .layout-center blockquote {
   padding: 119px 55px 54px !important; }
@@ -10107,12 +10118,15 @@ article.post-grid-item .red-after-title .red-meta .avatar {
   margin-top: -4px; }
 
 .red-single .red-social {
-  position: absolute;
-  top: -58px;
-  right: 95px;
   margin: -5px;
-  padding-left: 0px;
+  padding-left: 0px !important;
   flex-wrap: nowrap; }
+
+@media (min-width: 768px) {
+      .red-single .red-social {
+        position: absolute;
+        top: -58px;
+        right: 95px; } }
 
 .red-single .red-social.shape-square a {
   border: none;
@@ -10322,9 +10336,6 @@ article.post-grid-item .red-after-title .red-meta .avatar {
 
 .red-tagged-in a:hover {
   color: #f4436d; }
-
-.red-shares {
-  padding-left: 20px; }
 
 .single-post .red-main {
   padding-bottom: 120px; }
